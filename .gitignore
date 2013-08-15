@@ -1,3 +1,10 @@
+/templates/
+.DS_Store
+node_modules/
+.idea/
+.git/
+*.orig
+
 lib-cov
 *.seed
 *.log
