@@ -13,27 +13,32 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     // Project metadata
-    site: grunt.file.readYAML('data/site.yml'),
-    pkg: grunt.file.readJSON('package.json'),
+    site: grunt.file.readYAML('_config.yml'),
+    pkg:  grunt.file.readJSON('package.json'),
 
-    // Lint JavaScript
+
+    /**
+     * Lint JavaScript
+     */
     jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
+      options: {jshintrc: '.jshintrc'},
       all: [
         'Gruntfile.js',
-        'helpers/*.js'
+        'templates/helpers/*.js'
       ]
     },
 
-    // Build HTML from templates and data
+
+    /**
+     * Generate HTML
+     */
     assemble: {
       options: {
         flatten: true,
-        assets: 'assets',
+        year: '<%= grunt.template.today("yyyy") %>',
+        assets: '<%= site.destination %>/assets',
         partials: ['templates/includes/*.hbs'],
-        helpers: ['helper-prettify'],
+        helpers: ['helper-prettify', 'templates/helpers/*.js'],
         layout: 'templates/layouts/default.hbs',
         data: ['data/*.{json,yml}', 'package.json']
       },
@@ -43,7 +48,10 @@ module.exports = function(grunt) {
       }
     },
 
-    // Compile LESS to CSS
+
+    /**
+     * Compile LESS to CSS
+     */
     less: {
       options: {
         paths: ['vendor/bootstrap/less', 'styles'],
@@ -57,48 +65,28 @@ module.exports = function(grunt) {
       }
     },
 
-    // Before generating any new files clear out any previously-created files.
+
+    /**
+     * Before generating any new files clear out
+     * any previously-created files.
+     */
     clean: {
       example: ['<%= site.destination %>/*.html']
-    },
-
-    watch: {
-      all: {
-        files: ['<%= jshint.all %>'],
-        tasks: ['jshint', 'nodeunit']
-      },
-      design: {
-        files: ['Gruntfile.js', '<%= less.options.paths %>/*.less', '**/*.hbs'],
-        tasks: ['design']
-      }
     }
   });
+
 
   // Load npm plugins to provide necessary tasks.
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('assemble-less');
-  grunt.loadNpmTasks('grunt-recess');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default tasks to be run.
   grunt.registerTask('default', [
     'clean',
     'jshint',
     'assemble',
-    'prettify',
-    'less'
-  ]);
-
-  // Build HTML, compile LESS and watch for changes.
-  // You must first run "bower install" or install
-  // Bootstrap to the "vendor" directory before running
-  // this command.
-  grunt.registerTask('design', [
-    'clean',
-    'assemble',
-    'less:docs',
-    'watch:design'
+    // 'less'
   ]);
 };

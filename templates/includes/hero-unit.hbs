@@ -1,0 +1,21 @@
+<header class="hero-unit">
+  <div class="container">
+    <div class="content">
+      <section id="intro">
+        <div id="logo"></div>
+        <h2>{{{site.brand}}}</h2>
+        <h3>{{{site.description}}}</h3>
+        <a class="btn btn-large btn-info" href="{{site.download.latest}}">Download Less.js v{{pkg 'version'}}</a>
+        <div id="download-info">
+        <div>version <code>1.4.1</code></div>
+        <div><a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">changelog</a></div>
+      </div>
+      </section>
+      <section id="example">
+        {{md 'content/examples/example.md'}}
+        {{md 'content/usage-serverside.md'}}
+      </section>
+    </div>
+    <div style="clear: both"></div>
+  </div>
+</header>

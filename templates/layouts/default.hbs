@@ -2,11 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>LESS « The Dynamic Stylesheet Language</title>
+    <title>
+      {{site.title}}
+    </title>
+
+
     <link rel="stylesheet" href="{{assets}}/css/docs.css">
     <link rel="stylesheet" href="{{assets}}/css/github.css">
+
+    <script src="{{assets}}/js/docs.js"></script>
   </head>
   <body>
+
 
     {{! Navbar
     ================================== }}
@@ -22,7 +29,8 @@
     ================================== }}
     {{> body }}
 
-    <script src="{{assets}}/js/highlight.js"></script>
-    <script src="{{assets}}/js/holder.js"></script>
+
+
+    {{> scripts }}
   </body>
 </html>

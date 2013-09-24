@@ -1,0 +1,15 @@
+# Site metadata
+brand: lesscss.org
+title: LESS « The Dynamic Stylesheet Language
+description: >
+  LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions.
+  LESS runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
+
+
+# Build directories
+destination: ./_gh_pages
+
+
+# URLs
+download:
+  latest: https://raw.github.com/less/less.js/master/dist/less-1.4.2.min.js
