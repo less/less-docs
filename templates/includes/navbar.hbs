@@ -1,0 +1,21 @@
+<div class="navbar navbar-fixed-top">
+  <div class="container">
+    <a class="navbar-brand brand" href="{{relative dest "index.html"}}">LESS</a>
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="nav-collapse collapse bs-navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li{{#is basename "cheatsheet"}} class="active"{{/is}}>
+          <a href="{{relative dest 'cheatsheet.html'}}">Cheatsheet</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav pull-right">
+        <li> <a href="https://github.com/less/less.js/">GitHub Repo</a> </li>
+        <li> <a href="https://github.com/less/less.js/issues">Issues</a> </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,115 @@
+---
+title: "LESS: The Dynamic Stylesheet Language"
+description: "LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions. LESS runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only)."
+section: welcome
+year: <%= grunt.template.today('yyyy') %>
+---
+
+<header class="hero-unit">
+  <div class="container">
+    <div class="content">
+      <section id="intro">
+        <div id="logo"></div>
+        <h2>{{{title}}}</h2>
+        <h3>{{{description}}}</h3>
+        <a class="btn btn-large btn-info" href="https://raw.github.com/less/less.js/master/dist/less-1.4.2.min.js">Download Less.js v1.4.2</a>
+        <div id="download-info">
+        <div>version <code>1.4.1</code></div>
+        <div><a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">changelog</a></div>
+      </div>
+      </section>
+      <section id="example">
+        {{md 'content/example.md'}}
+        {{md 'content/usage-brief-serverside.md'}}
+      </section>
+    </div>
+    <div style="clear: both"></div>
+  </div>
+</header>
+
+<div class="container">
+  <section id="menu">
+    <div class="content">
+      <nav>
+        <a href="#synopsis">overview</a>
+        <a href="#usage">usage</a>
+        <a href="#docs" id="guide-link">language</a>
+        <a href="#reference" id="guide-link">function reference</a>
+        <a href="https://github.com/less/less.js">source</a>
+        <a href="#about">about</a>
+        <a href="http://less2css.org/" target="_blank">try it now!</a>
+      </nav>
+      <a href="https://twitter.com/cloudhead" class="twitter-follow-button" data-show-screen-name="false" data-width="80px" data-show-count="false" data-lang="en">Follow on twitter</a>
+      <div id="dropdown">
+        <ul>
+          <li><a href="#-variables">Variables</a></li>
+          <li><a href="#-mixins">Mixins</a></li>
+          <li><a href="#-parametric-mixins">Parametric Mixins</a></li>
+          <li><a href="#-pattern-matching-and-guard-expressions">Pattern-matching</a></li>
+          <li><a href="#-nested-rules">Nested Rules</a></li>
+          <li><a href="#-operations">Operations</a></li>
+          <li><a href="#-functions">Functions</a></li>
+          <li><a href="#-namespaces">Namespaces</a></li>
+          <li><a href="#-scope">Scope</a></li>
+          <li><a href="#-comments">Comments</a></li>
+          <li><a href="#-importing">Importing</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="synopsis" class="page page-dark">
+    <div class="content">
+      {{md 'content/synopsis.md'}}
+    </div>
+  </section>
+
+  <section id="usage" class="page page-dark">
+    <div class="content">
+      {{md 'content/usage.md'}}
+    </div>
+  </section>
+
+  <section id="docs" class="page page-light">
+    <h1>The Language</h1>
+    <div class="content">
+      {{md 'content/doc.md'}}
+    </div>
+  </section>
+
+  <section id="reference" class="page page-light">
+    <h1>Function Reference</h1>
+    <div class="content">
+      {{md 'content/features/function-reference.md'}}
+    </div>
+  </section>
+
+  <section id="translations" class="page page-dark">
+    <div class="content">
+      <h1>In Other Languages</h1>
+      <ul>
+        <li>Chinese: <a href="http://lesscss.net">http://lesscss.net</a></li>
+        <li>Danish: <a href="http://lesscss.dk">http://lesscss.dk</a></li>
+        <li>German: <a href="http://lesscss.de">http://lesscss.de</a></li>
+        <li>Indonesian: <a href="http://bertzzie.com/post/7/dokumentasi-less-bahasa-indonesia">http://bertzzie.com/post/7/dokumentasi-less-bahasa-indonesia</a></li>
+        <li>Japanese: <a href="http://less-ja.studiomohawk.com/">http://less-ja.studiomohawk.com/</a></li>
+        <li>Polish: <a href="http://ciembor.github.com/lesscss.org/">http://ciembor.github.com/lesscss.org/</a></li>
+        <li>Russian: <a href="http://lesscss.ru">http://lesscss.ru</a></li>
+        <li>Ukrainian: <a href="http://komaval.github.com/lesscss.org/">http://komaval.github.com/lesscss.org/</a></li>
+        <li>Belorussian: (Out of date) <a href="http://www.designcontest.com/show/lesscss-be">http://www.designcontest.com/show/lesscss-be</a></li>
+        <li>Portugese: (Out of date) <a href="http://lesscss.loopinfinito.com.br/">http://lesscss.loopinfinito.com.br/</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about" class="page page-dark">
+    <div class="content">
+      {{md 'content/about.md'}}
+      <footer>
+        <p>powered by <a href="http://github.com/less/less.js">LESS</a></p>
+        <p id="copy">Copyright &copy; Alexis Sellier 2010-{{year}}</p>
+      </footer>
+    </div>
+  </section>
+
+</div>

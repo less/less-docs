@@ -1,0 +1,6 @@
+{
+  "name": "lesscss.org",
+  "dependencies": {
+    "bootstrap": "~3.0.0-rc1"
+  }
+}
