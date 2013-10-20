@@ -9,12 +9,18 @@
 
 module.exports = function(grunt) {
 
+
   // Project configuration.
   grunt.initConfig({
 
     // Project metadata
+    pkg: grunt.file.readJSON('package.json'),
     site: grunt.file.readYAML('_config.yml'),
-    pkg:  grunt.file.readJSON('package.json'),
+
+    config: {
+      src: 'src',
+      dist: '<%= site.dest %>'
+    },
 
 
     /**
@@ -34,17 +40,28 @@ module.exports = function(grunt) {
      */
     assemble: {
       options: {
-        flatten: true,
-        year: '<%= grunt.template.today("yyyy") %>',
-        assets: '<%= site.destination %>/assets',
-        partials: ['templates/includes/*.hbs'],
+        // Custom property for metadata
+        site: '<%= site %>',
+
+        // Initialize Assemble extensions
+        // plugins: ['permalinks'],
         helpers: ['helper-prettify', 'templates/helpers/*.js'],
-        layout: 'templates/layouts/default.hbs',
-        data: ['data/*.{json,yml}', 'package.json']
+
+        // Templates and data
+        layouts: 'templates/layouts',
+        partials: ['templates/includes/*.hbs'],
+        data: ['data/*.{json,yml}'],
+
+        // Dest config
+        assets: '<%= site.dest %>/assets',
+        flatten: true
       },
       pages: {
+        // options: {
+        //   permalinks: {preset: 'pretty'}
+        // },
         src: 'templates/*.hbs',
-        dest: '<%= site.destination %>/'
+        dest: '<%= site.dest %>/'
       }
     },
 
@@ -54,13 +71,10 @@ module.exports = function(grunt) {
      */
     less: {
       options: {
-        paths: ['vendor/bootstrap/less', 'styles'],
-        imports: {
-          reference: ['mixins.less', 'variables.less']
-        }
+        paths: ['theme/bootstrap', 'theme/components']
       },
       bootstrap: {
-        src: ['styles/bootstrap.less', 'styles/docs.less'],
+        src: ['theme/theme.less'],
         dest: '<%= assemble.options.assets %>/css/docs.css'
       }
     },
@@ -71,10 +85,9 @@ module.exports = function(grunt) {
      * any previously-created files.
      */
     clean: {
-      example: ['<%= site.destination %>/*.html']
+      example: ['<%= site.dest %>/*.html']
     }
   });
-
 
   // Load npm plugins to provide necessary tasks.
   grunt.loadNpmTasks('assemble');
@@ -83,10 +96,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
   // Default tasks to be run.
-  grunt.registerTask('default', [
-    'clean',
-    'jshint',
-    'assemble',
-    // 'less'
-  ]);
+  grunt.registerTask('default', ['clean', 'jshint', 'less', 'assemble']);
 };

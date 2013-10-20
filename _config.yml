@@ -1,15 +1,30 @@
+# Build
+root: _gh_pages
+dest: <%= site.root %>
+
+
+# Less.js metadata
+current_version: <%= less.version %>
+
 # Site metadata
 brand: lesscss.org
-title: LESS « The Dynamic Stylesheet Language
+title: Less.js
+lead: LESS « The Dynamic Stylesheet Language
 description: >
   LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions.
   LESS runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
-
-
-# Build directories
-destination: ./_gh_pages
+license:
+  type: MIT License
+  url: ./license/index.html
 
 
 # URLs
+repo: https://github.com/less/less.js
 download:
-  latest: https://raw.github.com/less/less.js/master/dist/less-1.4.2.min.js
+  source: https://github.com/less/less.js/archive/master.zip
+  latest: https://raw.github.com/less/less.js/master/dist/less-<%= pkg.version %>.min.js
+
+
+# SEO/SEM
+google_analytics: false
+google_site_id: false

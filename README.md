@@ -2,12 +2,23 @@
 
 > Official website and documentation for LESS/Less.js
 
+## Metadata
+
+To update the project with the most recent metadata from the Less.js project, such as current version number, description, and so on, run:
+
+```bash
+node tasks/pkg && grunt
+```
+
 ## The Plan
 
 First, clean up and organize all of the documentation in the [content](./content) directory. This means:
 
 * Consistent naming conventions for files, consistent coding styles in documents
 * Organize information and favor individual files for sections of content, rather than long documents
+
+
+
 
 ## Contributing
 

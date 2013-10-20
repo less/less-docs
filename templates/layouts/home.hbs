@@ -1,0 +1,46 @@
+{{#prettify}}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    {{> head }}
+  </head>
+  <body class="docs-home">
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    {{> nav-main }}
+
+    <!-- Page content of course! -->
+    {{> body }}
+
+
+    <footer class="container" role="contentinfo">
+      {{> ads }}
+
+      {{> social-buttons }}
+
+      <ul class="bs-masthead-links">
+        <li class="current-version">
+          Currently v{{ less.version }}
+        </li>
+        <li>
+          <a href="{{ site.repo }}" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'GitHub project']);">GitHub project</a>
+        </li>
+        <li>
+          <a href="./getting-started/#examples" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Examples']);.html">Examples</a>
+        </li>
+        <li>
+          <a href="{{ site.expo }}" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Expo']);">Expo</a>
+        </li>
+        <li>
+          <a href="{{ site.blog }}" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Blog']);">Blog</a>
+        </li>
+      </ul>
+    </footer>
+
+    <!-- JS and analytics only. -->
+    {{> footer }}
+
+  </body>
+</html>
+{{/prettify}}
