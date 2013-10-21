@@ -25,6 +25,41 @@ Example: `unit(5em)`
 Output: `5`
 
 
+<a id="convert"></a>
+### convert
+
+> Converts numbers from one type into another.
+
+First argument contains number with units and second argument contains units. If both units are compatible, the number is converted. If they are not compatible, function returns first argument without modifying it.
+
+_Compatible unit groups_:
+
+* lengths: `m`, `cm`, `mm`, `in`, `pt` and `pc`,
+* time: `s` and `ms`,
+* angle: `rad`, `deg`, `grad` and `turn`.
+
+Parameters:
+* `number`: a floating point number with units.
+* `identifier`, `string` or `escaped value`: units
+
+Returns: `number`
+Example:
+
+```less
+convert(9s, "ms")
+convert(14cm, mm)
+convert(8, mm) // incompatible unit types
+```
+
+Output:
+
+```
+9000ms
+140mm
+8
+```
+
+
 <a id="data-uri"></a>
 ## data-uri
 
