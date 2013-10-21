@@ -78,9 +78,14 @@ body {
 }
 ```
 
-### `@import` statements
+### `@import` statements (limited support)
 
 Syntax: `@import "@{themes}/tidal-wave.less";`
+
+Note that currently, only variables which have been declared in the root or current scope will be considered and that only the current file and calling files will be considered when looking for a variable.
+This means that this usage is typically limited to when you an inject a variable into the compile process or define a variable at the beginning of your root file.
+
+When you are importing a css file and not using the inline option (e.g. the import statement will be kept intact) then the above does not apply.
 
 Example:
 
@@ -91,27 +96,21 @@ Example:
 // Usage
 @import "@{themes}/tidal-wave.less";
 ```
-Compiles to:
 
-``` css
-@import "../../src/themes/tidal-wave.less";
-```
-
+Version: 1.4.0
 
 ### Properties
 
 <span class="warning">Under consideration</span>
 
-As of v1.4.0, variables **cannot** be used on  _CSS properties_ themselves, so this is not possible:
+As of v1.5.0, variables **cannot** be used on  _CSS properties_ themselves, so this is not possible:
 
 ``` less
 .widget {
   .@{myProperty}: #fff;
 }
 ```
-There have been requests for this feature, if you wish to add your voide to this request you can do so on the [GitHub Issues for Less.js]().
-
-
+There have been requests for this feature, if you wish to add your vote to this request you can do so on the [GitHub Issues for Less.js]().
 
 
 ## Variable Scope
