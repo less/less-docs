@@ -1,14 +1,13 @@
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
+# live site
+_gh_pages
 
-pids
-logs
-results
-
+# node.js
+node_modules
 npm-debug.log
+
+# local dev
+tmp
+temp
+vendor
+TODO.md
+*.sublime-*

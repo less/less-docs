@@ -1,0 +1,105 @@
+//
+// Ads
+// --------------------------------------------------
+
+
+/*
+ * Advertisement that shows on all pages (except homepage) in page headers.
+ * `!important` is required for any pre-set property.
+ */
+.ad {
+  width: auto !important;
+  margin: 50px -30px -40px !important;
+  padding: 20px !important;
+  overflow: hidden; /* clearfix */
+  height: auto !important;
+  font-size: 13px !important;
+  line-height: 16px !important;
+  text-align: left;
+  background: darken(@navbar-inverse-bg, 5%) !important;
+  border: 0 !important;
+  box-shadow: inset 0 3px 5px rgba(0,0,0,.075);
+}
+.ad-img {
+  margin: 0 !important;
+}
+.ad-text,
+.ad-tag {
+  float: none !important;
+  display: block !important;
+  width: auto !important;
+  height: auto !important;
+  margin-left: 145px !important;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+.ad-text {
+  padding-top: 0 !important;
+}
+.ad-tag {
+  color: @navbar-inverse-color !important;
+  text-align: left !important;
+}
+.ad-text a,
+.ad-tag a {
+  color: #fff !important;
+}
+.ad #adsense > img {
+  display: none; /* hide what I assume are tracking images */
+}
+
+@media (min-width: 768px) {
+  .ad {
+    margin: 0 !important;
+    border-radius: 4px;
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.075), 0 1px 0 rgba(255,255,255,.1);
+  }
+}
+
+@media (min-width: 992px) {
+  .ad {
+    position: absolute;
+    top: 20px;
+    right: 15px; /* 15px instead of 0 since box-sizing */
+    padding: 15px !important;
+    width: 330px !important;
+  }
+}
+
+/* Homepage variations */
+.docs-home .ad {
+  margin: 0 -15px 40px !important;
+}
+@media (min-width: 480px) {
+  .docs-home .ad {
+    width: 330px !important;
+    margin: 0 auto 40px !important;
+    border-radius: 4px;
+  }
+}
+@media (min-width: 768px) {
+  .docs-home .ad {
+    float: left;
+    width: 330px !important;
+    margin: 0 0 30px !important;
+  }
+  .docs-home .bs-social,
+  .docs-home .bs-masthead-links {
+    margin-left: 350px;
+  }
+  .docs-home .bs-social {
+    margin-bottom: 10px;
+  }
+  .docs-home .bs-masthead-links {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .docs-home .ad {
+    position: static;
+  }
+}
+@media (min-width: 1170px) {
+  .docs-home .ad {
+    margin-top: -25px !important;
+  }
+}

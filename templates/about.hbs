@@ -1,0 +1,95 @@
+---
+layout: default.hbs
+title: About
+slug: about
+lead: "Learn about the history of Less.js, meet the core team, and check out the ever-growing community resources."
+base_url: "../"
+---
+
+
+<!-- History
+================================================== -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="history">History</h1>
+  </div>
+  <p class="lead">LESS was developed by <a href="http://cloudhead.io">Alexis Sellier</a>, more commonly known as <a href="http://cloudhead.io">@cloudhead</a>. The Less.js project is now mantained and extended by the community and the core LESS team.</p>
+
+  {{md 'content/about/history.md'}}
+</div>
+
+
+<!-- Team
+================================================== -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="team">Core team</h1>
+  </div>
+  <p class="lead">Less.js is maintained by the founding team and a small group of invaluable core contributors, with the massive support and involvement of our community.</p>
+  <div class="list-group less-team">
+    <div class="list-group-item">
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=lukeapage&amp;type=follow"></iframe>
+      <a class="team-member" href="https://github.com/lukeapage">
+        <img src="http://www.gravatar.com/avatar/a80ab1a8297225d70baffc52adf6aefd" alt="@lukeapage">
+        <strong>Luke Page</strong> <small>@lukeapage</small>
+      </a>
+    </div>
+    <div class="list-group-item">
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=matthewdean&amp;type=follow"></iframe>
+      <a class="team-member" href="https://github.com/matthewdean">
+        <img src="http://www.gravatar.com/avatar/09caa4a26a5e57031146b5e06b4d7a8c" alt="@matthewdean">
+        <strong>Matthew Dean</strong> <small>@matthewdean</small>
+      </a>
+    </div>
+    <div class="list-group-item">
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=jonschlinkert&amp;type=follow"></iframe>
+      <a class="team-member" href="https://github.com/jonschlinkert">
+        <img src="http://www.gravatar.com/avatar/1bba28be5506009e85fb9dde1dd66535" alt="@jonschlinkert">
+        <strong>Jon Schlinkert</strong> <small>@jonschlinkert</small>
+      </a>
+    </div>
+  </div>
+  <p>Get involved with Less.js development by <a href="https://github.com/less/less.js/issues/new">opening an issue</a> or submitting a pull request. Read our <a href="https://github.com/less/less.js/blob/master/CONTRIBUTING.md">contributing guidelines</a> for information on how we develop.</p>
+</div>
+
+
+<!-- Community
+================================================== -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="community">Community</h1>
+  </div>
+  <p class="lead">Stay up to date on the development of Less.js and reach out to the community with these helpful resources.</p>
+  <ul>
+    <li>Read and subscribe to <a href="http://blog.getbootstrap.com/">The Official Less.js Blog</a>.</li>
+    <li>Have a feature request or bug report? <a href="{{ site.repo }}/issues?state=open">Let us know on our GitHub Issues</a>.</li>
+  </ul>
+</div>
+
+
+<!-- Ports
+================================================== -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="ports">Ports of Less.js</h1>
+  </div>
+  <p class="lead">LESS has been ported to several other programming languages.</p>
+  <ul>
+   {{md 'content/about/ports.md'}}
+  </ul>
+  <p>Have another language to add, or perhaps a different or better translation? Let us know by <a href="https://github.com/less/less.js/issues/new">opening an issue</a>.</p>
+</div>
+
+
+<!-- Translations
+================================================== -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="translations">Translations</h1>
+  </div>
+  <p class="lead">Community members have translated Less.js's documentation into various langauges. None are officially supported and may not always be up to date.</p>
+  <ul>
+   {{> translations }}
+  </ul>
+  <p>Have another language to add, or perhaps a different or better translation? Let us know by <a href="https://github.com/less/less.js/issues/new">opening an issue</a>.</p>
+</div>

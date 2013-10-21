@@ -1,0 +1,92 @@
+{{#prettify}}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head }}
+  </head>
+  <body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+
+    <!-- Docs master nav -->
+    {{> nav-main }}
+
+    <!-- Header -->
+    <div class="docs-header" id="content">
+      <div class="container">
+        <h1>{{ title }}</h1>
+        <p>{{ lead }}</p>
+        {{!> ads }}
+      </div>
+    </div>
+
+    <!-- Callout for the old docs link -->
+    {{> banner }}
+
+    <!-- Content -->
+    <div class="container docs-container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="sidebar hidden-print" role="complementary">
+            <ul class="nav sidenav">
+              {{#is slug "index" }}
+                {{> nav-getting-started }}
+              {{/is}}
+              {{#is slug "features" }}
+                {{> nav-features }}
+              {{/is}}
+              {{#is slug "functions" }}
+                {{> nav-functions }}
+              {{/is}}
+              {{#is slug "cheatsheet" }}
+                {{> nav-cheatsheet }}
+              {{/is}}
+              {{#is slug "css" }}
+                {{> nav-css }}
+              {{/is}}
+              {{#is slug "components" }}
+                {{> nav-components }}
+              {{/is}}
+              {{#is slug "customize" }}
+                {{> nav-customize }}
+              {{/is}}
+              {{#is slug "blog" }}
+                {{> nav-blog }}
+              {{/is}}
+              {{#is slug "about" }}
+                {{> nav-about }}
+              {{/is}}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9" role="main">
+          {{> body }}
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+      <div class="container">
+        {{> social-buttons }}
+        <p><a href="https://github.com/less/less.js">Less.js</a> was created by <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
+        <p>Documentation source code released under the <a href="{{site.license.url}}" target="_blank">{{site.license.type}}</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="footer-links">
+          <li>Currently v{{ less.version }}</li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ site.blog }}">Blog</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ site.repo }}/issues?state=open">Issues</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ site.repo }}/blob/master/CHANGELOG.md">Changelog</a></li>
+          <li class="muted">&middot;</li>
+          <li><a href="{{ site.repo }}/releases">Releases</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- JavaScript and analytics only. -->
+    {{> footer }}
+
+  </body>
+</html>
+{{/prettify}}

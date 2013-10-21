@@ -1,0 +1,38 @@
+<header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="{{relative dest "index.html"}}" class="navbar-brand">LESS</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li{{#is slug "features"}} class="active"{{/is}}>
+          <a href="./{{relative dest 'features.html'}}">Features</a>
+        </li>
+        <li{{#is slug "functions"}} class="active"{{/is}}>
+          <a href="./{{relative dest 'functions.html'}}">Function Reference</a>
+        </li>
+        {{#todo}}
+        <li{{#is slug "cheatsheet"}} class="active"{{/is}}>
+          <a href="./{{relative dest 'cheatsheet.html'}}">Cheatsheet</a>
+        </li>
+        {{/todo}}
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        {{#todo}}
+        <li{{#is slug "blog"}} class="active"{{/is}}>
+          <a href="./blog.html">Blog</a>
+        </li>
+        {{/todo}}
+        <li{{#is slug "about"}} class="active"{{/is}}>
+          <a href="./about.html">About</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
