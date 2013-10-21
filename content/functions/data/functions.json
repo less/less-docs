@@ -29,13 +29,27 @@
     },
     {
       "name": "color",
-      "example": "`color(@string);",
+      "example": "color(@string);",
       "description": "parses a string to a color"
     },
     {
       "name": "data-uri",
       "example": "data-uri([mimetype,] url);",
       "description": "inlines a resource and falls back to `url()`"
+    }
+  ],
+  "list-functions": [
+    {
+      "name": "length",
+      "example": "length(@list);",
+      "description": "returns the number of elements in a value list",
+      "version": "1.5.0"
+    },
+    {
+      "name": "extract",
+      "example": "extract(@list, index);",
+      "description": "returns a value at the specified position in the list",
+      "version": "1.4.0"
     }
   ],
   "math-functions": [
