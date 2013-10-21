@@ -10,10 +10,6 @@ Example:
 .mixin() {
   box-shadow+: inset 0 0 10px #555;
 }
-```
-
-Output:
-```css
 .myclass {
   .mixin();
   box-shadow+: 0 0 20px black;
