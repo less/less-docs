@@ -1,15 +1,20 @@
 ## Merge
 
-The `merge` feature allows for aggregating values from multiple properties into a comma separated list under a single property. `merge` is useful for properties such as background and transform. For example:
+The `merge` feature allows for aggregating values from multiple properties into a comma separated list under a single property. `merge` is useful for properties such as background and transform.
 
-``` css
+Example:
+```less
 .myclass {
-  box-shadow+: box-shadow+: 0 0 20px black;
-}
-
-.myclass {
-  box-shadow+: box-shadow+: 0 0 20px black;
+  box-shadow+: 0 0 12px black;
+  box-shadow+: 0 0 20px gray;
 }
 ```
 
-To avoid any unintentional joins, `merge` requires an explicit flag (`+`) on each join pending declaration.
+Output:
+```css
+.myclass {
+  box-shadow: 0 0 12px black, 0 0 20px gray;
+}
+```
+
+To avoid any unintentional joins, `merge` requires an explicit `+` flag on each join pending declaration.
