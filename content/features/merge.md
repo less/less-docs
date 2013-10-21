@@ -10,5 +10,6 @@ The `merge` feature allows for aggregating values from multiple properties into 
 .myclass {
   box-shadow+: box-shadow+: 0 0 20px black;
 }
+```
 
 To avoid any unintentional joins, `merge` requires an explicit flag (`+`) on each join pending declaration.

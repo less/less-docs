@@ -1,7 +1,5 @@
-# Variables
-
+<a id="variables"></a>
 > Control commonly used values in a single location.
-
 
 It's not uncommon to see the same value repeated dozens _if not hundreds of times_ across your stylesheets:
 
@@ -22,7 +20,6 @@ Variables make your code easier to maintain by giving you a way to control those
 @link-color:        #428bca; // sea blue
 @link-color-hover:  (@link-color, 10%);
 
-
 // Usage
 a, .link {
   color: @link-color;
@@ -36,11 +33,12 @@ a:hover {
 }
 ```
 
-### Variable Interpolation
+<a id="variable-interpolation"></a>
+## Variable Interpolation
 
 The examples above focused on using variables to control _values in CSS rules_, but they can also be used in other places as well, such as selector names, URLs and `@import` statements.
 
-#### Selectors
+### Selectors
 
 `example.less`
 
@@ -66,9 +64,9 @@ Compiles to:
 }
 ```
 
-#### URLs
+### URLs
 
-```
+```less
 // Variables
 @images:      "../img";
 
@@ -80,7 +78,7 @@ body {
 }
 ```
 
-#### `@import` statements
+### `@import` statements
 
 Syntax: `@import "@{themes}/tidal-wave.less";`
 
@@ -88,7 +86,7 @@ Example:
 
 ``` less
 // Variables
-@themes:      "../../src/themes";
+@themes: "../../src/themes";
 
 // Usage
 @import "@{themes}/tidal-wave.less";
@@ -100,7 +98,7 @@ Compiles to:
 ```
 
 
-#### Properties
+### Properties
 
 <span class="warning">Under consideration</span>
 
@@ -120,16 +118,16 @@ There have been requests for this feature, if you wish to add your voide to this
 
 
 
-### Global Variables
+## Global Variables
 
 
-### Local Variables
+## Local Variables
 
 
 
 
 
-### Variable Names
+## Variable Names
 
 It is also possible to define variables with a variable name:
 

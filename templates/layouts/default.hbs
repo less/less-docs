@@ -15,7 +15,7 @@
       <div class="container">
         <h1>{{ title }}</h1>
         <p>{{ lead }}</p>
-        {{> ads }}
+        {{!> ads }}
       </div>
     </div>
 
@@ -26,9 +26,9 @@
     <div class="container docs-container">
       <div class="row">
         <div class="col-md-3">
-          <div class="bs-sidebar hidden-print" role="complementary">
-            <ul class="nav bs-sidenav">
-              {{#is slug "getting-started" }}
+          <div class="sidebar hidden-print" role="complementary">
+            <ul class="nav sidenav">
+              {{#is slug "index" }}
                 {{> nav-getting-started }}
               {{/is}}
               {{#is slug "features" }}

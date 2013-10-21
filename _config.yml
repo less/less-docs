@@ -24,6 +24,7 @@ download:
   source: https://github.com/less/less.js/archive/master.zip
   latest: https://raw.github.com/less/less.js/master/dist/less-<%= pkg.version %>.min.js
 
+cdn: //cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js
 
 # SEO/SEM
 google_analytics: false

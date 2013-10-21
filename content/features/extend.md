@@ -1,26 +1,26 @@
 # Extend
 
-This document describes the rules and expected behavior of the ```:extend``` Pseudo-Class for the LESS language.
+> This document describes the rules and expected behavior of the `:extend` Pseudo-Class for the LESS language.
 
+Introduced: <kbd>0.1.4</kbd>
 
 ## Selector Pattern
 
-```E:extend(s)``` - an E element that will add itself and it's declarations to, simple selector s.
-
+`E:extend(s)` - an E element that will add itself and it's declarations to simple selectors.
 
 ## Terminology
 
 Extending Selectors
-```E:extend```
+`E:extend`
 
 Extended Selectors
-```(.one, .two)```
+`(.one, .two)`
 
 
- ## Rules (wip-1.4.0)
+## Rules
 
-* Only Simple may be extended. ```(.one, .two)``` is valid, while ```(ul li)``` is not
-* Extended selectors are *prepended* to _extended_ selectors. So:
+* Only Simple may be extended. `(.one, .two)` is valid, while `(ul li)` is not
+* Extended selectors are **prepended** to _extended_ selectors. So:
 
 ```less
 // Extending selector
@@ -35,8 +35,8 @@ compiles to:
   /* declarations */
 }
 ```
-* Declaration blocks from _Extended_ selectors are *prepended* to the declaration blocks of _extended_ selectors. So:
 
+Declaration blocks from _Extended_ selectors are **prepended** to the declaration blocks of _extended_ selectors. So:
 
 ```less
 // Extending selector
@@ -44,7 +44,7 @@ compiles to:
   z-index: 1;
 }
 // Extended selector
-.blue:extend(.blue) {
+.blue {
   position: relative;
 }
 ```
@@ -65,7 +65,7 @@ compiles to:
   // declarations
 }
 ```
-In the above example, the ```:extend``` directive will simply be ignored and passed over by the compiler.
+In the above example, the `:extend` directive will simply be ignored and passed over by the compiler.
 
 
 ```css
@@ -177,3 +177,5 @@ Prefixed Selectors use an application-specific prefix to ensure that the styles 
 
 
 ### Hacks
+
+TBC...

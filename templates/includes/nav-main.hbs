@@ -11,23 +11,24 @@
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <li{{#is slug "getting-started"}} class="active"{{/is}}>
-          <a href="./getting-started.html">Getting started</a>
-        </li>
         <li{{#is slug "features"}} class="active"{{/is}}>
           <a href="./{{relative dest 'features.html'}}">Features</a>
-        </li>
-        <li{{#is slug "cheatsheet"}} class="active"{{/is}}>
-          <a href="./{{relative dest 'cheatsheet.html'}}">Cheatsheet</a>
         </li>
         <li{{#is slug "functions"}} class="active"{{/is}}>
           <a href="./{{relative dest 'functions.html'}}">Function Reference</a>
         </li>
+        {{#todo}}
+        <li{{#is slug "cheatsheet"}} class="active"{{/is}}>
+          <a href="./{{relative dest 'cheatsheet.html'}}">Cheatsheet</a>
+        </li>
+        {{/todo}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
+        {{#todo}}
         <li{{#is slug "blog"}} class="active"{{/is}}>
           <a href="./blog.html">Blog</a>
         </li>
+        {{/todo}}
         <li{{#is slug "about"}} class="active"{{/is}}>
           <a href="./about.html">About</a>
         </li>
