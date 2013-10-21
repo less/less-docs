@@ -11,3 +11,4 @@ temp
 vendor
 TODO.md
 *.sublime-*
+.idea
