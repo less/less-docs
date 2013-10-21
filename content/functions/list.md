@@ -1,7 +1,7 @@
 <a id="length"></a>
-## length
+### length
 
-> returns a number of elements in a value list.
+> Returns a number of elements in a value list.
 
 Parameters: `list` - a comma or space separated list of values.
 Returns: an integer number of elements in a list
@@ -24,9 +24,9 @@ n: 4;
 
 
 <a id="extract"></a>
-## extract
+### extract
 
-> returns a value at a specified position in a list.
+> Returns a value at a specified position in a list.
  
 Parameters:
 `list` - a comma or space separated list of values.

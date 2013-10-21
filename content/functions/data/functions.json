@@ -14,11 +14,6 @@
       "name": "format",
       "example": "%(@string, values...);",
       "description": "formats a string"
-    },
-    {
-      "name": "color",
-      "example": "color(string);",
-      "description": "converts string or escaped value into color"
     }
   ],
   "misc-functions": [
@@ -31,6 +26,11 @@
       "name": "color",
       "example": "color(@string);",
       "description": "parses a string to a color"
+    },
+    {
+      "name": "convert",
+      "example": "convert(@value, unit);",
+      "description": "converts numbers from one type into another"
     },
     {
       "name": "data-uri",

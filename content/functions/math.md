@@ -326,7 +326,7 @@ NaNcm;
 <a id="min"></a>
 ### min
 
-> returns the lowest of one or more values.
+> Returns the lowest of one or more values.
 
 Parameters: `value1, ..., valueN` - one or more values to compare.
 Returns: the lowest value.
@@ -341,7 +341,7 @@ Output: `1px`
 <a id="max"></a>
 ### max
 
-> returns the highest of one or more values.
+> Returns the highest of one or more values.
 
 Parameters: `value1, ..., valueN` - one or more values to compare.
 Returns: the highest value.
