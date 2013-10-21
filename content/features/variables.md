@@ -3,7 +3,7 @@
 
 It's not uncommon to see the same value repeated dozens _if not hundreds of times_ across your stylesheets:
 
-``` css
+```css
 a, .link {
   color: #428bca;
 }
@@ -15,7 +15,7 @@ a, .link {
 
 Variables make your code easier to maintain by giving you a way to control those values from a single location:
 
-``` less
+```less
 // Variables
 @link-color:        #428bca; // sea blue
 @link-color-hover:  (@link-color, 10%);
