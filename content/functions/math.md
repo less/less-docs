@@ -323,84 +323,31 @@ NaNcm;
 -1%;
 ```
 
-<a id="convert"></a>
-### convert
+<a id="min"></a>
+### min
 
-> Converts numbers from one type into another.
+> Returns the lowest of one or more values.
 
-First argument contains number with units and second argument contains units. If both units are compatible, the number is converted. If they are not compatible, function returns first argument without modifying it.
+Parameters: `value1, ..., valueN` - one or more values to compare.
+Returns: the lowest value.
 
-_Compatible unit groups_:
+Example: `min(5, 10);`
+Output: `5`
 
-* lengths: `m`, `cm`, `mm`, `in`, `pt` and `pc`,
-* time: `s` and `ms`,
-* angle: `rad`, `deg`, `grad` and `turn`.
+Example: `min(3px, 42px, 1px, 16px);`
+Output: `1px`
 
-Parameters:
-* `number`: a floating point number with units.
-* `identifier`, `string` or `escaped value`: units
 
-Returns: `number`
-Example:
+<a id="max"></a>
+### max
 
-```less
-convert(9s, "ms")
-convert(14cm, mm)
-convert(8, mm) // incompatible unit types
-```
+> Returns the highest of one or more values.
 
-Output:
+Parameters: `value1, ..., valueN` - one or more values to compare.
+Returns: the highest value.
 
-```
-9000ms
-140mm
-8
-```
+Example: `max(5, 10);`
+Output: `10`
 
-<a id="math-unit"></a>
-### unit
-
-> Returns number with different units. Only units are changed, number itself is not converted.
-
-The function assumes that second parameter contains valid unit type.
-
-Parameters:
-* `number`: a floating point number with units.
-* `identifier` or `escaped value`: units.
-
-Returns: `number`
-Example:
-
-```less
-unit(9s, ~"ms")
-unit(-9, m)
-```
-
-Output:
-
-```
-9ms
--9m
-```
-
-<a id="color"></a>
-### color
-
-> Converts a string or escaped value into a color.
-
-The input must contain color in hexadecimal or shorthand representation.
-
-Parameters: `identifier` or `escaped value` with valid color in hexadecimal or shorthand representation.
-Returns: `color`
-Example:
-
-```less
-color("#445566")
-color(~"#123")
-```
-Output:
-
-```
-#445566
-#112233
-```
+Example: `max(3%, 42%, 1%, 16%);`
+Output: `42%`
