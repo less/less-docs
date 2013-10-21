@@ -93,7 +93,7 @@ The documentation site is generated using [Assemble](http://assemble.io). Please
 Update the project with the most recent metadata from the Less.js project, such as current version number, description, and so on, and then run Grunt with the following command:
 
 ```bash
-node docs/pkg && grunt
+node data/utils/pkg && grunt
 ```
 
 ## License

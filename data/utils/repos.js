@@ -5,7 +5,7 @@ var _  = grunt.util._;
 var options = {
   host: 'api.github.com',
   method: 'GET',
-  path: '/orgs/assemble/repos?page=1&per_page=100'
+  path: '/orgs/less/repos?page=1&per_page=100'
 };
 
 var request = https.request(options, function (response) {
