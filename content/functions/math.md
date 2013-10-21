@@ -322,3 +322,32 @@ NaNcm;
 5cm
 -1%;
 ```
+
+<a id="min"></a>
+### min
+
+> returns the lowest of one or more values.
+
+Parameters: `value1, ..., valueN` - one or more values to compare.
+Returns: the lowest value.
+
+Example: `min(5, 10);`
+Output: `5`
+
+Example: `min(3px, 42px, 1px, 16px);`
+Output: `1px`
+
+
+<a id="max"></a>
+### max
+
+> returns the highest of one or more values.
+
+Parameters: `value1, ..., valueN` - one or more values to compare.
+Returns: the highest value.
+
+Example: `max(5, 10);`
+Output: `10`
+
+Example: `max(3%, 42%, 1%, 16%);`
+Output: `42%`

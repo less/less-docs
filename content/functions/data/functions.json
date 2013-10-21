@@ -150,6 +150,18 @@
       "description": "first argument modulus second argument",
       "example": "mod(number, number);",
       "version": "1.4.0"
+    },
+    {
+      "name": "min",
+      "description": "returns the lowest of one or more values",
+      "example": "min(@x, @y);",
+      "version": "1.5.0"
+    },
+    {
+      "name": "max",
+      "description": "returns the lowest of one or more values",
+      "example": "max(@x, @y);",
+      "version": "1.5.0"
     }
   ],
   "color-definition": [
