@@ -12,7 +12,7 @@ nav ul {
   background: blue;
 }
 ```
-In the rule set above, the `:extend` selector will apply the "extending selector" (`nav ul`) along with its entire declaration block onto the `.inline` class _wherever the `.inline` class appears_.
+In the rule set above, the `:extend` selector will apply the "extending selector" (`nav ul`) onto the `.inline` class _wherever the `.inline` class appears_. The declaration block will be kept as-is, but without any reference to the extend (because extend isn't css).
 
 So the following:
 
@@ -444,7 +444,6 @@ The `:extend` feature seems to hold the most promise as a device for:
 2.
 
 `:extend` directive to a selector (or ruleset of a selector) allows you to add the styles of that selector to any other selectors,
-
 
 ```css
 .widget {
