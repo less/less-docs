@@ -34,7 +34,7 @@ The typical example of using a recursive loop to generate CSS grid classes:
     width: (@i * 100% / @n);
   }
 
-  .generateColumns(@n, (@i + 1));
+  .generate-columns(@n, (@i + 1));
 }
 ```
 Output:
