@@ -427,66 +427,113 @@ Outputs
 
 ## Use Cases
 
-TODO - upto here in documenting
+### Classic Use Case
 
-> Examples for when "extend" will be valuable, and when it won't
-
-The purpose of this section is to better understand how the ```:extend``` feature _ought_ be used, thinking in terms of best practices, in order to help prioritize development decisions, and to qualify or disqualify feature requests related to this feature.
-
-
-### Repetitious Code
-
-TODO:
-
-The `:extend` feature seems to hold the most promise as a device for:
-
-1. Selector Inheritance: which means you can add the styles of one selector to other selectors, but without having to manually _hunt down and directly edit_ each of the selectors you wish to extend. Clearly, this is advantageous at the time of need, but it's also helpful with code maintenance.
-2.
-
-`:extend` directive to a selector (or ruleset of a selector) allows you to add the styles of that selector to any other selectors,
+The classic use case is to avoid adding a base class. For example, if you have
 
 ```css
-.widget {
-  &:extend(ul li, .blob, .kitchensink, .sanity, .willtolive, .questions, .etc);
-  background: blue;
+.animal {
+  background-color: black;
+  color: white;
 }
 ```
 
+and you want to have a subtype of animal which overrides the background color then you have two options, firstly change your html
 
+```html
+<a class="animal bear">Bear</a>
+```
 ```css
-.widget {
-  &:extend(.answers, .blob, .kitchensink, .sanity, .willtolive, .nav, .navbar, .etc);
-  background: blue;
+.animal {
+  background-color: black;
+  color: white;
+}
+.bear {
+  background-color: brown;
 }
 ```
 
+or have simplified html and use extend in your less. e.g.
 
-Don't understand:
-Notice that the Extending selector was grouped before the Extended selector. This was chosen not for stylistic reasons, but to be behaviorally consistent with the expected order of inherited declarations within the block.
-
-TODOs:
-Specificity
-Order of Inherited Declarations
-Mixins <-- just do later?
-
-Selectors
-  Type Selectors
-  Simple Selectors
-Combinators
-Pseudo-Elements
-
-
-## Extends with Mixins
-
-TODO: that it is planned
-
+```html
+<a class="bear">Bear</a>
 ```
-.clearfix():extend() {
-  // declarations
+```css
+.animal {
+  background-color: black;
+  color: white;
+}
+.bear {
+  &:extend(.animal);
+  background-color: brown;
 }
 ```
 
-#Extends, Mixins, "Empty" Mixins, and Placeholders
+### Reducing CSS Size
 
-TODO
-We want :extend to make our lives easier by DRYing up our stylesheets, but only when :extend cannot "pierce the context barrier" of the selector you wish to extend. So within the same context the goal is to prevent  order to prevent :extend from poluting styles
+Mixins copy all of the properties into a selector, which can lead to unnecessary duplication. Therefore you can use extends instead of mixins to move the selector up to the properties you wish to use, which leads to less css being generated.
+
+Example - with mixin:
+
+```less
+.my-inline-block() {
+    display: inline-block;
+    font-size: 0;
+}
+.thing1 {
+    .my-inline-block;
+}
+.thing2 {
+    .my-inline-block;
+}
+```
+Outputs
+```css
+.thing1 {
+    display: inline-block;
+    font-size: 0;
+}
+.thing2 {
+    display: inline-block;
+    font-size: 0;
+}
+```
+
+Example (with extends):
+
+```less
+.my-inline-block {
+    display: inline-block;
+    font-size: 0;
+}
+.thing1 {
+    &:extend(.my-inline-block);
+}
+.thing2 {
+    &:extend(.my-inline-block);
+}
+```
+Outputs
+```css
+.my-inline-block,
+.thing1,
+.thing2 {
+    display: inline-block;
+    font-size: 0;
+}
+```
+
+### Combining Styles / a more advanced mixin
+
+Another use-case is as an alternative for a mixin - because mixins can only be used with simple selectors, if you have two different blocks on html, but need to apply the same styles to both you can use extends to relate two areas.
+
+Example:
+
+```less
+li.list > a {
+  // list styles
+}
+button.list-style {
+  &:extend(li.list > a); // use the same list styles
+}
+```
