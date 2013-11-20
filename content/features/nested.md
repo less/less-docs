@@ -71,6 +71,39 @@ Will output
 }
 ```
 
+###Nested Media Queries
+
+Media queries can be nested in the same way as selectors, and output will create the appropriate rules within 
+media queries.
+
+For example:
+
+```less
+.one {
+  @media (width: 400px) {
+    font-size: 1.2em;
+    @media print and color {
+      color: blue;
+    }
+  }
+}
+```
+
+Will output
+
+```css
+@media (width: 400px) {
+  .one {
+    font-size: 1.2em;
+  }
+}
+@media (width: 400px) and print and color {
+  .one {
+    color: blue;
+  }
+}
+```
+
 ###Advanced Usage of &
 
 You can use the `&` to prepend a selector to the inherited (parent) scope. [Parent selector](Parent-Selectors.md) describes this in more detail.
@@ -93,7 +126,7 @@ For example:
 }
 ```
 
-Will Output:
+Will output
 ```css
 .parent .child,
 .parent .sibling {
@@ -130,7 +163,7 @@ For Example:
 }
 ```
 
-Will Output:
+Will output
 
 ```css
 .button-ok {
@@ -161,7 +194,7 @@ For example:
 
 ```
 
-Will Output:
+Will output
 
 ```css
 .mixin:hover {
