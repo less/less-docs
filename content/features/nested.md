@@ -143,3 +143,35 @@ Will Output:
   background-image: url("button.png");
 }
 ```
+
+The `&` combinator can also be used with mixins. In the case of mixins, `&` refers to the selector for the scope
+that is mixing in the other class. 
+
+For example:
+```less
+.mixin {
+  &:hover {
+    color:cyan;
+  }
+}
+.blue {
+  .mixin;
+  color:blue;
+}
+
+```
+
+Will Output:
+
+```css
+.mixin:hover {
+  color: cyan;
+}
+
+.blue {
+  color: blue;
+}
+.blue:hover {
+  color: cyan;
+}
+```
