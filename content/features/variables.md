@@ -114,16 +114,6 @@ As of v1.5.0, variables **cannot** be used on  _CSS properties_ themselves, so t
 ```
 There have been requests for this feature, if you wish to add your vote to this request you can do so on the [GitHub Issues for Less.js]().
 
-
-## Variable Scope
-
-
-## Global Variables
-
-
-## Local Variables
-
-
 ## Variable Names
 
 It is also possible to define variables with a variable name:
