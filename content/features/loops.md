@@ -1,8 +1,6 @@
-<a id="mixins-recursive-loops" class="section_anchor"></a>
+<a id="loops" class="section_anchor"></a>
 
-## Loops
-
-# Mixins : Recursive (loops)
+# Loops
 > Creating loops
 
 In LESS a mixin can call itself. Such recursive mixins, when combined with [Guard Expressions](#) and [Pattern Matching](#), can be used to create various iterative/loop structures.
