@@ -29,3 +29,37 @@ The selector `.no-borderradius &` will be combined with the inherited scope, `.h
   background-image: url('images/button-background.png');
 }
 ```
+
+## Advanced Usage of `&`
+
+The & symbol can be used in selectors in order to reverse the ordering of the nesting and to multiply classes.
+
+For example:
+
+```
+    .child, .sibling {
+        .parent & {
+            color: black;
+        }
+        & + & {
+            color: red;
+        }
+    }
+```
+
+Will output
+
+```
+    .parent .child,
+    .parent .sibling {
+        color: black;
+    }
+    .child + .child,
+    .child + .sibling,
+    .sibling + .child,
+    .sibling + .sibling {
+        color: red;
+    }
+```
+
+You can also use & in mixins in order to reference nesting that is outside of your mixin.
