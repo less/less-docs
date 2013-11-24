@@ -1,4 +1,8 @@
-## Parent selectors
+<a id="parent-selectors" class="section_anchor"></a>
+
+# Parent selectors
+> changing selector order, using :hover in a nested rule
+
 
 When using **Nested rules**, it can be very useful to prepend a selector to the inherited (parent) scope.  This feature is known as "Parent Selectors", and can be done by putting the parent selector before an ampersand `&`.
 

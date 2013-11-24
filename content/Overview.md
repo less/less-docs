@@ -201,7 +201,3 @@ Importing works pretty much as expected. You can import a `.less` file, and all 
 @import "library";
 @import "typo.css";
 ```
-
-LESS is a pretty concise language. :-)
-
-[website]: http://snowplowanalytics.com

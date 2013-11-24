@@ -2,10 +2,10 @@
 published: false
 ---
 
+<a id="scope" class="section_anchor"></a>
+
 # Scope
-
-> TODO
-
+> How variables are evaluated
 
 ## Tips & Tricks
 

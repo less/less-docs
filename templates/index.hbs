@@ -12,43 +12,7 @@ base_url: "../"
     <div class="page-header">
       <h1 id="getting-started">Getting Started</h1>
     </div>
-    <p>Less is a CSS pre-processor - it extends the CSS language, adding features that allow variables, mixins, functions and many other techniques that allow you to make css that is more maintainable, themable and extendable.</p>
-    <p>Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.</p>
-    <p>For example.
-{{#markdown}}
-```less
-@base: #f938ab;
-
-.box-shadow(@style, @c) when (iscolor(@c)) {
-  -webkit-box-shadow: @style @c;
-  -moz-box-shadow:    @style @c;
-  box-shadow:         @style @c;
-}
-.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
-  .box-shadow(@style, rgba(0, 0, 0, @alpha));
-}
-.box {
-  color: saturate(@base, 5%);
-  border-color: lighten(@base, 30%);
-  div { .box-shadow(0 0 5px, 30%) }
-}
-```
-{{/markdown}}
-compiles to
-{{#markdown}}
-```css
-.box {
-  color: #fe33ac;
-  border-color: #fdcdea;
-}
-.box div {
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-```
-{{/markdown}}
-</p>
+    {{md 'content/front/getting-started.md'}}
   </div>
 
 
@@ -104,14 +68,6 @@ bower install less
     {{/todo}}
   </div>
 
-  <!-- Migration
-  ================================================== -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="migration">Migrating from 1.4 to 1.5</h1>
-    </div>
-  </div>
-
 
   <!-- Browser support
   ================================================== -->
@@ -119,15 +75,7 @@ bower install less
     <div class="page-header">
       <h1 id="browsers">Browser support</h1>
     </div>
-  </div>
-
-
-  <!-- Third party support
-  ================================================== -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="third-parties">Third party support</h1>
-    </div>
+    {{md 'content/front/browser-support.md'}}
   </div>
 
   <!-- License FAQs

@@ -1,5 +1,6 @@
-# Extend
+<a id="extend" class="section_anchor"></a>
 
+# Extend
 > Extend is a LESS Pseudo-Class which merges the selector it is put on with ones that match what it references.
 
 Released [v1.4.0](https://github.com/less/less.js/blob/master/CHANGELOG.md)

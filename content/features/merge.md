@@ -1,4 +1,7 @@
-## Merge
+<a id="merge" class="section_anchor"></a>
+
+# Merge
+> Combine properties
 
 The `merge` feature allows for aggregating values from multiple properties into a comma separated list under a single property. `merge` is useful for properties such as background and transform.
 

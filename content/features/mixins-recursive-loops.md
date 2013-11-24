@@ -1,4 +1,7 @@
-## Recursive Mixin ~~Calls~~ and Loops
+<a id="mixins-recursive-loops" class="section_anchor"></a>
+
+# Mixins : Recursive (loops)
+> Creating loops
 
 ...
 
