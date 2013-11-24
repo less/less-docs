@@ -1,17 +1,17 @@
 <a id="mixins-recursive-loops" class="section_anchor"></a>
 
+## Loops
+
 # Mixins : Recursive (loops)
 > Creating loops
 
-...
-
-~~It's not so easy to invent a very simple and in the same time less or more practical loop example. The simplest loops are totally useless and practical code is usually too advanced as it also uses many other (or at least one more) LESS features.~~
+In LESS a mixin can call itself. Such recursive mixins, when combined with [Guard Expressions](#) and [Pattern Matching](#), can be used to create various iterative/loop structures.
 
 Example:
 ```less
-.loop(@index) when (@index > 0) {
-  .loop((@index - 1));    // next iteration
-  width: (10px * @index); // code for each iteration
+.loop(@counter) when (@counter > 0) {
+  .loop((@counter - 1));    // next iteration
+  width: (10px * @counter); // code for each iteration
 }
 
 div {
@@ -29,18 +29,17 @@ div {
 }
 ```
 
-Example:
+The typical example of using a recursive loop to generate CSS grid classes:
 ```less
-@nColumns: 4;
+.generate-columns(4);
 
-.loop(1);
-.loop(@i) when (@i <= @nColumns) {
+.generate-columns(@n, @i: 1) when (@i <= @n) {
 
   .column-@{i} {
-    width: (@i * 100% / @nColumns)
+    width: (@i * 100% / @n);
   }
 
-  .loop((@i + 1));
+  .generate-columns(@n, (@i + 1));
 }
 ```
 Output:
