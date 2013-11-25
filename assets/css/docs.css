@@ -6914,6 +6914,9 @@ body {
  * Neutralize background color to allow our
  * syntax highlighter theme to do the work.
  */
+pre {
+  background: #F8F8FF;
+}
 pre code {
   background: transparent;
 }
