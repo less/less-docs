@@ -13,19 +13,19 @@
 <script src="{{ assets }}/js/application.js"></script>
 
 
+{{#if site.analytics.google_site_id}}
 <!-- Analytics
 ================================================== -->
 <script>
-{{#if site.google_site_id}}
   var _gauges = _gauges || [];
   (function() {
     var t   = document.createElement('script');
     t.async = true;
     t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '{{site.google_site_id}}');
+    t.setAttribute('data-site-id', '{{site.analytics.google_site_id}}');
     t.src = '//secure.gaug.es/track.js';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(t, s);
   })();
-{{/if}}
 </script>
+{{/if}}

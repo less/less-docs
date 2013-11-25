@@ -3,45 +3,44 @@ layout: default.hbs
 title: Getting started
 slug: index
 lead: "An overview of Less, how to download and use, examples and more."
-base_url: "../"
 ---
 
-  <!-- Getting started
-  ================================================== -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="getting-started">Getting Started</h1>
-    </div>
-    {{md 'content/front/getting-started.md'}}
+<!-- Getting started
+================================================== -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="getting-started">Getting Started</h1>
   </div>
+  {{md 'content/front/getting-started.md'}}
+</div>
 
 
-  <!-- Usage
-  ================================================== -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="using-less">Using Less</h1>
-    </div>
-    <p class="lead">Less can be used in a few different ways</p>
+<!-- Usage
+================================================== -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="using-less">Using Less</h1>
+  </div>
+  <p class="lead">Less can be used in a few different ways</p>
 
-    Install via NPM
+  Install via NPM
 
-    <p><a class="btn btn-lg btn-primary" href="{{ site.download_dist }}" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" role="button">Download Less.js v{{less.version}}</a></p>
+  <p><a class="btn btn-lg btn-primary" href="{{ site.download.latest }}" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" role="button">Download Less.js v{{less.version}}</a></p>
 
-    <h3 id="download-additional">Additional downloads</h3>
-    <div class="docs-dl-options">
-      <h4>
-        <a href="{{ site.download_source }}" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);">Download source code</a>
-      </h4>
-      <p>Get the latest Less.js source code by downloading it directly from GitHub.</p>
-      <h4>
-        <a href="{{ site.repo }}" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'GitHub project']);">Clone or fork via GitHub</a>
-      </h4>
-      <p>Visit us on GitHub to clone or fork the Less.js project.</p>
-      <h4>
-        Install with <a href="http://bower.io">Bower</a>
-      </h4>
-      <p>Install the Less.js project and JavaScript using <a href="http://bower.io">Bower</a>.</p>
+  <h3 id="download-additional">Additional downloads</h3>
+  <div class="docs-dl-options">
+    <h4>
+      <a href="{{ site.download.source }}" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);">Download source code</a>
+    </h4>
+    <p>Get the latest Less.js source code by downloading it directly from GitHub.</p>
+    <h4>
+      <a href="{{ site.repo }}" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'GitHub project']);">Clone or fork via GitHub</a>
+    </h4>
+    <p>Visit us on GitHub to clone or fork the Less.js project.</p>
+    <h4>
+      Install with <a href="http://bower.io">Bower</a>
+    </h4>
+    <p>Install the Less.js project and JavaScript using <a href="http://bower.io">Bower</a>.</p>
 
 {{#markdown}}
 ```bash
@@ -49,24 +48,26 @@ bower install less
 ```
 {{/markdown}}
 
-    </div>
+  </div>
 
-    <h3 id="download-cdn">Less CDN</h3>
-    <p>TODO <a href="//cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js">CDN</a>.</p>
+  <h3 id="download-cdn">Less CDN</h3>
+  <p>TODO <a href="{{site.cdn.cloutflare}}">CDN</a>.</p>
+
 
 {{#markdown}}
 ```html
-<script src="{{ site.cdn }}"></script>
+<script src="{{ site.cdn.cloudflare }}"></script>
 ```
 {{/markdown}}
 
-    {{#todo}}
-    <div class="bs-callout bs-callout-warning" id="callout-less-compilation">
-      <h4>Compiling Less.js files</h4>
-      <p>If you are developing with Less.js ....</p>
-    </div>
-    {{/todo}}
+
+  {{#unpublished}}
+  <div class="bs-callout bs-callout-warning" id="callout-less-compilation">
+    <h4>Compiling Less.js files</h4>
+    <p>If you are developing with Less.js ....</p>
   </div>
+  {{/unpublished}}
+</div>
 
 
   <!-- Browser support
@@ -84,7 +85,7 @@ bower install less
     <div class="page-header">
       <h1 id="license-faqs">License FAQs</h1>
     </div>
-    <p class="lead">Less is released under the Apache 2 license and is copyright {{ now "%Y" }} The Less Core Team (see about). Boiled down to smaller chunks, it can be described with the following conditions.</p>
+    <p class="lead">Less.js is released under the Apache 2 License. Copyright 2009-{{ now "%Y" }}, Alexis Sellier and the Less Core Team (see about). Boiled down to smaller chunks, it can be described with the following conditions.</p>
 
     <div class="row">
       <div class="col-12 col-lg-6">
@@ -117,5 +118,5 @@ bower install less
         </ul>
       </div>
     </div>
-    <p>The full Less.js license is located <a href="{{ site.repo }}/blob/master/LICENCE">in the project repository</a> for more information.</p>
+    <p>The full Less.js license is located <a href="{{ site.repo }}/blob/master/LICENSE">in the project repository</a> for more information.</p>
   </div><!-- /.docs-section -->

@@ -14,23 +14,38 @@
         <li{{#is slug "features"}} class="active"{{/is}}>
           <a href="./{{relative dest 'features.html'}}">Features</a>
         </li>
+        {{#unpublished}}
+        <li{{#is slug "plugins"}} class="active"{{/is}}>
+          <a href="./{{relative dest 'plugins.html'}}">Plugins</a>
+        </li>
+        {{/unpublished}}
         <li{{#is slug "functions"}} class="active"{{/is}}>
           <a href="./{{relative dest 'functions.html'}}">Function Reference</a>
         </li>
-        {{#todo}}
+        {{#unpublished}}
         <li{{#is slug "cheatsheet"}} class="active"{{/is}}>
           <a href="./{{relative dest 'cheatsheet.html'}}">Cheatsheet</a>
         </li>
-        {{/todo}}
+        {{/unpublished}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        {{#todo}}
+        {{#unpublished}}
         <li{{#is slug "blog"}} class="active"{{/is}}>
           <a href="./blog.html">Blog</a>
         </li>
-        {{/todo}}
+        {{/unpublished}}
         <li{{#is slug "about"}} class="active"{{/is}}>
           <a href="./about.html">About</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li> <a href="{{site.repo}}">Docs Repo</a> </li>
+            <li> <a href="{{site.issues}}">Docs Issues</a> </li>
+            <li class="divider"></li>
+            <li> <a href="{{site.repo}}">Less.js Repo</a> </li>
+            <li> <a href="{{site.issues}}">Less.js Issues</a> </li>
+          </ul>
         </li>
       </ul>
     </nav>

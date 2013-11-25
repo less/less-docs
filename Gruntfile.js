@@ -14,8 +14,9 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     // Project metadata
-    pkg: grunt.file.readJSON('package.json'),
+    pkg : grunt.file.readJSON('package.json'),
     site: grunt.file.readYAML('_config.yml'),
+
 
     config: {
       src: 'src',
@@ -40,12 +41,13 @@ module.exports = function(grunt) {
      */
     assemble: {
       options: {
-        // Custom property for metadata
+        // Project metadata
         site: '<%= site %>',
 
-        // Initialize Assemble extensions
+        // Assemble extensions
+        // We should use premalinks before going live
         // plugins: ['permalinks'],
-        helpers: ['helper-prettify', 'templates/helpers/*.js'],
+        helpers: ['templates/helpers/*.js'],
 
         // Templates and data
         layouts: 'templates/layouts',
@@ -73,7 +75,7 @@ module.exports = function(grunt) {
       options: {
         paths: ['theme/bootstrap', 'theme/components']
       },
-      bootstrap: {
+      docs: {
         src: ['theme/theme.less'],
         dest: '<%= assemble.options.assets %>/css/docs.css'
       }
