@@ -1,4 +1,7 @@
-# Importing
+<a id="import-directives" class="section_anchor"></a>
+
+# Import Directives
+> How to combine files
 
 Standard CSS Import statements may be treated differently by less depending on the file extension. If the file has a css extension, it will be treated as css and the import statement left as-is (see the inline option below). If it has any other extension it will be treated as less and imported.
 If it does not have an extension, ".less" will be appended and it will be included as a imported less file.

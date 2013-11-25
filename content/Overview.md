@@ -1,10 +1,6 @@
-## The Language
-
 As an extension to CSS, LESS is not only backwards compatible with CSS, but the extra features it adds use existing CSS syntax. This makes learning LESS a breeze, and if in doubt, lets you fall back to CSS.
 
-
-
-### Variables
+## Variables
 
 These are pretty self-explanatory:
 
@@ -28,7 +24,7 @@ Outputs:
 Note that variables are actually "constants" in that they can only be defined once.
 
 
-### Mixins
+## Mixins
 
 Mixins are a way of including ("mixing in") a bunch of properties from one rule-set into another rule-set. So say we have the following class:
 
@@ -61,7 +57,7 @@ The properties of the `.bordered` class will now appear in both `#menu a` and `.
   * [[Parametric Mixins|parametric-mixins]]
 
 
-### Nested rules
+## Nested rules
 
 LESS gives you the ability to use nesting instead of, or in combination with cascading. Let's say we have the following CSS:
 
@@ -111,7 +107,7 @@ You can also bundle pseudo-selectors with your mixins using this method. Here's 
 }
 ```
 
-### Operations
+## Operations
 
 Any number, color or variable can be operated on. Here are a couple of examples:
 
@@ -133,8 +129,28 @@ The output is pretty much what you expect—LESS understands the difference betw
 
 LESS will use that unit for the final output—`6px` in this case.
 
+## Functions
 
-### Namespaces & Accessors
+LESS provides a variety of functions which transform colors, manipulate strings and do maths.
+They are documented fully in the function reference.
+
+Using them is pretty straightforward. The following example uses percentage to convert 0.5 to 50%,
+increases the saturation of a base color by 5% and then sets the background color to one that is lightened by
+25% and spun by 8 degrees:
+
+```
+    @base: #f04615;
+    @width: 0.5;
+
+    .class {
+      width: percentage(0.5); // returns `50%`
+      color: saturate(@base, 5%);
+      background-color: spin(lighten(@base, 25%), 8);
+    }
+```
+
+
+## Namespaces & Accessors
 
 Sometimes, you may want to group your variables or mixins, for organizational purposes, or just to offer some encapsulation. You can do this pretty intuitively in LESS—say you want to bundle some mixins and variables under `#bundle`, for later reuse or distributing:
 
@@ -163,7 +179,7 @@ Now if we want to mixin the `.button` class in our `#header a`, we can do:
 ```
 
 
-### Scope
+## Scope
 
 Scope in LESS is very similar to that of programming languages. Variables and mixins are first looked for locally, and if they aren't found, the compiler will look in the parent scope, and so on.
 
@@ -180,7 +196,7 @@ Note that the order of declaration **does** matter.
   }
 ```
 
-### Comments
+## Comments
 
 Both C-style and inline comments may be used:
 
@@ -193,7 +209,7 @@ Both C-style and inline comments may be used:
 ```
 
 
-### Importing
+## Importing
 
 Importing works pretty much as expected. You can import a `.less` file, and all the variables in it will be available. If the file is a `.less`, the extension is optional:
 
@@ -201,7 +217,3 @@ Importing works pretty much as expected. You can import a `.less` file, and all 
 @import "library";
 @import "typo.css";
 ```
-
-LESS is a pretty concise language. :-)
-
-[website]: http://snowplowanalytics.com

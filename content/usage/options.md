@@ -50,3 +50,58 @@ The binary included in this repository, `bin/lessc` works with [Node.js](http://
   # compile bootstrap.less to bootstrap.css and minify (compress) the result
   $ lessc -x bootstrap.less bootstrap.css
 ```
+
+### env
+Type: `String`
+Default: `development`
+
+Environment to run may be either `development` or `production`. If the document's URL starts with file:// or localhost it will automatically be set to 'development'.
+
+
+### async
+Type: `Boolean`
+Default: `false`
+
+Load imports asynchronously.
+
+
+### fileAsync
+Type: `Boolean`
+Default: `false`
+
+Load imports asynchronously when in a page under a file protocol.
+
+
+### poll
+Type: `Integer`
+Default: `1000`
+
+The amount of time (in milliseconds) between polls while in watch mode.
+
+
+### functions
+Type: `object`
+
+User functions, keyed by name.
+
+
+### dumpLineNumbers
+Type: `String`
+Options: `comments`|`mediaQuery`|`all`
+Default: `comments`
+
+**TODO**: need more explaination here.
+
+
+### relativeUrls
+Type: `Boolean`
+Default: `false`
+
+Optionally adjust URL's to be relative. When false, URL's are already relative to the entry less file.
+
+
+### rootpath
+Type: `String`
+Default: `false`
+
+A path to add on to the start of every URL resource.

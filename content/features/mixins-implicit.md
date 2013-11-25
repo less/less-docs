@@ -1,3 +1,0 @@
-## Implicit Mixins
-
-> TODO

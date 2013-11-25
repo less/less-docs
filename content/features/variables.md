@@ -1,4 +1,6 @@
-<a id="variables"></a>
+<a id="variables" class="section_anchor"></a>
+
+# Variables
 > Control commonly used values in a single location.
 
 It's not uncommon to see the same value repeated dozens _if not hundreds of times_ across your stylesheets:
@@ -111,20 +113,6 @@ As of v1.5.0, variables **cannot** be used on  _CSS properties_ themselves, so t
 }
 ```
 There have been requests for this feature, if you wish to add your vote to this request you can do so on the [GitHub Issues for Less.js]().
-
-
-## Variable Scope
-
-
-
-## Global Variables
-
-
-## Local Variables
-
-
-
-
 
 ## Variable Names
 

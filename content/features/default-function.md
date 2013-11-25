@@ -2,9 +2,9 @@
 published: false
 ---
 From: [@seven-phases-max/pr#1606](https://github.com/less/less.js/pull/1606)
+<a id="default-function" class="section_anchor"></a>
 
-## Function `default`
-
+# Default Function
 > Available inside guard conditions and returns `true` only if no other mixin matches.  (see #1584)
 
 ## Usage:

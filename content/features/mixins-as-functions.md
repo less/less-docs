@@ -1,4 +1,7 @@
-## Using Mixins as Functions
+<a id="mixins-as-functions" class="section_anchor"></a>
+
+# Mixins as Functions
+> Return variables from mixins
 
 All variables defined in a mixin are visible and can be used in caller's scope (unless the caller defines its own variable with the same name). 
 
