@@ -26,18 +26,6 @@
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
-    <script>
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script');
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
   </head>
   <body>
     <a class="sr-only" href="#content">Skip to main content</a>
@@ -67,6 +55,26 @@
             <li class="active">
               <a href="./about.html">About</a>
             </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="">Docs Repo</a>
+                </li>
+                <li>
+                  <a href="/issues?&amp;state=open">Docs Issues</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="">Less.js Repo</a>
+                </li>
+                <li>
+                  <a href="/issues?&amp;state=open">Less.js Issues</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
@@ -84,7 +92,7 @@
     <div class="banner">
       <div class="container">
         <strong>
-      <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">See what's new in v1.5.0-b4</a>
+      <a href="/blob/master/CHANGELOG.md">See what's new in v1.5.0-b4</a>
     </strong>
         To hear what's new from the Less.js core team,
         <a href="TODO">visit the blog</a>.
@@ -180,7 +188,7 @@
               <li>Read and subscribe to
                 <a href="">The Official Less.js Blog</a>.</li>
               <li>Have a feature request or bug report?
-                <a href="https://github.com/less/less.js/issues?state=open">Let us know on our GitHub Issues</a>.</li>
+                <a href="/issues?state=open">Let us know on our GitHub Issues</a>.</li>
             </ul>
           </div>
 
@@ -295,7 +303,7 @@
           <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka
           <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
         <p>Documentation source code released under the
-          <a href="./license/index.html" target="_blank">MIT License</a>, documentation under
+          <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under
           <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <ul class="footer-links">
           <li>Currently v1.5.0-b4</li>
@@ -305,15 +313,15 @@
           </li>
           <li class="muted">&middot;</li>
           <li>
-            <a href="https://github.com/less/less.js/issues?state=open">Issues</a>
+            <a href="/issues?state=open">Issues</a>
           </li>
           <li class="muted">&middot;</li>
           <li>
-            <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">Changelog</a>
+            <a href="/blob/master/CHANGELOG.md">Changelog</a>
           </li>
           <li class="muted">&middot;</li>
           <li>
-            <a href="https://github.com/less/less.js/releases">Releases</a>
+            <a href="/releases">Releases</a>
           </li>
         </ul>
       </div>
@@ -333,10 +341,5 @@
       hljs.initHighlightingOnLoad();
     </script>
     <script src="assets/js/application.js"></script>
-
-    <!-- Analytics
-================================================== -->
-    <script>
-    </script>
   </body>
 </html>

@@ -26,18 +26,6 @@
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="shortcut icon" href="assets/ico/favicon.png">
-    <script>
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script');
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
   </head>
   <body>
     <a class="sr-only" href="#content">Skip to main content</a>
@@ -67,6 +55,26 @@
             <li>
               <a href="./about.html">About</a>
             </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="">Docs Repo</a>
+                </li>
+                <li>
+                  <a href="/issues?&amp;state=open">Docs Issues</a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                  <a href="">Less.js Repo</a>
+                </li>
+                <li>
+                  <a href="/issues?&amp;state=open">Less.js Issues</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
@@ -84,7 +92,7 @@
     <div class="banner">
       <div class="container">
         <strong>
-      <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">See what's new in v1.5.0-b4</a>
+      <a href="/blob/master/CHANGELOG.md">See what's new in v1.5.0-b4</a>
     </strong>
         To hear what's new from the Less.js core team,
         <a href="TODO">visit the blog</a>.
@@ -152,7 +160,7 @@
         <div class="col-md-9" role="main">
 
           <!-- Getting started
-  ================================================== -->
+================================================== -->
           <div class="docs-section">
             <div class="page-header">
               <h1 id="getting-started">Getting Started</h1>
@@ -187,7 +195,7 @@
           </div>
 
           <!-- Usage
-  ================================================== -->
+================================================== -->
           <div class="docs-section">
             <div class="page-header">
               <h1 id="using-less">Using Less</h1>
@@ -195,16 +203,16 @@
             <p class="lead">Less can be used in a few different ways</p>
             Install via NPM
             <p>
-              <a class="btn btn-lg btn-primary" href="" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" role="button">Download Less.js v1.5.0-b4</a>
+              <a class="btn btn-lg btn-primary" href="https://raw.github.com/less/less.js/master/dist/less-.min.js" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" role="button">Download Less.js v1.5.0-b4</a>
             </p>
             <h3 id="download-additional">Additional downloads</h3>
             <div class="docs-dl-options">
               <h4>
-                <a href="" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);">Download source code</a>
+                <a href="/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);">Download source code</a>
               </h4>
               <p>Get the latest Less.js source code by downloading it directly from GitHub.</p>
               <h4>
-                <a href="https://github.com/less/less.js" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'GitHub project']);">Clone or fork via GitHub</a>
+                <a href="" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'GitHub project']);">Clone or fork via GitHub</a>
               </h4>
               <p>Visit us on GitHub to clone or fork the Less.js project.</p>
               <h4>
@@ -217,8 +225,8 @@
             </div>
             <h3 id="download-cdn">Less CDN</h3>
             <p>TODO
-              <a href="//cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js">CDN</a>.</p>
-            <pre><code class="language-html">&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js&quot;&gt;&lt;/script&gt;</code></pre>
+              <a href="">CDN</a>.</p>
+            <pre><code class="language-html">&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js&quot;&gt;&lt;/script&gt;</code></pre>
           </div>
 
           <!-- Browser support
@@ -241,7 +249,7 @@
             <div class="page-header">
               <h1 id="license-faqs">License FAQs</h1>
             </div>
-            <p class="lead">Less is released under the Apache 2 license and is copyright 2013 The Less Core Team (see about). Boiled down to smaller chunks, it can be described with the following conditions.</p>
+            <p class="lead">Less.js is released under the Apache 2 License. Copyright 2009-2013, Alexis Sellier and the Less Core Team (see about). Boiled down to smaller chunks, it can be described with the following conditions.</p>
             <div class="row">
               <div class="col-12 col-lg-6">
                 <h4>It allows you to:</h4>
@@ -274,7 +282,7 @@
               </div>
             </div>
             <p>The full Less.js license is located
-              <a href="https://github.com/less/less.js/blob/master/LICENCE">in the project repository</a>for more information.</p>
+              <a href="/blob/master/LICENSE">in the project repository</a>for more information.</p>
           </div>
 
           <!-- /.docs-section -->
@@ -300,7 +308,7 @@
           <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka
           <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
         <p>Documentation source code released under the
-          <a href="./license/index.html" target="_blank">MIT License</a>, documentation under
+          <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under
           <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <ul class="footer-links">
           <li>Currently v1.5.0-b4</li>
@@ -310,15 +318,15 @@
           </li>
           <li class="muted">&middot;</li>
           <li>
-            <a href="https://github.com/less/less.js/issues?state=open">Issues</a>
+            <a href="/issues?state=open">Issues</a>
           </li>
           <li class="muted">&middot;</li>
           <li>
-            <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">Changelog</a>
+            <a href="/blob/master/CHANGELOG.md">Changelog</a>
           </li>
           <li class="muted">&middot;</li>
           <li>
-            <a href="https://github.com/less/less.js/releases">Releases</a>
+            <a href="/releases">Releases</a>
           </li>
         </ul>
       </div>
@@ -338,10 +346,5 @@
       hljs.initHighlightingOnLoad();
     </script>
     <script src="assets/js/application.js"></script>
-
-    <!-- Analytics
-================================================== -->
-    <script>
-    </script>
   </body>
 </html>
