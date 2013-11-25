@@ -98,4 +98,5 @@ node data/utils/pkg && grunt
 
 ## License
 Copyright (c) 2013, Less.js Core Team, Contributors
+Documentation released under [Creative Commons](./LICENSE-CC).
 Documentation source code released under the [MIT License](./LICENSE-MIT).

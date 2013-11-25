@@ -23,21 +23,18 @@
     }
   ],
   "main": "Gruntfile.js",
-  "scripts": {
-    "test": "grunt test"
-  },
   "devDependencies": {
     "assemble": "~0.4.13",
+    "assemble-contrib-permalinks": "~0.2.0",
     "assemble-less": "~0.5.3",
     "grunt": "~0.4.1",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-jshint": "~0.6.4",
-    "helper-prettify": "~0.1.7",
-    "lodash": "~2.2.1",
-    "permalinks": "~0.1.6",
-    "assemble-yaml": "~0.2.0"
+    "grunt-readme": "~0.3.4",
+    "handlebars-helper-prettify": "~0.2.1"
   },
   "keywords": [
+    "handlebars-helper-prettify",
     "less css",
     "less",
     "less.js",
