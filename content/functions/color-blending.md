@@ -84,7 +84,7 @@ multiply(#ff6600, #0000ff);
 
 ![Color 1](http://placehold.it/100x40/ff6600/ffffff&text=ff6600)
 ![Color 2](http://placehold.it/100x40/0000ff/ffffff&text=0000ff)
-![Color 3](http://placehold.it/100x40/ff6600/ffffff&text=ff6600)
+![Color 3](http://placehold.it/100x40/000000/ffffff&text=000000)
 
 
 <a id="screen"></a>
