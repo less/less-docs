@@ -121,16 +121,25 @@ A mixin reference can supply parameters values by their names instead of just po
   margin: @margin;
   padding: @padding;
 }
-.some .selector div {
-  .mixin(@padding: 40px; @color: #33acfe);
+.class1 {
+  .mixin(@margin: 20px; @color: #33acfe);
+}
+.class2 {
+  .mixin(#efca44; @padding: 40px);
 }
 ```
 compiles into:
 ```css
-.some .selector div {
+.class1 {
   color: #33acfe;
+  margin: 20px;
+  padding: 20px;
+}
+.class2 {
+  color: #efca44;
   margin: 10px;
   padding: 40px;
+}
 ```
 
 ### The `@arguments` variable
