@@ -1,4 +1,6 @@
-##Nested Rules
+<a id="nested-rules" class="section_anchor"></a>
+
+#Nested Rules
 
 LESS allows you to use nesting as well as normal CSS cascading. For example, you can produce the following CSS:
 
@@ -29,17 +31,17 @@ With the following LESS:
 
   .logo {
     width: 300px;
-    
-    &:hover { 
+
+    &:hover {
       text-decoration: none;
     }
   }
 }
 ```
 
-This syntax is a better representation of the DOM structure that you are styling. Note that by default 
+This syntax is a better representation of the DOM structure that you are styling. Note that by default
 the nested style produces output with the descendent syntax of CSS. To produce other relationships, you can use `&`.
-The `&` acts as a placeholder for the parent selector (where the parent selector includes the components of all ancestor selectors). 
+The `&` acts as a placeholder for the parent selector (where the parent selector includes the components of all ancestor selectors).
 
 For example:
 
@@ -71,9 +73,9 @@ Will output
 }
 ```
 
-###Nested Media Queries
+##Nested Media Queries
 
-Media queries can be nested in the same way as selectors, and output will create the appropriate rules within 
+Media queries can be nested in the same way as selectors, and output will create the appropriate rules within
 media queries.
 
 For example:
@@ -104,34 +106,29 @@ Will output
 }
 ```
 
-###Advanced Usage of &
+##Advanced Usage of &
 
-You can use the `&` to prepend a selector to the inherited (parent) scope. [Parent selector](Parent-Selectors.md) describes this in more detail.
-
-The `&` combinator can also be used to multiply classes, and can be used with comma seperated selectors.
+The `&` combinator can be used to multiply classes, and can be used with comma seperated selectors.
+You can also use the `&` to prepend a selector to the inherited (parent) scope. [Parent selector](Parent-Selectors.md) describes this in more detail.
 
 For example:
 
 ```less
 .child, .sibling {
-  .parent & {
-    color: black;
-  }
   & + & {
     color: red;
   }
   &.adopted {
     color: blue;
   }
+  .parent & {
+    color: black;
+  }
 }
 ```
 
 Will output
 ```css
-.parent .child,
-.parent .sibling {
-  color: black;
-}
 .child + .child,
 .child + .sibling,
 .sibling + .child,
@@ -141,6 +138,10 @@ Will output
 .child.adopted,
 .sibling.adopted {
   color: blue;
+}
+.parent .child,
+.parent .sibling {
+  color: black;
 }
 ```
 
@@ -177,8 +178,7 @@ Will output
 }
 ```
 
-The `&` combinator can also be used with mixins. In the case of mixins, `&` refers to the selector for the scope
-that is mixing in the other class. 
+The `&` combinator can also be used with mixins. In the case of mixins, `&` refers to the selector for the scope that is mixing in the other class.
 
 For example:
 ```less
