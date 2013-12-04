@@ -111,6 +111,27 @@ compiles into:
 }
 ```
 
+### Named Parameters
+
+A mixin reference can supply parameters values by their names instead of just positions. Any parameter can be referenced by its name and they do not have to be in any special order:
+
+```less
+.mixin(@color: black; @margin: 10px; @padding: 20px) {
+  color: @color;
+  margin: @margin;
+  padding: @padding;
+}
+.some .selector div {
+  .mixin(@padding: 40px; @color: #33acfe);
+}
+```
+compiles into:
+```css
+.some .selector div {
+  color: #33acfe;
+  margin: 10px;
+  padding: 40px;
+```
 
 ### The `@arguments` variable
 
