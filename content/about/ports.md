@@ -9,6 +9,7 @@
 ## PHP
 * [lessphp](http://leafo.net/lessphp/docs/)
 * [BW LESS CSS](http://wordpress.org/extend/plugins/bw-less-css/) (WordPress Plugin)
+* [less.php](http://lessphp.gpeasy.com/)
 
 ## Ruby
 * [Less.js In Ruby's V8 Engine](https://github.com/cowboyd/less.rb)
