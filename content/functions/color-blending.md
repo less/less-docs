@@ -312,7 +312,7 @@ softlight(#ff6600, #cccccc);
 ```
 
 ![Color 1](http://placehold.it/100x40/ff6600/ffffff&text=ff6600)
-![Color 2](http://placehold.it/100x40/cccccc/ffffff&text=cccccc)
+![Color 2](http://placehold.it/100x40/cccccc/000000&text=cccccc)
 ![Color 3](http://placehold.it/100x40/ff8a00/ffffff&text=ff8a00)
 
 ```less
@@ -320,7 +320,7 @@ softlight(#ff6600, #ffffff);
 ```
 
 ![Color 1](http://placehold.it/100x40/ff6600/ffffff&text=ff6600)
-![Color 2](http://placehold.it/100x40/ffffff/ffffff&text=ffffff)
+![Color 2](http://placehold.it/100x40/ffffff/000000&text=ffffff)
 ![Color 3](http://placehold.it/100x40/ffa100/ffffff&text=ffa100)
 
 ```less
