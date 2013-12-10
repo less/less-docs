@@ -7,7 +7,7 @@ _This page focuses on GUI compilers. For command line usage and tools see [[Comm
 
 ### [Crunch!](http://crunchapp.net/)
 
-> Crunch is not just a LESS compiler, it is also a LESS editor for Windows and Mac. 
+> Crunch is not just a LESS compiler, it is also a LESS editor for Windows and Mac.
 
 If you work a lot with LESS files, you should definitely try it out. Crunch is built on the Adobe AIR platform. Get more info: [http://crunchapp.net/](http://crunchapp.net/).
 
@@ -27,7 +27,7 @@ Get more info: [http://mixture.io/](http://mixture.io)
 
 ### [SimpLESS](http://wearekiss.com/simpless)
 
-> SimpLESS is a minimalistic LESS compiler. Just drag, drop and compile. 
+> SimpLESS is a minimalistic LESS compiler. Just drag, drop and compile.
 
 One of the unique features of SimpLESS is that it supports 'prefixing' your CSS by using [http://prefixr.com.](http://prefixr.com). SimpLESS is built on the Titanium platform. Get more info: [http://wearekiss.com/simpless](http://wearekiss.com/simpless)
 
@@ -42,7 +42,7 @@ Features: cross platform, compile error notification supports and compile option
 
 Get more info: [http://koala-app.com/](http://koala-app.com/)
 
-![koala screenshot](http://koala-app.com/images/screenshots/windows.png)
+![koala screenshot](http://koala-app.com/img/screenshot.png)
 
 
 
@@ -60,11 +60,11 @@ Get more info at [http://alphapixels.com/prepros](http://alphapixels.com/prepros
 
 #### [WinLess](http://winless.org)
 
-> WinLess started out as a clone of LESS.app, it takes a more feature-complete approach and has several settings. It also supports starting with command line arguments. 
+> WinLess started out as a clone of LESS.app, it takes a more feature-complete approach and has several settings. It also supports starting with command line arguments.
 
 Get more info: [http://winless.org](http://winless.org)
 
-![WinLess screenshot](http://files.web-mark.nl/winless/style/images/WinLess_Screenshot.png)
+![WinLess screenshot](http://winless.org/style/images/WinLess_Screenshot.png)
 
 
 ### OSx
@@ -97,9 +97,9 @@ Get more info: [http://livereload.com](http://livereload.com)
 
 #### [Plessc](https://github.com/Mte90/Plessc)
 
-> Plessc is a gui fronted made with PyQT. 
+> Plessc is a gui fronted made with PyQT.
 
-Auto compile, log viewer, open the less file with the editor choosen, settings for compile the file.  
+Auto compile, log viewer, open the less file with the editor choosen, settings for compile the file.
 Get more info: [https://github.com/Mte90/Plessc](https://github.com/Mte90/Plessc)
 
 ![Plessc screenshot](https://github.com/Mte90/Plessc/raw/master/screenshot.png)
