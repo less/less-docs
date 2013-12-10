@@ -1,55 +1,65 @@
 # Command Line Usage
-
 > Compile `.less` files to `.css` using the command line
 
 <span class="warning">Heads up! If the command line isn't your thing, learn more about [[GUI compilers for LESS|GUI-compilers-that-use-Less.js]].</span>
 
-# lessc
+## lessc
+> Server-Side and Command Line Usage
 
 The binary included in this repository, `bin/lessc` works with [Node.js](http://nodejs.org/) on *nix, OSX and Windows.
 
 **Usage**: `lessc [option option=parameter ...] <source> [destination]`
 
-**Options**:
+### Options
 
 ```
--h,  --help               Print help (this message) and exit.
--v,  --version            Print version number and exit.
-     --verbose            Be verbose.
--s,  --silent             Suppress output of error messages.
-     --line-numbers=TYPE  Outputs filename and line numbers. ☃ (1)
--rp, --rootpath           Set rootpath for URL rewriting in relative imports and URLs. ☃ (2)
-     --include-path       Set include paths. ☃ (3)
--ru, --relative-urls      Re-write relative URLs to the base less file.
-     --strict-imports     Force evaluation of imports.
- -x, --compress           Compress output by removing some whitespaces.
-     --yui-compress       Compress output using ycssmin
--O0, -O1, -O2             Set the parser's optimization level.  ☃ (4)
-     --no-color           Disable colorized output.
+-h, --help               Print help (this message) and exit.
+--include-path=PATHS     Set include paths. Separated by `:'. Use `;' on Windows.
+-M, --depends            Output a makefile import dependency list to stdout
+--no-color               Disable colorized output.
+--no-ie-compat           Disable IE compatibility checks.
+--no-js                  Disable JavaScript in less files
+-l, --lint               Syntax check only (lint).
+-s, --silent             Suppress output of error messages.
+--strict-imports         Force evaluation of imports.
+--insecure               Allow imports from insecure https hosts.
+-v, --version            Print version number and exit.
+-x, --compress           Compress output by removing some whitespaces.
+--clean-css              Compress output using clean-css
+--clean-option=opt:val   Pass an option to clean css, using CLI arguments from
+                         https://github.com/GoalSmashers/clean-css e.g.
+                         --clean-option=--selectors-merge-mode:ie8
+                         and to switch on advanced use --clean-option=--advanced
+--source-map[=FILENAME]  Outputs a v3 sourcemap to the filename (or output filename.map)
+--source-map-rootpath=X  adds this path onto the sourcemap filename and less file paths
+--source-map-basepath=X  Sets sourcemap base path, defaults to current working directory.
+--source-map-less-inline puts the less files into the map instead of referencing them
+--source-map-map-inline  puts the map (and any less files) into the output css file
+--source-map-url=URL     the complete url and filename put in the less file
+-rp, --rootpath=URL      Set rootpath for url rewriting in relative imports and urls.
+                         Works with or without the relative-urls option.
+-ru, --relative-urls     re-write relative urls to the base less file.
+-sm=on|off               Turn on or off strict math, where in strict mode, math
+--strict-math=on|off     requires brackets. This option may default to on and then
+                         be removed in the future.
+-su=on|off               Allow mixed units, e.g. 1px+1em or 1px*1px which have units
+--strict-units=on|off    that cannot be represented.
+--global-var='VAR=VALUE' Defines a variable that can be referenced by the file.
+--modify-var='VAR=VALUE' Modifies a variable already declared in the file.
 ```
 
-**☃ Comments**:
+### Examples
 
-**(1)** `--line-numbers` `TYPE` can be:
-  * `comments`: output the debug info within comments.
-  * `mediaquery`: outputs the information within a fake media query which is compatible with the SASS format.
-  * `all` does both
-
-**(2)** `--rootpath`: sorks with or without the `relative-urls` option.
-
-**(3)** `--include-path`: separated by `:`. Use `;` on Windows.
-
-**(4)** Optimization levels: The lower the number, the fewer nodes created in the tree. Useful for debugging or if you need to access the individual nodes in the tree.
-
-# Examples
-
-``` bash
+```bash
   # compile bootstrap.less to bootstrap.css
   $ lessc bootstrap.less bootstrap.css
 
   # compile bootstrap.less to bootstrap.css and minify (compress) the result
   $ lessc -x bootstrap.less bootstrap.css
 ```
+
+## less.js
+> Client-side Usage
 
 ### env
 Type: `String`
