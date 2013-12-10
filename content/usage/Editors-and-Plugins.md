@@ -53,5 +53,5 @@ Also see: [[GUI Compilers that use LESS.js]]
 [codelobster]: http://www.codelobster.com/
 [netbeans]: https://netbeans.org/downloads/
 [netbeans-sh]: http://wiki.netbeans.org/NetBeans_74_NewAndNoteworthy#CSS_Preprocessors
-[webstorm]: (http://www.jetbrains.com/webstorm/)
-[phpstorm]: (http://www.jetbrains.com/phpstorm/)
+[webstorm]: http://www.jetbrains.com/webstorm/
+[phpstorm]: http://www.jetbrains.com/phpstorm/
