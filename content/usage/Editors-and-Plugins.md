@@ -1,6 +1,6 @@
 Also see: [[GUI Compilers that use LESS.js]]
 
-## Text Editors
+## Editors and IDEs
 
 * [Crunch!](http://crunchapp.net/): The LESS editor and compiler that almost makes it too easy.
 * [Mindscape Web Workbench][web-workbench] (built-in support) "Accelerate and simplify your Web development experience with Visual Studio integrated Sass, Less and CoffeeScript support"
@@ -44,9 +44,9 @@ Also see: [[GUI Compilers that use LESS.js]]
 [CSSisLESS]: http://visualstudiogallery.msdn.microsoft.com/dd5635b0-3c70-484f-abcb-cbdcabaa9923
 [web-workbench]: http://visualstudiogallery.msdn.microsoft.com/2b96d16a-c986-4501-8f97-8008f9db141a
 [dmx]: http://www.dmxzone.com/go/21514/dmxzone-less-css-compiler-features-unveiled/
-[Npp]: http://notepad-plus-plus.org/ "v6.3+ recommended"
+[Npp]: http://notepad-plus-plus.org/
 [Npp-Less-Salitrero]: http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_Files#L
-[Npp-Less-azrafe7]: https://github.com/azrafe7/LESS-for-Notepad-plusplus "improved and with a dark theme"
+[Npp-Less-azrafe7]: https://github.com/azrafe7/LESS-for-Notepad-plusplus
 [Npp-How-to]: http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_Files#How_to_install_user_defined_language_files "how to install User Defined Language files"
 [brackets]: http://brackets.io/
 [brackets-ext]:https://github.com/adobe/brackets/wiki/Brackets-Extensions
