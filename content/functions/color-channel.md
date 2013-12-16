@@ -1,5 +1,5 @@
 <a id="hue"></a>
-## hur
+## hue
 
 > Extracts the hue channel of a color object.
 
