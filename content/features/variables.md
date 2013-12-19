@@ -38,16 +38,16 @@ a:hover {
 <a id="variable-interpolation"></a>
 ## Variable Interpolation
 
-The examples above focused on using variables to control _values in CSS rules_, but they can also be used in other places as well, such as selector names, URLs and `@import` statements.
+The examples above focused on using variables to control _values in CSS rules_, but they can also be used in other places as well, such as selector names, property names, URLs and `@import` statements.
 
+<a id="selector-interpolation"></a>
 ### Selectors
 
-`example.less`
+Version: 1.4.0
 
-``` less
+```less
 // Variables
-@mySelector:   banner;
-
+@mySelector: banner;
 
 // Usage
 .@{mySelector} {
@@ -58,7 +58,7 @@ The examples above focused on using variables to control _values in CSS rules_, 
 ```
 Compiles to:
 
-``` css
+```css
 .banner {
   font-weight: bold;
   line-height: 40px;
@@ -66,12 +66,12 @@ Compiles to:
 }
 ```
 
+<a id="url-string-interpolation"></a>
 ### URLs
 
 ```less
 // Variables
-@images:      "../img";
-
+@images: "../img";
 
 // Usage
 body {
@@ -80,7 +80,10 @@ body {
 }
 ```
 
+<a id="import-string-interpolation"></a>
 ### `@import` statements (limited support)
+
+Version: 1.4.0
 
 Syntax: `@import "@{themes}/tidal-wave.less";`
 
@@ -91,7 +94,7 @@ When you are importing a css file and not using the inline option (e.g. the impo
 
 Example:
 
-``` less
+```less
 // Variables
 @themes: "../../src/themes";
 
@@ -99,82 +102,101 @@ Example:
 @import "@{themes}/tidal-wave.less";
 ```
 
-Version: 1.4.0
-
+<a id="property-interpolation"></a>
 ### Properties
 
-<span class="warning">Under consideration</span>
+Version: ?.?.?
 
-As of v1.5.0, variables **cannot** be used on  _CSS properties_ themselves, so this is not possible:
+```less
+@property: color;
 
-``` less
 .widget {
-  .@{myProperty}: #fff;
+  @{property}: #0ee;
+  background-@{property}: #999;
 }
 ```
-There have been requests for this feature, if you wish to add your vote to this request you can do so on the [GitHub Issues for Less.js]().
+Compiles to:
 
+```css
+.widget {
+  color: #0ee;
+  background-color: #999;
+}
+```
+
+<a id="variable-name-reference"></a>
 ## Variable Names
 
 It is also possible to define variables with a variable name:
 
-    @fnord:  "I am fnord.";
-    @var:    "fnord";
-    content: @@var;
-
+```less
+@fnord:  "I am fnord.";
+@var:    "fnord";
+content: @@var;
+```
 Which compiles to:
 
-    content: "I am fnord.";
+```css
+content: "I am fnord.";
+```
+
+<a id="lazy-loading"></a>
+## Lazy Loading
+
+> Variables are lazy loaded and do not have to be declared before being used.
+
+Valid LESS snippet:
+
+```less
+lazy-eval {
+  width: @var;
+}
+
+@var: @a;
+@a: 9%;
+```
+this is valid LESS too:
+
+```less
+.lazy-eval-scope {
+  width: @var;
+  @a: 9%;
+}
+
+@var: @a;
+@a: 100%;
+```
+both compile into:
+
+```css
+.lazy-eval-scope {
+  width: 9%;
+}
+```
 
 When defining a variable twice, the last definition of the variable is used, searching from the current scope upwards. This is similar to css itself where the last property inside a definition is used to determine the value.
 
 For instance:
 
-    @var: 0;
-    .class1 {
-      @var: 1;
-      .class {
-        @var: 2;
-        three: @var;
-        @var: 3;
-      }
-      one: @var;
-    }
-
+```less
+@var: 0;
+.class1 {
+  @var: 1;
+  .class {
+    @var: 2;
+    three: @var;
+    @var: 3;
+  }
+  one: @var;
+}
+```
 Compiles to:
 
-    .class1 .class {
-      three: 3;
-    }
-    .class {
-      one: 1;
-    }
-
-## Tip
-
-> Variables are lazy loaded and do not have to be declared before being used.
-
-Valid less snippet:
-
-    lazy-eval {
-      width: @var;
-    }
-
-    @var: @a;
-    @a: 9%;
-
-this is valid less too:
-
-    .lazy-eval-scope {
-      width: @var;
-      @a: 9%;
-    }
-
-    @var: @a;
-    @a: 100%;
-
-both compile into:
-
-    .lazy-eval-scope {
-      width: 9%;
-    }
+```css
+.class1 .class {
+  three: 3;
+}
+.class {
+  one: 1;
+}
+```
