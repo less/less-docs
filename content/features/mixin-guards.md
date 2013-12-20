@@ -24,8 +24,7 @@ Let's start with an example:
 }
 ```
 
-The key is the **`when`** keyword, which introduces a guard sequence (here with only one guard). Now if we run the following
-code:
+The key is the **`when`** keyword, which introduces a guard sequence (here with only one guard). Now if we run the following code:
 
 ```less
 .class1 { .mixin(#ddd) }
@@ -48,7 +47,7 @@ Here's what we'll get:
 The full list of comparison operators usable in guards are: **`> >= = =< <`**. Additionally, the keyword `true`
 is the only truthy value, making these two mixins equivalent:
 
-```
+```less
 .truth (@a) when (@a) { ... }
 .truth (@a) when (@a = true) { ... }
 ```
@@ -61,7 +60,7 @@ Any value other than the keyword `true` is falsy:
 }
 ```
 
-Guards can be separated with a comma '`,`'--if any of the guards evaluates to true, it's
+Guards can be separated with a comma '`,`', if any of the guards evaluates to true, it's
 considered as a match:
 
 ```less
@@ -70,21 +69,21 @@ considered as a match:
 
 Note that you can also compare arguments with each other, or with non-arguments:
 
-```
-    @media: mobile;
+```less
+@media: mobile;
 
-    .mixin (@a) when (@media = mobile) { ... }
-    .mixin (@a) when (@media = desktop) { ... }
+.mixin (@a) when (@media = mobile) { ... }
+.mixin (@a) when (@media = desktop) { ... }
 
-    .max (@a; @b) when (@a > @b) { width: @a }
-    .max (@a; @b) when (@a < @b) { width: @b }
+.max (@a; @b) when (@a > @b) { width: @a }
+.max (@a; @b) when (@a < @b) { width: @b }
 ```
 
 Lastly, if you want to match mixins based on value type, you can use the *is\** functions:
 
-```
-    .mixin (@a; @b: 0) when (isnumber(@b)) { ... }
-    .mixin (@a; @b: black) when (iscolor(@b)) { ... }
+```less
+.mixin (@a; @b: 0) when (isnumber(@b)) { ... }
+.mixin (@a; @b: black) when (iscolor(@b)) { ... }
 ```
 
 Here are the basic type checking functions:
@@ -102,14 +101,21 @@ If you want to check if a value, in addition to being a number, is in a specific
 * `isem`
 * `isunit`
 
+
+/**FIXME**/ Additionally there's a `default` function that can be used to make a mixin match depending on other mixing matches, you may use it to create conditional mixins similar to 'else' or 'default' statements (of 'if' and 'case' structures respectively):
+```less
+.mixin (@a) when (@a > 0) { ...  }
+.mixin (@a) when (default()) { ... } // matches only if first mixin does not, i.e. when @a <= 0
+```
+
 Last but not least, you may use the **`and`** keyword to provide additional conditions inside a guard:
 
-```
-    .mixin (@a) when (isnumber(@a)) and (@a > 0) { ... }
+```less
+.mixin (@a) when (isnumber(@a)) and (@a > 0) { ... }
 ```
 
-And the **`not`** keyword to negate conditions:
+And finally, the **`not`** keyword to negate conditions:
 
-```
-    .mixin (@b) when not (@b > 0) { ... }
+```less
+.mixin (@b) when not (@b > 0) { ... }
 ```
