@@ -180,8 +180,8 @@ Example:
 ```less
 isunit(11px, px);  // true
 isunit(2.2%, px);  // false
-isunit(33px, rem); // true
-isunit(4rem, rem); // false
+isunit(33px, rem); // false
+isunit(4rem, rem); // true
 isunit(56px, "%"); // false
 isunit(7.8%, '%'); // true
 isunit(1234, em);  // false
