@@ -200,3 +200,21 @@ Compiles to:
   one: 1;
 }
 ```
+
+## default variables
+
+We sometimes get requests for default variables - an ability to set a variable only if it is not already set. This feature is not required because you can easily override a variable by putting the definition afterwards.
+
+For instance:
+
+```less
+// library
+@base-color: green;
+@dark-color: darken(@base-color, 10%);
+
+// use of library
+@import "library.less";
+@base-color: red;
+```
+
+This works fine - base-color is overidden and dark-color is a dark red.
