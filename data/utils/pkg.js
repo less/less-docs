@@ -43,4 +43,4 @@ var getPackageFile = function (dest, callback) {
   });
 };
 
-getPackageFile(cwd('data/less.json'));
+getPackageFile(path.join(process.cwd(), 'data/less.json'));

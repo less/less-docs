@@ -1,6 +1,28 @@
-# Build
-root:              _gh_pages
-dest:              <%= site.root %>
+# =============================================
+# BUILD CONFIG
+# =============================================
+
+root:             _gh_pages
+dest:             <%= site.root %>
+assets:           <%= site.dest %>/assets
+
+# Templates
+templates:        templates
+pages:            <%= site.templates %>
+includes:         <%= site.templates %>/includes
+layouts:          <%= site.templates %>/layouts
+layout:           default.hbs
+
+# Data
+data:             data
+
+# Extensions
+helpers:          <%= site.templates %>/helpers
+plugins:
+  - assemble-contrib-anchors
+  - assemble-contrib-wordcount
+  - assemble-contrib-toc
+
 
 # Less.js metadata
 current_version:   <%= less.version %>
