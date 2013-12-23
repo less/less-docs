@@ -12,7 +12,7 @@
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li{{#is slug "features"}} class="active"{{/is}}>
-          <a href="./{{relative dest 'features.html'}}">Features</a>
+          <a href="./{{relative dest 'features.html'}}">Language Features</a>
         </li>
         {{#unpublished}}
         <li{{#is slug "plugins"}} class="active"{{/is}}>
@@ -21,6 +21,9 @@
         {{/unpublished}}
         <li{{#is slug "functions"}} class="active"{{/is}}>
           <a href="./{{relative dest 'functions.html'}}">Function Reference</a>
+        </li>
+        <li{{#is slug "usage"}} class="active"{{/is}}>
+          <a href="./{{relative dest 'usage.html'}}">Usage</a>
         </li>
         {{#unpublished}}
         <li{{#is slug "cheatsheet"}} class="active"{{/is}}>
