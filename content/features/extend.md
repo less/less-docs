@@ -26,7 +26,9 @@ nav ul {
   color: red;
 }
 ```
+
 Outputs
+
 ```css
 nav ul {
   background: blue;
@@ -45,8 +47,8 @@ The extend is either attached to a selector or placed into a ruleset. It looks l
 Example:
 
 ```less
-.a:extend(.b) {
-}
+.a:extend(.b) {}
+
 // the above block does the same thing as the below block
 .a {
   &:extend(.b);
@@ -67,13 +69,11 @@ It can contain one more classes to extend, seperated by commas.
 Example:
 
 ```less
-.e:extend(.f) {
-}
-.e:extend(.g) {
-}
+.e:extend(.f) {}
+.e:extend(.g) {}
+
 // the above an the below do the same thing
-.e:extend(.f, .g) {
-}
+.e:extend(.f, .g) {}
 ```
 
 ### Attached to Selector
@@ -85,8 +85,11 @@ Extend attached to a selector looks like an ordinary pseudoclass with selector a
 * This is NOT allowed: `pre:hover:extend(div pre).nth-child(odd)`. Extend must be last.
 
 If a ruleset contains multiple selectors, any of them can have the extend keyword. Multiple selectors with extend in one ruleset:
-```
-.big-bucket:extend(.bucket), .big-bag:extend(.bag), .big-division {
+
+```less
+.big-division,
+.big-bag:extend(.bag),
+.big-bucket:extend(.bucket) {
   // body
 }
 ```
@@ -96,16 +99,19 @@ Extend can be placed into rulesets body using `&:extend(selector)` syntax. Placi
 
 
 Extend inside a body:
-```
-pre:hover, .some-class {
+
+```less
+pre:hover,
+.some-class {
   &:extend(div pre);
 }
 ```
 
 is exactly the same as adding an extend after each selector:
-```
-pre:hover:extend(div pre), .some-class:extend(div pre) {
-}
+
+```less
+pre:hover:extend(div pre),
+.some-class:extend(div pre) {}
 ```
 
 ### Nested Selectors
@@ -113,17 +119,19 @@ Extend is able to match nested selectors. Following less:
 
 Example:
 
-```
+```less
 .bucket {
   tr { // nested ruleset with target selector
     color: blue;
   }
 }
-.some-class:extend(.bucket tr) { } // nested ruleset is recognized
+.some-class:extend(.bucket tr) {} // nested ruleset is recognized
 ```
 Outputs
-```
-.bucket tr, .some-class {
+
+```css
+.bucket tr,
+.some-class {
   color: blue;
 }
 ```
@@ -132,17 +140,20 @@ Essentially the extend looks at the compiled css, not the original less.
 
 Example:
 
-```
+```less
 .bucket {
   tr & { // nested ruleset with target selector
     color: blue;
   }
 }
-.some-class:extend(tr .bucket) { } // nested ruleset is recognized
+.some-class:extend(tr .bucket) {} // nested ruleset is recognized
 ```
+
 Outputs
-```
-tr .bucket, .some-class {
+
+```css
+tr .bucket,
+.some-class {
   color: blue;
 }
 ```
@@ -153,7 +164,7 @@ Extend by default looks for exact match between selectors. It does matter whethe
 
 Example:
 
-```
+```less
 .a.class,
 .class.a,
 .class > .a {
@@ -163,52 +174,59 @@ Example:
 ```
 
 Leading star does matter. Selectors `*.class` and `.class` are equivalent, but extend will not match them:
-```
+
+```less
 *.class {
   color: blue;
 }
 .noStar:extend(.class) {} // this will NOT match the *.class selector
 ```
+
 Outputs
-```
+
+```css
 *.class {
   color: blue;
 }
 ```
 
 Order of pseudoclasses does matter. Selectors `link:hover:visited` and `link:visited:hover` match the same set of elements, but extend treats them as different:
-```
+
+```less
 link:hover:visited {
   color: blue;
 }
 .selector:extend(link:visited:hover) {}
 ```
 Outputs
-```
+
+```css
 link:hover:visited {
   color: blue;
 }
 ```
 
+#### nth expression
+
 Nth expression form does matter. Nth-expressions `1n+3` and `n+3` are equivalent, but extend will not match them:
-```
+
+```less
 :nth-child(1n+3) {
   color: blue;
 }
-.child:extend(n+3) {} //
+.child:extend(n+3) {}
 ```
 Outputs
-```
+
+```css
 :nth-child(1n+3) {
   color: blue;
 }
 ```
 
-Quote type in attribute selector does not matter, all are equivalent.
+Quote type in attribute selector does not matter. All of the following are equivalent.
 
-Example:
-
-```
+```less
 [title=identifier] {
   color: blue;
 }
@@ -218,26 +236,39 @@ Example:
 [title="identifier"] {
   color: blue;
 }
+
 .noQuote:extend([title=identifier]) {}
 .singleQuote:extend([title='identifier']) {}
 .doubleQuote:extend([title="identifier"]) {}
 ```
 Outputs
-```
-[title=identifier], .noQuote, .singleQuote, .doubleQuote {
+
+```css
+[title=identifier],
+.noQuote,
+.singleQuote,
+.doubleQuote {
   color: blue;
 }
-[title='identifier'], .noQuote, .singleQuote, .doubleQuote {
+
+[title='identifier'],
+.noQuote,
+.singleQuote,
+.doubleQuote {
   color: blue;
 }
-[title="identifier"], .noQuote, .singleQuote, .doubleQuote {
+
+[title="identifier"],
+.noQuote,
+.singleQuote,
+.doubleQuote {
   color: blue;
 }
 ```
 
-## Extend All
+## Extend `all`
 
-When you specify the all keyword last in an extend argument it tells less to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making a new selector.
+When you specify the all keyword last in an extend argument it tells Less.js to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making a new selector.
 
 Example:
 
@@ -252,11 +283,10 @@ Example:
   }
 }
 
-.replacement :extend(.test all) {
-}
-
+.replacement:extend(.test all) {}
 ```
 Outputs
+
 ```css
 .a.b.test,
 .test.c,
@@ -270,57 +300,65 @@ Outputs
 }
 ```
 
-You can think of this mode of operation as essentially doing a non-destructive search and replace.
+_You can think of this mode of operation as essentially doing a non-destructive search and replace._
+
 
 ### Selector Interpolation
-Extend is NOT able to match selectors with variables. If selector contains variable, extend will ignore it. There is a pending feature request for this but it is not an easy change.
-However, extend can be attached to interpolated selector.
+> Extend is NOT able to match selectors with variables. If selector contains variable, extend will ignore it.
+
+There is a pending feature request for this but it is not an easy change.  However, extend can be attached to interpolated selector.
 
 Selector with variable will not be matched:
-```
+
+```less
 @variable: .bucket;
 @{variable} { // interpolated selector
   color: blue;
 }
-.some-class:extend(.bucket) { } // does nothing, match is not found
+.some-class:extend(.bucket) {} // does nothing, no match is found
 ```
 
 and extend with variable in target selector matches nothing:
-```
+
+```less
 .bucket {
   color: blue;
 }
-.some-class:extend(@{variable}) { } // interpolated selector matches nothing
+.some-class:extend(@{variable}) {} // interpolated selector matches nothing
 @variable: .bucket;
 ```
 
-Two previous examples compile into:
-```
+Both of the previous examples compile into:
+
+```less
 .bucket {
   color: blue;
 }
 ```
 
-Extend attached to interpolated selector works:
-```
+However, `:extend` attached to an interpolated selector works:
+
+```less
 .bucket {
   color: blue;
 }
-@{variable}:extend(.bucket) { }
+@{variable}:extend(.bucket) {}
 @variable: .selector;
 ```
 
 previous less compiles into:
-```
+
+```less
 .bucket, .selector {
   color: blue;
 }
 ```
 
-## Scoping / Extend Inside Media
+## Scoping / Extend Inside @media
 
-Extend written inside media declaration should matches only selectors inside that media declaration:
-```
+Extend written inside a media declaration should match only selectors inside the same media declaration:
+
+```less
 @media print {
   .screenClass:extend(.selector) {} // extend inside media
   .selector { // this will be matched - it is in the same media
@@ -338,24 +376,27 @@ Extend written inside media declaration should matches only selectors inside tha
 ```
 
 compiles into:
-```
+
+```css
 @media print {
-  .selector, .screenClass { // ruleset inside the same media was extended
+  .selector,
+  .screenClass { /*  ruleset inside the same media was extended */
     color: black;
   }
 }
-.selector { // ruleset on top of style sheet was ignored
+.selector { /* ruleset on top of style sheet was ignored */
   color: red;
 }
 @media screen {
-  .selector { // ruleset inside another media was ignored
+  .selector { /* ruleset inside another media was ignored */
     color: blue;
   }
 }
 ```
 
-Extend written inside media declaration does not match selectors inside nested declaration:
-```
+Extend written inside a media declaration does not match selectors inside nested declaration:
+
+```less
 @media screen {
   .screenClass:extend(.selector) {} // extend inside media
   @media (min-width: 1023px) {
@@ -367,39 +408,44 @@ Extend written inside media declaration does not match selectors inside nested d
 ```
 
 compiles into:
-```
+
+```css
 @media screen and (min-width: 1023px) {
-  .selector { // ruleset inside another nested media was ignored
+  .selector { /* ruleset inside another nested media was ignored */
     color: blue;
   }
 }
 ```
 
 Top level extend matches everything including selectors inside nested media:
-```
+
+```less
 @media screen {
-  .selector {  // ruleset inside nested media - top level extend works
+  .selector {  /* ruleset inside nested media - top level extend works */
     color: blue;
   }
   @media (min-width: 1023px) {
-    .selector {  // ruleset inside nested media - top level extend works
+    .selector {  /* ruleset inside nested media - top level extend works */
       color: blue;
     }
   }
 }
 
-.topLevel:extend(.selector) {} // top level extend matches everything
+.topLevel:extend(.selector) {} /* top level extend matches everything */
 ```
 
 compiles into:
-```
+
+```css
 @media screen {
-  .selector, .topLevel { // ruleset inside media was extended
+  .selector,
+  .topLevel { /* ruleset inside media was extended */
     color: blue;
   }
 }
 @media screen and (min-width: 1023px) {
-  .selector, .topLevel { // ruleset inside nested media was extended
+  .selector,
+  .topLevel { /* ruleset inside nested media was extended */
     color: blue;
   }
 }
@@ -407,22 +453,26 @@ compiles into:
 
 ### Duplication Detection
 
-There is not currently any duplication detection.
+Currently there is no duplication detection.
 
 Example:
 
-```css
-.alert-info, .widget {
+```less
+.alert-info,
+.widget {
   // declarations
 }
 
-.alert:extend(.alert-info, .widget) {
-}
+.alert:extend(.alert-info, .widget) {}
 ```
 Outputs
+
 ```css
-.alert, .widget, .alert, .alert-info {
-  // declarations
+.alert,
+.widget,
+.alert,
+.alert-info {
+  /* declarations */
 }
 ```
 
@@ -439,7 +489,7 @@ The classic use case is to avoid adding a base class. For example, if you have
 }
 ```
 
-and you want to have a subtype of animal which overrides the background color then you have two options, firstly change your html
+and you want to have a subtype of animal which overrides the background color then you have two options, firstly change your HTML
 
 ```html
 <a class="animal bear">Bear</a>
@@ -459,7 +509,8 @@ or have simplified html and use extend in your less. e.g.
 ```html
 <a class="bear">Bear</a>
 ```
-```css
+
+```less
 .animal {
   background-color: black;
   color: white;
@@ -479,24 +530,26 @@ Example - with mixin:
 ```less
 .my-inline-block() {
     display: inline-block;
-    font-size: 0;
+  font-size: 0;
 }
 .thing1 {
-    .my-inline-block;
+  .my-inline-block;
 }
 .thing2 {
-    .my-inline-block;
+  .my-inline-block;
 }
 ```
+
 Outputs
+
 ```css
 .thing1 {
-    display: inline-block;
-    font-size: 0;
+  display: inline-block;
+  font-size: 0;
 }
 .thing2 {
-    display: inline-block;
-    font-size: 0;
+  display: inline-block;
+  font-size: 0;
 }
 ```
 
@@ -504,23 +557,25 @@ Example (with extends):
 
 ```less
 .my-inline-block {
-    display: inline-block;
-    font-size: 0;
+  display: inline-block;
+  font-size: 0;
 }
 .thing1 {
-    &:extend(.my-inline-block);
+  &:extend(.my-inline-block);
 }
 .thing2 {
-    &:extend(.my-inline-block);
+  &:extend(.my-inline-block);
 }
 ```
+
 Outputs
+
 ```css
 .my-inline-block,
 .thing1,
 .thing2 {
-    display: inline-block;
-    font-size: 0;
+  display: inline-block;
+  font-size: 0;
 }
 ```
 
