@@ -40,10 +40,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="index.html" class="navbar-brand">
-            <img src="assets/img/logo.png" alt="LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions. LESS runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
-">
-          </a>
+          <a href="index.html" class="navbar-brand">LESS</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
           <ul class="nav navbar-nav">
@@ -95,7 +92,7 @@
     <div class="banner">
       <div class="container">
         <strong>
-      <a href="/blob/master/CHANGELOG.md">See what's new in v1.5.1</a>
+      <a href="/blob/master/CHANGELOG.md">See what's new in v1.5.0-b4</a>
     </strong>
         To hear what's new from the Less.js core team,
         <a href="TODO">visit the blog</a>.
@@ -1046,6 +1043,30 @@ pre { .wrap }</code></pre>
   color-2: #008000;
   padding-2: 2;
 }</code></pre>
+            <h3 id="named-parameters">Named Parameters</h3>
+            <p>A mixin reference can supply parameters values by their names instead of just positions. Any parameter can be referenced by its name and they do not have to be in any special order:</p>
+            <pre><code class="language-less">.mixin(@color: black; @margin: 10px; @padding: 20px) {
+  color: @color;
+  margin: @margin;
+  padding: @padding;
+}
+.class1 {
+  .mixin(@margin: 20px; @color: #33acfe);
+}
+.class2 {
+  .mixin(#efca44; @padding: 40px);
+}</code></pre>
+            <p>compiles into:</p>
+            <pre><code class="language-css"><span class="class">.class1</span> <span class="rules">{
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#33acfe</span></span></span>;
+  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">20</span>px</span></span>;
+  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">20</span>px</span></span>;
+<span class="rule">}</span></span>
+<span class="class">.class2</span> <span class="rules">{
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#efca44</span></span></span>;
+  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">10</span>px</span></span>;
+  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">40</span>px</span></span>;
+<span class="rule">}</span></span></code></pre>
             <h3 id="the-arguments-variable">The <code>@arguments</code> variable</h3>
             <p><code>@arguments</code> has a special meaning inside mixins, it contains all the arguments passed, when the mixin was called. This is useful if you don&#39;t want to deal with individual parameters:</p>
             <pre><code class="language-less">.box-shadow (@x: 0; @y: 0; @blur: 1px; @color: #000) {
@@ -1137,8 +1158,7 @@ pre { .wrap }</code></pre>
 .mixin (@a) {
   color: @a;
 }</code></pre>
-            <p>The key is the <strong><code>when</code></strong> keyword, which introduces a guard sequence (here with only one guard). Now if we run the following code:
-            </p>
+            <p>The key is the <strong><code>when</code></strong> keyword, which introduces a guard sequence (here with only one guard). Now if we run the following code:</p>
             <pre><code class="language-less">.class1 { .mixin(#ddd) }
 .class2 { .mixin(#555) }</code></pre>
             <p>Here&#39;s what we&#39;ll get:</p>
@@ -1152,23 +1172,23 @@ pre { .wrap }</code></pre>
 <span class="rule">}</span></span></code></pre>
             <p>The full list of comparison operators usable in guards are: <strong><code>&gt; &gt;= = =&lt; &lt;</code></strong>. Additionally, the keyword <code>true</code>
               is the only truthy value, making these two mixins equivalent:</p>
-            <pre><code>.truth (@a) when (@a) { ... }
+            <pre><code class="language-less">.truth (@a) when (@a) { ... }
 .truth (@a) when (@a = true) { ... }</code></pre>
             <p>Any value other than the keyword <code>true</code> is falsy:</p>
             <pre><code class="language-less">.class {
   .truth(40); // Will not match any of the above definitions.
 }</code></pre>
-            <p>Guards can be separated with a comma &#39;<code>,</code>&#39;--if any of the guards evaluates to true, it&#39;s considered as a match:</p>
+            <p>Guards can be separated with a comma &#39;<code>,</code>&#39;, if any of the guards evaluates to true, it&#39;s considered as a match:</p>
             <pre><code class="language-less">.mixin (@a) when (@a &gt; 10), (@a &lt; -10) { ... }</code></pre>
             <p>Note that you can also compare arguments with each other, or with non-arguments:</p>
-            <pre><code>    @media: mobile;
-    .mixin (@a) when (@media = mobile) { ... }
-    .mixin (@a) when (@media = desktop) { ... }
-    .max (@a; @b) when (@a &gt; @b) { width: @a }
-    .max (@a; @b) when (@a &lt; @b) { width: @b }</code></pre>
+            <pre><code class="language-less">@media: mobile;
+.mixin (@a) when (@media = mobile) { ... }
+.mixin (@a) when (@media = desktop) { ... }
+.max (@a; @b) when (@a &gt; @b) { width: @a }
+.max (@a; @b) when (@a &lt; @b) { width: @b }</code></pre>
             <p>Lastly, if you want to match mixins based on value type, you can use the <em>is*</em> functions:</p>
-            <pre><code>    .mixin (@a; @b: 0) when (isnumber(@b)) { ... }
-    .mixin (@a; @b: black) when (iscolor(@b)) { ... }</code></pre>
+            <pre><code class="language-less">.mixin (@a; @b: 0) when (isnumber(@b)) { ... }
+.mixin (@a; @b: black) when (iscolor(@b)) { ... }</code></pre>
             <p>Here are the basic type checking functions:</p>
             <ul>
               <li><code>iscolor</code>
@@ -1193,10 +1213,14 @@ pre { .wrap }</code></pre>
               <li><code>isunit</code>
               </li>
             </ul>
+            <p>/<strong>FIXME</strong>/ Additionally there&#39;s a <code>default</code> function that can be used to make a mixin match depending on other mixing matches, you may use it to create conditional mixins similar to &#39;else&#39; or &#39;default&#39;
+              statements (of &#39;if&#39; and &#39;case&#39; structures respectively):</p>
+            <pre><code class="language-less">.mixin (@a) when (@a &gt; 0) { ...  }
+.mixin (@a) when (default()) { ... } // matches only if first mixin does not, i.e. when @a &lt;= 0</code></pre>
             <p>Last but not least, you may use the <strong><code>and</code></strong> keyword to provide additional conditions inside a guard:</p>
-            <pre><code>    .mixin (@a) when (isnumber(@a)) and (@a &gt; 0) { ... }</code></pre>
-            <p>And the <strong><code>not</code></strong> keyword to negate conditions:</p>
-            <pre><code>    .mixin (@b) when not (@b &gt; 0) { ... }</code></pre>
+            <pre><code class="language-less">.mixin (@a) when (isnumber(@a)) and (@a &gt; 0) { ... }</code></pre>
+            <p>And finally, the <strong><code>not</code></strong> keyword to negate conditions:</p>
+            <pre><code class="language-less">.mixin (@b) when not (@b &gt; 0) { ... }</code></pre>
             <p>
               <a id="css-guards" class="section_anchor"></a>
             </p>
@@ -1255,9 +1279,9 @@ div {
             <p>
               <a id="parent-selectors" class="section_anchor"></a>
             </p>
-            <h1 id="parent-selectors">Parent selectors</h1>
+            <h1 id="parent-selectors">Parent Selectors</h1>
             <blockquote>
-              <p>changing selector order, using :hover in a nested rule</p>
+              <p>Changing selector order</p>
             </blockquote>
             <p>When using <strong>Nested rules</strong>, it can be very useful to prepend a selector to the inherited (parent) scope. This feature is known as &quot;Parent Selectors&quot;, and can be done by putting the parent selector before an ampersand <code>&amp;</code>.</p>
             <p>For example, when using Modernizr, you might want to specify different rules based on supported features:</p>
@@ -1276,30 +1300,6 @@ div {
 <span class="class">.no-borderradius</span> <span class="class">.header</span> <span class="class">.menu</span> <span class="rules">{
   <span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">url(<span class="string">'images/button-background.png'</span>)</span></span></span>;
 <span class="rule">}</span></span></code></pre>
-            <h2 id="advanced-usage-of-">Advanced Usage of <code>&amp;</code>
-            </h2>
-            <p>The &amp; symbol can be used in selectors in order to reverse the ordering of the nesting and to multiply classes.</p>
-            <p>For example:</p>
-            <pre><code>    .child, .sibling {
-        .parent &amp; {
-            color: black;
-        }
-        &amp; + &amp; {
-            color: red;
-        }
-    }</code></pre>
-            <p>Will output</p>
-            <pre><code>    .parent .child,
-    .parent .sibling {
-        color: black;
-    }
-    .child + .child,
-    .child + .sibling,
-    .sibling + .child,
-    .sibling + .sibling {
-        color: red;
-    }</code></pre>
-            <p>You can also use &amp; in mixins in order to reference nesting that is outside of your mixin.</p>
             <p>
               <a id="variables" class="section_anchor"></a>
             </p>
@@ -1334,12 +1334,14 @@ a:hover {
               <a id="variable-interpolation"></a>
             </p>
             <h2 id="variable-interpolation">Variable Interpolation</h2>
-            <p>The examples above focused on using variables to control <em>values in CSS rules</em>, but they can also be used in other places as well, such as selector names, URLs and <code>@import</code> statements.</p>
-            <h3 id="selectors">Selectors</h3>
-            <p><code>example.less</code>
+            <p>The examples above focused on using variables to control <em>values in CSS rules</em>, but they can also be used in other places as well, such as selector names, property names, URLs and <code>@import</code> statements.</p>
+            <p>
+              <a id="selector-interpolation"></a>
             </p>
+            <h3 id="selectors">Selectors</h3>
+            <p>Version: 1.4.0</p>
             <pre><code class="language-less">// Variables
-@mySelector:   banner;
+@mySelector: banner;
 // Usage
 .@{mySelector} {
   font-weight: bold;
@@ -1352,15 +1354,22 @@ a:hover {
   <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">40</span>px</span></span>;
   <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> auto</span></span>;
 <span class="rule">}</span></span></code></pre>
+            <p>
+              <a id="url-string-interpolation"></a>
+            </p>
             <h3 id="urls">URLs</h3>
             <pre><code class="language-less">// Variables
-@images:      &quot;../img&quot;;
+@images: &quot;../img&quot;;
 // Usage
 body {
   color: #444;
   background: url(&quot;@{images}}/white-sand.png&quot;);
 }</code></pre>
+            <p>
+              <a id="import-string-interpolation"></a>
+            </p>
             <h3 id="-import-statements-limited-support-"><code>@import</code> statements (limited support)</h3>
+            <p>Version: 1.4.0</p>
             <p>Syntax: <code>@import &quot;@{themes}/tidal-wave.less&quot;;</code>
             </p>
             <p>Note that currently, only variables which have been declared in the root or current scope will be considered and that only the current file and calling files will be considered when looking for a variable. This means that this usage is typically
@@ -1371,27 +1380,58 @@ body {
 @themes: &quot;../../src/themes&quot;;
 // Usage
 @import &quot;@{themes}/tidal-wave.less&quot;;</code></pre>
-            <p>Version: 1.4.0</p>
-            <h3 id="properties">Properties</h3>
             <p>
-              <span class="warning">Under consideration</span>
+              <a id="property-interpolation"></a>
             </p>
-            <p>As of v1.5.0, variables <strong>cannot</strong> be used on <em>CSS properties</em> themselves, so this is not possible:</p>
-            <pre><code class="language-less">.widget {
-  .@{myProperty}: #fff;
+            <h3 id="properties">Properties</h3>
+            <p>Version: ?.?.?</p>
+            <pre><code class="language-less">@property: color;
+.widget {
+  @{property}: #0ee;
+  background-@{property}: #999;
 }</code></pre>
-            <p>There have been requests for this feature, if you wish to add your vote to this request you can do so on the
-              <a href="">GitHub Issues for Less.js</a>.</p>
+            <p>Compiles to:</p>
+            <pre><code class="language-css"><span class="class">.widget</span> <span class="rules">{
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#0ee</span></span></span>;
+  <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#999</span></span></span>;
+<span class="rule">}</span></span></code></pre>
+            <p>
+              <a id="variable-name-reference"></a>
+            </p>
             <h2 id="variable-names">Variable Names</h2>
             <p>It is also possible to define variables with a variable name:</p>
-            <pre><code>@fnord:  &quot;I am fnord.&quot;;
+            <pre><code class="language-less">@fnord:  &quot;I am fnord.&quot;;
 @var:    &quot;fnord&quot;;
 content: @@var;</code></pre>
             <p>Which compiles to:</p>
-            <pre><code>content: &quot;I am fnord.&quot;;</code></pre>
+            <pre><code class="language-css"><span class="tag">content</span>: "<span class="tag">I</span> <span class="tag">am</span> <span class="tag">fnord</span>.";</code></pre>
+            <p>
+              <a id="lazy-loading"></a>
+            </p>
+            <h2 id="lazy-loading">Lazy Loading</h2>
+            <blockquote>
+              <p>Variables are lazy loaded and do not have to be declared before being used.</p>
+            </blockquote>
+            <p>Valid LESS snippet:</p>
+            <pre><code class="language-less">lazy-eval {
+  width: @var;
+}
+@var: @a;
+@a: 9%;</code></pre>
+            <p>this is valid LESS too:</p>
+            <pre><code class="language-less">.lazy-eval-scope {
+  width: @var;
+  @a: 9%;
+}
+@var: @a;
+@a: 100%;</code></pre>
+            <p>both compile into:</p>
+            <pre><code class="language-css"><span class="class">.lazy-eval-scope</span> <span class="rules">{
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">9</span>%</span></span>;
+<span class="rule">}</span></span></code></pre>
             <p>When defining a variable twice, the last definition of the variable is used, searching from the current scope upwards. This is similar to css itself where the last property inside a definition is used to determine the value.</p>
             <p>For instance:</p>
-            <pre><code>@var: 0;
+            <pre><code class="language-less">@var: 0;
 .class1 {
   @var: 1;
   .class {
@@ -1402,33 +1442,22 @@ content: @@var;</code></pre>
   one: @var;
 }</code></pre>
             <p>Compiles to:</p>
-            <pre><code>.class1 .class {
-  three: 3;
-}
-.class {
-  one: 1;
-}</code></pre>
-            <h2 id="tip">Tip</h2>
-            <blockquote>
-              <p>Variables are lazy loaded and do not have to be declared before being used.</p>
-            </blockquote>
-            <p>Valid less snippet:</p>
-            <pre><code>lazy-eval {
-  width: @var;
-}
-@var: @a;
-@a: 9%;</code></pre>
-            <p>this is valid less too:</p>
-            <pre><code>.lazy-eval-scope {
-  width: @var;
-  @a: 9%;
-}
-@var: @a;
-@a: 100%;</code></pre>
-            <p>both compile into:</p>
-            <pre><code>.lazy-eval-scope {
-  width: 9%;
-}</code></pre>
+            <pre><code class="language-css"><span class="class">.class1</span> <span class="class">.class</span> <span class="rules">{
+  <span class="rule"><span class="attribute">three</span>:<span class="value"> <span class="number">3</span></span></span>;
+<span class="rule">}</span></span>
+<span class="class">.class</span> <span class="rules">{
+  <span class="rule"><span class="attribute">one</span>:<span class="value"> <span class="number">1</span></span></span>;
+<span class="rule">}</span></span></code></pre>
+            <h2 id="default-variables">default variables</h2>
+            <p>We sometimes get requests for default variables - an ability to set a variable only if it is not already set. This feature is not required because you can easily override a variable by putting the definition afterwards.</p>
+            <p>For instance:</p>
+            <pre><code class="language-less">// library
+@base-color: green;
+@dark-color: darken(@base-color, 10%);
+// use of library
+@import &quot;library.less&quot;;
+@base-color: red;</code></pre>
+            <p>This works fine - base-color is overidden and dark-color is a dark red.</p>
           </div>
         </div>
       </div>
@@ -1455,7 +1484,7 @@ content: @@var;</code></pre>
           <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under
           <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <ul class="footer-links">
-          <li>Currently v1.5.1</li>
+          <li>Currently v1.5.0-b4</li>
           <li class="muted">&middot;</li>
           <li>
             <a href="">Blog</a>

@@ -40,10 +40,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="index.html" class="navbar-brand">
-            <img src="assets/img/logo.png" alt="LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions. LESS runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
-">
-          </a>
+          <a href="index.html" class="navbar-brand">LESS</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
           <ul class="nav navbar-nav">
@@ -95,7 +92,7 @@
     <div class="banner">
       <div class="container">
         <strong>
-      <a href="/blob/master/CHANGELOG.md">See what's new in v1.5.1</a>
+      <a href="/blob/master/CHANGELOG.md">See what's new in v1.5.0-b4</a>
     </strong>
         To hear what's new from the Less.js core team,
         <a href="TODO">visit the blog</a>.
@@ -132,10 +129,27 @@
                     <a href="#color">color</a>
                   </li>
                   <li>
-                    <a href="#color-unit">unit</a>
+                    <a href="#unit">unit</a>
+                  </li>
+                  <li>
+                    <a href="#convert">convert</a>
                   </li>
                   <li>
                     <a href="#data-uri">data uri</a>
+                  </li>
+                  <li>
+                    <a href="#default">default</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#list-functions">List</a>
+                <ul class="nav">
+                  <li>
+                    <a href="#length">length</a>
+                  </li>
+                  <li>
+                    <a href="#extract">extract</a>
                   </li>
                 </ul>
               </li>
@@ -188,10 +202,42 @@
                     <a href="#mod">mod</a>
                   </li>
                   <li>
-                    <a href="#convert">convert</a>
+                    <a href="#min">min</a>
                   </li>
                   <li>
-                    <a href="#math-unit">unit</a>
+                    <a href="#max">max</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#type-functions">Type</a>
+                <ul class="nav">
+                  <li>
+                    <a href="#isnumber">isnumber</a>
+                  </li>
+                  <li>
+                    <a href="#isstring">isstring</a>
+                  </li>
+                  <li>
+                    <a href="#iscolor">iscolor</a>
+                  </li>
+                  <li>
+                    <a href="#iskeyword">iskeyword</a>
+                  </li>
+                  <li>
+                    <a href="#isurl">isurl</a>
+                  </li>
+                  <li>
+                    <a href="#ispixel">ispixel</a>
+                  </li>
+                  <li>
+                    <a href="#isem">isem</a>
+                  </li>
+                  <li>
+                    <a href="#ispercentage">ispercentage</a>
+                  </li>
+                  <li>
+                    <a href="#isunit">isunit</a>
                   </li>
                 </ul>
               </li>
@@ -491,6 +537,99 @@ convert(8, mm) // incompatible unit types</code></pre>
             <p>Example: <code>data-uri(&#39;image/jpeg;base64&#39;, &#39;../data/image.jpg&#39;);</code>
               Output: <code>url(&#39;data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==&#39;);</code>
             </p>
+            <p>
+              <a id="default"></a>
+            </p>
+            <h3 id="default">default</h3>
+            <blockquote>
+              <p>Available inside guard conditions and returns <code>true</code> only if no other mixin matches, <code>false</code> otherwise.</p>
+            </blockquote>
+            <p>Example:</p>
+            <pre><code class="language-less">.mixin(1)                   {x: 11}
+.mixin(2)                   {y: 22}
+.mixin(@x) when (default()) {z: @x}
+div {
+  .mixin(3);
+}
+div.special {
+  .mixin(1);
+}</code></pre>
+            <p>Output:</p>
+            <pre><code class="language-css"><span class="tag">div</span> <span class="rules">{
+  <span class="rule"><span class="attribute">z</span>:<span class="value"> <span class="number">3</span></span></span>;
+<span class="rule">}</span></span>
+<span class="tag">div</span><span class="class">.special</span> <span class="rules">{
+  <span class="rule"><span class="attribute">x</span>:<span class="value"> <span class="number">11</span></span></span>;
+<span class="rule">}</span></span></code></pre>
+            <p>It is possible to use the value returned by <code>default</code> with guard operators. For example <code>.mixin() when not(default()) {}</code> will match only if there&#39;s at least one more mixin definition that matches<code>.mixin()</code> call:</p>
+            <pre><code class="language-less">.mixin(@value) when (ispixel(@value)) {width: @value}
+.mixin(@value) when not(default())    {padding: (@value / 5)}
+div-1 {
+  .mixin(100px);
+}
+div-2 {
+
+  /* ... */
+  .mixin(100%);
+}</code></pre>
+            <p>result:</p>
+            <pre><code class="language-css"><span class="tag">div-1</span> <span class="rules">{
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100</span>px</span></span>;
+  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">20</span>px</span></span>;
+<span class="rule">}</span></span>
+<span class="tag">div-2</span> <span class="rules">{
+  <span class="comment">
+/* ... */</span>
+<span class="rule">}</span></span></code></pre>
+            <p>It is allowed to make multiple <code>default()</code> calls in the same guard condition or in a different conditions of a mixins with the same name:</p>
+            <pre><code class="language-less">div {
+  .m(@x) when (default()), not(default())    {always: @x}
+  .m(@x) when (default()) and not(default()) {never:  @x}
+  .m(1); // OK
+}</code></pre>
+            <p>However LESS will throw a error if it detects a <em>potential</em> conflict between multiple mixin definitions using <code>default()</code>:</p>
+            <pre><code class="language-less">div {
+  .m(@x) when (default())    {}
+  .m(@x) when not(default()) {}
+  .m(1); // Error
+}</code></pre>
+            <p>In above example it is impossible to determine what value each <code>default()</code> call should return since they recursively depend on each other.</p>
+            <p>Advanced multiple <code>default()</code> usage:</p>
+            <pre><code class="language-less">.x {
+  .m(red)                                    {case-1: darkred}
+  .m(blue)                                   {case-2: darkblue}
+  .m(@x) when (iscolor(@x)) and (default())  {default-color: @x}
+  .m(&#39;foo&#39;)                                  {case-1: I am &#39;foo&#39;}
+  .m(&#39;bar&#39;)                                  {case-2: I am &#39;bar&#39;}
+  .m(@x) when (isstring(@x)) and (default()) {default-string: and I am the default}
+  &amp;-blue  {.m(blue)}
+  &amp;-green {.m(green)}
+  &amp;-foo   {.m(&#39;foo&#39;)}
+  &amp;-baz   {.m(&#39;baz&#39;)}
+}</code></pre>
+            <p>result:</p>
+            <pre><code class="language-css">.x-blue {
+  case-2: #00008b;
+}
+.x-green {
+  default-color: #008000;
+}
+.x-foo {
+  case-1: I am &#39;foo&#39;;
+}
+.x-baz {
+  default-string: and I am the default;
+}</code></pre>
+            <p>The <code>default</code> function is available as LESS built-in function only inside guard expressions. If used outside of a mixin guard condition it is interpreted as a regular CSS value:</p>
+            <pre><code class="language-less">div {
+  property1: default();
+  property2: default(42);
+}</code></pre>
+            <p>result:</p>
+            <pre><code class="language-css">div {
+  property1: default();
+  property2: default(42);
+}</code></pre>
           </div>
           <div class="docs-section">
             <h1 id="list-functions">List Functions</h1>
@@ -815,6 +954,167 @@ mod(-26%, -5);</code></pre>
             </p>
           </div>
           <div class="docs-section">
+            <h1 id="type-functions">Type Functions</h1>
+            <p>
+              <a id="isnumber"></a>
+            </p>
+            <h3 id="isnumber">isnumber</h3>
+            <blockquote>
+              <p>Returns <code>true</code> if value is a number, <code>false</code> otherwise.</p>
+            </blockquote>
+            <p>Parameters: <code>value</code> - a value or variable being evaluated. Returns: <code>true</code> if value is a number, <code>false</code> otherwise.</p>
+            <p>Example:</p>
+            <pre><code class="language-less">isnumber(#ff0);     // false
+isnumber(blue);     // false
+isnumber(&quot;string&quot;); // false
+isnumber(1234);     // true
+isnumber(56px);     // true
+isnumber(7.8%);     // true
+isnumber(keyword);  // false
+isnumber(url(...)); // false</code></pre>
+            <p>
+              <a id="isstring"></a>
+            </p>
+            <h3 id="isstring">isstring</h3>
+            <blockquote>
+              <p>Returns <code>true</code> if value is a string, <code>false</code> otherwise.</p>
+            </blockquote>
+            <p>Parameters: <code>value</code> - a value or variable being evaluated. Returns: <code>true</code> if value is a string, <code>false</code> otherwise.</p>
+            <p>Example:</p>
+            <pre><code class="language-less">isstring(#ff0);     // false
+isstring(blue);     // false
+isstring(&quot;string&quot;); // true
+isstring(1234);     // false
+isstring(56px);     // false
+isstring(7.8%);     // false
+isstring(keyword);  // false
+isstring(url(...)); // false</code></pre>
+            <p>
+              <a id="iscolor"></a>
+            </p>
+            <h3 id="iscolor">iscolor</h3>
+            <blockquote>
+              <p>Returns <code>true</code> if value is a color, <code>false</code> otherwise.</p>
+            </blockquote>
+            <p>Parameters: <code>value</code> - a value or variable being evaluated. Returns: <code>true</code> if value is a color, <code>false</code> otherwise.</p>
+            <p>Example:</p>
+            <pre><code class="language-less">iscolor(#ff0);     // true
+iscolor(blue);     // true
+iscolor(&quot;string&quot;); // false
+iscolor(1234);     // false
+iscolor(56px);     // false
+iscolor(7.8%);     // false
+iscolor(keyword);  // false
+iscolor(url(...)); // false</code></pre>
+            <p>
+              <a id="iskeyword"></a>
+            </p>
+            <h3 id="iskeyword">iskeyword</h3>
+            <blockquote>
+              <p>Returns <code>true</code> if value is a keyword, <code>false</code> otherwise.</p>
+            </blockquote>
+            <p>Parameters: <code>value</code> - a value or variable being evaluated. Returns: <code>true</code> if value is a keyword, <code>false</code> otherwise.</p>
+            <p>Example:</p>
+            <pre><code class="language-less">iskeyword(#ff0);     // false
+iskeyword(blue);     // false
+iskeyword(&quot;string&quot;); // false
+iskeyword(1234);     // false
+iskeyword(56px);     // false
+iskeyword(7.8%);     // false
+iskeyword(keyword);  // true
+iskeyword(url(...)); // false</code></pre>
+            <p>
+              <a id="isurl"></a>
+            </p>
+            <h3 id="isurl">isurl</h3>
+            <blockquote>
+              <p>Returns <code>true</code> if value is a url, <code>false</code> otherwise.</p>
+            </blockquote>
+            <p>Parameters: <code>value</code> - a value or variable being evaluated. Returns: <code>true</code> if value is a url, <code>false</code> otherwise.</p>
+            <p>Example:</p>
+            <pre><code class="language-less">isurl(#ff0);     // false
+isurl(blue);     // false
+isurl(&quot;string&quot;); // false
+isurl(1234);     // false
+isurl(56px);     // false
+isurl(7.8%);     // false
+isurl(keyword);  // false
+isurl(url(...)); // true</code></pre>
+            <p>
+              <a id="ispixel"></a>
+            </p>
+            <h3 id="ispixel">ispixel</h3>
+            <blockquote>
+              <p>Returns <code>true</code> if value is a number in pixels, <code>false</code> otherwise.</p>
+            </blockquote>
+            <p>Parameters: <code>value</code> - a value or variable being evaluated. Returns: <code>true</code> if value is a pixel, <code>false</code> otherwise.</p>
+            <p>Example:</p>
+            <pre><code class="language-less">ispixel(#ff0);     // false
+ispixel(blue);     // false
+ispixel(&quot;string&quot;); // false
+ispixel(1234);     // false
+ispixel(56px);     // true
+ispixel(7.8%);     // false
+ispixel(keyword);  // false
+ispixel(url(...)); // false</code></pre>
+            <p>
+              <a id="isem"></a>
+            </p>
+            <h3 id="isem">isem</h3>
+            <blockquote>
+              <p>Returns <code>true</code> if value is an em value, <code>false</code> otherwise.</p>
+            </blockquote>
+            <p>Parameters: <code>value</code> - a value or variable being evaluated. Returns: <code>true</code> if value is an em value, <code>false</code> otherwise.</p>
+            <p>Example:</p>
+            <pre><code class="language-less">isem(#ff0);     // false
+isem(blue);     // false
+isem(&quot;string&quot;); // false
+isem(1234);     // false
+isem(56px);     // false
+isem(7.8em);    // true
+isem(keyword);  // false
+isem(url(...)); // false</code></pre>
+            <p>
+              <a id="ispercentage"></a>
+            </p>
+            <h3 id="ispercentage">ispercentage</h3>
+            <blockquote>
+              <p>Returns <code>true</code> if value is a percentage value, <code>false</code> otherwise.</p>
+            </blockquote>
+            <p>Parameters: <code>value</code> - a value or variable being evaluated. Returns: <code>true</code> if value is a percentage value, <code>false</code> otherwise.</p>
+            <p>Example:</p>
+            <pre><code class="language-less">ispercentage(#ff0);     // false
+ispercentage(blue);     // false
+ispercentage(&quot;string&quot;); // false
+ispercentage(1234);     // false
+ispercentage(56px);     // false
+ispercentage(7.8%);     // true
+ispercentage(keyword);  // false
+ispercentage(url(...)); // false</code></pre>
+            <p>
+              <a id="isunit"></a>
+            </p>
+            <h3 id="isunit">isunit</h3>
+            <blockquote>
+              <p>Returns <code>true</code> if value is a number in specified units, <code>false</code> otherwise.</p>
+            </blockquote>
+            <p>Parameters:</p>
+            <ul>
+              <li><code>value</code> - a value or variable being evaluated.</li>
+              <li><code>unit</code> - a unit identifier (optionaly quoted) to test for. Returns: <code>true</code> if value is a number in specified units, <code>false</code> otherwise.</li>
+            </ul>
+            <p>Example:</p>
+            <pre><code class="language-less">isunit(11px, px);  // true
+isunit(2.2%, px);  // false
+isunit(33px, rem); // false
+isunit(4rem, rem); // true
+isunit(56px, &quot;%&quot;); // false
+isunit(7.8%, &#39;%&#39;); // true
+isunit(1234, em);  // false
+isunit(#ff0, pt);  // false
+isunit(&quot;mm&quot;, mm);  // false</code></pre>
+          </div>
+          <div class="docs-section">
             <div class="page-header">
               <h1 id="color-functions">Color Functions</h1>
             </div>
@@ -950,7 +1250,7 @@ mod(-26%, -5);</code></pre>
             <p>
               <a id="hue"></a>
             </p>
-            <h2 id="hur">hur</h2>
+            <h2 id="hue">hue</h2>
             <blockquote>
               <p>Extracts the hue channel of a color object.</p>
             </blockquote>
@@ -1355,7 +1655,7 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
             <p>
               <img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
               <img src="http://placehold.it/100x40/0000ff/ffffff&amp;text=0000ff" alt="Color 2">
-              <img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 3">
+              <img src="http://placehold.it/100x40/000000/ffffff&amp;text=000000" alt="Color 3">
             </p>
             <p>
               <a id="screen"></a>
@@ -1538,13 +1838,13 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
             <p>
               <img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
               <img src="http://placehold.it/100x40/cccccc/000000&amp;text=cccccc" alt="Color 2">
-              <img src="http://placehold.it/100x40/ff8b00/ffffff&amp;text=ff8b00" alt="Color 3">
+              <img src="http://placehold.it/100x40/ff8a00/ffffff&amp;text=ff8a00" alt="Color 3">
             </p>
             <pre><code class="language-less">softlight(#ff6600, #ffffff);</code></pre>
             <p>
               <img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
               <img src="http://placehold.it/100x40/ffffff/000000&amp;text=ffffff" alt="Color 2">
-              <img src="http://placehold.it/100x40/ffa300/ffffff&amp;text=ffa300" alt="Color 3">
+              <img src="http://placehold.it/100x40/ffa100/ffffff&amp;text=ffa100" alt="Color 3">
             </p>
             <pre><code class="language-less">softlight(#ff6600, #ff0000);</code></pre>
             <p>
@@ -1556,7 +1856,7 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
             <p>
               <img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
               <img src="http://placehold.it/100x40/00ff00/ffffff&amp;text=00ff00" alt="Color 2">
-              <img src="http://placehold.it/100x40/ffa300/ffffff&amp;text=ffa300" alt="Color 3">
+              <img src="http://placehold.it/100x40/ffa100/ffffff&amp;text=ffa100" alt="Color 3">
             </p>
             <pre><code class="language-less">softlight(#ff6600, #0000ff);</code></pre>
             <p>
@@ -1936,7 +2236,7 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
           <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under
           <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <ul class="footer-links">
-          <li>Currently v1.5.1</li>
+          <li>Currently v1.5.0-b4</li>
           <li class="muted">&middot;</li>
           <li>
             <a href="">Blog</a>
