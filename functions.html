@@ -328,8 +328,8 @@ format-s-upper: &quot;repetitions: 3 file: directory%2Ffile.less&quot;;</code></
 <p>Parses a color, so a string representing a color becomes a color.</p>
 </blockquote>
 <p>Parameters: <code>string</code>: a string of the specifid color.</p>
-<p>Example: <code>color(&quot;#aaa&quot;);</code>
-Output: <code>#aaa</code></p>
+<p>Example: <code>color(&quot;#aaa&quot;);</code></p>
+<p>Output: <code>#aaa</code></p>
 <h3 id="unit">unit</h3>
 <blockquote>
 <p>Remove or change the unit of a dimension
@@ -339,10 +339,10 @@ Parameters:</p>
 <li><code>dimension</code>: A number, with or without a dimension.</li>
 <li><code>unit</code>: (Optional) the unit to change to, or if omitted it will remove the unit.</li>
 </ul>
-<p>Example: <code>unit(5, px)</code>
-Output: <code>5px</code></p>
-<p>Example: <code>unit(5em)</code>
-Output: <code>5</code></p>
+<p>Example: <code>unit(5, px)</code></p>
+<p>Output: <code>5px</code></p>
+<p>Example: <code>unit(5em)</code></p>
+<p>Output: <code>5</code></p>
 <h3 id="convert">convert</h3>
 <blockquote>
 <p>Converts numbers from one type into another.</p>
@@ -377,11 +377,11 @@ Parameters:</p>
 <li><code>mimetype</code>: (Optional) A mime type string.</li>
 <li><code>url</code>: The URL of the file to inline.</li>
 </ul>
-<p>Example: <code>data-uri(&#39;../data/image.jpg&#39;);</code>
-Output: <code>url(&#39;data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==&#39;);</code>
-Output in browser: <code>url(&#39;../data/image.jpg&#39;);</code></p>
-<p>Example: <code>data-uri(&#39;image/jpeg;base64&#39;, &#39;../data/image.jpg&#39;);</code>
-Output: <code>url(&#39;data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==&#39;);</code></p>
+<p>Example: <code>data-uri(&#39;../data/image.jpg&#39;);</code></p>
+<p>Output: <code>url(&#39;data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==&#39;);</code></p>
+<p>Output in browser: <code>url(&#39;../data/image.jpg&#39;);</code></p>
+<p>Example: <code>data-uri(&#39;image/jpeg;base64&#39;, &#39;../data/image.jpg&#39;);</code></p>
+<p>Output: <code>url(&#39;data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==&#39;);</code></p>
 
   <h3 id="default">default</h3>
 <blockquote>
@@ -521,26 +521,26 @@ value: extract(@list, 3);</code></pre>
 <blockquote>
 <p>Rounds up to the next highest integer.</p>
 </blockquote>
-<p>Parameters: <code>number</code> - a floating point number.
-Returns: <code>integer</code>
-Example: <code>ceil(2.4)</code>
-Output: <code>3</code></p>
+<p>Parameters: <code>number</code> - a floating point number.</p>
+<p>Returns: <code>integer</code></p>
+<p>Example: <code>ceil(2.4)</code></p>
+<p>Output: <code>3</code></p>
 <h3 id="floor">floor</h3>
 <blockquote>
 <p>Rounds down to the next lowest integer.</p>
 </blockquote>
-<p>Parameters: <code>number</code> - a floating point number.
-Returns: <code>integer</code>
-Example: <code>floor(2.6)</code>
-Output: <code>2</code></p>
+<p>Parameters: <code>number</code> - a floating point number.</p>
+<p>Returns: <code>integer</code></p>
+<p>Example: <code>floor(2.6)</code></p>
+<p>Output: <code>2</code></p>
 <h3 id="percentage">percentage</h3>
 <blockquote>
 <p>Converts a floating point number into a percentage string.</p>
 </blockquote>
-<p>Parameters: <code>number</code> - a floating point number.
-Returns: <code>string</code>
-Example: <code>percentage(0.5)</code>
-Output: <code>50%</code></p>
+<p>Parameters: <code>number</code> - a floating point number.</p>
+<p>Returns: <code>string</code></p>
+<p>Example: <code>percentage(0.5)</code></p>
+<p>Output: <code>50%</code></p>
 <h3 id="round">round</h3>
 <blockquote>
 <p>Applies rounding.</p>
@@ -550,18 +550,18 @@ Output: <code>50%</code></p>
 <li><code>number</code>: A floating point number.</li>
 <li><code>decimalPlaces</code>: Optional: The number of decimal places to round to. Defaults to 0.</li>
 </ul>
-<p>Returns: <code>number</code>
-Example: <code>round(1.67)</code>
-Output: <code>2</code></p>
-<p>Example: <code>round(1.67, 1)</code>
-Output: <code>1.7</code></p>
+<p>Returns: <code>number</code></p>
+<p>Example: <code>round(1.67)</code></p>
+<p>Output: <code>2</code></p>
+<p>Example: <code>round(1.67, 1)</code></p>
+<p>Output: <code>1.7</code></p>
 <h3 id="sqrt">sqrt</h3>
 <blockquote>
 <p>Calculates square root of a number. Keeps units as they are.</p>
 </blockquote>
-<p>Parameters: <code>number</code> - floating point number.
-Returns: <code>number</code>
-Example:</p>
+<p>Parameters: <code>number</code> - floating point number.</p>
+<p>Returns: <code>number</code></p>
+<p>Example:</p>
 <pre><code class="language-less">sqrt(25cm)</code></pre>
 <p>Output:</p>
 <pre><code class="language-css">5<span class="tag">cm</span></code></pre>
@@ -573,19 +573,19 @@ Example:</p>
 <blockquote>
 <p>Calculates absolute value of a number. Keeps units as they are.</p>
 </blockquote>
-<p>Parameters: <code>number</code> - a floating point number.
-Returns: <code>number</code>
-Example #1: <code>abs(25cm)</code>
-Output: <code>25cm</code>
-Example #2: <code>abs(-18.6%)</code>
-Output: <code>18.6%;</code></p>
+<p>Parameters: <code>number</code> - a floating point number.</p>
+<p>Returns: <code>number</code></p>
+<p>Example #1: <code>abs(25cm)</code></p>
+<p>Output: <code>25cm</code></p>
+<p>Example #2: <code>abs(-18.6%)</code></p>
+<p>Output: <code>18.6%;</code></p>
 <h3 id="sin">sin</h3>
 <blockquote>
 <p>Calculates sine function.</p>
 </blockquote>
 <p>Assumes radians on numbers without units.</p>
-<p>Parameters: <code>number</code> - a floating point number.
-Returns: <code>number</code></p>
+<p>Parameters: <code>number</code> - a floating point number.</p>
+<p>Returns: <code>number</code></p>
 <p>Example:</p>
 <pre><code class="language-less">sin(1); // sine of 1 radian
 sin(1deg); // sine of 1 degree
@@ -599,9 +599,9 @@ sin(1grad); // sine of 1 gradian</code></pre>
 <p>Calculates arcsine (inverse of sine) function.</p>
 </blockquote>
 <p>Returns number in radians e.g. a number between <code>-&amp;pi;/2</code> and <code>&amp;pi;/2</code>.</p>
-<p>Parameters: <code>number</code> - floating point number from <code>[-1, 1]</code> interval.
-Returns: <code>number</code>
-Example:</p>
+<p>Parameters: <code>number</code> - floating point number from <code>[-1, 1]</code> interval.</p>
+<p>Returns: <code>number</code></p>
+<p>Example:</p>
 <pre><code class="language-less">asin(-0.8414709848078965)
 asin(0)
 asin(2)</code></pre>
@@ -614,9 +614,9 @@ NaNrad</code></pre>
 <p>Calculates cosine function.</p>
 </blockquote>
 <p>Assumes radians on numbers without units.</p>
-<p>Parameters: <code>number</code> - a floating point number.
-Returns: <code>number</code>
-Example:</p>
+<p>Parameters: <code>number</code> - a floating point number.</p>
+<p>Returns: <code>number</code></p>
+<p>Example:</p>
 <pre><code class="language-less">cos(1) // cosine of 1 radian
 cos(1deg) // cosine of 1 degree
 cos(1grad) // cosine of 1 gradian</code></pre>
@@ -629,9 +629,9 @@ cos(1grad) // cosine of 1 gradian</code></pre>
 <p>Calculates arccosine (inverse of cosine) function.</p>
 </blockquote>
 <p>Returns number in radians e.g. a number between 0 and &pi;.</p>
-<p>Parameters: <code>number</code> - a floating point number from [-1, 1] interval.
-Returns: <code>number</code>
-Example:</p>
+<p>Parameters: <code>number</code> - a floating point number from [-1, 1] interval.</p>
+<p>Returns: <code>number</code></p>
+<p>Example:</p>
 <pre><code class="language-less">acos(0.5403023058681398)
 acos(1)
 acos(2)</code></pre>
@@ -644,9 +644,9 @@ NaNrad</code></pre>
 <p>Calculates tangent function.</p>
 </blockquote>
 <p>Assumes radians on numbers without units.</p>
-<p>Parameters: <code>number</code> - a floating point number.
-Returns: <code>number</code>
-Example:</p>
+<p>Parameters: <code>number</code> - a floating point number.</p>
+<p>Returns: <code>number</code></p>
+<p>Example:</p>
 <pre><code class="language-less">tan(1) // tangent of 1 radian
 tan(1deg) // tangent of 1 degree
 tan(1grad) // tangent of 1 gradian</code></pre>
@@ -659,9 +659,9 @@ tan(1grad) // tangent of 1 gradian</code></pre>
 <p>Calculates arctangent (inverse of tangent) function.</p>
 </blockquote>
 <p>Returns number in radians e.g. a number between <code>-&amp;pi;/2</code> and <code>&amp;pi;/2</code>.</p>
-<p>Parameters: <code>number</code> - a floating point number.
-Returns: <code>number</code>
-Example:</p>
+<p>Parameters: <code>number</code> - a floating point number.</p>
+<p>Returns: <code>number</code></p>
+<p>Example:</p>
 <pre><code class="language-less">atan(-1.5574077246549023)
 atan(0)
 round(atan(22), 6) // arctangent of 22 rounded to 6 decimal places</code></pre>
@@ -673,8 +673,8 @@ round(atan(22), 6) // arctangent of 22 rounded to 6 decimal places</code></pre>
 <blockquote>
 <p>Returns &pi; (pi);</p>
 </blockquote>
-<p>Parameters: <code>none</code>
-Returns: <code>number</code></p>
+<p>Parameters: <code>none</code></p>
+<p>Returns: <code>number</code></p>
 <p>Example:</p>
 <pre><code class="language-less">pi()</code></pre>
 <p>Output:</p>
@@ -712,8 +712,8 @@ NaN%</code></pre>
 <li><code>number</code>: a floating point number.</li>
 <li><code>number</code>: a floating point number.</li>
 </ul>
-<p>Returns: <code>number</code>
-Example:</p>
+<p>Returns: <code>number</code></p>
+<p>Example:</p>
 <pre><code class="language-less">mod(0cm, 0px)
 mod(11cm, 6px);
 mod(-26%, -5);</code></pre>
@@ -725,22 +725,22 @@ mod(-26%, -5);</code></pre>
 <blockquote>
 <p>Returns the lowest of one or more values.</p>
 </blockquote>
-<p>Parameters: <code>value1, ..., valueN</code> - one or more values to compare.
-Returns: the lowest value.</p>
-<p>Example: <code>min(5, 10);</code>
-Output: <code>5</code></p>
-<p>Example: <code>min(3px, 42px, 1px, 16px);</code>
-Output: <code>1px</code></p>
+<p>Parameters: <code>value1, ..., valueN</code> - one or more values to compare.</p>
+<p>Returns: the lowest value.</p>
+<p>Example: <code>min(5, 10);</code></p>
+<p>Output: <code>5</code></p>
+<p>Example: <code>min(3px, 42px, 1px, 16px);</code></p>
+<p>Output: <code>1px</code></p>
 <h3 id="max">max</h3>
 <blockquote>
 <p>Returns the highest of one or more values.</p>
 </blockquote>
-<p>Parameters: <code>value1, ..., valueN</code> - one or more values to compare.
-Returns: the highest value.</p>
-<p>Example: <code>max(5, 10);</code>
-Output: <code>10</code></p>
-<p>Example: <code>max(3%, 42%, 1%, 16%);</code>
-Output: <code>42%</code></p>
+<p>Parameters: <code>value1, ..., valueN</code> - one or more values to compare.</p>
+<p>Returns: the highest value.</p>
+<p>Example: <code>max(5, 10);</code></p>
+<p>Output: <code>10</code></p>
+<p>Example: <code>max(3%, 42%, 1%, 16%);</code></p>
+<p>Output: <code>42%</code></p>
 
 </div>
 
@@ -910,9 +910,9 @@ isunit(&quot;mm&quot;, mm);  // false</code></pre>
 <li><code>green</code>: An integer 0-255 or percentage 0-100%.</li>
 <li><code>blue</code>: An integer 0-255 or percentage 0-100%.</li>
 </ul>
-<p>Returns: <code>color</code>
-Example: <code>rgb(90, 129, 32)</code>
-Output: <code>#5a8120</code></p>
+<p>Returns: <code>color</code></p>
+<p>Example: <code>rgb(90, 129, 32)</code></p>
+<p>Output: <code>#5a8120</code></p>
 <h3 id="rgba">rgba</h3>
 <blockquote>
 <p>Creates a transparent color object from decimal red, green, blue and alpha (RGBA) values.
@@ -924,18 +924,18 @@ Parameters:</p>
 <li><code>blue</code>: An integer 0-255 or percentage 0-100%.</li>
 <li><code>alpha</code>: An number 0-1 or percentage 0-100%.</li>
 </ul>
-<p>Returns: <code>color</code>
-Example: <code>rgba(90, 129, 32, 0.5)</code>
-Output: <code>rgba(90, 129, 32, 0.5)</code></p>
+<p>Returns: <code>color</code></p>
+<p>Example: <code>rgba(90, 129, 32, 0.5)</code></p>
+<p>Output: <code>rgba(90, 129, 32, 0.5)</code></p>
 <h3 id="argb">argb</h3>
 <blockquote>
 <p>Creates a hex representation of a color in <code>#AARRGGBB</code> format (<strong>NOT</strong> <code>#RRGGBBAA</code>!).</p>
 </blockquote>
 <p>This format is used in Internet Explorer, and .NET and Android development.</p>
-<p>Parameters: <code>color</code> - color object.
-Returns: <code>string</code>
-Example: <code>argb(rgba(90, 23, 148, 0.5));</code>
-Output: <code>#805a1794</code></p>
+<p>Parameters: <code>color</code> - color object.</p>
+<p>Returns: <code>string</code></p>
+<p>Example: <code>argb(rgba(90, 23, 148, 0.5));</code></p>
+<p>Output: <code>#805a1794</code></p>
 <h3 id="hsl">hsl</h3>
 <blockquote>
 <p>Creates an opaque color object from hue, saturation and lightness (HSL) values.
@@ -946,9 +946,9 @@ Parameters:</p>
 <li><code>saturation</code>: A percentage 0-100% or number 0-1.</li>
 <li><code>lightness</code>: A percentage 0-100% or number 0-1.</li>
 </ul>
-<p>Returns: <code>color</code>
-Example: <code>hsl(90, 100%, 50%)</code>
-Output: <code>#80ff00</code></p>
+<p>Returns: <code>color</code></p>
+<p>Example: <code>hsl(90, 100%, 50%)</code></p>
+<p>Output: <code>#80ff00</code></p>
 <p>This is useful if you want to create a new color based on another color&#39;s channel, forExample: <code>@new: hsl(hue(@old), 45%, 90%);</code></p>
 <p><code>@new</code> will have <code>@old</code>&#39;s <em>hue</em>, and its own saturation and lightness.</p>
 <h3 id="hsla">hsla</h3>
@@ -962,9 +962,9 @@ Output: <code>#80ff00</code></p>
 <li><code>lightness</code>: A percentage 0-100% or number 0-1.</li>
 <li><code>alpha</code>: A percentage 0-100% or number 0-1.</li>
 </ul>
-<p>Returns: <code>color</code>
-Example: <code>hsl(90, 100%, 50%, 0.5)</code>
-Output: <code>rgba(128, 255, 0, 0.5)</code></p>
+<p>Returns: <code>color</code></p>
+<p>Example: <code>hsl(90, 100%, 50%, 0.5)</code></p>
+<p>Output: <code>rgba(128, 255, 0, 0.5)</code></p>
 <h3 id="hsv">hsv</h3>
 <blockquote>
 <p>Creates an opaque color object from hue, saturation and value (HSV) values.</p>
@@ -976,9 +976,9 @@ Output: <code>rgba(128, 255, 0, 0.5)</code></p>
 <li><code>saturation</code>: A percentage 0-100% or number 0-1.</li>
 <li><code>value</code>: A percentage 0-100% or number 0-1.</li>
 </ul>
-<p>Returns: <code>color</code>
-Example: <code>hsv(90, 100%, 50%)</code>
-Output: <code>#408000</code></p>
+<p>Returns: <code>color</code></p>
+<p>Example: <code>hsv(90, 100%, 50%)</code></p>
+<p>Output: <code>#408000</code></p>
 <h3 id="hsva">hsva</h3>
 <blockquote>
 <p>Creates a transparent color object from hue, saturation, value and alpha (HSVA) values.</p>
@@ -991,9 +991,9 @@ Output: <code>#408000</code></p>
 <li><code>value</code>: A percentage 0-100% or number 0-1.</li>
 <li><code>alpha</code>: A percentage 0-100% or number 0-1.</li>
 </ul>
-<p>Returns: <code>color</code>
-Example: <code>hsva(90, 100%, 50%, 0.5)</code>
-Output: <code>rgba(64, 128, 0, 0.5)</code></p>
+<p>Returns: <code>color</code></p>
+<p>Example: <code>hsva(90, 100%, 50%, 0.5)</code></p>
+<p>Output: <code>rgba(64, 128, 0, 0.5)</code></p>
 
 </div>
 
@@ -1003,91 +1003,91 @@ Output: <code>rgba(64, 128, 0, 0.5)</code></p>
 <blockquote>
 <p>Extracts the hue channel of a color object.</p>
 </blockquote>
-<p>Parameters: <code>color</code> - a color object.
-Returns: <code>integer</code> <code>0-360</code>
-Example: <code>hue(hsl(90, 100%, 50%))</code>
-Output: <code>90</code></p>
+<p>Parameters: <code>color</code> - a color object.</p>
+<p>Returns: <code>integer</code> <code>0-360</code></p>
+<p>Example: <code>hue(hsl(90, 100%, 50%))</code></p>
+<p>Output: <code>90</code></p>
 <h3 id="saturation">saturation</h3>
 <blockquote>
 <p>Extracts the saturation channel of a color object.</p>
 </blockquote>
-<p>Parameters: <code>color</code> - a color object.
-Returns: <code>percentage</code> <code>0-100</code>
-Example: <code>saturation(hsl(90, 100%, 50%))</code>
-Output: <code>100%</code></p>
+<p>Parameters: <code>color</code> - a color object.</p>
+<p>Returns: <code>percentage</code> <code>0-100</code></p>
+<p>Example: <code>saturation(hsl(90, 100%, 50%))</code></p>
+<p>Output: <code>100%</code></p>
 <h3 id="lightness">lightness</h3>
 <blockquote>
 <p>Extracts the lightness channel of a color object.</p>
 </blockquote>
-<p>Parameters: <code>color</code> - a color object.
-Returns: <code>percentage</code> <code>0-100</code>
-Example: <code>lightness(hsl(90, 100%, 50%))</code>
-Output: <code>50%</code></p>
+<p>Parameters: <code>color</code> - a color object.</p>
+<p>Returns: <code>percentage</code> <code>0-100</code></p>
+<p>Example: <code>lightness(hsl(90, 100%, 50%))</code></p>
+<p>Output: <code>50%</code></p>
 <h3 id="hsvhue">hsvhue</h3>
 <blockquote>
 <p>Extracts the hue channel of a color object in the HSV color space.</p>
 </blockquote>
-<p>Parameters: <code>color</code> - a color object.
-Returns: <code>integer</code> <code>0-360</code>
-Example: <code>hsvhue(hsv(90, 100%, 50%))</code>
-Output: <code>90</code></p>
+<p>Parameters: <code>color</code> - a color object.</p>
+<p>Returns: <code>integer</code> <code>0-360</code></p>
+<p>Example: <code>hsvhue(hsv(90, 100%, 50%))</code></p>
+<p>Output: <code>90</code></p>
 <h3 id="hsvsaturation">hsvsaturation</h3>
 <blockquote>
 <p>Extracts the saturation channel of a color object in the HSV color space.</p>
 </blockquote>
-<p>Parameters: <code>color</code> - a color object.
-Returns: <code>percentage</code> 0-100
-Example: <code>hsvsaturation(hsv(90, 100%, 50%))</code>
-Output: <code>100%</code></p>
+<p>Parameters: <code>color</code> - a color object.</p>
+<p>Returns: <code>percentage</code> 0-100</p>
+<p>Example: <code>hsvsaturation(hsv(90, 100%, 50%))</code></p>
+<p>Output: <code>100%</code></p>
 <h3 id="hsvvalue">hsvvalue</h3>
 <blockquote>
 <p>Extracts the value channel of a color object in the HSV color space.</p>
 </blockquote>
-<p>Parameters: <code>color</code> - a color object.
-Returns: <code>percentage</code> 0-100
-Example: <code>hsvvalue(hsv(90, 100%, 50%))</code>
-Output: <code>50%</code></p>
+<p>Parameters: <code>color</code> - a color object.</p>
+<p>Returns: <code>percentage</code> 0-100</p>
+<p>Example: <code>hsvvalue(hsv(90, 100%, 50%))</code></p>
+<p>Output: <code>50%</code></p>
 <h3 id="red">red</h3>
 <blockquote>
 <p>Extracts the red channel of a color object.</p>
 </blockquote>
-<p>Parameters: <code>color</code> - a color object.
-Returns: <code>integer</code> <code>0-255</code>
-Example: <code>red(rgb(10, 20, 30))</code>
-Output: <code>10</code></p>
+<p>Parameters: <code>color</code> - a color object.</p>
+<p>Returns: <code>integer</code> <code>0-255</code></p>
+<p>Example: <code>red(rgb(10, 20, 30))</code></p>
+<p>Output: <code>10</code></p>
 <h3 id="green">green</h3>
 <blockquote>
 <p>Extracts the green channel of a color object.</p>
 </blockquote>
-<p>Parameters: <code>color</code> - a color object.
-Returns: <code>integer</code> 0-255
-Example: <code>green(rgb(10, 20, 30))</code>
-Output: <code>20</code></p>
+<p>Parameters: <code>color</code> - a color object.</p>
+<p>Returns: <code>integer</code> 0-255</p>
+<p>Example: <code>green(rgb(10, 20, 30))</code></p>
+<p>Output: <code>20</code></p>
 <h3 id="blue">blue</h3>
 <blockquote>
 <p>Extracts the blue channel of a color object.</p>
 </blockquote>
-<p>Parameters: <code>color</code> - a color object.
-Returns: <code>integer</code> 0-255
-Example: <code>blue(rgb(10, 20, 30))</code>
-Output: <code>30</code></p>
+<p>Parameters: <code>color</code> - a color object.</p>
+<p>Returns: <code>integer</code> 0-255</p>
+<p>Example: <code>blue(rgb(10, 20, 30))</code></p>
+<p>Output: <code>30</code></p>
 <h3 id="alpha">alpha</h3>
 <blockquote>
 <p>Extracts the alpha channel of a color object.</p>
 </blockquote>
-<p>Parameters: <code>color</code> - a color object.
-Returns: <code>float</code> <code>0-1</code>
-Example: <code>alpha(rgba(10, 20, 30, 0.5))</code>
-Output: <code>0.5</code></p>
+<p>Parameters: <code>color</code> - a color object.</p>
+<p>Returns: <code>float</code> <code>0-1</code></p>
+<p>Example: <code>alpha(rgba(10, 20, 30, 0.5))</code></p>
+<p>Output: <code>0.5</code></p>
 <h3 id="luma">luma</h3>
 <blockquote>
 <p>Calculates the <a href="http://en.wikipedia.org/wiki/Luma_(video">luma</a>) (perceptual brightness) of a color object.</p>
 </blockquote>
 <p>Uses <strong>SMPTE C / Rec. 709</strong> coefficients, as recommended in <a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">WCAG 2.0</a>. This calculation is also used in the contrast function.</p>
-<p>Parameters: <code>color</code> - a color object.
-Returns: <code>percentage</code> 0-100%
-Example: <code>luma(rgb(100, 200, 30))</code>
-Output: <code>65%</code></p>
+<p>Parameters: <code>color</code> - a color object.</p>
+<p>Returns: <code>percentage</code> 0-100%</p>
+<p>Example: <code>luma(rgb(100, 200, 30))</code></p>
+<p>Output: <code>65%</code></p>
 
 </div>
 
@@ -1139,9 +1139,9 @@ Output: <code>65%</code></p>
 <li><code>color</code> - a color object.</li>
 <li><code>amount</code>: A percentage 0-100%.</li>
 </ul>
-<p>Returns: <code>color</code>
-Example: <code>darken(hsl(90, 90%, 50%), 10%)</code>
-Output: <code>#66c20a // hsl(90, 90%, 40%)</code></p>
+<p>Returns: <code>color</code></p>
+<p>Example: <code>darken(hsl(90, 90%, 50%), 10%)</code></p>
+<p>Output: <code>#66c20a // hsl(90, 90%, 40%)</code></p>
 <h3 id="fadein">fadein</h3>
 <blockquote>
 <p>Decrease the transparency (or increase the opacity) of a color, making it more opaque.</p>
@@ -1152,9 +1152,9 @@ Output: <code>#66c20a // hsl(90, 90%, 40%)</code></p>
 <li><code>color</code> - a color object.</li>
 <li><code>amount</code>: A percentage 0-100%.</li>
 </ul>
-<p>Returns: <code>color</code>
-Example: <code>fadein(hsla(90, 90%, 50%, 0.5), 10%)</code>
-Output: <code>rgba(128, 242, 13, 0.6) // hsla(90, 90%, 50%, 0.6)</code></p>
+<p>Returns: <code>color</code></p>
+<p>Example: <code>fadein(hsla(90, 90%, 50%, 0.5), 10%)</code></p>
+<p>Output: <code>rgba(128, 242, 13, 0.6) // hsla(90, 90%, 50%, 0.6)</code></p>
 <h3 id="fadeout">fadeout</h3>
 <blockquote>
 <p>Increase the transparency (or decrease the opacity) of a color, making it less opaque. To fade in the other direction use <code>fadein</code>.</p>
@@ -1164,9 +1164,9 @@ Output: <code>rgba(128, 242, 13, 0.6) // hsla(90, 90%, 50%, 0.6)</code></p>
 <li><code>color</code> - a color object.</li>
 <li><code>amount</code>: A percentage 0-100%.</li>
 </ul>
-<p>Returns: <code>color</code>
-Example: <code>fadeout(hsla(90, 90%, 50%, 0.5), 10%)</code>
-Output: <code>rgba(128, 242, 13, 0.4) // hsla(90, 90%, 50%, 0.6)</code></p>
+<p>Returns: <code>color</code></p>
+<p>Example: <code>fadeout(hsla(90, 90%, 50%, 0.5), 10%)</code></p>
+<p>Output: <code>rgba(128, 242, 13, 0.4) // hsla(90, 90%, 50%, 0.6)</code></p>
 <h3 id="fade">fade</h3>
 <blockquote>
 <p>Set the absolute transparency of a color. Can be applied to colors whether they already have an opacity value or not.</p>
@@ -1176,9 +1176,9 @@ Output: <code>rgba(128, 242, 13, 0.4) // hsla(90, 90%, 50%, 0.6)</code></p>
 <li><code>color</code> - a color object.</li>
 <li><code>amount</code>: A percentage 0-100%.</li>
 </ul>
-<p>Returns: <code>color</code>
-Example: <code>fade(hsl(90, 90%, 50%), 10%)</code>
-Output: <code>rgba(128, 242, 13, 0.1) //hsla(90, 90%, 50%, 0.1)</code></p>
+<p>Returns: <code>color</code></p>
+<p>Example: <code>fade(hsl(90, 90%, 50%), 10%)</code></p>
+<p>Output: <code>rgba(128, 242, 13, 0.1) //hsla(90, 90%, 50%, 0.1)</code></p>
 <h3 id="spin">spin</h3>
 <blockquote>
 <p>Rotate the hue angle of a color in either direction.</p>
@@ -1223,9 +1223,9 @@ mix(rgba(100,0,0,1.0), rgba(0,100,0,0.5), 50%)</code></pre>
 </blockquote>
 <p>Because the saturation is not affected by hue, the resulting color mapping may be somewhat dull or muddy; <code>luma</code> may provide a better result as it extracts perceptual rather than linear brightness, for example <code>greyscale(&#39;#0000ff&#39;)</code> will return the same value as <code>greyscale(&#39;#00ff00&#39;)</code>, though they appear quite different in brightness to the human eye.</p>
 <p>Parameters: <code>color</code> - a color object.</p>
-<p>Returns: <code>color</code>
-Example: <code>greyscale(hsl(90, 90%, 50%))</code>
-Output: <code>#808080 // hsl(90, 0%, 50%)</code></p>
+<p>Returns: <code>color</code></p>
+<p>Example: <code>greyscale(hsl(90, 90%, 50%))</code></p>
+<p>Output: <code>#808080 // hsl(90, 0%, 50%)</code></p>
 <h3 id="contrast">contrast</h3>
 <blockquote>
 <p>Choose which of two colors provides the greatest contrast with another.</p>
@@ -1692,8 +1692,8 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
 
     <!-- Footer -->
     <footer class="bs-footer" role="contentinfo">
-      <div class="container">
-        <div class="bs-social">
+  <div class="container">
+    <div class="bs-social">
   <ul class="bs-social-buttons">
     <li>
       <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=less&amp;repo=less.js&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
@@ -1704,21 +1704,21 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
   </ul>
 </div>
 
-        <p><a href="https://github.com/less/less.js">Less.js</a> was created by <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
-        <p>Documentation source code released under the <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        <ul class="footer-links">
-          <li>Currently v1.5.1</li>
-          <li class="muted">&middot;</li>
-          <li><a href="">Blog</a></li>
-          <li class="muted">&middot;</li>
-          <li><a href="/issues?state=open">Issues</a></li>
-          <li class="muted">&middot;</li>
-          <li><a href="/blob/master/CHANGELOG.md">Changelog</a></li>
-          <li class="muted">&middot;</li>
-          <li><a href="/releases">Releases</a></li>
-        </ul>
-      </div>
-    </footer>
+    <p><a href="https://github.com/less/less.js">Less.js</a> was created by <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
+    <p>Documentation source code released under the <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    <ul class="footer-links">
+      <li>Currently v1.5.1</li>
+      <li class="muted">&middot;</li>
+      <li><a href="">Blog</a></li>
+      <li class="muted">&middot;</li>
+      <li><a href="/issues?state=open">Issues</a></li>
+      <li class="muted">&middot;</li>
+      <li><a href="/blob/master/CHANGELOG.md">Changelog</a></li>
+      <li class="muted">&middot;</li>
+      <li><a href="/releases">Releases</a></li>
+    </ul>
+  </div>
+</footer>
 
     <!-- JavaScript and analytics only. -->
     <!-- Core JavaScript
