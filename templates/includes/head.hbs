@@ -4,15 +4,19 @@
 <meta name="description" content="{{site.description}}">
 <meta name="author" content="Alexis Sellier">
 <link rel="alternate" type="application/atom+xml" title="{{default title 'LESS'}} Feed" href="/index.xml">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
 
 <title>
   {{default title 'LESS'}} | {{site.title}}
 </title>
 
-<!-- Documentation styles -->
-<link href="{{ assets }}/css/docs.css" rel="stylesheet">
+
+<!-- Main styles -->
+<link href="{{ assets }}/css/site.css" rel="stylesheet">
 <link href="{{ assets }}/css/github.css" rel="stylesheet">
+
+<!-- Webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -20,11 +24,13 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 
+
 <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ assets }}/ico/apple-touch-icon-144-precomposed.png">
 <link rel="shortcut icon" href="{{ assets }}/ico/favicon.png">
 
 {{#if site.analytics.google}}
+<!-- Google Analytics -->
 <script>
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '{{site.analytics.google}}']);
