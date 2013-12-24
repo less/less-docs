@@ -1,5 +1,3 @@
-<a id="merge" class="section_anchor"></a>
-
 # Merge
 > Combine properties
 

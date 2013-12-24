@@ -1,8 +1,6 @@
-<a id="parent-selectors" class="section_anchor"></a>
-
 # Parent Selectors
-> Changing selector order
 
+> Changing selector order
 
 When using **Nested rules**, it can be very useful to prepend a selector to the inherited (parent) scope.  This feature is known as "Parent Selectors", and can be done by putting the parent selector before an ampersand `&`.
 

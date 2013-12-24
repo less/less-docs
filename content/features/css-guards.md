@@ -1,5 +1,3 @@
-<a id="css-guards" class="section_anchor"></a>
-
 # CSS Guards
 > if's around selectors
 

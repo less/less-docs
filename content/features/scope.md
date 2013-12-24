@@ -2,8 +2,6 @@
 published: false
 ---
 
-<a id="scope" class="section_anchor"></a>
-
 # Scope
 > How variables are evaluated
 

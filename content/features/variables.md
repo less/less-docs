@@ -1,12 +1,12 @@
-<a id="variables" class="section_anchor"></a>
-
 # Variables
+
 > Control commonly used values in a single location.
 
 It's not uncommon to see the same value repeated dozens _if not hundreds of times_ across your stylesheets:
 
 ```css
-a, .link {
+a,
+.link {
   color: #428bca;
 }
 .widget {
@@ -23,7 +23,8 @@ Variables make your code easier to maintain by giving you a way to control those
 @link-color-hover:  (@link-color, 10%);
 
 // Usage
-a, .link {
+a,
+.link {
   color: @link-color;
 }
 a:hover {
@@ -35,12 +36,11 @@ a:hover {
 }
 ```
 
-<a id="variable-interpolation"></a>
 ## Variable Interpolation
 
 The examples above focused on using variables to control _values in CSS rules_, but they can also be used in other places as well, such as selector names, property names, URLs and `@import` statements.
 
-<a id="selector-interpolation"></a>
+
 ### Selectors
 
 Version: 1.4.0
@@ -66,7 +66,6 @@ Compiles to:
 }
 ```
 
-<a id="url-string-interpolation"></a>
 ### URLs
 
 ```less
@@ -80,7 +79,6 @@ body {
 }
 ```
 
-<a id="import-string-interpolation"></a>
 ### `@import` statements (limited support)
 
 Version: 1.4.0
@@ -102,7 +100,6 @@ Example:
 @import "@{themes}/tidal-wave.less";
 ```
 
-<a id="property-interpolation"></a>
 ### Properties
 
 Version: ?.?.?
@@ -115,6 +112,7 @@ Version: ?.?.?
   background-@{property}: #999;
 }
 ```
+
 Compiles to:
 
 ```css
@@ -124,7 +122,6 @@ Compiles to:
 }
 ```
 
-<a id="variable-name-reference"></a>
 ## Variable Names
 
 It is also possible to define variables with a variable name:
@@ -134,13 +131,13 @@ It is also possible to define variables with a variable name:
 @var:    "fnord";
 content: @@var;
 ```
+
 Which compiles to:
 
-```css
+```
 content: "I am fnord.";
 ```
 
-<a id="lazy-loading"></a>
 ## Lazy Loading
 
 > Variables are lazy loaded and do not have to be declared before being used.
@@ -148,7 +145,7 @@ content: "I am fnord.";
 Valid LESS snippet:
 
 ```less
-lazy-eval {
+.lazy-eval {
   width: @var;
 }
 

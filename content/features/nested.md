@@ -1,6 +1,4 @@
-<a id="nested-rules" class="section_anchor"></a>
-
-#Nested Rules
+# Nested Rules
 
 LESS allows you to use nesting as well as normal CSS cascading. For example, you can produce the following CSS:
 
@@ -24,14 +22,12 @@ With the following LESS:
 ```less
 #header {
   color: black;
-
   .navigation {
     font-size: 12px;
   }
 
   .logo {
     width: 300px;
-
     &:hover {
       text-decoration: none;
     }
@@ -39,9 +35,7 @@ With the following LESS:
 }
 ```
 
-This syntax is a better representation of the DOM structure that you are styling. Note that by default
-the nested style produces output with the descendent syntax of CSS. To produce other relationships, you can use `&`.
-The `&` acts as a placeholder for the parent selector (where the parent selector includes the components of all ancestor selectors).
+This syntax is a better representation of the DOM structure that you are styling. Note that by default the nested style produces output with the descendent syntax of CSS. To produce other relationships, you can use `&`. The `&` acts as a placeholder for the parent selector (where the parent selector includes the components of all ancestor selectors).
 
 For example:
 
@@ -75,8 +69,7 @@ Will output
 
 ##Nested Media Queries
 
-Media queries can be nested in the same way as selectors, and output will create the appropriate rules within
-media queries.
+Media queries can be nested in the same way as selectors, and output will create the appropriate rules within media queries.
 
 For example:
 
@@ -108,13 +101,13 @@ Will output
 
 ##Advanced Usage of &
 
-The `&` combinator can be used to multiply classes, and can be used with comma seperated selectors.
-You can also use the `&` to prepend a selector to the inherited (parent) scope. [Parent selector](Parent-Selectors.md) describes this in more detail.
+The `&` combinator can be used to multiply classes, and can be used with comma seperated selectors. You can also use the `&` to prepend a selector to the inherited (parent) scope. [Parent selector](Parent-Selectors.md) describes this in more detail.
 
 For example:
 
 ```less
-.child, .sibling {
+.child,
+.sibling {
   & + & {
     color: red;
   }

@@ -1,5 +1,3 @@
-<a id="comments" class="section_anchor"></a>
-
 # Comments
 > TODO
 

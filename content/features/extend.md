@@ -1,5 +1,3 @@
-<a id="extend" class="section_anchor"></a>
-
 # Extend
 > Extend is a LESS Pseudo-Class which merges the selector it is put on with ones that match what it references.
 

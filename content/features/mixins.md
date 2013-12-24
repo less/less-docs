@@ -1,6 +1,5 @@
-<a id="mixins" class="section_anchor"></a>
-
 # Mixins
+
 > "mix-in" properties from existing styles
 
 You can mix-in class selectors and id selectors, e.g.

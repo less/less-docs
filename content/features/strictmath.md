@@ -1,13 +1,9 @@
 ---
 published: false
 ---
-<a id="strict-math" class="section_anchor"></a>
 
 # strictMath
 > Make your less more css compatible.
-
-
-
 
 ## Example
 

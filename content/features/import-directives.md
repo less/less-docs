@@ -1,5 +1,3 @@
-<a id="import-directives" class="section_anchor"></a>
-
 # Import Directives
 > How to combine files
 

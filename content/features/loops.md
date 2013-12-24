@@ -1,5 +1,3 @@
-<a id="loops" class="section_anchor"></a>
-
 # Loops
 > Creating loops
 
