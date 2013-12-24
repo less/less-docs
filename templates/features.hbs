@@ -5,20 +5,13 @@ slug: features
 lead: "Features supported by Less.js."
 ---
 
-<!-- Features -->
+{{#each features.sections}}
+<!-- {{title}} -->
 <div class="docs-section">
   <div class="page-header">
-    <h1 id="features-overview">Overview</h1>
+    <h1 id="{{@key}}-section">{{title}}</h1>
   </div>
-  <p class="lead">Simple overview of the basic features</p>
-  {{md 'content/overview.md'}}
-</div>
-
-{{#each features}}
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="{{@key}}">{{title}}</h1>
-  </div>
+  {{#if lead}} <p class="lead">{{lead}}</p> {{/if}}
   {{md content}}
 </div>
 {{/each}}
