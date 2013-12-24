@@ -6,22 +6,28 @@
 // Theme variables
 @import "variables.less";
 
+
 // Bootstrap components
 @import "bootstrap.less";
 @import (less) "docs.css";
 
+
 // Custom components
+@import "typography.less";
 @import "ad.less";
 @import "banner.less";
 @import "button.less";
+@import "header.less";
 @import "sidebar.less";
-
+@import "main-nav.less";
+@import "team.less";
 
 
 
 body {
   padding-top: @body-padding;
 }
+
 
 
 /**
@@ -33,117 +39,8 @@ pre code {
 }
 pre {
   background-color: #f8f8f8;
-}
-
-
-/**
- * Page headers
- * Jumbotron-esque headers at the top of every
- * page that's not the homepage.
- */
-
-.docs-header,
-.docs-home {
-  color: @navbar-inverse-link-color;
-  background-color: @navbar-inverse-bg;
-}
-
-/* Page headers */
-.docs-header {
-  padding: 30px 15px 50px; /* side padding builds on .container 15px, so 30px */
-  font-size: 16px;
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(0,0,0,.15);
-}
-.docs-header h1 {
-  color: #fff;
-}
-.docs-header p {
-  font-weight: 300;
-  line-height: 1.5;
-}
-.docs-header .container {
-  position: relative;
-}
-
-@media (min-width: 768px) {
-  .docs-header {
-    font-size: 21px;
-    text-align: left;
-  }
-  .docs-header h1 {
-    font-size: 60px;
-    line-height: 1;
-  }
-}
-
-@media (min-width: 992px) {
-  .docs-header h1,
-  .docs-header p {
-    margin-right: 380px;
-  }
-}
-
-
-/*
- * Main navigation
- * Turn the `.navbar` at the top of the docs dark blue.
- */
-.docs-nav {
-  text-shadow: 0 -1px 0 rgba(0,0,0,.15);
-  background-color: @navbar-inverse-bg;
-  border-color: @navbar-inverse-border;
-  box-shadow: 0 1px 0 rgba(255,255,255,.1);
-}
-.docs-nav .navbar-collapse {
-  border-color: @navbar-inverse-border;
-}
-.docs-nav .navbar-brand {
-  color: #fff;
-}
-.docs-nav .navbar-nav > li > a {
-  color: @navbar-inverse-link-color;
-}
-.docs-nav .navbar-nav > li > a:hover {
-  color: #fff;
-}
-.docs-nav .navbar-nav > .active > a,
-.docs-nav .navbar-nav > .active > a:hover {
-  color: #fff;
-  background-color: @navbar-inverse-border;
-}
-.docs-nav .navbar-toggle {
-  border-color: @navbar-inverse-bg;
-}
-.docs-nav .navbar-toggle:hover {
-  background-color: @navbar-inverse-border;
-  border-color: @navbar-inverse-border;
-}
-
-
-
-
-/**
- * Team members
- * Avatars, names, and usernames for core team.
- */
-.less-team .team-member {
-  color: #555;
-  line-height: 32px;
-}
-.less-team .team-member:hover {
-  color: #333;
-  text-decoration: none;
-}
-.less-team .github-btn {
-  float: right;
-  margin-top: 6px;
-  width: 120px;
-  height: 20px;
-}
-.less-team img {
-  float: left;
-  width: 32px;
-  margin-right: 10px;
-  border-radius: 4px;
+  margin: 20px 0 20px 5px;
+  border: 1px solid #eee;
+  border-radius: 0;
+  .box-shadow(-5px 0 0 #e2e2e2);
 }
