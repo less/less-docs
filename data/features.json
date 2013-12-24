@@ -1,0 +1,65 @@
+{
+  "overview": {
+    "title": "Overview",
+    "content": "content/features/overview.md"
+  },
+  "extend": {
+    "title": "Extend",
+    "content": "content/features/extend.md"
+  },
+  "import-directives": {
+    "title": "Import Directives",
+    "content": "content/features/import-directives.md"
+  },
+  "loops": {
+    "title": "Loops",
+    "content": "content/features/loops.md"
+  },
+  "merge": {
+    "title": "Merge",
+    "content": "content/features/merge.md"
+  },
+  "mixins": {
+    "title": "Mixins",
+    "content": "content/features/mixins.md"
+  },
+  "parametric-mixins": {
+    "title": "Parametric Mixins",
+    "content": "content/features/parametric-mixins.md"
+  },
+  "mixin-guards": {
+    "title": "Mixin Guards",
+    "content": "content/features/mixin-guards.md"
+  },
+  "default-function": {
+    "published": false,
+    "title": "Default Function",
+    "content": "content/features/default-function.md"
+  },
+  "css-guards": {
+    "title": "CSS Guards",
+    "content": "content/features/css-guards.md"
+  },
+  "mixins-as-functions": {
+    "title": "Mixins as Functions",
+    "content": "content/features/mixins-as-functions.md"
+  },
+  "parent-selectors": {
+    "title": "Parent Selectors",
+    "content": "content/features/parent-selectors.md"
+  },
+  "scope": {
+    "published": false,
+    "title": "Scope",
+    "content": "content/features/scope.md"
+  },
+  "strict-math": {
+    "published": false,
+    "title": "Strict Math",
+    "content": "content/features/strict-math.md"
+  },
+  "variables": {
+    "title": "Variables",
+    "content": "content/features/variables.md"
+  }
+}

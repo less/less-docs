@@ -14,17 +14,11 @@ lead: "Features supported by Less.js."
   {{md 'content/overview.md'}}
 </div>
 
-
+{{#each features}}
 <div class="docs-section">
-  {{md 'content/features/extend.md'}}
-  {{md 'content/features/import-directives.md'}}
-  {{md 'content/features/loops.md'}}
-  {{md 'content/features/merge.md'}}
-  {{md 'content/features/mixins.md'}}
-  {{md 'content/features/mixins-parametric.md'}}
-  {{md 'content/features/mixin-guards.md'}}
-  {{md 'content/features/css-guards.md'}}
-  {{md 'content/features/mixins-as-functions.md'}}
-  {{md 'content/features/parent-selectors.md'}}
-  {{md 'content/features/variables.md'}}
+  <div class="page-header">
+    <h1 id="{{@key}}">{{title}}</h1>
+  </div>
+  {{md content}}
 </div>
+{{/each}}
