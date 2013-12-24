@@ -1,0 +1,31 @@
+<!-- Core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="{{ assets }}/js/jquery.js"></script>
+<script src="{{ assets }}/js/bootstrap.min.js"></script>
+
+{{#live}}<script src="http://platform.twitter.com/widgets.js"></script>{{/live}}
+<script src="{{ assets }}/js/holder.js"></script>
+<script src="{{ assets }}/js/hiless.js"></script>
+<script src="{{ assets }}/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="{{ assets }}/js/application.js"></script>
+
+
+{{#if site.analytics.google_site_id}}
+<!-- Analytics
+================================================== -->
+<script>
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '{{site.analytics.google_site_id}}');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+{{/if}}

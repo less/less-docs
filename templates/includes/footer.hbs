@@ -1,31 +1,18 @@
-<!-- Core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="{{ assets }}/js/jquery.js"></script>
-<script src="{{ assets }}/js/bootstrap.min.js"></script>
-
-{{#live}}<script src="http://platform.twitter.com/widgets.js"></script>{{/live}}
-<script src="{{ assets }}/js/holder.js"></script>
-<script src="{{ assets }}/js/hiless.js"></script>
-<script src="{{ assets }}/js/highlight.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
-
-<script src="{{ assets }}/js/application.js"></script>
-
-
-{{#if site.analytics.google_site_id}}
-<!-- Analytics
-================================================== -->
-<script>
-  var _gauges = _gauges || [];
-  (function() {
-    var t   = document.createElement('script');
-    t.async = true;
-    t.id    = 'gauges-tracker';
-    t.setAttribute('data-site-id', '{{site.analytics.google_site_id}}');
-    t.src = '//secure.gaug.es/track.js';
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(t, s);
-  })();
-</script>
-{{/if}}
+<footer class="bs-footer" role="contentinfo">
+  <div class="container">
+    {{> social-buttons }}
+    <p><a href="https://github.com/less/less.js">Less.js</a> was created by <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
+    <p>Documentation source code released under the <a href="{{site.license.url}}" target="_blank">{{site.license.type}}</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    <ul class="footer-links">
+      <li>Currently v{{ less.version }}</li>
+      <li class="muted">&middot;</li>
+      <li><a href="{{ site.blog }}">Blog</a></li>
+      <li class="muted">&middot;</li>
+      <li><a href="{{ site.repo }}/issues?state=open">Issues</a></li>
+      <li class="muted">&middot;</li>
+      <li><a href="{{ site.repo }}/blob/master/CHANGELOG.md">Changelog</a></li>
+      <li class="muted">&middot;</li>
+      <li><a href="{{ site.repo }}/releases">Releases</a></li>
+    </ul>
+  </div>
+</footer>

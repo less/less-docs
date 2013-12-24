@@ -64,27 +64,10 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bs-footer" role="contentinfo">
-      <div class="container">
-        {{> social-buttons }}
-        <p><a href="https://github.com/less/less.js">Less.js</a> was created by <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
-        <p>Documentation source code released under the <a href="{{site.license.url}}" target="_blank">{{site.license.type}}</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        <ul class="footer-links">
-          <li>Currently v{{ less.version }}</li>
-          <li class="muted">&middot;</li>
-          <li><a href="{{ site.blog }}">Blog</a></li>
-          <li class="muted">&middot;</li>
-          <li><a href="{{ site.repo }}/issues?state=open">Issues</a></li>
-          <li class="muted">&middot;</li>
-          <li><a href="{{ site.repo }}/blob/master/CHANGELOG.md">Changelog</a></li>
-          <li class="muted">&middot;</li>
-          <li><a href="{{ site.repo }}/releases">Releases</a></li>
-        </ul>
-      </div>
-    </footer>
+    {{> footer }}
 
     <!-- JavaScript and analytics only. -->
-    {{> footer }}
+    {{> javascripts }}
 
   </body>
 </html>
