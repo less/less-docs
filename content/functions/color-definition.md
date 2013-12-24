@@ -10,7 +10,9 @@ Parameters:
 * `blue`: An integer 0-255 or percentage 0-100%.
 
 Returns: `color`
+
 Example: `rgb(90, 129, 32)`
+
 Output: `#5a8120`
 
 
@@ -25,7 +27,9 @@ Parameters:
 * `alpha`: An number 0-1 or percentage 0-100%.
 
 Returns: `color`
+
 Example: `rgba(90, 129, 32, 0.5)`
+
 Output: `rgba(90, 129, 32, 0.5)`
 
 
@@ -36,8 +40,11 @@ Output: `rgba(90, 129, 32, 0.5)`
 This format is used in Internet Explorer, and .NET and Android development.
 
 Parameters: `color` - color object.
+
 Returns: `string`
+
 Example: `argb(rgba(90, 23, 148, 0.5));`
+
 Output: `#805a1794`
 
 
@@ -51,7 +58,9 @@ Parameters:
 * `lightness`: A percentage 0-100% or number 0-1.
 
 Returns: `color`
+
 Example: `hsl(90, 100%, 50%)`
+
 Output: `#80ff00`
 
 This is useful if you want to create a new color based on another color's channel, forExample: `@new: hsl(hue(@old), 45%, 90%);`
@@ -71,7 +80,9 @@ Parameters:
 * `alpha`: A percentage 0-100% or number 0-1.
 
 Returns: `color`
+
 Example: `hsl(90, 100%, 50%, 0.5)`
+
 Output: `rgba(128, 255, 0, 0.5)`
 
 
@@ -87,7 +98,9 @@ Parameters:
 * `value`: A percentage 0-100% or number 0-1.
 
 Returns: `color`
+
 Example: `hsv(90, 100%, 50%)`
+
 Output: `#408000`
 
 
@@ -104,5 +117,7 @@ Parameters:
 * `alpha`: A percentage 0-100% or number 0-1.
 
 Returns: `color`
+
 Example: `hsva(90, 100%, 50%, 0.5)`
+
 Output: `rgba(64, 128, 0, 0.5)`

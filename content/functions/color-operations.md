@@ -58,7 +58,9 @@ Parameters:
 * `amount`: A percentage 0-100%.
 
 Returns: `color`
+
 Example: `darken(hsl(90, 90%, 50%), 10%)`
+
 Output: `#66c20a // hsl(90, 90%, 40%)`
 
 
@@ -74,7 +76,9 @@ Parameters:
 * `amount`: A percentage 0-100%.
 
 Returns: `color`
+
 Example: `fadein(hsla(90, 90%, 50%, 0.5), 10%)`
+
 Output: `rgba(128, 242, 13, 0.6) // hsla(90, 90%, 50%, 0.6)`
 
 
@@ -88,7 +92,9 @@ Parameters:
 * `amount`: A percentage 0-100%.
 
 Returns: `color`
+
 Example: `fadeout(hsla(90, 90%, 50%, 0.5), 10%)`
+
 Output: `rgba(128, 242, 13, 0.4) // hsla(90, 90%, 50%, 0.6)`
 
 
@@ -102,7 +108,9 @@ Parameters:
 * `amount`: A percentage 0-100%.
 
 Returns: `color`
+
 Example: `fade(hsl(90, 90%, 50%), 10%)`
+
 Output: `rgba(128, 242, 13, 0.1) //hsla(90, 90%, 50%, 0.1)`
 
 
@@ -180,7 +188,9 @@ Because the saturation is not affected by hue, the resulting color mapping may b
 Parameters: `color` - a color object.
 
 Returns: `color`
+
 Example: `greyscale(hsl(90, 90%, 50%))`
+
 Output: `#808080 // hsl(90, 0%, 50%)`
 
 

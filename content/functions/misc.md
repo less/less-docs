@@ -5,6 +5,7 @@
 Parameters: `string`: a string of the specifid color.
 
 Example: `color("#aaa");`
+
 Output: `#aaa`
 
 
@@ -17,9 +18,11 @@ Parameters:
 * `unit`: (Optional) the unit to change to, or if omitted it will remove the unit.
 
 Example: `unit(5, px)`
+
 Output: `5px`
 
 Example: `unit(5em)`
+
 Output: `5`
 
 
@@ -65,8 +68,12 @@ Parameters:
 * `url`: The URL of the file to inline.
 
 Example: `data-uri('../data/image.jpg');`
+
 Output: `url('data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==');`
+
 Output in browser: `url('../data/image.jpg');`
 
+
 Example: `data-uri('image/jpeg;base64', '../data/image.jpg');`
+
 Output: `url('data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==');`

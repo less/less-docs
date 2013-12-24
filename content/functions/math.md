@@ -3,8 +3,11 @@
 > Rounds up to the next highest integer.
 
 Parameters: `number` - a floating point number.
+
 Returns: `integer`
+
 Example: `ceil(2.4)`
+
 Output: `3`
 
 
@@ -13,8 +16,11 @@ Output: `3`
 > Rounds down to the next lowest integer.
 
 Parameters: `number` - a floating point number.
+
 Returns: `integer`
+
 Example: `floor(2.6)`
+
 Output: `2`
 
 
@@ -23,8 +29,11 @@ Output: `2`
 > Converts a floating point number into a percentage string.
 
 Parameters: `number` - a floating point number.
+
 Returns: `string`
+
 Example: `percentage(0.5)`
+
 Output: `50%`
 
 
@@ -36,11 +45,15 @@ Parameters:
 * `number`: A floating point number.
 * `decimalPlaces`: Optional: The number of decimal places to round to. Defaults to 0.
 
+
 Returns: `number`
+
 Example: `round(1.67)`
+
 Output: `2`
 
 Example: `round(1.67, 1)`
+
 Output: `1.7`
 
 
@@ -49,8 +62,11 @@ Output: `1.7`
 > Calculates square root of a number. Keeps units as they are.
 
 Parameters: `number` - floating point number.
+
 Returns: `number`
+
 Example:
+
 
 ```less
 sqrt(25cm)
@@ -80,10 +96,15 @@ Output:
 > Calculates absolute value of a number. Keeps units as they are.
 
 Parameters: `number` - a floating point number.
+
 Returns: `number`
+
 Example #1: `abs(25cm)`
+
 Output: `25cm`
+
 Example #2: `abs(-18.6%)`
+
 Output: `18.6%;`
 
 
@@ -95,7 +116,10 @@ Output: `18.6%;`
 Assumes radians on numbers without units.
 
 Parameters: `number` - a floating point number.
+
 Returns: `number`
+
+
 
 Example:
 
@@ -122,8 +146,11 @@ Returns number in radians e.g. a number between `-&pi;/2` and `&pi;/2`.
 
 
 Parameters: `number` - floating point number from `[-1, 1]` interval.
+
 Returns: `number`
+
 Example:
+
 
 ```less
 asin(-0.8414709848078965)
@@ -147,8 +174,11 @@ NaNrad
 Assumes radians on numbers without units.
 
 Parameters: `number` - a floating point number.
+
 Returns: `number`
+
 Example:
+
 
 ```less
 cos(1) // cosine of 1 radian
@@ -172,8 +202,11 @@ Output:
 Returns number in radians e.g. a number between 0 and &pi;.
 
 Parameters: `number` - a floating point number from [-1, 1] interval.
+
 Returns: `number`
+
 Example:
+
 
 ```less
 acos(0.5403023058681398)
@@ -197,8 +230,11 @@ NaNrad
 Assumes radians on numbers without units.
 
 Parameters: `number` - a floating point number.
+
 Returns: `number`
+
 Example:
+
 
 ```less
 tan(1) // tangent of 1 radian
@@ -223,8 +259,11 @@ Returns number in radians e.g. a number between `-&pi;/2` and `&pi;/2`.
 
 
 Parameters: `number` - a floating point number.
+
 Returns: `number`
+
 Example:
+
 
 ```less
 atan(-1.5574077246549023)
@@ -246,7 +285,10 @@ Output:
 > Returns &pi; (pi);
 
 Parameters: `none`
+
 Returns: `number`
+
+
 
 Example:
 
@@ -271,7 +313,10 @@ Parameters:
 * `number`: base -a floating point number.
 * `number`: exponent - a floating point number.
 
+
 Returns: `number`
+
+
 
 Example:
 
@@ -304,8 +349,11 @@ Parameters:
 * `number`: a floating point number.
 * `number`: a floating point number.
 
+
 Returns: `number`
+
 Example:
+
 
 ```less
 mod(0cm, 0px)
@@ -327,12 +375,17 @@ NaNcm;
 > Returns the lowest of one or more values.
 
 Parameters: `value1, ..., valueN` - one or more values to compare.
+
 Returns: the lowest value.
 
+
+
 Example: `min(5, 10);`
+
 Output: `5`
 
 Example: `min(3px, 42px, 1px, 16px);`
+
 Output: `1px`
 
 
@@ -342,10 +395,15 @@ Output: `1px`
 > Returns the highest of one or more values.
 
 Parameters: `value1, ..., valueN` - one or more values to compare.
+
 Returns: the highest value.
 
+
+
 Example: `max(5, 10);`
+
 Output: `10`
 
 Example: `max(3%, 42%, 1%, 16%);`
+
 Output: `42%`
