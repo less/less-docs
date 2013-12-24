@@ -138,7 +138,9 @@
 <div class="docs-section">
   <h1 id="string-functions">Installing Less</h1>
   <h1 id="installing-less-js">Installing Less.js</h1>
+<blockquote>
 <p>For general installation instructions, please read the [[Getting Started]] guide. If you need more specific information after having read that, read on.</p>
+</blockquote>
 <h2 id="overview">Overview</h2>
 <p>Less.js is comprised of two parts: <code>lessc</code>.</p>
 <ol>
@@ -170,12 +172,12 @@
 </div>
 
 <div class="docs-section">
-  <h1 id="string-functions">Options</h1>
+  <h1 id="options">Options</h1>
   <h1 id="command-line-usage">Command Line Usage</h1>
 <blockquote>
 <p>Compile <code>.less</code> files to <code>.css</code> using the command line</p>
 </blockquote>
-<p><span class="warning">Heads up! If the command line isn&#39;t your thing, learn more about [[GUI compilers for LESS|GUI-compilers-that-use-Less.js]].</span></p>
+<p><span class="warning">Heads up! If the command line isn&#39;t your thing, learn more about <a href="#">GUI compilers for LESS</a>.</span></p>
 <h2 id="lessc">lessc</h2>
 <blockquote>
 <p>Server-Side and Command Line Usage</p>
@@ -250,9 +252,9 @@ Default: <code>development</code></p>
 <p>Type: <code>Number</code>
 Default: 2</p>
 <p>The amount of logging in the javascript console.</p>
-<pre><code>2 - Information and errors
-1 - Errors
-0 - Nothing</code></pre>
+<pre><code class="language-bash"><span class="number">2</span> - Information and errors
+<span class="number">1</span> - Errors
+<span class="number">0</span> - Nothing</code></pre>
 <h3 id="async">async</h3>
 <p>Type: <code>Boolean</code>
 Default: <code>false</code></p>
@@ -285,7 +287,7 @@ Default: <code>false</code></p>
 </div>
 
 <div class="docs-section">
-  <h1 id="string-functions">Plugins</h1>
+  <h1 id="plugins">Plugins</h1>
   <h1 id="plugins">Plugins</h1>
 <blockquote>
 <p>TODO</p>
@@ -294,7 +296,7 @@ Default: <code>false</code></p>
 </div>
 
 <div class="docs-section">
-  <h1 id="string-functions">Sourcemaps</h1>
+  <h1 id="sourcemaps">Sourcemaps</h1>
   <h1 id="sourcemaps">Sourcemaps</h1>
 <blockquote>
 <p>TODO</p>
@@ -303,7 +305,7 @@ Default: <code>false</code></p>
 </div>
 
 <div class="docs-section">
-  <h1 id="string-functions">Tools</h1>
+  <h1 id="tools">Tools</h1>
   <h1 id="online-ides">Online IDEs</h1>
 <p><strong>LESS2CSS</strong></p>
 <p><a href="http://less2css.org/">LESS2CSS</a> is an online Integrated Development Environment (IDE) that is hosted in a browser allowing users to edit and compile LESS to CSS in real-time.</p>
@@ -311,7 +313,7 @@ Default: <code>false</code></p>
 </div>
 
 <div class="docs-section">
-  <h1 id="string-functions">Different Compilers</h1>
+  <h1 id="different-compilers">Different Compilers</h1>
   <h2 id="node-js-compilers">Node.js compilers</h2>
 <ul>
 <li><strong><a href="https://github.com/assemble/assemble-less">assemble-less</a></strong>: Full-featured Grunt.js plugin for compiling LESS files to CSS, with additional options for maintaining libraries of LESS components and themes. For advanced users, this plugin allows you to define and manage LESS &quot;packages&quot; or &quot;bundles&quot; using JSON, <a href="https://github.com/bestiejs/lodash">Lo-dash</a>(underscore) templates (e.g. <code>&lt;%= bootstrap.less %&gt;</code>), and <a href="https://github.com/isaacs/node-glob">node-glob</a> / <a href="https://github.com/isaacs/minimatch">minimatch</a> (e.g. <code>&#39;../src/**/*.less&quot;</code>). <em>assemble-less</em> also has a number of options including minifying CSS</li>
@@ -342,7 +344,7 @@ Download the <a href="http://wro4j.googlecode.com/files/wro4j-runner-1.4.1-jar-w
 </div>
 
 <div class="docs-section">
-  <h1 id="string-functions">Advanced Client Side</h1>
+  <h1 id="advanced-client-side">Advanced Client-side</h1>
   <h2 id="watch-mode">Watch mode</h2>
 <p>To enable Watch mode, option <code>env</code> must be set to <code>development</code>. Then AFTER the less.js file is included, call less.watch(), like this:</p>
 <pre><code class="language-html">&lt;script src=&quot;less.js&quot;&gt;&lt;/script&gt;
@@ -362,7 +364,7 @@ Download the <a href="http://wro4j.googlecode.com/files/wro4j-runner-1.4.1-jar-w
 </div>
 
 <div class="docs-section">
-  <h1 id="string-functions">Developing Less.js</h1>
+  <h1 id="developing-less-js">Developing Less.js</h1>
   <h2 id="install-these-tools">Install these tools</h2>
 <ul>
 <li><strong>cygwin</strong> (ensure make is selected) - <a href="http://cygwin.com/install.html">http://cygwin.com/install.html</a></li>
@@ -384,7 +386,7 @@ Download the <a href="http://wro4j.googlecode.com/files/wro4j-runner-1.4.1-jar-w
 </div>
 
 <div class="docs-section">
-  <h1 id="string-functions">Editors and Plugins</h1>
+  <h1 id="editors-and-plugins">Editors and Plugins</h1>
   <p>Also see: [[GUI Compilers that use LESS.js]]</p>
 <h2 id="editors-and-ides">Editors and IDEs</h2>
 <ul>
@@ -432,13 +434,11 @@ Download the <a href="http://wro4j.googlecode.com/files/wro4j-runner-1.4.1-jar-w
 </div>
 
 <div class="docs-section">
-  <h1 id="string-functions">Frameworks using Less</h1>
+  <h1 id="frameworks-using-less">Frameworks using Less</h1>
   <h1 id="frameworks-that-use-less-js">Frameworks that use LESS.js</h1>
 <ul>
-<li><a href="http://twitter.github.com/bootstrap/">Bootstrap, from Twitter</a><ul>
-<li><a href="https://github.com/yuanyan/pre">Pre: An enjoyable CSS framework use LESS</a></li>
-</ul>
-</li>
+<li><a href="http://twitter.github.com/bootstrap/">Bootstrap, from Twitter</a></li>
+<li><a href="https://github.com/yuanyan/pre">Pre</a></li>
 <li><a href="http://github.com/DominikGuzei/flawless.css">Flaw{LESS} CSS Framework</a></li>
 <li><a href="http://centage.peruste.net">Centage!</a></li>
 <li><a href="https://github.com/pailoro/Moreless">More Less</a></li>
@@ -453,9 +453,9 @@ Download the <a href="http://wro4j.googlecode.com/files/wro4j-runner-1.4.1-jar-w
 </div>
 
 <div class="docs-section">
-  <h1 id="string-functions">GUIs for Less</h1>
+  <h1 id="guis-for-less">GUIs for Less</h1>
   <p><span class="warning"><strong>Tip</strong>: try out the different LESS tools available for your platform, to see which one fits you best.</span></p>
-<p><em>This page focuses on GUI compilers. For command line usage and tools see [[Command Line Usage]].</em></p>
+<p><em>This page focuses on GUI compilers. For command line usage and tools see <a href="#">Command Line Usage</a>.</em></p>
 <h2 id="cross-platform">Cross platform</h2>
 <h3 id="-crunch-http-crunchapp-net-"><a href="http://crunchapp.net/">Crunch!</a></h3>
 <blockquote>
@@ -528,7 +528,7 @@ Get more info: <a href="https://github.com/Mte90/Plessc"><a href="https://github
 </div>
 
 <div class="docs-section">
-  <h1 id="string-functions">Project and Community</h1>
+  <h1 id="projects-and-community">Project and Community</h1>
   <h2 id="community-and-contributions">Community and Contributions</h2>
 <h3 id="grid-systems">Grid Systems</h3>
 <ul>

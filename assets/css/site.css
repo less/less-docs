@@ -3540,7 +3540,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   z-index: 1000;
-  min-height: 70px;
+  min-height: 60px;
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
@@ -3694,7 +3694,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 25px 15px;
+  padding: 20px 15px;
   font-size: 18px;
   line-height: 20px;
 }
@@ -3712,8 +3712,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
   float: right;
   margin-right: 15px;
   padding: 9px 10px;
-  margin-top: 18px;
-  margin-bottom: 18px;
+  margin-top: 13px;
+  margin-bottom: 13px;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -3733,7 +3733,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav {
-  margin: 12.5px -15px;
+  margin: 10px -15px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -3771,8 +3771,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
     float: left;
   }
   .navbar-nav > li > a {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 @media (min-width: 768px) {
@@ -3791,8 +3791,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 18px;
-  margin-bottom: 18px;
+  margin-top: 13px;
+  margin-bottom: 13px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -3848,13 +3848,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
   right: 0;
 }
 .navbar-btn {
-  margin-top: 18px;
-  margin-bottom: 18px;
+  margin-top: 13px;
+  margin-bottom: 13px;
 }
 .navbar-text {
   float: left;
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   .navbar-text {
@@ -6683,6 +6683,12 @@ h1[id] {
   margin-top: 15px;
   margin-bottom: 5px;
 }
+h1,
+h2,
+h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
 /*
  * Advertisement that shows on all pages (except homepage) in page headers.
  * `!important` is required for any pre-set property.
@@ -6798,7 +6804,6 @@ h1[id] {
 .banner strong {
   color: #555;
 }
-/* Outline button for use within the docs */
 .btn-outline {
   color: #1d365d;
   background-color: #fff;
@@ -6824,6 +6829,45 @@ h1[id] {
   text-shadow: none;
   background-color: #fff;
   border-color: #fff;
+}
+.docs-header,
+.docs-home {
+  color: #b9c8e0;
+  background-color: #1d365d;
+}
+/* Page headers */
+.docs-header {
+  padding: 30px 15px 50px;
+  /* side padding builds on .container 15px, so 30px */
+  font-size: 16px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+.docs-header h1 {
+  color: #fff;
+}
+.docs-header p {
+  font-weight: 300;
+  line-height: 1.5;
+}
+.docs-header .container {
+  position: relative;
+}
+@media (min-width: 768px) {
+  .docs-header {
+    font-size: 21px;
+    text-align: left;
+  }
+  .docs-header h1 {
+    font-size: 60px;
+    line-height: 1;
+  }
+}
+@media (min-width: 992px) {
+  .docs-header h1,
+  .docs-header p {
+    margin-right: 380px;
+  }
 }
 /**
  * Scrollspy and affixed enhanced navigation to highlight sections and secondary
@@ -6907,67 +6951,6 @@ h1[id] {
     width: 263px;
   }
 }
-body {
-  padding-top: 70px;
-}
-/**
- * Neutralize background color to allow our
- * syntax highlighter theme to do the work.
- */
-pre code {
-  background: transparent;
-}
-pre {
-  background-color: #f8f8f8;
-}
-/**
- * Page headers
- * Jumbotron-esque headers at the top of every
- * page that's not the homepage.
- */
-.docs-header,
-.docs-home {
-  color: #b9c8e0;
-  background-color: #1d365d;
-}
-/* Page headers */
-.docs-header {
-  padding: 30px 15px 50px;
-  /* side padding builds on .container 15px, so 30px */
-  font-size: 16px;
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
-}
-.docs-header h1 {
-  color: #fff;
-}
-.docs-header p {
-  font-weight: 300;
-  line-height: 1.5;
-}
-.docs-header .container {
-  position: relative;
-}
-@media (min-width: 768px) {
-  .docs-header {
-    font-size: 21px;
-    text-align: left;
-  }
-  .docs-header h1 {
-    font-size: 60px;
-    line-height: 1;
-  }
-}
-@media (min-width: 992px) {
-  .docs-header h1,
-  .docs-header p {
-    margin-right: 380px;
-  }
-}
-/*
- * Main navigation
- * Turn the `.navbar` at the top of the docs dark blue.
- */
 .docs-nav {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
   background-color: #1d365d;
@@ -7021,4 +7004,22 @@ pre {
   width: 32px;
   margin-right: 10px;
   border-radius: 4px;
+}
+body {
+  padding-top: 60px;
+}
+/**
+ * Neutralize background color to allow our
+ * syntax highlighter theme to do the work.
+ */
+pre code {
+  background: transparent;
+}
+pre {
+  background-color: #f8f8f8;
+  margin: 20px 0 20px 5px;
+  border: 1px solid #eee;
+  border-radius: 0;
+  -webkit-box-shadow: -5px 0 0 #e2e2e2;
+  box-shadow: -5px 0 0 #e2e2e2;
 }
