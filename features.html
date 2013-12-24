@@ -2,102 +2,108 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions. LESS runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions. LESS runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
 ">
-    <meta name="author" content="Alexis Sellier">
-    <link rel="alternate" type="application/atom+xml" title="Language Features Feed" href="/index.xml">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-    <title>
-      Language Features | Less.js
-    </title>
+<meta name="author" content="Alexis Sellier">
+<link rel="alternate" type="application/atom+xml" title="Language Features Feed" href="/index.xml">
 
-    <!-- Documentation styles -->
-    <link href="assets/css/docs.css" rel="stylesheet">
-    <link href="assets/css/github.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<title>
+  Language Features | Less.js
+</title>
 
-    <!--[if lt IE 9]>
+
+<!-- Main styles -->
+<link href="assets/css/site.css" rel="stylesheet">
+<link href="assets/css/github.css" rel="stylesheet">
+
+<!-- Webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="assets/ico/favicon.png">
+
+
   </head>
   <body>
     <a class="sr-only" href="#content">Skip to main content</a>
 
     <!-- Docs master nav -->
     <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
-      <div class="container">
-        <div class="navbar-header">
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="index.html" class="navbar-brand">LESS</a>
-        </div>
-        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-          <ul class="nav navbar-nav">
-            <li class="active">
-              <a href="./features.html">Features</a>
-            </li>
-            <li>
-              <a href="./functions.html">Function Reference</a>
-            </li>
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="index.html" class="navbar-brand">LESS</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="./features.html">Language Features</a>
+        </li>
+        
+        <li>
+          <a href="./functions.html">Function Reference</a>
+        </li>
+        <li>
+          <a href="./usage.html">Usage</a>
+        </li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li>
+          <a href="./about.html">About</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li> <a href="">Docs Repo</a> </li>
+            <li> <a href="/issues?&amp;state=open">Docs Issues</a> </li>
+            <li class="divider"></li>
+            <li> <a href="">Less.js Repo</a> </li>
+            <li> <a href="/issues?&amp;state=open">Less.js Issues</a> </li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="./about.html">About</a>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="">Docs Repo</a>
-                </li>
-                <li>
-                  <a href="/issues?&amp;state=open">Docs Issues</a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                  <a href="">Less.js Repo</a>
-                </li>
-                <li>
-                  <a href="/issues?&amp;state=open">Less.js Issues</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
     <!-- Header -->
     <div class="docs-header" id="content">
       <div class="container">
         <h1>Language Features</h1>
         <p>Features supported by Less.js.</p>
+        
       </div>
     </div>
 
     <!-- Callout for the old docs link -->
     <div class="banner">
-      <div class="container">
-        <strong>
-      <a href="/blob/master/CHANGELOG.md">See what's new in v1.5.0-b4</a>
+  <div class="container">
+    <strong>
+      <a href="/blob/master/CHANGELOG.md">See what's new in v1.5.1</a>
     </strong>
-        To hear what's new from the Less.js core team,
-        <a href="TODO">visit the blog</a>.
-      </div>
-    </div>
+    To hear what's new from the Less.js core team, <a href="TODO">visit the blog</a>.
+  </div>
+</div>
+
 
     <!-- Content -->
     <div class="container docs-container">
@@ -105,100 +111,82 @@
         <div class="col-md-3">
           <div class="sidebar hidden-print" role="complementary">
             <ul class="nav sidenav">
-              <li>
-                <a href="#overview">Overview</a>
-              </li>
-              <li>
-                <a href="#extend">Extend</a>
-              </li>
-              <li>
-                <a href="#import-directives">Import Directives</a>
-              </li>
-              <li>
-                <a href="#loops">Loops</a>
-              </li>
-              <li>
-                <a href="#merge">Merge</a>
-              </li>
-              <li>
-                <a href="#mixins">Mixins</a>
-              </li>
-              <li>
-                <a href="#parametric-mixins">Parametric Mixins</a>
-              </li>
-              <li>
-                <a href="#mixin-guards">Mixin Guards</a>
-              </li>
-              <li style="display: none;">
-                <a href="#default-function">Default Function</a>
-              </li>
-              <li>
-                <a href="#css-guards">CSS Guards</a>
-              </li>
-              <li>
-                <a href="#mixins-as-functions">Mixins as Functions</a>
-              </li>
-              <li>
-                <a href="#parent-selectors">Parent Selectors</a>
-              </li>
-              <li style="display: none;">
-                <a href="#scope">Scope</a>
-              </li>
-              <li style="display: none;">
-                <a href="#strict-math">Strict Math</a>
-              </li>
-              <li>
-                <a href="#variables">Variables</a>
-              </li>
+              
+              
+                <li><a href="#overview">Overview</a></li>
+<li><a href="#extend">Extend</a></li>
+<li><a href="#import-directives">Import Directives</a></li>
+<li><a href="#loops">Loops</a></li>
+<li><a href="#merge">Merge</a></li>
+<li><a href="#mixins">Mixins</a></li>
+<li><a href="#parametric-mixins">Parametric Mixins</a></li>
+<li><a href="#mixin-guards">Mixin Guards</a></li>
+
+<li><a href="#css-guards">CSS Guards</a></li>
+<li><a href="#mixins-as-functions">Mixins as Functions</a></li>
+<li><a href="#parent-selectors">Parent Selectors</a></li>
+
+
+<li><a href="#variables">Variables</a></li>
+              
+              
+              
+              
+              
+              
+              
+              
             </ul>
           </div>
         </div>
         <div class="col-md-9" role="main">
+          
 
-          <!-- Features -->
-          <div class="docs-section">
-            <div class="page-header">
-              <h1 id="features-overview">Overview</h1>
-            </div>
-            <p class="lead">Simple overview of the basic features</p>
-            <p>As an extension to CSS, LESS is not only backwards compatible with CSS, but the extra features it adds use existing CSS syntax. This makes learning LESS a breeze, and if in doubt, lets you fall back to CSS.</p>
-            <h2 id="variables">Variables</h2>
-            <p>These are pretty self-explanatory:</p>
-            <pre><code class="language-less">@nice-blue: #5B83AD;
+<!-- Features -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="features-overview">Overview</h1>
+  </div>
+  <p class="lead">Simple overview of the basic features</p>
+  <p>As an extension to CSS, LESS is not only backwards compatible with CSS, but the extra features it adds use existing CSS syntax. This makes learning LESS a breeze, and if in doubt, lets you fall back to CSS.</p>
+<h2 id="variables">Variables</h2>
+<p>These are pretty self-explanatory:</p>
+<pre><code class="language-less">@nice-blue: #5B83AD;
 @light-blue: @nice-blue + #111;
+
 #header {
   color: @light-blue;
 }</code></pre>
-            <p>Outputs:</p>
-            <pre><code class="language-css"><span class="id">#header</span> <span class="rules">{
+<p>Outputs:</p>
+<pre><code class="language-css"><span class="id">#header</span> <span class="rules">{
   <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#6c94be</span></span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>Note that variables are actually &quot;constants&quot; in that they can only be defined once.</p>
-            <h2 id="mixins">Mixins</h2>
-            <p>Mixins are a way of including (&quot;mixing in&quot;) a bunch of properties from one rule-set into another rule-set. So say we have the following class:</p>
-            <pre><code class="language-css"><span class="class">.bordered</span> <span class="rules">{
+<p>Note that variables are actually &quot;constants&quot; in that they can only be defined once.</p>
+<h2 id="mixins">Mixins</h2>
+<p>Mixins are a way of including (&quot;mixing in&quot;) a bunch of properties from one rule-set into another rule-set. So say we have the following class:</p>
+<pre><code class="language-css"><span class="class">.bordered</span> <span class="rules">{
   <span class="rule"><span class="attribute">border-top</span>:<span class="value"> dotted <span class="number">1</span>px black</span></span>;
   <span class="rule"><span class="attribute">border-bottom</span>:<span class="value"> solid <span class="number">2</span>px black</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>And we want to use these properties inside other rule-sets. Well, we just have to drop in the name of the class where we want the properties, like so:</p>
-            <pre><code class="language-less">#menu a {
+<p>And we want to use these properties inside other rule-sets. Well, we just have to drop in the name of the class where we want the properties, like so:</p>
+<pre><code class="language-less">#menu a {
   color: #111;
   .bordered;
 }
+
 .post a {
   color: red;
   .bordered;
 }</code></pre>
-            <p>The properties of the <code>.bordered</code> class will now appear in both <code>#menu a</code> and <code>.post a</code>. (Note that you can also use <code>#ids</code> as mixins.)</p>
-            <p><strong>Learn more</strong>
-            </p>
-            <ul>
-              <li>[[More about mixins|mixins]]</li>
-              <li>[[Parametric Mixins|parametric-mixins]]</li>
-            </ul>
-            <h2 id="nested-rules">Nested rules</h2>
-            <p>LESS gives you the ability to use nesting instead of, or in combination with cascading. Let&#39;s say we have the following CSS:</p>
-            <pre><code class="language-css"><span class="id">#header</span> <span class="rules">{
+<p>The properties of the <code>.bordered</code> class will now appear in both <code>#menu a</code> and <code>.post a</code>. (Note that you can also use <code>#ids</code> as mixins.)</p>
+<p><strong>Learn more</strong></p>
+<ul>
+<li>[[More about mixins|mixins]]</li>
+<li>[[Parametric Mixins|parametric-mixins]]</li>
+</ul>
+<h2 id="nested-rules">Nested rules</h2>
+<p>LESS gives you the ability to use nesting instead of, or in combination with cascading. Let&#39;s say we have the following CSS:</p>
+<pre><code class="language-css"><span class="id">#header</span> <span class="rules">{
   <span class="rule"><span class="attribute">color</span>:<span class="value"> black</span></span>;
 <span class="rule">}</span></span>
 <span class="id">#header</span> <span class="class">.navigation</span> <span class="rules">{
@@ -207,8 +195,8 @@
 <span class="id">#header</span> <span class="class">.logo</span> <span class="rules">{
   <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">300</span>px</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>In LESS, we can also write it this way:</p>
-            <pre><code class="language-less">#header {
+<p>In LESS, we can also write it this way:</p>
+<pre><code class="language-less">#header {
   color: black;
   .navigation {
     font-size: 12px;
@@ -217,11 +205,12 @@
     width: 300px;
   }
 }</code></pre>
-            <p>The resulting code is more concise, and mimics the structure of your HTML.</p>
-            <p>You can also bundle pseudo-selectors with your mixins using this method. Here&#39;s the classic clearfix hack, rewritten as a mixin (<code>&amp;</code> represents the current selector parent):</p>
-            <pre><code class="language-less">.clearfix {
+<p>The resulting code is more concise, and mimics the structure of your HTML.</p>
+<p>You can also bundle pseudo-selectors with your mixins using this method. Here&#39;s the classic clearfix hack, rewritten as a mixin (<code>&amp;</code> represents the current selector parent):</p>
+<pre><code class="language-less">.clearfix {
   display: block;
   zoom: 1;
+
   &amp;:after {
     content: &quot; &quot;;
     display: block;
@@ -231,31 +220,35 @@
     visibility: hidden;
   }
 }</code></pre>
-            <h2 id="operations">Operations</h2>
-            <p>Any number, color or variable can be operated on. Here are a couple of examples:</p>
-            <pre><code class="language-less">@base: 5%;
+<h2 id="operations">Operations</h2>
+<p>Any number, color or variable can be operated on. Here are a couple of examples:</p>
+<pre><code class="language-less">@base: 5%;
 @filler: @base * 2;
 @other: @base + @filler;
+
 color: #888 / 4;
 background-color: @base-color + #111;
 height: 100% / 2 + @filler;</code></pre>
-            <p>The output is pretty much what you expect—LESS understands the difference between colors and units. If a unit is used in an operation, like in:</p>
-            <pre><code class="language-less">@var: 1px + 5;</code></pre>
-            <p>LESS will use that unit for the final output—<code>6px</code> in this case.</p>
-            <h2 id="functions">Functions</h2>
-            <p>LESS provides a variety of functions which transform colors, manipulate strings and do maths. They are documented fully in the function reference.</p>
-            <p>Using them is pretty straightforward. The following example uses percentage to convert 0.5 to 50%, increases the saturation of a base color by 5% and then sets the background color to one that is lightened by 25% and spun by 8 degrees:</p>
-            <pre><code>    @base: #f04615;
-    @width: 0.5;
-    .class {
-      width: percentage(0.5); // returns `50%`
-      color: saturate(@base, 5%);
-      background-color: spin(lighten(@base, 25%), 8);
-    }</code></pre>
-            <h2 id="namespaces-accessors">Namespaces &amp; Accessors</h2>
-            <p>Sometimes, you may want to group your variables or mixins, for organizational purposes, or just to offer some encapsulation. You can do this pretty intuitively in LESS—say you want to bundle some mixins and variables under <code>#bundle</code>,
-              for later reuse or distributing:</p>
-            <pre><code class="language-less">#bundle {
+<p>The output is pretty much what you expect—LESS understands the difference between colors and units. If a unit is used in an operation, like in:</p>
+<pre><code class="language-less">@var: 1px + 5;</code></pre>
+<p>LESS will use that unit for the final output—<code>6px</code> in this case.</p>
+<h2 id="functions">Functions</h2>
+<p>LESS provides a variety of functions which transform colors, manipulate strings and do maths.
+They are documented fully in the function reference.</p>
+<p>Using them is pretty straightforward. The following example uses percentage to convert 0.5 to 50%,
+increases the saturation of a base color by 5% and then sets the background color to one that is lightened by
+25% and spun by 8 degrees:</p>
+<pre><code class="language-less">@base: #f04615;
+@width: 0.5;
+
+.class {
+  width: percentage(0.5); // returns `50%`
+  color: saturate(@base, 5%);
+  background-color: spin(lighten(@base, 25%), 8);
+}</code></pre>
+<h2 id="namespaces-accessors">Namespaces &amp; Accessors</h2>
+<p>Sometimes, you may want to group your variables or mixins, for organizational purposes, or just to offer some encapsulation. You can do this pretty intuitively in LESS—say you want to bundle some mixins and variables under <code>#bundle</code>, for later reuse or distributing:</p>
+<pre><code class="language-less">#bundle {
   .button {
     display: block;
     border: 1px solid black;
@@ -267,180 +260,188 @@ height: 100% / 2 + @filler;</code></pre>
   .tab { ... }
   .citation { ... }
 }</code></pre>
-            <p>Now if we want to mixin the <code>.button</code> class in our <code>#header a</code>, we can do:</p>
-            <pre><code class="language-less">#header a {
+<p>Now if we want to mixin the <code>.button</code> class in our <code>#header a</code>, we can do:</p>
+<pre><code class="language-less">#header a {
   color: orange;
   #bundle &gt; .button;
 }</code></pre>
-            <h2 id="scope">Scope</h2>
-            <p>Scope in LESS is very similar to that of programming languages. Variables and mixins are first looked for locally, and if they aren&#39;t found, the compiler will look in the parent scope, and so on.</p>
-            <p>Note that the order of declaration <strong>does</strong> matter.</p>
-            <pre><code class="language-less">  @var: red;
-  #page {
-    @var: white;
-    #header {
-      color: @var; // white
-    }
-  }</code></pre>
-            <h2 id="comments">Comments</h2>
-            <p>Both C-style and inline comments may be used:</p>
-            <pre><code class="language-less">
-/* One hell of a comment */
+<h2 id="scope">Scope</h2>
+<p>Scope in LESS is very similar to that of programming languages. Variables and mixins are first looked for locally, and if they aren&#39;t found, the compiler will look in the parent scope, and so on.</p>
+<p>Note that the order of declaration <strong>does</strong> matter.</p>
+<pre><code class="language-less">@var: red;
+
+#page {
+  @var: white;
+  #header {
+    color: @var; // white
+  }
+}</code></pre>
+<h2 id="comments">Comments</h2>
+<p>Both C-style and inline comments may be used:</p>
+<pre><code class="language-less">/* One hell of a comment */
 @var: red;
+
 // Get in line!
 @var: white;</code></pre>
-            <h2 id="importing">Importing</h2>
-            <p>Importing works pretty much as expected. You can import a <code>.less</code> file, and all the variables in it will be available. If the file is a <code>.less</code>, the extension is optional:</p>
-            <pre><code class="language-css"><span class="at_rule">@<span class="keyword">import</span> <span class="string">"library"</span></span>;
+<h2 id="importing">Importing</h2>
+<p>Importing works pretty much as expected. You can import a <code>.less</code> file, and all the variables in it will be available. If the file is a <code>.less</code>, the extension is optional:</p>
+<pre><code class="language-css"><span class="at_rule">@<span class="keyword">import</span> <span class="string">"library"</span></span>;
 <span class="at_rule">@<span class="keyword">import</span> <span class="string">"typo.css"</span></span>;</code></pre>
-          </div>
-          <div class="docs-section">
-            <p>
-              <a id="extend" class="section_anchor"></a>
-            </p>
-            <h1 id="extend">Extend</h1>
-            <blockquote>
-              <p>Extend is a LESS Pseudo-Class which merges the selector it is put on with ones that match what it references.</p>
-            </blockquote>
-            <p>Released
-              <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a>
-            </p>
-            <h2 id="overview">Overview</h2>
-            <pre><code class="language-less">nav ul {
+
+</div>
+
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="overview">Overview</h1>
+  </div>
+  
+</div>
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="extend">Extend</h1>
+  </div>
+  <h1 id="extend">Extend</h1>
+<blockquote>
+<p>Extend is a LESS Pseudo-Class which merges the selector it is put on with ones that match what it references.</p>
+</blockquote>
+<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a></p>
+<h2 id="overview">Overview</h2>
+<pre><code class="language-less">nav ul {
   &amp;:extend(.inline);
   background: blue;
 }</code></pre>
-            <p>In the rule set above, the <code>:extend</code> selector will apply the &quot;extending selector&quot; (<code>nav ul</code>) onto the <code>.inline</code> class <em>wherever the <code>.inline</code> class appears</em>. The declaration block will
-              be kept as-is, but without any reference to the extend (because extend isn&#39;t css).</p>
-            <p>So the following:</p>
-            <pre><code class="language-less">nav ul {
+<p>In the rule set above, the <code>:extend</code> selector will apply the &quot;extending selector&quot; (<code>nav ul</code>) onto the <code>.inline</code> class <em>wherever the <code>.inline</code> class appears</em>. The declaration block will be kept as-is, but without any reference to the extend (because extend isn&#39;t css).</p>
+<p>So the following:</p>
+<pre><code class="language-less">nav ul {
   &amp;:extend(.inline);
   background: blue;
 }
 .inline {
   color: red;
 }</code></pre>
-            <p>Outputs</p>
-            <pre><code class="language-css"><span class="tag">nav</span> <span class="tag">ul</span> <span class="rules">{
+<p>Outputs</p>
+<pre><code class="language-css"><span class="tag">nav</span> <span class="tag">ul</span> <span class="rules">{
   <span class="rule"><span class="attribute">background</span>:<span class="value"> blue</span></span>;
 <span class="rule">}</span></span>
 <span class="class">.inline</span>,
 <span class="tag">nav</span> <span class="tag">ul</span> <span class="rules">{
   <span class="rule"><span class="attribute">color</span>:<span class="value"> red</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>Notice how the <code>nav ul:extend(.inline)</code> selector gets output as <code>nav ul</code> - the extend gets removed before output and the selector block left as-is. If no properties are put in that block then it gets removed from the output
-              (but the extend still may affect other selectors).</p>
-            <h2 id="syntax-overview">Syntax Overview</h2>
-            <p>The extend is either attached to a selector or placed into a ruleset. It looks like a pseudoclass with selector parameter optionally followed by the keyword <code>all</code>:</p>
-            <p>Example:</p>
-            <pre><code class="language-less">.a:extend(.b) {
-}
+<p>Notice how the <code>nav ul:extend(.inline)</code> selector gets output as <code>nav ul</code> - the extend gets removed before output and the selector block left as-is. If no properties are put in that block then it gets removed from the output (but the extend still may affect other selectors).</p>
+<h2 id="syntax-overview">Syntax Overview</h2>
+<p>The extend is either attached to a selector or placed into a ruleset. It looks like a pseudoclass with selector parameter optionally followed by the keyword <code>all</code>:</p>
+<p>Example:</p>
+<pre><code class="language-less">.a:extend(.b) {}
+
 // the above block does the same thing as the below block
 .a {
   &amp;:extend(.b);
 }</code></pre>
-            <pre><code class="language-less">.c:extend(.d all) {
+<pre><code class="language-less">.c:extend(.d all) {
   // extends all instances of &quot;.d&quot; e.g. &quot;.x.d&quot; or &quot;.d.x&quot;
 }
 .c:extend(.d) {
   // extends only instances where the selector will be output as just &quot;.d&quot;
 }</code></pre>
-            <p>It can contain one more classes to extend, seperated by commas.</p>
-            <p>Example:</p>
-            <pre><code class="language-less">.e:extend(.f) {
-}
-.e:extend(.g) {
-}
+<p>It can contain one more classes to extend, seperated by commas.</p>
+<p>Example:</p>
+<pre><code class="language-less">.e:extend(.f) {}
+.e:extend(.g) {}
+
 // the above an the below do the same thing
-.e:extend(.f, .g) {
-}</code></pre>
-            <h3 id="attached-to-selector">Attached to Selector</h3>
-            <p>Extend attached to a selector looks like an ordinary pseudoclass with selector as a parameter. A selector can contain multiple extend clauses, but all extends must be at the end of the selector.</p>
-            <ul>
-              <li>Extend after the selector: <code>pre:hover:extend(div pre)</code>.</li>
-              <li>Space between selector and extend is allowed: <code>pre:hover :extend(div pre)</code>.</li>
-              <li>Multiple extends are allowed: <code>pre:hover:extend(div pre):extend(.bucket tr)</code> - Note this is the same as <code>pre:hover:extend(div pre, .bucket tr)</code>
-              </li>
-              <li>This is NOT allowed: <code>pre:hover:extend(div pre).nth-child(odd)</code>. Extend must be last.</li>
-            </ul>
-            <p>If a ruleset contains multiple selectors, any of them can have the extend keyword. Multiple selectors with extend in one ruleset:</p>
-            <pre><code>.big-bucket:extend(.bucket), .big-bag:extend(.bag), .big-division {
+.e:extend(.f, .g) {}</code></pre>
+<h3 id="attached-to-selector">Attached to Selector</h3>
+<p>Extend attached to a selector looks like an ordinary pseudoclass with selector as a parameter. A selector can contain multiple extend clauses, but all extends must be at the end of the selector.</p>
+<ul>
+<li>Extend after the selector: <code>pre:hover:extend(div pre)</code>.</li>
+<li>Space between selector and extend is allowed: <code>pre:hover :extend(div pre)</code>.</li>
+<li>Multiple extends are allowed: <code>pre:hover:extend(div pre):extend(.bucket tr)</code> - Note this is the same as <code>pre:hover:extend(div pre, .bucket tr)</code></li>
+<li>This is NOT allowed: <code>pre:hover:extend(div pre).nth-child(odd)</code>. Extend must be last.</li>
+</ul>
+<p>If a ruleset contains multiple selectors, any of them can have the extend keyword. Multiple selectors with extend in one ruleset:</p>
+<pre><code class="language-less">.big-division,
+.big-bag:extend(.bag),
+.big-bucket:extend(.bucket) {
   // body
 }</code></pre>
-            <h3 id="inside-ruleset">Inside Ruleset</h3>
-            <p>Extend can be placed into rulesets body using <code>&amp;:extend(selector)</code> syntax. Placing extend into a body is a shortcut for placing it into every single selector of that ruleset.</p>
-            <p>Extend inside a body:</p>
-            <pre><code>pre:hover, .some-class {
+<h3 id="inside-ruleset">Inside Ruleset</h3>
+<p>Extend can be placed into rulesets body using <code>&amp;:extend(selector)</code> syntax. Placing extend into a body is a shortcut for placing it into every single selector of that ruleset.</p>
+<p>Extend inside a body:</p>
+<pre><code class="language-less">pre:hover,
+.some-class {
   &amp;:extend(div pre);
 }</code></pre>
-            <p>is exactly the same as adding an extend after each selector:</p>
-            <pre><code>pre:hover:extend(div pre), .some-class:extend(div pre) {
-}</code></pre>
-            <h3 id="nested-selectors">Nested Selectors</h3>
-            <p>Extend is able to match nested selectors. Following less:</p>
-            <p>Example:</p>
-            <pre><code>.bucket {
+<p>is exactly the same as adding an extend after each selector:</p>
+<pre><code class="language-less">pre:hover:extend(div pre),
+.some-class:extend(div pre) {}</code></pre>
+<h3 id="nested-selectors">Nested Selectors</h3>
+<p>Extend is able to match nested selectors. Following less:</p>
+<p>Example:</p>
+<pre><code class="language-less">.bucket {
   tr { // nested ruleset with target selector
     color: blue;
   }
 }
-.some-class:extend(.bucket tr) { } // nested ruleset is recognized</code></pre>
-            <p>Outputs</p>
-            <pre><code>.bucket tr, .some-class {
-  color: blue;
-}</code></pre>
-            <p>Essentially the extend looks at the compiled css, not the original less.</p>
-            <p>Example:</p>
-            <pre><code>.bucket {
+.some-class:extend(.bucket tr) {} // nested ruleset is recognized</code></pre>
+<p>Outputs</p>
+<pre><code class="language-css"><span class="class">.bucket</span> <span class="tag">tr</span>,
+<span class="class">.some-class</span> <span class="rules">{
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;
+<span class="rule">}</span></span></code></pre>
+<p>Essentially the extend looks at the compiled css, not the original less.</p>
+<p>Example:</p>
+<pre><code class="language-less">.bucket {
   tr &amp; { // nested ruleset with target selector
     color: blue;
   }
 }
-.some-class:extend(tr .bucket) { } // nested ruleset is recognized</code></pre>
-            <p>Outputs</p>
-            <pre><code>tr .bucket, .some-class {
-  color: blue;
-}</code></pre>
-            <h3 id="exact-matching">Exact Matching</h3>
-            <p>Extend by default looks for exact match between selectors. It does matter whether selector uses leading start or not. It does not matter that two nth-expressions have the same meaning, they need to have to same form in order to be matched.
-              The only exception are quotes in attribute selector, less knows they have the same meaning and matches them.</p>
-            <p>Example:</p>
-            <pre><code>.a.class,
+.some-class:extend(tr .bucket) {} // nested ruleset is recognized</code></pre>
+<p>Outputs</p>
+<pre><code class="language-css"><span class="tag">tr</span> <span class="class">.bucket</span>,
+<span class="class">.some-class</span> <span class="rules">{
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;
+<span class="rule">}</span></span></code></pre>
+<h3 id="exact-matching">Exact Matching</h3>
+<p>Extend by default looks for exact match between selectors. It does matter whether selector uses leading start or not. It does not matter that two nth-expressions have the same meaning, they need to have to same form in order to be matched. The only exception are quotes in attribute selector, less knows they have the same meaning and matches them.</p>
+<p>Example:</p>
+<pre><code class="language-less">.a.class,
 .class.a,
 .class &gt; .a {
   color: blue;
 }
 .test:extend(.class) {} // this will NOT match the any selectors above</code></pre>
-            <p>Leading star does matter. Selectors <code>*.class</code> and <code>.class</code> are equivalent, but extend will not match them:</p>
-            <pre><code>*.class {
+<p>Leading star does matter. Selectors <code>*.class</code> and <code>.class</code> are equivalent, but extend will not match them:</p>
+<pre><code class="language-less">*.class {
   color: blue;
 }
 .noStar:extend(.class) {} // this will NOT match the *.class selector</code></pre>
-            <p>Outputs</p>
-            <pre><code>*.class {
-  color: blue;
-}</code></pre>
-            <p>Order of pseudoclasses does matter. Selectors <code>link:hover:visited</code> and <code>link:visited:hover</code> match the same set of elements, but extend treats them as different:</p>
-            <pre><code>link:hover:visited {
+<p>Outputs</p>
+<pre><code class="language-css">*<span class="class">.class</span> <span class="rules">{
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;
+<span class="rule">}</span></span></code></pre>
+<p>Order of pseudoclasses does matter. Selectors <code>link:hover:visited</code> and <code>link:visited:hover</code> match the same set of elements, but extend treats them as different:</p>
+<pre><code class="language-less">link:hover:visited {
   color: blue;
 }
 .selector:extend(link:visited:hover) {}</code></pre>
-            <p>Outputs</p>
-            <pre><code>link:hover:visited {
-  color: blue;
-}</code></pre>
-            <p>Nth expression form does matter. Nth-expressions <code>1n+3</code> and <code>n+3</code> are equivalent, but extend will not match them:</p>
-            <pre><code>:nth-child(1n+3) {
+<p>Outputs</p>
+<pre><code class="language-css"><span class="tag">link</span><span class="pseudo">:hover</span><span class="pseudo">:visited</span> <span class="rules">{
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;
+<span class="rule">}</span></span></code></pre>
+<h4 id="nth-expression">nth expression</h4>
+<p>Nth expression form does matter. Nth-expressions <code>1n+3</code> and <code>n+3</code> are equivalent, but extend will not match them:</p>
+<pre><code class="language-less">:nth-child(1n+3) {
   color: blue;
 }
-.child:extend(n+3) {} //</code></pre>
-            <p>Outputs</p>
-            <pre><code>:nth-child(1n+3) {
-  color: blue;
-}</code></pre>
-            <p>Quote type in attribute selector does not matter, all are equivalent.</p>
-            <p>Example:</p>
-            <pre><code>[title=identifier] {
+.child:extend(n+3) {}</code></pre>
+<p>Outputs</p>
+<pre><code class="language-css"><span class="pseudo">:nth-child(1n+3)</span> <span class="rules">{
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;
+<span class="rule">}</span></span></code></pre>
+<p>Quote type in attribute selector does not matter. All of the following are equivalent.</p>
+<pre><code class="language-less">[title=identifier] {
   color: blue;
 }
 [title=&#39;identifier&#39;] {
@@ -449,24 +450,35 @@ height: 100% / 2 + @filler;</code></pre>
 [title=&quot;identifier&quot;] {
   color: blue;
 }
+
 .noQuote:extend([title=identifier]) {}
 .singleQuote:extend([title=&#39;identifier&#39;]) {}
 .doubleQuote:extend([title=&quot;identifier&quot;]) {}</code></pre>
-            <p>Outputs</p>
-            <pre><code>[title=identifier], .noQuote, .singleQuote, .doubleQuote {
-  color: blue;
-}
-[title=&#39;identifier&#39;], .noQuote, .singleQuote, .doubleQuote {
-  color: blue;
-}
-[title=&quot;identifier&quot;], .noQuote, .singleQuote, .doubleQuote {
-  color: blue;
-}</code></pre>
-            <h2 id="extend-all">Extend All</h2>
-            <p>When you specify the all keyword last in an extend argument it tells less to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making
-              a new selector.</p>
-            <p>Example:</p>
-            <pre><code class="language-less">.a.b.test,
+<p>Outputs</p>
+<pre><code class="language-css"><span class="attr_selector">[title=identifier]</span>,
+<span class="class">.noQuote</span>,
+<span class="class">.singleQuote</span>,
+<span class="class">.doubleQuote</span> <span class="rules">{
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;
+<span class="rule">}</span></span>
+
+<span class="attr_selector">[title='identifier']</span>,
+<span class="class">.noQuote</span>,
+<span class="class">.singleQuote</span>,
+<span class="class">.doubleQuote</span> <span class="rules">{
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;
+<span class="rule">}</span></span>
+
+<span class="attr_selector">[title="identifier"]</span>,
+<span class="class">.noQuote</span>,
+<span class="class">.singleQuote</span>,
+<span class="class">.doubleQuote</span> <span class="rules">{
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;
+<span class="rule">}</span></span></code></pre>
+<h2 id="extend-all-">Extend <code>all</code></h2>
+<p>When you specify the all keyword last in an extend argument it tells Less.js to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making a new selector.</p>
+<p>Example:</p>
+<pre><code class="language-less">.a.b.test,
 .test.c {
   color: orange;
 }
@@ -475,10 +487,10 @@ height: 100% / 2 + @filler;</code></pre>
     color: green;
   }
 }
-.replacement :extend(.test all) {
-}</code></pre>
-            <p>Outputs</p>
-            <pre><code class="language-css"><span class="class">.a</span><span class="class">.b</span><span class="class">.test</span>,
+
+.replacement:extend(.test all) {}</code></pre>
+<p>Outputs</p>
+<pre><code class="language-css"><span class="class">.a</span><span class="class">.b</span><span class="class">.test</span>,
 <span class="class">.test</span><span class="class">.c</span>,
 <span class="class">.a</span><span class="class">.b</span><span class="class">.replacement</span>,
 <span class="class">.replacement</span><span class="class">.c</span> <span class="rules">{
@@ -488,38 +500,41 @@ height: 100% / 2 + @filler;</code></pre>
 <span class="class">.replacement</span><span class="pseudo">:hover</span> <span class="rules">{
   <span class="rule"><span class="attribute">color</span>:<span class="value"> green</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>You can think of this mode of operation as essentially doing a non-destructive search and replace.</p>
-            <h3 id="selector-interpolation">Selector Interpolation</h3>
-            <p>Extend is NOT able to match selectors with variables. If selector contains variable, extend will ignore it. There is a pending feature request for this but it is not an easy change. However, extend can be attached to interpolated selector.</p>
-            <p>Selector with variable will not be matched:</p>
-            <pre><code>@variable: .bucket;
+<p><em>You can think of this mode of operation as essentially doing a non-destructive search and replace.</em></p>
+<h3 id="selector-interpolation">Selector Interpolation</h3>
+<blockquote>
+<p>Extend is NOT able to match selectors with variables. If selector contains variable, extend will ignore it.</p>
+</blockquote>
+<p>There is a pending feature request for this but it is not an easy change.  However, extend can be attached to interpolated selector.</p>
+<p>Selector with variable will not be matched:</p>
+<pre><code class="language-less">@variable: .bucket;
 @{variable} { // interpolated selector
   color: blue;
 }
-.some-class:extend(.bucket) { } // does nothing, match is not found</code></pre>
-            <p>and extend with variable in target selector matches nothing:</p>
-            <pre><code>.bucket {
+.some-class:extend(.bucket) {} // does nothing, no match is found</code></pre>
+<p>and extend with variable in target selector matches nothing:</p>
+<pre><code class="language-less">.bucket {
   color: blue;
 }
-.some-class:extend(@{variable}) { } // interpolated selector matches nothing
+.some-class:extend(@{variable}) {} // interpolated selector matches nothing
 @variable: .bucket;</code></pre>
-            <p>Two previous examples compile into:</p>
-            <pre><code>.bucket {
+<p>Both of the previous examples compile into:</p>
+<pre><code class="language-less">.bucket {
   color: blue;
 }</code></pre>
-            <p>Extend attached to interpolated selector works:</p>
-            <pre><code>.bucket {
+<p>However, <code>:extend</code> attached to an interpolated selector works:</p>
+<pre><code class="language-less">.bucket {
   color: blue;
 }
-@{variable}:extend(.bucket) { }
+@{variable}:extend(.bucket) {}
 @variable: .selector;</code></pre>
-            <p>previous less compiles into:</p>
-            <pre><code>.bucket, .selector {
+<p>previous less compiles into:</p>
+<pre><code class="language-less">.bucket, .selector {
   color: blue;
 }</code></pre>
-            <h2 id="scoping-extend-inside-media">Scoping / Extend Inside Media</h2>
-            <p>Extend written inside media declaration should matches only selectors inside that media declaration:</p>
-            <pre><code>@media print {
+<h2 id="scoping-extend-inside-media">Scoping / Extend Inside @media</h2>
+<p>Extend written inside a media declaration should match only selectors inside the same media declaration:</p>
+<pre><code class="language-less">@media print {
   .screenClass:extend(.selector) {} // extend inside media
   .selector { // this will be matched - it is in the same media
     color: black;
@@ -533,22 +548,23 @@ height: 100% / 2 + @filler;</code></pre>
     color: blue;
   }
 }</code></pre>
-            <p>compiles into:</p>
-            <pre><code>@media print {
-  .selector, .screenClass { // ruleset inside the same media was extended
-    color: black;
-  }
+<p>compiles into:</p>
+<pre><code class="language-css"><span class="at_rule">@<span class="keyword">media</span> print </span>{
+  <span class="class">.selector</span>,
+  <span class="class">.screenClass</span> <span class="rules">{ <span class="comment">/*  ruleset inside the same media was extended */</span>
+    <span class="rule"><span class="attribute">color</span>:<span class="value"> black</span></span>;
+  <span class="rule">}</span></span>
 }
-.selector { // ruleset on top of style sheet was ignored
-  color: red;
-}
-@media screen {
-  .selector { // ruleset inside another media was ignored
-    color: blue;
-  }
+<span class="class">.selector</span> <span class="rules">{ <span class="comment">/* ruleset on top of style sheet was ignored */</span>
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> red</span></span>;
+<span class="rule">}</span></span>
+<span class="at_rule">@<span class="keyword">media</span> screen </span>{
+  <span class="class">.selector</span> <span class="rules">{ <span class="comment">/* ruleset inside another media was ignored */</span>
+    <span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;
+  <span class="rule">}</span></span>
 }</code></pre>
-            <p>Extend written inside media declaration does not match selectors inside nested declaration:</p>
-            <pre><code>@media screen {
+<p>Extend written inside a media declaration does not match selectors inside nested declaration:</p>
+<pre><code class="language-less">@media screen {
   .screenClass:extend(.selector) {} // extend inside media
   @media (min-width: 1023px) {
     .selector {  // ruleset inside nested media - extend ignores it
@@ -556,66 +572,73 @@ height: 100% / 2 + @filler;</code></pre>
     }
   }
 }</code></pre>
-            <p>compiles into:</p>
-            <pre><code>@media screen and (min-width: 1023px) {
-  .selector { // ruleset inside another nested media was ignored
-    color: blue;
-  }
+<p>compiles into:</p>
+<pre><code class="language-css"><span class="at_rule">@<span class="keyword">media</span> screen and (min-width: <span class="number">1023</span>px) </span>{
+  <span class="class">.selector</span> <span class="rules">{ <span class="comment">/* ruleset inside another nested media was ignored */</span>
+    <span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;
+  <span class="rule">}</span></span>
 }</code></pre>
-            <p>Top level extend matches everything including selectors inside nested media:</p>
-            <pre><code>@media screen {
-  .selector {  // ruleset inside nested media - top level extend works
+<p>Top level extend matches everything including selectors inside nested media:</p>
+<pre><code class="language-less">@media screen {
+  .selector {  /* ruleset inside nested media - top level extend works */
     color: blue;
   }
   @media (min-width: 1023px) {
-    .selector {  // ruleset inside nested media - top level extend works
+    .selector {  /* ruleset inside nested media - top level extend works */
       color: blue;
     }
   }
 }
-.topLevel:extend(.selector) {} // top level extend matches everything</code></pre>
-            <p>compiles into:</p>
-            <pre><code>@media screen {
-  .selector, .topLevel { // ruleset inside media was extended
-    color: blue;
-  }
+
+.topLevel:extend(.selector) {} /* top level extend matches everything */</code></pre>
+<p>compiles into:</p>
+<pre><code class="language-css"><span class="at_rule">@<span class="keyword">media</span> screen </span>{
+  <span class="class">.selector</span>,
+  <span class="class">.topLevel</span> <span class="rules">{ <span class="comment">/* ruleset inside media was extended */</span>
+    <span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;
+  <span class="rule">}</span></span>
 }
-@media screen and (min-width: 1023px) {
-  .selector, .topLevel { // ruleset inside nested media was extended
-    color: blue;
-  }
+<span class="at_rule">@<span class="keyword">media</span> screen and (min-width: <span class="number">1023</span>px) </span>{
+  <span class="class">.selector</span>,
+  <span class="class">.topLevel</span> <span class="rules">{ <span class="comment">/* ruleset inside nested media was extended */</span>
+    <span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;
+  <span class="rule">}</span></span>
 }</code></pre>
-            <h3 id="duplication-detection">Duplication Detection</h3>
-            <p>There is not currently any duplication detection.</p>
-            <p>Example:</p>
-            <pre><code class="language-css">.alert-info, .widget {
+<h3 id="duplication-detection">Duplication Detection</h3>
+<p>Currently there is no duplication detection.</p>
+<p>Example:</p>
+<pre><code class="language-less">.alert-info,
+.widget {
   // declarations
 }
-.alert:extend(.alert-info, .widget) {
-}</code></pre>
-            <p>Outputs</p>
-            <pre><code class="language-css">.alert, .widget, .alert, .alert-info {
-  // declarations
-}</code></pre>
-            <h2 id="use-cases">Use Cases</h2>
-            <h3 id="classic-use-case">Classic Use Case</h3>
-            <p>The classic use case is to avoid adding a base class. For example, if you have</p>
-            <pre><code class="language-css"><span class="class">.animal</span> <span class="rules">{
+
+.alert:extend(.alert-info, .widget) {}</code></pre>
+<p>Outputs</p>
+<pre><code class="language-css"><span class="class">.alert</span>,
+<span class="class">.widget</span>,
+<span class="class">.alert</span>,
+<span class="class">.alert-info</span> <span class="rules">{
+  <span class="comment">/* declarations */</span>
+<span class="rule">}</span></span></code></pre>
+<h2 id="use-cases">Use Cases</h2>
+<h3 id="classic-use-case">Classic Use Case</h3>
+<p>The classic use case is to avoid adding a base class. For example, if you have</p>
+<pre><code class="language-css"><span class="class">.animal</span> <span class="rules">{
   <span class="rule"><span class="attribute">background-color</span>:<span class="value"> black</span></span>;
   <span class="rule"><span class="attribute">color</span>:<span class="value"> white</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>and you want to have a subtype of animal which overrides the background color then you have two options, firstly change your html</p>
-            <pre><code class="language-html">&lt;a class=&quot;animal bear&quot;&gt;Bear&lt;/a&gt;</code></pre>
-            <pre><code class="language-css"><span class="class">.animal</span> <span class="rules">{
+<p>and you want to have a subtype of animal which overrides the background color then you have two options, firstly change your HTML</p>
+<pre><code class="language-html">&lt;a class=&quot;animal bear&quot;&gt;Bear&lt;/a&gt;</code></pre>
+<pre><code class="language-css"><span class="class">.animal</span> <span class="rules">{
   <span class="rule"><span class="attribute">background-color</span>:<span class="value"> black</span></span>;
   <span class="rule"><span class="attribute">color</span>:<span class="value"> white</span></span>;
 <span class="rule">}</span></span>
 <span class="class">.bear</span> <span class="rules">{
   <span class="rule"><span class="attribute">background-color</span>:<span class="value"> brown</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>or have simplified html and use extend in your less. e.g.</p>
-            <pre><code class="language-html">&lt;a class=&quot;bear&quot;&gt;Bear&lt;/a&gt;</code></pre>
-            <pre><code class="language-css">.animal {
+<p>or have simplified html and use extend in your less. e.g.</p>
+<pre><code class="language-html">&lt;a class=&quot;bear&quot;&gt;Bear&lt;/a&gt;</code></pre>
+<pre><code class="language-less">.animal {
   background-color: black;
   color: white;
 }
@@ -623,207 +646,208 @@ height: 100% / 2 + @filler;</code></pre>
   &amp;:extend(.animal);
   background-color: brown;
 }</code></pre>
-            <h3 id="reducing-css-size">Reducing CSS Size</h3>
-            <p>Mixins copy all of the properties into a selector, which can lead to unnecessary duplication. Therefore you can use extends instead of mixins to move the selector up to the properties you wish to use, which leads to less css being generated.</p>
-            <p>Example - with mixin:</p>
-            <pre><code class="language-less">.my-inline-block() {
+<h3 id="reducing-css-size">Reducing CSS Size</h3>
+<p>Mixins copy all of the properties into a selector, which can lead to unnecessary duplication. Therefore you can use extends instead of mixins to move the selector up to the properties you wish to use, which leads to less css being generated.</p>
+<p>Example - with mixin:</p>
+<pre><code class="language-less">.my-inline-block() {
     display: inline-block;
-    font-size: 0;
+  font-size: 0;
 }
 .thing1 {
-    .my-inline-block;
+  .my-inline-block;
 }
 .thing2 {
-    .my-inline-block;
+  .my-inline-block;
 }</code></pre>
-            <p>Outputs</p>
-            <pre><code class="language-css"><span class="class">.thing1</span> <span class="rules">{
-    <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;
-    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">0</span></span></span>;
+<p>Outputs</p>
+<pre><code class="language-css"><span class="class">.thing1</span> <span class="rules">{
+  <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;
+  <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">0</span></span></span>;
 <span class="rule">}</span></span>
 <span class="class">.thing2</span> <span class="rules">{
-    <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;
-    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">0</span></span></span>;
+  <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;
+  <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">0</span></span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>Example (with extends):</p>
-            <pre><code class="language-less">.my-inline-block {
-    display: inline-block;
-    font-size: 0;
+<p>Example (with extends):</p>
+<pre><code class="language-less">.my-inline-block {
+  display: inline-block;
+  font-size: 0;
 }
 .thing1 {
-    &amp;:extend(.my-inline-block);
+  &amp;:extend(.my-inline-block);
 }
 .thing2 {
-    &amp;:extend(.my-inline-block);
+  &amp;:extend(.my-inline-block);
 }</code></pre>
-            <p>Outputs</p>
-            <pre><code class="language-css"><span class="class">.my-inline-block</span>,
+<p>Outputs</p>
+<pre><code class="language-css"><span class="class">.my-inline-block</span>,
 <span class="class">.thing1</span>,
 <span class="class">.thing2</span> <span class="rules">{
-    <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;
-    <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">0</span></span></span>;
+  <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;
+  <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">0</span></span></span>;
 <span class="rule">}</span></span></code></pre>
-            <h3 id="combining-styles-a-more-advanced-mixin">Combining Styles / a more advanced mixin</h3>
-            <p>Another use-case is as an alternative for a mixin - because mixins can only be used with simple selectors, if you have two different blocks on html, but need to apply the same styles to both you can use extends to relate two areas.</p>
-            <p>Example:</p>
-            <pre><code class="language-less">li.list &gt; a {
+<h3 id="combining-styles-a-more-advanced-mixin">Combining Styles / a more advanced mixin</h3>
+<p>Another use-case is as an alternative for a mixin - because mixins can only be used with simple selectors, if you have two different blocks on html, but need to apply the same styles to both you can use extends to relate two areas.</p>
+<p>Example:</p>
+<pre><code class="language-less">li.list &gt; a {
   // list styles
 }
 button.list-style {
   &amp;:extend(li.list &gt; a); // use the same list styles
 }</code></pre>
-            <p>
-              <a id="import-directives" class="section_anchor"></a>
-            </p>
-            <h1 id="import-directives">Import Directives</h1>
-            <blockquote>
-              <p>How to combine files</p>
-            </blockquote>
-            <p>Standard CSS Import statements may be treated differently by less depending on the file extension. If the file has a css extension, it will be treated as css and the import statement left as-is (see the inline option below). If it has any
-              other extension it will be treated as less and imported. If it does not have an extension, &quot;.less&quot; will be appended and it will be included as a imported less file.</p>
-            <p>Example:</p>
-            <pre><code>@import &quot;foo&quot;; // foo.less is imported
+
+</div>
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="import-directives">Import Directives</h1>
+  </div>
+  <h1 id="import-directives">Import Directives</h1>
+<blockquote>
+<p>Import styles from other style sheets</p>
+</blockquote>
+<p>In standard CSS, <code>@import</code> at-rules must precede all other types of rules. But Less.js doesn&#39;t care where you put <code>@import</code> statements.</p>
+<p>Example:</p>
+<pre><code class="language-less">.foo {
+  background: #900;
+}
+@import &quot;this-is-valid.less&quot;;</code></pre>
+<h2 id="file-extensions">File extensions</h2>
+<p><code>@import</code> statements may be treated differently by Less.js depending on the file extension:</p>
+<ul>
+<li>If the file has a <code>.css</code> extension it will be treated as CSS and the <code>@import</code> statement left as-is (see the <a href="#inline">inline option</a> below).</li>
+<li>If it has <em>any other extension</em> it will be treated as LESS and imported.</li>
+<li>If it does not have an extension, <code>.less</code> will be appended and it will be included as a imported LESS file.</li>
+</ul>
+<p>Examples:</p>
+<pre><code class="language-less">@import &quot;foo&quot;;      // foo.less is imported
 @import &quot;foo.less&quot;; // foo.less is imported
-@import &quot;foo.php&quot;; // foo.php imported as a less file
-@import &quot;foo.css&quot;; // statement left as-is</code></pre>
-            <p>See the options below which can override this behaviour.</p>
-            <h1 id="import-options">Import Options</h1>
-            <blockquote>
-              <p>LESS offers several extensions to the CSS <code>@import</code> directive to provide more flexibility over what you can do with external files.</p>
-            </blockquote>
-            <p>Syntax: <code>@import (keyword) &quot;filename&quot;;</code>
-            </p>
-            <p>The following import directives have been implemented:</p>
-            <ul>
-              <li><code>reference</code>: use a less file but do not output it</li>
-              <li><code>once</code>: only include the file once (default behaviour)</li>
-              <li><code>inline</code>: include the sourcefile in the output but do not process</li>
-              <li><code>less</code>: treat the file as a less file, no matter what the file extension</li>
-              <li><code>css</code>: treat the file as a css file, no matter what the file extension</li>
-              <li><code>multiple</code>: include the file multiple times</li>
-            </ul>
-            <h2 id="reference">reference</h2>
-            <blockquote>
-              <p>Use <code>@import (reference)</code> to import external files, but without adding the imported styles to the compiled output unless referenced.</p>
-            </blockquote>
-            <p>Released
-              <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.5.0</a>
-            </p>
-            <p>Example: <code>@import (reference) &quot;foo.less&quot;;</code>
-            </p>
-            <p><code>reference</code> is one of the most powerful features in the LESS language. Imagine that <code>reference</code> marks every directive and selector with a <em>reference flag</em> in the imported file, imports as normal, but when the CSS is
-              generated, &quot;reference&quot; selectors (as well as any media queries containing only reference selectors) are not output. <code>reference</code> styles will not show up in your generated CSS unless the reference styles are used as [mixins][]
-              or [extended][].</p>
-            <p>Additionally, <strong><code>reference</code></strong> produces different results depending on which method was used (mixin or extend):</p>
-            <ul>
-              <li><strong><a href="#extend">extend</a></strong>: When a selector is extended, only the new selector is marked as <em>not referenced</em>, and it is pulled in at the position of the reference <code>@import</code> statement.</li>
-              <li><strong><a href="#mixins">mixins</a></strong>: When a <code>reference</code> style is used as an [[implicit mixin|Mixins]], its rules are are mixed-in, marked &quot;not reference&quot;, and appear in the referenced place as normal.</li>
-            </ul>
-            <h3 id="reference-example">reference example</h3>
-            <p>This allows you to pull in only specific, targeted styles from a library such as
-              <a href="https://github.com/twbs/bootstrap">Bootstrap</a>by doing something like this:</p>
-            <pre><code class="language-less">.navbar:extend(.navbar all) {}</code></pre>
-            <p>And you will pull in only <code>.navbar</code> related styles from Bootstrap.</p>
-            <h2 id="inline">inline</h2>
-            <blockquote>
-              <p>Use <code>@import (inline)</code> to include external files, but not process them.</p>
-            </blockquote>
-            <p>Released
-              <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.5.0</a>
-            </p>
-            <p>Example: <code>@import (inline) &quot;not-less-compatible.css&quot;;</code>
-            </p>
-            <p>You will use this when a css file may not be less compatible - this is because although less supports most known standards css, it does not support comments in some places and does not support all known css hacks without modifying the css.
-              So you can use this to include the file in the output so that all css will be in one file.</p>
-            <h2 id="less">less</h2>
-            <blockquote>
-              <p>Use <code>@import (less)</code> to treat imported files as LESS, regardless of file extension.</p>
-            </blockquote>
-            <p>Released
-              <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a>
-            </p>
-            <p>Example:</p>
-            <pre><code class="language-less">@import (less) &quot;foo.css&quot;;</code></pre>
-            <h2 id="css">css</h2>
-            <blockquote>
-              <p>Use <code>@import (css)</code> to treat imported files as regular CSS, regardless of file extension. This means the import statement will be left as it is.</p>
-            </blockquote>
-            <p>Released
-              <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a>
-            </p>
-            <p>Example:</p>
-            <pre><code class="language-less">@import (css) &quot;foo.less&quot;;</code></pre>
-            <p>outputs</p>
-            <pre><code class="language-less">@import &quot;foo.less&quot;;</code></pre>
-            <h2 id="once">once</h2>
-            <blockquote>
-              <p>The default behavior of <code>@import</code> statements. It means the file is imported only once and subsequent import statements for that file will be ignored.</p>
-            </blockquote>
-            <p>Released
-              <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a>
-            </p>
-            <p>This option is automatically enabled by default on all <code>@import</code> statements.</p>
-            <p>Example:</p>
-            <pre><code class="language-less">@import (once) &quot;foo.less&quot;;
+@import &quot;foo.php&quot;;  // foo.php imported as a less file
+@import &quot;foo.css&quot;;  // statement left in place, as-is</code></pre>
+<p>The following options can be used to override this behavior.</p>
+<h1 id="import-options">Import Options</h1>
+<blockquote>
+<p>LESS offers several extensions to the CSS <code>@import</code> CSS at-rule to provide more flexibility over what you can do with external files.</p>
+</blockquote>
+<p>Syntax: <code>@import (keyword) &quot;filename&quot;;</code></p>
+<p>The following import directives have been implemented:</p>
+<ul>
+<li><code>reference</code>: use a less file but do not output it</li>
+<li><code>inline</code>: include the sourcefile in the output but do not process</li>
+<li><code>less</code>: treat the file as a less file, no matter what the file extension</li>
+<li><code>css</code>: treat the file as a css file, no matter what the file extension</li>
+<li><code>once</code>: only include the file once (this is default behavior)</li>
+<li><code>multiple</code>: include the file multiple times</li>
+</ul>
+<h2 id="reference">reference</h2>
+<blockquote>
+<p>Use <code>@import (reference)</code> to import external files, but without adding the imported styles to the compiled output unless referenced.</p>
+</blockquote>
+<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.5.0</a></p>
+<p>Example: <code>@import (reference) &quot;foo.less&quot;;</code></p>
+<p><code>reference</code> is one of the most powerful features in the LESS language. Imagine that <code>reference</code> marks every directive and selector with a <em>reference flag</em> in the imported file, imports as normal, but when the CSS is generated, &quot;reference&quot; selectors (as well as any media queries containing only reference selectors) are not output. <code>reference</code> styles will not show up in your generated CSS unless the reference styles are used as [mixins][] or [extended][].</p>
+<p>Additionally, <strong><code>reference</code></strong> produces different results depending on which method was used (mixin or extend):</p>
+<ul>
+<li><strong><a href="#extend">extend</a></strong>: When a selector is extended, only the new selector is marked as <em>not referenced</em>, and it is pulled in at the position of the reference <code>@import</code> statement.</li>
+<li><strong><a href="#mixins">mixins</a></strong>: When a <code>reference</code> style is used as an [[implicit mixin|Mixins]], its rules are are mixed-in, marked &quot;not reference&quot;, and appear in the referenced place as normal.</li>
+</ul>
+<h3 id="reference-example">reference example</h3>
+<p>This allows you to pull in only specific, targeted styles from a library such as <a href="https://github.com/twbs/bootstrap">Bootstrap</a> by doing something like this:</p>
+<pre><code class="language-less">.navbar:extend(.navbar all) {}</code></pre>
+<p>And you will pull in only <code>.navbar</code> related styles from Bootstrap.</p>
+<h2 id="inline">inline</h2>
+<blockquote>
+<p>Use <code>@import (inline)</code> to include external files, but not process them.</p>
+</blockquote>
+<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.5.0</a></p>
+<p>Example: <code>@import (inline) &quot;not-less-compatible.css&quot;;</code></p>
+<p>You will use this when a CSS file may not be less compatible; this is because although less supports most known standards CSS, it does not support comments in some places and does not support all known CSS hacks without modifying the CSS.</p>
+<p>So you can use this to include the file in the output so that all CSS will be in one file.</p>
+<h2 id="less">less</h2>
+<blockquote>
+<p>Use <code>@import (less)</code> to treat imported files as LESS, regardless of file extension.</p>
+</blockquote>
+<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a></p>
+<p>Example:</p>
+<pre><code class="language-less">@import (less) &quot;foo.css&quot;;</code></pre>
+<h2 id="css">css</h2>
+<blockquote>
+<p>Use <code>@import (css)</code> to treat imported files as regular CSS, regardless of file extension. This means the import statement will be left as it is.</p>
+</blockquote>
+<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a></p>
+<p>Example:</p>
+<pre><code class="language-less">@import (css) &quot;foo.less&quot;;</code></pre>
+<p>outputs</p>
+<pre><code class="language-less">@import &quot;foo.less&quot;;</code></pre>
+<h2 id="once">once</h2>
+<blockquote>
+<p>The default behavior of <code>@import</code> statements. It means the file is imported only once and subsequent import statements for that file will be ignored.</p>
+</blockquote>
+<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a></p>
+<p>This is the default behavior of <code>@import</code> statements.</p>
+<p>Example:</p>
+<pre><code class="language-less">@import (once) &quot;foo.less&quot;;
 @import (once) &quot;foo.less&quot;; // this statement will be ignored</code></pre>
-            <h2 id="multiple">multiple</h2>
-            <blockquote>
-              <p>Use <code>@import (multiple)</code> to allow importing of multiple files with the same name. This is the opposite behaviour to once.</p>
-            </blockquote>
-            <p>Released
-              <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a>
-            </p>
-            <p>Example:</p>
-            <pre><code class="language-less">// file: foo.less
+<h2 id="multiple">multiple</h2>
+<blockquote>
+<p>Use <code>@import (multiple)</code> to allow importing of multiple files with the same name. This is the opposite behavior to once.</p>
+</blockquote>
+<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a></p>
+<p>Example:</p>
+<pre><code class="language-less">// file: foo.less
 .a {
   color: green;
 }
 // file: main.less
-@import (once) &quot;foo.less&quot;;
-@import (once) &quot;foo.less&quot;;</code></pre>
-            <p>Outputs</p>
-            <pre><code class="language-less">.a {
+@import (multiple) &quot;foo.less&quot;;
+@import (multiple) &quot;foo.less&quot;;</code></pre>
+<p>Outputs</p>
+<pre><code class="language-less">.a {
   color: green;
 }
 .a {
   color: green;
 }</code></pre>
-            <p>
-              <a id="loops" class="section_anchor"></a>
-            </p>
-            <h1 id="loops">Loops</h1>
-            <blockquote>
-              <p>Creating loops</p>
-            </blockquote>
-            <p>In LESS a mixin can call itself. Such recursive mixins, when combined with
-              <a href="#">Guard Expressions</a>and
-              <a href="#">Pattern Matching</a>, can be used to create various iterative/loop structures.</p>
-            <p>Example:</p>
-            <pre><code class="language-less">.loop(@counter) when (@counter &gt; 0) {
+
+</div>
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="loops">Loops</h1>
+  </div>
+  <h1 id="loops">Loops</h1>
+<blockquote>
+<p>Creating loops</p>
+</blockquote>
+<p>In LESS a mixin can call itself. Such recursive mixins, when combined with <a href="#">Guard Expressions</a> and <a href="#">Pattern Matching</a>, can be used to create various iterative/loop structures.</p>
+<p>Example:</p>
+<pre><code class="language-less">.loop(@counter) when (@counter &gt; 0) {
   .loop((@counter - 1));    // next iteration
   width: (10px * @counter); // code for each iteration
 }
+
 div {
   .loop(5); // launch the loop
 }</code></pre>
-            <p>Output:</p>
-            <pre><code class="language-css"><span class="tag">div</span> <span class="rules">{
+<p>Output:</p>
+<pre><code class="language-css"><span class="tag">div</span> <span class="rules">{
   <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">10</span>px</span></span>;
   <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">20</span>px</span></span>;
   <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30</span>px</span></span>;
   <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">40</span>px</span></span>;
   <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>px</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>The typical example of using a recursive loop to generate CSS grid classes:</p>
-            <pre><code class="language-less">.generate-columns(4);
+<p>A generic example of using a recursive loop to generate CSS grid classes:</p>
+<pre><code class="language-less">.generate-columns(4);
+
 .generate-columns(@n, @i: 1) when (@i &lt;= @n) {
   .column-@{i} {
     width: (@i * 100% / @n);
   }
   .generate-columns(@n, (@i + 1));
 }</code></pre>
-            <p>Output:</p>
-            <pre><code class="language-css"><span class="class">.column-1</span> <span class="rules">{
+<p>Output:</p>
+<pre><code class="language-css"><span class="class">.column-1</span> <span class="rules">{
   <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">25</span>%</span></span>;
 <span class="rule">}</span></span>
 <span class="class">.column-2</span> <span class="rules">{
@@ -835,40 +859,46 @@ div {
 <span class="class">.column-4</span> <span class="rules">{
   <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100</span>%</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>
-              <a id="merge" class="section_anchor"></a>
-            </p>
-            <h1 id="merge">Merge</h1>
-            <blockquote>
-              <p>Combine properties</p>
-            </blockquote>
-            <p>The <code>merge</code> feature allows for aggregating values from multiple properties into a comma separated list under a single property. <code>merge</code> is useful for properties such as background and transform.</p>
-            <p>Released
-              <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.5.0</a>
-            </p>
-            <p>Example:</p>
-            <pre><code class="language-less">.mixin() {
+
+</div>
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="merge">Merge</h1>
+  </div>
+  <h1 id="merge">Merge</h1>
+<blockquote>
+<p>Combine properties</p>
+</blockquote>
+<p>The <code>merge</code> feature allows for aggregating values from multiple properties into a comma separated list under a single property. <code>merge</code> is useful for properties such as background and transform.</p>
+<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.5.0</a></p>
+<p>Example:</p>
+<pre><code class="language-less">.mixin() {
   box-shadow+: inset 0 0 10px #555;
 }
 .myclass {
   .mixin();
   box-shadow+: 0 0 20px black;
 }</code></pre>
-            <p>Outputs</p>
-            <pre><code class="language-css"><span class="class">.myclass</span> <span class="rules">{
+<p>Outputs</p>
+<pre><code class="language-css"><span class="class">.myclass</span> <span class="rules">{
   <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> inset <span class="number">0</span> <span class="number">0</span> <span class="number">10</span>px <span class="hexcolor">#555</span>, <span class="number">0</span> <span class="number">0</span> <span class="number">20</span>px black</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>To avoid any unintentional joins, <code>merge</code> requires an explicit <code>+</code> flag on each join pending declaration.</p>
-            <p>Note: although convention on the transform property is to have space separated, comma separation is supported which is why there is no option on this feature for whether to generate space or comma separated.</p>
-            <p>
-              <a id="mixins" class="section_anchor"></a>
-            </p>
-            <h1 id="mixins">Mixins</h1>
-            <blockquote>
-              <p>&quot;mix-in&quot; properties from existing styles</p>
-            </blockquote>
-            <p>You can mix-in class selectors and id selectors, e.g.</p>
-            <pre><code class="language-less">.a, #b {
+<p>To avoid any unintentional joins, <code>merge</code> requires an explicit <code>+</code> flag on each join pending declaration.</p>
+<p><em>Note: although convention on the transform property is to have space separated, comma separation is supported which is why there is no option on this feature for whether to generate space or comma separated.</em></p>
+
+</div>
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="mixins">Mixins</h1>
+  </div>
+  <h1 id="mixins">Mixins</h1>
+<blockquote>
+<p>&quot;mix-in&quot; properties from existing styles</p>
+</blockquote>
+<p>You can mix-in class selectors and id selectors, e.g.</p>
+<pre><code class="language-less">.a, #b {
   color: red;
 }
 .mixin-class {
@@ -877,12 +907,12 @@ div {
 .mixin-id {
   #b();
 }</code></pre>
-            <p>When you call the mixin, the parenthesis are optional.</p>
-            <pre><code class="language-less">  .a();   //these lines do the same thing
-  .a;</code></pre>
-            <h2 id="not-outputting-the-mixin">Not outputting the mixin</h2>
-            <p>If you want to create a mixin but you do not want that mixin to be output, you can put parenthesis around it.</p>
-            <pre><code class="language-less">.my-mixin {
+<p>When you call the mixin, the parenthesis are optional.</p>
+<pre><code class="language-less">.a();   //these lines do the same thing
+.a;</code></pre>
+<h2 id="not-outputting-the-mixin">Not outputting the mixin</h2>
+<p>If you want to create a mixin but you do not want that mixin to be output, you can put parenthesis around it.</p>
+<pre><code class="language-less">.my-mixin {
   color: black;
 }
 .my-other-mixin() {
@@ -892,18 +922,18 @@ div {
   .my-mixin;
   .my-other-mixin;
 }</code></pre>
-            <p>outputs</p>
-            <pre><code class="language-css"><span class="class">.my-mixin</span> <span class="rules">{
+<p>outputs</p>
+<pre><code class="language-css"><span class="class">.my-mixin</span> <span class="rules">{
   <span class="rule"><span class="attribute">color</span>:<span class="value"> black</span></span>;
 <span class="rule">}</span></span>
 <span class="class">.class</span> <span class="rules">{
   <span class="rule"><span class="attribute">color</span>:<span class="value"> black</span></span>;
   <span class="rule"><span class="attribute">background</span>:<span class="value"> white</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <h2 id="selectors-in-mixins">Selectors in mixins</h2>
-            <p>Mixins can contain more than just properties, they can contain selectors to.</p>
-            <p>For example.</p>
-            <pre><code class="language-less">.my-hover-mixin() {
+<h2 id="selectors-in-mixins">Selectors in mixins</h2>
+<p>Mixins can contain more than just properties, they can contain selectors to.</p>
+<p>For example:</p>
+<pre><code class="language-less">.my-hover-mixin() {
   &amp;:hover {
     border: 1px solid red;
   }
@@ -911,28 +941,30 @@ div {
 button {
   .my-hover-mixin();
 }</code></pre>
-            <p>Outputs</p>
-            <pre><code class="language-css"><span class="tag">button</span><span class="pseudo">:hover</span> <span class="rules">{
+<p>Outputs</p>
+<pre><code class="language-css"><span class="tag">button</span><span class="pseudo">:hover</span> <span class="rules">{
   <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1</span>px solid red</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <h2 id="namespaces">Namespaces</h2>
-            <p>If you want to mixin properties inside a more complicated selector, you can stack up multiple id&#39;s or classes.</p>
-            <pre><code class="language-less">#outer {
+<h2 id="namespaces">Namespaces</h2>
+<p>If you want to mixin properties inside a more complicated selector, you can stack up multiple id&#39;s or classes.</p>
+<pre><code class="language-less">#outer {
   .inner {
     color: red;
   }
 }
+
 .c {
   #outer &gt; .inner;
 }</code></pre>
-            <p>and again the &gt; is optional</p>
-            <pre><code class="language-less">  #outer &gt; .inner;          // all do the same thing
-  #outer &gt; .inner();
-  #outer.inner;
-  #outer.inner();</code></pre>
-            <p>One use of this is known as namespacing. You can put your mixins under a id selector and this makes sure it won&#39;t conflict with another library.</p>
-            <p>e.g.</p>
-            <pre><code class="language-less">#my-library {
+<p>and again the <code>&gt;</code> is optional</p>
+<pre><code class="language-less">// all do the same thing
+#outer &gt; .inner;
+#outer &gt; .inner();
+#outer.inner;
+#outer.inner();</code></pre>
+<p>One use of this is known as namespacing. You can put your mixins under a id selector and this makes sure it won&#39;t conflict with another library.</p>
+<p>Example:</p>
+<pre><code class="language-less">#my-library {
   .my-mixin() {
     color: black;
   }
@@ -941,215 +973,50 @@ button {
 .class {
   #my-library &gt; .my-mixin();
 }</code></pre>
-            <h2 id="the-keyword-important">The Keyword !important</h2>
-            <p>Use the !important keyword after mixin call to mark all properties brought by it as !important:</p>
-            <p>Sample input:</p>
-            <pre><code class="language-less">.mixin (@a: 0) {
-  border: @a;
-  boxer: @a;
+<h2 id="the-important-keyword">The <code>!important</code> keyword</h2>
+<p>Use the <code>!important</code> keyword after mixin call to mark all properties inherited by it as <code>!important</code>:</p>
+<p>Example:</p>
+<pre><code class="language-less">.foo (@bg: #f5f5f5, @color: #900) {
+  background: @bg;
+  color: @color;
 }
 .unimportant {
-  .mixin(1);
+  .foo(1);
 }
 .important {
-  .mixin(2) !important;
+  .foo(2) !important;
 }</code></pre>
-            <p>compiled into:</p>
-            <pre><code class="language-css"><span class="class">.unimportant</span> <span class="rules">{
-  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1</span></span></span>;
-  <span class="rule"><span class="attribute">boxer</span>:<span class="value"> <span class="number">1</span></span></span>;
+<p>Results in:</p>
+<pre><code class="language-css"><span class="class">.unimportant</span> <span class="rules">{
+  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#f5f5f5</span></span></span>;
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#900</span></span></span>;
 <span class="rule">}</span></span>
 <span class="class">.important</span> <span class="rules">{
-  <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">2</span> <span class="important">!important</span></span></span>;
-  <span class="rule"><span class="attribute">boxer</span>:<span class="value"> <span class="number">2</span> <span class="important">!important</span></span></span>;
+  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#f5f5f5</span> <span class="important">!important</span></span></span>;
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#900</span> <span class="important">!important</span></span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>
-              <a id="parametric-mixins" class="section_anchor"></a>
-            </p>
-            <h1 id="parametric-mixins">Parametric Mixins</h1>
-            <blockquote>
-              <p>How to pass arguments to mixins</p>
-            </blockquote>
-            <p>Mixins can also take arguments, which are variables pass to the block of selectors when it is mixed in.</p>
-            <p>For example:</p>
-            <pre><code class="language-less">.border-radius (@radius) {
-  border-radius: @radius;
-  -moz-border-radius: @radius;
-  -webkit-border-radius: @radius;
-}</code></pre>
-            <p>And here&#39;s how we can mix it into various rulesets:</p>
-            <pre><code class="language-less">#header {
-  .border-radius(4px);
-}
-.button {
-  .border-radius(6px);
-}</code></pre>
-            <p>Parametric mixins can also have default values for their parameters:</p>
-            <pre><code class="language-less">.border-radius (@radius: 5px) {
-  -moz-border-radius: @radius;
-  -webkit-border-radius: @radius;
-  border-radius: @radius;
-}</code></pre>
-            <p>We can invoke it like this now:</p>
-            <pre><code class="language-less">#header {
-  .border-radius;
-}</code></pre>
-            <p>And it will include a 5px border-radius.</p>
-            <p>You can also use parametric mixins which don&#39;t take parameters. This is useful if you want to hide the ruleset from the CSS output, but want to include its properties in other rulesets:</p>
-            <pre><code class="language-less">.wrap () {
-  text-wrap: wrap;
-  white-space: -moz-pre-wrap;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-pre { .wrap }</code></pre>
-            <p>Which would output:</p>
-            <pre><code class="language-css"><span class="tag">pre</span> <span class="rules">{
-  <span class="rule"><span class="attribute">text-wrap</span>:<span class="value"> wrap</span></span>;
-  <span class="rule"><span class="attribute">white-space</span>:<span class="value"> -moz-pre-wrap</span></span>;
-  <span class="rule"><span class="attribute">white-space</span>:<span class="value"> pre-wrap</span></span>;
-  <span class="rule"><span class="attribute">word-wrap</span>:<span class="value"> break-word</span></span>;
-<span class="rule">}</span></span></code></pre>
-            <h3 id="mixins-with-multiple-parameters">Mixins With Multiple Parameters</h3>
-            <p>Parameters are either <em>semicolon</em> or <em>comma</em> separated. It is recommended to use <em>semicolon</em>. The symbol comma has double meaning: it can be interpreted either as a mixin parameters separator or css list separator.</p>
-            <p>Using comma as mixin separator makes it impossible to create comma separated lists as an argument. On the other hand, if the compiler sees at least one semicolon inside mixin call or declaration, it assumes that arguments are separated by
-              semicolons and all commas belong to css lists:</p>
-            <ul>
-              <li>two arguments and each contains comma separated list: <code>.name(1, 2, 3; something, else)</code>,</li>
-              <li>three arguments and each contains one number: <code>.name(1, 2, 3)</code>,</li>
-              <li>use dummy semicolon to create mixin call with one argument containing comma separated css list: <code>.name(1, 2, 3;)</code>,</li>
-              <li>comma separated default value: <code>.name(@param1: red, blue;)</code>.</li>
-            </ul>
-            <p>It is legal to define multiple mixins with the same name and number of parameters. Less will use properties of all that can apply. If you used the mixin with one parameter e.g. <code>.mixin(green);</code>, then properties of all mixins with
-              exactly one mandatory parameter will be used:</p>
-            <pre><code class="language-less">.mixin(@color) {
-  color-1: @color;
-}
-.mixin(@color; @padding:2) {
-  color-2: @color;
-  padding-2: @padding;
-}
-.mixin(@color; @padding; @margin: 2) {
-  color-3: @color;
-  padding-3: @padding;
-  margin: @margin @margin @margin @margin;
-}
-.some .selector div {
-  .mixin(#008000);
-}</code></pre>
-            <p>compiles into:</p>
-            <pre><code class="language-css">.some .selector div {
-  color-1: #008000;
-  color-2: #008000;
-  padding-2: 2;
-}</code></pre>
-            <h3 id="named-parameters">Named Parameters</h3>
-            <p>A mixin reference can supply parameters values by their names instead of just positions. Any parameter can be referenced by its name and they do not have to be in any special order:</p>
-            <pre><code class="language-less">.mixin(@color: black; @margin: 10px; @padding: 20px) {
-  color: @color;
-  margin: @margin;
-  padding: @padding;
-}
-.class1 {
-  .mixin(@margin: 20px; @color: #33acfe);
-}
-.class2 {
-  .mixin(#efca44; @padding: 40px);
-}</code></pre>
-            <p>compiles into:</p>
-            <pre><code class="language-css"><span class="class">.class1</span> <span class="rules">{
-  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#33acfe</span></span></span>;
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">20</span>px</span></span>;
-  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">20</span>px</span></span>;
-<span class="rule">}</span></span>
-<span class="class">.class2</span> <span class="rules">{
-  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#efca44</span></span></span>;
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">10</span>px</span></span>;
-  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">40</span>px</span></span>;
-<span class="rule">}</span></span></code></pre>
-            <h3 id="the-arguments-variable">The <code>@arguments</code> variable</h3>
-            <p><code>@arguments</code> has a special meaning inside mixins, it contains all the arguments passed, when the mixin was called. This is useful if you don&#39;t want to deal with individual parameters:</p>
-            <pre><code class="language-less">.box-shadow (@x: 0; @y: 0; @blur: 1px; @color: #000) {
-  -webkit-box-shadow: @arguments;
-     -moz-box-shadow: @arguments;
-          box-shadow: @arguments;
-}
-.big-block {
-  .box-shadow(2px; 5px);
-}</code></pre>
-            <p>Which results in:</p>
-            <pre><code class="language-css"><span class="class">.big-block</span> <span class="rules">{
-  <span class="rule"><span class="attribute">-webkit-box-shadow</span>:<span class="value"> <span class="number">2</span>px <span class="number">5</span>px <span class="number">1</span>px <span class="hexcolor">#000</span></span></span>;
-     <span class="rule"><span class="attribute">-moz-box-shadow</span>:<span class="value"> <span class="number">2</span>px <span class="number">5</span>px <span class="number">1</span>px <span class="hexcolor">#000</span></span></span>;
-          <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> <span class="number">2</span>px <span class="number">5</span>px <span class="number">1</span>px <span class="hexcolor">#000</span></span></span>;
-<span class="rule">}</span></span></code></pre>
-            <h3 id="advanced-arguments-and-the-rest-variable">Advanced arguments and the <code>@rest</code> variable</h3>
-            <p>You can use <code>...</code> if you want your mixin to take a variable number of arguments. Using this after a variable name will assign those arguments to the variable.</p>
-            <pre><code class="language-less">.mixin (...) {        // matches 0-N arguments
-.mixin () {           // matches exactly 0 arguments
-.mixin (@a: 1) {      // matches 0-1 arguments
-.mixin (@a: 1; ...) { // matches 0-N arguments
-.mixin (@a; ...) {    // matches 1-N arguments</code></pre>
-            <p>Furthermore:</p>
-            <pre><code class="language-less">.mixin (@a; @rest...) {
-   // @rest is bound to arguments after @a
-   // @arguments is bound to all arguments
-}</code></pre>
-            <h2 id="pattern-matching">Pattern-matching</h2>
-            <p>Sometimes, you may want to change the behaviour of a mixin, based on the parameters you pass to it. Let&#39;s start with something basic:
-            </p>
-            <pre><code class="language-less">.mixin (@s; @color) { ... }
-.class {
-  .mixin(@switch; #888);
-}</code></pre>
-            <p>Now let&#39;s say we want <code>.mixin</code> to behave differently, based on the value of <code>@switch</code>, we could define <code>.mixin</code> as such:</p>
-            <pre><code class="language-less">.mixin (dark; @color) {
-  color: darken(@color, 10%);
-}
-.mixin (light; @color) {
-  color: lighten(@color, 10%);
-}
-.mixin (@_; @color) {
-  display: block;
-}</code></pre>
-            <p>Now, if we run:</p>
-            <pre><code class="language-less">@switch: light;
-.class {
-  .mixin(@switch; #888);
-}</code></pre>
-            <p>We will get the following CSS:</p>
-            <pre><code class="language-css"><span class="class">.class</span> <span class="rules">{
-  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#a2a2a2</span></span></span>;
-  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;
-<span class="rule">}</span></span></code></pre>
-            <p>Where the color passed to <code>.mixin</code> was lightened. If the value of <code>@switch</code> was <code>dark</code>, the result would be a darker color.</p>
-            <p>Here&#39;s what happened:</p>
-            <ul>
-              <li>The first mixin definition didn&#39;t match because it expected <code>dark</code> as the first argument.</li>
-              <li>The second mixin definition matched, because it expected <code>light</code>.</li>
-              <li>The third mixin definition matched because it expected any value.</li>
-            </ul>
-            <p>Only mixin definitions which matched were used. Variables match and bind to any value. Anything other than a variable matches only with a value equal to itself.</p>
-            <p>We can also match on arity, here&#39;s an example:</p>
-            <pre><code class="language-less">.mixin (@a) {
-  color: @a;
-}
-.mixin (@a; @b) {
-  color: fade(@a; @b);
-}</code></pre>
-            <p>Now if we call <code>.mixin</code> with a single argument, we will get the output of the first definition, but if we call it with <em>two</em> arguments, we will get the second definition, namely <code>@a</code> faded to <code>@b</code>.</p>
-            <p>
-              <a id="mixin-guards" class="section_anchor"></a>
-            </p>
-            <h1 id="mixin-guards">Mixin Guards</h1>
-            <blockquote>
-              <p>Conditional mixins</p>
-            </blockquote>
-            <p>Guards are useful when you want to match on <em>expressions</em>, as opposed to simple values or arity. If you are familiar with functional programming, you have probably encountered them already.</p>
-            <p>In trying to stay as close as possible to the declarative nature of CSS, LESS has opted to implement conditional execution via <strong>guarded mixins</strong> instead of if/else statements, in the vein of <code>@media</code>
-              query feature specifications.</p>
-            <p>Let&#39;s start with an example:</p>
-            <pre><code class="language-less">.mixin (@a) when (lightness(@a) &gt;= 50%) {
+
+</div>
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="parametric-mixins">Parametric Mixins</h1>
+  </div>
+  
+</div>
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="mixin-guards">Mixin Guards</h1>
+  </div>
+  <h1 id="mixin-guards">Mixin Guards</h1>
+<blockquote>
+<p>Conditional mixins</p>
+</blockquote>
+<p>Guards are useful when you want to match on <em>expressions</em>, as opposed to simple values or arity. If you are familiar with functional programming, you have probably encountered them already.</p>
+<p>In trying to stay as close as possible to the declarative nature of CSS, LESS has opted to implement conditional execution via <strong>guarded mixins</strong> instead of <code>if</code>/<code>else</code> statements, in the vein of <code>@media</code> query feature specifications.</p>
+<p>Let&#39;s start with an example:</p>
+<pre><code class="language-less">.mixin (@a) when (lightness(@a) &gt;= 50%) {
   background-color: black;
 }
 .mixin (@a) when (lightness(@a) &lt; 50%) {
@@ -1158,11 +1025,11 @@ pre { .wrap }</code></pre>
 .mixin (@a) {
   color: @a;
 }</code></pre>
-            <p>The key is the <strong><code>when</code></strong> keyword, which introduces a guard sequence (here with only one guard). Now if we run the following code:</p>
-            <pre><code class="language-less">.class1 { .mixin(#ddd) }
+<p>The key is the <code>when</code> keyword, which introduces a guard sequence (here with only one guard). Now if we run the following code:</p>
+<pre><code class="language-less">.class1 { .mixin(#ddd) }
 .class2 { .mixin(#555) }</code></pre>
-            <p>Here&#39;s what we&#39;ll get:</p>
-            <pre><code class="language-css"><span class="class">.class1</span> <span class="rules">{
+<p>Here&#39;s what we&#39;ll get:</p>
+<pre><code class="language-css"><span class="class">.class1</span> <span class="rules">{
   <span class="rule"><span class="attribute">background-color</span>:<span class="value"> black</span></span>;
   <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#ddd</span></span></span>;
 <span class="rule">}</span></span>
@@ -1170,122 +1037,137 @@ pre { .wrap }</code></pre>
   <span class="rule"><span class="attribute">background-color</span>:<span class="value"> white</span></span>;
   <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#555</span></span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>The full list of comparison operators usable in guards are: <strong><code>&gt; &gt;= = =&lt; &lt;</code></strong>. Additionally, the keyword <code>true</code>
-              is the only truthy value, making these two mixins equivalent:</p>
-            <pre><code class="language-less">.truth (@a) when (@a) { ... }
+<h3 id="guard-comparison-operators">Guard comparison operators</h3>
+<p>The full list of comparison operators usable in guards are: <code>&gt;</code>, <code>&gt;=</code>, <code>=</code>, <code>=&lt;</code>, <code>&lt;</code>. Additionally, the keyword <code>true</code> is the only truthy value, making these two mixins equivalent:</p>
+<pre><code class="language-less">.truth (@a) when (@a) { ... }
 .truth (@a) when (@a = true) { ... }</code></pre>
-            <p>Any value other than the keyword <code>true</code> is falsy:</p>
-            <pre><code class="language-less">.class {
+<p>Any value other than the keyword <code>true</code> is falsy:</p>
+<pre><code class="language-less">.class {
   .truth(40); // Will not match any of the above definitions.
 }</code></pre>
-            <p>Guards can be separated with a comma &#39;<code>,</code>&#39;, if any of the guards evaluates to true, it&#39;s considered as a match:</p>
-            <pre><code class="language-less">.mixin (@a) when (@a &gt; 10), (@a &lt; -10) { ... }</code></pre>
-            <p>Note that you can also compare arguments with each other, or with non-arguments:</p>
-            <pre><code class="language-less">@media: mobile;
+<p>Guards can be separated with a comma <code>,</code>, if any of the guards evaluates to true, it&#39;s considered as a match:</p>
+<pre><code class="language-less">.mixin (@a) when (@a &gt; 10), (@a &lt; -10) { ... }</code></pre>
+<p>Note that you can also compare arguments with each other, or with non-arguments:</p>
+<pre><code class="language-less">@media: mobile;
+
 .mixin (@a) when (@media = mobile) { ... }
 .mixin (@a) when (@media = desktop) { ... }
+
 .max (@a; @b) when (@a &gt; @b) { width: @a }
 .max (@a; @b) when (@a &lt; @b) { width: @b }</code></pre>
-            <p>Lastly, if you want to match mixins based on value type, you can use the <em>is*</em> functions:</p>
-            <pre><code class="language-less">.mixin (@a; @b: 0) when (isnumber(@b)) { ... }
+<h3 id="type-checking-functions">Type checking functions</h3>
+<p>Lastly, if you want to match mixins based on value type, you can use the <code>is</code> functions:</p>
+<pre><code class="language-less">.mixin (@a; @b: 0) when (isnumber(@b)) { ... }
 .mixin (@a; @b: black) when (iscolor(@b)) { ... }</code></pre>
-            <p>Here are the basic type checking functions:</p>
-            <ul>
-              <li><code>iscolor</code>
-              </li>
-              <li><code>isnumber</code>
-              </li>
-              <li><code>isstring</code>
-              </li>
-              <li><code>iskeyword</code>
-              </li>
-              <li><code>isurl</code>
-              </li>
-            </ul>
-            <p>If you want to check if a value, in addition to being a number, is in a specific unit, you may use one of:</p>
-            <ul>
-              <li><code>ispixel</code>
-              </li>
-              <li><code>ispercentage</code>
-              </li>
-              <li><code>isem</code>
-              </li>
-              <li><code>isunit</code>
-              </li>
-            </ul>
-            <p>/<strong>FIXME</strong>/ Additionally there&#39;s a <code>default</code> function that can be used to make a mixin match depending on other mixing matches, you may use it to create conditional mixins similar to &#39;else&#39; or &#39;default&#39;
-              statements (of &#39;if&#39; and &#39;case&#39; structures respectively):</p>
-            <pre><code class="language-less">.mixin (@a) when (@a &gt; 0) { ...  }
+<p>Here are the basic type checking functions:</p>
+<ul>
+<li><code>iscolor</code></li>
+<li><code>isnumber</code></li>
+<li><code>isstring</code></li>
+<li><code>iskeyword</code></li>
+<li><code>isurl</code></li>
+</ul>
+<p>If you want to check if a value is in a specific unit in addition to being a number, you may use one of:</p>
+<ul>
+<li><code>ispixel</code></li>
+<li><code>ispercentage</code></li>
+<li><code>isem</code></li>
+<li><code>isunit</code></li>
+</ul>
+<h2 id="conditional-mixins">Conditional mixins</h2>
+<p><em>(<strong>FIXME</strong>)</em> Additionally, the <code>default</code> function may be used to make a mixin match depending on other mixing matches, and you may use it to create &quot;conditional mixins&quot; similar to <code>else</code> or <code>default</code> statements (of <code>if</code> and <code>case</code> structures respectively):</p>
+<pre><code class="language-less">.mixin (@a) when (@a &gt; 0) { ...  }
 .mixin (@a) when (default()) { ... } // matches only if first mixin does not, i.e. when @a &lt;= 0</code></pre>
-            <p>Last but not least, you may use the <strong><code>and</code></strong> keyword to provide additional conditions inside a guard:</p>
-            <pre><code class="language-less">.mixin (@a) when (isnumber(@a)) and (@a &gt; 0) { ... }</code></pre>
-            <p>And finally, the <strong><code>not</code></strong> keyword to negate conditions:</p>
-            <pre><code class="language-less">.mixin (@b) when not (@b &gt; 0) { ... }</code></pre>
-            <p>
-              <a id="css-guards" class="section_anchor"></a>
-            </p>
-            <h1 id="css-guards">CSS Guards</h1>
-            <blockquote>
-              <p>if&#39;s around selectors</p>
-            </blockquote>
-            <p>Guards can also be applied to css selectors, which is syntactic sugar for declaring the mixin and then calling it immediately.</p>
-            <p>For instance, before 1.5.0 you would have had to do this.</p>
-            <pre><code class="language-less">.my-optional-style() when (@my-option = true) {
+<p>Last but not least, you may use the <code>and</code> keyword to provide additional conditions inside a guard:</p>
+<pre><code class="language-less">.mixin (@a) when (isnumber(@a)) and (@a &gt; 0) { ... }</code></pre>
+<p>And finally, the <strong><code>not</code></strong> keyword to negate conditions:</p>
+<pre><code class="language-less">.mixin (@b) when not (@b &gt; 0) { ... }</code></pre>
+
+</div>
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="default-function">Default Function</h1>
+  </div>
+  
+</div>
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="css-guards">CSS Guards</h1>
+  </div>
+  <h1 id="css-guards">CSS Guards</h1>
+<blockquote>
+<p>if&#39;s around selectors</p>
+</blockquote>
+<p>Guards can also be applied to css selectors, which is syntactic sugar for declaring the mixin and then calling it immediately.</p>
+<p>For instance, before 1.5.0 you would have had to do this.</p>
+<pre><code class="language-less">.my-optional-style() when (@my-option = true) {
   button {
     color: white;
   }
 }
 .my-optional-style();</code></pre>
-            <p>you can now write the guard straight on to styles</p>
-            <pre><code class="language-less">button when (@my-option = true) {
+<p>you can now write the guard straight on to styles</p>
+<pre><code class="language-less">button when (@my-option = true) {
   color: white;
 }</code></pre>
-            <p>
-              <a id="mixins-as-functions" class="section_anchor"></a>
-            </p>
-            <h1 id="mixins-as-functions">Mixins as Functions</h1>
-            <blockquote>
-              <p>Return variables from mixins</p>
-            </blockquote>
-            <p>All variables defined in a mixin are visible and can be used in caller&#39;s scope (unless the caller defines its own variable with the same name).</p>
-            <p>Example:</p>
-            <pre><code class="language-less">.mixin() {
+
+</div>
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="mixins-as-functions">Mixins as Functions</h1>
+  </div>
+  <h1 id="mixins-as-functions">Mixins as Functions</h1>
+<blockquote>
+<p>Return variables from mixins</p>
+</blockquote>
+<p>All variables defined in a mixin are visible and can be used in caller&#39;s scope (unless the caller defines its own variable with the same name).</p>
+<p>Example:</p>
+<pre><code class="language-less">.mixin() {
   @width:  100%;
   @height: 200px;
 }
+
 .caller {
   .mixin();
   width:  @width;
   height: @height;
 }</code></pre>
-            <p>Output:</p>
-            <pre><code class="language-css"><span class="class">.caller</span> <span class="rules">{
+<p>Results in:</p>
+<pre><code class="language-css"><span class="class">.caller</span> <span class="rules">{
   <span class="rule"><span class="attribute">width</span>:<span class="value">  <span class="number">100</span>%</span></span>;
   <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">200</span>px</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>Thus variables defined in a mixin can act as its return values. This allows us to create a mixin that can be used almost like a function.</p>
-            <p>Example:</p>
-            <pre><code class="language-less">.average(@x, @y) {
+<p>Thus variables defined in a mixin can act as its return values. This allows us to create a mixin that can be used almost like a function.</p>
+<p>Example:</p>
+<pre><code class="language-less">.average(@x, @y) {
   @average: ((@x + @y) / 2);
 }
+
 div {
   .average(16px, 50px); // &quot;call&quot; the mixin
   padding: @average;    // use its &quot;return&quot; value
 }</code></pre>
-            <p>Output:</p>
-            <pre><code class="language-css"><span class="tag">div</span> <span class="rules">{
+<p>Results in:</p>
+<pre><code class="language-css"><span class="tag">div</span> <span class="rules">{
   <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">33</span>px</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>
-              <a id="parent-selectors" class="section_anchor"></a>
-            </p>
-            <h1 id="parent-selectors">Parent Selectors</h1>
-            <blockquote>
-              <p>Changing selector order</p>
-            </blockquote>
-            <p>When using <strong>Nested rules</strong>, it can be very useful to prepend a selector to the inherited (parent) scope. This feature is known as &quot;Parent Selectors&quot;, and can be done by putting the parent selector before an ampersand <code>&amp;</code>.</p>
-            <p>For example, when using Modernizr, you might want to specify different rules based on supported features:</p>
-            <pre><code class="language-css">.header {
+
+</div>
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="parent-selectors">Parent Selectors</h1>
+  </div>
+  <h1 id="parent-selectors">Parent Selectors</h1>
+<blockquote>
+<p>Changing selector order</p>
+</blockquote>
+<p>When using <strong>Nested rules</strong>, it can be very useful to prepend a selector to the inherited (parent) scope.  This feature is known as &quot;Parent Selectors&quot;, and can be done by putting the parent selector before an ampersand <code>&amp;</code>.</p>
+<p>For example, when using Modernizr, you might want to specify different rules based on supported features:</p>
+<pre><code class="language-css">.header {
   .menu {
     border-radius: 5px;
     .no-borderradius &amp; {
@@ -1293,34 +1175,115 @@ div {
     }
   }
 }</code></pre>
-            <p>The selector <code>.no-borderradius &amp;</code> will be combined with the inherited scope, <code>.header .menu</code>, to form the selector <code>.no-borderradius .header .menu</code>.</p>
-            <pre><code class="language-css"><span class="class">.header</span> <span class="class">.menu</span> <span class="rules">{
+<p>The selector <code>.no-borderradius &amp;</code> will be combined with the inherited scope, <code>.header .menu</code>, to form the selector <code>.no-borderradius .header .menu</code>.</p>
+<pre><code class="language-css"><span class="class">.header</span> <span class="class">.menu</span> <span class="rules">{
   <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">5</span>px</span></span>;
 <span class="rule">}</span></span>
 <span class="class">.no-borderradius</span> <span class="class">.header</span> <span class="class">.menu</span> <span class="rules">{
   <span class="rule"><span class="attribute">background-image</span>:<span class="value"> <span class="function">url(<span class="string">'images/button-background.png'</span>)</span></span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>
-              <a id="variables" class="section_anchor"></a>
-            </p>
-            <h1 id="variables">Variables</h1>
-            <blockquote>
-              <p>Control commonly used values in a single location.</p>
-            </blockquote>
-            <p>It&#39;s not uncommon to see the same value repeated dozens <em>if not hundreds of times</em> across your stylesheets:</p>
-            <pre><code class="language-css"><span class="tag">a</span>, <span class="class">.link</span> <span class="rules">{
+
+</div>
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="scope">Scope</h1>
+  </div>
+  <hr>
+<h2 id="published-false">published: false</h2>
+<h1 id="scope">Scope</h1>
+<blockquote>
+<p>How variables are evaluated</p>
+</blockquote>
+<h2 id="tips-tricks">Tips &amp; Tricks</h2>
+<p>Credit: <a href="https://github.com/less/less.js/issues/1472#issuecomment-22213697">less/less.js/issues/1472</a></p>
+<p>Here is a trick for defining variables and keeping them in some private scope, preventing them from leaking to the global space.</p>
+<pre><code class="language-less">&amp; {
+  // Vars
+  @height: 100px;
+  @width: 20px;
+  // Don&#39;t define any prop:value on this scope (as doing so will generate (wrong) output).
+
+  .test {
+    height: @height;
+   width: @width;
+  }
+}
+
+.rest {
+  height: @height; // Name error: variable @height is undefined
+}</code></pre>
+<p>Here, <code>@height</code> and <code>@width</code> are only defined for the scope created by <code>&amp; { ... }</code> You can also nest an scope inside a rule:</p>
+<pre><code class="language-less">.some-module {
+  @height: 200px;
+  @width: 200px;
+  text-align: left;
+  line-height: @height; // 200px
+
+  &amp; {
+    // Override original values
+    @height: 100px;
+    @width: auto;
+
+    .some-module__element {
+      height: @height; // 100px
+      width: @width; // 200px
+    }
+
+    .some-module__element .text {
+      line-height: (@height / 2); // 50px
+    }
+  }
+
+  &amp; {
+    // Override original values
+    @height: 50px;
+
+    .some-module__another-element {
+      height: @height; // 50px
+      width: @width; // 200px
+    }
+
+    .some-module__another-element .text {
+      line-height: (@height / 2); // 25px
+    }
+  }
+}</code></pre>
+
+</div>
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="strict-math">Strict Math</h1>
+  </div>
+  
+</div>
+
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="variables">Variables</h1>
+  </div>
+  <h1 id="variables">Variables</h1>
+<blockquote>
+<p>Control commonly used values in a single location.</p>
+</blockquote>
+<p>It&#39;s not uncommon to see the same value repeated dozens <em>if not hundreds of times</em> across your stylesheets:</p>
+<pre><code class="language-css"><span class="tag">a</span>,
+<span class="class">.link</span> <span class="rules">{
   <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#428bca</span></span></span>;
 <span class="rule">}</span></span>
 <span class="class">.widget</span> <span class="rules">{
   <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;
   <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#428bca</span></span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>Variables make your code easier to maintain by giving you a way to control those values from a single location:</p>
-            <pre><code class="language-less">// Variables
+<p>Variables make your code easier to maintain by giving you a way to control those values from a single location:</p>
+<pre><code class="language-less">// Variables
 @link-color:        #428bca; // sea blue
 @link-color-hover:  (@link-color, 10%);
+
 // Usage
-a, .link {
+a,
+.link {
   color: @link-color;
 }
 a:hover {
@@ -1330,108 +1293,92 @@ a:hover {
   color: #fff;
   background: @link-color;
 }</code></pre>
-            <p>
-              <a id="variable-interpolation"></a>
-            </p>
-            <h2 id="variable-interpolation">Variable Interpolation</h2>
-            <p>The examples above focused on using variables to control <em>values in CSS rules</em>, but they can also be used in other places as well, such as selector names, property names, URLs and <code>@import</code> statements.</p>
-            <p>
-              <a id="selector-interpolation"></a>
-            </p>
-            <h3 id="selectors">Selectors</h3>
-            <p>Version: 1.4.0</p>
-            <pre><code class="language-less">// Variables
+<h2 id="variable-interpolation">Variable Interpolation</h2>
+<p>The examples above focused on using variables to control <em>values in CSS rules</em>, but they can also be used in other places as well, such as selector names, property names, URLs and <code>@import</code> statements.</p>
+<h3 id="selectors">Selectors</h3>
+<p>Version: 1.4.0</p>
+<pre><code class="language-less">// Variables
 @mySelector: banner;
+
 // Usage
 .@{mySelector} {
   font-weight: bold;
   line-height: 40px;
   margin: 0 auto;
 }</code></pre>
-            <p>Compiles to:</p>
-            <pre><code class="language-css"><span class="class">.banner</span> <span class="rules">{
+<p>Compiles to:</p>
+<pre><code class="language-css"><span class="class">.banner</span> <span class="rules">{
   <span class="rule"><span class="attribute">font-weight</span>:<span class="value"> bold</span></span>;
   <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">40</span>px</span></span>;
   <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> auto</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>
-              <a id="url-string-interpolation"></a>
-            </p>
-            <h3 id="urls">URLs</h3>
-            <pre><code class="language-less">// Variables
+<h3 id="urls">URLs</h3>
+<pre><code class="language-less">// Variables
 @images: &quot;../img&quot;;
+
 // Usage
 body {
   color: #444;
   background: url(&quot;@{images}}/white-sand.png&quot;);
 }</code></pre>
-            <p>
-              <a id="import-string-interpolation"></a>
-            </p>
-            <h3 id="-import-statements-limited-support-"><code>@import</code> statements (limited support)</h3>
-            <p>Version: 1.4.0</p>
-            <p>Syntax: <code>@import &quot;@{themes}/tidal-wave.less&quot;;</code>
-            </p>
-            <p>Note that currently, only variables which have been declared in the root or current scope will be considered and that only the current file and calling files will be considered when looking for a variable. This means that this usage is typically
-              limited to when you an inject a variable into the compile process or define a variable at the beginning of your root file.</p>
-            <p>When you are importing a css file and not using the inline option (e.g. the import statement will be kept intact) then the above does not apply.</p>
-            <p>Example:</p>
-            <pre><code class="language-less">// Variables
+<h3 id="-import-statements-limited-support-"><code>@import</code> statements (limited support)</h3>
+<p>Version: 1.4.0</p>
+<p>Syntax: <code>@import &quot;@{themes}/tidal-wave.less&quot;;</code></p>
+<p>Note that currently, only variables which have been declared in the root or current scope will be considered and that only the current file and calling files will be considered when looking for a variable.
+This means that this usage is typically limited to when you an inject a variable into the compile process or define a variable at the beginning of your root file.</p>
+<p>When you are importing a css file and not using the inline option (e.g. the import statement will be kept intact) then the above does not apply.</p>
+<p>Example:</p>
+<pre><code class="language-less">// Variables
 @themes: &quot;../../src/themes&quot;;
+
 // Usage
 @import &quot;@{themes}/tidal-wave.less&quot;;</code></pre>
-            <p>
-              <a id="property-interpolation"></a>
-            </p>
-            <h3 id="properties">Properties</h3>
-            <p>Version: ?.?.?</p>
-            <pre><code class="language-less">@property: color;
+<h3 id="properties">Properties</h3>
+<p>Version: ?.?.?</p>
+<pre><code class="language-less">@property: color;
+
 .widget {
   @{property}: #0ee;
   background-@{property}: #999;
 }</code></pre>
-            <p>Compiles to:</p>
-            <pre><code class="language-css"><span class="class">.widget</span> <span class="rules">{
+<p>Compiles to:</p>
+<pre><code class="language-css"><span class="class">.widget</span> <span class="rules">{
   <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#0ee</span></span></span>;
   <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#999</span></span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>
-              <a id="variable-name-reference"></a>
-            </p>
-            <h2 id="variable-names">Variable Names</h2>
-            <p>It is also possible to define variables with a variable name:</p>
-            <pre><code class="language-less">@fnord:  &quot;I am fnord.&quot;;
+<h2 id="variable-names">Variable Names</h2>
+<p>It is also possible to define variables with a variable name:</p>
+<pre><code class="language-less">@fnord:  &quot;I am fnord.&quot;;
 @var:    &quot;fnord&quot;;
 content: @@var;</code></pre>
-            <p>Which compiles to:</p>
-            <pre><code class="language-css"><span class="tag">content</span>: "<span class="tag">I</span> <span class="tag">am</span> <span class="tag">fnord</span>.";</code></pre>
-            <p>
-              <a id="lazy-loading"></a>
-            </p>
-            <h2 id="lazy-loading">Lazy Loading</h2>
-            <blockquote>
-              <p>Variables are lazy loaded and do not have to be declared before being used.</p>
-            </blockquote>
-            <p>Valid LESS snippet:</p>
-            <pre><code class="language-less">lazy-eval {
+<p>Which compiles to:</p>
+<pre><code>content: &quot;I am fnord.&quot;;</code></pre>
+<h2 id="lazy-loading">Lazy Loading</h2>
+<blockquote>
+<p>Variables are lazy loaded and do not have to be declared before being used.</p>
+</blockquote>
+<p>Valid LESS snippet:</p>
+<pre><code class="language-less">.lazy-eval {
   width: @var;
 }
+
 @var: @a;
 @a: 9%;</code></pre>
-            <p>this is valid LESS too:</p>
-            <pre><code class="language-less">.lazy-eval-scope {
+<p>this is valid LESS too:</p>
+<pre><code class="language-less">.lazy-eval-scope {
   width: @var;
   @a: 9%;
 }
+
 @var: @a;
 @a: 100%;</code></pre>
-            <p>both compile into:</p>
-            <pre><code class="language-css"><span class="class">.lazy-eval-scope</span> <span class="rules">{
+<p>both compile into:</p>
+<pre><code class="language-css"><span class="class">.lazy-eval-scope</span> <span class="rules">{
   <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">9</span>%</span></span>;
 <span class="rule">}</span></span></code></pre>
-            <p>When defining a variable twice, the last definition of the variable is used, searching from the current scope upwards. This is similar to css itself where the last property inside a definition is used to determine the value.</p>
-            <p>For instance:</p>
-            <pre><code class="language-less">@var: 0;
+<p>When defining a variable twice, the last definition of the variable is used, searching from the current scope upwards. This is similar to css itself where the last property inside a definition is used to determine the value.</p>
+<p>For instance:</p>
+<pre><code class="language-less">@var: 0;
 .class1 {
   @var: 1;
   .class {
@@ -1441,24 +1388,27 @@ content: @@var;</code></pre>
   }
   one: @var;
 }</code></pre>
-            <p>Compiles to:</p>
-            <pre><code class="language-css"><span class="class">.class1</span> <span class="class">.class</span> <span class="rules">{
+<p>Compiles to:</p>
+<pre><code class="language-css"><span class="class">.class1</span> <span class="class">.class</span> <span class="rules">{
   <span class="rule"><span class="attribute">three</span>:<span class="value"> <span class="number">3</span></span></span>;
 <span class="rule">}</span></span>
 <span class="class">.class</span> <span class="rules">{
   <span class="rule"><span class="attribute">one</span>:<span class="value"> <span class="number">1</span></span></span>;
 <span class="rule">}</span></span></code></pre>
-            <h2 id="default-variables">default variables</h2>
-            <p>We sometimes get requests for default variables - an ability to set a variable only if it is not already set. This feature is not required because you can easily override a variable by putting the definition afterwards.</p>
-            <p>For instance:</p>
-            <pre><code class="language-less">// library
+<h2 id="default-variables">default variables</h2>
+<p>We sometimes get requests for default variables - an ability to set a variable only if it is not already set. This feature is not required because you can easily override a variable by putting the definition afterwards.</p>
+<p>For instance:</p>
+<pre><code class="language-less">// library
 @base-color: green;
 @dark-color: darken(@base-color, 10%);
+
 // use of library
 @import &quot;library.less&quot;;
 @base-color: red;</code></pre>
-            <p>This works fine - base-color is overidden and dark-color is a dark red.</p>
-          </div>
+<p>This works fine - base-color is overidden and dark-color is a dark red.</p>
+
+</div>
+
         </div>
       </div>
     </div>
@@ -1467,57 +1417,50 @@ content: @@var;</code></pre>
     <footer class="bs-footer" role="contentinfo">
       <div class="container">
         <div class="bs-social">
-          <ul class="bs-social-buttons">
-            <li>
-              <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=less&amp;repo=less.js&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
-            </li>
-            <li>
-              <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=less&amp;repo=less.js&amp;type=fork&amp;count=true" width="102" height="20" title="Fork on GitHub"></iframe>
-            </li>
-          </ul>
-        </div>
-        <p>
-          <a href="https://github.com/less/less.js">Less.js</a>was created by
-          <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka
-          <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
-        <p>Documentation source code released under the
-          <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under
-          <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+  <ul class="bs-social-buttons">
+    <li>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=less&amp;repo=less.js&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
+    </li>
+    <li>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=less&amp;repo=less.js&amp;type=fork&amp;count=true" width="102" height="20" title="Fork on GitHub"></iframe>
+    </li>
+  </ul>
+</div>
+
+        <p><a href="https://github.com/less/less.js">Less.js</a> was created by <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
+        <p>Documentation source code released under the <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <ul class="footer-links">
-          <li>Currently v1.5.0-b4</li>
+          <li>Currently v1.5.1</li>
           <li class="muted">&middot;</li>
-          <li>
-            <a href="">Blog</a>
-          </li>
+          <li><a href="">Blog</a></li>
           <li class="muted">&middot;</li>
-          <li>
-            <a href="/issues?state=open">Issues</a>
-          </li>
+          <li><a href="/issues?state=open">Issues</a></li>
           <li class="muted">&middot;</li>
-          <li>
-            <a href="/blob/master/CHANGELOG.md">Changelog</a>
-          </li>
+          <li><a href="/blob/master/CHANGELOG.md">Changelog</a></li>
           <li class="muted">&middot;</li>
-          <li>
-            <a href="/releases">Releases</a>
-          </li>
+          <li><a href="/releases">Releases</a></li>
         </ul>
       </div>
     </footer>
-    <!-- JavaScript and analytics only. -->
 
+    <!-- JavaScript and analytics only. -->
     <!-- Core JavaScript
 ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/holder.js"></script>
-    <script src="assets/js/hiless.js"></script>
-    <script src="assets/js/highlight.js"></script>
-    <script>
-      hljs.initHighlightingOnLoad();
-    </script>
-    <script src="assets/js/application.js"></script>
+
+<script src="assets/js/holder.js"></script>
+<script src="assets/js/hiless.js"></script>
+<script src="assets/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="assets/js/application.js"></script>
+
+
+
+
+
   </body>
 </html>

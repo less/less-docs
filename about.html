@@ -2,102 +2,108 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions. LESS runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions. LESS runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
 ">
-    <meta name="author" content="Alexis Sellier">
-    <link rel="alternate" type="application/atom+xml" title="About Feed" href="/index.xml">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
-    <title>
-      About | Less.js
-    </title>
+<meta name="author" content="Alexis Sellier">
+<link rel="alternate" type="application/atom+xml" title="About Feed" href="/index.xml">
 
-    <!-- Documentation styles -->
-    <link href="assets/css/docs.css" rel="stylesheet">
-    <link href="assets/css/github.css" rel="stylesheet">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<title>
+  About | Less.js
+</title>
 
-    <!--[if lt IE 9]>
+
+<!-- Main styles -->
+<link href="assets/css/site.css" rel="stylesheet">
+<link href="assets/css/github.css" rel="stylesheet">
+
+<!-- Webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="assets/ico/favicon.png">
+
+
   </head>
   <body>
     <a class="sr-only" href="#content">Skip to main content</a>
 
     <!-- Docs master nav -->
     <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
-      <div class="container">
-        <div class="navbar-header">
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a href="index.html" class="navbar-brand">LESS</a>
-        </div>
-        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="./features.html">Features</a>
-            </li>
-            <li>
-              <a href="./functions.html">Function Reference</a>
-            </li>
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="index.html" class="navbar-brand">LESS</a>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="./features.html">Language Features</a>
+        </li>
+        
+        <li>
+          <a href="./functions.html">Function Reference</a>
+        </li>
+        <li>
+          <a href="./usage.html">Usage</a>
+        </li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="active">
+          <a href="./about.html">About</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li> <a href="">Docs Repo</a> </li>
+            <li> <a href="/issues?&amp;state=open">Docs Issues</a> </li>
+            <li class="divider"></li>
+            <li> <a href="">Less.js Repo</a> </li>
+            <li> <a href="/issues?&amp;state=open">Less.js Issues</a> </li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active">
-              <a href="./about.html">About</a>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li>
-                  <a href="">Docs Repo</a>
-                </li>
-                <li>
-                  <a href="/issues?&amp;state=open">Docs Issues</a>
-                </li>
-                <li class="divider"></li>
-                <li>
-                  <a href="">Less.js Repo</a>
-                </li>
-                <li>
-                  <a href="/issues?&amp;state=open">Less.js Issues</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
 
     <!-- Header -->
     <div class="docs-header" id="content">
       <div class="container">
         <h1>About</h1>
         <p>Learn about the history of Less.js, meet the core team, and check out the ever-growing community resources.</p>
+        
       </div>
     </div>
 
     <!-- Callout for the old docs link -->
     <div class="banner">
-      <div class="container">
-        <strong>
-      <a href="/blob/master/CHANGELOG.md">See what's new in v1.5.0-b4</a>
+  <div class="container">
+    <strong>
+      <a href="/blob/master/CHANGELOG.md">See what's new in v1.5.1</a>
     </strong>
-        To hear what's new from the Less.js core team,
-        <a href="TODO">visit the blog</a>.
-      </div>
-    </div>
+    To hear what's new from the Less.js core team, <a href="TODO">visit the blog</a>.
+  </div>
+</div>
+
 
     <!-- Content -->
     <div class="container docs-container">
@@ -105,185 +111,152 @@
         <div class="col-md-3">
           <div class="sidebar hidden-print" role="complementary">
             <ul class="nav sidenav">
-              <li>
-                <a href="#history">History</a>
-              </li>
-              <li>
-                <a href="#team">Core team</a>
-              </li>
-              <li>
-                <a href="#ports">Ports</a>
-              </li>
-              <li>
-                <a href="#community">Community</a>
-              </li>
-              <li>
-                <a href="#translations">Translations</a>
-              </li>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                <li> <a href="#history">History</a> </li>
+<li> <a href="#team">Core team</a> </li>
+<li> <a href="#ports">Ports</a> </li>
+<li> <a href="#community">Community</a> </li>
+<li> <a href="#translations">Translations</a> </li>
+
+              
             </ul>
           </div>
         </div>
         <div class="col-md-9" role="main">
+          
 
-          <!-- History
-================================================== -->
-          <div class="docs-section">
-            <div class="page-header">
-              <h1 id="history">History</h1>
-            </div>
-            <p class="lead">LESS was developed by
-              <a href="http://cloudhead.io">Alexis Sellier</a>, more commonly known as
-              <a href="http://cloudhead.io">@cloudhead</a>. The Less.js project is now mantained and extended by the community and the core LESS team.</p>
-            <p>LESS was created in 2009 by
-              <a href="https://github.com/cloudhead">Alexis Sellier</a>, more commonly known as
-              <a href="https://twitter.com/cloudhead">@cloudhead</a>.</p>
-          </div>
 
-          <!-- Team
+<!-- History
 ================================================== -->
-          <div class="docs-section">
-            <div class="page-header">
-              <h1 id="team">Core team</h1>
-            </div>
-            <p class="lead">Less.js is maintained by the founding team and a small group of invaluable core contributors, with the massive support and involvement of our community.</p>
-            <div class="list-group less-team">
-              <div class="list-group-item">
-                <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=lukeapage&amp;type=follow"></iframe>
-                <a class="team-member" href="https://github.com/lukeapage">
-                  <img src="http://www.gravatar.com/avatar/a80ab1a8297225d70baffc52adf6aefd" alt="@lukeapage">
-                  <strong>Luke Page</strong> 
-                  <small>@lukeapage</small>
-                </a>
-              </div>
-              <div class="list-group-item">
-                <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=matthewdean&amp;type=follow"></iframe>
-                <a class="team-member" href="https://github.com/matthewdean">
-                  <img src="http://www.gravatar.com/avatar/09caa4a26a5e57031146b5e06b4d7a8c" alt="@matthewdean">
-                  <strong>Matthew Dean</strong> 
-                  <small>@matthew-dean</small>
-                </a>
-              </div>
-              <div class="list-group-item">
-                <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=jonschlinkert&amp;type=follow"></iframe>
-                <a class="team-member" href="https://github.com/jonschlinkert">
-                  <img src="http://www.gravatar.com/avatar/1bba28be5506009e85fb9dde1dd66535" alt="@jonschlinkert">
-                  <strong>Jon Schlinkert</strong> 
-                  <small>@jonschlinkert</small>
-                </a>
-              </div>
-            </div>
-            <p>Get involved with Less.js development by
-              <a href="https://github.com/less/less.js/issues/new">opening an issue</a>or submitting a pull request. Read our
-              <a href="https://github.com/less/less.js/blob/master/CONTRIBUTING.md">contributing guidelines</a>for information on how we develop.</p>
-          </div>
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="history">History</h1>
+  </div>
+  <p class="lead">LESS was developed by <a href="http://cloudhead.io">Alexis Sellier</a>, more commonly known as <a href="http://cloudhead.io">@cloudhead</a>. The Less.js project is now mantained and extended by the community and the core LESS team.</p>
 
-          <!-- Community
-================================================== -->
-          <div class="docs-section">
-            <div class="page-header">
-              <h1 id="community">Community</h1>
-            </div>
-            <p class="lead">Stay up to date on the development of Less.js and reach out to the community with these helpful resources.</p>
-            <ul>
-              <li>Read and subscribe to
-                <a href="">The Official Less.js Blog</a>.</li>
-              <li>Have a feature request or bug report?
-                <a href="/issues?state=open">Let us know on our GitHub Issues</a>.</li>
-            </ul>
-          </div>
+  <p>LESS was created in 2009 by <a href="https://github.com/cloudhead">Alexis Sellier</a>, more commonly known as <a href="https://twitter.com/cloudhead">@cloudhead</a>.</p>
 
-          <!-- Ports
-================================================== -->
-          <div class="docs-section">
-            <div class="page-header">
-              <h1 id="ports">Ports of Less.js</h1>
-            </div>
-            <p class="lead">LESS has been ported to several other programming languages.</p>
-            <ul>
-              <h2 id="java">Java</h2>
-              <ul>
-                <li>
-                  <a href="https://github.com/Asual/lesscss-engine">LESS Engine</a>(Runs less.js in the Rhino JVM-based JavaScript interpreter)</li>
-                <li>
-                  <a href="https://github.com/marceloverdijk/lesscss-java">LESS CSS Compiler for Java</a>(Runs less.js in the Rhino JVM-based JavaScript interpreter)</li>
-                <li>
-                  <a href="https://github.com/SomMeri/less4j">Less4j</a>(Native Java implementation.)</li>
-              </ul>
-              <h2 id="-net">.Net</h2>
-              <ul>
-                <li>
-                  <a href="http://www.dotlesscss.org/">LESS CSS for .Net</a>
-                </li>
-              </ul>
-              <h2 id="php">PHP</h2>
-              <ul>
-                <li>
-                  <a href="http://leafo.net/lessphp/docs/">lessphp</a>
-                </li>
-                <li>
-                  <a href="http://wordpress.org/extend/plugins/bw-less-css/">BW LESS CSS</a>(WordPress Plugin)</li>
-                <li>
-                  <a href="http://lessphp.gpeasy.com/">less.php</a>
-                </li>
-              </ul>
-              <h2 id="ruby">Ruby</h2>
-              <ul>
-                <li>
-                  <a href="https://github.com/cowboyd/less.rb">Less.js In Ruby&#39;s V8 Engine</a>
-                </li>
-              </ul>
-            </ul>
-            <p>Have another language to add, or perhaps a different or better translation? Let us know by
-              <a href="https://github.com/less/less.js/issues/new">opening an issue</a>.</p>
-          </div>
+</div>
 
-          <!-- Translations
+
+<!-- Team
 ================================================== -->
-          <div class="docs-section">
-            <div class="page-header">
-              <h1 id="translations">Translations</h1>
-            </div>
-            <p class="lead">Community members have translated Less.js's documentation into various langauges. None are officially supported and may not always be up to date.</p>
-            <ul>
-              <ul>
-                <li>Chinese:
-                  <a href="http://lesscss.net">http://lesscss.net</a>
-                </li>
-                <li>Danish:
-                  <a href="http://lesscss.dk">http://lesscss.dk</a>
-                </li>
-                <li>French:
-                  <a href="http://luckymarmot.com/lesscss">http://luckymarmot.com/lesscss</a>
-                </li>
-                <li>German:
-                  <a href="http://lesscss.de">http://lesscss.de</a>
-                </li>
-                <li>Indonesian:
-                  <a href="http://bertzzie.com/post/7/dokumentasi-less-bahasa-indonesia">http://bertzzie.com/post/7/dokumentasi-less-bahasa-indonesia</a>
-                </li>
-                <li>Japanese:
-                  <a href="http://less-ja.studiomohawk.com/">http://less-ja.studiomohawk.com/</a>
-                </li>
-                <li>Polish:
-                  <a href="http://ciembor.github.com/lesscss.org/">http://ciembor.github.com/lesscss.org/</a>
-                </li>
-                <li>Portugese:
-                  <a href="http://giovanneafonso.github.io/lesscss.org/">http://giovanneafonso.github.io/lesscss.org/</a>
-                </li>
-                <li>Russian:
-                  <a href="http://lesscss.ru">http://lesscss.ru</a>
-                </li>
-                <li>Ukrainian:
-                  <a href="http://komaval.github.com/lesscss.org/">http://komaval.github.com/lesscss.org/</a>
-                </li>
-                <li>Belorussian: (Out of date)
-                  <a href="http://www.designcontest.com/show/lesscss-be">http://www.designcontest.com/show/lesscss-be</a>
-                </li>
-              </ul>
-            </ul>
-            <p>Have another language to add, or perhaps a different or better translation? Let us know by
-              <a href="https://github.com/less/less.js/issues/new">opening an issue</a>.</p>
-          </div>
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="team">Core team</h1>
+  </div>
+  <p class="lead">Less.js is maintained by the founding team and a small group of invaluable core contributors, with the massive support and involvement of our community.</p>
+  <div class="list-group less-team">
+    <div class="list-group-item">
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=lukeapage&amp;type=follow"></iframe>
+      <a class="team-member" href="https://github.com/lukeapage">
+        <img src="http://www.gravatar.com/avatar/a80ab1a8297225d70baffc52adf6aefd" alt="@lukeapage">
+        <strong>Luke Page</strong> <small>@lukeapage</small>
+      </a>
+    </div>
+    <div class="list-group-item">
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=matthewdean&amp;type=follow"></iframe>
+      <a class="team-member" href="https://github.com/matthewdean">
+        <img src="http://www.gravatar.com/avatar/09caa4a26a5e57031146b5e06b4d7a8c" alt="@matthewdean">
+        <strong>Matthew Dean</strong> <small>@matthew-dean</small>
+      </a>
+    </div>
+    <div class="list-group-item">
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=jonschlinkert&amp;type=follow"></iframe>
+      <a class="team-member" href="https://github.com/jonschlinkert">
+        <img src="http://www.gravatar.com/avatar/1bba28be5506009e85fb9dde1dd66535" alt="@jonschlinkert">
+        <strong>Jon Schlinkert</strong> <small>@jonschlinkert</small>
+      </a>
+    </div>
+  </div>
+  <p>Get involved with Less.js development by <a href="https://github.com/less/less.js/issues/new">opening an issue</a> or submitting a pull request. Read our <a href="https://github.com/less/less.js/blob/master/CONTRIBUTING.md">contributing guidelines</a> for information on how we develop.</p>
+</div>
+
+
+<!-- Community
+================================================== -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="community">Community</h1>
+  </div>
+  <p class="lead">Stay up to date on the development of Less.js and reach out to the community with these helpful resources.</p>
+  <ul>
+    <li>Read and subscribe to <a href="">The Official Less.js Blog</a>.</li>
+    <li>Have a feature request or bug report? <a href="/issues?state=open">Let us know on our GitHub Issues</a>.</li>
+  </ul>
+</div>
+
+
+<!-- Ports
+================================================== -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="ports">Ports of Less.js</h1>
+  </div>
+  <p class="lead">LESS has been ported to several other programming languages.</p>
+  <ul>
+   <h2 id="java">Java</h2>
+<ul>
+<li><a href="https://github.com/Asual/lesscss-engine">LESS Engine</a> (Runs less.js in the Rhino JVM-based JavaScript interpreter)</li>
+<li><a href="https://github.com/marceloverdijk/lesscss-java">LESS CSS Compiler for Java</a> (Runs less.js in the Rhino JVM-based JavaScript interpreter)</li>
+<li><a href="https://github.com/SomMeri/less4j">Less4j</a> (Native Java implementation.)</li>
+</ul>
+<h2 id="-net">.Net</h2>
+<ul>
+<li><a href="http://www.dotlesscss.org/">LESS CSS for .Net</a></li>
+</ul>
+<h2 id="php">PHP</h2>
+<ul>
+<li><a href="http://leafo.net/lessphp/docs/">lessphp</a></li>
+<li><a href="http://wordpress.org/extend/plugins/bw-less-css/">BW LESS CSS</a> (WordPress Plugin)</li>
+<li><a href="http://lessphp.gpeasy.com/">less.php</a></li>
+</ul>
+<h2 id="ruby">Ruby</h2>
+<ul>
+<li><a href="https://github.com/cowboyd/less.rb">Less.js In Ruby&#39;s V8 Engine</a></li>
+</ul>
+<p>Know of another port that should be added to this list? Please <a href="https://github.com/less/less-docs/issues/new">let us know</a>.</p>
+
+  </ul>
+  <p>Have another language to add, or perhaps a different or better translation? Let us know by <a href="https://github.com/less/less.js/issues/new">opening an issue</a>.</p>
+</div>
+
+
+<!-- Translations
+================================================== -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="translations">Translations</h1>
+  </div>
+  <p class="lead">Community members have translated Less.js's documentation into various langauges. None are officially supported and may not always be up to date.</p>
+  <ul>
+   <ul>
+<li><strong>Chinese</strong>: <a href="http://lesscss.net">http://lesscss.net</a></li>
+<li><strong>Danish</strong>: <a href="http://lesscss.dk">http://lesscss.dk</a></li>
+<li><strong>French</strong>: <a href="http://luckymarmot.com/lesscss">http://luckymarmot.com/lesscss</a></li>
+<li><strong>German</strong>: <a href="http://lesscss.de">http://lesscss.de</a></li>
+<li><strong>Indonesian</strong>: <a href="http://bertzzie.com/post/7/dokumentasi-less-bahasa-indonesia">http://bertzzie.com/post/7/dokumentasi-less-bahasa-indonesia</a></li>
+<li><strong>Japanese</strong>: <a href="http://less-ja.studiomohawk.com/">http://less-ja.studiomohawk.com/</a></li>
+<li><strong>Polish</strong>: <a href="http://ciembor.github.com/lesscss.org/">http://ciembor.github.com/lesscss.org/</a></li>
+<li><strong>Portugese</strong>: <a href="http://giovanneafonso.github.io/lesscss.org/">http://giovanneafonso.github.io/lesscss.org/</a></li>
+<li><strong>Russian</strong>: <a href="http://lesscss.ru">http://lesscss.ru</a></li>
+<li><strong>Ukrainian</strong>: <a href="http://komaval.github.com/lesscss.org/">http://komaval.github.com/lesscss.org/</a></li>
+<li><strong>Belorussian</strong>: (Out of date) <a href="http://www.designcontest.com/show/lesscss-be">http://www.designcontest.com/show/lesscss-be</a></li>
+</ul>
+<p>Do you know of a translation that should be added to this list? Please <a href="https://github.com/less/less-docs/issues/new">let us know</a>.</p>
+
+  </ul>
+  <p>Have another language to add, or perhaps a different or better translation? Let us know by <a href="https://github.com/less/less.js/issues/new">opening an issue</a>.</p>
+</div>
+
         </div>
       </div>
     </div>
@@ -292,57 +265,50 @@
     <footer class="bs-footer" role="contentinfo">
       <div class="container">
         <div class="bs-social">
-          <ul class="bs-social-buttons">
-            <li>
-              <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=less&amp;repo=less.js&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
-            </li>
-            <li>
-              <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=less&amp;repo=less.js&amp;type=fork&amp;count=true" width="102" height="20" title="Fork on GitHub"></iframe>
-            </li>
-          </ul>
-        </div>
-        <p>
-          <a href="https://github.com/less/less.js">Less.js</a>was created by
-          <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka
-          <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
-        <p>Documentation source code released under the
-          <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under
-          <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+  <ul class="bs-social-buttons">
+    <li>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=less&amp;repo=less.js&amp;type=watch&amp;count=true" width="100" height="20" title="Star on GitHub"></iframe>
+    </li>
+    <li>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=less&amp;repo=less.js&amp;type=fork&amp;count=true" width="102" height="20" title="Fork on GitHub"></iframe>
+    </li>
+  </ul>
+</div>
+
+        <p><a href="https://github.com/less/less.js">Less.js</a> was created by <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
+        <p>Documentation source code released under the <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
         <ul class="footer-links">
-          <li>Currently v1.5.0-b4</li>
+          <li>Currently v1.5.1</li>
           <li class="muted">&middot;</li>
-          <li>
-            <a href="">Blog</a>
-          </li>
+          <li><a href="">Blog</a></li>
           <li class="muted">&middot;</li>
-          <li>
-            <a href="/issues?state=open">Issues</a>
-          </li>
+          <li><a href="/issues?state=open">Issues</a></li>
           <li class="muted">&middot;</li>
-          <li>
-            <a href="/blob/master/CHANGELOG.md">Changelog</a>
-          </li>
+          <li><a href="/blob/master/CHANGELOG.md">Changelog</a></li>
           <li class="muted">&middot;</li>
-          <li>
-            <a href="/releases">Releases</a>
-          </li>
+          <li><a href="/releases">Releases</a></li>
         </ul>
       </div>
     </footer>
-    <!-- JavaScript and analytics only. -->
 
+    <!-- JavaScript and analytics only. -->
     <!-- Core JavaScript
 ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
 
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/holder.js"></script>
-    <script src="assets/js/hiless.js"></script>
-    <script src="assets/js/highlight.js"></script>
-    <script>
-      hljs.initHighlightingOnLoad();
-    </script>
-    <script src="assets/js/application.js"></script>
+
+<script src="assets/js/holder.js"></script>
+<script src="assets/js/hiless.js"></script>
+<script src="assets/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="assets/js/application.js"></script>
+
+
+
+
+
   </body>
 </html>
