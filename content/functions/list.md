@@ -1,4 +1,3 @@
-<a id="length"></a>
 ### length
 
 > Returns a number of elements in a value list.
@@ -18,16 +17,14 @@ n: length(@list);
 
 Output:
 
-```css
+```
 n: 4;
 ```
 
-
-<a id="extract"></a>
 ### extract
 
 > Returns a value at a specified position in a list.
- 
+
 Parameters:
 `list` - a comma or space separated list of values.
 `index` - an integer that specifies a position of a list element to return.
@@ -45,6 +42,6 @@ value: extract(@list, 3);
 
 Output:
 
-```css
+```
 value: coconut;
 ```

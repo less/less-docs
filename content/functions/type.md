@@ -1,4 +1,3 @@
-<a id="isnumber"></a>
 ### isnumber
 
 > Returns `true` if value is a number, `false` otherwise.
@@ -6,7 +5,8 @@
 Parameters: `value` - a value or variable being evaluated.
 Returns: `true` if value is a number, `false` otherwise.
 
-Example: 
+Example:
+
 ```less
 isnumber(#ff0);     // false
 isnumber(blue);     // false
@@ -19,7 +19,6 @@ isnumber(url(...)); // false
 ```
 
 
-<a id="isstring"></a>
 ### isstring
 
 > Returns `true` if value is a string, `false` otherwise.
@@ -27,7 +26,8 @@ isnumber(url(...)); // false
 Parameters: `value` - a value or variable being evaluated.
 Returns: `true` if value is a string, `false` otherwise.
 
-Example: 
+Example:
+
 ```less
 isstring(#ff0);     // false
 isstring(blue);     // false
@@ -40,7 +40,6 @@ isstring(url(...)); // false
 ```
 
 
-<a id="iscolor"></a>
 ### iscolor
 
 > Returns `true` if value is a color, `false` otherwise.
@@ -48,7 +47,8 @@ isstring(url(...)); // false
 Parameters: `value` - a value or variable being evaluated.
 Returns: `true` if value is a color, `false` otherwise.
 
-Example: 
+Example:
+
 ```less
 iscolor(#ff0);     // true
 iscolor(blue);     // true
@@ -61,7 +61,6 @@ iscolor(url(...)); // false
 ```
 
 
-<a id="iskeyword"></a>
 ### iskeyword
 
 > Returns `true` if value is a keyword, `false` otherwise.
@@ -69,7 +68,8 @@ iscolor(url(...)); // false
 Parameters: `value` - a value or variable being evaluated.
 Returns: `true` if value is a keyword, `false` otherwise.
 
-Example: 
+Example:
+
 ```less
 iskeyword(#ff0);     // false
 iskeyword(blue);     // false
@@ -82,7 +82,6 @@ iskeyword(url(...)); // false
 ```
 
 
-<a id="isurl"></a>
 ### isurl
 
 > Returns `true` if value is a url, `false` otherwise.
@@ -90,7 +89,8 @@ iskeyword(url(...)); // false
 Parameters: `value` - a value or variable being evaluated.
 Returns: `true` if value is a url, `false` otherwise.
 
-Example: 
+Example:
+
 ```less
 isurl(#ff0);     // false
 isurl(blue);     // false
@@ -103,7 +103,6 @@ isurl(url(...)); // true
 ```
 
 
-<a id="ispixel"></a>
 ### ispixel
 
 > Returns `true` if value is a number in pixels, `false` otherwise.
@@ -111,7 +110,8 @@ isurl(url(...)); // true
 Parameters: `value` - a value or variable being evaluated.
 Returns: `true` if value is a pixel, `false` otherwise.
 
-Example: 
+Example:
+
 ```less
 ispixel(#ff0);     // false
 ispixel(blue);     // false
@@ -124,7 +124,6 @@ ispixel(url(...)); // false
 ```
 
 
-<a id="isem"></a>
 ### isem
 
 > Returns `true` if value is an em value, `false` otherwise.
@@ -132,7 +131,8 @@ ispixel(url(...)); // false
 Parameters: `value` - a value or variable being evaluated.
 Returns: `true` if value is an em value, `false` otherwise.
 
-Example: 
+Example:
+
 ```less
 isem(#ff0);     // false
 isem(blue);     // false
@@ -145,7 +145,6 @@ isem(url(...)); // false
 ```
 
 
-<a id="ispercentage"></a>
 ### ispercentage
 
 > Returns `true` if value is a percentage value, `false` otherwise.
@@ -153,7 +152,8 @@ isem(url(...)); // false
 Parameters: `value` - a value or variable being evaluated.
 Returns: `true` if value is a percentage value, `false` otherwise.
 
-Example: 
+Example:
+
 ```less
 ispercentage(#ff0);     // false
 ispercentage(blue);     // false
@@ -166,17 +166,17 @@ ispercentage(url(...)); // false
 ```
 
 
-<a id="isunit"></a>
 ### isunit
 
 > Returns `true` if value is a number in specified units, `false` otherwise.
 
-Parameters: 
+Parameters:
 * `value` - a value or variable being evaluated.
 * `unit` - a unit identifier (optionaly quoted) to test for.
 Returns: `true` if value is a number in specified units, `false` otherwise.
 
-Example: 
+Example:
+
 ```less
 isunit(11px, px);  // true
 isunit(2.2%, px);  // false

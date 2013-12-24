@@ -61,9 +61,7 @@ Mixins allow you to embed all the properties of a class into another class by si
 }
 ```
 
-<td>
-  <pre class="css-output"><code>/* Compiled CSS */
-
+```css
 #header {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -77,22 +75,14 @@ Mixins allow you to embed all the properties of a class into another class by si
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-}</code></pre>
-  </td></tr>
-</table>
+}
+```
 
 ## Nested Rules
 
-Rather than constructing long selector names to specify inheritance,
-in Less you can simply nest selectors inside other selectors.
-This makes inheritance clear and style sheets shorter.
+Rather than constructing long selector names to specify inheritance, in Less you can simply nest selectors inside other selectors. This makes inheritance clear and style sheets shorter.
 
-<table class="code-example" cellpadding="0">
-  <tr>
-    <td>
-  <pre class="less-example">
-<code>// LESS
-
+```less
 #header {
   h1 {
     font-size: 26px;
@@ -104,12 +94,11 @@ This makes inheritance clear and style sheets shorter.
     }
   }
 }
+```
 
-</code></pre></td>
+Results in:
 
-<td>
-  <pre class="css-output"><code>/* Compiled CSS */
-
+```css
 #header h1 {
   font-size: 26px;
   font-weight: bold;
@@ -123,25 +112,13 @@ This makes inheritance clear and style sheets shorter.
 #header p a:hover {
   border-width: 1px;
 }
-
-</code></pre>
-  </td></tr>
-</table>
+```
 
 ## Functions & Operations
 
-Are some elements in your style sheet proportional to other elements?
-Operations let you add, subtract, divide and multiply property values and colors,
-giving you the power to create complex relationships between properties. Operations
-should only be performed within parentheses in order to ensure compatibility with CSS.
-Functions map one-to-one with JavaScript code, allowing you to manipulate values however
-you want.
+Are some elements in your style sheet proportional to other elements? Operations let you add, subtract, divide and multiply property values and colors, giving you the power to create complex relationships between properties. Operations should only be performed within parentheses in order to ensure compatibility with CSS. Functions map one-to-one with JavaScript code, allowing you to manipulate values however you want.
 
-<table class="code-example" cellpadding="0">
-  <tr><td>
-  <pre class="less-example">
-<code>// LESS
-
+```less
 @the-border: 1px;
 @base-color: #111;
 @red:        #842210;
@@ -155,12 +132,9 @@ you want.
   color: (@base-color + #003300);
   border-color: desaturate(@red, 10%);
 }
+```
 
-</code></pre></td>
-
-<td>
-  <pre class="css-output"><code>/* Compiled CSS */
-
+```css
 #header {
   color: #333;
   border-left: 1px;
@@ -170,8 +144,4 @@ you want.
   color: #114411;
   border-color: #7d2717;
 }
-
-</code></pre>
-  </td></tr>
-</table>
-
+```

@@ -3,7 +3,8 @@ published: false
 ---
 
 # strictMath
-> Make your less more css compatible.
+
+> Make your LESS more CSS compatible.
 
 ## Example
 

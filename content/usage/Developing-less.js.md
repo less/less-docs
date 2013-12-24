@@ -1,8 +1,8 @@
 ## Install these tools
 
-* cygwin (ensure make is selected) - http://cygwin.com/install.html 
-* node - http://nodejs.org/
-* phantomjs - http://phantomjs.org/download.html
+* **cygwin** (ensure make is selected) - <http://cygwin.com/install.html>
+* **node** - <http://nodejs.org/>
+* **phantomjs** - <http://phantomjs.org/download.html>
 
 make sure the paths are setup. If you startup cygwin and type `node -v` you should see the node compiler. If you run `phantomjs -v` you should see the phantomjs version number.
 

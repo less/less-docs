@@ -19,8 +19,8 @@ You can mix-in class selectors and id selectors, e.g.
 When you call the mixin, the parenthesis are optional.
 
 ```less
-  .a();   //these lines do the same thing
-  .a;
+.a();   //these lines do the same thing
+.a;
 ```
 
 ## Not outputting the mixin
@@ -40,6 +40,7 @@ If you want to create a mixin but you do not want that mixin to be output, you c
 }
 ```
 outputs
+
 ```css
 .my-mixin {
   color: black;
@@ -54,7 +55,7 @@ outputs
 
 Mixins can contain more than just properties, they can contain selectors to.
 
-For example.
+For example:
 
 ```less
 .my-hover-mixin() {
@@ -66,7 +67,9 @@ button {
   .my-hover-mixin();
 }
 ```
+
 Outputs
+
 ```css
 button:hover {
   border: 1px solid red;
@@ -89,18 +92,19 @@ If you want to mixin properties inside a more complicated selector, you can stac
 }
 ```
 
-and again the > is optional
+and again the `>` is optional
 
 ```less
-  #outer > .inner;          // all do the same thing
-  #outer > .inner();
-  #outer.inner;
-  #outer.inner();
+// all do the same thing
+#outer > .inner;
+#outer > .inner();
+#outer.inner;
+#outer.inner();
 ```
 
 One use of this is known as namespacing. You can put your mixins under a id selector and this makes sure it won't conflict with another library.
 
-e.g.
+Example:
 
 ```less
 #my-library {
@@ -114,33 +118,34 @@ e.g.
 }
 ```
 
-## The Keyword !important
-Use the !important keyword after mixin call to mark all properties brought by it as !important:
+## The `!important` keyword
 
-Sample input:
+Use the `!important` keyword after mixin call to mark all properties inherited by it as `!important`:
+
+Example:
 
 ```less
-.mixin (@a: 0) {
-  border: @a;
-  boxer: @a;
+.foo (@bg: #f5f5f5, @color: #900) {
+  background: @bg;
+  color: @color;
 }
 .unimportant {
-  .mixin(1);
+  .foo(1);
 }
 .important {
-  .mixin(2) !important;
+  .foo(2) !important;
 }
 ```
 
-compiled into:
+Results in:
 
 ```css
 .unimportant {
-  border: 1;
-  boxer: 1;
+  background: #f5f5f5;
+  color: #900;
 }
 .important {
-  border: 2 !important;
-  boxer: 2 !important;
+  background: #f5f5f5 !important;
+  color: #900 !important;
 }
 ```

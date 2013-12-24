@@ -1,6 +1,5 @@
-These operations are _similar_ as the blend modes found in image editors like Photoshop, Firework or GIMP, so you can use them to make your CSS colors match your images.
+> These operations are _similar_ as the blend modes found in image editors like Photoshop, Firework or GIMP, so you can use them to make your CSS colors match your images.
 
-<a id="multiply"></a>
 ## multiply
 
 > Multiply two colors. For each two colors their RGB channel are multiplied then divided by 255. The result is a darker color.
@@ -17,7 +16,6 @@ Returns: `color`
 ```less
 multiply(#ff6600, #000000);
 ```
-
 ![Color 1](http://placehold.it/100x40/ff6600/ffffff&text=ff6600)
 ![Color 2](http://placehold.it/100x40/000000/ffffff&text=000000)
 ![Color 3](http://placehold.it/100x40/000000/ffffff&text=000000)
@@ -87,7 +85,6 @@ multiply(#ff6600, #0000ff);
 ![Color 3](http://placehold.it/100x40/000000/ffffff&text=000000)
 
 
-<a id="screen"></a>
 ## screen
 
 > Do the opposite effect from `multiply`. The result is a brighter color.
@@ -174,7 +171,6 @@ screen(#ff6600, #0000ff);
 ![Color 3](http://placehold.it/100x40/ff66ff/000000&text=ff66ff)
 
 
-<a id="overlay"></a>
 ## overlay
 
 > Combines the effect from both `multiply` and `screen`. Conditionally make light channels lighter and dark channels darker. **Note**: The results of the conditions are determined by the first color parameter.
@@ -261,7 +257,6 @@ overlay(#ff6600, #0000ff);
 ![Color 3](http://placehold.it/100x40/ff0000/ffffff&text=ff0000)
 
 
-<a id="softlight"></a>
 ## softlight
 
 > Similar to `overlay` but avoid pure black resulting in pure black, and pure white resulting in pure white.
@@ -348,7 +343,6 @@ softlight(#ff6600, #0000ff);
 ![Color 3](http://placehold.it/100x40/ff2900/ffffff&text=ff2900)
 
 
-<a id="hardlight"></a>
 ## hardlight
 
 > Similar to `overlay` but use the second color to detect light and dark channels instead of using the first color.
@@ -435,7 +429,6 @@ hardlight(#ff6600, #0000ff);
 ![Color 3](http://placehold.it/100x40/0000ff/ffffff&text=0000ff)
 
 
-<a id="difference"></a>
 ## difference
 
 > Substracts the second color from the first color. The operation is made per RGB channels. The result is a darker color.
@@ -522,7 +515,6 @@ difference(#ff6600, #0000ff);
 ![Color 3](http://placehold.it/100x40/ff66ff/000000&text=ff66ff)
 
 
-<a id="exclusion"></a>
 ## exclusion
 
 > Similar effect to `difference` with lower contrast.
@@ -609,7 +601,6 @@ exclusion(#ff6600, #0000ff);
 ![Color 3](http://placehold.it/100x40/ff66ff/000000&text=ff66ff)
 
 
-<a id="average"></a>
 ## average
 
 > Compute the average of two colors. The operation is made per RGB channels.
@@ -697,7 +688,6 @@ average(#ff6600, #0000ff);
 
 
 
-<a id="negation"></a>
 ## negation
 
 > Do the opposite effect from `difference`.

@@ -7,7 +7,7 @@ LESS allows you to use nesting as well as normal CSS cascading. For example, you
   color: black;
 }
 #header .navigation {
-  font-size:12px;
+  font-size: 12px;
 }
 #header .logo {
   width: 300px;
@@ -174,6 +174,7 @@ Will output
 The `&` combinator can also be used with mixins. In the case of mixins, `&` refers to the selector for the scope that is mixing in the other class.
 
 For example:
+
 ```less
 .mixin {
   &:hover {

@@ -19,7 +19,7 @@ Example:
 }
 
 ```
-Output:
+Results in:
 
 ```css
 .caller {
@@ -43,7 +43,7 @@ div {
 }
 ```
 
-Output:
+Results in:
 
 ```css
 div {

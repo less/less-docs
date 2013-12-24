@@ -8,7 +8,7 @@
 
 ### Grid Systems
 
-  * [960 Grid|combining-960grid-with-less-js]
+* [960 Grid|combining-960grid-with-less-js]
 
 
 ### Frameworks

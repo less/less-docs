@@ -138,15 +138,15 @@ Using them is pretty straightforward. The following example uses percentage to c
 increases the saturation of a base color by 5% and then sets the background color to one that is lightened by
 25% and spun by 8 degrees:
 
-```
-    @base: #f04615;
-    @width: 0.5;
+```less
+@base: #f04615;
+@width: 0.5;
 
-    .class {
-      width: percentage(0.5); // returns `50%`
-      color: saturate(@base, 5%);
-      background-color: spin(lighten(@base, 25%), 8);
-    }
+.class {
+  width: percentage(0.5); // returns `50%`
+  color: saturate(@base, 5%);
+  background-color: spin(lighten(@base, 25%), 8);
+}
 ```
 
 
@@ -186,14 +186,14 @@ Scope in LESS is very similar to that of programming languages. Variables and mi
 Note that the order of declaration **does** matter.
 
 ```less
-  @var: red;
+@var: red;
 
-  #page {
-    @var: white;
-    #header {
-      color: @var; // white
-    }
+#page {
+  @var: white;
+  #header {
+    color: @var; // white
   }
+}
 ```
 
 ## Comments

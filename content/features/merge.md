@@ -17,6 +17,7 @@ Example:
 }
 ```
 Outputs
+
 ```css
 .myclass {
   box-shadow: inset 0 0 10px #555, 0 0 20px black;
@@ -25,4 +26,4 @@ Outputs
 
 To avoid any unintentional joins, `merge` requires an explicit `+` flag on each join pending declaration.
 
-Note: although convention on the transform property is to have space separated, comma separation is supported which is why there is no option on this feature for whether to generate space or comma separated.
+_Note: although convention on the transform property is to have space separated, comma separation is supported which is why there is no option on this feature for whether to generate space or comma separated._

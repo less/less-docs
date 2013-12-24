@@ -1,5 +1,4 @@
-<a id="hue"></a>
-## hue
+### hue
 
 > Extracts the hue channel of a color object.
 
@@ -9,8 +8,7 @@ Example: `hue(hsl(90, 100%, 50%))`
 Output: `90`
 
 
-<a id="saturation"></a>
-## saturation
+### saturation
 
 > Extracts the saturation channel of a color object.
 
@@ -20,8 +18,7 @@ Example: `saturation(hsl(90, 100%, 50%))`
 Output: `100%`
 
 
-<a id="lightness"></a>
-## lightness
+### lightness
 
 > Extracts the lightness channel of a color object.
 
@@ -31,8 +28,7 @@ Example: `lightness(hsl(90, 100%, 50%))`
 Output: `50%`
 
 
-<a id="hsvhue"></a>
-## hsvhue
+### hsvhue
 
 > Extracts the hue channel of a color object in the HSV color space.
 
@@ -42,8 +38,7 @@ Example: `hsvhue(hsv(90, 100%, 50%))`
 Output: `90`
 
 
-<a id="hsvsaturation"></a>
-## hsvsaturation
+### hsvsaturation
 
 > Extracts the saturation channel of a color object in the HSV color space.
 
@@ -53,8 +48,7 @@ Example: `hsvsaturation(hsv(90, 100%, 50%))`
 Output: `100%`
 
 
-<a id="hsvvalue"></a>
-## hsvvalue
+### hsvvalue
 
 > Extracts the value channel of a color object in the HSV color space.
 
@@ -64,8 +58,7 @@ Example: `hsvvalue(hsv(90, 100%, 50%))`
 Output: `50%`
 
 
-<a id="red"></a>
-## red
+### red
 
 > Extracts the red channel of a color object.
 
@@ -75,8 +68,7 @@ Example: `red(rgb(10, 20, 30))`
 Output: `10`
 
 
-<a id="green"></a>
-## green
+### green
 
 > Extracts the green channel of a color object.
 
@@ -86,8 +78,7 @@ Example: `green(rgb(10, 20, 30))`
 Output: `20`
 
 
-<a id="blue"></a>
-## blue
+### blue
 
 > Extracts the blue channel of a color object.
 
@@ -97,8 +88,7 @@ Example: `blue(rgb(10, 20, 30))`
 Output: `30`
 
 
-<a id="alpha"></a>
-## alpha
+### alpha
 
 > Extracts the alpha channel of a color object.
 
@@ -108,8 +98,7 @@ Example: `alpha(rgba(10, 20, 30, 0.5))`
 Output: `0.5`
 
 
-<a id="luma"></a>
-## luma
+### luma
 
 > Calculates the [luma](http://en.wikipedia.org/wiki/Luma_(video)) (perceptual brightness) of a color object.
 

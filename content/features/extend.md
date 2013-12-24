@@ -1,4 +1,5 @@
 # Extend
+
 > Extend is a LESS Pseudo-Class which merges the selector it is put on with ones that match what it references.
 
 Released [v1.4.0](https://github.com/less/less.js/blob/master/CHANGELOG.md)
@@ -11,6 +12,7 @@ nav ul {
   background: blue;
 }
 ```
+
 In the rule set above, the `:extend` selector will apply the "extending selector" (`nav ul`) onto the `.inline` class _wherever the `.inline` class appears_. The declaration block will be kept as-is, but without any reference to the extend (because extend isn't css).
 
 So the following:

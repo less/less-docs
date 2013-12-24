@@ -1,4 +1,5 @@
 # Parametric Mixins
+
 > How to pass arguments to mixins
 
 Mixins can also take arguments, which are variables pass to the block of selectors when it is mixed in.
@@ -6,7 +7,7 @@ Mixins can also take arguments, which are variables pass to the block of selecto
 For example:
 
 ```less
-.border-radius (@radius) {
+.border-radius(@radius) {
   border-radius: @radius;
   -moz-border-radius: @radius;
   -webkit-border-radius: @radius;
@@ -27,10 +28,10 @@ And here's how we can mix it into various rulesets:
 Parametric mixins can also have default values for their parameters:
 
 ```less
-.border-radius (@radius: 5px) {
-  -moz-border-radius: @radius;
+.border-radius(@radius: 5px) {
   -webkit-border-radius: @radius;
-  border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
 }
 ```
 
@@ -44,11 +45,10 @@ We can invoke it like this now:
 
 And it will include a 5px border-radius.
 
-You can also use parametric mixins which don't take parameters. This is useful if you want to hide the ruleset from the CSS output,
-but want to include its properties in other rulesets:
+You can also use parametric mixins which don't take parameters. This is useful if you want to hide the ruleset from the CSS output, but want to include its properties in other rulesets:
 
 ```less
-.wrap () {
+.wrap() {
   text-wrap: wrap;
   white-space: -moz-pre-wrap;
   white-space: pre-wrap;
@@ -127,6 +127,7 @@ A mixin reference can supply parameters values by their names instead of just po
 }
 ```
 compiles into:
+
 ```css
 .class1 {
   color: #33acfe;
@@ -142,11 +143,10 @@ compiles into:
 
 ### The `@arguments` variable
 
-`@arguments` has a special meaning inside mixins, it contains all the arguments passed, when the mixin was called. This is useful
-if you don't want to deal with individual parameters:
+`@arguments` has a special meaning inside mixins, it contains all the arguments passed, when the mixin was called. This is useful if you don't want to deal with individual parameters:
 
 ```less
-.box-shadow (@x: 0; @y: 0; @blur: 1px; @color: #000) {
+.box-shadow(@x: 0; @y: 0; @blur: 1px; @color: #000) {
   -webkit-box-shadow: @arguments;
      -moz-box-shadow: @arguments;
           box-shadow: @arguments;
@@ -171,17 +171,17 @@ Which results in:
 You can use `...` if you want your mixin to take a variable number of arguments. Using this after a variable name will assign those arguments to the variable.
 
 ```less
-.mixin (...) {        // matches 0-N arguments
-.mixin () {           // matches exactly 0 arguments
-.mixin (@a: 1) {      // matches 0-1 arguments
-.mixin (@a: 1; ...) { // matches 0-N arguments
-.mixin (@a; ...) {    // matches 1-N arguments
+.mixin(...) {        // matches 0-N arguments
+.mixin() {           // matches exactly 0 arguments
+.mixin(@a: 1) {      // matches 0-1 arguments
+.mixin(@a: 1; ...) { // matches 0-N arguments
+.mixin(@a; ...) {    // matches 1-N arguments
 ```
 
 Furthermore:
 
 ```less
-.mixin (@a; @rest...) {
+.mixin(@a; @rest...) {
    // @rest is bound to arguments after @a
    // @arguments is bound to all arguments
 }
@@ -189,29 +189,26 @@ Furthermore:
 
 ## Pattern-matching
 
-Sometimes, you may want to change the behaviour of a mixin,
-based on the parameters you pass to it. Let's start with something
-basic:
+Sometimes, you may want to change the behaviour of a mixin, based on the parameters you pass to it. Let's start with something basic:
 
 ```less
-.mixin (@s; @color) { ... }
+.mixin(@s; @color) { ... }
 
 .class {
   .mixin(@switch; #888);
 }
 ```
 
-Now let's say we want `.mixin` to behave differently, based on the value of `@switch`,
-we could define `.mixin` as such:
+Now let's say we want `.mixin` to behave differently, based on the value of `@switch`, we could define `.mixin` as such:
 
 ```less
-.mixin (dark; @color) {
+.mixin(dark; @color) {
   color: darken(@color, 10%);
 }
-.mixin (light; @color) {
+.mixin(light; @color) {
   color: lighten(@color, 10%);
 }
-.mixin (@_; @color) {
+.mixin(@_; @color) {
   display: block;
 }
 ```
@@ -250,10 +247,10 @@ Anything other than a variable matches only with a value equal to itself.
 We can also match on arity, here's an example:
 
 ```less
-.mixin (@a) {
+.mixin(@a) {
   color: @a;
 }
-.mixin (@a; @b) {
+.mixin(@a; @b) {
   color: fade(@a; @b);
 }
 ```

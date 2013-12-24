@@ -1,4 +1,3 @@
-<a id="ceil"></a>
 ### ceil
 
 > Rounds up to the next highest integer.
@@ -8,7 +7,7 @@ Returns: `integer`
 Example: `ceil(2.4)`
 Output: `3`
 
-<a id="floor"></a>
+
 ### floor
 
 > Rounds down to the next lowest integer.
@@ -18,7 +17,7 @@ Returns: `integer`
 Example: `floor(2.6)`
 Output: `2`
 
-<a id="percentage"></a>
+
 ### percentage
 
 > Converts a floating point number into a percentage string.
@@ -28,7 +27,7 @@ Returns: `string`
 Example: `percentage(0.5)`
 Output: `50%`
 
-<a id="round"></a>
+
 ### round
 
 > Applies rounding.
@@ -45,7 +44,6 @@ Example: `round(1.67, 1)`
 Output: `1.7`
 
 
-<a id="sqrt"></a>
 ### sqrt
 
 > Calculates square root of a number. Keeps units as they are.
@@ -76,7 +74,7 @@ Output:
 4.312771730569565%;
 ```
 
-<a id="abs"></a>
+
 ### abs
 
 > Calculates absolute value of a number. Keeps units as they are.
@@ -89,7 +87,7 @@ Example #2: `abs(-18.6%)`
 Output: `18.6%;`
 
 
-<a id="sin"></a>
+
 ### sin
 
 > Calculates sine function.
@@ -115,7 +113,7 @@ Output:
 0.015707317311820675; // sine of 1 gradian
 ```
 
-<a id="asin"></a>
+
 ### asin
 
 > Calculates arcsine (inverse of sine) function.
@@ -141,7 +139,7 @@ Output:
 NaNrad
 ```
 
-<a id="cos"></a>
+
 ### cos
 
 > Calculates cosine function.
@@ -166,7 +164,7 @@ Output:
 0.9998766324816606 // cosine of 1 gradian
 ```
 
-<a id="acos"></a>
+
 ### acos
 
 > Calculates arccosine (inverse of cosine) function.
@@ -191,7 +189,7 @@ Output:
 NaNrad
 ```
 
-<a id="tan"></a>
+
 ### tan
 
 > Calculates tangent function.
@@ -211,12 +209,12 @@ tan(1grad) // tangent of 1 gradian
 Output:
 
 ```
-1.5574077246549023 // tangent of 1 radian
+1.5574077246549023   // tangent of 1 radian
 0.017455064928217585 // tangent of 1 degree
 0.015709255323664916 // tangent of 1 gradian
 ```
 
-<a id="atan"></a>
+
 ### atan
 
 > Calculates arctangent (inverse of tangent) function.
@@ -242,7 +240,7 @@ Output:
 1.525373rad;
 ```
 
-<a id="pi"></a>
+
 ### pi
 
 > Returns &pi; (pi);
@@ -262,7 +260,7 @@ Output:
 3.141592653589793
 ```
 
-<a id="pow"></a>
+
 ### pow
 
 > Returns the value of the first argument raised to the power of the second argument.
@@ -295,7 +293,7 @@ NaN
 NaN%
 ```
 
-<a id="mod"></a>
+
 ### mod
 
 > Returns the value of the first argument modulus second argument.
@@ -323,7 +321,7 @@ NaNcm;
 -1%;
 ```
 
-<a id="min"></a>
+
 ### min
 
 > Returns the lowest of one or more values.
@@ -338,7 +336,7 @@ Example: `min(3px, 42px, 1px, 16px);`
 Output: `1px`
 
 
-<a id="max"></a>
+
 ### max
 
 > Returns the highest of one or more values.

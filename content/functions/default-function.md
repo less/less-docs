@@ -1,4 +1,3 @@
-<a id="default"></a>
 ### default
 > Available inside guard conditions and returns `true` only if no other mixin matches, `false` otherwise.
 
@@ -94,7 +93,7 @@ Advanced multiple `default()` usage:
   &-baz   {.m('baz')}
 }
 ```
-result:
+Result:
 
 ```css
 .x-blue {
@@ -111,19 +110,21 @@ result:
 }
 ```
 
-The `default` function is available as LESS built-in function only inside guard expressions. If used outside of a mixin guard condition it is interpreted as a regular CSS value:
+The `default` function is available as a LESS built-in function _only inside guard expressions_. If used outside of a mixin guard condition it is interpreted as a regular CSS value:
+
+Example:
 
 ```less
 div {
-  property1: default();
-  property2: default(42);
+  foo: default();
+  bar: default(42);
 }
 ```
-result:
+Result:
 
 ```css
 div {
-  property1: default();
-  property2: default(42);
+  foo: default();
+  bar: default(42);
 }
 ```

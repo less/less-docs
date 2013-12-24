@@ -51,11 +51,11 @@ The binary included in this repository, `bin/lessc` works with [Node.js](http://
 ### Examples
 
 ```bash
-  # compile bootstrap.less to bootstrap.css
-  $ lessc bootstrap.less bootstrap.css
+# compile bootstrap.less to bootstrap.css
+$ lessc bootstrap.less bootstrap.css
 
-  # compile bootstrap.less to bootstrap.css and minify (compress) the result
-  $ lessc -x bootstrap.less bootstrap.css
+# compile bootstrap.less to bootstrap.css and minify (compress) the result
+$ lessc -x bootstrap.less bootstrap.css
 ```
 
 ## less.js

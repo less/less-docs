@@ -1,4 +1,3 @@
-<a id="rgb"></a>
 ### rgb
 
 > Creates an opaque color object from decimal red, green and blue (RGB) values.
@@ -15,7 +14,6 @@ Example: `rgb(90, 129, 32)`
 Output: `#5a8120`
 
 
-<a id="rgba"></a>
 ### rgba
 
 > Creates a transparent color object from decimal red, green, blue and alpha (RGBA) values.
@@ -31,7 +29,6 @@ Example: `rgba(90, 129, 32, 0.5)`
 Output: `rgba(90, 129, 32, 0.5)`
 
 
-<a id="argb"></a>
 ### argb
 
 > Creates a hex representation of a color in `#AARRGGBB` format (**NOT** `#RRGGBBAA`!).
@@ -44,7 +41,6 @@ Example: `argb(rgba(90, 23, 148, 0.5));`
 Output: `#805a1794`
 
 
-<a id="hsl"></a>
 ### hsl
 
 > Creates an opaque color object from hue, saturation and lightness (HSL) values.
@@ -64,7 +60,6 @@ This is useful if you want to create a new color based on another color's channe
 
 
 
-<a id="hsla"></a>
 ### hsla
 
 > Creates a transparent color object from hue, saturation, lightness and alpha (HSLA) values.
@@ -80,7 +75,6 @@ Example: `hsl(90, 100%, 50%, 0.5)`
 Output: `rgba(128, 255, 0, 0.5)`
 
 
-<a id="hsv"></a>
 ### hsv
 
 > Creates an opaque color object from hue, saturation and value (HSV) values.
@@ -97,7 +91,6 @@ Example: `hsv(90, 100%, 50%)`
 Output: `#408000`
 
 
-<a id="hsva"></a>
 ### hsva
 
 > Creates a transparent color object from hue, saturation, value and alpha (HSVA) values.

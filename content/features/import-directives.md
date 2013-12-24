@@ -1,31 +1,48 @@
 # Import Directives
-> How to combine files
 
-Standard CSS Import statements may be treated differently by less depending on the file extension. If the file has a css extension, it will be treated as css and the import statement left as-is (see the inline option below). If it has any other extension it will be treated as less and imported.
-If it does not have an extension, ".less" will be appended and it will be included as a imported less file.
+> Import styles from other style sheets
+
+In standard CSS, `@import` at-rules must precede all other types of rules. But Less.js doesn't care where you put `@import` statements.
 
 Example:
-```
-@import "foo"; // foo.less is imported
-@import "foo.less"; // foo.less is imported
-@import "foo.php"; // foo.php imported as a less file
-@import "foo.css"; // statement left as-is
+
+```less
+.foo {
+  background: #900;
+}
+@import "this-is-valid.less";
 ```
 
-See the options below which can override this behaviour.
+## File extensions
+`@import` statements may be treated differently by Less.js depending on the file extension:
+
+* If the file has a `.css` extension it will be treated as CSS and the `@import` statement left as-is (see the [inline option](#inline) below).
+* If it has _any other extension_ it will be treated as LESS and imported.
+* If it does not have an extension, `.less` will be appended and it will be included as a imported LESS file.
+
+Examples:
+
+```less
+@import "foo";      // foo.less is imported
+@import "foo.less"; // foo.less is imported
+@import "foo.php";  // foo.php imported as a less file
+@import "foo.css";  // statement left in place, as-is
+```
+
+The following options can be used to override this behavior.
 
 # Import Options
-> LESS offers several extensions to the CSS `@import` directive to provide more flexibility over what you can do with external files.
+> LESS offers several extensions to the CSS `@import` CSS at-rule to provide more flexibility over what you can do with external files.
 
 Syntax: `@import (keyword) "filename";`
 
 The following import directives have been implemented:
 
 * `reference`: use a less file but do not output it
-* `once`: only include the file once (default behaviour)
 * `inline`: include the sourcefile in the output but do not process
 * `less`: treat the file as a less file, no matter what the file extension
 * `css`: treat the file as a css file, no matter what the file extension
+* `once`: only include the file once (this is default behavior)
 * `multiple`: include the file multiple times
 
 
@@ -42,6 +59,7 @@ Additionally, **`reference`** produces different results depending on which meth
 
 * **[extend](#extend)**: When a selector is extended, only the new selector is marked as _not referenced_, and it is pulled in at the position of the reference `@import` statement.
 * **[mixins](#mixins)**: When a `reference` style is used as an [[implicit mixin|Mixins]], its rules are are mixed-in, marked "not reference", and appear in the referenced place as normal.
+
 
 ### reference example
 This allows you to pull in only specific, targeted styles from a library such as [Bootstrap](https://github.com/twbs/bootstrap) by doing something like this:
@@ -60,8 +78,10 @@ Released [v1.5.0](https://github.com/less/less.js/blob/master/CHANGELOG.md)
 
 Example: `@import (inline) "not-less-compatible.css";`
 
-You will use this when a css file may not be less compatible - this is because although less supports most known standards css, it does not support comments in some places and does not support all known css hacks without modifying the css.
-So you can use this to include the file in the output so that all css will be in one file.
+You will use this when a CSS file may not be less compatible; this is because although less supports most known standards CSS, it does not support comments in some places and does not support all known CSS hacks without modifying the CSS.
+
+So you can use this to include the file in the output so that all CSS will be in one file.
+
 
 ## less
 > Use `@import (less)` to treat imported files as LESS, regardless of file extension.
@@ -74,6 +94,7 @@ Example:
 @import (less) "foo.css";
 ```
 
+
 ## css
 > Use `@import (css)` to treat imported files as regular CSS, regardless of file extension. This means the import statement will be left as it is.
 
@@ -85,6 +106,7 @@ Example:
 @import (css) "foo.less";
 ```
 outputs
+
 ```less
 @import "foo.less";
 ```
@@ -95,7 +117,7 @@ outputs
 
 Released [v1.4.0](https://github.com/less/less.js/blob/master/CHANGELOG.md)
 
-This option is automatically enabled by default on all `@import` statements.
+This is the default behavior of `@import` statements.
 
 Example:
 
@@ -106,7 +128,7 @@ Example:
 
 
 ## multiple
-> Use `@import (multiple)` to allow importing of multiple files with the same name. This is the opposite behaviour to once.
+> Use `@import (multiple)` to allow importing of multiple files with the same name. This is the opposite behavior to once.
 
 Released [v1.4.0](https://github.com/less/less.js/blob/master/CHANGELOG.md)
 
@@ -118,10 +140,11 @@ Example:
   color: green;
 }
 // file: main.less
-@import (once) "foo.less";
-@import (once) "foo.less";
+@import (multiple) "foo.less";
+@import (multiple) "foo.less";
 ```
 Outputs
+
 ```less
 .a {
   color: green;

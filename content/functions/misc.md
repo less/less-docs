@@ -1,4 +1,3 @@
-<a id="color"></a>
 ### color
 
 > Parses a color, so a string representing a color becomes a color.
@@ -9,7 +8,6 @@ Example: `color("#aaa");`
 Output: `#aaa`
 
 
-<a id="unit"></a>
 ### unit
 
 > Remove or change the unit of a dimension
@@ -25,7 +23,6 @@ Example: `unit(5em)`
 Output: `5`
 
 
-<a id="convert"></a>
 ### convert
 
 > Converts numbers from one type into another.
@@ -59,8 +56,6 @@ Output:
 8
 ```
 
-
-<a id="data-uri"></a>
 ### data-uri
 
 > Inlines a resource and falls back to `url()` if the ieCompat option is on and the resource is too large, or if you use the function in the browser. If the mime is not given then node uses the mime package to determine the correct mime type.

@@ -1,7 +1,6 @@
 Color operations generally take parameters in the same units as the values they are changing, and percentage are handled as absolutes, so increasing a 10% value by 10% results in 20%, not 11%, and values are clamped to their allowed ranges; they do not wrap around. Where return values are shown, we've also shown formats that make it clear what each function has done, in addition to the hex versions that you will usually be be working with.
 
-<a id="saturate"></a>
-## saturate
+### saturate
 
 > Increase the saturation of a color by an absolute amount.
 
@@ -17,8 +16,7 @@ Example: `saturate(hsl(90, 90%, 50%), 10%)`
 Output: `#80ff00 // hsl(90, 100%, 50%)`
 
 
-<a id="desaturate"></a>
-## desaturate
+### desaturate
 
 > Decrease the saturation of a color by an absolute amount.
 
@@ -34,8 +32,7 @@ Example: `desaturate(hsl(90, 90%, 50%), 10%)`
 Output: `#80e51a // hsl(90, 80%, 50%)`
 
 
-<a id="lighten"></a>
-## lighten
+### lighten
 
 > Increase the lightness of a color by an absolute amount.
 
@@ -51,8 +48,7 @@ Example: `lighten(hsl(90, 90%, 50%), 10%)`
 Output: `#99f53d // hsl(90, 90%, 60%)`
 
 
-<a id="darken"></a>
-## darken
+### darken
 
 > Decrease the lightness of a color by an absolute amount.
 
@@ -66,8 +62,7 @@ Example: `darken(hsl(90, 90%, 50%), 10%)`
 Output: `#66c20a // hsl(90, 90%, 40%)`
 
 
-<a id="fadein"></a>
-## fadein
+### fadein
 
 > Decrease the transparency (or increase the opacity) of a color, making it more opaque.
 
@@ -83,8 +78,7 @@ Example: `fadein(hsla(90, 90%, 50%, 0.5), 10%)`
 Output: `rgba(128, 242, 13, 0.6) // hsla(90, 90%, 50%, 0.6)`
 
 
-<a id="fadeout"></a>
-## fadeout
+### fadeout
 
 > Increase the transparency (or decrease the opacity) of a color, making it less opaque. To fade in the other direction use `fadein`.
 
@@ -98,8 +92,7 @@ Example: `fadeout(hsla(90, 90%, 50%, 0.5), 10%)`
 Output: `rgba(128, 242, 13, 0.4) // hsla(90, 90%, 50%, 0.6)`
 
 
-<a id="fade"></a>
-## fade
+### fade
 
 > Set the absolute transparency of a color. Can be applied to colors whether they already have an opacity value or not.
 
@@ -113,8 +106,7 @@ Example: `fade(hsl(90, 90%, 50%), 10%)`
 Output: `rgba(128, 242, 13, 0.1) //hsla(90, 90%, 50%, 0.1)`
 
 
-<a id="spin"></a>
-## spin
+### spin
 
 > Rotate the hue angle of a color in either direction.
 
@@ -153,8 +145,7 @@ Output:
 #f20d33 // hsl(350, 90%, 50%)
 ```
 
-<a id="mix"></a>
-## mix
+### mix
 
 > Mix two colors together in variable proportion. Opacity is included in the calculations.
 
@@ -180,8 +171,7 @@ Output:
 rgba(75, 25, 0, 0.75)
 ```
 
-<a id="greyscale"></a>
-## greyscale
+### greyscale
 
 > Remove all saturation from a color; the same as calling `desaturate(@color, 100%)`.
 
@@ -194,8 +184,7 @@ Example: `greyscale(hsl(90, 90%, 50%))`
 Output: `#808080 // hsl(90, 0%, 50%)`
 
 
-<a id="contrast"></a>
-## contrast
+### contrast
 
 > Choose which of two colors provides the greatest contrast with another.
 

@@ -1,4 +1,3 @@
-<a id="escape"></a>
 ### escape
 
 > Applies [URL-encoding](http://en.wikipedia.org/wiki/Percent-encoding) to special characters found in the input string.
@@ -23,7 +22,6 @@ a%3D1
 Note: Function behavior if a parameter is non-string parameters is not defined. Current implementation returns `undefined` on color and unchanged input on any other kind of argument. This behaviour should not be relied on and can change in the future.
 
 
-<a id="e"></a>
 ### e
 
 > CSS escaping similar to `~"value"` syntax.
@@ -48,7 +46,6 @@ filter: ms:alwaysHasItsOwnSyntax.For.Stuff();
 Note: The function accepts also `~""` escaped values and numbers as parameters. Anything else returns an error.
 
 
-<a id="format"></a>
 ### % format
 
 > The function `%("format", arguments ...)` formats a string.

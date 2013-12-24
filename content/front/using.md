@@ -36,7 +36,7 @@ You can invoke the compiler from node, as such:
 var less = require('less');
 
 less.render('.class { width: (1 + 1) }', function (e, css) {
-    console.log(css);
+  console.log(css);
 });
 ```
 
