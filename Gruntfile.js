@@ -18,15 +18,6 @@ module.exports = function(grunt) {
     site: grunt.file.readYAML('_config.yml'),
 
 
-    config: {
-      src: 'src',
-      dist: '<%= site.dest %>'
-    },
-
-
-    /**
-     * Lint JavaScript
-     */
     jshint: {
       options: {jshintrc: '.jshintrc'},
       all: [
@@ -36,58 +27,73 @@ module.exports = function(grunt) {
     },
 
 
-    /**
-     * Generate HTML
-     */
+    // Build HTML from templates and data
     assemble: {
       options: {
-        // Project metadata
+        flatten: true,
+        production: false,
+        assets: '<%= site.assets %>',
+
+        // Metadata
+        pkg: '<%= pkg %>',
         site: '<%= site %>',
+        data: ['<%= site.data %>/*.{json,yml}'],
 
-        // Assemble extensions
-        // We should use premalinks before going live
-        // plugins: ['permalinks'],
-        helpers: ['templates/helpers/*.js'],
+        // Extensions
+        helpers: ['<%= site.helpers %>/*.js'],
+        plugins: ['<%= site.plugins %>'],
 
-        // Templates and data
-        layouts: 'templates/layouts',
-        partials: ['templates/includes/*.hbs'],
-        data: ['data/*.{json,yml}'],
-
-        // Dest config
-        assets: '<%= site.dest %>/assets',
-        flatten: true
+        // Templates
+        partials: '<%= site.includes %>/*.hbs',
+        layoutdir: '<%= site.layouts %>',
+        layout: '<%= site.layout %>',
       },
-      pages: {
+      site: {
         // options: {
         //   permalinks: {preset: 'pretty'}
         // },
-        src: 'templates/*.hbs',
+        src: '<%= site.pages %>/*.hbs',
         dest: '<%= site.dest %>/'
       }
     },
 
 
-    /**
-     * Compile LESS to CSS
-     */
+    // Compile LESS to CSS
     less: {
       options: {
         paths: ['theme/bootstrap', 'theme/components']
       },
       docs: {
-        src: ['theme/theme.less'],
-        dest: '<%= assemble.options.assets %>/css/docs.css'
+        src: ['theme/site.less'],
+        dest: '<%= assemble.options.assets %>/css/site.css'
       }
     },
 
 
-    /**
-     * Before generating any new files clear out
-     * any previously-created files.
-     */
+    copy: {
+      assets: {
+        src: ['assets/**'],
+        dest: '<%= site.dest %>/'
+      }
+    },
+
+
+    // Before generating any new files clear out any previously
+    // created files.
     clean: {
       example: ['<%= site.dest %>/*.html']
+    },
+
+
+    // Pull down a JSON list of LESS's repos from GitHub's API,
+    // so the metadata can be used in templates
+    repos: {
+      namespaced: {
+        options: {username: 'less'},
+        files: {
+          '<%= site.data %>/less.json': ['repos?page=1&per_page=100']
+        }
+      }
     }
   });
 
@@ -95,8 +101,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('assemble-less');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-repos');
+
+  // Pull down the
+  grunt.registerTask('update', ['repos', 'default']);
 
   // Default tasks to be run.
-  grunt.registerTask('default', ['clean', 'jshint', 'less', 'assemble']);
+  grunt.registerTask('default', ['clean', 'copy', 'jshint', 'less', 'assemble']);
 };
