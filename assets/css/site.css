@@ -6919,6 +6919,10 @@ h3 {
   padding-left: 30px;
   font-size: 90%;
 }
+.sidebar .glyphicon {
+  font-size: 12px;
+  margin-left: 10px;
+}
 /* Show and affix the side nav when space allows it */
 @media (min-width: 992px) {
   .sidebar .nav > .active > ul {
