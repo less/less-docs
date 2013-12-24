@@ -1,8 +1,6 @@
 # Installing Less.js
 
-For general installation instructions, please read the [[Getting Started]] guide. If you need more specific information after having read that, read on.
-
-
+> For general installation instructions, please read the [[Getting Started]] guide. If you need more specific information after having read that, read on.
 
 ## Overview
 Less.js is comprised of two parts: `lessc`.

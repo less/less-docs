@@ -2,8 +2,6 @@
 published: false
 ---
 
-# Scope
-
 > How variables are evaluated
 
 ## Tips & Tricks

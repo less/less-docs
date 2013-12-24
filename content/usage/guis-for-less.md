@@ -1,6 +1,6 @@
 <span class="warning">**Tip**: try out the different LESS tools available for your platform, to see which one fits you best.</span>
 
-_This page focuses on GUI compilers. For command line usage and tools see [[Command Line Usage]]._
+_This page focuses on GUI compilers. For command line usage and tools see [Command Line Usage](#)._
 
 
 ## Cross platform

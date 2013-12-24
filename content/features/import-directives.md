@@ -1,5 +1,3 @@
-# Import Directives
-
 > Import styles from other style sheets
 
 In standard CSS, `@import` at-rules must precede all other types of rules. But Less.js doesn't care where you put `@import` statements.

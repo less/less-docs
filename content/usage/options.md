@@ -1,9 +1,11 @@
 # Command Line Usage
+
 > Compile `.less` files to `.css` using the command line
 
-<span class="warning">Heads up! If the command line isn't your thing, learn more about [[GUI compilers for LESS|GUI-compilers-that-use-Less.js]].</span>
+<span class="warning">Heads up! If the command line isn't your thing, learn more about [GUI compilers for LESS](#).</span>
 
 ## lessc
+
 > Server-Side and Command Line Usage
 
 The binary included in this repository, `bin/lessc` works with [Node.js](http://nodejs.org/) on *nix, OSX and Windows.
@@ -92,9 +94,11 @@ Default: 2
 
 The amount of logging in the javascript console.
 
-    2 - Information and errors
-    1 - Errors
-    0 - Nothing
+```bash
+2 - Information and errors
+1 - Errors
+0 - Nothing
+```
 
 ### async
 Type: `Boolean`

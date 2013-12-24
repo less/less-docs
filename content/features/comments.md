@@ -1,5 +1,3 @@
-# Comments
-
 > TODO
 
 ## CSS Comments
@@ -24,6 +22,7 @@ Single-line comments are also valid in LESS, but they are ‘silent’, they don
 }
 ```
 
-## TODO:
+{{#todo}}
 * document `/*! ... */`
 * document and/or link to `--s0`/`--s1` options
+{{/todo}}

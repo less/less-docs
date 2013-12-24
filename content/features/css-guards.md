@@ -1,6 +1,4 @@
-# CSS Guards
-
-> if's around selectors
+> "if"'s around selectors
 
 Guards can also be applied to css selectors, which is syntactic sugar for declaring the mixin and then calling it immediately.
 

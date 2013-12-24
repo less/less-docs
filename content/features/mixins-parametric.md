@@ -1,5 +1,3 @@
-# Parametric Mixins
-
 > How to pass arguments to mixins
 
 Mixins can also take arguments, which are variables pass to the block of selectors when it is mixed in.
@@ -8,9 +6,9 @@ For example:
 
 ```less
 .border-radius(@radius) {
-  border-radius: @radius;
-  -moz-border-radius: @radius;
   -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
 }
 ```
 

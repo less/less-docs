@@ -1,5 +1,3 @@
-# Variables
-
 > Control commonly used values in a single location.
 
 It's not uncommon to see the same value repeated dozens _if not hundreds of times_ across your stylesheets:

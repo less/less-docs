@@ -1,10 +1,6 @@
-# Extend
-
 > Extend is a LESS Pseudo-Class which merges the selector it is put on with ones that match what it references.
 
 Released [v1.4.0](https://github.com/less/less.js/blob/master/CHANGELOG.md)
-
-## Overview
 
 ```less
 nav ul {
@@ -41,7 +37,7 @@ nav ul {
 
 Notice how the `nav ul:extend(.inline)` selector gets output as `nav ul` - the extend gets removed before output and the selector block left as-is. If no properties are put in that block then it gets removed from the output (but the extend still may affect other selectors).
 
-## Syntax Overview
+## Extend syntax
 The extend is either attached to a selector or placed into a ruleset. It looks like a pseudoclass with selector parameter optionally followed by the keyword `all`:
 
 Example:
@@ -76,7 +72,7 @@ Example:
 .e:extend(.f, .g) {}
 ```
 
-### Attached to Selector
+### Extend attached to selector
 Extend attached to a selector looks like an ordinary pseudoclass with selector as a parameter. A selector can contain multiple extend clauses, but all extends must be at the end of the selector.
 
 * Extend after the selector: `pre:hover:extend(div pre)`.
@@ -94,7 +90,7 @@ If a ruleset contains multiple selectors, any of them can have the extend keywor
 }
 ```
 
-### Inside Ruleset
+### Extend inside ruleset
 Extend can be placed into rulesets body using `&:extend(selector)` syntax. Placing extend into a body is a shortcut for placing it into every single selector of that ruleset.
 
 
@@ -114,7 +110,7 @@ pre:hover:extend(div pre),
 .some-class:extend(div pre) {}
 ```
 
-### Nested Selectors
+### Extending nested Selectors
 Extend is able to match nested selectors. Following less:
 
 Example:
@@ -159,7 +155,7 @@ tr .bucket,
 ```
 
 
-### Exact Matching
+### Exact Matching with Extend
 Extend by default looks for exact match between selectors. It does matter whether selector uses leading start or not. It does not matter that two nth-expressions have the same meaning, they need to have to same form in order to be matched. The only exception are quotes in attribute selector, less knows they have the same meaning and matches them.
 
 Example:
@@ -266,7 +262,7 @@ Outputs
 }
 ```
 
-## Extend `all`
+## Extend "all"
 
 When you specify the all keyword last in an extend argument it tells Less.js to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making a new selector.
 
@@ -303,7 +299,7 @@ Outputs
 _You can think of this mode of operation as essentially doing a non-destructive search and replace._
 
 
-### Selector Interpolation
+### Selector Interpolation with Extend
 > Extend is NOT able to match selectors with variables. If selector contains variable, extend will ignore it.
 
 There is a pending feature request for this but it is not an easy change.  However, extend can be attached to interpolated selector.
@@ -476,7 +472,7 @@ Outputs
 }
 ```
 
-## Use Cases
+## Use Cases for Extend
 
 ### Classic Use Case
 

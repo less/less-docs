@@ -23,7 +23,7 @@ More details can be found here: [Wro4j Runner CLI](http://code.google.com/p/wro4
 
 http://search.cpan.org/~drinchev/CSS-LESSp/
 
-``` bash
+```bash
 lessp.pl styles.less > styles.css
 ```
 
@@ -31,18 +31,18 @@ lessp.pl styles.less > styles.css
 **Windows Script Host**
 [LESS.js for Windows](https://github.com/duncansmart/less.js-windows) with this usage:
 
-``` bash
+```bash
 cscript //nologo lessc.wsf input.less [output.css] [-compress]
 ```
 or
 
-``` bash
+```bash
 lessc input.less [output.css] [-compress]
 ```
 
 **dotless**
 [dotless for Windows](http://www.dotlesscss.org/) can be run like this:
 
-``` bash
+```bash
 dotless.Compiler.exe [-switches] <inputfile> [outputfile]
 ```

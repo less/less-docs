@@ -1,6 +1,6 @@
-# Nested Rules
+> LESS allows you to use nesting as well as normal cascading CSS.
 
-LESS allows you to use nesting as well as normal CSS cascading. For example, you can produce the following CSS:
+For example, you can produce the following CSS:
 
 ```css
 #header {
