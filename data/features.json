@@ -1,6 +1,6 @@
 {
   "sections": {
-    "overview": {
+    "features-overview": {
       "title": "Overview",
       "lead": "Simple overview of the basic features",
       "content": "content/overview.md"
