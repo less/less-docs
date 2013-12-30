@@ -141,3 +141,10 @@ Type: `String`
 Default: `false`
 
 A path to add on to the start of every URL resource.
+
+### errorReporting
+Type: `String`
+Options: `html`|`console`|`function`
+Default: `html`
+
+Set the method of error reporting when compilation fails.
