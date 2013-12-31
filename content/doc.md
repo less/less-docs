@@ -59,7 +59,7 @@ In addition, if the import statement has media queries specified in it, imported
 Imported "library.less":
 
 ```less
-@imported-color: red;
+@importedColor: red;
 h1 { color: green; }
 ```
 
