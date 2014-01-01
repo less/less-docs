@@ -1,3 +1,5 @@
+Less can be used on the command line via npm, downloaded as a script file for the browser or used in a wide variety of third party tools. See the [Usage](usage.html) section for more detailed information.
+
 # Server-side usage
 
 ## Installation
@@ -81,16 +83,13 @@ parser.parse('.class { width: (1 + 1) }', function (e, tree) {
 
 ## Grunt
 
-Less also integrates with the popular build framework grunt, using the (grunt-contrib-less)[https://github.com/gruntjs/grunt-contrib-less] plugin.
+Less also integrates with the popular build framework grunt, using the [grunt-contrib-less](https://github.com/gruntjs/grunt-contrib-less) plugin.
 
-## Third Party Tools
+## Third party tools
 
-There are a selection of tools available to run in your particular environment and these are documented in the Github wiki.
+See the [Usage](usage.html) section for details of other tools.
 
-* [Command Line Tools](https://github.com/cloudhead/less.js/wiki/Command-Line-use-of-LESS)
-* [GUI Tools](https://github.com/cloudhead/less.js/wiki/GUI-compilers-that-use-LESS.js)
-
-# client-side usage
+# Client-side usage
 
 > Using less.js in the browser is great for development, but it's not recommended for production
 
@@ -110,7 +109,7 @@ Next, [download less.js](https://github.com/less/less.js/archive/master.zip) and
 <script src="less.js" type="text/javascript"></script>
 ```
 
-### FAQ
+### Tips
 
 * Make sure you include your stylesheets **before** the script.
 * When you link more than one `.less` stylesheet each of them is compiled independently. So any variables, mixins or namespaces you define in a stylesheet are not accessible in any other.
