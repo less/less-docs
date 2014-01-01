@@ -277,12 +277,12 @@ Example:</p>
 <pre><code class="language-less">escape(&#39;a=1&#39;)</code></pre>
 <p>Output:</p>
 <pre><code>a%3D1</code></pre>
-<p>Note: Function behavior if a parameter is non-string parameters is not defined. Current implementation returns <code>undefined</code> on color and unchanged input on any other kind of argument. This behaviour should not be relied on and can change in the future.</p>
+<p>Note: Function behavior if a parameter is non-string parameters is not defined. Current implementation returns <code>undefined</code> on color and unchanged input on any other kind of argument. This behavior should not be relied on and can change in the future.</p>
 <h3 id="e">e</h3>
 <blockquote>
 <p>CSS escaping similar to <code>~&quot;value&quot;</code> syntax.</p>
 </blockquote>
-<p>It expects string as a parameter and return its content as is, but without quotes. It can be used to output CSS value which is either not valid CSS syntax, or uses proprietary syntax which LESS doesn�t recognize.</p>
+<p>It expects string as a parameter and return its content as is, but without quotes. It can be used to output CSS value which is either not valid CSS syntax, or uses proprietary syntax which LESS doesn&#39;t recognize.</p>
 <p>Parameters: <code>string</code> - a string to escape.
 Returns: <code>string</code> content without quotes.</p>
 <p>Example:</p>
@@ -1146,7 +1146,7 @@ Parameters:</p>
 <blockquote>
 <p>Decrease the transparency (or increase the opacity) of a color, making it more opaque.</p>
 </blockquote>
-<p>Has no effect on opaque colours. To fade in the other direction use <code>fadeout</code>.</p>
+<p>Has no effect on opaque colors. To fade in the other direction use <code>fadeout</code>.</p>
 <p>Parameters:</p>
 <ul>
 <li><code>color</code> - a color object.</li>
@@ -1183,7 +1183,7 @@ Parameters:</p>
 <blockquote>
 <p>Rotate the hue angle of a color in either direction.</p>
 </blockquote>
-<p>While the angle range is 0-360, it applies a mod 360 operation, so you can pass in much larger (or negative) values and they will wrap around e.g. angles of 360 and 720 will produce the same result. Note that colours are passed through an RGB conversion, which doesn&#39;t retain hue value for greys (because hue has no meaning when there is no saturation), so make sure you apply functions in a way that preserves hue, for example don&#39;t do this:</p>
+<p>While the angle range is 0-360, it applies a mod 360 operation, so you can pass in much larger (or negative) values and they will wrap around e.g. angles of 360 and 720 will produce the same result. Note that colors are passed through an RGB conversion, which doesn&#39;t retain hue value for greys (because hue has no meaning when there is no saturation), so make sure you apply functions in a way that preserves hue, for example don&#39;t do this:</p>
 <pre><code class="language-less">@c: saturate(spin(#aaaaaa, 10), 10%);</code></pre>
 <p>Do this instead:</p>
 <pre><code class="language-less">@c: spin(saturate(#aaaaaa, 10%), 10);</code></pre>

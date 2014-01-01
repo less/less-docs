@@ -6117,6 +6117,11 @@ h1[id] {
   padding-top: 80px;
   margin-top: -45px;
 }
+h2[id],
+h3[id] {
+  padding-top: 80px;
+  margin-top: -60px;
+}
 /*
  * Callouts
  *
