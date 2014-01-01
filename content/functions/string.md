@@ -19,14 +19,14 @@ Output:
 a%3D1
 ```
 
-Note: Function behavior if a parameter is non-string parameters is not defined. Current implementation returns `undefined` on color and unchanged input on any other kind of argument. This behaviour should not be relied on and can change in the future.
+Note: Function behavior if a parameter is non-string parameters is not defined. Current implementation returns `undefined` on color and unchanged input on any other kind of argument. This behavior should not be relied on and can change in the future.
 
 
 ### e
 
 > CSS escaping similar to `~"value"` syntax.
 
-It expects string as a parameter and return its content as is, but without quotes. It can be used to output CSS value which is either not valid CSS syntax, or uses proprietary syntax which LESS doesn�t recognize.
+It expects string as a parameter and return its content as is, but without quotes. It can be used to output CSS value which is either not valid CSS syntax, or uses proprietary syntax which LESS doesn't recognize.
 
 Parameters: `string` - a string to escape.
 Returns: `string` content without quotes.

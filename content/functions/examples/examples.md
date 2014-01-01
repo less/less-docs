@@ -1,6 +1,6 @@
 > Functions you can use in your styles.
 
-## Generating colours
+## Generating colors
 
 ```less
 rgb(r, g, b)
@@ -18,7 +18,7 @@ hsl(h, s, l)
 hsla(h, s, l, a)
 ```
 
-## Modifying colours
+## Modifying colors
 
 ```less
 saturate(color, amount)

@@ -3,7 +3,7 @@ We have released 1.4.0. This includes new features such as [extend][features-ext
 
 There are some known **breaking changes**.
 
-* `@import-once` is removed and is now default behaviour for `@import`.
+* `@import-once` is removed and is now default behavior for `@import`.
 * `(~".myclass_@{index}") { ...` selector interpolation is deprecated, do this instead `.myclass_@{index} { ...`. This works in 1.3.1 onwards.
 * The browser version no longer bundles a version of es5-shim.js - the version we previously used was inaccurate and the new version is significantly larger. Please include your choice of es-5 shim or only use on modern browsers.
 * We have introduced optional [strictMath][features-strictmath] mode, where math is required to be in parenthesis. [See examples][examples-strictmath]. In 1.4.0 this option is turned off, but we intend to turn this on by default. We recommend you upgrade code and switch on the option (`--strict-math=on` in the command line or `strictMath: true` in JavaScript). Code written with brackets is backwards compatible with older versions of the less compiler.

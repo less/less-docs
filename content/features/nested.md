@@ -101,7 +101,7 @@ Will output
 
 ##Advanced Usage of &
 
-The `&` combinator can be used to multiply classes, and can be used with comma seperated selectors. You can also use the `&` to prepend a selector to the inherited (parent) scope. [Parent selector](Parent-Selectors.md) describes this in more detail.
+The `&` combinator can be used to multiply classes, and can be used with comma separated selectors. You can also use the `&` to prepend a selector to the inherited (parent) scope. [Parent selector](Parent-Selectors.md) describes this in more detail.
 
 For example:
 

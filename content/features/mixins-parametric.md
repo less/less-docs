@@ -187,7 +187,7 @@ Furthermore:
 
 ## Pattern-matching
 
-Sometimes, you may want to change the behaviour of a mixin, based on the parameters you pass to it. Let's start with something basic:
+Sometimes, you may want to change the behavior of a mixin, based on the parameters you pass to it. Let's start with something basic:
 
 ```less
 .mixin(@s; @color) { ... }

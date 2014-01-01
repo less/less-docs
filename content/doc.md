@@ -112,7 +112,7 @@ pre h1 { // ruleset defined in library.less was nested into 'pre' ruleset
 }
 ```
 
-In v1.3.0 - v1.3.3 `@import` imports a file multiple times and you can override this behaviour with `@import-once`.
+In v1.3.0 - v1.3.3 `@import` imports a file multiple times and you can override this behavior with `@import-once`.
 
 In v1.4.0 `@import-once` has been removed and `@import` imports once by default. This means that with the following
 
