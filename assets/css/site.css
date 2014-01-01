@@ -6110,7 +6110,7 @@ body {
  */
 /* Space things out */
 .docs-section + .docs-section {
-  padding-top: 40px;
+  padding-top: 10px;
 }
 /* Janky fix for preventing navbar from overlapping */
 h1[id] {
@@ -7010,7 +7010,8 @@ h3 {
   border-radius: 4px;
 }
 body {
-  padding-top: 60px;
+  padding-top: 0;
+  top: 60px;
 }
 /**
  * Neutralize background color to allow our

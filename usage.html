@@ -349,6 +349,14 @@ Download the <a href="http://wro4j.googlecode.com/files/wro4j-runner-1.4.1-jar-w
 </div>
 
 <div class="docs-section">
+  <h1 id="browser-support">Browser Support</h1>
+  <p>Less only supports running on modern browsers (modern versions of chrome, firefox and IE10). We do not want to encourage people to use Less client side in production - this is because it adds a performance degradation for the user, who gets a pause (even if it is sub 1 second) while the less is compiled to css.</p>
+<p>There are reasons to use less browser side in production, such as if you want to allow someone to tweak variables which will effect the theme and you want to show it to them in real-time - in this instance a user is not worried about waiting for a style to update before seeing it.</p>
+<p>If you need to run less in an older browser, please use an <a href="https://github.com/kriskowal/es5-shim">es-5 shim</a> which will shim in the functions that less requires.</p>
+
+</div>
+
+<div class="docs-section">
   <h1 id="advanced-client-side">Advanced Client-side</h1>
   <h2 id="watch-mode">Watch mode</h2>
 <p>To enable Watch mode, option <code>env</code> must be set to <code>development</code>. Then AFTER the less.js file is included, call less.watch(), like this:</p>

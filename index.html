@@ -114,22 +114,21 @@
               
                 <li>
   <a href="#getting-started">Getting Started</a>
-  <ul class="nav">
-    <li><a href="#synopsis">Overview</a></li>
-    <li><a href="https://github.com/less/less.js" target="_blank">Visit Less.js on GitHub <span class="glyphicon glyphicon-new-window"></span></a></li>
-    <li><a href="http://less2css.org/" target="_blank">Try it now! <span class="glyphicon glyphicon-new-window"></span></a></li>
-  </ul>
 </li>
 <li>
-  <a href="#using-less">Using Less</a>
+  <a href="https://github.com/less/less.js" target="_blank">Source on GitHub <span class="glyphicon glyphicon-new-window"></span></a>
+</li>
+<li>
+  <a href="http://less2css.org/" target="_blank">Try it now! <span class="glyphicon glyphicon-new-window"></span></a>
+</li>
+<li>
+  <a href="#using-less">Using Less</a> 
   <ul class="nav">
-    <li><a href="#download-compiled">Source Code</a></li>
-    <li><a href="#download-additional">Additional downloads</a></li>
-    <li><a href="#download-cdn">Less.js CDN</a></li>
+    <li><a href="#server-side-usage">Server-side usage</a></li>
+    <li><a href="#server-side-usage">Client-side usage</a></li>
+    <li><a href="#browser-downloads">Browser downloads</a></li>
   </ul>
 </li>
-<li> <a href="#browsers">Browser support</a> </li>
-<li> <a href="#third-parties">Third party support</a> </li>
 <li> <a href="#license-faqs">License FAQs</a> </li>
 
               
@@ -191,13 +190,94 @@
   <div class="page-header">
     <h1 id="using-less">Using Less</h1>
   </div>
-  <p class="lead">Less can be used in a few different ways</p>
+  <p>Less can be used on the command line via npm, downloaded as a script file for the browser or used in a wide variety of third party tools. See the <a href="usage.html">Usage</a> section for more detailed information.</p>
+<h1 id="server-side-usage">Server-side usage</h1>
+<h2 id="installation">Installation</h2>
+<p>The easiest way to install LESS on the server, is via npm, the <a href="http://nodejs.org/">node.js</a> package manager, as so:</p>
+<pre><code class="language-bash">$ npm install -g less</code></pre>
+<h2 id="command-line-usage">Command-line usage</h2>
+<p>Once installed, you can invoke the compiler from the command-line, as such:</p>
+<pre><code class="language-bash">$ lessc styles.less</code></pre>
+<p>This will output the compiled CSS to <code>stdout</code>, you may then redirect it to a file of your choice:</p>
+<pre><code class="language-bash">$ lessc styles.less &gt; styles.css</code></pre>
+<p>To output minified CSS, simply pass the <code>-x</code> option. If you would like more involved minification,
+the <a href="https://github.com/GoalSmashers/clean-css">Clean CSS</a> is also available with
+the <code>--clean-css</code> option.</p>
+<p>To see all the command line options run lessc without parameters.</p>
+<h2 id="usage-in-code">Usage in Code</h2>
+<p>You can invoke the compiler from node, as such:</p>
+<pre><code class="language-js"><span class="keyword">var</span> less = require(<span class="string">'less'</span>);
 
-  Install via NPM
+less.render(<span class="string">'.class { width: (1 + 1) }'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(e, css)</span> {</span>
+  console.log(css);
+});</code></pre>
+<p>which will output</p>
+<pre><code class="language-css"><span class="class">.class</span> <span class="rules">{
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">2</span></span></span>;
+<span class="rule">}</span></span></code></pre>
+<p>you may also manually invoke the parser and compiler:</p>
+<pre><code class="language-js"><span class="keyword">var</span> parser = <span class="keyword">new</span>(less.Parser);
+
+parser.parse(<span class="string">'.class { width: (1 + 1) }'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(err, tree)</span> {</span>
+  <span class="keyword">if</span> (err) {
+    <span class="keyword">return</span> console.error(err)
+  }
+  console.log(tree.toCSS());
+});</code></pre>
+<h2 id="configuration">Configuration</h2>
+<p>You may pass some options to the compiler:</p>
+<pre><code class="language-js"><span class="keyword">var</span> parser = <span class="keyword">new</span>(less.Parser)({
+  paths: [<span class="string">'.'</span>, <span class="string">'./lib'</span>], <span class="comment">// Specify search paths for @import directives</span>
+  filename: <span class="string">'style.less'</span> <span class="comment">// Specify a filename, for better error messages</span>
+});
+
+parser.parse(<span class="string">'.class { width: (1 + 1) }'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(e, tree)</span> {</span>
+  tree.toCSS({
+    <span class="comment">// Minify CSS output</span>
+    compress: <span class="literal">true</span>
+  });
+});</code></pre>
+<h2 id="grunt">Grunt</h2>
+<p>Less also integrates with the popular build framework grunt, using the <a href="https://github.com/gruntjs/grunt-contrib-less">grunt-contrib-less</a> plugin.</p>
+<h2 id="third-party-tools">Third party tools</h2>
+<p>See the <a href="usage.html">Usage</a> section for details of other tools.</p>
+<h1 id="client-side-usage">Client-side usage</h1>
+<blockquote>
+<p>Using less.js in the browser is great for development, but it&#39;s not recommended for production</p>
+</blockquote>
+<p>Client-side is the easiest way to get started and good for developing with LESS. But in production, when performance and reliability is important, <em>we recommend pre-compiling using node.js or one of the many third party tools available</em>.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>Link your <code>.less</code> stylesheets with the <code>rel</code> attribute set to &quot;<code>stylesheet/less</code>&quot;:</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;styles.less&quot; /&gt;</code></pre>
+<p>Next, <a href="https://github.com/less/less.js/archive/master.zip">download less.js</a> and include it in a <code>&lt;script&gt;&lt;/script&gt;</code> tag in the <code>&lt;head&gt;</code> element of your page:</p>
+<pre><code class="language-html">&lt;script src=&quot;less.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;</code></pre>
+<h3 id="tips">Tips</h3>
+<ul>
+<li>Make sure you include your stylesheets <strong>before</strong> the script.</li>
+<li>When you link more than one <code>.less</code> stylesheet each of them is compiled independently. So any variables, mixins or namespaces you define in a stylesheet are not accessible in any other.</li>
+</ul>
+<h2 id="browser-options">Browser Options</h2>
+<p>Options are defined by setting them on a global LESS object <strong>before</strong> the <code>&lt;script src=&quot;less.js&quot;&gt;&lt;/script&gt;</code>:</p>
+<pre><code class="language-html">&lt;!-- set options before less.js script --&gt;
+&lt;script&gt;
+  less = {
+    env: &quot;development&quot;,
+    async: false,
+    fileAsync: false,
+    poll: 1000,
+    functions: {},
+    dumpLineNumbers: &quot;comments&quot;,
+    relativeUrls: false,
+    rootpath: &quot;:/a.com/&quot;
+  };
+&lt;/script&gt;
+&lt;script src=&quot;less.js&quot;&gt;&lt;/script&gt;</code></pre>
+
+
+<h3 id="browser-downloads">Browser downloads</h3>
 
   <p><a class="btn btn-lg btn-primary" href="https://raw.github.com/less/less.js/master/dist/less-.min.js" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" role="button">Download Less.js v1.5.1</a></p>
 
-  <h3 id="download-additional">Additional downloads</h3>
   <div class="docs-dl-options">
     <h4>
       <a href="/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);">Download source code</a>
@@ -206,7 +286,6 @@
     <h4>
       <a href="" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'GitHub project']);">Clone or fork via GitHub</a>
     </h4>
-    <p>Visit us on GitHub to clone or fork the Less.js project.</p>
     <h4>
       Install with <a href="http://bower.io">Bower</a>
     </h4>
@@ -224,22 +303,8 @@
 <pre><code class="language-html">&lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js&quot;&gt;&lt;/script&gt;</code></pre>
 
 
-
-  
 </div>
 
-
-  <!-- Browser support
-  ================================================== -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="browsers">Browser support</h1>
-    </div>
-    <p>Less only supports running on modern browsers (modern versions of chrome, firefox and IE10). We do not want to encourage people to use Less client side in production - this is because it adds a performance degradation for the user, who gets a pause (even if it is sub 1 second) while the less is compiled to css.</p>
-<p>There are reasons to use less browser side in production, such as if you want to allow someone to tweak variables which will effect the theme and you want to show it to them in real-time - in this instance a user is not worried about waiting for a style to update before seeing it.</p>
-<p>If you need to run less in an older browser, please use an <a href="https://github.com/kriskowal/es5-shim">es-5 shim</a> which will shim in the functions that less requires.</p>
-
-  </div>
 
   <!-- License FAQs
   ================================================== -->
@@ -247,7 +312,7 @@
     <div class="page-header">
       <h1 id="license-faqs">License FAQs</h1>
     </div>
-    <p class="lead">Less.js is released under the Apache 2 License. Copyright 2009-2014, Alexis Sellier and the Less Core Team (see about). Boiled down to smaller chunks, it can be described with the following conditions.</p>
+    <p class="lead">Less.js is released under the Apache 2 License (<a href="https://github.com/less/less.js/issues/1029">though there are plans to dual license it</a>). Copyright 2009-2014, Alexis Sellier and the Less Core Team (see about). Boiled down to smaller chunks, it can be described with the following conditions.</p>
 
     <div class="row">
       <div class="col-12 col-lg-6">
@@ -282,7 +347,7 @@
     </div>
     <p>The full Less.js license is located <a href="/blob/master/LICENSE">in the project repository</a> for more information.</p>
   </div><!-- /.docs-section -->
-
+  
         </div>
       </div>
     </div>
