@@ -41,8 +41,8 @@ license:
   url:             <%= pkg.licenses[0].url %>
 
 # URLs
-repo:              <%= pkg.homepages %>
-issues:            <%= pkg.homepages %>/issues?&state=open
+repo:              <%= pkg.repository.url %>
+issues:            <%= pkg.bugs.url %>?&state=open
 download:
   source:          <%= pkg.homepages %>/archive/master.zip
   latest:          https://raw.github.com/less/less.js/master/dist/less-<%= less.version %>.min.js
