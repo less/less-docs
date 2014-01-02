@@ -20,6 +20,13 @@
   "bugs": {
     "url": "https://github.com/less/less-docs/issues"
   },
+  "coderepository": {
+    "type": "git",
+    "url": "https://github.com/less/less.js.git"
+  },
+  "codebugs": {
+    "url": "https://github.com/less/less.js/issues"
+  },
   "licenses": [
     {
       "type": "MIT",
