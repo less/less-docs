@@ -72,11 +72,11 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li> <a href="">Docs Repo</a> </li>
-            <li> <a href="/issues?&amp;state=open">Docs Issues</a> </li>
+            <li> <a href="https://github.com/less/less-docs.git">Docs Repo</a> </li>
+            <li> <a href="https://github.com/less/less-docs/issues?&amp;state=open">Docs Issues</a> </li>
             <li class="divider"></li>
-            <li> <a href="">Less.js Repo</a> </li>
-            <li> <a href="/issues?&amp;state=open">Less.js Issues</a> </li>
+            <li> <a href="https://github.com/less/less.js.git">Less.js Repo</a> </li>
+            <li> <a href="https://github.com/less/less.js/issues?&amp;state=open">Less.js Issues</a> </li>
           </ul>
         </li>
       </ul>
@@ -98,7 +98,7 @@
     <div class="banner">
   <div class="container">
     <strong>
-      <a href="/blob/master/CHANGELOG.md">See what's new in v1.5.1</a>
+      <a href="https://github.com/less/less-docs.git/blob/master/CHANGELOG.md">See what's new in v1.5.1</a>
     </strong>
     To hear what's new from the Less.js core team, <a href="TODO">visit the blog</a>.
   </div>
@@ -1258,152 +1258,152 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
 <div class="docs-section">
   <h1 id="color-blending">Color Blending</h1>
   <blockquote>
-<p>These operations are <em>similar</em> as the blend modes found in image editors like Photoshop, Firework or GIMP, so you can use them to make your CSS colors match your images.</p>
+<p>These operations are <em>similar</em> (though not necessarily identical) to the blend modes found in image editors like Photoshop, Fireworks or GIMP, so you can use them to make your CSS colors match your images.</p>
 </blockquote>
 <h2 id="multiply">multiply</h2>
 <blockquote>
-<p>Multiply two colors. For each two colors their RGB channel are multiplied then divided by 255. The result is a darker color.</p>
+<p>Multiply two colors. Corresponding RGB channels from each of the two colors are multiplied together then divided by 255. The result is a darker color.</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
-<li><code>color1</code>: A color object to multiply against.</li>
-<li><code>color2</code>: A color object to multiply against.</li>
+<li><code>color1</code>: A color object.</li>
+<li><code>color2</code>: A color object.</li>
 </ul>
 <p>Returns: <code>color</code></p>
 <p><strong>Examples</strong>:</p>
 <pre><code class="language-less">multiply(#ff6600, #000000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/000000/ffffff&amp;text=000000" alt="Color 2">
-<img src="http://placehold.it/100x40/000000/ffffff&amp;text=000000" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#000000:#ffffff/text:000000" alt="Color 2">
+<img src="holder.js/100x40/#000000:#ffffff/text:000000" alt="Color 3"></p>
 <pre><code class="language-less">multiply(#ff6600, #333333);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/333333/ffffff&amp;text=333333" alt="Color 2">
-<img src="http://placehold.it/100x40/331400/ffffff&amp;text=331400" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#333333:#ffffff/text:333333" alt="Color 2">
+<img src="holder.js/100x40/#331400:#ffffff/text:331400" alt="Color 3"></p>
 <pre><code class="language-less">multiply(#ff6600, #666666);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/666666/ffffff&amp;text=666666" alt="Color 2">
-<img src="http://placehold.it/100x40/662900/ffffff&amp;text=662900" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#666666:#ffffff/text:666666" alt="Color 2">
+<img src="holder.js/100x40/#662900:#ffffff/text:662900" alt="Color 3"></p>
 <pre><code class="language-less">multiply(#ff6600, #999999);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/999999/ffffff&amp;text=999999" alt="Color 2">
-<img src="http://placehold.it/100x40/993d00/ffffff&amp;text=993d00" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#999999:#ffffff/text:999999" alt="Color 2">
+<img src="holder.js/100x40/#993d00:#ffffff/text:993d00" alt="Color 3"></p>
 <pre><code class="language-less">multiply(#ff6600, #cccccc);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/cccccc/000000&amp;text=cccccc" alt="Color 2">
-<img src="http://placehold.it/100x40/cc5200/ffffff&amp;text=cc5200" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#cccccc:#000000/text:cccccc" alt="Color 2">
+<img src="holder.js/100x40/#cc5200:#ffffff/text:cc5200" alt="Color 3"></p>
 <pre><code class="language-less">multiply(#ff6600, #ffffff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ffffff/000000&amp;text=ffffff" alt="Color 2">
-<img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ffffff:#000000/text:ffffff" alt="Color 2">
+<img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 3"></p>
 <pre><code class="language-less">multiply(#ff6600, #ff0000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ff0000/ffffff&amp;text=ff0000" alt="Color 2">
-<img src="http://placehold.it/100x40/ff0000/ffffff&amp;text=ff0000" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 2">
+<img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 3"></p>
 <pre><code class="language-less">multiply(#ff6600, #00ff00);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/00ff00/ffffff&amp;text=00ff00" alt="Color 2">
-<img src="http://placehold.it/100x40/006600/ffffff&amp;text=006600" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#00ff00:#ffffff/text:00ff00" alt="Color 2">
+<img src="holder.js/100x40/#006600:#ffffff/text:006600" alt="Color 3"></p>
 <pre><code class="language-less">multiply(#ff6600, #0000ff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/0000ff/ffffff&amp;text=0000ff" alt="Color 2">
-<img src="http://placehold.it/100x40/000000/ffffff&amp;text=000000" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#0000ff:#ffffff/text:0000ff" alt="Color 2">
+<img src="holder.js/100x40/#000000:#ffffff/text:000000" alt="Color 3"></p>
 <h2 id="screen">screen</h2>
 <blockquote>
-<p>Do the opposite effect from <code>multiply</code>. The result is a brighter color.</p>
+<p>Do the opposite of <code>multiply</code>. The result is a brighter color.</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
-<li><code>color1</code>: A color object to <em>screen</em> against.</li>
-<li><code>color2</code>: A color object to <em>screen</em> against.</li>
+<li><code>color1</code>: A color object.</li>
+<li><code>color2</code>: A color object.</li>
 </ul>
 <p>Returns: <code>color</code></p>
 <p>Example:</p>
 <pre><code class="language-less">screen(#ff6600, #000000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/000000/ffffff&amp;text=000000" alt="Color 2">
-<img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#000000:#ffffff/text:000000" alt="Color 2">
+<img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 3"></p>
 <pre><code class="language-less">screen(#ff6600, #333333);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/333333/ffffff&amp;text=333333" alt="Color 2">
-<img src="http://placehold.it/100x40/ff8533/ffffff&amp;text=ff8533" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#333333:#ffffff/text:333333" alt="Color 2">
+<img src="holder.js/100x40/#ff8533:#ffffff/text:ff8533" alt="Color 3"></p>
 <pre><code class="language-less">screen(#ff6600, #666666);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/666666/ffffff&amp;text=666666" alt="Color 2">
-<img src="http://placehold.it/100x40/ffa366/ffffff&amp;text=ffa366" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#666666:#ffffff/text:666666" alt="Color 2">
+<img src="holder.js/100x40/#ffa366:#ffffff/text:ffa366" alt="Color 3"></p>
 <pre><code class="language-less">screen(#ff6600, #999999);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/999999/ffffff&amp;text=999999" alt="Color 2">
-<img src="http://placehold.it/100x40/ffc299/000000&amp;text=ffc299" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#999999:#ffffff/text:999999" alt="Color 2">
+<img src="holder.js/100x40/#ffc299:#000000/text:ffc299" alt="Color 3"></p>
 <pre><code class="language-less">screen(#ff6600, #cccccc);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/cccccc/000000&amp;text=cccccc" alt="Color 2">
-<img src="http://placehold.it/100x40/ffe0cc/000000&amp;text=ffe0cc" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#cccccc:#000000/text:cccccc" alt="Color 2">
+<img src="holder.js/100x40/#ffe0cc:#000000/text:ffe0cc" alt="Color 3"></p>
 <pre><code class="language-less">screen(#ff6600, #ffffff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ffffff/000000&amp;text=ffffff" alt="Color 2">
-<img src="http://placehold.it/100x40/ffffff/000000&amp;text=ffffff" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ffffff:#000000/text:ffffff" alt="Color 2">
+<img src="holder.js/100x40/#ffffff:#000000/text:ffffff" alt="Color 3"></p>
 <pre><code class="language-less">screen(#ff6600, #ff0000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ff0000/ffffff&amp;text=ff0000" alt="Color 2">
-<img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 2">
+<img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 3"></p>
 <pre><code class="language-less">screen(#ff6600, #00ff00);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/999999/ffffff&amp;text=999999" alt="Color 2">
-<img src="http://placehold.it/100x40/ffff00/ffffff&amp;text=ffff00" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#999999:#ffffff/text:999999" alt="Color 2">
+<img src="holder.js/100x40/#ffff00:#ffffff/text:ffff00" alt="Color 3"></p>
 <pre><code class="language-less">screen(#ff6600, #0000ff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/999999/ffffff&amp;text=999999" alt="Color 2">
-<img src="http://placehold.it/100x40/ff66ff/000000&amp;text=ff66ff" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#999999:#ffffff/text:999999" alt="Color 2">
+<img src="holder.js/100x40/#ff66ff:#000000/text:ff66ff" alt="Color 3"></p>
 <h2 id="overlay">overlay</h2>
 <blockquote>
-<p>Combines the effect from both <code>multiply</code> and <code>screen</code>. Conditionally make light channels lighter and dark channels darker. <strong>Note</strong>: The results of the conditions are determined by the first color parameter.</p>
+<p>Combines the effects of both <code>multiply</code> and <code>screen</code>. Conditionally make light channels lighter and dark channels darker. <strong>Note</strong>: The results of the conditions are determined by the first color parameter.</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
-<li><code>color1</code>: A color object to overlay another. Also it is the determinant color to make the result lighter or darker.</li>
-<li><code>color2</code>: A color object to be <em>overlayed</em>.</li>
+<li><code>color1</code>: A base color object. Also the determinant color to make the result lighter or darker.</li>
+<li><code>color2</code>: A color object to <em>overlay</em>.</li>
 </ul>
 <p>Returns: <code>color</code></p>
 <p>Example:</p>
 <pre><code class="language-less">overlay(#ff6600, #000000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/000000/ffffff&amp;text=000000" alt="Color 2">
-<img src="http://placehold.it/100x40/ff0000/ffffff&amp;text=ff0000" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#000000:#ffffff/text:000000" alt="Color 2">
+<img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 3"></p>
 <pre><code class="language-less">overlay(#ff6600, #333333);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/333333/ffffff&amp;text=333333" alt="Color 2">
-<img src="http://placehold.it/100x40/ff2900/ffffff&amp;text=ff2900" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#333333:#ffffff/text:333333" alt="Color 2">
+<img src="holder.js/100x40/#ff2900:#ffffff/text:ff2900" alt="Color 3"></p>
 <pre><code class="language-less">overlay(#ff6600, #666666);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/666666/ffffff&amp;text=666666" alt="Color 2">
-<img src="http://placehold.it/100x40/ff5200/ffffff&amp;text=ff5200" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#666666:#ffffff/text:666666" alt="Color 2">
+<img src="holder.js/100x40/#ff5200:#ffffff/text:ff5200" alt="Color 3"></p>
 <pre><code class="language-less">overlay(#ff6600, #999999);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/999999/ffffff&amp;text=999999" alt="Color 2">
-<img src="http://placehold.it/100x40/ff7a00/ffffff&amp;text=ff7a00" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#999999:#ffffff/text:999999" alt="Color 2">
+<img src="holder.js/100x40/#ff7a00:#ffffff/text:ff7a00" alt="Color 3"></p>
 <pre><code class="language-less">overlay(#ff6600, #cccccc);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/cccccc/000000&amp;text=cccccc" alt="Color 2">
-<img src="http://placehold.it/100x40/ffa300/ffffff&amp;text=ffa300" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#cccccc:#000000/text:cccccc" alt="Color 2">
+<img src="holder.js/100x40/#ffa300:#ffffff/text:ffa300" alt="Color 3"></p>
 <pre><code class="language-less">overlay(#ff6600, #ffffff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ffffff/000000&amp;text=ffffff" alt="Color 2">
-<img src="http://placehold.it/100x40/ffcc00/ffffff&amp;text=ffcc00" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ffffff:#000000/text:ffffff" alt="Color 2">
+<img src="holder.js/100x40/#ffcc00:#ffffff/text:ffcc00" alt="Color 3"></p>
 <pre><code class="language-less">overlay(#ff6600, #ff0000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ff0000/ffffff&amp;text=ff0000" alt="Color 2">
-<img src="http://placehold.it/100x40/ff0000/ffffff&amp;text=ff0000" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 2">
+<img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 3"></p>
 <pre><code class="language-less">overlay(#ff6600, #00ff00);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/00ff00/ffffff&amp;text=00ff00" alt="Color 2">
-<img src="http://placehold.it/100x40/ffcc00/ffffff&amp;text=ffcc00" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#00ff00:#ffffff/text:00ff00" alt="Color 2">
+<img src="holder.js/100x40/#ffcc00:#ffffff/text:ffcc00" alt="Color 3"></p>
 <pre><code class="language-less">overlay(#ff6600, #0000ff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/0000ff/ffffff&amp;text=0000ff" alt="Color 2">
-<img src="http://placehold.it/100x40/ff0000/ffffff&amp;text=ff0000" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#0000ff:#ffffff/text:0000ff" alt="Color 2">
+<img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 3"></p>
 <h2 id="softlight">softlight</h2>
 <blockquote>
-<p>Similar to <code>overlay</code> but avoid pure black resulting in pure black, and pure white resulting in pure white.</p>
+<p>Similar to <code>overlay</code> but avoids pure black resulting in pure black, and pure white resulting in pure white.</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
@@ -1413,91 +1413,91 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
 <p>Returns: <code>color</code></p>
 <p>Example:</p>
 <pre><code class="language-less">softlight(#ff6600, #000000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/000000/ffffff&amp;text=000000" alt="Color 2">
-<img src="http://placehold.it/100x40/ff2900/ffffff&amp;text=ff2900" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#000000:#ffffff/text:000000" alt="Color 2">
+<img src="holder.js/100x40/#ff2900:#ffffff/text:ff2900" alt="Color 3"></p>
 <pre><code class="language-less">softlight(#ff6600, #333333);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/333333/ffffff&amp;text=333333" alt="Color 2">
-<img src="http://placehold.it/100x40/ff4100/ffffff&amp;text=ff4100" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#333333:#ffffff/text:333333" alt="Color 2">
+<img src="holder.js/100x40/#ff4100:#ffffff/text:ff4100" alt="Color 3"></p>
 <pre><code class="language-less">softlight(#ff6600, #666666);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/666666/ffffff&amp;text=666666" alt="Color 2">
-<img src="http://placehold.it/100x40/ff5a00/ffffff&amp;text=ff5a00" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#666666:#ffffff/text:666666" alt="Color 2">
+<img src="holder.js/100x40/#ff5a00:#ffffff/text:ff5a00" alt="Color 3"></p>
 <pre><code class="language-less">softlight(#ff6600, #999999);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/999999/ffffff&amp;text=999999" alt="Color 2">
-<img src="http://placehold.it/100x40/ff7200/ffffff&amp;text=ff7200" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#999999:#ffffff/text:999999" alt="Color 2">
+<img src="holder.js/100x40/#ff7200:#ffffff/text:ff7200" alt="Color 3"></p>
 <pre><code class="language-less">softlight(#ff6600, #cccccc);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/cccccc/000000&amp;text=cccccc" alt="Color 2">
-<img src="http://placehold.it/100x40/ff8a00/ffffff&amp;text=ff8a00" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#cccccc:#000000/text:cccccc" alt="Color 2">
+<img src="holder.js/100x40/#ff8a00:#ffffff/text:ff8a00" alt="Color 3"></p>
 <pre><code class="language-less">softlight(#ff6600, #ffffff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ffffff/000000&amp;text=ffffff" alt="Color 2">
-<img src="http://placehold.it/100x40/ffa100/ffffff&amp;text=ffa100" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ffffff:#000000/text:ffffff" alt="Color 2">
+<img src="holder.js/100x40/#ffa100:#ffffff/text:ffa100" alt="Color 3"></p>
 <pre><code class="language-less">softlight(#ff6600, #ff0000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ff0000/ffffff&amp;text=ff0000" alt="Color 2">
-<img src="http://placehold.it/100x40/ff2900/ffffff&amp;text=ff2900" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 2">
+<img src="holder.js/100x40/#ff2900:#ffffff/text:ff2900" alt="Color 3"></p>
 <pre><code class="language-less">softlight(#ff6600, #00ff00);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/00ff00/ffffff&amp;text=00ff00" alt="Color 2">
-<img src="http://placehold.it/100x40/ffa100/ffffff&amp;text=ffa100" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#00ff00:#ffffff/text:00ff00" alt="Color 2">
+<img src="holder.js/100x40/#ffa100:#ffffff/text:ffa100" alt="Color 3"></p>
 <pre><code class="language-less">softlight(#ff6600, #0000ff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/0000ff/ffffff&amp;text=0000ff" alt="Color 2">
-<img src="http://placehold.it/100x40/ff2900/ffffff&amp;text=ff2900" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#0000ff:#ffffff/text:0000ff" alt="Color 2">
+<img src="holder.js/100x40/#ff2900:#ffffff/text:ff2900" alt="Color 3"></p>
 <h2 id="hardlight">hardlight</h2>
 <blockquote>
-<p>Similar to <code>overlay</code> but use the second color to detect light and dark channels instead of using the first color.</p>
+<p>The same as <code>overlay</code> but with the color roles reversed.</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
-<li><code>color1</code>: A color object to overlay another.</li>
-<li><code>color2</code>: A color object to be <em>overlayed</em>. Also it is the determinant color to make the result lighter or darker.</li>
+<li><code>color1</code>: A color object to <em>overlay</em>.</li>
+<li><code>color2</code>: A base color object. Also the determinant color to make the result lighter or darker.</li>
 </ul>
 <p>Returns: <code>color</code></p>
 <p>Example:</p>
 <pre><code class="language-less">hardlight(#ff6600, #000000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/000000/ffffff&amp;text=000000" alt="Color 2">
-<img src="http://placehold.it/100x40/000000/ffffff&amp;text=000000" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#000000:#ffffff/text:000000" alt="Color 2">
+<img src="holder.js/100x40/#000000:#ffffff/text:000000" alt="Color 3"></p>
 <pre><code class="language-less">hardlight(#ff6600, #333333);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/333333/ffffff&amp;text=333333" alt="Color 2">
-<img src="http://placehold.it/100x40/662900/ffffff&amp;text=662900" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#333333:#ffffff/text:333333" alt="Color 2">
+<img src="holder.js/100x40/#662900:#ffffff/text:662900" alt="Color 3"></p>
 <pre><code class="language-less">hardlight(#ff6600, #666666);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/666666/ffffff&amp;text=666666" alt="Color 2">
-<img src="http://placehold.it/100x40/cc5200/ffffff&amp;text=cc5200" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#666666:#ffffff/text:666666" alt="Color 2">
+<img src="holder.js/100x40/#cc5200:#ffffff/text:cc5200" alt="Color 3"></p>
 <pre><code class="language-less">hardlight(#ff6600, #999999);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/999999/ffffff&amp;text=999999" alt="Color 2">
-<img src="http://placehold.it/100x40/ff8533/ffffff&amp;text=ff8533" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#999999:#ffffff/text:999999" alt="Color 2">
+<img src="holder.js/100x40/#ff8533:#ffffff/text:ff8533" alt="Color 3"></p>
 <pre><code class="language-less">hardlight(#ff6600, #cccccc);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/cccccc/000000&amp;text=cccccc" alt="Color 2">
-<img src="http://placehold.it/100x40/ff2900/ffffff&amp;text=ff2900" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#cccccc:#000000/text:cccccc" alt="Color 2">
+<img src="holder.js/100x40/#ff2900:#ffffff/text:ff2900" alt="Color 3"></p>
 <pre><code class="language-less">hardlight(#ff6600, #ffffff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ffffff/000000&amp;text=ffffff" alt="Color 2">
-<img src="http://placehold.it/100x40/ffffff/000000&amp;text=ffffff" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ffffff:#000000/text:ffffff" alt="Color 2">
+<img src="holder.js/100x40/#ffffff:#000000/text:ffffff" alt="Color 3"></p>
 <pre><code class="language-less">hardlight(#ff6600, #ff0000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ff0000/ffffff&amp;text=ff0000" alt="Color 2">
-<img src="http://placehold.it/100x40/ff0000/ffffff&amp;text=ff0000" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 2">
+<img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 3"></p>
 <pre><code class="language-less">hardlight(#ff6600, #00ff00);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/00ff00/ffffff&amp;text=00ff00" alt="Color 2">
-<img src="http://placehold.it/100x40/00ff00/ffffff&amp;text=00ff00" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#00ff00:#ffffff/text:00ff00" alt="Color 2">
+<img src="holder.js/100x40/#00ff00:#ffffff/text:00ff00" alt="Color 3"></p>
 <pre><code class="language-less">hardlight(#ff6600, #0000ff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/0000ff/ffffff&amp;text=0000ff" alt="Color 2">
-<img src="http://placehold.it/100x40/0000ff/ffffff&amp;text=0000ff" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#0000ff:#ffffff/text:0000ff" alt="Color 2">
+<img src="holder.js/100x40/#0000ff:#ffffff/text:0000ff" alt="Color 3"></p>
 <h2 id="difference">difference</h2>
 <blockquote>
-<p>Substracts the second color from the first color. The operation is made per RGB channels. The result is a darker color.</p>
+<p>Subtracts the second color from the first color on a channel-by-channel basis. Negative values are inverted. Subtracting black results in no change; subtracting white results in color inversion.</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
@@ -1507,44 +1507,44 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
 <p>Returns: <code>color</code></p>
 <p>Example:</p>
 <pre><code class="language-less">difference(#ff6600, #000000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/000000/ffffff&amp;text=000000" alt="Color 2">
-<img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#000000:#ffffff/text:000000" alt="Color 2">
+<img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 3"></p>
 <pre><code class="language-less">difference(#ff6600, #333333);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/333333/ffffff&amp;text=333333" alt="Color 2">
-<img src="http://placehold.it/100x40/cc3333/ffffff&amp;text=cc3333" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#333333:#ffffff/text:333333" alt="Color 2">
+<img src="holder.js/100x40/#cc3333:#ffffff/text:cc3333" alt="Color 3"></p>
 <pre><code class="language-less">difference(#ff6600, #666666);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/666666/ffffff&amp;text=666666" alt="Color 2">
-<img src="http://placehold.it/100x40/990066/ffffff&amp;text=990066" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#666666:#ffffff/text:666666" alt="Color 2">
+<img src="holder.js/100x40/#990066:#ffffff/text:990066" alt="Color 3"></p>
 <pre><code class="language-less">difference(#ff6600, #999999);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/999999/ffffff&amp;text=999999" alt="Color 2">
-<img src="http://placehold.it/100x40/663399/ffffff&amp;text=663399" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#999999:#ffffff/text:999999" alt="Color 2">
+<img src="holder.js/100x40/#663399:#ffffff/text:663399" alt="Color 3"></p>
 <pre><code class="language-less">difference(#ff6600, #cccccc);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/cccccc/000000&amp;text=cccccc" alt="Color 2">
-<img src="http://placehold.it/100x40/3366cc/ffffff&amp;text=3366cc" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#cccccc:#000000/text:cccccc" alt="Color 2">
+<img src="holder.js/100x40/#3366cc:#ffffff/text:3366cc" alt="Color 3"></p>
 <pre><code class="language-less">difference(#ff6600, #ffffff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ffffff/000000&amp;text=ffffff" alt="Color 2">
-<img src="http://placehold.it/100x40/0099ff/ffffff&amp;text=0099ff" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ffffff:#000000/text:ffffff" alt="Color 2">
+<img src="holder.js/100x40/#0099ff:#ffffff/text:0099ff" alt="Color 3"></p>
 <pre><code class="language-less">difference(#ff6600, #ff0000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ff0000/ffffff&amp;text=ff0000" alt="Color 2">
-<img src="http://placehold.it/100x40/006600/ffffff&amp;text=006600" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 2">
+<img src="holder.js/100x40/#006600:#ffffff/text:006600" alt="Color 3"></p>
 <pre><code class="language-less">difference(#ff6600, #00ff00);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/00ff00/ffffff&amp;text=00ff00" alt="Color 2">
-<img src="http://placehold.it/100x40/ff9900/ffffff&amp;text=ff9900" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#00ff00:#ffffff/text:00ff00" alt="Color 2">
+<img src="holder.js/100x40/#ff9900:#ffffff/text:ff9900" alt="Color 3"></p>
 <pre><code class="language-less">difference(#ff6600, #0000ff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/0000ff/ffffff&amp;text=0000ff" alt="Color 2">
-<img src="http://placehold.it/100x40/ff66ff/000000&amp;text=ff66ff" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#0000ff:#ffffff/text:0000ff" alt="Color 2">
+<img src="holder.js/100x40/#ff66ff:#000000/text:ff66ff" alt="Color 3"></p>
 <h2 id="exclusion">exclusion</h2>
 <blockquote>
-<p>Similar effect to <code>difference</code> with lower contrast.</p>
+<p>A similar effect to <code>difference</code> with lower contrast.</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
@@ -1554,44 +1554,44 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
 <p>Returns: <code>color</code></p>
 <p>Example:</p>
 <pre><code class="language-less">exclusion(#ff6600, #000000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/000000/ffffff&amp;text=000000" alt="Color 2">
-<img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#000000:#ffffff/text:000000" alt="Color 2">
+<img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 3"></p>
 <pre><code class="language-less">exclusion(#ff6600, #333333);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/333333/ffffff&amp;text=333333" alt="Color 2">
-<img src="http://placehold.it/100x40/cc7033/ffffff&amp;text=cc7033" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#333333:#ffffff/text:333333" alt="Color 2">
+<img src="holder.js/100x40/#cc7033:#ffffff/text:cc7033" alt="Color 3"></p>
 <pre><code class="language-less">exclusion(#ff6600, #666666);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/666666/ffffff&amp;text=666666" alt="Color 2">
-<img src="http://placehold.it/100x40/997a66/ffffff&amp;text=997a66" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#666666:#ffffff/text:666666" alt="Color 2">
+<img src="holder.js/100x40/#997a66:#ffffff/text:997a66" alt="Color 3"></p>
 <pre><code class="language-less">exclusion(#ff6600, #999999);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/999999/ffffff&amp;text=999999" alt="Color 2">
-<img src="http://placehold.it/100x40/668599/ffffff&amp;text=668599" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#999999:#ffffff/text:999999" alt="Color 2">
+<img src="holder.js/100x40/#668599:#ffffff/text:668599" alt="Color 3"></p>
 <pre><code class="language-less">exclusion(#ff6600, #cccccc);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/cccccc/000000&amp;text=cccccc" alt="Color 2">
-<img src="http://placehold.it/100x40/338fcc/ffffff&amp;text=338fcc" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#cccccc:#000000/text:cccccc" alt="Color 2">
+<img src="holder.js/100x40/#338fcc:#ffffff/text:338fcc" alt="Color 3"></p>
 <pre><code class="language-less">exclusion(#ff6600, #ffffff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ffffff/000000&amp;text=ffffff" alt="Color 2">
-<img src="http://placehold.it/100x40/0099ff/ffffff&amp;text=0099ff" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ffffff:#000000/text:ffffff" alt="Color 2">
+<img src="holder.js/100x40/#0099ff:#ffffff/text:0099ff" alt="Color 3"></p>
 <pre><code class="language-less">exclusion(#ff6600, #ff0000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ff0000/ffffff&amp;text=ff0000" alt="Color 2">
-<img src="http://placehold.it/100x40/006600/ffffff&amp;text=006600" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 2">
+<img src="holder.js/100x40/#006600:#ffffff/text:006600" alt="Color 3"></p>
 <pre><code class="language-less">exclusion(#ff6600, #00ff00);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/00ff00/ffffff&amp;text=00ff00" alt="Color 2">
-<img src="http://placehold.it/100x40/ff9900/ffffff&amp;text=ff9900" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#00ff00:#ffffff/text:00ff00" alt="Color 2">
+<img src="holder.js/100x40/#ff9900:#ffffff/text:ff9900" alt="Color 3"></p>
 <pre><code class="language-less">exclusion(#ff6600, #0000ff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/0000ff/ffffff&amp;text=0000ff" alt="Color 2">
-<img src="http://placehold.it/100x40/ff66ff/000000&amp;text=ff66ff" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#0000ff:#ffffff/text:0000ff" alt="Color 2">
+<img src="holder.js/100x40/#ff66ff:#000000/text:ff66ff" alt="Color 3"></p>
 <h2 id="average">average</h2>
 <blockquote>
-<p>Compute the average of two colors. The operation is made per RGB channels.</p>
+<p>Compute the average of two colors on a per-channel (RGB) basis.</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
@@ -1601,46 +1601,46 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
 <p>Returns: <code>color</code></p>
 <p>Example:</p>
 <pre><code class="language-less">average(#ff6600, #000000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/000000/ffffff&amp;text=000000" alt="Color 2">
-<img src="http://placehold.it/100x40/803300/ffffff&amp;text=803300" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#000000:#ffffff/text:000000" alt="Color 2">
+<img src="holder.js/100x40/#803300:#ffffff/text:803300" alt="Color 3"></p>
 <pre><code class="language-less">average(#ff6600, #333333);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/333333/ffffff&amp;text=333333" alt="Color 2">
-<img src="http://placehold.it/100x40/994d1a/ffffff&amp;text=994d1a" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#333333:#ffffff/text:333333" alt="Color 2">
+<img src="holder.js/100x40/#994d1a:#ffffff/text:994d1a" alt="Color 3"></p>
 <pre><code class="language-less">average(#ff6600, #666666);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/666666/ffffff&amp;text=666666" alt="Color 2">
-<img src="http://placehold.it/100x40/b36633/ffffff&amp;text=b36633" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#666666:#ffffff/text:666666" alt="Color 2">
+<img src="holder.js/100x40/#b36633:#ffffff/text:b36633" alt="Color 3"></p>
 <pre><code class="language-less">average(#ff6600, #999999);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/999999/ffffff&amp;text=999999" alt="Color 2">
-<img src="http://placehold.it/100x40/cc804d/ffffff&amp;text=cc804d" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#999999:#ffffff/text:999999" alt="Color 2">
+<img src="holder.js/100x40/#cc804d:#ffffff/text:cc804d" alt="Color 3"></p>
 <pre><code class="language-less">average(#ff6600, #cccccc);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/cccccc/000000&amp;text=cccccc" alt="Color 2">
-<img src="http://placehold.it/100x40/e69966/ffffff&amp;text=e69966" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#cccccc:#000000/text:cccccc" alt="Color 2">
+<img src="holder.js/100x40/#e69966:#ffffff/text:e69966" alt="Color 3"></p>
 <pre><code class="language-less">average(#ff6600, #ffffff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ffffff/000000&amp;text=ffffff" alt="Color 2">
-<img src="http://placehold.it/100x40/ffb380/000000&amp;text=ffb380" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ffffff:#000000/text:ffffff" alt="Color 2">
+<img src="holder.js/100x40/#ffb380:#000000/text:ffb380" alt="Color 3"></p>
 <pre><code class="language-less">average(#ff6600, #ff0000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ff0000/ffffff&amp;text=ff0000" alt="Color 2">
-<img src="http://placehold.it/100x40/ff3300/ffffff&amp;text=ff3300" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 2">
+<img src="holder.js/100x40/#ff3300:#ffffff/text:ff3300" alt="Color 3"></p>
 <pre><code class="language-less">average(#ff6600, #00ff00);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/00ff00/ffffff&amp;text=00ff00" alt="Color 2">
-<img src="http://placehold.it/100x40/80b300/ffffff&amp;text=80b300" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#00ff00:#ffffff/text:00ff00" alt="Color 2">
+<img src="holder.js/100x40/#80b300:#ffffff/text:80b300" alt="Color 3"></p>
 <pre><code class="language-less">average(#ff6600, #0000ff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/0000ff/ffffff&amp;text=0000ff" alt="Color 2">
-<img src="http://placehold.it/100x40/803380/ffffff&amp;text=803380" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#0000ff:#ffffff/text:0000ff" alt="Color 2">
+<img src="holder.js/100x40/#803380:#ffffff/text:803380" alt="Color 3"></p>
 <h2 id="negation">negation</h2>
 <blockquote>
-<p>Do the opposite effect from <code>difference</code>.</p>
+<p>Do the opposite effect to <code>difference</code>.</p>
 </blockquote>
-<p>The result is a brighter color. <strong>Note</strong>: The <em>opposite</em> effect doesn&#39;t mean the <em>inverted</em> effect as resulting to an <em>addition</em> operation.</p>
+<p>The result is a brighter color. <strong>Note</strong>: The <em>opposite</em> effect doesn&#39;t mean the <em>inverted</em> effect as resulting from an <em>addition</em> operation.</p>
 <p>Parameters:</p>
 <ul>
 <li><code>color1</code>: A color object to act as the minuend.</li>
@@ -1649,41 +1649,41 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
 <p>Returns: <code>color</code></p>
 <p>Example:</p>
 <pre><code class="language-less">negation(#ff6600, #000000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/000000/ffffff&amp;text=000000" alt="Color 2">
-<img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#000000:#ffffff/text:000000" alt="Color 2">
+<img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 3"></p>
 <pre><code class="language-less">negation(#ff6600, #333333);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/333333/ffffff&amp;text=333333" alt="Color 2">
-<img src="http://placehold.it/100x40/cc9933/ffffff&amp;text=cc9933" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#333333:#ffffff/text:333333" alt="Color 2">
+<img src="holder.js/100x40/#cc9933:#ffffff/text:cc9933" alt="Color 3"></p>
 <pre><code class="language-less">negation(#ff6600, #666666);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/666666/ffffff&amp;text=666666" alt="Color 2">
-<img src="http://placehold.it/100x40/99cc66/ffffff&amp;text=99cc66" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#666666:#ffffff/text:666666" alt="Color 2">
+<img src="holder.js/100x40/#99cc66:#ffffff/text:99cc66" alt="Color 3"></p>
 <pre><code class="language-less">negation(#ff6600, #999999);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/999999/ffffff&amp;text=999999" alt="Color 2">
-<img src="http://placehold.it/100x40/66ff99/ffffff&amp;text=66ff99" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#999999:#ffffff/text:999999" alt="Color 2">
+<img src="holder.js/100x40/#66ff99:#ffffff/text:66ff99" alt="Color 3"></p>
 <pre><code class="language-less">negation(#ff6600, #cccccc);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/cccccc/000000&amp;text=cccccc" alt="Color 2">
-<img src="http://placehold.it/100x40/33cccc/ffffff&amp;text=33cccc" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#cccccc:#000000/text:cccccc" alt="Color 2">
+<img src="holder.js/100x40/#33cccc:#ffffff/text:33cccc" alt="Color 3"></p>
 <pre><code class="language-less">negation(#ff6600, #ffffff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ffffff/000000&amp;text=ffffff" alt="Color 2">
-<img src="http://placehold.it/100x40/0099ff/ffffff&amp;text=0099ff" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ffffff:#000000/text:ffffff" alt="Color 2">
+<img src="holder.js/100x40/#0099ff:#ffffff/text:0099ff" alt="Color 3"></p>
 <pre><code class="language-less">negation(#ff6600, #ff0000);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/ff0000/ffffff&amp;text=ff0000" alt="Color 2">
-<img src="http://placehold.it/100x40/006600/ffffff&amp;text=006600" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 2">
+<img src="holder.js/100x40/#006600:#ffffff/text:006600" alt="Color 3"></p>
 <pre><code class="language-less">negation(#ff6600, #00ff00);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/00ff00/ffffff&amp;text=00ff00" alt="Color 2">
-<img src="http://placehold.it/100x40/ff9900/ffffff&amp;text=ff9900" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#00ff00:#ffffff/text:00ff00" alt="Color 2">
+<img src="holder.js/100x40/#ff9900:#ffffff/text:ff9900" alt="Color 3"></p>
 <pre><code class="language-less">negation(#ff6600, #0000ff);</code></pre>
-<p><img src="http://placehold.it/100x40/ff6600/ffffff&amp;text=ff6600" alt="Color 1">
-<img src="http://placehold.it/100x40/0000ff/ffffff&amp;text=0000ff" alt="Color 2">
-<img src="http://placehold.it/100x40/ff66ff/ffffff&amp;text=ff66ff" alt="Color 3"></p>
+<p><img src="holder.js/100x40/#ff6600:#ffffff/text:ff6600" alt="Color 1">
+<img src="holder.js/100x40/#0000ff:#ffffff/text:0000ff" alt="Color 2">
+<img src="holder.js/100x40/#ff66ff:#ffffff/text:ff66ff" alt="Color 3"></p>
 
 </div>
         </div>
@@ -1711,11 +1711,11 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
       <li class="muted">&middot;</li>
       <li><a href="">Blog</a></li>
       <li class="muted">&middot;</li>
-      <li><a href="/issues?state=open">Issues</a></li>
+      <li><a href="https://github.com/less/less-docs.git/issues?state=open">Issues</a></li>
       <li class="muted">&middot;</li>
-      <li><a href="/blob/master/CHANGELOG.md">Changelog</a></li>
+      <li><a href="https://github.com/less/less-docs.git/blob/master/CHANGELOG.md">Changelog</a></li>
       <li class="muted">&middot;</li>
-      <li><a href="/releases">Releases</a></li>
+      <li><a href="https://github.com/less/less-docs.git/releases">Releases</a></li>
     </ul>
   </div>
 </footer>
