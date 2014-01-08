@@ -1,6 +1,6 @@
 ### length
 
-> Returns a number of elements in a value list.
+> Returns the number of elements in a value list.
 
 Parameters: `list` - a comma or space separated list of values.
 Returns: an integer number of elements in a list
@@ -23,7 +23,7 @@ n: 4;
 
 ### extract
 
-> Returns a value at a specified position in a list.
+> Returns the value at a specified position in a list.
 
 Parameters:
 `list` - a comma or space separated list of values.

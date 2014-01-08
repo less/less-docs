@@ -45,7 +45,6 @@ Parameters:
 * `number`: A floating point number.
 * `decimalPlaces`: Optional: The number of decimal places to round to. Defaults to 0.
 
-
 Returns: `number`
 
 Example: `round(1.67)`
@@ -66,7 +65,6 @@ Parameters: `number` - floating point number.
 Returns: `number`
 
 Example:
-
 
 ```less
 sqrt(25cm)
@@ -108,7 +106,6 @@ Example #2: `abs(-18.6%)`
 Output: `18.6%;`
 
 
-
 ### sin
 
 > Calculates sine function.
@@ -118,8 +115,6 @@ Assumes radians on numbers without units.
 Parameters: `number` - a floating point number.
 
 Returns: `number`
-
-
 
 Example:
 
@@ -144,13 +139,11 @@ Output:
 
 Returns number in radians e.g. a number between `-&pi;/2` and `&pi;/2`.
 
-
 Parameters: `number` - floating point number from `[-1, 1]` interval.
 
 Returns: `number`
 
 Example:
-
 
 ```less
 asin(-0.8414709848078965)
@@ -179,7 +172,6 @@ Returns: `number`
 
 Example:
 
-
 ```less
 cos(1) // cosine of 1 radian
 cos(1deg) // cosine of 1 degree
@@ -206,7 +198,6 @@ Parameters: `number` - a floating point number from [-1, 1] interval.
 Returns: `number`
 
 Example:
-
 
 ```less
 acos(0.5403023058681398)
@@ -235,7 +226,6 @@ Returns: `number`
 
 Example:
 
-
 ```less
 tan(1) // tangent of 1 radian
 tan(1deg) // tangent of 1 degree
@@ -257,13 +247,11 @@ Output:
 
 Returns number in radians e.g. a number between `-&pi;/2` and `&pi;/2`.
 
-
 Parameters: `number` - a floating point number.
 
 Returns: `number`
 
 Example:
-
 
 ```less
 atan(-1.5574077246549023)
@@ -288,8 +276,6 @@ Parameters: `none`
 
 Returns: `number`
 
-
-
 Example:
 
 ```less
@@ -313,10 +299,7 @@ Parameters:
 * `number`: base -a floating point number.
 * `number`: exponent - a floating point number.
 
-
 Returns: `number`
-
-
 
 Example:
 
@@ -349,11 +332,9 @@ Parameters:
 * `number`: a floating point number.
 * `number`: a floating point number.
 
-
 Returns: `number`
 
 Example:
-
 
 ```less
 mod(0cm, 0px)
@@ -378,8 +359,6 @@ Parameters: `value1, ..., valueN` - one or more values to compare.
 
 Returns: the lowest value.
 
-
-
 Example: `min(5, 10);`
 
 Output: `5`
@@ -389,7 +368,6 @@ Example: `min(3px, 42px, 1px, 16px);`
 Output: `1px`
 
 
-
 ### max
 
 > Returns the highest of one or more values.
@@ -397,8 +375,6 @@ Output: `1px`
 Parameters: `value1, ..., valueN` - one or more values to compare.
 
 Returns: the highest value.
-
-
 
 Example: `max(5, 10);`
 

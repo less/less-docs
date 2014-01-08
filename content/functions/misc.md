@@ -2,7 +2,9 @@
 
 > Parses a color, so a string representing a color becomes a color.
 
-Parameters: `string`: a string of the specifid color.
+Parameters: `string`: a string of the specified color.
+
+Returns: `color`
 
 Example: `color("#aaa");`
 
@@ -12,8 +14,8 @@ Output: `#aaa`
 ### unit
 
 > Remove or change the unit of a dimension
-Parameters:
 
+Parameters:
 * `dimension`: A number, with or without a dimension.
 * `unit`: (Optional) the unit to change to, or if omitted it will remove the unit.
 
@@ -28,9 +30,9 @@ Output: `5`
 
 ### convert
 
-> Converts numbers from one type into another.
+> Convert a number from one unit into another.
 
-First argument contains number with units and second argument contains units. If both units are compatible, the number is converted. If they are not compatible, function returns first argument without modifying it.
+The first argument contains a number with units and second argument contains units. If the units are compatible, the number is converted. If they are not compatible, the first argument is returned unmodified.
 
 _Compatible unit groups_:
 
@@ -43,6 +45,7 @@ Parameters:
 * `identifier`, `string` or `escaped value`: units
 
 Returns: `number`
+
 Example:
 
 ```less
@@ -59,12 +62,13 @@ Output:
 8
 ```
 
+
 ### data-uri
 
-> Inlines a resource and falls back to `url()` if the ieCompat option is on and the resource is too large, or if you use the function in the browser. If the mime is not given then node uses the mime package to determine the correct mime type.
-Parameters:
+> Inlines a resource and falls back to `url()` if the ieCompat option is on and the resource is too large, or if you use the function in the browser. If the MIME type is not given then node uses the mime package to determine the correct mime type.
 
-* `mimetype`: (Optional) A mime type string.
+Parameters:
+* `mimetype`: (Optional) A MIME type string.
 * `url`: The URL of the file to inline.
 
 Example: `data-uri('../data/image.jpg');`
@@ -72,7 +76,6 @@ Example: `data-uri('../data/image.jpg');`
 Output: `url('data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==');`
 
 Output in browser: `url('../data/image.jpg');`
-
 
 Example: `data-uri('image/jpeg;base64', '../data/image.jpg');`
 

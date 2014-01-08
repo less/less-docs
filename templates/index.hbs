@@ -14,7 +14,6 @@ lead: "An overview of Less, how to download and use, examples and more."
   {{md 'content/home/getting-started.md'}}
 </div>
 
-
 <!-- Usage
 ================================================== -->
 <div class="docs-section">
@@ -22,11 +21,8 @@ lead: "An overview of Less, how to download and use, examples and more."
     <h1 id="using-less">Using Less</h1>
   </div>
   {{md 'content/home/using.md'}}
-
-<h3 id="browser-downloads">Browser downloads</h3>
-
+  <h3 id="browser-downloads">Browser downloads</h3>
   <p><a class="btn btn-lg btn-primary" href="{{ site.download.latest }}" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" role="button">Download Less.js v{{less.version}}</a></p>
-
   <div class="docs-dl-options">
     <h4>
       <a href="{{ site.download.source }}" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);">Download source code</a>
@@ -39,27 +35,20 @@ lead: "An overview of Less, how to download and use, examples and more."
       Install with <a href="http://bower.io">Bower</a>
     </h4>
     <p>Install the Less.js project and JavaScript using <a href="http://bower.io">Bower</a>.</p>
-
 {{#markdown}}
 ```bash
 bower install less
 ```
 {{/markdown}}
-
   </div>
-
   <h3 id="download-cdn">Less CDN</h3>
-  <p>TODO <a href="{{site.cdn.cloutflare}}">CDN</a>.</p>
-
-
+  <p>TODO <a href="{{site.cdn.cloudflare}}">CDN</a>.</p>
 {{#markdown}}
 ```html
 <script src="{{ site.cdn.cloudflare }}"></script>
 ```
 {{/markdown}}
-
 </div>
-
 
   <!-- License FAQs
   ================================================== -->
@@ -68,7 +57,6 @@ bower install less
       <h1 id="license-faqs">License FAQs</h1>
     </div>
     <p class="lead">Less.js is released under the Apache 2 License (<a href="https://github.com/less/less.js/issues/1029">though there are plans to dual license it</a>). Copyright 2009-{{ now "%Y" }}, Alexis Sellier and the Less Core Team (see about). Boiled down to smaller chunks, it can be described with the following conditions.</p>
-
     <div class="row">
       <div class="col-12 col-lg-6">
         <h4>It allows you to:</h4>
@@ -102,4 +90,3 @@ bower install less
     </div>
     <p>The full Less.js license is located <a href="{{ site.repo }}/blob/master/LICENSE">in the project repository</a> for more information.</p>
   </div><!-- /.docs-section -->
-  

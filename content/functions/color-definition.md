@@ -24,7 +24,7 @@ Parameters:
 * `red`: An integer 0-255 or percentage 0-100%.
 * `green`: An integer 0-255 or percentage 0-100%.
 * `blue`: An integer 0-255 or percentage 0-100%.
-* `alpha`: An number 0-1 or percentage 0-100%.
+* `alpha`: A number 0-1 or percentage 0-100%.
 
 Returns: `color`
 
@@ -68,7 +68,6 @@ This is useful if you want to create a new color based on another color's channe
 `@new` will have `@old`'s *hue*, and its own saturation and lightness.
 
 
-
 ### hsla
 
 > Creates a transparent color object from hue, saturation, lightness and alpha (HSLA) values.
@@ -90,7 +89,7 @@ Output: `rgba(128, 255, 0, 0.5)`
 
 > Creates an opaque color object from hue, saturation and value (HSV) values.
 
-Note that this is not the same as `hsl`, and is a color space available in Photoshop.
+Note that this is a color space available in Photoshop, and is not the same as `hsl`.
 
 Parameters:
 * `hue`: An integer 0-360 representing degrees.

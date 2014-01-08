@@ -3,7 +3,7 @@
 > For general installation instructions, please read the [[Getting Started]] guide. If you need more specific information after having read that, read on.
 
 ## Overview
-Less.js is comprised of two parts: `lessc`.
+Less.js comprises two parts:
 
 1. The npm module `lessc` should be installed locally to your project. It contains the code and logic for running tasks, loading plugins, etc.
 1. The npm module `lessc-cli` should be installed globally. It puts the `lessc` command in your PATH so you can execute it anywhere. By itself, it doesn't do anything; its job is to load and run the lessc that has been installed locally to your project, regardless of its version.
