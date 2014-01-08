@@ -10,9 +10,9 @@ make sure the paths are setup. If you startup cygwin and type `node -v` you shou
 * navigate to your local less.js repository and run `npm install` this installs less' npm dependencies.
 * run `npm -g install uglify-js` if you want to do builds. This needs to be done so that uglify-js is available globally.
 
-## usage
+## Usage
 
-If you go to the root of the less repository you should be able to do `make test` - this should run the tests. `make browser-test` should run the browser tests. If you want to try out the currrent version of less against a file, from here do `node bin/lessc path/to/file.less`
+If you go to the root of the less repository you should be able to do `make test` - this should run the tests. `make browser-test` should run the browser tests. If you want to try out the current version of less against a file, from here do `node bin/lessc path/to/file.less`
 
 To debug the browser tests, run `make browser-test-server` then go to http://localhost:8081/browser/test-runner-main.htm or one of the other test runner pages created in `{path-to-less.js-repository}/test/browser/`
 

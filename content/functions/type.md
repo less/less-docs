@@ -1,8 +1,9 @@
 ### isnumber
 
-> Returns `true` if value is a number, `false` otherwise.
+> Returns `true` if a value is a number, `false` otherwise.
 
 Parameters: `value` - a value or variable being evaluated.
+
 Returns: `true` if value is a number, `false` otherwise.
 
 Example:
@@ -21,9 +22,10 @@ isnumber(url(...)); // false
 
 ### isstring
 
-> Returns `true` if value is a string, `false` otherwise.
+> Returns `true` if a value is a string, `false` otherwise.
 
 Parameters: `value` - a value or variable being evaluated.
+
 Returns: `true` if value is a string, `false` otherwise.
 
 Example:
@@ -42,9 +44,10 @@ isstring(url(...)); // false
 
 ### iscolor
 
-> Returns `true` if value is a color, `false` otherwise.
+> Returns `true` if a value is a color, `false` otherwise.
 
 Parameters: `value` - a value or variable being evaluated.
+
 Returns: `true` if value is a color, `false` otherwise.
 
 Example:
@@ -63,9 +66,10 @@ iscolor(url(...)); // false
 
 ### iskeyword
 
-> Returns `true` if value is a keyword, `false` otherwise.
+> Returns `true` if a value is a keyword, `false` otherwise.
 
 Parameters: `value` - a value or variable being evaluated.
+
 Returns: `true` if value is a keyword, `false` otherwise.
 
 Example:
@@ -84,9 +88,10 @@ iskeyword(url(...)); // false
 
 ### isurl
 
-> Returns `true` if value is a url, `false` otherwise.
+> Returns `true` if a value is a url, `false` otherwise.
 
 Parameters: `value` - a value or variable being evaluated.
+
 Returns: `true` if value is a url, `false` otherwise.
 
 Example:
@@ -105,9 +110,10 @@ isurl(url(...)); // true
 
 ### ispixel
 
-> Returns `true` if value is a number in pixels, `false` otherwise.
+> Returns `true` if a value is a number in pixels, `false` otherwise.
 
 Parameters: `value` - a value or variable being evaluated.
+
 Returns: `true` if value is a pixel, `false` otherwise.
 
 Example:
@@ -126,9 +132,10 @@ ispixel(url(...)); // false
 
 ### isem
 
-> Returns `true` if value is an em value, `false` otherwise.
+> Returns `true` if a value is an em value, `false` otherwise.
 
 Parameters: `value` - a value or variable being evaluated.
+
 Returns: `true` if value is an em value, `false` otherwise.
 
 Example:
@@ -147,9 +154,10 @@ isem(url(...)); // false
 
 ### ispercentage
 
-> Returns `true` if value is a percentage value, `false` otherwise.
+> Returns `true` if a value is a percentage value, `false` otherwise.
 
 Parameters: `value` - a value or variable being evaluated.
+
 Returns: `true` if value is a percentage value, `false` otherwise.
 
 Example:
@@ -168,11 +176,12 @@ ispercentage(url(...)); // false
 
 ### isunit
 
-> Returns `true` if value is a number in specified units, `false` otherwise.
+> Returns `true` if a value is a number in specified units, `false` otherwise.
 
 Parameters:
 * `value` - a value or variable being evaluated.
 * `unit` - a unit identifier (optionaly quoted) to test for.
+
 Returns: `true` if value is a number in specified units, `false` otherwise.
 
 Example:

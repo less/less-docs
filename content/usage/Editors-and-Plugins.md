@@ -2,15 +2,15 @@ Also see: [[GUI Compilers that use LESS.js]]
 
 ## Editors and IDEs
 
-* [Crunch!](http://crunchapp.net/) (built in support)
-* [Mindscape Web Workbench][web-workbench] (built in support)
-* [NetBeans][netbeans] (built in [syntax highlighting][netbeans-sh])
+* [Crunch!](http://crunchapp.net/) (built-in support)
+* [Mindscape Web Workbench][web-workbench] (built-in support)
+* [NetBeans][netbeans] (built-in [syntax highlighting][netbeans-sh])
 * [TextMate](https://github.com/appden/less.tmbundle)
 * [Vim](https://github.com/groenewege/vim-less)
-* [jetBrains WebStorm][webstorm] and [PhpStorm][phpstorm] (built in support)
-* [Brackets][brackets] (built in syntax highlighting, [several extensions][brackets-ext] for compilation)
-* [CodeLobster][codelobster] (built in [syntax highlighting][codelobster-sh])
-* [KineticWing IDE][kineticwing] (built in [support][kineticwing-less])
+* [jetBrains WebStorm][webstorm] and [PhpStorm][phpstorm] (built-in support)
+* [Brackets][brackets] (built-in syntax highlighting, [several extensions][brackets-ext] for compilation)
+* [CodeLobster][codelobster] (built-in [syntax highlighting][codelobster-sh])
+* [KineticWing IDE][kineticwing] (built-in [support][kineticwing-less])
 
 #### [Sublime Text 2 & 3](http://sublimetext.com/)
 * [LESS-sublime][LESS-sublime]

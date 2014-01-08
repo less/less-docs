@@ -93,7 +93,7 @@ See the [Usage](usage.html) section for details of other tools.
 
 > Using less.js in the browser is great for development, but it's not recommended for production
 
-Client-side is the easiest way to get started and good for developing with LESS. But in production, when performance and reliability is important, _we recommend pre-compiling using node.js or one of the many third party tools available_.
+Client-side is the easiest way to get started and good for developing with LESS, but in production, when performance and reliability is important, _we recommend pre-compiling using node.js or one of the many third party tools available_.
 
 ## Getting started
 

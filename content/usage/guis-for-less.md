@@ -45,8 +45,6 @@ Get more info: [http://koala-app.com/](http://koala-app.com/)
 ![koala screenshot](http://koala-app.com/img/screenshot.png)
 
 
-
-
 ## Specific platforms
 
 ### Windows
@@ -79,7 +77,7 @@ Get more info: [http://incident57.com/less](http://incident57.com/less)
 
 #### [CodeKit](http://incident57.com/codekit)
 
-> CodeKit is the sucessor to LESS.app, and supports LESS among many other preprocessing languages, such as SASS, Jade, Markdown, and many more.
+> CodeKit is the successor to LESS.app, and supports LESS among many other preprocessing languages, such as SASS, Jade, Markdown, and many more.
 
 Get more info: [http://incident57.com/codekit](http://incident57.com/codekit)
 

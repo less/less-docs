@@ -37,7 +37,7 @@ Syntax: `@import (keyword) "filename";`
 The following import directives have been implemented:
 
 * `reference`: use a less file but do not output it
-* `inline`: include the sourcefile in the output but do not process
+* `inline`: include the source file in the output but do not process it
 * `less`: treat the file as a less file, no matter what the file extension
 * `css`: treat the file as a css file, no matter what the file extension
 * `once`: only include the file once (this is default behavior)
