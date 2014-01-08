@@ -9,5 +9,6 @@
 + **Russian**: <http://lesscss.ru>
 + **Ukrainian**: <http://komaval.github.com/lesscss.org/>
 + **Belarusian**: (Out of date) <http://www.designcontest.com/show/lesscss-be>
++ **Iranian**: <http://less-css.ir>
 
 Do you know of a translation that should be added to this list? Please [let us know](https://github.com/less/less-docs/issues/new).
