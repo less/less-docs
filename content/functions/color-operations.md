@@ -261,5 +261,5 @@ These examples use the calculated colors for background and foreground; you can 
 ![Color 1](holder.js/100x40/#aaaaaa:#000000/text:000000)
 ![Color 1](holder.js/100x40/#222222:#ffffff/text:ffffff)
 ![Color 1](holder.js/100x40/#222222:#dddddd/text:dddddd)
-![Color 1](holder.js/100x40/#80ff00:#000000/text:80ff00)
-![Color 1](holder.js/100x40/#80ff00:#ffffff/text:80ff00)
+![Color 1](holder.js/100x40/#80ff00:#000000/text:000000)
+![Color 1](holder.js/100x40/#80ff00:#ffffff/text:ffffff)
