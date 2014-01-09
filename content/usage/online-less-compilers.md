@@ -1,4 +1,4 @@
-# Online less compilers
+# Online Less compilers
 
 ### [less2css.org](http://less2css.org/)
 > Online Integrated Development Environment (IDE) that is hosted in a browser allowing users to edit and compile LESS to CSS in real-time.
@@ -18,7 +18,7 @@
 ### [leafo.net/lessphp/editor](http://leafo.net/lessphp/editor.html)
 > [lessphp](http://leafo.net/lessphp/) live demo.
 
-## Online Web IDEs/Playgrounds with LESS support
+## Online Web IDEs/Playgrounds with Less support
 
 ### [jsFiddle]( http://jsfiddle.net)
 > Online Web Editor

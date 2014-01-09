@@ -1,4 +1,4 @@
-## Using less in Node 
+## Using Less in Node 
 ### Installing lessc
 `npm install less --save-dev` and npm will install the latest official version of lessc in your project folder, adding it to your `package.json` devDependencies.
 
