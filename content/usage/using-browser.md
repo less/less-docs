@@ -1,4 +1,5 @@
-## Watch mode
+## Using Less in the Browser
+### Watch mode
 To enable Watch mode, option `env` must be set to `development`. Then AFTER the less.js file is included, call less.watch(), like this:
 
 ```html
@@ -8,7 +9,7 @@ To enable Watch mode, option `env` must be set to `development`. Then AFTER the 
 
 Alternatively you can temporary enable Watch mode by appending `#!watch` to the URL.
 
-## Modify variables
+### Modify variables
 
 Enables modification of LESS variables in run-time. When called with new values, the LESS file is recompiled without reloading. Simple basic usage:
 
@@ -19,7 +20,7 @@ less.modifyVars({
 });
 ```
 
-## Debugging
+### Debugging
 It is possible to output rules in your CSS which allow tools to locate the source of the rule.
 
 Either specify the option `dumpLineNumbers` as above or add `!dumpLineNumbers:mediaQuery` to the url.

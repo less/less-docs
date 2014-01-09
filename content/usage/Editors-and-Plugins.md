@@ -1,3 +1,5 @@
+# Editors and plugins
+
 Also see: [[GUI Compilers that use LESS.js]]
 
 ## Editors and IDEs

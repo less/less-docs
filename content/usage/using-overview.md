@@ -1,1 +1,0 @@
-> For general installation instructions, please read the [Using Less](index.html#using-less) section on our front page. If you need more specific information after having read that, read on.

@@ -1,3 +1,5 @@
+## Third party compilers
+
 ## Node.js compilers
 
 * **[assemble-less](https://github.com/assemble/assemble-less)**: Full-featured Grunt.js plugin for compiling LESS files to CSS, with additional options for maintaining libraries of LESS components and themes. For advanced users, this plugin allows you to define and manage LESS "packages" or "bundles" using JSON, [Lo-dash](https://github.com/bestiejs/lodash)(underscore) templates (e.g. `<%= bootstrap.less %>`), and [node-glob](https://github.com/isaacs/node-glob) / [minimatch](https://github.com/isaacs/minimatch) (e.g. `'../src/**/*.less"`). _assemble-less_ also has a number of options including minifying CSS
@@ -28,6 +30,9 @@ lessp.pl styles.less > styles.css
 ```
 
 ### Windows
+
+Note - the official less node runs on windows, the following are just alternative windows versions.
+
 **Windows Script Host**
 [LESS.js for Windows](https://github.com/duncansmart/less.js-windows) with this usage:
 
