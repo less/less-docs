@@ -13,7 +13,6 @@
   Usage | Less.js
 </title>
 
-
 <!-- Main styles -->
 <link href="assets/css/site.css" rel="stylesheet">
 <link href="assets/css/github.css" rel="stylesheet">
@@ -21,17 +20,16 @@
 <!-- Webfonts -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
 
-
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 
-
 <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
 <link rel="shortcut icon" href="assets/ico/favicon.png">
+
 
 
   </head>
@@ -89,7 +87,7 @@
     <div class="docs-header" id="content">
       <div class="container">
         <h1>Usage</h1>
-        <p>Usage.</p>
+        <p>How to use less server-side, client-side and with third parties.</p>
         
       </div>
     </div>
@@ -97,10 +95,10 @@
     <!-- Callout for the old docs link -->
     <div class="banner">
   <div class="container">
+    less v1.6.0 has been released - 
     <strong>
-      <a href="https://github.com/less/less-docs.git/blob/master/CHANGELOG.md">See what's new in v1.5.1</a>
+      <a href="https://github.com/less/less-docs.git/blob/master/CHANGELOG.md">See what's new</a>
     </strong>
-    To hear what's new from the Less.js core team, <a href="TODO">visit the blog</a>.
   </div>
 </div>
 
@@ -113,6 +111,48 @@
             <ul class="nav sidenav">
               
               
+              
+              
+                <li>
+  <a href="#using-less-environments">Using less - environment specifics</a>
+  <ul class="nav">
+    <li><a href="#using-less-in-node">Node</a></li>
+    <li><a href="#using-less-in-the-browser">Browser</a></li>
+    <li><a href="#browser-support">Browser Support</a></li>
+    <li><a href="#online-less-compilers">Online less compilers</a></li>
+    <li><a href="#guis-for-less">GUIs for less</a></li>
+    <li><a href="#third-party-compilers">Third party compilers</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#frameworks-using-less">Frameworks using less</a>
+</li>
+<li>
+  <a href="#options">Options</a>
+  <!--ul class="nav">
+    <li><a href="#escape">Node</a></li>
+  </ul-->
+</li>
+<li>
+  <a href="#sourcemaps">Sourcemaps</a>
+  <ul class="nav">
+    <li><a href="#creating-sourcemaps">Creating</a></li>
+    <li><a href="#using-sourcemaps">Using</a></li>
+    <li><a href="#sourcemap-options">Options</a></li>
+  </ul>
+</li>
+<li>
+  <a href="#plugins">Plugins</a>
+  <!--ul class="nav">
+    <li><a href="#escape">Node</a></li>
+  </ul-->
+</li>
+<li>
+  <a href="#developing-less">Developing Less</a>
+  <!--ul class="nav">
+    <li><a href="#escape">Node</a></li>
+  </ul-->
+</li>
               
               
               
@@ -128,32 +168,16 @@
 
 <!-- Usage
 ================================================== -->
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="functions-overview">Usage</h1>
-  </div>
-  <p class="lead">Usage.</p>
-</div>
 
 <div class="docs-section">
-  <h1 id="string-functions">Installing Less</h1>
-  <h1 id="installing-less-js">Installing Less.js</h1>
-<blockquote>
-<p>For general installation instructions, please read the [[Getting Started]] guide. If you need more specific information after having read that, read on.</p>
-</blockquote>
-<h2 id="overview">Overview</h2>
-<p>Less.js is comprised of two parts: <code>lessc</code>.</p>
-<ol>
-<li>The npm module <code>lessc</code> should be installed locally to your project. It contains the code and logic for running tasks, loading plugins, etc.</li>
-<li>The npm module <code>lessc-cli</code> should be installed globally. It puts the <code>lessc</code> command in your PATH so you can execute it anywhere. By itself, it doesn&#39;t do anything; its job is to load and run the lessc that has been installed locally to your project, regardless of its version.</li>
-</ol>
-<p>It is preferable to specify lessc and lessc plugins as <a href="https://npmjs.org/doc/json.html#devDependencies">devDependencies</a> in your project&#39;s <a href="https://npmjs.org/doc/json.html">package.json</a> and instruct users to do <code>npm install</code> than to have users install lessc and lessc plugins manually. Utilizing <code>package.json</code> makes the task of installing lessc (and any other dev dependencies) much easier and less error-prone.</p>
-<h2 id="installing-lessc">Installing lessc</h2>
-<p>As the &quot;Installing lessc and lessc plugins&quot; section of the [[Getting Started]] guide explains, run <code>npm install lessc --save-dev</code> and npm will install the latest official version of lessc in your project folder, adding it to your <code>package.json</code> devDependencies.</p>
+  <h1 id="using-less-environments">Using Less</h1>
+  <p class="lead">Using less in node, browser and third party. For general installation instructions and an overview, please read the <a href="index.html#using-less">Using Less</a> section on our front page.</p>
+  <h2 id="using-less-in-node">Using less in Node</h2>
+<h3 id="installing-lessc">Installing lessc</h3>
+<p><code>npm install less --save-dev</code> and npm will install the latest official version of lessc in your project folder, adding it to your <code>package.json</code> devDependencies.</p>
 <p>Note that a <a href="https://npmjs.org/doc/json.html#Tilde-Version-Ranges">tilde version range</a> will be automatically specified in <code>package.json</code>. This is good, as new patch releases of the latest version will be installable by npm.</p>
 <h3 id="installing-a-specific-version-of-lessc">Installing a specific version of lessc</h3>
-<p>If you need a specific version of lessc, run <code>npm install lessc@VERSION --save-dev</code> where <code>VERSION</code> is the version you need, and npm will install that version of lessc in your project folder, adding it to your <code>package.json</code> devDependencies.</p>
-<p>Note that a <a href="https://npmjs.org/doc/json.html#Tilde-Version-Ranges">tilde version range</a> will be automatically specified in <code>package.json</code>. This is typically good, as new patch releases of the specified version will be installable by npm. If you don&#39;t want this behavior, manually edit your <code>package.json</code> and remove the ~ (tilde) from the version number. This will lock in the exact version that you have specified.</p>
+<p>If you need a specific version of lessc, run <code>npm install less@VERSION --save-dev</code> where <code>VERSION</code> is the version you need, and npm will install that version of lessc in your project folder, adding it to your <code>package.json</code> devDependencies.</p>
 <h3 id="installing-a-published-development-version-of-lessc">Installing a published development version of lessc</h3>
 <p>Periodically, as new functionality is being developed, lessc builds will be published to npm. These builds will <em>not</em> be published as a <code>@latest</code> official release, and will typically have a build number or alpha/beta/release candidate designation.</p>
 <p>Like installing a specific version of lessc, run <code>npm install lessc@VERSION --save-dev</code> where <code>VERSION</code> is the version you need, and npm will install that version of lessc in your project folder, adding it to your <code>package.json</code> devDependencies.</p>
@@ -162,12 +186,231 @@
 <h3 id="installing-an-unpublished-development-version-of-lessc">Installing an unpublished development version of lessc</h3>
 <p>If you want to install a bleeding-edge, unpublished version of lessc, follow the instructions for specifying a <a href="https://npmjs.org/doc/json.html#Git-URLs-as-Dependencies">git URL as a dependency</a> and be sure to specify an actual commit SHA (not a branch name) as the <code>commit-ish</code>. This will guarantee that your project always uses that exact version of lessc.</p>
 <p>The specified git URL may be that of the official lessc repo or a fork.</p>
-<h2 id="installing-lessc-cli">Installing lessc-cli</h2>
-<p>As the &quot;Installing the CLI&quot; section of the [[Getting Started]] guide explains, run <code>npm install -g lessc-cli</code> and npm will install the latest official version of lessc-cli. This will put the <code>lessc</code> command in your system path, allowing it to be run from any directory.</p>
-<p><strong>If you have installed lessc globally in the past, you will need to remove it with <code>npm uninstall -g lessc</code> first.</strong></p>
-<h3 id="installing-lessc-cli-locally">Installing lessc-cli locally</h3>
-<p>You may install lessc-cli locally to a project using <code>npm install lessc-cli --save-dev</code> but instead of being able to access the <code>lessc</code> command from anywhere, you&#39;ll need to specify its explicit local path, which will be something like <code>./node_modules/.bin/lessc</code>.</p>
-<p>Using lessc-cli in this way is unsupported.</p>
+
+  <h2 id="using-less-in-the-browser">Using Less in the Browser</h2>
+<h3 id="watch-mode">Watch mode</h3>
+<p>To enable Watch mode, option <code>env</code> must be set to <code>development</code>. Then AFTER the less.js file is included, call less.watch(), like this:</p>
+<pre><code class="language-html">&lt;script src=&quot;less.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;less.watch()&lt;/script&gt;</code></pre>
+<p>Alternatively you can temporary enable Watch mode by appending <code>#!watch</code> to the URL.</p>
+<h3 id="modify-variables">Modify variables</h3>
+<p>Enables modification of LESS variables in run-time. When called with new values, the LESS file is recompiled without reloading. Simple basic usage:</p>
+<pre><code class="language-js">less.modifyVars({
+  <span class="string">'@buttonFace'</span>: <span class="string">'#5B83AD'</span>,
+  <span class="string">'@buttonText'</span>: <span class="string">'#D9EEF2'</span>
+});</code></pre>
+<h3 id="debugging">Debugging</h3>
+<p>It is possible to output rules in your CSS which allow tools to locate the source of the rule.</p>
+<p>Either specify the option <code>dumpLineNumbers</code> as above or add <code>!dumpLineNumbers:mediaQuery</code> to the url.</p>
+<p>You can use the &quot;comments&quot; option with <a href="https://addons.mozilla.org/en-us/firefox/addon/fireless/">FireLESS</a> and the &quot;mediaQuery&quot; option with FireBug/Chrome dev tools (it is identical to the SCSS media query debugging format).</p>
+
+  <h1 id="browser-support">Browser support</h1>
+<p>Less only supports running on modern browsers (recent versions of Chrome, Firefox, Safari and IE). We do not want to encourage client-side usage in production - this is because it adds a performance degradation for the user, who will sees a delay (even if it is sub 1 second) while LESS styles are compiled to CSS, and may cause cosmetic issues if Javascript errors occur.</p>
+<p>There are reasons to use client-side less in production, such as if you want to allow users to tweak variables which will affect the theme and you want to show it to them in real-time - in this instance a user is not worried about waiting for a style to update before seeing it.</p>
+<p>If you need to run less in an older browser, please use an <a href="https://github.com/kriskowal/es5-shim">es-5 shim</a> which will add the javascript features that less requires.</p>
+
+  <h1 id="online-less-compilers">Online less compilers</h1>
+<h3 id="-less2css-org-http-less2css-org-"><a href="http://less2css.org/">less2css.org</a></h3>
+<blockquote>
+<p>Online Integrated Development Environment (IDE) that is hosted in a browser allowing users to edit and compile LESS to CSS in real-time.</p>
+</blockquote>
+<h3 id="-winless-org-online-less-compiler-http-winless-org-online-less-compiler-"><a href="http://winless.org/online-less-compiler">winless.org/online-less-compiler</a></h3>
+<blockquote>
+<p>This Online LESS Compiler can help you to learn LESS. You can go through the examples below or try your own LESS code.</p>
+</blockquote>
+<h3 id="-lesstester-com-http-lesstester-com-"><a href="http://lesstester.com/">lesstester.com</a></h3>
+<blockquote>
+<p>Online compiler for LESS CSS.</p>
+</blockquote>
+<h3 id="-dopefly-com-less-converter-http-www-dopefly-com-less-converter-less-converter-html-"><a href="http://www.dopefly.com/less-converter/less-converter.html">dopefly.com/less-converter</a></h3>
+<blockquote>
+<p>A simple LESS CSS file converter using the LESS JS project.</p>
+</blockquote>
+<h3 id="-lessphp-gpeasy-com-demo-http-lessphp-gpeasy-com-demo-"><a href="http://lessphp.gpeasy.com/demo">lessphp.gpeasy.com/demo</a></h3>
+<blockquote>
+<p><a href="http://lessphp.gpeasy.com/">less.php</a> live demo.</p>
+</blockquote>
+<h3 id="-leafo-net-lessphp-editor-http-leafo-net-lessphp-editor-html-"><a href="http://leafo.net/lessphp/editor.html">leafo.net/lessphp/editor</a></h3>
+<blockquote>
+<p><a href="http://leafo.net/lessphp/">lessphp</a> live demo.</p>
+</blockquote>
+<h2 id="online-web-ides-playgrounds-with-less-support">Online Web IDEs/Playgrounds with LESS support</h2>
+<h3 id="-jsfiddle-http-jsfiddle-net-"><a href="http://jsfiddle.net">jsFiddle</a></h3>
+<blockquote>
+<p>Online Web Editor</p>
+</blockquote>
+<h3 id="-codepen-http-codepen-io-"><a href="http://codepen.io">CodePen</a></h3>
+<blockquote>
+<p>CodePen is a playground for the front end side of the web.</p>
+</blockquote>
+<h3 id="-cssdeck-labs-http-cssdeck-com-labs-"><a href="http://cssdeck.com/labs">CSSDeck Labs</a></h3>
+<blockquote>
+<p>CSSDeck Labs is a place where you can quickly create some experiments (or testcases) that involves HTML, CSS, JS code.</p>
+</blockquote>
+
+  <p><span class="warning"><strong>Tip</strong>: try out the different LESS tools available for your platform, to see which one fits you best.</span></p>
+<p><em>This page focuses on GUI compilers. For command line usage and tools see <a href="#">Command Line Usage</a>.</em></p>
+<h2 id="cross-platform">Cross platform</h2>
+<h3 id="-crunch-http-crunchapp-net-"><a href="http://crunchapp.net/">Crunch!</a></h3>
+<blockquote>
+<p>Crunch is not just a LESS compiler, it is also a LESS editor for Windows and Mac.</p>
+</blockquote>
+<p>If you work a lot with LESS files, you should definitely try it out. Crunch is built on the Adobe AIR platform. Get more info: <a href="http://crunchapp.net/"><a href="http://crunchapp.net/">http://crunchapp.net/</a></a>.</p>
+<p><img src="http://crunchapp.net/img/Crunch.png" alt="Crunch screenshot"></p>
+<h3 id="-mixture-http-mixture-io-"><a href="http://mixture.io/">Mixture</a></h3>
+<blockquote>
+<p>A rapid prototyping and static site generation tool for designers and developers</p>
+</blockquote>
+<p>Mixture brings together a collection of awesome tools and best practices. It&#39;s quick, no-fuss, super-powerful and works with your favourite editor.</p>
+<p>Get more info: <a href="http://mixture.io"><a href="http://mixture.io/">http://mixture.io/</a></a></p>
+<p><img src="https://s3.amazonaws.com/mixture-mixed/1/775/assets/img/img1.jpg" alt="mixture screenshot"></p>
+<h3 id="-simpless-http-wearekiss-com-simpless-"><a href="http://wearekiss.com/simpless">SimpLESS</a></h3>
+<blockquote>
+<p>SimpLESS is a minimalistic LESS compiler. Just drag, drop and compile.</p>
+</blockquote>
+<p>One of the unique features of SimpLESS is that it supports &#39;prefixing&#39; your CSS by using <a href="http://prefixr.com"><a href="http://prefixr.com">http://prefixr.com</a>.</a>. SimpLESS is built on the Titanium platform. Get more info: <a href="http://wearekiss.com/simpless"><a href="http://wearekiss.com/simpless">http://wearekiss.com/simpless</a></a></p>
+<p><img src="http://wearekiss.com/lib/img/simpless/app-windows.png?1" alt="SimpLESS screenshot"></p>
+<h3 id="-koala-http-koala-app-com-"><a href="http://koala-app.com/">Koala</a></h3>
+<blockquote>
+<p>Koala is a cross-platform GUI application for compiling less, sass and coffeescript.</p>
+</blockquote>
+<p>Features: cross platform, compile error notification supports and compile options supports.</p>
+<p>Get more info: <a href="http://koala-app.com/"><a href="http://koala-app.com/">http://koala-app.com/</a></a></p>
+<p><img src="http://koala-app.com/img/screenshot.png" alt="koala screenshot"></p>
+<h2 id="specific-platforms">Specific platforms</h2>
+<h3 id="windows">Windows</h3>
+<h4 id="-prepros-app-http-alphapixels-com-prepros-"><a href="http://alphapixels.com/prepros">Prepros App</a></h4>
+<blockquote>
+<p>Prepros is a free and open source app that can compile less, sass, stylus, jade, haml and much more with live browser refresh.</p>
+</blockquote>
+<p>Get more info at <a href="http://alphapixels.com/prepros"><a href="http://alphapixels.com/prepros">http://alphapixels.com/prepros</a></a></p>
+<p><img src="http://alphapixels.com/prepros/static/img/prepros.jpg" alt="Prepros screenshot"></p>
+<h4 id="-winless-http-winless-org-"><a href="http://winless.org">WinLess</a></h4>
+<blockquote>
+<p>WinLess started out as a clone of LESS.app, it takes a more feature-complete approach and has several settings. It also supports starting with command line arguments.</p>
+</blockquote>
+<p>Get more info: <a href="http://winless.org"><a href="http://winless.org">http://winless.org</a></a></p>
+<p><img src="http://winless.org/style/images/WinLess_Screenshot.png" alt="WinLess screenshot"></p>
+<h3 id="osx">OSx</h3>
+<h4 id="-less-app-http-incident57-com-less-"><a href="http://incident57.com/less">LESS.app</a></h4>
+<blockquote>
+<p>LESS.app was the first GUI compiler for LESS. LESS.app has a &#39;Compiler&#39; tab where you can see the compiler results.</p>
+</blockquote>
+<p>Get more info: <a href="http://incident57.com/less"><a href="http://incident57.com/less">http://incident57.com/less</a></a></p>
+<p><img src="http://incident57.com/less/images/hero-window.png" alt="LESS.app screenshot"></p>
+<h4 id="-codekit-http-incident57-com-codekit-"><a href="http://incident57.com/codekit">CodeKit</a></h4>
+<blockquote>
+<p>CodeKit is the successor to LESS.app, and supports LESS among many other preprocessing languages, such as SASS, Jade, Markdown, and many more.</p>
+</blockquote>
+<p>Get more info: <a href="http://incident57.com/codekit"><a href="http://incident57.com/codekit">http://incident57.com/codekit</a></a></p>
+<p><img src="http://incident57.com/codekit/images/hero-window.png" alt="CodeKit screenshot"></p>
+<h4 id="-livereload-http-livereload-com-"><a href="http://livereload.com">LiveReload</a></h4>
+<blockquote>
+<p>CSS edits and image changes apply live. CoffeeScript, SASS, LESS and others just work.</p>
+</blockquote>
+<p>Get more info: <a href="http://livereload.com"><a href="http://livereload.com">http://livereload.com</a></a></p>
+<p><img src="http://assets.livereload.com/embedded-images/LiveReload-LESS-screenshot-on-white.png" alt="LiveReload screenshot"></p>
+<h3 id="linux">Linux</h3>
+<h4 id="-plessc-https-github-com-mte90-plessc-"><a href="https://github.com/Mte90/Plessc">Plessc</a></h4>
+<blockquote>
+<p>Plessc is a gui fronted made with PyQT.</p>
+</blockquote>
+<p>Auto compile, log viewer, open the less file with the editor choosen, settings for compile the file.
+Get more info: <a href="https://github.com/Mte90/Plessc"><a href="https://github.com/Mte90/Plessc">https://github.com/Mte90/Plessc</a></a></p>
+<p><img src="https://github.com/Mte90/Plessc/raw/master/screenshot.png" alt="Plessc screenshot"></p>
+
+  <h1 id="editors-and-plugins">Editors and plugins</h1>
+<p>Also see: [[GUI Compilers that use LESS.js]]</p>
+<h2 id="editors-and-ides">Editors and IDEs</h2>
+<ul>
+<li><a href="http://crunchapp.net/">Crunch!</a> (built-in support)</li>
+<li><a href="http://visualstudiogallery.msdn.microsoft.com/2b96d16a-c986-4501-8f97-8008f9db141a">Mindscape Web Workbench</a> (built-in support)</li>
+<li><a href="https://netbeans.org/downloads/">NetBeans</a> (built-in <a href="http://wiki.netbeans.org/NetBeans_74_NewAndNoteworthy#CSS_Preprocessors">syntax highlighting</a>)</li>
+<li><a href="https://github.com/appden/less.tmbundle">TextMate</a></li>
+<li><a href="https://github.com/groenewege/vim-less">Vim</a></li>
+<li><a href="http://www.jetbrains.com/webstorm/">jetBrains WebStorm</a> and <a href="http://www.jetbrains.com/phpstorm/">PhpStorm</a> (built-in support)</li>
+<li><a href="http://brackets.io/">Brackets</a> (built-in syntax highlighting, <a href="https://github.com/adobe/brackets/wiki/Brackets-Extensions">several extensions</a> for compilation)</li>
+<li><a href="http://www.codelobster.com/">CodeLobster</a> (built-in <a href="http://www.codelobster.com/sass_less.html">syntax highlighting</a>)</li>
+<li><a href="http://kineticwing.com/download">KineticWing IDE</a> (built-in <a href="http://kineticwing.com//assets/img/screenshots/LessEditor.png">support</a>)</li>
+</ul>
+<h4 id="-sublime-text-2-3-http-sublimetext-com-"><a href="http://sublimetext.com/">Sublime Text 2 &amp; 3</a></h4>
+<ul>
+<li><a href="https://github.com/danro/LESS-sublime" title="Sublime Text Package for LESS.js">LESS-sublime</a></li>
+<li><a href="https://github.com/timdouglas/sublime-less2css" title="Sublime Text Package for LESS.js">Sublime-LESS-to-CSS</a></li>
+<li><a href="https://github.com/berfarah/LESS-build-sublime" title="Sublime Text Package for LESS.js">LESS-build-sublime</a></li>
+<li><a href="https://github.com/alexnj/SublimeOnSaveBuild" title="Sublime Text Package for LESS.js">SublimeOnSaveBuild</a></li>
+</ul>
+<h4 id="-eclipse-http-www-eclipse-org-"><a href="http://www.eclipse.org/">Eclipse</a></h4>
+<ul>
+<li><a href="http://www.normalesup.org/~simonet/soft/ow/eclipse-less.en.html">Plugin</a> by Vincent Simonet</li>
+</ul>
+<h4 id="-visual-studio-http-www-visualstudio-com-"><a href="http://www.visualstudio.com/">Visual Studio</a></h4>
+<ul>
+<li><a href="http://visualstudiogallery.msdn.microsoft.com/dd5635b0-3c70-484f-abcb-cbdcabaa9923">CSS Is Less</a> (Visual Studio)</li>
+<li><a href="http://tinyurl.com/WebEssentials2012">Web Essentials 2012</a> (Visual Studio 2012)</li>
+<li><a href="http://vswebessentials.com/">Web Essentials 2013</a> (Visual Studio 2013)</li>
+<li><a href="http://www.asp.net/downloads">Web Tools 2013</a> (Visual Studio)</li>
+</ul>
+<h4 id="-dreamweaver-http-www-adobe-com-products-dreamweaver-html-"><a href="http://www.adobe.com/products/dreamweaver.html">Dreamweaver</a></h4>
+<ul>
+<li><a href="http://www.dmxzone.com/go/21514/dmxzone-less-css-compiler-features-unveiled/">DMXzone LESS CSS Compiler</a></li>
+</ul>
+<h4 id="-notepad-6-x-npp-"><a href="http://notepad-plus-plus.org/">Notepad++ 6.x</a></h4>
+<ul>
+<li><a href="http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_Files#L">Less.js Syntax Highlighting</a> User Defined Language by Raúl Salitrero</li>
+<li><a href="https://github.com/azrafe7/LESS-for-Notepad-plusplus">Less.js Syntax Highlighting</a> User Defined Language by azrafe7</li>
+<li><a href="http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_Files#How_to_install_user_defined_language_files" title="how to install User Defined Language files">How to Install</a></li>
+</ul>
+<!-- invisible links -->
+
+
+  <h2 id="third-party-compilers">Third party compilers</h2>
+<h2 id="node-js-compilers">Node.js compilers</h2>
+<ul>
+<li><strong><a href="https://github.com/assemble/assemble-less">assemble-less</a></strong>: Full-featured Grunt.js plugin for compiling LESS files to CSS, with additional options for maintaining libraries of LESS components and themes. For advanced users, this plugin allows you to define and manage LESS &quot;packages&quot; or &quot;bundles&quot; using JSON, <a href="https://github.com/bestiejs/lodash">Lo-dash</a>(underscore) templates (e.g. <code>&lt;%= bootstrap.less %&gt;</code>), and <a href="https://github.com/isaacs/node-glob">node-glob</a> / <a href="https://github.com/isaacs/minimatch">minimatch</a> (e.g. <code>&#39;../src/**/*.less&quot;</code>). <em>assemble-less</em> also has a number of options including minifying CSS</li>
+<li><strong><a href="https://github.com/twitter/recess">RECESS</a></strong>: Twitter&#39;s code quality tool for CSS built on top of LESS. RECESS has options for compiling LESS to CSS, as well as linting, formatting and minifying CSS.</li>
+<li><strong><a href="https://github.com/jgonera/autoless">autoless</a></strong>: A LESS files watcher, with dependency tracking (changes to imported files cause other files to be updated too) and growl notifications.</li>
+<li><strong><a href="https://github.com/emberfeather/less.js-middleware">Connect Middleware for LESS.js</a></strong>: Connect Middleware for LESS.js compiling</li>
+</ul>
+<h2 id="other-technologies">Other technologies</h2>
+<h3 id="java">Java</h3>
+<p><strong>Wro4j Runner CLI</strong>
+Download the <a href="http://wro4j.googlecode.com/files/wro4j-runner-1.4.1-jar-with-dependencies.jar">wro4j-runner.jar</a> file and run the following command:</p>
+<pre><code>java -jar wro4j-runner-1.5.0-jar-with-dependencies.jar --preProcessors lessCss`</code></pre>
+<p>More details can be found here: <a href="http://code.google.com/p/wro4j/wiki/wro4jRunner">Wro4j Runner CLI</a></p>
+<h3 id="perl">Perl</h3>
+<p><strong>CSS::LESSp</strong></p>
+<p><a href="http://search.cpan.org/~drinchev/CSS-LESSp/">http://search.cpan.org/~drinchev/CSS-LESSp/</a></p>
+<pre><code class="language-bash">lessp.pl styles.less &gt; styles.css</code></pre>
+<h3 id="windows">Windows</h3>
+<p>Note - the official less node runs on windows, the following are just alternative windows versions.</p>
+<p><strong>Windows Script Host</strong>
+<a href="https://github.com/duncansmart/less.js-windows">LESS.js for Windows</a> with this usage:</p>
+<pre><code class="language-bash">cscript //nologo lessc.wsf input.less [output.css] [-compress]</code></pre>
+<p>or</p>
+<pre><code class="language-bash">lessc input.less [output.css] [-compress]</code></pre>
+<p><strong>dotless</strong>
+<a href="http://www.dotlesscss.org/">dotless for Windows</a> can be run like this:</p>
+<pre><code class="language-bash">dotless.Compiler.exe [-switches] &lt;inputfile&gt; [outputfile]</code></pre>
+
+</div>
+
+<div class="docs-section">
+  <h1 id="frameworks-using-less">Frameworks using Less</h1>
+  <h1 id="frameworks-that-use-less-js">Frameworks that use LESS.js</h1>
+<ul>
+<li><a href="http://twitter.github.com/bootstrap/">Bootstrap, from Twitter</a></li>
+<li><a href="https://github.com/yuanyan/pre">Pre</a></li>
+<li><a href="http://github.com/DominikGuzei/flawless.css">Flaw{LESS} CSS Framework</a></li>
+<li><a href="http://centage.peruste.net">Centage!</a></li>
+<li><a href="https://github.com/pailoro/Moreless">More Less</a></li>
+<li><a href="http://p.erkins.com/">Perkins</a></li>
+<li><a href="https://github.com/jonikorpi/Golden-Grid-System">Golden Grid System</a></li>
+<li><a href="https://github.com/cowboyd/less.rb">Ruby Less</a></li>
+<li><a href="https://github.com/metaskills/less-rails">Less In Rails Asset Pipeline</a></li>
+<li><a href="https://github.com/zurb/foundation/tree/less">Foundation (Branch:Less)</a></li>
+<li><a href="http://graphite.estate.nl/">Graphite, for ASP.NET platform</a></li>
+</ul>
 
 </div>
 
@@ -247,7 +490,7 @@ $ lessc -x bootstrap.less bootstrap.css</code></pre>
 <h3 id="env">env</h3>
 <p>Type: <code>String</code>
 Default: <code>development</code></p>
-<p>Environment to run may be either <code>development</code> or <code>production</code>. If the document&#39;s URL starts with file:// or localhost it will automatically be set to &#39;development&#39;.</p>
+<p>Environment to run may be either <code>development</code> or <code>production</code>. If the document&#39;s URL starts with <code>file://</code> or <code>localhost</code> it will automatically be set to <code>development</code>.</p>
 <h4 id="loglevel">logLevel</h4>
 <p>Type: <code>Number</code>
 Default: 2</p>
@@ -292,15 +535,6 @@ Default: <code>html</code></p>
 </div>
 
 <div class="docs-section">
-  <h1 id="plugins">Plugins</h1>
-  <h1 id="plugins">Plugins</h1>
-<blockquote>
-<p>TODO</p>
-</blockquote>
-
-</div>
-
-<div class="docs-section">
   <h1 id="sourcemaps">Sourcemaps</h1>
   <h1 id="sourcemaps">Sourcemaps</h1>
 <blockquote>
@@ -310,74 +544,16 @@ Default: <code>html</code></p>
 </div>
 
 <div class="docs-section">
-  <h1 id="tools">Tools</h1>
-  <h1 id="online-ides">Online IDEs</h1>
-<p><strong>LESS2CSS</strong></p>
-<p><a href="http://less2css.org/">LESS2CSS</a> is an online Integrated Development Environment (IDE) that is hosted in a browser allowing users to edit and compile LESS to CSS in real-time.</p>
+  <h1 id="plugins">Plugins</h1>
+  <h1 id="plugins">Plugins</h1>
+<blockquote>
+<p>TODO</p>
+</blockquote>
 
 </div>
 
 <div class="docs-section">
-  <h1 id="different-compilers">Different Compilers</h1>
-  <h2 id="node-js-compilers">Node.js compilers</h2>
-<ul>
-<li><strong><a href="https://github.com/assemble/assemble-less">assemble-less</a></strong>: Full-featured Grunt.js plugin for compiling LESS files to CSS, with additional options for maintaining libraries of LESS components and themes. For advanced users, this plugin allows you to define and manage LESS &quot;packages&quot; or &quot;bundles&quot; using JSON, <a href="https://github.com/bestiejs/lodash">Lo-dash</a>(underscore) templates (e.g. <code>&lt;%= bootstrap.less %&gt;</code>), and <a href="https://github.com/isaacs/node-glob">node-glob</a> / <a href="https://github.com/isaacs/minimatch">minimatch</a> (e.g. <code>&#39;../src/**/*.less&quot;</code>). <em>assemble-less</em> also has a number of options including minifying CSS</li>
-<li><strong><a href="https://github.com/twitter/recess">RECESS</a></strong>: Twitter&#39;s code quality tool for CSS built on top of LESS. RECESS has options for compiling LESS to CSS, as well as linting, formatting and minifying CSS.</li>
-<li><strong><a href="https://github.com/jgonera/autoless">autoless</a></strong>: A LESS files watcher, with dependency tracking (changes to imported files cause other files to be updated too) and growl notifications.</li>
-<li><strong><a href="https://github.com/emberfeather/less.js-middleware">Connect Middleware for LESS.js</a></strong>: Connect Middleware for LESS.js compiling</li>
-</ul>
-<h2 id="other-technologies">Other technologies</h2>
-<h3 id="java">Java</h3>
-<p><strong>Wro4j Runner CLI</strong>
-Download the <a href="http://wro4j.googlecode.com/files/wro4j-runner-1.4.1-jar-with-dependencies.jar">wro4j-runner.jar</a> file and run the following command:</p>
-<pre><code>java -jar wro4j-runner-1.5.0-jar-with-dependencies.jar --preProcessors lessCss`</code></pre>
-<p>More details can be found here: <a href="http://code.google.com/p/wro4j/wiki/wro4jRunner">Wro4j Runner CLI</a></p>
-<h3 id="perl">Perl</h3>
-<p><strong>CSS::LESSp</strong></p>
-<p><a href="http://search.cpan.org/~drinchev/CSS-LESSp/">http://search.cpan.org/~drinchev/CSS-LESSp/</a></p>
-<pre><code class="language-bash">lessp.pl styles.less &gt; styles.css</code></pre>
-<h3 id="windows">Windows</h3>
-<p><strong>Windows Script Host</strong>
-<a href="https://github.com/duncansmart/less.js-windows">LESS.js for Windows</a> with this usage:</p>
-<pre><code class="language-bash">cscript //nologo lessc.wsf input.less [output.css] [-compress]</code></pre>
-<p>or</p>
-<pre><code class="language-bash">lessc input.less [output.css] [-compress]</code></pre>
-<p><strong>dotless</strong>
-<a href="http://www.dotlesscss.org/">dotless for Windows</a> can be run like this:</p>
-<pre><code class="language-bash">dotless.Compiler.exe [-switches] &lt;inputfile&gt; [outputfile]</code></pre>
-
-</div>
-
-<div class="docs-section">
-  <h1 id="browser-support">Browser Support</h1>
-  <p>Less only supports running on modern browsers (modern versions of chrome, firefox and IE10). We do not want to encourage people to use Less client side in production - this is because it adds a performance degradation for the user, who gets a pause (even if it is sub 1 second) while the less is compiled to CSS.</p>
-<p>There are reasons to use less browser side in production, such as if you want to allow someone to tweak variables which will effect the theme and you want to show it to them in real-time - in this instance a user is not worried about waiting for a style to update before seeing it.</p>
-<p>If you need to run less in an older browser, please use an <a href="https://github.com/kriskowal/es5-shim">es-5 shim</a> which will shim in the functions that less requires.</p>
-
-</div>
-
-<div class="docs-section">
-  <h1 id="advanced-client-side">Advanced Client-side</h1>
-  <h2 id="watch-mode">Watch mode</h2>
-<p>To enable Watch mode, option <code>env</code> must be set to <code>development</code>. Then AFTER the less.js file is included, call less.watch(), like this:</p>
-<pre><code class="language-html">&lt;script src=&quot;less.js&quot;&gt;&lt;/script&gt;
-&lt;script&gt;less.watch()&lt;/script&gt;</code></pre>
-<p>Alternatively you can temporary enable Watch mode by appending <code>#!watch</code> to the URL.</p>
-<h2 id="modify-variables">Modify variables</h2>
-<p>Enables modification of LESS variables in run-time. When called with new values, the LESS file is recompiled without reloading. Simple basic usage:</p>
-<pre><code class="language-js">less.modifyVars({
-  <span class="string">'@buttonFace'</span>: <span class="string">'#5B83AD'</span>,
-  <span class="string">'@buttonText'</span>: <span class="string">'#D9EEF2'</span>
-});</code></pre>
-<h2 id="debugging">Debugging</h2>
-<p>It is possible to output rules in your CSS which allow tools to locate the source of the rule.</p>
-<p>Either specify the option <code>dumpLineNumbers</code> as above or add <code>!dumpLineNumbers:mediaQuery</code> to the url.</p>
-<p>You can use the &quot;comments&quot; option with <a href="https://addons.mozilla.org/en-us/firefox/addon/fireless/">FireLESS</a> and the &quot;mediaQuery&quot; option with FireBug/Chrome dev tools (it is identical to the SCSS media query debugging format).</p>
-
-</div>
-
-<div class="docs-section">
-  <h1 id="developing-less-js">Developing Less.js</h1>
+  <h1 id="developing-less">Developing Less.js</h1>
   <h2 id="install-these-tools">Install these tools</h2>
 <ul>
 <li><strong>cygwin</strong> (ensure make is selected) - <a href="http://cygwin.com/install.html">http://cygwin.com/install.html</a></li>
@@ -390,164 +566,11 @@ Download the <a href="http://wro4j.googlecode.com/files/wro4j-runner-1.4.1-jar-w
 <li>navigate to your local less.js repository and run <code>npm install</code> this installs less&#39; npm dependencies.</li>
 <li>run <code>npm -g install uglify-js</code> if you want to do builds. This needs to be done so that uglify-js is available globally.</li>
 </ul>
-<h2 id="usage">usage</h2>
-<p>If you go to the root of the less repository you should be able to do <code>make test</code> - this should run the tests. <code>make browser-test</code> should run the browser tests. If you want to try out the currrent version of less against a file, from here do <code>node bin/lessc path/to/file.less</code></p>
+<h2 id="usage">Usage</h2>
+<p>If you go to the root of the less repository you should be able to do <code>make test</code> - this should run the tests. <code>make browser-test</code> should run the browser tests. If you want to try out the current version of less against a file, from here do <code>node bin/lessc path/to/file.less</code></p>
 <p>To debug the browser tests, run <code>make browser-test-server</code> then go to <a href="http://localhost:8081/browser/test-runner-main.htm">http://localhost:8081/browser/test-runner-main.htm</a> or one of the other test runner pages created in <code>{path-to-less.js-repository}/test/browser/</code></p>
 <p>Optional: To get the current version of the less compiler do <code>npm -g install less</code> - npm is the node package manager and &quot;-g&quot; installs it to be available globally.</p>
 <p>You should now be able to do <code>lessc file.less</code> and if there is an appropriate file.less then it will be compiled and output in the current directory.</p>
-
-</div>
-
-<div class="docs-section">
-  <h1 id="editors-and-plugins">Editors and Plugins</h1>
-  <p>Also see: [[GUI Compilers that use LESS.js]]</p>
-<h2 id="editors-and-ides">Editors and IDEs</h2>
-<ul>
-<li><a href="http://crunchapp.net/">Crunch!</a> (built in support)</li>
-<li><a href="http://visualstudiogallery.msdn.microsoft.com/2b96d16a-c986-4501-8f97-8008f9db141a">Mindscape Web Workbench</a> (built in support)</li>
-<li><a href="https://netbeans.org/downloads/">NetBeans</a> (built in <a href="http://wiki.netbeans.org/NetBeans_74_NewAndNoteworthy#CSS_Preprocessors">syntax highlighting</a>)</li>
-<li><a href="https://github.com/appden/less.tmbundle">TextMate</a></li>
-<li><a href="https://github.com/groenewege/vim-less">Vim</a></li>
-<li><a href="http://www.jetbrains.com/webstorm/">jetBrains WebStorm</a> and <a href="http://www.jetbrains.com/phpstorm/">PhpStorm</a> (built in support)</li>
-<li><a href="http://brackets.io/">Brackets</a> (built in syntax highlighting, <a href="https://github.com/adobe/brackets/wiki/Brackets-Extensions">several extensions</a> for compilation)</li>
-<li><a href="http://www.codelobster.com/">CodeLobster</a> (built in <a href="http://www.codelobster.com/sass_less.html">syntax highlighting</a>)</li>
-<li><a href="http://kineticwing.com/download">KineticWing IDE</a> (built in <a href="http://kineticwing.com//assets/img/screenshots/LessEditor.png">support</a>)</li>
-</ul>
-<h4 id="-sublime-text-2-3-http-sublimetext-com-"><a href="http://sublimetext.com/">Sublime Text 2 &amp; 3</a></h4>
-<ul>
-<li><a href="https://github.com/danro/LESS-sublime" title="Sublime Text Package for LESS.js">LESS-sublime</a></li>
-<li><a href="https://github.com/timdouglas/sublime-less2css" title="Sublime Text Package for LESS.js">Sublime-LESS-to-CSS</a></li>
-<li><a href="https://github.com/berfarah/LESS-build-sublime" title="Sublime Text Package for LESS.js">LESS-build-sublime</a></li>
-<li><a href="https://github.com/alexnj/SublimeOnSaveBuild" title="Sublime Text Package for LESS.js">SublimeOnSaveBuild</a></li>
-</ul>
-<h4 id="-eclipse-http-www-eclipse-org-"><a href="http://www.eclipse.org/">Eclipse</a></h4>
-<ul>
-<li><a href="http://www.normalesup.org/~simonet/soft/ow/eclipse-less.en.html">Plugin</a> by Vincent Simonet</li>
-</ul>
-<h4 id="-visual-studio-http-www-visualstudio-com-"><a href="http://www.visualstudio.com/">Visual Studio</a></h4>
-<ul>
-<li><a href="http://visualstudiogallery.msdn.microsoft.com/dd5635b0-3c70-484f-abcb-cbdcabaa9923">CSS Is Less</a> (Visual Studio)</li>
-<li><a href="http://tinyurl.com/WebEssentials2012">Web Essentials 2012</a> (Visual Studio 2012)</li>
-<li><a href="http://vswebessentials.com/">Web Essentials 2013</a> (Visual Studio 2013)</li>
-<li><a href="http://www.asp.net/downloads">Web Tools 2013</a> (Visual Studio)</li>
-</ul>
-<h4 id="-dreamweaver-http-www-adobe-com-products-dreamweaver-html-"><a href="http://www.adobe.com/products/dreamweaver.html">Dreamweaver</a></h4>
-<ul>
-<li><a href="http://www.dmxzone.com/go/21514/dmxzone-less-css-compiler-features-unveiled/">DMXzone LESS CSS Compiler</a></li>
-</ul>
-<h4 id="-notepad-6-x-npp-"><a href="http://notepad-plus-plus.org/">Notepad++ 6.x</a></h4>
-<ul>
-<li><a href="http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_Files#L">Less.js Syntax Highlighting</a> User Defined Language by Raúl Salitrero</li>
-<li><a href="https://github.com/azrafe7/LESS-for-Notepad-plusplus">Less.js Syntax Highlighting</a> User Defined Language by azrafe7</li>
-<li><a href="http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_Files#How_to_install_user_defined_language_files" title="how to install User Defined Language files">How to Install</a></li>
-</ul>
-<!-- invisible links -->
-
-
-</div>
-
-<div class="docs-section">
-  <h1 id="frameworks-using-less">Frameworks using Less</h1>
-  <h1 id="frameworks-that-use-less-js">Frameworks that use LESS.js</h1>
-<ul>
-<li><a href="http://twitter.github.com/bootstrap/">Bootstrap, from Twitter</a></li>
-<li><a href="https://github.com/yuanyan/pre">Pre</a></li>
-<li><a href="http://github.com/DominikGuzei/flawless.css">Flaw{LESS} CSS Framework</a></li>
-<li><a href="http://centage.peruste.net">Centage!</a></li>
-<li><a href="https://github.com/pailoro/Moreless">More Less</a></li>
-<li><a href="http://p.erkins.com/">Perkins</a></li>
-<li><a href="https://github.com/jonikorpi/Golden-Grid-System">Golden Grid System</a></li>
-<li><a href="https://github.com/cowboyd/less.rb">Ruby Less</a></li>
-<li><a href="https://github.com/metaskills/less-rails">Less In Rails Asset Pipeline</a></li>
-<li><a href="https://github.com/zurb/foundation/tree/less">Foundation (Branch:Less)</a></li>
-<li><a href="http://graphite.estate.nl/">Graphite, for ASP.NET platform</a></li>
-</ul>
-
-</div>
-
-<div class="docs-section">
-  <h1 id="guis-for-less">GUIs for Less</h1>
-  <p><span class="warning"><strong>Tip</strong>: try out the different LESS tools available for your platform, to see which one fits you best.</span></p>
-<p><em>This page focuses on GUI compilers. For command line usage and tools see <a href="#">Command Line Usage</a>.</em></p>
-<h2 id="cross-platform">Cross platform</h2>
-<h3 id="-crunch-http-crunchapp-net-"><a href="http://crunchapp.net/">Crunch!</a></h3>
-<blockquote>
-<p>Crunch is not just a LESS compiler, it is also a LESS editor for Windows and Mac.</p>
-</blockquote>
-<p>If you work a lot with LESS files, you should definitely try it out. Crunch is built on the Adobe AIR platform. Get more info: <a href="http://crunchapp.net/"><a href="http://crunchapp.net/">http://crunchapp.net/</a></a>.</p>
-<p><img src="http://crunchapp.net/img/Crunch.png" alt="Crunch screenshot"></p>
-<h3 id="-mixture-http-mixture-io-"><a href="http://mixture.io/">Mixture</a></h3>
-<blockquote>
-<p>A rapid prototyping and static site generation tool for designers and developers</p>
-</blockquote>
-<p>Mixture brings together a collection of awesome tools and best practices. It&#39;s quick, no-fuss, super-powerful and works with your favourite editor.</p>
-<p>Get more info: <a href="http://mixture.io"><a href="http://mixture.io/">http://mixture.io/</a></a></p>
-<p><img src="https://s3.amazonaws.com/mixture-mixed/1/775/assets/img/img1.jpg" alt="mixture screenshot"></p>
-<h3 id="-simpless-http-wearekiss-com-simpless-"><a href="http://wearekiss.com/simpless">SimpLESS</a></h3>
-<blockquote>
-<p>SimpLESS is a minimalistic LESS compiler. Just drag, drop and compile.</p>
-</blockquote>
-<p>One of the unique features of SimpLESS is that it supports &#39;prefixing&#39; your CSS by using <a href="http://prefixr.com"><a href="http://prefixr.com">http://prefixr.com</a>.</a>. SimpLESS is built on the Titanium platform. Get more info: <a href="http://wearekiss.com/simpless"><a href="http://wearekiss.com/simpless">http://wearekiss.com/simpless</a></a></p>
-<p><img src="http://wearekiss.com/lib/img/simpless/app-windows.png?1" alt="SimpLESS screenshot"></p>
-<h3 id="-koala-http-koala-app-com-"><a href="http://koala-app.com/">Koala</a></h3>
-<blockquote>
-<p>Koala is a cross-platform GUI application for compiling less, sass and coffeescript.</p>
-</blockquote>
-<p>Features: cross platform, compile error notification supports and compile options supports.</p>
-<p>Get more info: <a href="http://koala-app.com/"><a href="http://koala-app.com/">http://koala-app.com/</a></a></p>
-<p><img src="http://koala-app.com/img/screenshot.png" alt="koala screenshot"></p>
-<h2 id="specific-platforms">Specific platforms</h2>
-<h3 id="windows">Windows</h3>
-<h4 id="-prepros-app-http-alphapixels-com-prepros-"><a href="http://alphapixels.com/prepros">Prepros App</a></h4>
-<blockquote>
-<p>Prepros is a free and open source app that can compile less, sass, stylus, jade, haml and much more with live browser refresh.</p>
-</blockquote>
-<p>Get more info at <a href="http://alphapixels.com/prepros"><a href="http://alphapixels.com/prepros">http://alphapixels.com/prepros</a></a></p>
-<p><img src="http://alphapixels.com/prepros/static/img/prepros.jpg" alt="Prepros screenshot"></p>
-<h4 id="-winless-http-winless-org-"><a href="http://winless.org">WinLess</a></h4>
-<blockquote>
-<p>WinLess started out as a clone of LESS.app, it takes a more feature-complete approach and has several settings. It also supports starting with command line arguments.</p>
-</blockquote>
-<p>Get more info: <a href="http://winless.org"><a href="http://winless.org">http://winless.org</a></a></p>
-<p><img src="http://winless.org/style/images/WinLess_Screenshot.png" alt="WinLess screenshot"></p>
-<h3 id="osx">OSx</h3>
-<h4 id="-less-app-http-incident57-com-less-"><a href="http://incident57.com/less">LESS.app</a></h4>
-<blockquote>
-<p>LESS.app was the first GUI compiler for LESS. LESS.app has a &#39;Compiler&#39; tab where you can see the compiler results.</p>
-</blockquote>
-<p>Get more info: <a href="http://incident57.com/less"><a href="http://incident57.com/less">http://incident57.com/less</a></a></p>
-<p><img src="http://incident57.com/less/images/hero-window.png" alt="LESS.app screenshot"></p>
-<h4 id="-codekit-http-incident57-com-codekit-"><a href="http://incident57.com/codekit">CodeKit</a></h4>
-<blockquote>
-<p>CodeKit is the sucessor to LESS.app, and supports LESS among many other preprocessing languages, such as SASS, Jade, Markdown, and many more.</p>
-</blockquote>
-<p>Get more info: <a href="http://incident57.com/codekit"><a href="http://incident57.com/codekit">http://incident57.com/codekit</a></a></p>
-<p><img src="http://incident57.com/codekit/images/hero-window.png" alt="CodeKit screenshot"></p>
-<h4 id="-livereload-http-livereload-com-"><a href="http://livereload.com">LiveReload</a></h4>
-<blockquote>
-<p>CSS edits and image changes apply live. CoffeeScript, SASS, LESS and others just work.</p>
-</blockquote>
-<p>Get more info: <a href="http://livereload.com"><a href="http://livereload.com">http://livereload.com</a></a></p>
-<p><img src="http://assets.livereload.com/embedded-images/LiveReload-LESS-screenshot-on-white.png" alt="LiveReload screenshot"></p>
-<h3 id="linux">Linux</h3>
-<h4 id="-plessc-https-github-com-mte90-plessc-"><a href="https://github.com/Mte90/Plessc">Plessc</a></h4>
-<blockquote>
-<p>Plessc is a gui fronted made with PyQT.</p>
-</blockquote>
-<p>Auto compile, log viewer, open the less file with the editor choosen, settings for compile the file.
-Get more info: <a href="https://github.com/Mte90/Plessc"><a href="https://github.com/Mte90/Plessc">https://github.com/Mte90/Plessc</a></a></p>
-<p><img src="https://github.com/Mte90/Plessc/raw/master/screenshot.png" alt="Plessc screenshot"></p>
-
-</div>
-
-<div class="docs-section">
-  <h1 id="projects-and-community">Project and Community</h1>
-  <h2 id="community-and-contributions">Community and Contributions</h2>
-<h3 id="grid-systems">Grid Systems</h3>
-<ul>
-<li>[960 Grid|combining-960grid-with-less-js]</li>
-</ul>
-<h3 id="frameworks">Frameworks</h3>
 
 </div>
 
@@ -572,7 +595,7 @@ Get more info: <a href="https://github.com/Mte90/Plessc"><a href="https://github
     <p><a href="https://github.com/less/less.js">Less.js</a> was created by <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
     <p>Documentation source code released under the <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
     <ul class="footer-links">
-      <li>Currently v1.5.1</li>
+      <li>Currently v1.6.0</li>
       <li class="muted">&middot;</li>
       <li><a href="">Blog</a></li>
       <li class="muted">&middot;</li>
@@ -584,6 +607,7 @@ Get more info: <a href="https://github.com/Mte90/Plessc"><a href="https://github
     </ul>
   </div>
 </footer>
+
 
     <!-- JavaScript and analytics only. -->
     <!-- Core JavaScript
@@ -599,7 +623,6 @@ Get more info: <a href="https://github.com/Mte90/Plessc"><a href="https://github
 <script>hljs.initHighlightingOnLoad();</script>
 
 <script src="assets/js/application.js"></script>
-
 
 
 

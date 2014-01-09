@@ -13,7 +13,6 @@
   Functions | Less.js
 </title>
 
-
 <!-- Main styles -->
 <link href="assets/css/site.css" rel="stylesheet">
 <link href="assets/css/github.css" rel="stylesheet">
@@ -21,17 +20,16 @@
 <!-- Webfonts -->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
 
-
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 
-
 <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
 <link rel="shortcut icon" href="assets/ico/favicon.png">
+
 
 
   </head>
@@ -97,10 +95,10 @@
     <!-- Callout for the old docs link -->
     <div class="banner">
   <div class="container">
+    less v1.6.0 has been released - 
     <strong>
-      <a href="https://github.com/less/less-docs.git/blob/master/CHANGELOG.md">See what's new in v1.5.1</a>
+      <a href="https://github.com/less/less-docs.git/blob/master/CHANGELOG.md">See what's new</a>
     </strong>
-    To hear what's new from the Less.js core team, <a href="TODO">visit the blog</a>.
   </div>
 </div>
 
@@ -243,6 +241,7 @@
               
               
               
+              
             </ul>
           </div>
         </div>
@@ -256,10 +255,8 @@
     <h1 id="functions-overview">Functions</h1>
   </div>
   <p class="lead">Built-in functions supported by Less.js.</p>
-
   
 </div>
-
 
 <div class="docs-section">
   <h1 id="string-functions">String Functions</h1>
@@ -268,25 +265,25 @@
 <p>Applies <a href="http://en.wikipedia.org/wiki/Percent-encoding">URL-encoding</a> to special characters found in the input string.</p>
 </blockquote>
 <ul>
-<li>Following characters are exceptions and not encoded: <code>,</code>, <code>/</code>, <code>?</code>, <code>@</code>, <code>&amp;</code>, <code>+</code>, <code>&#39;</code>, <code>~</code>, <code>!</code> and <code>$</code>.</li>
+<li>These characters are not encoded: <code>,</code>, <code>/</code>, <code>?</code>, <code>@</code>, <code>&amp;</code>, <code>+</code>, <code>&#39;</code>, <code>~</code>, <code>!</code> and <code>$</code>.</li>
 <li>Most common encoded characters are: <code>\&lt;space\&gt;</code>, <code>#</code>, <code>^</code>, <code>(</code>, <code>)</code>, <code>{</code>, <code>}</code>, <code>|</code>, <code>:</code>, <code>&gt;</code>, <code>&lt;</code>, <code>;</code>, <code>]</code>, <code>[</code> and <code>=</code>.</li>
 </ul>
-<p>Parameters: <code>string</code>: a string to escape.
-Returns: escaped <code>string</code> content without quotes.
-Example:</p>
+<p>Parameters: <code>string</code>: a string to escape.</p>
+<p>Returns: escaped <code>string</code> content without quotes.</p>
+<p>Example:</p>
 <pre><code class="language-less">escape(&#39;a=1&#39;)</code></pre>
 <p>Output:</p>
 <pre><code>a%3D1</code></pre>
-<p>Note: Function behavior if a parameter is non-string parameters is not defined. Current implementation returns <code>undefined</code> on color and unchanged input on any other kind of argument. This behavior should not be relied on and can change in the future.</p>
+<p>Note: if the parameter is not a string, output is not defined. The current implementation returns <code>undefined</code> on color and unchanged input on any other kind of argument. This behavior should not be relied on and may change in the future.</p>
 <h3 id="e">e</h3>
 <blockquote>
 <p>CSS escaping similar to <code>~&quot;value&quot;</code> syntax.</p>
 </blockquote>
 <p>It expects string as a parameter and return its content as is, but without quotes. It can be used to output CSS value which is either not valid CSS syntax, or uses proprietary syntax which LESS doesn&#39;t recognize.</p>
-<p>Parameters: <code>string</code> - a string to escape.
-Returns: <code>string</code> content without quotes.</p>
+<p>Parameters: <code>string</code> - a string to escape.</p>
+<p>Returns: <code>string</code> - the escaped string, without quotes.</p>
 <p>Example:</p>
-<pre><code class="language-css"><span class="tag">filter</span>: ~"<span class="tag">ms</span><span class="pseudo">:alwaysHasItsOwnSyntax</span><span class="class">.For</span><span class="class">.Stuff</span>()";</code></pre>
+<pre><code class="language-css"><span class="tag">filter</span>: <span class="tag">e</span>("<span class="tag">ms</span><span class="pseudo">:alwaysHasItsOwnSyntax</span><span class="class">.For</span><span class="class">.Stuff</span>()");</code></pre>
 <p>Output:</p>
 <pre><code class="language-css"><span class="tag">filter</span>: <span class="tag">ms</span><span class="pseudo">:alwaysHasItsOwnSyntax</span><span class="class">.For</span><span class="class">.Stuff</span>();</code></pre>
 <p>Note: The function accepts also <code>~&quot;&quot;</code> escaped values and numbers as parameters. Anything else returns an error.</p>
@@ -327,14 +324,15 @@ format-s-upper: &quot;repetitions: 3 file: directory%2Ffile.less&quot;;</code></
 <blockquote>
 <p>Parses a color, so a string representing a color becomes a color.</p>
 </blockquote>
-<p>Parameters: <code>string</code>: a string of the specifid color.</p>
+<p>Parameters: <code>string</code>: a string of the specified color.</p>
+<p>Returns: <code>color</code></p>
 <p>Example: <code>color(&quot;#aaa&quot;);</code></p>
 <p>Output: <code>#aaa</code></p>
 <h3 id="unit">unit</h3>
 <blockquote>
-<p>Remove or change the unit of a dimension
-Parameters:</p>
+<p>Remove or change the unit of a dimension</p>
 </blockquote>
+<p>Parameters:</p>
 <ul>
 <li><code>dimension</code>: A number, with or without a dimension.</li>
 <li><code>unit</code>: (Optional) the unit to change to, or if omitted it will remove the unit.</li>
@@ -345,9 +343,9 @@ Parameters:</p>
 <p>Output: <code>5</code></p>
 <h3 id="convert">convert</h3>
 <blockquote>
-<p>Converts numbers from one type into another.</p>
+<p>Convert a number from one unit into another.</p>
 </blockquote>
-<p>First argument contains number with units and second argument contains units. If both units are compatible, the number is converted. If they are not compatible, function returns first argument without modifying it.</p>
+<p>The first argument contains a number with units and second argument contains units. If the units are compatible, the number is converted. If they are not compatible, the first argument is returned unmodified.</p>
 <p><em>Compatible unit groups</em>:</p>
 <ul>
 <li>lengths: <code>m</code>, <code>cm</code>, <code>mm</code>, <code>in</code>, <code>pt</code> and <code>pc</code>,</li>
@@ -359,8 +357,8 @@ Parameters:</p>
 <li><code>number</code>: a floating point number with units.</li>
 <li><code>identifier</code>, <code>string</code> or <code>escaped value</code>: units</li>
 </ul>
-<p>Returns: <code>number</code>
-Example:</p>
+<p>Returns: <code>number</code></p>
+<p>Example:</p>
 <pre><code class="language-less">convert(9s, &quot;ms&quot;)
 convert(14cm, mm)
 convert(8, mm) // incompatible unit types</code></pre>
@@ -370,11 +368,11 @@ convert(8, mm) // incompatible unit types</code></pre>
 8</code></pre>
 <h3 id="data-uri">data-uri</h3>
 <blockquote>
-<p>Inlines a resource and falls back to <code>url()</code> if the ieCompat option is on and the resource is too large, or if you use the function in the browser. If the mime is not given then node uses the mime package to determine the correct mime type.
-Parameters:</p>
+<p>Inlines a resource and falls back to <code>url()</code> if the ieCompat option is on and the resource is too large, or if you use the function in the browser. If the MIME type is not given then node uses the mime package to determine the correct mime type.</p>
 </blockquote>
+<p>Parameters:</p>
 <ul>
-<li><code>mimetype</code>: (Optional) A mime type string.</li>
+<li><code>mimetype</code>: (Optional) A MIME type string.</li>
 <li><code>url</code>: The URL of the file to inline.</li>
 </ul>
 <p>Example: <code>data-uri(&#39;../data/image.jpg&#39;);</code></p>
@@ -486,7 +484,7 @@ div-2 {
   <h1 id="list-functions">List Functions</h1>
   <h3 id="length">length</h3>
 <blockquote>
-<p>Returns a number of elements in a value list.</p>
+<p>Returns the number of elements in a value list.</p>
 </blockquote>
 <p>Parameters: <code>list</code> - a comma or space separated list of values.
 Returns: an integer number of elements in a list</p>
@@ -499,7 +497,7 @@ n: length(@list);</code></pre>
 <pre><code>n: 4;</code></pre>
 <h3 id="extract">extract</h3>
 <blockquote>
-<p>Returns a value at a specified position in a list.</p>
+<p>Returns the value at a specified position in a list.</p>
 </blockquote>
 <p>Parameters:
 <code>list</code> - a comma or space separated list of values.
@@ -748,10 +746,10 @@ mod(-26%, -5);</code></pre>
   <h1 id="type-functions">Type Functions</h1>
   <h3 id="isnumber">isnumber</h3>
 <blockquote>
-<p>Returns <code>true</code> if value is a number, <code>false</code> otherwise.</p>
+<p>Returns <code>true</code> if a value is a number, <code>false</code> otherwise.</p>
 </blockquote>
-<p>Parameters: <code>value</code> - a value or variable being evaluated.
-Returns: <code>true</code> if value is a number, <code>false</code> otherwise.</p>
+<p>Parameters: <code>value</code> - a value or variable being evaluated.</p>
+<p>Returns: <code>true</code> if value is a number, <code>false</code> otherwise.</p>
 <p>Example:</p>
 <pre><code class="language-less">isnumber(#ff0);     // false
 isnumber(blue);     // false
@@ -763,10 +761,10 @@ isnumber(keyword);  // false
 isnumber(url(...)); // false</code></pre>
 <h3 id="isstring">isstring</h3>
 <blockquote>
-<p>Returns <code>true</code> if value is a string, <code>false</code> otherwise.</p>
+<p>Returns <code>true</code> if a value is a string, <code>false</code> otherwise.</p>
 </blockquote>
-<p>Parameters: <code>value</code> - a value or variable being evaluated.
-Returns: <code>true</code> if value is a string, <code>false</code> otherwise.</p>
+<p>Parameters: <code>value</code> - a value or variable being evaluated.</p>
+<p>Returns: <code>true</code> if value is a string, <code>false</code> otherwise.</p>
 <p>Example:</p>
 <pre><code class="language-less">isstring(#ff0);     // false
 isstring(blue);     // false
@@ -778,10 +776,10 @@ isstring(keyword);  // false
 isstring(url(...)); // false</code></pre>
 <h3 id="iscolor">iscolor</h3>
 <blockquote>
-<p>Returns <code>true</code> if value is a color, <code>false</code> otherwise.</p>
+<p>Returns <code>true</code> if a value is a color, <code>false</code> otherwise.</p>
 </blockquote>
-<p>Parameters: <code>value</code> - a value or variable being evaluated.
-Returns: <code>true</code> if value is a color, <code>false</code> otherwise.</p>
+<p>Parameters: <code>value</code> - a value or variable being evaluated.</p>
+<p>Returns: <code>true</code> if value is a color, <code>false</code> otherwise.</p>
 <p>Example:</p>
 <pre><code class="language-less">iscolor(#ff0);     // true
 iscolor(blue);     // true
@@ -793,10 +791,10 @@ iscolor(keyword);  // false
 iscolor(url(...)); // false</code></pre>
 <h3 id="iskeyword">iskeyword</h3>
 <blockquote>
-<p>Returns <code>true</code> if value is a keyword, <code>false</code> otherwise.</p>
+<p>Returns <code>true</code> if a value is a keyword, <code>false</code> otherwise.</p>
 </blockquote>
-<p>Parameters: <code>value</code> - a value or variable being evaluated.
-Returns: <code>true</code> if value is a keyword, <code>false</code> otherwise.</p>
+<p>Parameters: <code>value</code> - a value or variable being evaluated.</p>
+<p>Returns: <code>true</code> if value is a keyword, <code>false</code> otherwise.</p>
 <p>Example:</p>
 <pre><code class="language-less">iskeyword(#ff0);     // false
 iskeyword(blue);     // false
@@ -808,10 +806,10 @@ iskeyword(keyword);  // true
 iskeyword(url(...)); // false</code></pre>
 <h3 id="isurl">isurl</h3>
 <blockquote>
-<p>Returns <code>true</code> if value is a url, <code>false</code> otherwise.</p>
+<p>Returns <code>true</code> if a value is a url, <code>false</code> otherwise.</p>
 </blockquote>
-<p>Parameters: <code>value</code> - a value or variable being evaluated.
-Returns: <code>true</code> if value is a url, <code>false</code> otherwise.</p>
+<p>Parameters: <code>value</code> - a value or variable being evaluated.</p>
+<p>Returns: <code>true</code> if value is a url, <code>false</code> otherwise.</p>
 <p>Example:</p>
 <pre><code class="language-less">isurl(#ff0);     // false
 isurl(blue);     // false
@@ -823,10 +821,10 @@ isurl(keyword);  // false
 isurl(url(...)); // true</code></pre>
 <h3 id="ispixel">ispixel</h3>
 <blockquote>
-<p>Returns <code>true</code> if value is a number in pixels, <code>false</code> otherwise.</p>
+<p>Returns <code>true</code> if a value is a number in pixels, <code>false</code> otherwise.</p>
 </blockquote>
-<p>Parameters: <code>value</code> - a value or variable being evaluated.
-Returns: <code>true</code> if value is a pixel, <code>false</code> otherwise.</p>
+<p>Parameters: <code>value</code> - a value or variable being evaluated.</p>
+<p>Returns: <code>true</code> if value is a pixel, <code>false</code> otherwise.</p>
 <p>Example:</p>
 <pre><code class="language-less">ispixel(#ff0);     // false
 ispixel(blue);     // false
@@ -838,10 +836,10 @@ ispixel(keyword);  // false
 ispixel(url(...)); // false</code></pre>
 <h3 id="isem">isem</h3>
 <blockquote>
-<p>Returns <code>true</code> if value is an em value, <code>false</code> otherwise.</p>
+<p>Returns <code>true</code> if a value is an em value, <code>false</code> otherwise.</p>
 </blockquote>
-<p>Parameters: <code>value</code> - a value or variable being evaluated.
-Returns: <code>true</code> if value is an em value, <code>false</code> otherwise.</p>
+<p>Parameters: <code>value</code> - a value or variable being evaluated.</p>
+<p>Returns: <code>true</code> if value is an em value, <code>false</code> otherwise.</p>
 <p>Example:</p>
 <pre><code class="language-less">isem(#ff0);     // false
 isem(blue);     // false
@@ -853,10 +851,10 @@ isem(keyword);  // false
 isem(url(...)); // false</code></pre>
 <h3 id="ispercentage">ispercentage</h3>
 <blockquote>
-<p>Returns <code>true</code> if value is a percentage value, <code>false</code> otherwise.</p>
+<p>Returns <code>true</code> if a value is a percentage value, <code>false</code> otherwise.</p>
 </blockquote>
-<p>Parameters: <code>value</code> - a value or variable being evaluated.
-Returns: <code>true</code> if value is a percentage value, <code>false</code> otherwise.</p>
+<p>Parameters: <code>value</code> - a value or variable being evaluated.</p>
+<p>Returns: <code>true</code> if value is a percentage value, <code>false</code> otherwise.</p>
 <p>Example:</p>
 <pre><code class="language-less">ispercentage(#ff0);     // false
 ispercentage(blue);     // false
@@ -868,14 +866,14 @@ ispercentage(keyword);  // false
 ispercentage(url(...)); // false</code></pre>
 <h3 id="isunit">isunit</h3>
 <blockquote>
-<p>Returns <code>true</code> if value is a number in specified units, <code>false</code> otherwise.</p>
+<p>Returns <code>true</code> if a value is a number in specified units, <code>false</code> otherwise.</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
 <li><code>value</code> - a value or variable being evaluated.</li>
-<li><code>unit</code> - a unit identifier (optionaly quoted) to test for.
-Returns: <code>true</code> if value is a number in specified units, <code>false</code> otherwise.</li>
+<li><code>unit</code> - a unit identifier (optionaly quoted) to test for.</li>
 </ul>
+<p>Returns: <code>true</code> if value is a number in specified units, <code>false</code> otherwise.</p>
 <p>Example:</p>
 <pre><code class="language-less">isunit(11px, px);  // true
 isunit(2.2%, px);  // false
@@ -888,7 +886,6 @@ isunit(#ff0, pt);  // false
 isunit(&quot;mm&quot;, mm);  // false</code></pre>
 
 </div>
-
 
 <!-- Section -->
 <div class="docs-section">
@@ -922,7 +919,7 @@ Parameters:</p>
 <li><code>red</code>: An integer 0-255 or percentage 0-100%.</li>
 <li><code>green</code>: An integer 0-255 or percentage 0-100%.</li>
 <li><code>blue</code>: An integer 0-255 or percentage 0-100%.</li>
-<li><code>alpha</code>: An number 0-1 or percentage 0-100%.</li>
+<li><code>alpha</code>: A number 0-1 or percentage 0-100%.</li>
 </ul>
 <p>Returns: <code>color</code></p>
 <p>Example: <code>rgba(90, 129, 32, 0.5)</code></p>
@@ -969,7 +966,7 @@ Parameters:</p>
 <blockquote>
 <p>Creates an opaque color object from hue, saturation and value (HSV) values.</p>
 </blockquote>
-<p>Note that this is not the same as <code>hsl</code>, and is a color space available in Photoshop.</p>
+<p>Note that this is a color space available in Photoshop, and is not the same as <code>hsl</code>.</p>
 <p>Parameters:</p>
 <ul>
 <li><code>hue</code>: An integer 0-360 representing degrees.</li>
@@ -1081,7 +1078,7 @@ Parameters:</p>
 <p>Output: <code>0.5</code></p>
 <h3 id="luma">luma</h3>
 <blockquote>
-<p>Calculates the <a href="http://en.wikipedia.org/wiki/Luma_(video">luma</a>) (perceptual brightness) of a color object.</p>
+<p>Calculates the <a href="http://en.wikipedia.org/wiki/Luma_%28video%29">luma</a> (perceptual brightness) of a color object.</p>
 </blockquote>
 <p>Uses <strong>SMPTE C / Rec. 709</strong> coefficients, as recommended in <a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">WCAG 2.0</a>. This calculation is also used in the contrast function.</p>
 <p>Parameters: <code>color</code> - a color object.</p>
@@ -1093,55 +1090,59 @@ Parameters:</p>
 
 <div class="docs-section">
   <h1 id="color-operations">Color Operations</h1>
-  <p>Color operations generally take parameters in the same units as the values they are changing, and percentage are handled as absolutes, so increasing a 10% value by 10% results in 20%, not 11%, and values are clamped to their allowed ranges; they do not wrap around. Where return values are shown, we&#39;ve also shown formats that make it clear what each function has done, in addition to the hex versions that you will usually be be working with.</p>
+  <p>Color operations generally take parameters in the same units as the values they are changing, and percentages are handled as absolutes, so increasing a 10% value by 10% results in 20%, not 11%, and values are clamped to their allowed ranges; they do not wrap around. Where return values are shown, we&#39;ve used formats that make it clear what each function has done, in addition to the hex versions that you will usually be be working with.</p>
 <h3 id="saturate">saturate</h3>
 <blockquote>
 <p>Increase the saturation of a color by an absolute amount.</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
-<li><code>color</code> - a color object.</li>
+<li><code>color</code>: A color object.</li>
 <li><code>amount</code>: A percentage 0-100%.</li>
 </ul>
 <p>Returns: <code>color</code></p>
-<p>Example: <code>saturate(hsl(90, 90%, 50%), 10%)</code></p>
+<p>Example: <code>saturate(hsl(90, 80%, 50%), 20%)</code></p>
 <p>Output: <code>#80ff00 // hsl(90, 100%, 50%)</code></p>
+<p><img src="holder.js/100x40/#80e619:#000000/text:80e619" alt="Color 1"> ➜ <img src="holder.js/100x40/#80ff00:#000000/text:80ff00" alt="Color 2"></p>
 <h3 id="desaturate">desaturate</h3>
 <blockquote>
 <p>Decrease the saturation of a color by an absolute amount.</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
-<li><code>color</code> - a color object.</li>
+<li><code>color</code>: A color object.</li>
 <li><code>amount</code>: A percentage 0-100%.</li>
 </ul>
 <p>Returns: <code>color</code></p>
-<p>Example: <code>desaturate(hsl(90, 90%, 50%), 10%)</code></p>
-<p>Output: <code>#80e51a // hsl(90, 80%, 50%)</code></p>
+<p>Example: <code>desaturate(hsl(90, 80%, 50%), 20%)</code></p>
+<p>Output: <code>#80cc33 // hsl(90, 60%, 50%)</code></p>
+<p><img src="holder.js/100x40/#80e619:#000000/text:80e619" alt="Color 1"> ➜ <img src="holder.js/100x40/#80cc33:#000000/text:80cc33" alt="Color 2"></p>
 <h3 id="lighten">lighten</h3>
 <blockquote>
 <p>Increase the lightness of a color by an absolute amount.</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
-<li><code>color</code> - a color object.</li>
+<li><code>color</code>: A color object.</li>
 <li><code>amount</code>: A percentage 0-100%.</li>
 </ul>
 <p>Returns: <code>color</code></p>
-<p>Example: <code>lighten(hsl(90, 90%, 50%), 10%)</code></p>
-<p>Output: <code>#99f53d // hsl(90, 90%, 60%)</code></p>
+<p>Example: <code>lighten(hsl(90, 80%, 50%), 20%)</code></p>
+<p>Output: <code>#b3f075 // hsl(90, 80%, 70%)</code></p>
+<p><img src="holder.js/100x40/#80e619:#000000/text:80e619" alt="Color 1"> ➜ <img src="holder.js/100x40/#b3f075:#000000/text:b3f075" alt="Color 2"></p>
 <h3 id="darken">darken</h3>
 <blockquote>
 <p>Decrease the lightness of a color by an absolute amount.</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
-<li><code>color</code> - a color object.</li>
+<li><code>color</code>: A color object.</li>
 <li><code>amount</code>: A percentage 0-100%.</li>
 </ul>
 <p>Returns: <code>color</code></p>
-<p>Example: <code>darken(hsl(90, 90%, 50%), 10%)</code></p>
-<p>Output: <code>#66c20a // hsl(90, 90%, 40%)</code></p>
+<p>Example: <code>darken(hsl(90, 80%, 50%), 20%)</code></p>
+<p>Output: <code>#4d8a0f // hsl(90, 80%, 30%)</code></p>
+<p><img src="holder.js/100x40/#80e619:#000000/text:80e619" alt="Color 1"> ➜ <img src="holder.js/100x40/#4d8a0f:#000000/text:4d8a0f" alt="Color 2"></p>
 <h3 id="fadein">fadein</h3>
 <blockquote>
 <p>Decrease the transparency (or increase the opacity) of a color, making it more opaque.</p>
@@ -1149,7 +1150,7 @@ Parameters:</p>
 <p>Has no effect on opaque colors. To fade in the other direction use <code>fadeout</code>.</p>
 <p>Parameters:</p>
 <ul>
-<li><code>color</code> - a color object.</li>
+<li><code>color</code>: A color object.</li>
 <li><code>amount</code>: A percentage 0-100%.</li>
 </ul>
 <p>Returns: <code>color</code></p>
@@ -1161,7 +1162,7 @@ Parameters:</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
-<li><code>color</code> - a color object.</li>
+<li><code>color</code>: A color object.</li>
 <li><code>amount</code>: A percentage 0-100%.</li>
 </ul>
 <p>Returns: <code>color</code></p>
@@ -1173,7 +1174,7 @@ Parameters:</p>
 </blockquote>
 <p>Parameters:</p>
 <ul>
-<li><code>color</code> - a color object.</li>
+<li><code>color</code>: A color object.</li>
 <li><code>amount</code>: A percentage 0-100%.</li>
 </ul>
 <p>Returns: <code>color</code></p>
@@ -1190,16 +1191,18 @@ Parameters:</p>
 <p>Colors are always returned as RGB values, so applying <code>spin</code> to a grey value will do nothing.</p>
 <p>Parameters:</p>
 <ul>
-<li><code>color</code> - a color object.</li>
+<li><code>color</code>: A color object.</li>
 <li><code>angle</code>: A number of degrees to rotate (+ or -).</li>
 </ul>
 <p>Returns: <code>color</code></p>
 <p>Example:</p>
-<pre><code class="language-less">spin(hsl(10, 90%, 50%), 20)
-spin(hsl(10, 90%, 50%), -20)</code></pre>
+<pre><code class="language-less">spin(hsl(10, 90%, 50%), 30)
+spin(hsl(10, 90%, 50%), -30)</code></pre>
 <p>Output:</p>
-<pre><code class="language-css">#f27f0d // hsl(30, 90%, 50%)
-#f20d33 // hsl(350, 90%, 50%)</code></pre>
+<pre><code class="language-css">#f2a60d // hsl(40, 90%, 50%)
+#f20d59 // hsl(340, 90%, 50%)</code></pre>
+<p><img src="holder.js/100x40/#f2330d:#000000/text:f2330d" alt="Color 1"> ➜ <img src="holder.js/100x40/#f2a60d:#000000/text:f2a60d" alt="Color 2"></p>
+<p><img src="holder.js/100x40/#f2330d:#000000/text:f2330d" alt="Color 1"> ➜ <img src="holder.js/100x40/#f20d59:#000000/text:f20d59" alt="Color 2"></p>
 <h3 id="mix">mix</h3>
 <blockquote>
 <p>Mix two colors together in variable proportion. Opacity is included in the calculations.</p>
@@ -1217,41 +1220,56 @@ mix(rgba(100,0,0,1.0), rgba(0,100,0,0.5), 50%)</code></pre>
 <p>Output:</p>
 <pre><code class="language-css"><span class="id">#800080</span>
 <span class="tag">rgba</span>(75, 25, 0, 0<span class="class">.75</span>)</code></pre>
+<p><img src="holder.js/100x40/#ff0000:#ffffff/text:ff0000" alt="Color 1"> + <img src="holder.js/100x40/#0000ff:#ffffff/text:0000ff" alt="Color 2"> ➜ <img src="holder.js/100x40/#800080:#ffffff/text:800080" alt="Color 3"></p>
 <h3 id="greyscale">greyscale</h3>
 <blockquote>
 <p>Remove all saturation from a color; the same as calling <code>desaturate(@color, 100%)</code>.</p>
 </blockquote>
-<p>Because the saturation is not affected by hue, the resulting color mapping may be somewhat dull or muddy; <code>luma</code> may provide a better result as it extracts perceptual rather than linear brightness, for example <code>greyscale(&#39;#0000ff&#39;)</code> will return the same value as <code>greyscale(&#39;#00ff00&#39;)</code>, though they appear quite different in brightness to the human eye.</p>
-<p>Parameters: <code>color</code> - a color object.</p>
+<p>Because the saturation is not affected by hue, the resulting color mapping may be somewhat dull or muddy; <a href="#luma"><code>luma</code></a> may provide a better result as it extracts perceptual rather than linear brightness, for example <code>greyscale(&#39;#0000ff&#39;)</code> will return the same value as <code>greyscale(&#39;#00ff00&#39;)</code>, though they appear quite different in brightness to the human eye.</p>
+<p>Parameters: <code>color</code>: A color object.</p>
 <p>Returns: <code>color</code></p>
 <p>Example: <code>greyscale(hsl(90, 90%, 50%))</code></p>
 <p>Output: <code>#808080 // hsl(90, 0%, 50%)</code></p>
+<p><img src="holder.js/100x40/#80f20d:#000000/text:80f20d" alt="Color 1"> ➜ <img src="holder.js/100x40/#808080:#000000/text:808080" alt="Color 2"></p>
+<p>Notice that the generated grey looks darker than the original green, even though its lightness value is the same.</p>
+<p>Compare with using <code>luma</code> (usage is different because <code>luma</code> returns a single value, not a color):</p>
+<pre><code class="language-less">@c: luma(hsl(90, 90%, 50%));
+color: rgb(@c, @c, @c);</code></pre>
+<p>Output: <code>#cacaca</code></p>
+<p><img src="holder.js/100x40/#80f20d:#000000/text:80f20d" alt="Color 1"> ➜ <img src="holder.js/100x40/#cacaca:#000000/text:cacaca" alt="Color 2"></p>
+<p>This time the grey&#39;s lightness looks about the same as the green, though its value is actually higher.</p>
 <h3 id="contrast">contrast</h3>
 <blockquote>
 <p>Choose which of two colors provides the greatest contrast with another.</p>
 </blockquote>
-<p>This is useful for ensuring that a color is readable against a background, which is also useful for accessibility compliance. This function works the same way as the <a href="http://compass-style.org/reference/compass/utilities/color/contrast/">contrast function in Compass for SASS</a>. In accordance with <a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">WCAG 2.0</a>, colors are compared using their luma value, not their lightness.</p>
-<p>The light and dark parameters can be supplied in either order - the function will calculate their luma values and assign light and dark appropriately.</p>
+<p>This is useful for ensuring that a color is readable against a background, which is also useful for accessibility compliance. This function works the same way as the <a href="http://compass-style.org/reference/compass/utilities/color/contrast/">contrast function in Compass for SASS</a>. In accordance with <a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef">WCAG 2.0</a>, colors are compared using their <a href="#luma">luma</a> value, not their lightness.</p>
+<p>The light and dark parameters can be supplied in either order - the function will calculate their luma values and assign light and dark automatically, which means you can&#39;t use this function to select the <em>least</em> contrasting color by reversing the order.</p>
 <p>Parameters:</p>
 <ul>
 <li><code>color</code>: A color object to compare against.</li>
 <li><code>dark</code>: optional - A designated dark color (defaults to black).</li>
 <li><code>light</code>: optional - A designated light color (defaults to white).</li>
-<li><code>threshold</code>: optional - A percentage 0-100% specifying where the transition from &quot;dark&quot; to &quot;light&quot; is (defaults to 43%). This is used to bias the contrast one way or another, for example to allow you to decide whether a 50% grey background should result in black or white text. You would generally set this lower for &#39;lighter&#39; palettes, higher for &#39;darker&#39; ones. Defaults to 43%.</li>
+<li><code>threshold</code>: optional - A percentage 0-100% specifying where the transition from &quot;dark&quot; to &quot;light&quot; is (defaults to 43%, matching SASS). This is used to bias the contrast one way or another, for example to allow you to decide whether a 50% grey background should result in black or white text. You would generally set this lower for &#39;lighter&#39; palettes, higher for &#39;darker&#39; ones..</li>
 </ul>
 <p>Returns: <code>color</code></p>
 <p>Example:</p>
 <pre><code class="language-less">contrast(#aaaaaa)
 contrast(#222222, #101010)
 contrast(#222222, #101010, #dddddd)
-contrast(hsl(90, 100%, 50%),#000000,#ffffff,40%);
-contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
+contrast(hsl(90, 100%, 50%), #000000, #ffffff, 40%);
+contrast(hsl(90, 100%, 50%), #000000, #ffffff, 60%);</code></pre>
 <p>Output:</p>
 <pre><code>#000000 // black
 #ffffff // white
 #dddddd
 #000000 // black
 #ffffff // white</code></pre>
+<p>These examples use the calculated colors for background and foreground; you can see that you never end up with white-on-white, nor black-on-black, though it&#39;s possible to use the threshold to permit lower-contrast outcomes, as in the last example:</p>
+<p><img src="holder.js/100x40/#aaaaaa:#000000/text:000000" alt="Color 1">
+<img src="holder.js/100x40/#222222:#ffffff/text:ffffff" alt="Color 1">
+<img src="holder.js/100x40/#222222:#dddddd/text:dddddd" alt="Color 1">
+<img src="holder.js/100x40/#80ff00:#000000/text:000000" alt="Color 1">
+<img src="holder.js/100x40/#80ff00:#ffffff/text:ffffff" alt="Color 1"></p>
 
 </div>
 
@@ -1686,6 +1704,7 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
 <img src="holder.js/100x40/#ff66ff:#ffffff/text:ff66ff" alt="Color 3"></p>
 
 </div>
+
         </div>
       </div>
     </div>
@@ -1707,7 +1726,7 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
     <p><a href="https://github.com/less/less.js">Less.js</a> was created by <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
     <p>Documentation source code released under the <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
     <ul class="footer-links">
-      <li>Currently v1.5.1</li>
+      <li>Currently v1.6.0</li>
       <li class="muted">&middot;</li>
       <li><a href="">Blog</a></li>
       <li class="muted">&middot;</li>
@@ -1719,6 +1738,7 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
     </ul>
   </div>
 </footer>
+
 
     <!-- JavaScript and analytics only. -->
     <!-- Core JavaScript
@@ -1734,7 +1754,6 @@ contrast(hsl(90, 100%, 50%),#000000,#ffffff,60%);</code></pre>
 <script>hljs.initHighlightingOnLoad();</script>
 
 <script src="assets/js/application.js"></script>
-
 
 
 
