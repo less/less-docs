@@ -295,4 +295,3 @@ If you want to parse a JavaScript string as a hex color, you may use the `color`
 @color: color(`window.colors.baseColor`);
 @darkcolor: darken(@color, 10%);
 ```
-

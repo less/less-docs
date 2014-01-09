@@ -2,11 +2,13 @@
 
 > Applies [URL-encoding](http://en.wikipedia.org/wiki/Percent-encoding) to special characters found in the input string.
 
-* Following characters are exceptions and not encoded: `,`, `/`, `?`, `@`, `&`, `+`, `'`, `~`, `!` and `$`.
+* These characters are not encoded: `,`, `/`, `?`, `@`, `&`, `+`, `'`, `~`, `!` and `$`.
 * Most common encoded characters are: `\<space\>`, `#`, `^`, `(`, `)`, `{`, `}`, `|`, `:`, `>`, `<`, `;`, `]`, `[` and `=`.
 
 Parameters: `string`: a string to escape.
+
 Returns: escaped `string` content without quotes.
+
 Example:
 
 ```less
@@ -19,7 +21,7 @@ Output:
 a%3D1
 ```
 
-Note: Function behavior if a parameter is non-string parameters is not defined. Current implementation returns `undefined` on color and unchanged input on any other kind of argument. This behavior should not be relied on and can change in the future.
+Note: if the parameter is not a string, output is not defined. The current implementation returns `undefined` on color and unchanged input on any other kind of argument. This behavior should not be relied on and may change in the future.
 
 
 ### e
@@ -29,12 +31,13 @@ Note: Function behavior if a parameter is non-string parameters is not defined. 
 It expects string as a parameter and return its content as is, but without quotes. It can be used to output CSS value which is either not valid CSS syntax, or uses proprietary syntax which LESS doesn't recognize.
 
 Parameters: `string` - a string to escape.
-Returns: `string` content without quotes.
+
+Returns: `string` - the escaped string, without quotes.
 
 Example:
 
 ```css
-filter: ~"ms:alwaysHasItsOwnSyntax.For.Stuff()";
+filter: e("ms:alwaysHasItsOwnSyntax.For.Stuff()");
 ```
 
 Output:

@@ -86,7 +86,7 @@ Set options in a global `less` object **before** loading the less.js script:
 Type: `String`
 Default: `development`
 
-Environment to run may be either `development` or `production`. If the document's URL starts with file:// or localhost it will automatically be set to 'development'.
+Environment to run may be either `development` or `production`. If the document's URL starts with `file://` or `localhost` it will automatically be set to `development`.
 
 #### logLevel
 Type: `Number`
