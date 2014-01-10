@@ -77,7 +77,7 @@ body {
 }
 ```
 
-### `@import` statements (limited support)
+### Import statements
 
 Version: 1.4.0
 
@@ -100,7 +100,7 @@ Example:
 
 ### Properties
 
-Version: ?.?.?
+Version: 1.6.0
 
 ```less
 @property: color;
