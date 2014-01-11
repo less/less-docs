@@ -5,21 +5,13 @@
       "lead": "Simple overview of the basic features",
       "content": "content/overview.md"
     },
+    "variables": {
+      "title": "Variables",
+      "content": "content/features/variables.md"
+    },
     "extend": {
       "title": "Extend",
       "content": "content/features/extend.md"
-    },
-    "import-directives": {
-      "title": "Import Directives",
-      "content": "content/features/import-directives.md"
-    },
-    "loops": {
-      "title": "Loops",
-      "content": "content/features/loops.md"
-    },
-    "merge": {
-      "title": "Merge",
-      "content": "content/features/merge.md"
     },
     "mixins": {
       "title": "Mixins",
@@ -29,6 +21,14 @@
       "title": "Parametric Mixins",
       "content": "content/features/mixins-parametric.md"
     },
+    "mixins-as-functions": {
+      "title": "Mixins as Functions",
+      "content": "content/features/mixins-as-functions.md"
+    },
+    "import-directives": {
+      "title": "Import Directives",
+      "content": "content/features/import-directives.md"
+    },
     "mixin-guards": {
       "title": "Mixin Guards",
       "content": "content/features/mixin-guards.md"
@@ -37,25 +37,20 @@
       "title": "CSS Guards",
       "content": "content/features/css-guards.md"
     },
-    "mixins-as-functions": {
-      "title": "Mixins as Functions",
-      "content": "content/features/mixins-as-functions.md"
+    "loops": {
+      "title": "Loops",
+      "content": "content/features/loops.md"
+    },
+    "merge": {
+      "title": "Merge",
+      "content": "content/features/merge.md"
     },
     "parent-selectors": {
       "title": "Parent Selectors",
       "content": "content/features/parent-selectors.md"
-    },
-    "variables": {
-      "title": "Variables",
-      "content": "content/features/variables.md"
     }
   },
   "unpublished": {
-    "default-function": {
-      "published": false,
-      "title": "Default Function",
-      "content": "content/features/default-function.md"
-    },
     "scope": {
       "published": false,
       "title": "Scope",
