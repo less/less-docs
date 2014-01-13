@@ -18,7 +18,7 @@ Variables make your code easier to maintain by giving you a way to control those
 ```less
 // Variables
 @link-color:        #428bca; // sea blue
-@link-color-hover:  (@link-color, 10%);
+@link-color-hover:  darken(@link-color, 10%);
 
 // Usage
 a,
@@ -77,7 +77,7 @@ body {
 }
 ```
 
-### `@import` statements (limited support)
+### Import statements
 
 Version: 1.4.0
 
@@ -100,7 +100,7 @@ Example:
 
 ### Properties
 
-Version: ?.?.?
+Version: 1.6.0
 
 ```less
 @property: color;
