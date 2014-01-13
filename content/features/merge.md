@@ -2,7 +2,7 @@
 
 The `merge` feature allows for aggregating values from multiple properties into a comma separated list under a single property. `merge` is useful for properties such as background and transform.
 
-Released [v1.5.0](https://github.com/less/less.js/blob/master/CHANGELOG.md)
+Released [v1.5.0]({{ site.coderepo }}/blob/master/CHANGELOG.md)
 
 Example:
 

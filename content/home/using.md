@@ -116,7 +116,7 @@ Next, [download less.js](https://github.com/less/less.js/archive/master.zip) and
 
 ## Browser Options
 
-Options are defined by setting them on a global LESS object **before** the `<script src="less.js"></script>`:
+Options are defined by setting them on a global `less` object **before** the `<script src="less.js"></script>`:
 
 ``` html
 <!-- set options before less.js script -->

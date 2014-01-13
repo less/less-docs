@@ -6,7 +6,7 @@ published: false
 
 ## Tips & Tricks
 
-Credit: [less/less.js/issues/1472](https://github.com/less/less.js/issues/1472#issuecomment-22213697)
+Credit: [less/less.js/issues/1472]({{ site.coderepo }}/issues/1472#issuecomment-22213697)
 
 Here is a trick for defining variables and keeping them in some private scope, preventing them from leaking to the global space.
 

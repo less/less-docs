@@ -1,6 +1,6 @@
 > Extend is a LESS Pseudo-Class which merges the selector it is put on with ones that match what it references.
 
-Released [v1.4.0](https://github.com/less/less.js/blob/master/CHANGELOG.md)
+Released [v1.4.0]({{ site.coderepo }}/blob/master/CHANGELOG.md)
 
 ```less
 nav ul {
@@ -264,7 +264,7 @@ Outputs
 
 ## Extend "all"
 
-When you specify the all keyword last in an extend argument it tells Less.js to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making a new selector.
+When you specify the all keyword last in an extend argument it tells Less to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making a new selector.
 
 Example:
 
