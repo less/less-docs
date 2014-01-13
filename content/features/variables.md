@@ -18,7 +18,7 @@ Variables make your code easier to maintain by giving you a way to control those
 ```less
 // Variables
 @link-color:        #428bca; // sea blue
-@link-color-hover:  (@link-color, 10%);
+@link-color-hover:  darken(@link-color, 10%);
 
 // Usage
 a,
