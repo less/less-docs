@@ -1,3 +1,7 @@
+## Contributing
+
+Thanks for thinking about contributing. Please read the [contributing instructions]({{ site.coderepo }}/blob/master/CONTRIBUTING.md) carefully to avoid wasted work.
+
 ## Install these tools
 
 * **node** - <http://nodejs.org/>
