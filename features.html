@@ -26,9 +26,8 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 
-<!-- Favicons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="assets/ico/favicon.png">
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="assets/favicon.ico">
 
 
 
@@ -87,7 +86,7 @@
     <div class="docs-header" id="content">
       <div class="container">
         <h1>Language Features</h1>
-        <p>Features supported by Less.js.</p>
+        <p>Features of the Less language</p>
         
       </div>
     </div>
@@ -95,7 +94,7 @@
     <!-- Callout for the old docs link -->
     <div class="banner">
   <div class="container">
-    less v1.6.0 has been released - 
+    less v1.6.1 has been released - 
     <strong>
       <a href="https://github.com/less/less-docs.git/blob/master/CHANGELOG.md">See what's new</a>
     </strong>
@@ -112,31 +111,152 @@
               
               
                 
+<!--
+
 <li><a href="#features-overview-feature">Overview</a></li>
 
+<li><a href="#variables-feature">Variables</a></li>
+
 <li><a href="#extend-feature">Extend</a></li>
-
-<li><a href="#import-directives-feature">Import Directives</a></li>
-
-<li><a href="#loops-feature">Loops</a></li>
-
-<li><a href="#merge-feature">Merge</a></li>
 
 <li><a href="#mixins-feature">Mixins</a></li>
 
 <li><a href="#mixins-parametric-feature">Parametric Mixins</a></li>
 
+<li><a href="#mixins-as-functions-feature">Mixins as Functions</a></li>
+
+<li><a href="#import-directives-feature">Import Directives</a></li>
+
 <li><a href="#mixin-guards-feature">Mixin Guards</a></li>
 
 <li><a href="#css-guards-feature">CSS Guards</a></li>
 
-<li><a href="#mixins-as-functions-feature">Mixins as Functions</a></li>
+<li><a href="#loops-feature">Loops</a></li>
+
+<li><a href="#merge-feature">Merge</a></li>
 
 <li><a href="#parent-selectors-feature">Parent Selectors</a></li>
 
-<li><a href="#variables-feature">Variables</a></li>
+-->
 
+<li>
+  <a href="#features-overview-feature">Overview</a>
+  <ul class="nav">
+    <li><a href="#variables">Variables</a></li>
+    <li><a href="#mixins">Mixins</a></li>
+    <li><a href="#nested-rules">Nested rules</a></li>
+    <li><a href="#operations">Operations</a></li>
+    <li><a href="#functions">Functions</a></li>
+    <li><a href="#namespaces-accessors">Namespaces &amp; Accessors</a></li>
+    <li><a href="#scope">Scope</a></li>
+    <li><a href="#comments">Comments</a></li>
+    <li><a href="#importing">Importing</a></li>
+  </ul>
+</li>
 
+<li>
+  <a href="#variables-feature">Variables</a>
+  <ul class="nav">
+    <li><a href="#variables-feature">Overview</a></li>
+    <li>
+      <a href="#variable-interpolation">Interpolation</a>
+      <!--
+      <ul class="nav">
+        <li><a href="#selectors">Selectors</a></li>
+        <li><a href="#urls">URLs</a></li>
+        <li><a href="#import-statements">Import statements</a></li>
+        <li><a href="#properties">Properties</a></li>
+      </ul>
+      -->
+    </li>
+    <li><a href="#variable-names">Variable Names</a></li>
+    <li><a href="#lazy-loading">Lazy Loading</a></li>
+    <li><a href="#default-variables">default variables</a></li>
+  </ul>
+</li>
+
+<li>
+  <a href="#extend-feature">Extend</a>
+  <ul class="nav">
+    <li><a href="#extend-feature">Overview</a></li>
+    <li><a href="#extend-syntax">Syntax</a></li>
+    <li><a href="#extend-attached-to-selector">Attached to selector</a></li>
+    <li><a href="#extend-inside-ruleset">Inside ruleset</a></li>
+    <li><a href="#extending-nested-selectors">Extending nested selectors</a></li>
+    <li><a href="#exact-matching-with-extend">Exact matching</a></li>
+    <li><a href="#extend-all-">Extend &quot;all&quot;</a></li>
+    <li><a href="#selector-interpolation-with-extend">Selector Interpolation with Extend</a></li>
+    <li><a href="#scoping-extend-inside-media">Scoping / Extend Inside @media</a></li>
+    <li><a href="#duplication-detection">Duplication Detection</a></li>
+    <li><a href="#use-cases-for-extend">Use Cases</a></li>
+      <!--
+      <li><a href="#classic-use-case">Classic Use Case</a></li>
+      <li><a href="#reducing-css-size">Reducing CSS Size</a></li>
+      <li><a href="#combining-styles-a-more-advanced-mixin">Combining Styles</a></li>
+      -->
+  </ul>
+</li>
+
+<li>
+  <a href="#mixins-feature">Mixins</a>
+  <ul class="nav">
+    <li><a href="#mixins-feature">Overview</a></li>
+    <li><a href="#not-outputting-the-mixin">Not outputting the mixin</a></li>
+    <li><a href="#selectors-in-mixins">Selectors in mixins</a></li>
+    <li><a href="#namespaces">Namespaces</a></li>
+    <li><a href="#the-important-keyword">The <code>!important</code> keyword</a></li>
+    <li><a href="#mixins-parametric-feature">Parametric mixins</a></li>
+      <li><a href="#mixins-with-multiple-parameters">Multiple parameters</a></li>
+      <li><a href="#named-parameters">Named parameters</a></li>
+      <li><a href="#the-arguments-variable">The <code>@arguments</code> variable</a></li>
+      <li><a href="#advanced-arguments-and-the-rest-variable">Advanced arguments and the <code>@rest</code> variable</a></li>
+    <li><a href="#pattern-matching">Pattern-matching</a></li> <!-- TODO: move this to "Conditional Structures" section below -->
+    <li><a href="#mixins-as-functions-feature">Mixins as functions</a></li>
+  </ul>
+</li>
+
+<li>
+  <a href="#import-directives-feature">Import Directives</a>
+  <ul class="nav">
+    <li><a href="#import-directives-feature">Overview</a></li>
+    <li><a href="#file-extensions">File extensions</a></li>
+    <li><a href="#import-options">Import Options</a></li>
+      <li><a href="#reference">reference</a></li>
+      <li><a href="#inline">inline</a></li>
+      <li><a href="#less">less</a></li>
+      <li><a href="#css">css</a></li>
+      <li><a href="#once">once</a></li>
+      <li><a href="#multiple">multiple</a></li>
+  </ul>
+</li>
+
+<li>
+  <a href="#mixin-guards-feature">Control Structures</a>
+  <!-- ^ or simply "Conditional and Iterative Structures", I'd prefer to use more formal "programing language like" title here but my opinion is obioulsy biased -->
+  <ul class="nav">
+    <li><a href="#mixin-guards-feature">Mixin Guards</a></li>
+      <!--
+      <li><a href="#guard-comparison-operators">Guard comparison operators</a></li>
+      <li><a href="#type-checking-functions">Type checking functions</a></li>
+      <li><a href="#conditional-mixins">Conditional mixins</a></li>--><!-- "Guard keywords"?-->
+    <li><a href="#css-guards-feature">CSS Guards</a></li>
+    <li><a href="#loops-feature">Loops</a></li>
+  </ul>
+</li>
+
+<li>
+  <a href="#merge-feature">Misc</a>
+  <ul class="nav">
+    <li><a href="#merge-feature">Merge</a></li>
+    <li><a href="#parent-selectors-feature">Parent Selectors</a></li>
+    <!-- TODO: there's also "Advanced Usage of &" in nested.md (not published),
+              I guess eventualy we'll create a dedicated "&" section.-->
+  </ul>
+</li>
+
+<!--
+
+-->
               
               
               
@@ -298,6 +418,157 @@ height: 100% / 2 + @filler;</code></pre>
 
 </div>
 
+<!-- Variables -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="variables-feature">Variables</h1>
+  </div>
+  
+  <blockquote>
+<p>Control commonly used values in a single location.</p>
+</blockquote>
+<p>It&#39;s not uncommon to see the same value repeated dozens <em>if not hundreds of times</em> across your stylesheets:</p>
+<pre><code class="language-css"><span class="tag">a</span>,
+<span class="class">.link</span> <span class="rules">{
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#428bca</span></span></span>;
+<span class="rule">}</span></span>
+<span class="class">.widget</span> <span class="rules">{
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;
+  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#428bca</span></span></span>;
+<span class="rule">}</span></span></code></pre>
+<p>Variables make your code easier to maintain by giving you a way to control those values from a single location:</p>
+<pre><code class="language-less">// Variables
+@link-color:        #428bca; // sea blue
+@link-color-hover:  darken(@link-color, 10%);
+
+// Usage
+a,
+.link {
+  color: @link-color;
+}
+a:hover {
+  color: @link-color-hover;
+}
+.widget {
+  color: #fff;
+  background: @link-color;
+}</code></pre>
+<h2 id="variable-interpolation">Variable Interpolation</h2>
+<p>The examples above focused on using variables to control <em>values in CSS rules</em>, but they can also be used in other places as well, such as selector names, property names, URLs and <code>@import</code> statements.</p>
+<h3 id="selectors">Selectors</h3>
+<p>Version: 1.4.0</p>
+<pre><code class="language-less">// Variables
+@mySelector: banner;
+
+// Usage
+.@{mySelector} {
+  font-weight: bold;
+  line-height: 40px;
+  margin: 0 auto;
+}</code></pre>
+<p>Compiles to:</p>
+<pre><code class="language-css"><span class="class">.banner</span> <span class="rules">{
+  <span class="rule"><span class="attribute">font-weight</span>:<span class="value"> bold</span></span>;
+  <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">40</span>px</span></span>;
+  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> auto</span></span>;
+<span class="rule">}</span></span></code></pre>
+<h3 id="urls">URLs</h3>
+<pre><code class="language-less">// Variables
+@images: &quot;../img&quot;;
+
+// Usage
+body {
+  color: #444;
+  background: url(&quot;@{images}}/white-sand.png&quot;);
+}</code></pre>
+<h3 id="import-statements">Import statements</h3>
+<p>Version: 1.4.0</p>
+<p>Syntax: <code>@import &quot;@{themes}/tidal-wave.less&quot;;</code></p>
+<p>Note that currently, only variables which have been declared in the root or current scope will be considered and that only the current file and calling files will be considered when looking for a variable.
+This means that this usage is typically limited to when you an inject a variable into the compile process or define a variable at the beginning of your root file.</p>
+<p>When you are importing a css file and not using the inline option (e.g. the import statement will be kept intact) then the above does not apply.</p>
+<p>Example:</p>
+<pre><code class="language-less">// Variables
+@themes: &quot;../../src/themes&quot;;
+
+// Usage
+@import &quot;@{themes}/tidal-wave.less&quot;;</code></pre>
+<h3 id="properties">Properties</h3>
+<p>Version: 1.6.0</p>
+<pre><code class="language-less">@property: color;
+
+.widget {
+  @{property}: #0ee;
+  background-@{property}: #999;
+}</code></pre>
+<p>Compiles to:</p>
+<pre><code class="language-css"><span class="class">.widget</span> <span class="rules">{
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#0ee</span></span></span>;
+  <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#999</span></span></span>;
+<span class="rule">}</span></span></code></pre>
+<h2 id="variable-names">Variable Names</h2>
+<p>It is also possible to define variables with a variable name:</p>
+<pre><code class="language-less">@fnord:  &quot;I am fnord.&quot;;
+@var:    &quot;fnord&quot;;
+content: @@var;</code></pre>
+<p>Which compiles to:</p>
+<pre><code>content: &quot;I am fnord.&quot;;</code></pre>
+<h2 id="lazy-loading">Lazy Loading</h2>
+<blockquote>
+<p>Variables are lazy loaded and do not have to be declared before being used.</p>
+</blockquote>
+<p>Valid LESS snippet:</p>
+<pre><code class="language-less">.lazy-eval {
+  width: @var;
+}
+
+@var: @a;
+@a: 9%;</code></pre>
+<p>this is valid LESS too:</p>
+<pre><code class="language-less">.lazy-eval-scope {
+  width: @var;
+  @a: 9%;
+}
+
+@var: @a;
+@a: 100%;</code></pre>
+<p>both compile into:</p>
+<pre><code class="language-css"><span class="class">.lazy-eval-scope</span> <span class="rules">{
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">9</span>%</span></span>;
+<span class="rule">}</span></span></code></pre>
+<p>When defining a variable twice, the last definition of the variable is used, searching from the current scope upwards. This is similar to css itself where the last property inside a definition is used to determine the value.</p>
+<p>For instance:</p>
+<pre><code class="language-less">@var: 0;
+.class1 {
+  @var: 1;
+  .class {
+    @var: 2;
+    three: @var;
+    @var: 3;
+  }
+  one: @var;
+}</code></pre>
+<p>Compiles to:</p>
+<pre><code class="language-css"><span class="class">.class1</span> <span class="class">.class</span> <span class="rules">{
+  <span class="rule"><span class="attribute">three</span>:<span class="value"> <span class="number">3</span></span></span>;
+<span class="rule">}</span></span>
+<span class="class">.class</span> <span class="rules">{
+  <span class="rule"><span class="attribute">one</span>:<span class="value"> <span class="number">1</span></span></span>;
+<span class="rule">}</span></span></code></pre>
+<h2 id="default-variables">default variables</h2>
+<p>We sometimes get requests for default variables - an ability to set a variable only if it is not already set. This feature is not required because you can easily override a variable by putting the definition afterwards.</p>
+<p>For instance:</p>
+<pre><code class="language-less">// library
+@base-color: green;
+@dark-color: darken(@base-color, 10%);
+
+// use of library
+@import &quot;library.less&quot;;
+@base-color: red;</code></pre>
+<p>This works fine - base-color is overidden and dark-color is a dark red.</p>
+
+</div>
+
 <!-- Extend -->
 <div class="docs-section">
   <div class="page-header">
@@ -307,7 +578,7 @@ height: 100% / 2 + @filler;</code></pre>
   <blockquote>
 <p>Extend is a LESS Pseudo-Class which merges the selector it is put on with ones that match what it references.</p>
 </blockquote>
-<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a></p>
+<p>Released <a href="/blob/master/CHANGELOG.md">v1.4.0</a></p>
 <pre><code class="language-less">nav ul {
   &amp;:extend(.inline);
   background: blue;
@@ -476,7 +747,7 @@ height: 100% / 2 + @filler;</code></pre>
   <span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;
 <span class="rule">}</span></span></code></pre>
 <h2 id="extend-all-">Extend &quot;all&quot;</h2>
-<p>When you specify the all keyword last in an extend argument it tells Less.js to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making a new selector.</p>
+<p>When you specify the all keyword last in an extend argument it tells Less to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making a new selector.</p>
 <p>Example:</p>
 <pre><code class="language-less">.a.b.test,
 .test.c {
@@ -695,200 +966,6 @@ height: 100% / 2 + @filler;</code></pre>
 button.list-style {
   &amp;:extend(li.list &gt; a); // use the same list styles
 }</code></pre>
-
-</div>
-
-<!-- Import Directives -->
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="import-directives-feature">Import Directives</h1>
-  </div>
-  
-  <blockquote>
-<p>Import styles from other style sheets</p>
-</blockquote>
-<p>In standard CSS, <code>@import</code> at-rules must precede all other types of rules. But Less.js doesn&#39;t care where you put <code>@import</code> statements.</p>
-<p>Example:</p>
-<pre><code class="language-less">.foo {
-  background: #900;
-}
-@import &quot;this-is-valid.less&quot;;</code></pre>
-<h2 id="file-extensions">File extensions</h2>
-<p><code>@import</code> statements may be treated differently by Less.js depending on the file extension:</p>
-<ul>
-<li>If the file has a <code>.css</code> extension it will be treated as CSS and the <code>@import</code> statement left as-is (see the <a href="#inline">inline option</a> below).</li>
-<li>If it has <em>any other extension</em> it will be treated as LESS and imported.</li>
-<li>If it does not have an extension, <code>.less</code> will be appended and it will be included as a imported LESS file.</li>
-</ul>
-<p>Examples:</p>
-<pre><code class="language-less">@import &quot;foo&quot;;      // foo.less is imported
-@import &quot;foo.less&quot;; // foo.less is imported
-@import &quot;foo.php&quot;;  // foo.php imported as a less file
-@import &quot;foo.css&quot;;  // statement left in place, as-is</code></pre>
-<p>The following options can be used to override this behavior.</p>
-<h1 id="import-options">Import Options</h1>
-<blockquote>
-<p>LESS offers several extensions to the CSS <code>@import</code> CSS at-rule to provide more flexibility over what you can do with external files.</p>
-</blockquote>
-<p>Syntax: <code>@import (keyword) &quot;filename&quot;;</code></p>
-<p>The following import directives have been implemented:</p>
-<ul>
-<li><code>reference</code>: use a less file but do not output it</li>
-<li><code>inline</code>: include the source file in the output but do not process it</li>
-<li><code>less</code>: treat the file as a less file, no matter what the file extension</li>
-<li><code>css</code>: treat the file as a css file, no matter what the file extension</li>
-<li><code>once</code>: only include the file once (this is default behavior)</li>
-<li><code>multiple</code>: include the file multiple times</li>
-</ul>
-<h2 id="reference">reference</h2>
-<blockquote>
-<p>Use <code>@import (reference)</code> to import external files, but without adding the imported styles to the compiled output unless referenced.</p>
-</blockquote>
-<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.5.0</a></p>
-<p>Example: <code>@import (reference) &quot;foo.less&quot;;</code></p>
-<p><code>reference</code> is one of the most powerful features in the LESS language. Imagine that <code>reference</code> marks every directive and selector with a <em>reference flag</em> in the imported file, imports as normal, but when the CSS is generated, &quot;reference&quot; selectors (as well as any media queries containing only reference selectors) are not output. <code>reference</code> styles will not show up in your generated CSS unless the reference styles are used as [mixins][] or [extended][].</p>
-<p>Additionally, <strong><code>reference</code></strong> produces different results depending on which method was used (mixin or extend):</p>
-<ul>
-<li><strong><a href="#extend">extend</a></strong>: When a selector is extended, only the new selector is marked as <em>not referenced</em>, and it is pulled in at the position of the reference <code>@import</code> statement.</li>
-<li><strong><a href="#mixins">mixins</a></strong>: When a <code>reference</code> style is used as an [[implicit mixin|Mixins]], its rules are are mixed-in, marked &quot;not reference&quot;, and appear in the referenced place as normal.</li>
-</ul>
-<h3 id="reference-example">reference example</h3>
-<p>This allows you to pull in only specific, targeted styles from a library such as <a href="https://github.com/twbs/bootstrap">Bootstrap</a> by doing something like this:</p>
-<pre><code class="language-less">.navbar:extend(.navbar all) {}</code></pre>
-<p>And you will pull in only <code>.navbar</code> related styles from Bootstrap.</p>
-<h2 id="inline">inline</h2>
-<blockquote>
-<p>Use <code>@import (inline)</code> to include external files, but not process them.</p>
-</blockquote>
-<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.5.0</a></p>
-<p>Example: <code>@import (inline) &quot;not-less-compatible.css&quot;;</code></p>
-<p>You will use this when a CSS file may not be less compatible; this is because although less supports most known standards CSS, it does not support comments in some places and does not support all known CSS hacks without modifying the CSS.</p>
-<p>So you can use this to include the file in the output so that all CSS will be in one file.</p>
-<h2 id="less">less</h2>
-<blockquote>
-<p>Use <code>@import (less)</code> to treat imported files as LESS, regardless of file extension.</p>
-</blockquote>
-<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a></p>
-<p>Example:</p>
-<pre><code class="language-less">@import (less) &quot;foo.css&quot;;</code></pre>
-<h2 id="css">css</h2>
-<blockquote>
-<p>Use <code>@import (css)</code> to treat imported files as regular CSS, regardless of file extension. This means the import statement will be left as it is.</p>
-</blockquote>
-<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a></p>
-<p>Example:</p>
-<pre><code class="language-less">@import (css) &quot;foo.less&quot;;</code></pre>
-<p>outputs</p>
-<pre><code class="language-less">@import &quot;foo.less&quot;;</code></pre>
-<h2 id="once">once</h2>
-<blockquote>
-<p>The default behavior of <code>@import</code> statements. It means the file is imported only once and subsequent import statements for that file will be ignored.</p>
-</blockquote>
-<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a></p>
-<p>This is the default behavior of <code>@import</code> statements.</p>
-<p>Example:</p>
-<pre><code class="language-less">@import (once) &quot;foo.less&quot;;
-@import (once) &quot;foo.less&quot;; // this statement will be ignored</code></pre>
-<h2 id="multiple">multiple</h2>
-<blockquote>
-<p>Use <code>@import (multiple)</code> to allow importing of multiple files with the same name. This is the opposite behavior to once.</p>
-</blockquote>
-<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.4.0</a></p>
-<p>Example:</p>
-<pre><code class="language-less">// file: foo.less
-.a {
-  color: green;
-}
-// file: main.less
-@import (multiple) &quot;foo.less&quot;;
-@import (multiple) &quot;foo.less&quot;;</code></pre>
-<p>Outputs</p>
-<pre><code class="language-less">.a {
-  color: green;
-}
-.a {
-  color: green;
-}</code></pre>
-
-</div>
-
-<!-- Loops -->
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="loops-feature">Loops</h1>
-  </div>
-  
-  <blockquote>
-<p>Creating loops</p>
-</blockquote>
-<p>In LESS a mixin can call itself. Such recursive mixins, when combined with <a href="#">Guard Expressions</a> and <a href="#">Pattern Matching</a>, can be used to create various iterative/loop structures.</p>
-<p>Example:</p>
-<pre><code class="language-less">.loop(@counter) when (@counter &gt; 0) {
-  .loop((@counter - 1));    // next iteration
-  width: (10px * @counter); // code for each iteration
-}
-
-div {
-  .loop(5); // launch the loop
-}</code></pre>
-<p>Output:</p>
-<pre><code class="language-css"><span class="tag">div</span> <span class="rules">{
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">10</span>px</span></span>;
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">20</span>px</span></span>;
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30</span>px</span></span>;
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">40</span>px</span></span>;
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>px</span></span>;
-<span class="rule">}</span></span></code></pre>
-<p>A generic example of using a recursive loop to generate CSS grid classes:</p>
-<pre><code class="language-less">.generate-columns(4);
-
-.generate-columns(@n, @i: 1) when (@i &lt;= @n) {
-  .column-@{i} {
-    width: (@i * 100% / @n);
-  }
-  .generate-columns(@n, (@i + 1));
-}</code></pre>
-<p>Output:</p>
-<pre><code class="language-css"><span class="class">.column-1</span> <span class="rules">{
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">25</span>%</span></span>;
-<span class="rule">}</span></span>
-<span class="class">.column-2</span> <span class="rules">{
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>%</span></span>;
-<span class="rule">}</span></span>
-<span class="class">.column-3</span> <span class="rules">{
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">75</span>%</span></span>;
-<span class="rule">}</span></span>
-<span class="class">.column-4</span> <span class="rules">{
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100</span>%</span></span>;
-<span class="rule">}</span></span></code></pre>
-
-</div>
-
-<!-- Merge -->
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="merge-feature">Merge</h1>
-  </div>
-  
-  <blockquote>
-<p>Combine properties</p>
-</blockquote>
-<p>The <code>merge</code> feature allows for aggregating values from multiple properties into a comma separated list under a single property. <code>merge</code> is useful for properties such as background and transform.</p>
-<p>Released <a href="https://github.com/less/less.js/blob/master/CHANGELOG.md">v1.5.0</a></p>
-<p>Example:</p>
-<pre><code class="language-less">.mixin() {
-  box-shadow+: inset 0 0 10px #555;
-}
-.myclass {
-  .mixin();
-  box-shadow+: 0 0 20px black;
-}</code></pre>
-<p>Outputs</p>
-<pre><code class="language-css"><span class="class">.myclass</span> <span class="rules">{
-  <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> inset <span class="number">0</span> <span class="number">0</span> <span class="number">10</span>px <span class="hexcolor">#555</span>, <span class="number">0</span> <span class="number">0</span> <span class="number">20</span>px black</span></span>;
-<span class="rule">}</span></span></code></pre>
-<p>To avoid any unintentional joins, <code>merge</code> requires an explicit <code>+</code> flag on each join pending declaration.</p>
-<p><em>Note: although convention on the transform property is to have space separated, comma separation is supported which is why there is no option on this feature for whether to generate space or comma separated.</em></p>
 
 </div>
 
@@ -1185,6 +1262,163 @@ but if we call it with <em>two</em> arguments, we will get the second definition
 
 </div>
 
+<!-- Mixins as Functions -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="mixins-as-functions-feature">Mixins as Functions</h1>
+  </div>
+  
+  <blockquote>
+<p>Return variables from mixins</p>
+</blockquote>
+<p>All variables defined in a mixin are visible and can be used in caller&#39;s scope (unless the caller defines its own variable with the same name).</p>
+<p>Example:</p>
+<pre><code class="language-less">.mixin() {
+  @width:  100%;
+  @height: 200px;
+}
+
+.caller {
+  .mixin();
+  width:  @width;
+  height: @height;
+}</code></pre>
+<p>Results in:</p>
+<pre><code class="language-css"><span class="class">.caller</span> <span class="rules">{
+  <span class="rule"><span class="attribute">width</span>:<span class="value">  <span class="number">100</span>%</span></span>;
+  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">200</span>px</span></span>;
+<span class="rule">}</span></span></code></pre>
+<p>Thus variables defined in a mixin can act as its return values. This allows us to create a mixin that can be used almost like a function.</p>
+<p>Example:</p>
+<pre><code class="language-less">.average(@x, @y) {
+  @average: ((@x + @y) / 2);
+}
+
+div {
+  .average(16px, 50px); // &quot;call&quot; the mixin
+  padding: @average;    // use its &quot;return&quot; value
+}</code></pre>
+<p>Results in:</p>
+<pre><code class="language-css"><span class="tag">div</span> <span class="rules">{
+  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">33</span>px</span></span>;
+<span class="rule">}</span></span></code></pre>
+
+</div>
+
+<!-- Import Directives -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="import-directives-feature">Import Directives</h1>
+  </div>
+  
+  <blockquote>
+<p>Import styles from other style sheets</p>
+</blockquote>
+<p>In standard CSS, <code>@import</code> at-rules must precede all other types of rules. But Less.js doesn&#39;t care where you put <code>@import</code> statements.</p>
+<p>Example:</p>
+<pre><code class="language-less">.foo {
+  background: #900;
+}
+@import &quot;this-is-valid.less&quot;;</code></pre>
+<h2 id="file-extensions">File extensions</h2>
+<p><code>@import</code> statements may be treated differently by Less depending on the file extension:</p>
+<ul>
+<li>If the file has a <code>.css</code> extension it will be treated as CSS and the <code>@import</code> statement left as-is (see the <a href="#inline">inline option</a> below).</li>
+<li>If it has <em>any other extension</em> it will be treated as LESS and imported.</li>
+<li>If it does not have an extension, <code>.less</code> will be appended and it will be included as a imported LESS file.</li>
+</ul>
+<p>Examples:</p>
+<pre><code class="language-less">@import &quot;foo&quot;;      // foo.less is imported
+@import &quot;foo.less&quot;; // foo.less is imported
+@import &quot;foo.php&quot;;  // foo.php imported as a less file
+@import &quot;foo.css&quot;;  // statement left in place, as-is</code></pre>
+<p>The following options can be used to override this behavior.</p>
+<h1 id="import-options">Import Options</h1>
+<blockquote>
+<p>LESS offers several extensions to the CSS <code>@import</code> CSS at-rule to provide more flexibility over what you can do with external files.</p>
+</blockquote>
+<p>Syntax: <code>@import (keyword) &quot;filename&quot;;</code></p>
+<p>The following import directives have been implemented:</p>
+<ul>
+<li><code>reference</code>: use a less file but do not output it</li>
+<li><code>inline</code>: include the source file in the output but do not process it</li>
+<li><code>less</code>: treat the file as a less file, no matter what the file extension</li>
+<li><code>css</code>: treat the file as a css file, no matter what the file extension</li>
+<li><code>once</code>: only include the file once (this is default behavior)</li>
+<li><code>multiple</code>: include the file multiple times</li>
+</ul>
+<h2 id="reference">reference</h2>
+<blockquote>
+<p>Use <code>@import (reference)</code> to import external files, but without adding the imported styles to the compiled output unless referenced.</p>
+</blockquote>
+<p>Released <a href="/blob/master/CHANGELOG.md">v1.5.0</a></p>
+<p>Example: <code>@import (reference) &quot;foo.less&quot;;</code></p>
+<p><code>reference</code> is one of the most powerful features in the LESS language. Imagine that <code>reference</code> marks every directive and selector with a <em>reference flag</em> in the imported file, imports as normal, but when the CSS is generated, &quot;reference&quot; selectors (as well as any media queries containing only reference selectors) are not output. <code>reference</code> styles will not show up in your generated CSS unless the reference styles are used as [mixins][] or [extended][].</p>
+<p>Additionally, <strong><code>reference</code></strong> produces different results depending on which method was used (mixin or extend):</p>
+<ul>
+<li><strong><a href="#extend">extend</a></strong>: When a selector is extended, only the new selector is marked as <em>not referenced</em>, and it is pulled in at the position of the reference <code>@import</code> statement.</li>
+<li><strong><a href="#mixins">mixins</a></strong>: When a <code>reference</code> style is used as an [[implicit mixin|Mixins]], its rules are are mixed-in, marked &quot;not reference&quot;, and appear in the referenced place as normal.</li>
+</ul>
+<h3 id="reference-example">reference example</h3>
+<p>This allows you to pull in only specific, targeted styles from a library such as <a href="https://github.com/twbs/bootstrap">Bootstrap</a> by doing something like this:</p>
+<pre><code class="language-less">.navbar:extend(.navbar all) {}</code></pre>
+<p>And you will pull in only <code>.navbar</code> related styles from Bootstrap.</p>
+<h2 id="inline">inline</h2>
+<blockquote>
+<p>Use <code>@import (inline)</code> to include external files, but not process them.</p>
+</blockquote>
+<p>Released <a href="/blob/master/CHANGELOG.md">v1.5.0</a></p>
+<p>Example: <code>@import (inline) &quot;not-less-compatible.css&quot;;</code></p>
+<p>You will use this when a CSS file may not be less compatible; this is because although less supports most known standards CSS, it does not support comments in some places and does not support all known CSS hacks without modifying the CSS.</p>
+<p>So you can use this to include the file in the output so that all CSS will be in one file.</p>
+<h2 id="less">less</h2>
+<blockquote>
+<p>Use <code>@import (less)</code> to treat imported files as LESS, regardless of file extension.</p>
+</blockquote>
+<p>Released <a href="/blob/master/CHANGELOG.md">v1.4.0</a></p>
+<p>Example:</p>
+<pre><code class="language-less">@import (less) &quot;foo.css&quot;;</code></pre>
+<h2 id="css">css</h2>
+<blockquote>
+<p>Use <code>@import (css)</code> to treat imported files as regular CSS, regardless of file extension. This means the import statement will be left as it is.</p>
+</blockquote>
+<p>Released <a href="/blob/master/CHANGELOG.md">v1.4.0</a></p>
+<p>Example:</p>
+<pre><code class="language-less">@import (css) &quot;foo.less&quot;;</code></pre>
+<p>outputs</p>
+<pre><code class="language-less">@import &quot;foo.less&quot;;</code></pre>
+<h2 id="once">once</h2>
+<blockquote>
+<p>The default behavior of <code>@import</code> statements. It means the file is imported only once and subsequent import statements for that file will be ignored.</p>
+</blockquote>
+<p>Released <a href="/blob/master/CHANGELOG.md">v1.4.0</a></p>
+<p>This is the default behavior of <code>@import</code> statements.</p>
+<p>Example:</p>
+<pre><code class="language-less">@import (once) &quot;foo.less&quot;;
+@import (once) &quot;foo.less&quot;; // this statement will be ignored</code></pre>
+<h2 id="multiple">multiple</h2>
+<blockquote>
+<p>Use <code>@import (multiple)</code> to allow importing of multiple files with the same name. This is the opposite behavior to once.</p>
+</blockquote>
+<p>Released <a href="/blob/master/CHANGELOG.md">v1.4.0</a></p>
+<p>Example:</p>
+<pre><code class="language-less">// file: foo.less
+.a {
+  color: green;
+}
+// file: main.less
+@import (multiple) &quot;foo.less&quot;;
+@import (multiple) &quot;foo.less&quot;;</code></pre>
+<p>Outputs</p>
+<pre><code class="language-less">.a {
+  color: green;
+}
+.a {
+  color: green;
+}</code></pre>
+
+</div>
+
 <!-- Mixin Guards -->
 <div class="docs-section">
   <div class="page-header">
@@ -1290,46 +1524,83 @@ but if we call it with <em>two</em> arguments, we will get the second definition
 
 </div>
 
-<!-- Mixins as Functions -->
+<!-- Loops -->
 <div class="docs-section">
   <div class="page-header">
-    <h1 id="mixins-as-functions-feature">Mixins as Functions</h1>
+    <h1 id="loops-feature">Loops</h1>
   </div>
   
   <blockquote>
-<p>Return variables from mixins</p>
+<p>Creating loops</p>
 </blockquote>
-<p>All variables defined in a mixin are visible and can be used in caller&#39;s scope (unless the caller defines its own variable with the same name).</p>
+<p>In LESS a mixin can call itself. Such recursive mixins, when combined with <a href="#">Guard Expressions</a> and <a href="#">Pattern Matching</a>, can be used to create various iterative/loop structures.</p>
 <p>Example:</p>
-<pre><code class="language-less">.mixin() {
-  @width:  100%;
-  @height: 200px;
-}
-
-.caller {
-  .mixin();
-  width:  @width;
-  height: @height;
-}</code></pre>
-<p>Results in:</p>
-<pre><code class="language-css"><span class="class">.caller</span> <span class="rules">{
-  <span class="rule"><span class="attribute">width</span>:<span class="value">  <span class="number">100</span>%</span></span>;
-  <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">200</span>px</span></span>;
-<span class="rule">}</span></span></code></pre>
-<p>Thus variables defined in a mixin can act as its return values. This allows us to create a mixin that can be used almost like a function.</p>
-<p>Example:</p>
-<pre><code class="language-less">.average(@x, @y) {
-  @average: ((@x + @y) / 2);
+<pre><code class="language-less">.loop(@counter) when (@counter &gt; 0) {
+  .loop((@counter - 1));    // next iteration
+  width: (10px * @counter); // code for each iteration
 }
 
 div {
-  .average(16px, 50px); // &quot;call&quot; the mixin
-  padding: @average;    // use its &quot;return&quot; value
+  .loop(5); // launch the loop
 }</code></pre>
-<p>Results in:</p>
+<p>Output:</p>
 <pre><code class="language-css"><span class="tag">div</span> <span class="rules">{
-  <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">33</span>px</span></span>;
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">10</span>px</span></span>;
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">20</span>px</span></span>;
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">30</span>px</span></span>;
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">40</span>px</span></span>;
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>px</span></span>;
 <span class="rule">}</span></span></code></pre>
+<p>A generic example of using a recursive loop to generate CSS grid classes:</p>
+<pre><code class="language-less">.generate-columns(4);
+
+.generate-columns(@n, @i: 1) when (@i &lt;= @n) {
+  .column-@{i} {
+    width: (@i * 100% / @n);
+  }
+  .generate-columns(@n, (@i + 1));
+}</code></pre>
+<p>Output:</p>
+<pre><code class="language-css"><span class="class">.column-1</span> <span class="rules">{
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">25</span>%</span></span>;
+<span class="rule">}</span></span>
+<span class="class">.column-2</span> <span class="rules">{
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>%</span></span>;
+<span class="rule">}</span></span>
+<span class="class">.column-3</span> <span class="rules">{
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">75</span>%</span></span>;
+<span class="rule">}</span></span>
+<span class="class">.column-4</span> <span class="rules">{
+  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100</span>%</span></span>;
+<span class="rule">}</span></span></code></pre>
+
+</div>
+
+<!-- Merge -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="merge-feature">Merge</h1>
+  </div>
+  
+  <blockquote>
+<p>Combine properties</p>
+</blockquote>
+<p>The <code>merge</code> feature allows for aggregating values from multiple properties into a comma separated list under a single property. <code>merge</code> is useful for properties such as background and transform.</p>
+<p>Released <a href="/blob/master/CHANGELOG.md">v1.5.0</a></p>
+<p>Example:</p>
+<pre><code class="language-less">.mixin() {
+  box-shadow+: inset 0 0 10px #555;
+}
+.myclass {
+  .mixin();
+  box-shadow+: 0 0 20px black;
+}</code></pre>
+<p>Outputs</p>
+<pre><code class="language-css"><span class="class">.myclass</span> <span class="rules">{
+  <span class="rule"><span class="attribute">box-shadow</span>:<span class="value"> inset <span class="number">0</span> <span class="number">0</span> <span class="number">10</span>px <span class="hexcolor">#555</span>, <span class="number">0</span> <span class="number">0</span> <span class="number">20</span>px black</span></span>;
+<span class="rule">}</span></span></code></pre>
+<p>To avoid any unintentional joins, <code>merge</code> requires an explicit <code>+</code> flag on each join pending declaration.</p>
+<p><em>Note: although convention on the transform property is to have space separated, comma separation is supported which is why there is no option on this feature for whether to generate space or comma separated.</em></p>
 
 </div>
 
@@ -1362,157 +1633,6 @@ div {
 
 </div>
 
-<!-- Variables -->
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="variables-feature">Variables</h1>
-  </div>
-  
-  <blockquote>
-<p>Control commonly used values in a single location.</p>
-</blockquote>
-<p>It&#39;s not uncommon to see the same value repeated dozens <em>if not hundreds of times</em> across your stylesheets:</p>
-<pre><code class="language-css"><span class="tag">a</span>,
-<span class="class">.link</span> <span class="rules">{
-  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#428bca</span></span></span>;
-<span class="rule">}</span></span>
-<span class="class">.widget</span> <span class="rules">{
-  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;
-  <span class="rule"><span class="attribute">background</span>:<span class="value"> <span class="hexcolor">#428bca</span></span></span>;
-<span class="rule">}</span></span></code></pre>
-<p>Variables make your code easier to maintain by giving you a way to control those values from a single location:</p>
-<pre><code class="language-less">// Variables
-@link-color:        #428bca; // sea blue
-@link-color-hover:  (@link-color, 10%);
-
-// Usage
-a,
-.link {
-  color: @link-color;
-}
-a:hover {
-  color: @link-color-hover;
-}
-.widget {
-  color: #fff;
-  background: @link-color;
-}</code></pre>
-<h2 id="variable-interpolation">Variable Interpolation</h2>
-<p>The examples above focused on using variables to control <em>values in CSS rules</em>, but they can also be used in other places as well, such as selector names, property names, URLs and <code>@import</code> statements.</p>
-<h3 id="selectors">Selectors</h3>
-<p>Version: 1.4.0</p>
-<pre><code class="language-less">// Variables
-@mySelector: banner;
-
-// Usage
-.@{mySelector} {
-  font-weight: bold;
-  line-height: 40px;
-  margin: 0 auto;
-}</code></pre>
-<p>Compiles to:</p>
-<pre><code class="language-css"><span class="class">.banner</span> <span class="rules">{
-  <span class="rule"><span class="attribute">font-weight</span>:<span class="value"> bold</span></span>;
-  <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">40</span>px</span></span>;
-  <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> auto</span></span>;
-<span class="rule">}</span></span></code></pre>
-<h3 id="urls">URLs</h3>
-<pre><code class="language-less">// Variables
-@images: &quot;../img&quot;;
-
-// Usage
-body {
-  color: #444;
-  background: url(&quot;@{images}}/white-sand.png&quot;);
-}</code></pre>
-<h3 id="-import-statements-limited-support-"><code>@import</code> statements (limited support)</h3>
-<p>Version: 1.4.0</p>
-<p>Syntax: <code>@import &quot;@{themes}/tidal-wave.less&quot;;</code></p>
-<p>Note that currently, only variables which have been declared in the root or current scope will be considered and that only the current file and calling files will be considered when looking for a variable.
-This means that this usage is typically limited to when you an inject a variable into the compile process or define a variable at the beginning of your root file.</p>
-<p>When you are importing a css file and not using the inline option (e.g. the import statement will be kept intact) then the above does not apply.</p>
-<p>Example:</p>
-<pre><code class="language-less">// Variables
-@themes: &quot;../../src/themes&quot;;
-
-// Usage
-@import &quot;@{themes}/tidal-wave.less&quot;;</code></pre>
-<h3 id="properties">Properties</h3>
-<p>Version: ?.?.?</p>
-<pre><code class="language-less">@property: color;
-
-.widget {
-  @{property}: #0ee;
-  background-@{property}: #999;
-}</code></pre>
-<p>Compiles to:</p>
-<pre><code class="language-css"><span class="class">.widget</span> <span class="rules">{
-  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#0ee</span></span></span>;
-  <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#999</span></span></span>;
-<span class="rule">}</span></span></code></pre>
-<h2 id="variable-names">Variable Names</h2>
-<p>It is also possible to define variables with a variable name:</p>
-<pre><code class="language-less">@fnord:  &quot;I am fnord.&quot;;
-@var:    &quot;fnord&quot;;
-content: @@var;</code></pre>
-<p>Which compiles to:</p>
-<pre><code>content: &quot;I am fnord.&quot;;</code></pre>
-<h2 id="lazy-loading">Lazy Loading</h2>
-<blockquote>
-<p>Variables are lazy loaded and do not have to be declared before being used.</p>
-</blockquote>
-<p>Valid LESS snippet:</p>
-<pre><code class="language-less">.lazy-eval {
-  width: @var;
-}
-
-@var: @a;
-@a: 9%;</code></pre>
-<p>this is valid LESS too:</p>
-<pre><code class="language-less">.lazy-eval-scope {
-  width: @var;
-  @a: 9%;
-}
-
-@var: @a;
-@a: 100%;</code></pre>
-<p>both compile into:</p>
-<pre><code class="language-css"><span class="class">.lazy-eval-scope</span> <span class="rules">{
-  <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">9</span>%</span></span>;
-<span class="rule">}</span></span></code></pre>
-<p>When defining a variable twice, the last definition of the variable is used, searching from the current scope upwards. This is similar to css itself where the last property inside a definition is used to determine the value.</p>
-<p>For instance:</p>
-<pre><code class="language-less">@var: 0;
-.class1 {
-  @var: 1;
-  .class {
-    @var: 2;
-    three: @var;
-    @var: 3;
-  }
-  one: @var;
-}</code></pre>
-<p>Compiles to:</p>
-<pre><code class="language-css"><span class="class">.class1</span> <span class="class">.class</span> <span class="rules">{
-  <span class="rule"><span class="attribute">three</span>:<span class="value"> <span class="number">3</span></span></span>;
-<span class="rule">}</span></span>
-<span class="class">.class</span> <span class="rules">{
-  <span class="rule"><span class="attribute">one</span>:<span class="value"> <span class="number">1</span></span></span>;
-<span class="rule">}</span></span></code></pre>
-<h2 id="default-variables">default variables</h2>
-<p>We sometimes get requests for default variables - an ability to set a variable only if it is not already set. This feature is not required because you can easily override a variable by putting the definition afterwards.</p>
-<p>For instance:</p>
-<pre><code class="language-less">// library
-@base-color: green;
-@dark-color: darken(@base-color, 10%);
-
-// use of library
-@import &quot;library.less&quot;;
-@base-color: red;</code></pre>
-<p>This works fine - base-color is overidden and dark-color is a dark red.</p>
-
-</div>
-
 
         </div>
       </div>
@@ -1535,15 +1655,17 @@ content: @@var;</code></pre>
     <p><a href="https://github.com/less/less.js">Less.js</a> was created by <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
     <p>Documentation source code released under the <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
     <ul class="footer-links">
-      <li>Currently v1.6.0</li>
+      <li>Currently v1.6.1</li>
+      <!--li class="muted">&middot;</li>
+      <li><a href="">Blog</a></li-->
       <li class="muted">&middot;</li>
-      <li><a href="">Blog</a></li>
+      <li><a href="https://github.com/less/less.js.git/issues?state=open">Less.js Issues</a></li>
       <li class="muted">&middot;</li>
-      <li><a href="https://github.com/less/less-docs.git/issues?state=open">Issues</a></li>
+      <li><a href="https://github.com/less/less-docs.git/issues?state=open">Less Docs Issues</a></li>
       <li class="muted">&middot;</li>
-      <li><a href="https://github.com/less/less-docs.git/blob/master/CHANGELOG.md">Changelog</a></li>
-      <li class="muted">&middot;</li>
-      <li><a href="https://github.com/less/less-docs.git/releases">Releases</a></li>
+      <li><a href="https://github.com/less/less.js.git/blob/master/CHANGELOG.md">Changelog</a></li>
+      <!--li class="muted">&middot;</li>
+      <li><a href="https://github.com/less/less-docs.git/releases">Releases</a></li-->
     </ul>
   </div>
 </footer>

@@ -26,9 +26,8 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 
-<!-- Favicons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="assets/ico/favicon.png">
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="assets/favicon.ico">
 
 
 
@@ -95,7 +94,7 @@
     <!-- Callout for the old docs link -->
     <div class="banner">
   <div class="container">
-    less v1.6.0 has been released - 
+    less v1.6.1 has been released - 
     <strong>
       <a href="https://github.com/less/less-docs.git/blob/master/CHANGELOG.md">See what's new</a>
     </strong>
@@ -114,7 +113,7 @@
   <a href="#getting-started">Getting Started</a>
 </li>
 <li>
-  <a href="https://github.com/less/less.js" target="_blank">Source on GitHub <span class="glyphicon glyphicon-new-window"></span></a>
+  <a href="https://github.com/less/less.js.git" target="_blank">Source on GitHub <span class="glyphicon glyphicon-new-window"></span></a>
 </li>
 <li>
   <a href="http://less2css.org/" target="_blank">Try it now! <span class="glyphicon glyphicon-new-window"></span></a>
@@ -255,7 +254,7 @@ parser.parse(<span class="string">'.class { width: (1 + 1) }'</span>, <span clas
 <li>When you link more than one <code>.less</code> stylesheet each of them is compiled independently. So any variables, mixins or namespaces you define in a stylesheet are not accessible in any other.</li>
 </ul>
 <h2 id="browser-options">Browser Options</h2>
-<p>Options are defined by setting them on a global LESS object <strong>before</strong> the <code>&lt;script src=&quot;less.js&quot;&gt;&lt;/script&gt;</code>:</p>
+<p>Options are defined by setting them on a global <code>less</code> object <strong>before</strong> the <code>&lt;script src=&quot;less.js&quot;&gt;&lt;/script&gt;</code>:</p>
 <pre><code class="language-html">&lt;!-- set options before less.js script --&gt;
 &lt;script&gt;
   less = {
@@ -272,7 +271,7 @@ parser.parse(<span class="string">'.class { width: (1 + 1) }'</span>, <span clas
 &lt;script src=&quot;less.js&quot;&gt;&lt;/script&gt;</code></pre>
 
   <h3 id="browser-downloads">Browser downloads</h3>
-  <p><a class="btn btn-lg btn-primary" href="https://raw.github.com/less/less.js/master/dist/less-.min.js" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" role="button">Download Less.js v1.6.0</a></p>
+  <p><a class="btn btn-lg btn-primary" href="https://raw.github.com/less/less.js/master/dist/less-.min.js" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" role="button">Download Less.js v1.6.1</a></p>
   <div class="docs-dl-options">
     <h4>
       <a href="/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);">Download source code</a>
@@ -356,15 +355,17 @@ parser.parse(<span class="string">'.class { width: (1 + 1) }'</span>, <span clas
     <p><a href="https://github.com/less/less.js">Less.js</a> was created by <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
     <p>Documentation source code released under the <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
     <ul class="footer-links">
-      <li>Currently v1.6.0</li>
+      <li>Currently v1.6.1</li>
+      <!--li class="muted">&middot;</li>
+      <li><a href="">Blog</a></li-->
       <li class="muted">&middot;</li>
-      <li><a href="">Blog</a></li>
+      <li><a href="https://github.com/less/less.js.git/issues?state=open">Less.js Issues</a></li>
       <li class="muted">&middot;</li>
-      <li><a href="https://github.com/less/less-docs.git/issues?state=open">Issues</a></li>
+      <li><a href="https://github.com/less/less-docs.git/issues?state=open">Less Docs Issues</a></li>
       <li class="muted">&middot;</li>
-      <li><a href="https://github.com/less/less-docs.git/blob/master/CHANGELOG.md">Changelog</a></li>
-      <li class="muted">&middot;</li>
-      <li><a href="https://github.com/less/less-docs.git/releases">Releases</a></li>
+      <li><a href="https://github.com/less/less.js.git/blob/master/CHANGELOG.md">Changelog</a></li>
+      <!--li class="muted">&middot;</li>
+      <li><a href="https://github.com/less/less-docs.git/releases">Releases</a></li-->
     </ul>
   </div>
 </footer>

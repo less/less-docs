@@ -26,9 +26,8 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 
-<!-- Favicons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="assets/ico/favicon.png">
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="assets/favicon.ico">
 
 
 
@@ -95,7 +94,7 @@
     <!-- Callout for the old docs link -->
     <div class="banner">
   <div class="container">
-    less v1.6.0 has been released - 
+    less v1.6.1 has been released - 
     <strong>
       <a href="https://github.com/less/less-docs.git/blob/master/CHANGELOG.md">See what's new</a>
     </strong>
@@ -130,9 +129,10 @@
 </li>
 <li>
   <a href="#options">Options</a>
-  <!--ul class="nav">
-    <li><a href="#escape">Node</a></li>
-  </ul-->
+  <ul class="nav">
+    <li><a href="#command-line-usage">Command line usage</a></li>
+    <li><a href="#client-side-usage">Client side usage</a></li>
+  </ul>
 </li>
 <li>
   <a href="#sourcemaps">Sourcemaps</a>
@@ -418,61 +418,76 @@ Download the <a href="http://wro4j.googlecode.com/files/wro4j-runner-1.4.1-jar-w
 
 <div class="docs-section">
   <h1 id="options">Options</h1>
-  <h1 id="command-line-usage">Command Line Usage</h1>
+  <h2 id="command-line-usage">Command Line Usage</h2>
 <blockquote>
 <p>Compile <code>.less</code> files to <code>.css</code> using the command line</p>
 </blockquote>
 <p><span class="warning">Heads up! If the command line isn&#39;t your thing, learn more about <a href="#">GUI compilers for LESS</a>.</span></p>
-<h2 id="lessc">lessc</h2>
+<h3 id="lessc">lessc</h3>
 <blockquote>
 <p>Server-Side and Command Line Usage</p>
 </blockquote>
 <p>The binary included in this repository, <code>bin/lessc</code> works with <a href="http://nodejs.org/">Node.js</a> on *nix, OSX and Windows.</p>
 <p><strong>Usage</strong>: <code>lessc [option option=parameter ...] &lt;source&gt; [destination]</code></p>
 <h3 id="options">Options</h3>
-<pre><code>-h, --help               Print help (this message) and exit.
---include-path=PATHS     Set include paths. Separated by `:&#39;. Use `;&#39; on Windows.
--M, --depends            Output a makefile import dependency list to stdout
---no-color               Disable colorized output.
---no-ie-compat           Disable IE compatibility checks.
---no-js                  Disable JavaScript in less files
--l, --lint               Syntax check only (lint).
--s, --silent             Suppress output of error messages.
---strict-imports         Force evaluation of imports.
---insecure               Allow imports from insecure https hosts.
--v, --version            Print version number and exit.
--x, --compress           Compress output by removing some whitespaces.
---clean-css              Compress output using clean-css
---clean-option=opt:val   Pass an option to clean css, using CLI arguments from
-                         https://github.com/GoalSmashers/clean-css e.g.
-                         --clean-option=--selectors-merge-mode:ie8
-                         and to switch on advanced use --clean-option=--advanced
---source-map[=FILENAME]  Outputs a v3 sourcemap to the filename (or output filename.map)
---source-map-rootpath=X  adds this path onto the sourcemap filename and less file paths
---source-map-basepath=X  Sets sourcemap base path, defaults to current working directory.
---source-map-less-inline puts the less files into the map instead of referencing them
---source-map-map-inline  puts the map (and any less files) into the output css file
---source-map-url=URL     the complete url and filename put in the less file
--rp, --rootpath=URL      Set rootpath for url rewriting in relative imports and urls.
-                         Works with or without the relative-urls option.
--ru, --relative-urls     re-write relative urls to the base less file.
--sm=on|off               Turn on or off strict math, where in strict mode, math
---strict-math=on|off     requires brackets. This option may default to on and then
-                         be removed in the future.
--su=on|off               Allow mixed units, e.g. 1px+1em or 1px*1px which have units
---strict-units=on|off    that cannot be represented.
---global-var=&#39;VAR=VALUE&#39; Defines a variable that can be referenced by the file.
---modify-var=&#39;VAR=VALUE&#39; Modifies a variable already declared in the file.</code></pre>
+<pre><code>usage: lessc [option option=parameter ...] &lt;source&gt; [destination]
+
+If source is set to `-&#39; (dash or hyphen-minus), input is read from stdin.
+
+options:
+  -h, --help               Print help (this message) and exit.
+  --include-path=PATHS     Set include paths. Separated by `:&#39;. Use `;&#39; on Windows.
+  -M, --depends            Output a makefile import dependency list to stdout
+  --no-color               Disable colorized output.
+  --no-ie-compat           Disable IE compatibility checks.
+  --no-js                  Disable JavaScript in less files
+  -l, --lint               Syntax check only (lint).
+  -s, --silent             Suppress output of error messages.
+  --strict-imports         Force evaluation of imports.
+  --insecure               Allow imports from insecure https hosts.
+  -v, --version            Print version number and exit.
+  -x, --compress           Compress output by removing some whitespaces.
+  --clean-css              Compress output using clean-css
+  --clean-option=opt:val   Pass an option to clean css, using CLI arguments from
+                           https://github.com/GoalSmashers/clean-css e.g.
+                           --clean-option=--selectors-merge-mode:ie8
+                           and to switch on advanced use --clean-option=--advanced
+  --source-map[=FILENAME]  Outputs a v3 sourcemap to the filename (or output filename.map)
+  --source-map-rootpath=X  adds this path onto the sourcemap filename and less file paths
+  --source-map-basepath=X  Sets sourcemap base path, defaults to current working directory.
+  --source-map-less-inline puts the less files into the map instead of referencing them
+  --source-map-map-inline  puts the map (and any less files) into the output css file
+  --source-map-url=URL     the complete url and filename put in the less file
+  -rp, --rootpath=URL      Set rootpath for url rewriting in relative imports and urls.
+                           Works with or without the relative-urls option.
+  -ru, --relative-urls     re-write relative urls to the base less file.
+  -sm=on|off               Turn on or off strict math, where in strict mode, math
+  --strict-math=on|off     requires brackets. This option may default to on and then
+                           be removed in the future.
+  -su=on|off               Allow mixed units, e.g. 1px+1em or 1px*1px which have units
+  --strict-units=on|off    that cannot be represented.
+  --global-var=&#39;VAR=VALUE&#39; Defines a variable that can be referenced by the file.
+  --modify-var=&#39;VAR=VALUE&#39; Modifies a variable already declared in the file.
+
+-------------------------- Deprecated ----------------
+  -O0, -O1, -O2            Set the parser&#39;s optimization level. The lower
+                           the number, the less nodes it will create in the
+                           tree. This could matter for debugging, or if you
+                           want to access the individual nodes in the tree.
+  --line-numbers=TYPE      Outputs filename and line numbers.
+                           TYPE can be either &#39;comments&#39;, which will output
+                           the debug info within comments, &#39;mediaquery&#39;
+                           that will output the information within a fake
+                           media query which is compatible with the SASS
+                           format, and &#39;all&#39; which will do both.
+  --verbose                Be verbose.</code></pre>
 <h3 id="examples">Examples</h3>
 <pre><code class="language-bash"><span class="comment"># compile bootstrap.less to bootstrap.css</span>
 $ lessc bootstrap.less bootstrap.css
 
 <span class="comment"># compile bootstrap.less to bootstrap.css and minify (compress) the result</span>
 $ lessc -x bootstrap.less bootstrap.css</code></pre>
-<h2 id="less-js">less.js</h2>
-<blockquote>
-<p>Client-side Usage</p>
-</blockquote>
+<h2 id="client-side-usage">Client-side Usage</h2>
 <p>Set options in a global <code>less</code> object <strong>before</strong> loading the less.js script:</p>
 <pre><code class="language-html">&lt;!-- set options before less.js script --&gt;
 &lt;script&gt;
@@ -489,7 +504,7 @@ $ lessc -x bootstrap.less bootstrap.css</code></pre>
   };
 &lt;/script&gt;
 &lt;script src=&quot;less.js&quot;&gt;&lt;/script&gt;</code></pre>
-<h3 id="env">env</h3>
+<h4 id="env">env</h4>
 <p>Type: <code>String</code>
 Default: <code>development</code></p>
 <p>Environment to run may be either <code>development</code> or <code>production</code>. If the document&#39;s URL starts with <code>file://</code> or <code>localhost</code> it will automatically be set to <code>development</code>.</p>
@@ -500,35 +515,35 @@ Default: 2</p>
 <pre><code class="language-bash"><span class="number">2</span> - Information and errors
 <span class="number">1</span> - Errors
 <span class="number">0</span> - Nothing</code></pre>
-<h3 id="async">async</h3>
+<h4 id="async">async</h4>
 <p>Type: <code>Boolean</code>
 Default: <code>false</code></p>
 <p>Load imports asynchronously.</p>
-<h3 id="fileasync">fileAsync</h3>
+<h4 id="fileasync">fileAsync</h4>
 <p>Type: <code>Boolean</code>
 Default: <code>false</code></p>
 <p>Load imports asynchronously when in a page under a file protocol.</p>
-<h3 id="poll">poll</h3>
+<h4 id="poll">poll</h4>
 <p>Type: <code>Integer</code>
 Default: <code>1000</code></p>
 <p>The amount of time (in milliseconds) between polls while in watch mode.</p>
-<h3 id="functions">functions</h3>
+<h4 id="functions">functions</h4>
 <p>Type: <code>object</code></p>
 <p>User functions, keyed by name.</p>
-<h3 id="dumplinenumbers">dumpLineNumbers</h3>
+<h4 id="dumplinenumbers">dumpLineNumbers</h4>
 <p>Type: <code>String</code>
 Options: <code>comments</code>|<code>mediaQuery</code>|<code>all</code>
 Default: <code>comments</code></p>
 <p><strong>TODO</strong>: need more explanation here.</p>
-<h3 id="relativeurls">relativeUrls</h3>
+<h4 id="relativeurls">relativeUrls</h4>
 <p>Type: <code>Boolean</code>
 Default: <code>false</code></p>
 <p>Optionally adjust URLs to be relative. When false, URLs are already relative to the entry less file.</p>
-<h3 id="rootpath">rootpath</h3>
+<h4 id="rootpath">rootpath</h4>
 <p>Type: <code>String</code>
 Default: <code>false</code></p>
 <p>A path to add on to the start of every URL resource.</p>
-<h3 id="errorreporting">errorReporting</h3>
+<h4 id="errorreporting">errorReporting</h4>
 <p>Type: <code>String</code>
 Options: <code>html</code>|<code>console</code>|<code>function</code>
 Default: <code>html</code></p>
@@ -538,8 +553,7 @@ Default: <code>html</code></p>
 
 <div class="docs-section">
   <h1 id="sourcemaps">Sourcemaps</h1>
-  <h1 id="sourcemaps">Sourcemaps</h1>
-<blockquote>
+  <blockquote>
 <p>TODO</p>
 </blockquote>
 
@@ -547,8 +561,7 @@ Default: <code>html</code></p>
 
 <div class="docs-section">
   <h1 id="plugins">Plugins</h1>
-  <h1 id="plugins">Plugins</h1>
-<blockquote>
+  <blockquote>
 <p>TODO</p>
 </blockquote>
 
@@ -556,23 +569,24 @@ Default: <code>html</code></p>
 
 <div class="docs-section">
   <h1 id="developing-less">Developing Less.js</h1>
-  <h2 id="install-these-tools">Install these tools</h2>
+  <h2 id="contributing">Contributing</h2>
+<p>Thanks for thinking about contributing. Please read the <a href="https://github.com/less/less.js.git/blob/master/CONTRIBUTING.md">contributing instructions</a> carefully to avoid wasted work.</p>
+<h2 id="install-these-tools">Install these tools</h2>
 <ul>
-<li><strong>cygwin</strong> (ensure make is selected) - <a href="http://cygwin.com/install.html">http://cygwin.com/install.html</a></li>
 <li><strong>node</strong> - <a href="http://nodejs.org/">http://nodejs.org/</a></li>
 <li><strong>phantomjs</strong> - <a href="http://phantomjs.org/download.html">http://phantomjs.org/download.html</a></li>
 </ul>
-<p>make sure the paths are setup. If you startup cygwin and type <code>node -v</code> you should see the node compiler. If you run <code>phantomjs -v</code> you should see the phantomjs version number.</p>
+<p>make sure the paths are setup. If you start your favourite command line and type <code>node -v</code> you should see the node compiler. If you run <code>phantomjs -v</code> you should see the phantomjs version number.</p>
 <ul>
 <li>clone your less.js repository locally</li>
 <li>navigate to your local less.js repository and run <code>npm install</code> this installs less&#39; npm dependencies.</li>
-<li>run <code>npm -g install uglify-js</code> if you want to do builds. This needs to be done so that uglify-js is available globally.</li>
+<li>If you haven&#39;t used grunt before, run <code>npm install grunt-cli -g</code> - this allows you to use the &quot;grunt&quot; command anywhere</li>
 </ul>
 <h2 id="usage">Usage</h2>
-<p>If you go to the root of the less repository you should be able to do <code>make test</code> - this should run the tests. <code>make browser-test</code> should run the browser tests. If you want to try out the current version of less against a file, from here do <code>node bin/lessc path/to/file.less</code></p>
-<p>To debug the browser tests, run <code>make browser-test-server</code> then go to <a href="http://localhost:8081/browser/test-runner-main.htm">http://localhost:8081/browser/test-runner-main.htm</a> or one of the other test runner pages created in <code>{path-to-less.js-repository}/test/browser/</code></p>
+<p>If you go to the root of the less repository you should be able to do <code>grunt test</code> - this should run all the tests. For the browser specific only, run <code>grunt browsertest</code> If you want to try out the current version of less against a file, from here do <code>node bin/lessc path/to/file.less</code></p>
+<p>To debug the browser tests, run <code>grunt browsertest-server</code> then go to <a href="http://localhost:8088/tmp/browser/">http://localhost:8088/tmp/browser/</a> to see the test runner pages.</p>
 <p>Optional: To get the current version of the less compiler do <code>npm -g install less</code> - npm is the node package manager and &quot;-g&quot; installs it to be available globally.</p>
-<p>You should now be able to do <code>lessc file.less</code> and if there is an appropriate file.less then it will be compiled and output in the current directory.</p>
+<p>You should now be able to do <code>lessc file.less</code> and if there is an appropriate file.less then it will be compiled and output to the stdout. You can then compare it to running locallay (node bin/lessc).</p>
 
 </div>
 
@@ -597,15 +611,17 @@ Default: <code>html</code></p>
     <p><a href="https://github.com/less/less.js">Less.js</a> was created by <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
     <p>Documentation source code released under the <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
     <ul class="footer-links">
-      <li>Currently v1.6.0</li>
+      <li>Currently v1.6.1</li>
+      <!--li class="muted">&middot;</li>
+      <li><a href="">Blog</a></li-->
       <li class="muted">&middot;</li>
-      <li><a href="">Blog</a></li>
+      <li><a href="https://github.com/less/less.js.git/issues?state=open">Less.js Issues</a></li>
       <li class="muted">&middot;</li>
-      <li><a href="https://github.com/less/less-docs.git/issues?state=open">Issues</a></li>
+      <li><a href="https://github.com/less/less-docs.git/issues?state=open">Less Docs Issues</a></li>
       <li class="muted">&middot;</li>
-      <li><a href="https://github.com/less/less-docs.git/blob/master/CHANGELOG.md">Changelog</a></li>
-      <li class="muted">&middot;</li>
-      <li><a href="https://github.com/less/less-docs.git/releases">Releases</a></li>
+      <li><a href="https://github.com/less/less.js.git/blob/master/CHANGELOG.md">Changelog</a></li>
+      <!--li class="muted">&middot;</li>
+      <li><a href="https://github.com/less/less-docs.git/releases">Releases</a></li-->
     </ul>
   </div>
 </footer>
