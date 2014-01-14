@@ -76,9 +76,9 @@ Also, please ensure that all documentation files should have globally-unique nam
 
 ### Feature Requests, Bugs and Pull Requests
 
-* If you would like to request a feature, suggest an improvement, or report a bug, please [submit an Issue](https://github.com/cloudhead/less.js/issues?state=open).
+* If you would like to request a feature, suggest an improvement, or report a bug, please [submit an Issue](https://github.com/less/less.js/issues?state=open).
 * Feature requests are more likely to get attention if you include a clearly described use case.
-* If you wish to submit a pull request, please [read this first](https://github.com/cloudhead/less.js/blob/master/CONTRIBUTING).md.
+* If you wish to submit a pull request, please [read this first](https://github.com/less/less.js/blob/master/CONTRIBUTING).md.
 
 ## Tools
 

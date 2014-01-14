@@ -48,6 +48,7 @@ download:
   latest:          https://raw.github.com/less/less.js/master/dist/less-<%= less.version %>.min.js
 coderepo:          <%= pkg.coderepository.url %>
 codeissues:        <%= pkg.codebugs.url %>?&state=open
+codebasemaster:    <%= pkg.codebasemaster.url %>
 
 cdn:
   cloudflare:      //cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js

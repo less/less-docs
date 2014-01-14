@@ -1,6 +1,6 @@
 > Extend is a LESS Pseudo-Class which merges the selector it is put on with ones that match what it references.
 
-Released [v1.4.0]({{ site.coderepo }}/blob/master/CHANGELOG.md)
+Released [v1.4.0]({{ site.codebasemaster }}CHANGELOG.md)
 
 ```less
 nav ul {

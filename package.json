@@ -27,6 +27,9 @@
   "codebugs": {
     "url": "https://github.com/less/less.js/issues"
   },
+  "codebasemaster": {
+    "url": "https://github.com/less/less.js/blob/master/"
+  },
   "licenses": [
     {
       "type": "MIT",
