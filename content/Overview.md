@@ -149,7 +149,8 @@ Using them is pretty straightforward. The following example uses percentage to c
 
 ### Namespaces & Accessors
 
-Sometimes, you may want to group your variables or mixins, for organizational purposes, or just to offer some encapsulation. You can do this pretty intuitively in LESS—say you want to bundle some mixins and variables under `#bundle`, for later reuse or distributing:
+(Not to be confused with [CSS `@namespace`s](http://www.w3.org/TR/css3-namespace/)).
+Sometimes, you may want to group your variables or mixins, for organizational purposes, or just to offer some encapsulation. You can do this pretty intuitively in LESS, say you want to bundle some mixins and variables under `#bundle`, for later reuse or distributing:
 
 ```less
 #bundle {
