@@ -73,7 +73,7 @@ Compiles to:
 // Usage
 body {
   color: #444;
-  background: url("@{images}}/white-sand.png");
+  background: url("@{images}/white-sand.png");
 }
 ```
 
