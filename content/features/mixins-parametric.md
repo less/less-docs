@@ -5,43 +5,41 @@ Mixins can also take arguments, which are variables pass to the block of selecto
 For example:
 
 ```less
-.border-radius(@radius) {
-  -webkit-border-radius: @radius;
-     -moz-border-radius: @radius;
-          border-radius: @radius;
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+          box-shadow: @shadow;
 }
 ```
 
 And here's how we can mix it into various rulesets:
 
 ```less
-#header {
-  .border-radius(4px);
+#box {
+  .box-shadow(4px 4px 4px #000);
 }
 .button {
-  .border-radius(6px);
+  .box-shadow(4px 4px 4px hsla(40, 40%, 40%, .5));
 }
 ```
 
 Parametric mixins can also have default values for their parameters:
 
 ```less
-.border-radius(@radius: 5px) {
-  -webkit-border-radius: @radius;
-     -moz-border-radius: @radius;
-          border-radius: @radius;
+.box-shadow(@shadow: 0 2px 4px 4px rgba(0, 0, 0, 0.5)) {
+  -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+          box-shadow: @shadow;
 }
 ```
 
 We can invoke it like this now:
 
 ```less
-#header {
-  .border-radius;
+#box {
+  .box-shadow;
 }
 ```
 
-And it will include a 5px border-radius.
+And it will give the box a rather large semitransparent black shadow.
 
 You can also use parametric mixins which don't take parameters. This is useful if you want to hide the ruleset from the CSS output, but want to include its properties in other rulesets:
 
@@ -145,8 +143,7 @@ compiles into:
 
 ```less
 .box-shadow(@x: 0; @y: 0; @blur: 1px; @color: #000) {
-  -webkit-box-shadow: @arguments;
-     -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments; // iOS <4.3 & Android <4.1
           box-shadow: @arguments;
 }
 .big-block {
@@ -159,7 +156,6 @@ Which results in:
 ```css
 .big-block {
   -webkit-box-shadow: 2px 5px 1px #000;
-     -moz-box-shadow: 2px 5px 1px #000;
           box-shadow: 2px 5px 1px #000;
 }
 ```
