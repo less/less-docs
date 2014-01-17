@@ -6,10 +6,12 @@
 var path = require('path');
 
 // node_modules
+var cwd = require('cwd');
 var grunt = require('grunt');
+var _ = require('lodash');
 
 // Config
-var cwd = path.join.bind(null, __dirname, '../');
+cwd = path.join.bind(null, cwd, 'data');
 
 var githubApi = require('github');
 var github = new githubApi({
@@ -37,10 +39,15 @@ var getPackageFile = function (dest, callback) {
         text: b.toString()
       };
       var contents = JSON.parse(pkg.text, 'utf-8');
+      contents = _.extend({
+        repo: "https://github.com/less/less.js.git",
+        issues: "https://github.com/less/less.js/issues",
+        master: "https://github.com/less/less.js/blob/master/"
+      }, contents);
       grunt.log.ok('Saved:'.yellow, dest);
       grunt.file.write(dest, JSON.stringify(contents, null, 2));
     }
   });
 };
 
-getPackageFile(path.join(process.cwd(), 'data/less.json'));
+getPackageFile(cwd('less.json'));

@@ -20,16 +20,6 @@
   "bugs": {
     "url": "https://github.com/less/less-docs/issues"
   },
-  "coderepository": {
-    "type": "git",
-    "url": "https://github.com/less/less.js.git"
-  },
-  "codebugs": {
-    "url": "https://github.com/less/less.js/issues"
-  },
-  "codebasemaster": {
-    "url": "https://github.com/less/less.js/blob/master/"
-  },
   "licenses": [
     {
       "type": "MIT",
@@ -43,16 +33,19 @@
   "main": "Gruntfile.js",
   "devDependencies": {
     "assemble-contrib-permalinks": "~0.2.0",
-    "assemble-less": "~0.5.3",
-    "grunt": "~0.4.1",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-jshint": "~0.7.2",
-    "grunt-contrib-copy": "~0.4.1",
-    "grunt-repos": "~0.1.2",
+    "assemble-less": "~0.7.0",
+    "cwd": "~0.1.1",
     "github": "~0.1.12",
-    "require": "~0.5.0"
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-repos": "~0.1.2",
+    "handlebars-helper-rel": "~0.1.0",
+    "lodash": "~2.4.1"
   },
   "keywords": [
+    "handlebars-helper-rel",
     "less css",
     "less",
     "less.js",

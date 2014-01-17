@@ -17,7 +17,6 @@ module.exports = function(grunt) {
     pkg : grunt.file.readJSON('package.json'),
     site: grunt.file.readYAML('_config.yml'),
 
-
     jshint: {
       options: {jshintrc: '.jshintrc'},
       all: [

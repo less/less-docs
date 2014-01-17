@@ -35,20 +35,12 @@ description: >
   LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions.
   LESS runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
 
-# Documentation License
-license:
-  type:            <%= pkg.licenses[0].type %>
-  url:             <%= pkg.licenses[0].url %>
-
 # URLs
 repo:              <%= pkg.repository.url %>
 issues:            <%= pkg.bugs.url %>?&state=open
 download:
   source:          <%= pkg.homepages %>/archive/master.zip
   latest:          https://raw.github.com/less/less.js/master/dist/less-<%= less.version %>.min.js
-coderepo:          <%= pkg.coderepository.url %>
-codeissues:        <%= pkg.codebugs.url %>?&state=open
-codebasemaster:    <%= pkg.codebasemaster.url %>
 
 cdn:
   cloudflare:      //cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js

@@ -2,19 +2,23 @@
   <div class="container">
     {{> social-buttons }}
     <p><a href="https://github.com/less/less.js">Less.js</a> was created by <a href="https://github.com/cloudhead" target="_blank">Alexis Sellier</a>, aka <a href="http://twitter.com/cloudhead" target="_blank">@cloudhead</a>.</p>
-    <p>Documentation source code released under the <a href="{{site.license.url}}" target="_blank">{{site.license.type}}</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+    <p>Documentation source code released under the <a href="https://github.com/less/less-docs/blob/master/LICENSE-MIT" target="_blank">MIT License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
     <ul class="footer-links">
       <li>Currently v{{ less.version }}</li>
-      <!--li class="muted">&middot;</li>
-      <li><a href="{{ site.blog }}">Blog</a></li-->
+      {{#is links.blog true}}
       <li class="muted">&middot;</li>
-      <li><a href="{{ site.codeissues }}">Less.js Issues</a></li>
+      <li><a href="{{ site.blog }}">Blog</a></li>
+      {{/is}}
+      <li class="muted">&middot;</li>
+      <li><a href="{{ less.issues }}">Less.js Issues</a></li>
       <li class="muted">&middot;</li>
       <li><a href="{{ site.issues }}">Less Docs Issues</a></li>
       <li class="muted">&middot;</li>
-      <li><a href="{{ site.codebasemaster }}CHANGELOG.md">Changelog</a></li>
-      <!--li class="muted">&middot;</li>
-      <li><a href="{{ site.coderepo }}/releases">Releases</a></li-->
+      <li><a href="{{ less.master }}/CHANGELOG.md">Changelog</a></li>
+      {{#is links.releases true}}
+      <li class="muted">&middot;</li>
+      <li><a href="{{ less.master }}/dist/">Releases</a>Blog</a></li>
+      {{/is}}
     </ul>
   </div>
 </footer>
