@@ -27,36 +27,7 @@
         <div class="col-md-3">
           <div class="sidebar hidden-print" role="complementary">
             <ul class="nav sidenav">
-              {{#is slug "index" }}
-                {{> nav-getting-started }}
-              {{/is}}
-              {{#is slug "features" }}
-                {{> nav-features }}
-              {{/is}}
-              {{#is slug "functions" }}
-                {{> nav-functions }}
-              {{/is}}
-              {{#is slug "usage" }}
-                {{> nav-usage }}
-              {{/is}}
-              {{#is slug "cheatsheet" }}
-                {{> nav-cheatsheet }}
-              {{/is}}
-              {{#is slug "css" }}
-                {{> nav-css }}
-              {{/is}}
-              {{#is slug "components" }}
-                {{> nav-components }}
-              {{/is}}
-              {{#is slug "customize" }}
-                {{> nav-customize }}
-              {{/is}}
-              {{#is slug "blog" }}
-                {{> nav-blog }}
-              {{/is}}
-              {{#is slug "about" }}
-                {{> nav-about }}
-              {{/is}}
+              {{sidenav this}}
             </ul>
           </div>
         </div>

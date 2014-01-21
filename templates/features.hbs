@@ -1,8 +1,8 @@
 ---
-layout: default.hbs
 title: Language Features
+lead: Features of the Less language
 slug: features
-lead: "Features of the Less language"
+sidenav: nav-<%= slug %>
 ---
 
 {{#each features.sections}}
@@ -10,8 +10,12 @@ lead: "Features of the Less language"
 <div class="docs-section">
   <div class="page-header">
     <h1 id="{{@key}}-feature">{{title}}</h1>
+    {{#if lead}}
+      <p class="lead">{{lead}}</p>
+    {{/if}}
   </div>
-  {{#if lead}} <p class="lead">{{lead}}</p> {{/if}}
-  {{md content}}
+  <div class="section-content">
+    {{md content}}
+  </div>
 </div>
 {{/each}}
