@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <link type="application/atom+xml" href="http://lesscss.org/feed/" rel="self"/>
+  <link href="{{site.homepage}}/atom.xml" rel="self"/>
+  <link href="{{site.homepage}}/"/>
+  <title>{{site.title}}</title>
+  <updated>{{datetime}}</updated>
+  <id>{{site.homepage}}</id>
+  <author>
+    <name>{{less.author.name}}</name>
+    <email>{{less.author.email}}</email>
+  </author>
+  <rights>Copyright (c) 2009-{{now '%Y'}}, {{less.author.name}}. All rights reserved.</rights>
+
+  {{#feed src="templates/*.hbs"}}
+  <entry>
+    <title>{{@title}}</title>
+    <link href="{{site.homepage}}/{{@slug}}/"/>
+    <updated>{{@date}}</updated>
+    <id>{{site.homepage}}/{{@slug}}</id>
+    <content type="html">{{!@content}}</content>
+  </entry>
+  {{/feed}}
+</feed>
