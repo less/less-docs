@@ -1,5 +1,5 @@
 ---
-title: Third party compilers
+title: Third-party compilers
 ---
 
 ## Node.js compilers

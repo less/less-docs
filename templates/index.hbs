@@ -11,8 +11,10 @@ sidenav: nav-getting-started
   <div class="page-header">
     <h1 id="getting-started">Getting Started</h1>
   </div>
-  {{md 'content/home/getting-started.md'}}
+  {{md 'getting-started'}}
 </div>
+
+
 
 <!-- Usage
 ================================================== -->
@@ -20,7 +22,9 @@ sidenav: nav-getting-started
   <div class="page-header">
     <h1 id="using-less">Using Less</h1>
   </div>
-  {{md 'content/home/using.md'}}
+  {{md 'using-less'}}
+
+
   <h3 id="browser-downloads">Browser downloads</h3>
   <p><a class="btn btn-lg btn-primary" href="{{ site.download.latest }}" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" role="button">Download Less.js v{{less.version}}</a></p>
   <div class="docs-dl-options">
@@ -29,7 +33,7 @@ sidenav: nav-getting-started
     </h4>
     <p>Get the latest Less.js source code by downloading it directly from GitHub.</p>
     <h4>
-      <a href="{{less.repo}}" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'GitHub project']);">Clone or fork via GitHub</a>
+      <a href="{{ less.repo }}" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'GitHub project']);">Clone or fork via GitHub</a>
     </h4>
     <h4>
       Install with <a href="http://bower.io">Bower</a>
@@ -42,51 +46,53 @@ bower install less
 {{/markdown}}
   </div>
   <h3 id="download-cdn">Less CDN</h3>
-  <p>TODO <a href="{{site.cdn.cloudflare}}">CDN</a>.</p>
+  <p>TODO <a href="{{ site.cdn.cloudflare }}">CDN</a>.</p>
 {{#markdown}}
 ```html
 <script src="{{ site.cdn.cloudflare }}"></script>
 ```
 {{/markdown}}
-</div>
+</div><!-- /usage -->
 
-  <!-- License FAQs
-  ================================================== -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="license-faqs">License FAQs</h1>
+
+
+<!-- License FAQs
+================================================== -->
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="license-faqs">License FAQs</h1>
+  </div>
+  <p class="lead">Less.js is released under the Apache 2 License (<a href="https://github.com/less/less.js/issues/1029">though there are plans to dual license it</a>). Copyright 2009-{{ now "%Y" }}, Alexis Sellier and the Less Core Team (see about). Boiled down to smaller chunks, it can be described with the following conditions.</p>
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <h4>It allows you to:</h4>
+      <ul>
+        <li>Freely download and use Less.js, in whole or in part, for personal, company internal or commercial purposes</li>
+        <li>Use Less.js in packages or distributions that you create</li>
+      </ul>
     </div>
-    <p class="lead">Less.js is released under the Apache 2 License (<a href="https://github.com/less/less.js/issues/1029">though there are plans to dual license it</a>). Copyright 2009-{{ now "%Y" }}, Alexis Sellier and the Less Core Team (see about). Boiled down to smaller chunks, it can be described with the following conditions.</p>
-    <div class="row">
-      <div class="col-12 col-lg-6">
-        <h4>It allows you to:</h4>
-        <ul>
-          <li>Freely download and use Less.js, in whole or in part, for personal, company internal or commercial purposes</li>
-          <li>Use Less.js in packages or distributions that you create</li>
-        </ul>
-      </div>
-      <div class="col-12 col-lg-6">
-        <h4>It forbids you to:</h4>
-        <ul>
-          <li>Redistribute any piece of Less.js without proper attribution</li>
-        </ul>
-      </div>
+    <div class="col-12 col-lg-6">
+      <h4>It forbids you to:</h4>
+      <ul>
+        <li>Redistribute any piece of Less.js without proper attribution</li>
+      </ul>
     </div>
-    <div class="row">
-      <div class="col-12 col-lg-6">
-        <h4>It requires you to:</h4>
-        <ul>
-          <li>Include a copy of the license in any redistribution you may make that includes Less.js</li>
-          <li>Provide clear attribution to The Less Core Team for any distributions that include Less.js</li>
-        </ul>
-      </div>
-      <div class="col-12 col-lg-6">
-        <h4>It does not require you to:</h4>
-        <ul>
-          <li>Include the source of Less.js itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it</li>
-          <li>Submit changes that you make to Less.js back to the Less.js project (though such feedback is encouraged)</li>
-        </ul>
-      </div>
+  </div>
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <h4>It requires you to:</h4>
+      <ul>
+        <li>Include a copy of the license in any redistribution you may make that includes Less.js</li>
+        <li>Provide clear attribution to The Less Core Team for any distributions that include Less.js</li>
+      </ul>
     </div>
-    <p>The full Less.js license is located <a href="{{ less.master }}LICENSE">in the project repository</a> for more information.</p>
-  </div><!-- /.docs-section -->
+    <div class="col-12 col-lg-6">
+      <h4>It does not require you to:</h4>
+      <ul>
+        <li>Include the source of Less.js itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it</li>
+        <li>Submit changes that you make to Less.js back to the Less.js project (though such feedback is encouraged)</li>
+      </ul>
+    </div>
+  </div>
+  <p>The full Less.js license is located <a href="{{ less.master }}LICENSE">in the project repository</a> for more information.</p>
+</div><!-- /license-faqs -->

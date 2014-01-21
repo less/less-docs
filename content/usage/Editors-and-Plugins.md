@@ -2,7 +2,7 @@
 title: Editors and plugins
 ---
 
-Also see: [[GUI Compilers that use LESS.js]]
+Also see: [GUIs for LESS.js](usage/#guis-for-less)
 
 ## Editors and IDEs
 
@@ -16,25 +16,30 @@ Also see: [[GUI Compilers that use LESS.js]]
 * [CodeLobster][codelobster] (built-in [syntax highlighting][codelobster-sh])
 * [KineticWing IDE][kineticwing] (built-in [support][kineticwing-less])
 
-#### [Sublime Text 2 & 3](http://sublimetext.com/)
+### [Sublime Text 2 & 3](http://sublimetext.com/)
+
 * [LESS-sublime][LESS-sublime]
 * [Sublime-LESS-to-CSS][Sublime-LESS-to-CSS]
 * [LESS-build-sublime][LESS-build-sublime]
 * [SublimeOnSaveBuild][SublimeOnSaveBuild]
 
-#### [Eclipse](http://www.eclipse.org/)
+### [Eclipse](http://www.eclipse.org/)
+
 * [Plugin](http://www.normalesup.org/~simonet/soft/ow/eclipse-less.en.html) by Vincent Simonet
 
-#### [Visual Studio](http://www.visualstudio.com/)
+### [Visual Studio](http://www.visualstudio.com/)
+
 * [CSS Is Less][CSSisLESS] (Visual Studio)
 * [Web Essentials 2012][webessentials12] (Visual Studio 2012)
 * [Web Essentials 2013][webessentials13] (Visual Studio 2013)
 * [Web Tools 2013][mswebtools] (Visual Studio)
 
-#### [Dreamweaver](http://www.adobe.com/products/dreamweaver.html)
+### [Dreamweaver](http://www.adobe.com/products/dreamweaver.html)
+
 * [DMXzone LESS CSS Compiler][dmx]
 
-#### [Notepad++ 6.x][Npp]
+### [Notepad++ 6.x][Npp]
+
 * [Less.js Syntax Highlighting][Npp-Less-Salitrero] User Defined Language by Raúl Salitrero
 * [Less.js Syntax Highlighting][Npp-Less-azrafe7] User Defined Language by azrafe7
 * [How to Install][Npp-How-to]

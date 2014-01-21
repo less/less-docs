@@ -6,7 +6,7 @@ Less is a CSS pre-processor, meaning that it extends the CSS language, adding fe
 
 Less runs inside Node, in the browser and inside Rhino. There are also many 3rd party tools that allow you to compile your files and watch for changes.
 
-For example.
+For example:
 
 ```less
 @base: #f938ab;

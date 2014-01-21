@@ -1,6 +1,6 @@
 /**
- * Handlebars Helpers: {{rel}}
- * Copyright (c) 2013 Jon Schlinkert
+ * Handlebars Helpers: {{sidenav}}
+ * Copyright (c) 2014 Jon Schlinkert
  * Licensed under the MIT License (MIT).
  */
 'use strict';

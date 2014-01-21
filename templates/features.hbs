@@ -5,17 +5,14 @@ slug: features
 sidenav: nav-<%= slug %>
 ---
 
-{{#each features.sections}}
-<!-- {{title}} -->
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="{{@key}}-feature">{{title}}</h1>
-    {{#if lead}}
-      <p class="lead">{{lead}}</p>
-    {{/if}}
+{{#each features.published}}
+  <!-- {{title}} -->
+  <div class="docs-section">
+    <div class="page-header">
+      <h1 id="{{@key}}-feature">{{title}}</h1>
+    </div>
+    <div class="section-content">
+      {{md @key}}
+    </div>
   </div>
-  <div class="section-content">
-    {{md content}}
-  </div>
-</div>
 {{/each}}

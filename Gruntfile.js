@@ -156,8 +156,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sync-pkg');
 
   grunt.registerTask('update', ['repos', 'default']);
-  grunt.registerTask('design', ['clean', 'less:site', 'assemble', 'connect', 'watch']);
+  grunt.registerTask('design', ['clean', 'less:site', 'assemble:site', 'connect', 'watch']);
 
   // Default tasks to be run.
-  grunt.registerTask('default', ['clean', 'copy', 'jshint', 'less:site', 'assemble']);
+  grunt.registerTask('default', ['clean', 'copy', 'jshint', 'less:site', 'assemble:site']);
 };

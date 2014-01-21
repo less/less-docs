@@ -1,5 +1,5 @@
 ---
-title: Frameworks that use LESS.js
+title: Frameworks that use Less.js
 ---
 
 * [Bootstrap, from Twitter](http://twitter.github.com/bootstrap/)
