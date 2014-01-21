@@ -1,4 +1,9 @@
-As an extension to CSS, LESS is not only backwards compatible with CSS, but the extra features it adds use existing CSS syntax. This makes learning LESS a breeze, and if in doubt, lets you fall back to CSS.
+---
+title: Features Overview
+---
+
+> As an extension to CSS, LESS is not only backwards compatible with CSS, but the extra features it adds use existing CSS syntax. This makes learning LESS a breeze, and if in doubt, lets you fall back to vanilla CSS.
+
 
 ### Variables
 
@@ -51,10 +56,10 @@ And we want to use these properties inside other rule-sets. Well, we just have t
 
 The properties of the `.bordered` class will now appear in both `#menu a` and `.post a`. (Note that you can also use `#ids` as mixins.)
 
-
 **Learn more**
-  * [[More about mixins|mixins]]
-  * [[Parametric Mixins|parametric-mixins]]
+
+* [More about mixins](features/#mixins)
+* [Parametric Mixins](features/#parametric-mixins)
 
 
 ### Nested rules
@@ -149,7 +154,7 @@ Using them is pretty straightforward. The following example uses percentage to c
 
 ### Namespaces & Accessors
 
-(Not to be confused with [CSS `@namespace`s](http://www.w3.org/TR/css3-namespace/)).
+(Not to be confused with [CSS `@namespace`](http://www.w3.org/TR/css3-namespace/)).
 Sometimes, you may want to group your variables or mixins, for organizational purposes, or just to offer some encapsulation. You can do this pretty intuitively in LESS, say you want to bundle some mixins and variables under `#bundle`, for later reuse or distributing:
 
 ```less
@@ -194,18 +199,19 @@ Note that the order of declaration **does** matter.
 }
 ```
 
+
 ### Comments
 
-Both C-style and inline comments may be used:
+Both block-style and inline comments may be used:
 
 ```less
-/* One hell of a comment */
+/* One hell of a block
+style comment! */
 @var: red;
 
 // Get in line!
 @var: white;
 ```
-
 
 ### Importing
 
