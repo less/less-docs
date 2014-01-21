@@ -1,0 +1,7 @@
+{
+  "name": "less-docs",
+  "version": "0.1.2",
+  "main": [
+    "Gruntfile.js"
+  ]
+}

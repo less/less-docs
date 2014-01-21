@@ -23,6 +23,7 @@ All documentation content can be found in the `./content` directory. Please read
 3. Organize information and favor individual files for sections of content, rather than long documents
 4. Last, a new theme.
 
+
 ## Contributing
 ### Coding Style
 > Please help us make the documentation _consistent, readable, and maintainable_ by conforming to these guidelines when contributing:
