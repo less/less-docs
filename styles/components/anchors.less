@@ -1,0 +1,40 @@
+//
+// Anchors
+// --------------------------------------------------
+// Anchors show upon hovering over a heading
+
+
+// Base class
+.anchor {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  display: block;
+  font-size: 18px;
+  color: @gray-dark;
+  padding: 10px;
+  line-height: 1.25;
+  margin: 0 0 -5px -33px;
+  cursor: pointer;
+}
+
+.anchor-target {
+  /*margin-top: -100px;*/
+}
+
+.anchor .glyphicon {
+  display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+  &:hover .anchor {
+    text-decoration: none;
+
+    .glyphicon {
+      color: @link-color;
+      display: inline-block;
+    }
+  }
+}
