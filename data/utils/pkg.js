@@ -6,12 +6,11 @@
 var path = require('path');
 
 // node_modules
-var cwd = require('cwd');
 var grunt = require('grunt');
 var _ = require('lodash');
 
 // Config
-cwd = path.join.bind(null, cwd, 'data');
+var cwd = path.join.bind(null, __dirname, '../');
 
 var githubApi = require('github');
 var github = new githubApi({
@@ -39,12 +38,10 @@ var getPackageFile = function (dest, callback) {
         text: b.toString()
       };
       var contents = JSON.parse(pkg.text, 'utf-8');
-      contents = _.extend({
-        repo: "https://github.com/less/less.js.git",
-        issues: "https://github.com/less/less.js/issues",
-        master: "https://github.com/less/less.js/blob/master/"
-      }, contents);
       grunt.log.ok('Saved:'.yellow, dest);
+
+      // Extend package.json with custom properties
+      contents = _.extend(contents, require('./extend-pkg'));
       grunt.file.write(dest, JSON.stringify(contents, null, 2));
     }
   });
