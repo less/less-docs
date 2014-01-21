@@ -1,10 +1,3 @@
-
-<!--
-{{#each features.sections}}
-<li><a href="#{{@key}}-feature">{{title}}</a></li>
-{{/each}}
--->
-
 <li>
   <a href="#features-overview-feature">Overview</a>
   <ul class="nav">
@@ -26,14 +19,14 @@
     <li><a href="#variables-feature">Overview</a></li>
     <li>
       <a href="#variable-interpolation">Interpolation</a>
-      <!--
+      {{!--
       <ul class="nav">
         <li><a href="#selectors">Selectors</a></li>
         <li><a href="#urls">URLs</a></li>
         <li><a href="#import-statements">Import statements</a></li>
         <li><a href="#properties">Properties</a></li>
       </ul>
-      -->
+      --}}
     </li>
     <li><a href="#variable-names">Variable Names</a></li>
     <li><a href="#lazy-loading">Lazy Loading</a></li>
@@ -55,11 +48,11 @@
     <li><a href="#scoping-extend-inside-media">Scoping / Extend Inside @media</a></li>
     <li><a href="#duplication-detection">Duplication Detection</a></li>
     <li><a href="#use-cases-for-extend">Use Cases</a></li>
-      <!--
+      {{!--
       <li><a href="#classic-use-case">Classic Use Case</a></li>
       <li><a href="#reducing-css-size">Reducing CSS Size</a></li>
       <li><a href="#combining-styles-a-more-advanced-mixin">Combining Styles</a></li>
-      -->
+      --}}
   </ul>
 </li>
 
@@ -76,7 +69,7 @@
       <li><a href="#named-parameters">Named parameters</a></li>
       <li><a href="#the-arguments-variable">The <code>@arguments</code> variable</a></li>
       <li><a href="#advanced-arguments-and-the-rest-variable">Advanced arguments and the <code>@rest</code> variable</a></li>
-    <li><a href="#pattern-matching">Pattern-matching</a></li> <!-- TODO: move this to "Conditional Structures" section below -->
+    <li><a href="#pattern-matching">Pattern-matching</a></li> {{!-- TODO: move this to "Conditional Structures" section below --}}
     <li><a href="#mixins-as-functions-feature">Mixins as functions</a></li>
   </ul>
 </li>
@@ -98,13 +91,13 @@
 
 <li>
   <a href="#mixin-guards-feature">Control Structures</a>
-  <!-- ^ or simply "Conditional and Iterative Structures", I'd prefer to use more formal "programing language like" title here but my opinion is obioulsy biased -->
+  {{!-- ^ or simply "Conditional and Iterative Structures", I'd prefer to use more formal "programing language like" title here but my opinion is obioulsy biased --}}
   <ul class="nav">
     <li><a href="#mixin-guards-feature">Mixin Guards</a></li>
-      <!--
+      {{!--
       <li><a href="#guard-comparison-operators">Guard comparison operators</a></li>
       <li><a href="#type-checking-functions">Type checking functions</a></li>
-      <li><a href="#conditional-mixins">Conditional mixins</a></li>--><!-- "Guard keywords"?-->
+      <li><a href="#conditional-mixins">Conditional mixins</a></li>--}}{{!-- "Guard keywords"?--}}
     <li><a href="#css-guards-feature">CSS Guards</a></li>
     <li><a href="#loops-feature">Loops</a></li>
   </ul>
@@ -115,11 +108,6 @@
   <ul class="nav">
     <li><a href="#merge-feature">Merge</a></li>
     <li><a href="#parent-selectors-feature">Parent Selectors</a></li>
-    <!-- TODO: there's also "Advanced Usage of &" in nested.md (not published),
-              I guess eventualy we'll create a dedicated "&" section.-->
+    {{!-- TODO: there's also "Advanced Usage of &" in nested.md (not published), I guess eventualy we'll create a dedicated "&" section.--}}
   </ul>
 </li>
-
-<!--
-
--->

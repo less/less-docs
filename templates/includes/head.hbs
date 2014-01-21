@@ -1,12 +1,11 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="{{site.description}}">
+<meta name="description" content="{{default description site.description}}">
 <meta name="author" content="Alexis Sellier">
-<!--link rel="alternate" type="application/atom+xml" title="{{default title 'Less'}} Feed" href="/index.xml"-->
 
 <title>
-  {{default title 'Less'}} | {{site.title}}
+  {{default title (titleize basename)}} | {{site.title}}
 </title>
 
 <!-- Main styles -->
@@ -22,8 +21,8 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 
-  <!-- Favicons -->
-  <link rel="shortcut icon" href="{{ assets }}/favicon.ico">
+<!-- Favicons -->
+<link rel="shortcut icon" href="{{ assets }}/favicon.ico">
 
 {{#if site.analytics.google}}
 <!-- Google Analytics -->
