@@ -1,46 +1,145 @@
 ---
-layout: default.hbs
 title: Usage
 slug: usage
+sidenav: nav-<%= slug %>
 lead: "How to use less server-side, client-side and with third parties."
 ---
 
 <!-- Usage
-================================================== -->
-
+=================================== -->
 <div class="docs-section">
   <h1 id="using-less-environments">Using Less</h1>
   <p class="lead">Using less in node, browser and third party. For general installation instructions and an overview, please read the <a href="index.html#using-less">Using Less</a> section on our front page.</p>
-  {{md 'content/usage/using-node.md'}}
-  {{md 'content/usage/using-browser.md'}}
-  {{md 'content/usage/browser-support.md'}}
-  {{md 'content/usage/online-less-compilers.md'}}
-  {{md 'content/usage/guis-for-less.md'}}
-  {{md 'content/usage/editors-and-plugins.md'}}
-  {{md 'content/usage/different-compilers.md'}}
 </div>
 
-<div class="docs-section">
-  <h1 id="frameworks-using-less">Frameworks using Less</h1>
-  {{md 'content/usage/frameworks-using-less.md'}}
-</div>
 
-<div class="docs-section">
-  <h1 id="options">Options</h1>
-  {{md 'content/usage/options.md'}}
-</div>
+{{#compose src="usage/using-node.md"}}
+  <div class="docs-section">
+    <div class="page-header">
+      <h2 id="{{slugify @basename}}">{{{@title}}}</h2>
+      {{#if @subtitle}} <p class="subtitle">{{{@subtitle}}}</p> {{/if}}
+    </div>
+    {{{@content}}}
+  </div>
+{{/compose}}
 
-<div class="docs-section">
-  <h1 id="sourcemaps">Sourcemaps</h1>
-  {{md 'content/usage/sourcemaps.md'}}
-</div>
 
-<div class="docs-section">
-  <h1 id="plugins">Plugins</h1>
-  {{md 'content/usage/plugins.md'}}
-</div>
+{{#compose src="usage/using-browser.md"}}
+  <div class="docs-section">
+    <div class="page-header">
+      <h2 id="{{slugify @basename}}">{{{@title}}}</h2>
+      {{#if @subtitle}} <p class="subtitle">{{{@subtitle}}}</p> {{/if}}
+    </div>
+    {{{@content}}}
+  </div>
+{{/compose}}
 
-<div class="docs-section">
-  <h1 id="developing-less">Developing Less.js</h1>
-  {{md 'content/usage/developing-less.js.md'}}
-</div>
+
+{{#compose src="usage/browser-support.md"}}
+  <div class="docs-section">
+    <div class="page-header">
+      <h2 id="{{slugify @basename}}">{{{@title}}}</h2>
+      {{#if @subtitle}} <p class="subtitle">{{{@subtitle}}}</p> {{/if}}
+    </div>
+    {{{@content}}}
+  </div>
+{{/compose}}
+
+
+{{#compose src="usage/online-less-compilers.md"}}
+  <div class="docs-section">
+    <div class="page-header">
+      <h2 id="{{slugify @basename}}">{{{@title}}}</h2>
+      {{#if @subtitle}} <p class="subtitle">{{{@subtitle}}}</p> {{/if}}
+    </div>
+    {{{@content}}}
+  </div>
+{{/compose}}
+
+
+{{#compose src="usage/guis-for-less.md"}}
+  <div class="docs-section">
+    <div class="page-header">
+      <h2 id="{{slugify @basename}}">{{{@title}}}</h2>
+      {{#if @subtitle}} <p class="subtitle">{{{@subtitle}}}</p> {{/if}}
+    </div>
+    {{{@content}}}
+  </div>
+{{/compose}}
+
+
+{{#compose src="usage/editors-and-plugins.md"}}
+  <div class="docs-section">
+    <div class="page-header">
+      <h2 id="{{slugify @basename}}">{{{@title}}}</h2>
+      {{#if @subtitle}} <p class="subtitle">{{{@subtitle}}}</p> {{/if}}
+    </div>
+    {{{@content}}}
+  </div>
+{{/compose}}
+
+
+{{#compose src="usage/different-compilers.md"}}
+  <div class="docs-section">
+    <div class="page-header">
+      <h2 id="{{slugify @basename}}">{{{@title}}}</h2>
+      {{#if @subtitle}} <p class="subtitle">{{{@subtitle}}}</p> {{/if}}
+    </div>
+    {{{@content}}}
+  </div>
+{{/compose}}
+
+
+{{#compose src="usage/frameworks-using-less.md"}}
+  <div class="docs-section">
+    <div class="page-header">
+      <h2 id="{{slugify @basename}}">{{{@title}}}</h2>
+      {{#if @subtitle}} <p class="subtitle">{{{@subtitle}}}</p> {{/if}}
+    </div>
+    {{{@content}}}
+  </div>
+{{/compose}}
+
+
+{{#compose src="usage/options.md"}}
+  <div class="docs-section">
+    <div class="page-header">
+      <h2 id="{{slugify @basename}}">{{{@title}}}</h2>
+      {{#if @subtitle}} <p class="subtitle">{{{@subtitle}}}</p> {{/if}}
+    </div>
+    {{{@content}}}
+  </div>
+{{/compose}}
+
+
+{{#compose src="usage/sourcemaps.md"}}
+  <div class="docs-section">
+    <div class="page-header">
+      <h2 id="{{slugify @basename}}">{{{@title}}}</h2>
+      {{#if @subtitle}} <p class="subtitle">{{{@subtitle}}}</p> {{/if}}
+    </div>
+    {{{@content}}}
+  </div>
+{{/compose}}
+
+
+{{#compose src="usage/plugins.md"}}
+  <div class="docs-section">
+    <div class="page-header">
+      <h2 id="{{slugify @basename}}">{{{@title}}}</h2>
+      {{#if @subtitle}} <p class="subtitle">{{{@subtitle}}}</p> {{/if}}
+    </div>
+    {{{@content}}}
+  </div>
+{{/compose}}
+
+
+{{#compose src="usage/developing-less.js.md"}}
+  <div class="docs-section">
+    <div class="page-header">
+      <h2 id="{{slugify @basename}}">{{{@title}}}</h2>
+      {{#if @subtitle}} <p class="subtitle">{{{@subtitle}}}</p> {{/if}}
+    </div>
+    {{{@content}}}
+  </div>
+{{/compose}}
