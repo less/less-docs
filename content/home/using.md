@@ -1,6 +1,9 @@
-Less can be used on the command line via npm, downloaded as a script file for the browser or used in a wide variety of third party tools. See the [Usage](usage.html) section for more detailed information.
+---
+title: Server-side usage
+---
 
-# Server-side usage
+> Less can be used on the command line via npm, downloaded as a script file for the browser or used in a wide variety of third party tools. See the [Usage](usage.html) section for more
+detailed information.
 
 ## Installation
 

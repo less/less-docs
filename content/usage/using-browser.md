@@ -1,16 +1,18 @@
-## Using Less in the Browser
+---
+title: Using Less in the Browser
+---
+
 ### Watch mode
-To enable Watch mode, option `env` must be set to `development`. Then AFTER the less.js file is included, call less.watch(), like this:
+To enable Watch mode, option `env` must be set to `development`. Then AFTER the less.js file is included, call `less.watch()`, like this:
 
 ```html
 <script src="less.js"></script>
-<script>less.watch()</script>
+<script>less.watch();</script>
 ```
 
 Alternatively you can temporary enable Watch mode by appending `#!watch` to the URL.
 
 ### Modify variables
-
 Enables modification of LESS variables in run-time. When called with new values, the LESS file is recompiled without reloading. Simple basic usage:
 
 ```js

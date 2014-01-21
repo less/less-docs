@@ -1,4 +1,6 @@
-## Command Line Usage
+---
+title: Command Line Usage
+---
 
 > Compile `.less` files to `.css` using the command line
 
