@@ -1,10 +1,12 @@
-## Command Line Usage
+---
+title: Command Line Usage
+---
 
 > Compile `.less` files to `.css` using the command line
 
 <span class="warning">Heads up! If the command line isn't your thing, learn more about [GUI compilers for LESS](#).</span>
 
-### lessc
+## lessc
 
 > Server-Side and Command Line Usage
 
@@ -13,6 +15,8 @@ The binary included in this repository, `bin/lessc` works with [Node.js](http://
 **Usage**: `lessc [option option=parameter ...] <source> [destination]`
 
 ### Options
+
+{{! Can we get rid of this block and just use the well-formatted definitions/sections below? }}
 
 ```
 usage: lessc [option option=parameter ...] <source> [destination]
@@ -78,9 +82,11 @@ $ lessc bootstrap.less bootstrap.css
 $ lessc -x bootstrap.less bootstrap.css
 ```
 
+
 ## Client-side Usage
 
 Set options in a global `less` object **before** loading the less.js script:
+
 ``` html
 <!-- set options before less.js script -->
 <script>
@@ -99,14 +105,16 @@ Set options in a global `less` object **before** loading the less.js script:
 <script src="less.js"></script>
 ```
 
-#### env
+### env
 Type: `String`
+
 Default: `development`
 
 Environment to run may be either `development` or `production`. If the document's URL starts with `file://` or `localhost` it will automatically be set to `development`.
 
-#### logLevel
+### logLevel
 Type: `Number`
+
 Default: 2
 
 The amount of logging in the javascript console.
@@ -117,51 +125,61 @@ The amount of logging in the javascript console.
 0 - Nothing
 ```
 
-#### async
+### async
 Type: `Boolean`
+
 Default: `false`
 
 Load imports asynchronously.
 
-#### fileAsync
+### fileAsync
 Type: `Boolean`
+
 Default: `false`
 
 Load imports asynchronously when in a page under a file protocol.
 
-#### poll
+### poll
 Type: `Integer`
+
 Default: `1000`
 
 The amount of time (in milliseconds) between polls while in watch mode.
 
-#### functions
+### functions
 Type: `object`
+
 
 User functions, keyed by name.
 
-#### dumpLineNumbers
+### dumpLineNumbers
 Type: `String`
+
 Options: `comments`|`mediaQuery`|`all`
+
 Default: `comments`
 
 **TODO**: need more explanation here.
 
-#### relativeUrls
+### relativeUrls
 Type: `Boolean`
+
 Default: `false`
 
 Optionally adjust URLs to be relative. When false, URLs are already relative to the entry less file.
 
-#### rootpath
+### rootpath
 Type: `String`
+
 Default: `false`
 
 A path to add on to the start of every URL resource.
 
-#### errorReporting
+### errorReporting
 Type: `String`
+
 Options: `html`|`console`|`function`
+
 Default: `html`
 
 Set the method of error reporting when compilation fails.

@@ -17,7 +17,6 @@ module.exports = function(grunt) {
     pkg : grunt.file.readJSON('package.json'),
     site: grunt.file.readYAML('_config.yml'),
 
-
     jshint: {
       options: {jshintrc: '.jshintrc'},
       all: [
@@ -26,6 +25,16 @@ module.exports = function(grunt) {
       ]
     },
 
+    // Pull down a JSON list of repos from the LESS org, using
+    // GitHub's API (to be passed as context into the templates)
+    repos: {
+      namespaced: {
+        options: {username: 'less'},
+        files: {
+          '<%= site.data %>/less.json': ['repos?page=1&per_page=100']
+        }
+      }
+    },
 
     // Build HTML from templates and data
     assemble: {
@@ -37,39 +46,78 @@ module.exports = function(grunt) {
         // Metadata
         pkg: '<%= pkg %>',
         site: '<%= site %>',
-        data: ['<%= site.data %>/*.{json,yml}'],
+        data: ['<%= site.data %>/*.{json,yml}', 'content/**/*.json'],
 
         // Extensions
+        plugins: '<%= site.plugins %>',
         helpers: ['<%= site.helpers %>/*.js'],
-        plugins: ['<%= site.plugins %>'],
+
+        // Helper options
+        compose: {cwd: 'content'},
+        marked: {
+          process: true,
+          // highlight.js options
+          prefix: 'language-'
+        },
 
         // Templates
         partials: '<%= site.includes %>/*.hbs',
         layoutdir: '<%= site.layouts %>',
+        layoutext: '<%= site.layoutext %>',
         layout: '<%= site.layout %>',
       },
       site: {
-        // options: {
-        //   permalinks: {preset: 'pretty'}
-        // },
+        options: {
+          partials: ['content/**/*.md'],
+          permalinks: {preset: 'pretty'}
+        },
         src: '<%= site.pages %>/*.hbs',
+        dest: '<%= site.dest %>/'
+      },
+      feed: {
+        options: {
+          ext: '.xml',
+          layout: 'none'
+        },
+        src: '<%= site.pages %>/feed.xml',
         dest: '<%= site.dest %>/'
       }
     },
 
+    prettify: {
+      site: {
+        files: [
+          {expand: true, cwd: '<%= site.dest %>', src: '*.html', dest: '<%= site.dest %>/', ext: '.html'}
+        ]
+      }
+    },
+
+    connect: {
+      options: {
+        port: 3000,
+        livereload: 35729,
+        hostname: 'localhost'
+      },
+      livereload: {
+        options: {
+          open: true,
+          base: ['<%= site.dest %>']
+        }
+      }
+    },
 
     // Compile LESS to CSS
     less: {
       options: {
-        paths: ['theme/bootstrap', 'theme/components']
+        paths: ['styles/bootstrap', 'styles/components']
       },
-      docs: {
-        src: ['theme/site.less'],
+      site: {
+        src: ['styles/site.less'],
         dest: '<%= assemble.options.assets %>/css/site.css'
       }
     },
 
-
+    // Copy source assets to _gh_pages
     copy: {
       assets: {
         src: ['assets/**'],
@@ -77,22 +125,20 @@ module.exports = function(grunt) {
       }
     },
 
-
-    // Before generating any new files clear out any previously
-    // created files.
     clean: {
       example: ['<%= site.dest %>/*.html']
     },
 
-
-    // Pull down a JSON list of LESS's repos from GitHub's API,
-    // so the metadata can be used in templates
-    repos: {
-      namespaced: {
-        options: {username: 'less'},
-        files: {
-          '<%= site.data %>/less.json': ['repos?page=1&per_page=100']
-        }
+    watch: {
+      options: {livereload: true},
+      site: {
+        files: [
+          'Gruntfile.js',
+          '<%= site.helpers %>',
+          '<%= site.styles %>/**/*.less',
+          '<%= site.templates %>/**/*.hbs'
+        ],
+        tasks: ['clean', 'assemble', 'less:site']
       }
     }
   });
@@ -101,13 +147,17 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('assemble-less');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-prettify');
   grunt.loadNpmTasks('grunt-repos');
+  grunt.loadNpmTasks('grunt-sync-pkg');
 
-  // Pull down the
   grunt.registerTask('update', ['repos', 'default']);
+  grunt.registerTask('design', ['clean', 'less:site', 'assemble:site', 'connect', 'watch']);
 
   // Default tasks to be run.
-  grunt.registerTask('default', ['clean', 'copy', 'jshint', 'less', 'assemble']);
+  grunt.registerTask('default', ['clean', 'copy', 'jshint', 'less:site', 'assemble:site']);
 };

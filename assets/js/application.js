@@ -2,9 +2,30 @@
 // IT'S ALL JUST JUNK FOR OUR DOCS!
 // ++++++++++++++++++++++++++++++++++++++++++
 
+/*!
+ * JavaScript for Bootstrap's docs (http://getbootstrap.com)
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under the Creative Commons Attribution 3.0 Unported License. For
+ * details, see http://creativecommons.org/licenses/by/3.0/.
+ */
+
+
 !function ($) {
 
-  $(function(){
+  $(function () {
+
+    // IE10 viewport hack for Surface/desktop Windows 8 bug
+    //
+    // See Getting Started docs for more information
+    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+      var msViewportStyle = document.createElement('style')
+      msViewportStyle.appendChild(
+        document.createTextNode(
+          '@-ms-viewport{width:auto!important}'
+        )
+      )
+      document.querySelector('head').appendChild(msViewportStyle)
+    }
 
     var $window = $(window)
     var $body   = $(document.body)
@@ -13,7 +34,7 @@
 
     $body.scrollspy({
       target: '.sidebar',
-      offset: navHeight
+      // offset: navHeight
     })
 
     $window.on('load', function () {
@@ -36,38 +57,37 @@
             var navOuterHeight = $('.docs-nav').height()
 
             return (this.top = offsetTop - navOuterHeight - sideBarMargin)
-          }
-        , bottom: function () {
-            return (this.bottom = $('.bs-footer').outerHeight(true))
+          },
+          bottom: function () {
+            return (this.bottom = $('.footer').outerHeight(true))
           }
         }
       })
     }, 100)
 
     setTimeout(function () {
-      $('.bs-top').affix()
+      $('.top').affix()
     }, 100)
 
     // tooltip demo
     $('.tooltip-demo').tooltip({
-      selector: "[data-toggle=tooltip]",
-      container: "body"
+      selector: '[data-toggle=tooltip]',
+      container: 'body'
     })
 
     $('.tooltip-test').tooltip()
     $('.popover-test').popover()
 
     $('.docs-navbar').tooltip({
-      selector: "a[data-toggle=tooltip]",
-      container: ".docs-navbar .nav"
+      selector: 'a[data-toggle=tooltip]',
+      container: '.docs-navbar .nav'
     })
 
     // popover demo
-    $("[data-toggle=popover]")
-      .popover()
+    $('[data-toggle=popover]').popover()
 
     // button state demo
-    $('#fat-btn')
+    $('#loading-example-btn')
       .click(function () {
         var btn = $(this)
         btn.button('loading')
@@ -75,9 +95,6 @@
           btn.button('reset')
         }, 3000)
       })
+  })
 
-    // carousel demo
-    $('.docs-carousel-example').carousel()
-})
-
-}(window.jQuery)
+}(jQuery)

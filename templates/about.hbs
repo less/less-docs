@@ -1,8 +1,8 @@
 ---
-layout: default.hbs
 title: About
 slug: about
 lead: "Learn about the history of Less, meet the core team, and check out the ever-growing community resources."
+sidenav: nav-<%= slug %>
 ---
 
 <!-- History
@@ -11,8 +11,9 @@ lead: "Learn about the history of Less, meet the core team, and check out the ev
   <div class="page-header">
     <h1 id="history">History</h1>
   </div>
-  {{md 'content/about/history.md'}}
+  {{md 'history'}}
 </div>
+
 
 <!-- Team
 ================================================== -->
@@ -22,59 +23,23 @@ lead: "Learn about the history of Less, meet the core team, and check out the ev
   </div>
   <p class="lead">Less is maintained by a group of invaluable core contributors, with the massive support and involvement of our community. No one person is in charge and everyone has their own areas and donates the time they can afford. In alphabetical order:</p>
   <div class="list-group less-team">
+
+    {{! Generated from data/team.yml }}
+    {{#each team}}
     <div class="list-group-item">
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=cloudhead&amp;type=follow"></iframe>
-      <a class="team-member" href="https://github.com/cloudhead">
-        <img src="http://www.gravatar.com/avatar/a8a0061962c41735ca87789720da46c8" alt="@cloudhead">
-        <strong>Alexis Sellier</strong> Original Author, Language Design <small>@cloudhead</small>
+      <iframe class="github-btn" src="{{{follow}}}"></iframe>
+      <a class="team-member" href="https://github.com/{{{username}}}">
+        <img src="{{{gravatar}}}" alt="@{{{username}}}">
+        <strong>{{{name}}}</strong> {{{contribution}}} <small>@{{{username}}}</small>
       </a>
     </div>
-    <div class="list-group-item">
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=jonschlinkert&amp;type=follow"></iframe>
-      <a class="team-member" href="https://github.com/jonschlinkert">
-        <img src="http://www.gravatar.com/avatar/1bba28be5506009e85fb9dde1dd66535" alt="@jonschlinkert">
-        <strong>Jon Schlinkert</strong> Language Design, Documentation <small>@jonschlinkert</small>
-      </a>
-    </div>
-    <div class="list-group-item">
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=lukeapage&amp;type=follow"></iframe>
-      <a class="team-member" href="https://github.com/lukeapage">
-        <img src="http://www.gravatar.com/avatar/a80ab1a8297225d70baffc52adf6aefd" alt="@lukeapage">
-        <strong>Luke Page</strong> Development, Language Design, Documentation, Releasing <small>@lukeapage</small>
-      </a>
-    </div>
-    <div class="list-group-item">
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=synchro&amp;type=follow"></iframe>
-      <a class="team-member" href="https://github.com/Synchro">
-        <img src="http://www.gravatar.com/avatar/b4814d6790e91f01c77cac9d25db12b6" alt="@synchro">
-        <strong>Marcus Bointon</strong> Color Functions <small>@synchro</small>
-      </a>
-    </div>
-    <div class="list-group-item">
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=sommeri&amp;type=follow"></iframe>
-      <a class="team-member" href="https://github.com/sommeri">
-        <img src="http://www.gravatar.com/avatar/52cf28b41537a1255243f6ba9b5baedc" alt="@sommeri">
-        <strong>Mária Jurčovičová</strong> Language Design, Java Port <small>@sommeri</small>
-      </a>
-    </div>
-    <div class="list-group-item">
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=matthew-dean&amp;type=follow"></iframe>
-      <a class="team-member" href="https://github.com/matthew-dean">
-        <img src="http://www.gravatar.com/avatar/09caa4a26a5e57031146b5e06b4d7a8c" alt="@matthew-dean">
-        <strong>Matthew Dean</strong> Language Design <small>@matthew-dean</small>
-      </a>
-    </div>
-    <div class="list-group-item">
-      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=seven-phases-max&amp;type=follow"></iframe>
-      <a class="team-member" href="https://github.com/seven-phases-max">
-        <img src="http://www.gravatar.com/avatar/f7c830e90f5d6a740ab908365dcd3849" alt="@seven-phases-max">
-        <strong>Max Mikhailov</strong> Development, Documentation, Language Design <small>@seven-phases-max</small>
-      </a>
-    </div>
+    {{/each}}
+
   </div>
-  <p>Get involved with Less.js development by <a href="{{ site.coderepo }}/issues/new">opening an issue</a> or submitting a pull request (if it's a feature request, please open an issue first). </p>
-  <p>Read our <a href="{{ site.coderepo }}/blob/master/CONTRIBUTING.md">contributing guidelines</a> and the <a href="usage.html#developing-less">developing section</a> of our usage page.</p>
+  <p>Get involved with Less.js development by <a href="{{less.repo}}/issues/new">opening an issue</a> or submitting a pull request (if it's a feature request, please open an issue first). </p>
+  <p>Read our <a href="{{less.repo}}/blob/master/CONTRIBUTING.md">contributing guidelines</a> and the <a href="usage.html#developing-less">developing section</a> of our usage page.</p>
 </div>
+
 
 <!-- Community
 ================================================== -->
@@ -84,10 +49,11 @@ lead: "Learn about the history of Less, meet the core team, and check out the ev
   </div>
   <p class="lead">Stay up to date on the development of Less.js and reach out to the community with these helpful resources.</p>
   <ul>
-    <!--li>Read and subscribe to <a href="">The Official Less.js Blog</a>.</li>
-    <li>Have a feature request or bug report? <a href="{{ site.issues }}">Let us know on our GitHub Issues</a>.</li-->
+    <!--li>Read and subscribe to <a href="">The Official Less.js Blog</a>.</li -->
+    <li>Have a feature request or bug report? <a href="{{ site.issues }}">Let us know on our GitHub Issues</a>.</li>
   </ul>
 </div>
+
 
 <!-- Ports
 ================================================== -->
@@ -96,8 +62,10 @@ lead: "Learn about the history of Less, meet the core team, and check out the ev
     <h1 id="ports">Ports of Less.js</h1>
   </div>
   <p class="lead">Less has been ported to several other programming languages.</p>
-  {{md 'content/about/ports.md'}}
+
+  {{md 'ports'}}
 </div>
+
 
 <!-- Translations
 ================================================== -->
@@ -105,7 +73,19 @@ lead: "Learn about the history of Less, meet the core team, and check out the ev
   <div class="page-header">
     <h1 id="translations">Translations</h1>
   </div>
-  <p class="lead">Community members have translated Less.js's documentation into various languages. None are officially supported and may not always be up to date.</p>
-  {{md 'content/about/translations.md'}}
-  <p>Have another language to add, or perhaps a different or better translation? Let us know by <a href="https://github.com/less/less.js/issues/new">opening an issue</a>.</p>
+  <p class="lead">Community members have translated Less.js's documentation into various languages.</p>
+
+  <div class="callout callout-warning">
+    <h4>Community submitted.</h4>
+    <p>None of the translations are officially supported and <strong>may not always be up to date</strong>.</p>
+  </div>
+
+  {{! Generated from data/translations.yml }}
+  <ul class="list-bullets">
+  {{#each translations}}
+    <li> <strong>{{language}}: </strong> <a href="{{url}}"> {{url}} </a> </li>
+  {{/each}}
+  </ul>
+
+  <p>Have another language to add, or perhaps a different or better translation? Let us know by <a href="{{less.issues}}/new">opening an issue</a>.</p>
 </div>

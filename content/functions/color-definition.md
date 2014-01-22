@@ -39,7 +39,7 @@ Output: `rgba(90, 129, 32, 0.5)`
 
 This format is used in Internet Explorer, and .NET and Android development.
 
-Parameters: `color` - color object.
+Parameters: `color`, color object.
 
 Returns: `string`
 

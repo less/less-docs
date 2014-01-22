@@ -5,24 +5,26 @@
 root:             _gh_pages
 dest:             <%= site.root %>
 assets:           <%= site.dest %>/assets
+date:             <%= new Date() %>
+
+
+# Data
+data:             data
 
 # Templates
 templates:        templates
 pages:            <%= site.templates %>
 includes:         <%= site.templates %>/includes
 layouts:          <%= site.templates %>/layouts
-layout:           default.hbs
-
-# Data
-data:             data
+layoutext:        .hbs
+layout:           default
 
 # Extensions
 helpers:          <%= site.templates %>/helpers
 plugins:
-  - assemble-contrib-anchors
-  - assemble-contrib-wordcount
-  - assemble-contrib-toc
-
+  # - assemble-contrib-permalinks
+  # - assemble-contrib-anchors
+  # - assemble-contrib-toc
 
 # Less.js metadata
 current_version:   <%= less.version %>
@@ -35,20 +37,13 @@ description: >
   LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions.
   LESS runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
 
-# Documentation License
-license:
-  type:            <%= pkg.licenses[0].type %>
-  url:             <%= pkg.licenses[0].url %>
-
 # URLs
+homepage:          http://lesscss.org
 repo:              <%= pkg.repository.url %>
 issues:            <%= pkg.bugs.url %>?&state=open
 download:
   source:          <%= pkg.homepages %>/archive/master.zip
   latest:          https://raw.github.com/less/less.js/master/dist/less-<%= less.version %>.min.js
-coderepo:          <%= pkg.coderepository.url %>
-codeissues:        <%= pkg.codebugs.url %>?&state=open
-codebasemaster:    <%= pkg.codebasemaster.url %>
 
 cdn:
   cloudflare:      //cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js
@@ -58,3 +53,28 @@ analytics:
   alexa:           lpTeh1awA400OE
   google:          false
   google_site_id:  false
+
+
+# Comments
+disqus:
+  enabled:        true
+  shortname:      <%= pkg.name %>
+
+# Social
+social:
+  twitter:
+    via:          false
+    username:     false
+  facebook:       false
+  linkedin:       false
+  gplus:          false
+  hn:             false
+  google:         false
+
+# Sharing
+sharing:
+  twitter:        false
+  facebook:       false
+  gplus:          false
+  hn:             false
+  google:         false

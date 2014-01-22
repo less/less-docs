@@ -1,4 +1,5 @@
 ### default
+
 > Available inside guard conditions and returns `true` only if no other mixin matches, `false` otherwise.
 
 Example:

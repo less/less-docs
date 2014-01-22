@@ -1,5 +1,5 @@
-# data utils
+# pkg.js
 
-> Basic scripts for pulling down JSON files from GitHub
+> Basic script for pulling down the package.json for Less.js from GitHub
 
-Just run `node pkg` and you're in business.
+Just run `node pkg` from this directory, or `node data/utils/pkg` from the project root, and you're in business!

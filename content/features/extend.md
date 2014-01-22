@@ -202,7 +202,7 @@ link:hover:visited {
 }
 ```
 
-#### nth expression
+### nth expression
 
 Nth expression form does matter. Nth-expressions `1n+3` and `n+3` are equivalent, but extend will not match them:
 

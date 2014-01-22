@@ -7,6 +7,7 @@ var path = require('path');
 
 // node_modules
 var grunt = require('grunt');
+var _ = require('lodash');
 
 // Config
 var cwd = path.join.bind(null, __dirname, '../');
@@ -38,9 +39,12 @@ var getPackageFile = function (dest, callback) {
       };
       var contents = JSON.parse(pkg.text, 'utf-8');
       grunt.log.ok('Saved:'.yellow, dest);
+
+      // Extend package.json with custom properties
+      contents = _.extend(contents, require('./extend-pkg'));
       grunt.file.write(dest, JSON.stringify(contents, null, 2));
     }
   });
 };
 
-getPackageFile(path.join(process.cwd(), 'data/less.json'));
+getPackageFile(cwd('less.json'));

@@ -1,7 +1,10 @@
-<span class="warning">**Tip**: try out the different LESS tools available for your platform, to see which one fits you best.</span>
+---
+title: GUIs for Lees.js
+---
+
+<span class="warning">**Tip**: try out the different LESS tools available for your platform to see which one meets your needs.</span>
 
 _This page focuses on GUI compilers. For command line usage and tools see [Command Line Usage](#)._
-
 
 ## Cross platform
 

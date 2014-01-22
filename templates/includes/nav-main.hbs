@@ -7,38 +7,38 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="{{relative dest "index.html"}}" class="navbar-brand" alt="Less"></a>
+      <a href="{{rel 'index.html'}}" class="navbar-brand" alt="Less"></a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <li{{#is slug "features"}} class="active"{{/is}}>
-          <a href="./{{relative dest 'features.html'}}">Language Features</a>
+        <li{{#is slug 'features'}} class="active"{{/is}}>
+          <a href="{{rel 'features.html'}}">Language Features</a>
         </li>
-        {{#unpublished}}
-        <li{{#is slug "plugins"}} class="active"{{/is}}>
-          <a href="./{{relative dest 'plugins.html'}}">Plugins</a>
+        {{#is links.plugins true}}
+        <li{{#is slug 'plugins'}} class="active"{{/is}}>
+          <a href="{{rel 'plugins.html'}}">Plugins</a>
         </li>
-        {{/unpublished}}
-        <li{{#is slug "functions"}} class="active"{{/is}}>
-          <a href="./{{relative dest 'functions.html'}}">Function Reference</a>
+        {{/is}}
+        <li{{#is slug 'functions'}} class="active"{{/is}}>
+          <a href="{{rel 'functions.html'}}">Function Reference</a>
         </li>
-        <li{{#is slug "usage"}} class="active"{{/is}}>
-          <a href="./{{relative dest 'usage.html'}}">Usage</a>
+        <li{{#is slug 'usage'}} class="active"{{/is}}>
+          <a href="{{rel 'usage.html'}}">Usage</a>
         </li>
-        {{#unpublished}}
-        <li{{#is slug "cheatsheet"}} class="active"{{/is}}>
-          <a href="./{{relative dest 'cheatsheet.html'}}">Cheatsheet</a>
+        {{#is links.cheatsheet true}}
+        <li{{#is slug 'cheatsheet'}} class="active"{{/is}}>
+          <a href="{{rel 'cheatsheet.html'}}">Cheatsheet</a>
         </li>
-        {{/unpublished}}
+        {{/is}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        {{#unpublished}}
-        <li{{#is slug "blog"}} class="active"{{/is}}>
-          <a href="./blog.html">Blog</a>
+        {{#is links.blog true}}
+        <li{{#is slug 'blog'}} class="active"{{/is}}>
+          <a href="{{rel 'blog.html'}}">Blog</a>
         </li>
-        {{/unpublished}}
-        <li{{#is slug "about"}} class="active"{{/is}}>
-          <a href="./about.html">About</a>
+        {{/is}}
+        <li{{#is slug 'about'}} class="active"{{/is}}>
+          <a href="{{rel 'about.html'}}">About</a>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub <b class="caret"></b></a>
@@ -46,8 +46,8 @@
             <li> <a href="{{site.repo}}">Docs Repo</a> </li>
             <li> <a href="{{site.issues}}">Docs Issues</a> </li>
             <li class="divider"></li>
-            <li> <a href="{{site.coderepo}}">Less.js Repo</a> </li>
-            <li> <a href="{{site.codeissues}}">Less.js Issues</a> </li>
+            <li> <a href="{{less.repo}}">Less.js Repo</a> </li>
+            <li> <a href="{{less.issues}}">Less.js Issues</a> </li>
           </ul>
         </li>
       </ul>

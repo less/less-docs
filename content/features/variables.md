@@ -1,4 +1,10 @@
+---
+title: Variables
+---
+
 > Control commonly used values in a single location.
+
+## Overview
 
 It's not uncommon to see the same value repeated dozens _if not hundreds of times_ across your stylesheets:
 
@@ -73,7 +79,7 @@ Compiles to:
 // Usage
 body {
   color: #444;
-  background: url("@{images}}/white-sand.png");
+  background: url("@{images}/white-sand.png");
 }
 ```
 
