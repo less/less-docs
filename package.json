@@ -34,7 +34,6 @@
   "devDependencies": {
     "assemble": "~0.4.34",
     "assemble-contrib-anchors": "~0.1.1",
-    "assemble-contrib-navigation": "~0.1.0",
     "assemble-contrib-permalinks": "~0.2.0",
     "assemble-contrib-toc": "~0.1.2",
     "assemble-less": "~0.7.0",
@@ -54,7 +53,6 @@
     "handlebars-helper-eachitems": "~0.1.2",
     "handlebars-helper-feed": "~0.1.0",
     "handlebars-helper-md": "~0.1.2",
-    "handlebars-helper-nav": "~0.1.0",
     "handlebars-helper-partial": "~0.1.1",
     "handlebars-helper-rel": "~0.1.0",
     "handlebars-helper-slugify": "~0.2.0",
