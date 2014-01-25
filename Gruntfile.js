@@ -136,7 +136,8 @@ module.exports = function(grunt) {
           'Gruntfile.js',
           '<%= site.helpers %>',
           '<%= site.styles %>/**/*.less',
-          '<%= site.templates %>/**/*.hbs'
+          '<%= site.templates %>/**/*.hbs',
+          '<%= site.content %>/**/*.md'
         ],
         tasks: ['clean', 'assemble', 'less:site']
       }

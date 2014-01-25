@@ -11,6 +11,12 @@ date:             <%= new Date() %>
 # Data
 data:             data
 
+# Styles
+styles:           styles
+
+# Content
+content:          content
+
 # Templates
 templates:        templates
 pages:            <%= site.templates %>
@@ -22,7 +28,7 @@ layout:           default
 # Extensions
 helpers:          <%= site.templates %>/helpers
 plugins:
-  # - assemble-contrib-permalinks
+  - assemble-contrib-permalinks
   # - assemble-contrib-anchors
   # - assemble-contrib-toc
 
