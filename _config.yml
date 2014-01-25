@@ -22,6 +22,7 @@ templates:        templates
 pages:            <%= site.templates %>
 includes:         <%= site.templates %>/includes
 layouts:          <%= site.templates %>/layouts
+markedtemplates:   <%= site.templates %>/marked
 layoutext:        .hbs
 layout:           default
 
@@ -29,7 +30,6 @@ layout:           default
 helpers:          <%= site.templates %>/helpers
 plugins:
   - assemble-contrib-permalinks
-  # - assemble-contrib-anchors
   # - assemble-contrib-toc
 
 # Less.js metadata

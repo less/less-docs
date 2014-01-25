@@ -56,6 +56,7 @@ module.exports = function(grunt) {
         compose: {cwd: 'content'},
         marked: {
           process: true,
+          heading: '<%= site.markedtemplates %>/heading.tmpl',
           // highlight.js options
           prefix: 'language-'
         },

@@ -33,7 +33,6 @@
   "main": "Gruntfile.js",
   "devDependencies": {
     "assemble": "~0.4.34",
-    "assemble-contrib-anchors": "~0.1.1",
     "assemble-contrib-permalinks": "~0.2.0",
     "assemble-contrib-toc": "~0.1.2",
     "assemble-less": "~0.7.0",
