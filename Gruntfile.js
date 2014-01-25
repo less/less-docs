@@ -139,7 +139,7 @@ module.exports = function(grunt) {
           '<%= site.templates %>/**/*.hbs',
           '<%= site.content %>/**/*.md'
         ],
-        tasks: ['clean', 'assemble', 'less:site']
+        tasks: ['clean', 'less:site', 'assemble']
       }
     }
   });
