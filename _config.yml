@@ -30,7 +30,7 @@ layout:           default
 helpers:          <%= site.templates %>/helpers
 plugins:
   - assemble-contrib-permalinks
-  # - assemble-contrib-toc
+  - templates/plugins/toc.js
 
 # Less.js metadata
 current_version:   <%= less.version %>

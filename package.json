@@ -34,8 +34,8 @@
   "devDependencies": {
     "assemble": "~0.4.34",
     "assemble-contrib-permalinks": "~0.2.0",
-    "assemble-contrib-toc": "~0.1.2",
     "assemble-less": "~0.7.0",
+    "cheerio": "~0.12.3",
     "cwd": "~0.1.1",
     "github": "~0.1.12",
     "grunt": "~0.4.2",
