@@ -58,14 +58,14 @@ module.exports = function(grunt) {
           process: true,
           heading: '<%= site.markedtemplates %>/heading.tmpl',
           // highlight.js options
-          prefix: 'language-'
+          prefix: 'lang-'
         },
 
         // Templates
         partials: '<%= site.includes %>/*.hbs',
         layoutdir: '<%= site.layouts %>',
         layoutext: '<%= site.layoutext %>',
-        layout: '<%= site.layout %>',
+        layout: '<%= site.layout %>'
       },
       site: {
         options: {
