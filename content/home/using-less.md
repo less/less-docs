@@ -98,9 +98,7 @@ See the [Usage]({{rel 'usage'}}) section for details of other tools.
 
 Client-side is the easiest way to get started and good for developing with LESS, but in production, when performance and reliability is important, _we recommend pre-compiling using node.js or one of the many third party tools available_.
 
-## Getting started
-
-Link your `.less` stylesheets with the `rel` attribute set to "`stylesheet/less`":
+To start off, link your `.less` stylesheets with the `rel` attribute set to "`stylesheet/less`":
 
 ```html
 <link rel="stylesheet/less" type="text/css" href="styles.less" />

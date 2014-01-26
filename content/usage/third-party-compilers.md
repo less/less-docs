@@ -12,7 +12,6 @@ title: Third-party compilers
 
 ## Other technologies
 
-### Java
 **Wro4j Runner CLI**
 Download the [wro4j-runner.jar](http://wro4j.googlecode.com/files/wro4j-runner-1.4.1-jar-with-dependencies.jar) file and run the following command:
 
@@ -22,7 +21,6 @@ java -jar wro4j-runner-1.5.0-jar-with-dependencies.jar --preProcessors lessCss`
 
 More details can be found here: [Wro4j Runner CLI](http://code.google.com/p/wro4j/wiki/wro4jRunner)
 
-### Perl
 **CSS::LESSp**
 
 http://search.cpan.org/~drinchev/CSS-LESSp/
@@ -31,11 +29,10 @@ http://search.cpan.org/~drinchev/CSS-LESSp/
 lessp.pl styles.less > styles.css
 ```
 
-### Windows
-
-Note - the official less node runs on windows, the following are just alternative windows versions.
-
 **Windows Script Host**
+
+Note - the official less node runs on windows, so we ar enot sure why you would use this.
+
 [LESS.js for Windows](https://github.com/duncansmart/less.js-windows) with this usage:
 
 ```bash
@@ -48,6 +45,7 @@ lessc input.less [output.css] [-compress]
 ```
 
 **dotless**
+
 [dotless for Windows](http://www.dotlesscss.org/) can be run like this:
 
 ```bash
