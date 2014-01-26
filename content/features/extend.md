@@ -281,6 +281,7 @@ Example:
 
 .replacement:extend(.test all) {}
 ```
+
 Outputs
 
 ```css

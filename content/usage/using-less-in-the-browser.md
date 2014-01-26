@@ -82,7 +82,7 @@ In production, your css is cached in local storage and information messages are 
 If the document's URL starts with `file://` or is on local machine or has a non standard port, it will automatically be set to `development`.
 
 e.g.
-```
+```js
 less = { env: 'production' };
 ```
 
@@ -108,7 +108,7 @@ Type: `object`
 User functions, keyed by name.
 
 e.g.
-```
+```js
 less = { functions: { myfunc: function() { return 1; }} };
 ```
 

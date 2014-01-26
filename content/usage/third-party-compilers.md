@@ -15,7 +15,7 @@ title: Third-party compilers
 **Wro4j Runner CLI**
 Download the [wro4j-runner.jar](http://wro4j.googlecode.com/files/wro4j-runner-1.4.1-jar-with-dependencies.jar) file and run the following command:
 
-```
+```bash
 java -jar wro4j-runner-1.5.0-jar-with-dependencies.jar --preProcessors lessCss`
 ```
 
