@@ -31,6 +31,7 @@ helpers:          <%= site.templates %>/helpers
 plugins:
   - assemble-contrib-permalinks
   - templates/plugins/toc.js
+  - templates/plugins/holder-404-avoid.js
 
 # Less.js metadata
 current_version:   <%= less.version %>
