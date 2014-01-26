@@ -59,7 +59,7 @@
             return (this.top = offsetTop - navOuterHeight - sideBarMargin)
           },
           bottom: function () {
-            return (this.bottom = $('.footer').outerHeight(true))
+            return (this.bottom = $('.bs-footer').outerHeight(true))
           }
         }
       })
