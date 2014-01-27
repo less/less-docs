@@ -20,3 +20,15 @@ button when (@my-option = true) {
   color: white;
 }
 ```
+
+You can also achieve an 'if' type statement by combining this with the `&` feature, allowing you to group multiple guards. 
+```less
+& when (@my-option = true) {
+  button {
+    color: white;
+  }
+  a {
+    color: blue;
+  }
+}
+```
