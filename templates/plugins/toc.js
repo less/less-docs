@@ -36,31 +36,35 @@ module.exports = function(params, callback) {
     }
 
     anchors.map(function(i, e) {
-        var text  = $(e).text().trim();
-        var link  = e.attribs.id;
-        var node = { text: text, link: link };
-
-        if (!duplicateChecker[link]) {
-            duplicateChecker[link] = node;
-        } else {
-            console.error("\nDuplicate found, names are " + duplicateChecker[link].text + " and " + text + " with link " + link);
-            dupesFound = true;
-        }
-        
+        var $e = $(e);
+        var text  = $e.text().trim();
+        var link  = $e.attr("id");
+        var node = { text: text, link: link, $e: $e };
         var depth = Math.min(2, parseInt(e.name.replace(/h/gi, ''), 10));
         var location = findLocation(toc, depth);
         location.push( node );
     });
     
-    if (dupesFound) {
-        throw new Error("Stopping because of duplicates");
+    function toHtml(toc, first, sParentLink) {
+        return "<ul class=\"nav" + (first ? " sidenav" : "") + "\">" + toc.map(function(loc) {
+            
+            loc.link = (sParentLink ? sParentLink + "-" : "") + loc.link;
+            loc.$e.attr("id", loc.link);
+
+            if (!duplicateChecker[loc.link]) {
+                duplicateChecker[loc.link] = loc;
+            } else {
+                console.error("\nDuplicate found, names are " + duplicateChecker[loc.link].text + " and " + loc.text + " with link " + loc.link);
+                dupesFound = true;
+            }
+
+            return '<li><a href="#' + loc.link + '">' + loc.text + '</a>' +
+                (loc.children ? toHtml(loc.children, false, loc.link) : "") + '</li>';
+        }).join("") + "</ul>";
     }
 
-    function toHtml(toc, first) {
-        return "<ul class=\"nav" + (first ? " sidenav" : "") + "\">" + toc.map(function(loc) {
-            return '<li><a href="#' + loc.link + '">' + loc.text + '</a>' +
-                (loc.children ? toHtml(loc.children) : "") + '</li>';
-        }).join("") + "</ul>";
+    if (dupesFound) {
+        throw new Error("Stopping because of duplicates");
     }
 
     $("#toc").append(toHtml(toc, true));

@@ -127,7 +127,7 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      example: ['<%= site.dest %>/*.html']
+      example: ['<%= site.dest %>/*']
     },
 
     watch: {
@@ -158,8 +158,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sync-pkg');
 
   grunt.registerTask('update', ['repos', 'default']);
-  grunt.registerTask('design', ['clean', 'less:site', 'assemble:site', 'connect', 'watch']);
+  grunt.registerTask('design', ['clean', 'copy', 'less:site', 'assemble:site', 'connect', 'watch']);
 
   // Default tasks to be run.
-  grunt.registerTask('default', ['clean', 'copy', 'jshint', 'less:site', 'assemble:site']);
+  grunt.registerTask('default', ['jshint', 'clean', 'copy', 'less:site', 'assemble:site']);
 };
