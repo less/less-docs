@@ -154,7 +154,8 @@ Using them is pretty straightforward. The following example uses percentage to c
 
 ### Namespaces & Accessors
 
-(Not to be confused with [CSS `@namespace`](http://www.w3.org/TR/css3-namespace/)).
+(Not to be confused with [CSS `@namespace`](http://www.w3.org/TR/css3-namespace/) or [namespace selectors](http://www.w3.org/TR/css3-selectors/#typenmsp)).
+
 Sometimes, you may want to group your variables or mixins, for organizational purposes, or just to offer some encapsulation. You can do this pretty intuitively in LESS, say you want to bundle some mixins and variables under `#bundle`, for later reuse or distributing:
 
 ```less
