@@ -138,9 +138,10 @@ module.exports = function(grunt) {
           '<%= site.helpers %>',
           '<%= site.styles %>/**/*.less',
           '<%= site.templates %>/**/*.hbs',
-          '<%= site.content %>/**/*.md'
+          '<%= site.content %>/**/*.md',
+          '<%= site.content %>/_config.yml'
         ],
-        tasks: ['clean', 'less:site', 'assemble']
+        tasks: ['clean', 'copy', 'less:site', 'assemble']
       }
     }
   });
