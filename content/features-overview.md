@@ -58,8 +58,8 @@ The properties of the `.bordered` class will now appear in both `#menu a` and `.
 
 **Learn more**
 
-* [More about mixins](#mixins)
-* [Parametric Mixins](#parametric-mixins)
+* [More about mixins](#mixins-feature)
+* [Parametric Mixins](#mixins-parametric-feature)
 
 
 ### Nested rules
