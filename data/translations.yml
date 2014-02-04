@@ -8,6 +8,9 @@
 - language: Danish
   url: http://lesscss.dk
 
+- language: Spanish
+  url: http://amatellanes.github.io/lesscss.org/
+
 - language: French
   url: http://luckymarmot.com/lesscss
 
@@ -34,5 +37,6 @@
 
 - language: Belarusian
   url: Out of date) <http://www.designcontest.com/show/lesscss-be
+
 - language: Iranian
   url: http://less-css.ir
