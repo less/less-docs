@@ -1,8 +1,8 @@
 ---
-title: GUIs for Lees.js
+title: GUIs for Less.js
 ---
 
-<span class="warning">**Tip**: try out the different LESS tools available for your platform to see which one meets your needs.</span>
+<span class="warning">**Tip**: try out the different Less tools available for your platform to see which one meets your needs.</span>
 
 _This page focuses on GUI compilers. For command line usage and tools see [Command Line Usage](#)._
 
@@ -10,9 +10,9 @@ _This page focuses on GUI compilers. For command line usage and tools see [Comma
 
 ### [Crunch!](http://crunchapp.net/)
 
-> Crunch is not just a LESS compiler, it is also a LESS editor for Windows and Mac.
+> Crunch is not just a Less compiler, it is also a Less editor for Windows and Mac.
 
-If you work a lot with LESS files, you should definitely try it out. Crunch is built on the Adobe AIR platform. Get more info: [http://crunchapp.net/](http://crunchapp.net/).
+If you work a lot with Less files, you should definitely try it out. Crunch is built on the Adobe AIR platform. Get more info: [http://crunchapp.net/](http://crunchapp.net/).
 
 ![Crunch screenshot](http://crunchapp.net/img/Crunch.png)
 
@@ -30,7 +30,7 @@ Get more info: [http://mixture.io/](http://mixture.io)
 
 ### [SimpLESS](http://wearekiss.com/simpless)
 
-> SimpLESS is a minimalistic LESS compiler. Just drag, drop and compile.
+> SimpLESS is a minimalistic Less compiler. Just drag, drop and compile.
 
 One of the unique features of SimpLESS is that it supports 'prefixing' your CSS by using [http://prefixr.com.](http://prefixr.com). SimpLESS is built on the Titanium platform. Get more info: [http://wearekiss.com/simpless](http://wearekiss.com/simpless)
 
@@ -61,7 +61,7 @@ Get more info at [http://alphapixels.com/prepros](http://alphapixels.com/prepros
 
 #### [WinLess](http://winless.org)
 
-> WinLess started out as a clone of LESS.app, it takes a more feature-complete approach and has several settings. It also supports starting with command line arguments.
+> WinLess started out as a clone of Less.app, it takes a more feature-complete approach and has several settings. It also supports starting with command line arguments.
 
 Get more info: [http://winless.org](http://winless.org)
 
@@ -72,7 +72,7 @@ Get more info: [http://winless.org](http://winless.org)
 
 #### [LESS.app](http://incident57.com/less)
 
-> LESS.app was the first GUI compiler for LESS. LESS.app has a 'Compiler' tab where you can see the compiler results.
+> LESS.app was the first GUI compiler for Less. LESS.app has a 'Compiler' tab where you can see the compiler results.
 
 Get more info: [http://incident57.com/less](http://incident57.com/less)
 
@@ -80,7 +80,7 @@ Get more info: [http://incident57.com/less](http://incident57.com/less)
 
 #### [CodeKit](http://incident57.com/codekit)
 
-> CodeKit is the successor to LESS.app, and supports LESS among many other preprocessing languages, such as SASS, Jade, Markdown, and many more.
+> CodeKit is the successor to LESS.app, and supports Less among many other preprocessing languages, such as SASS, Jade, Markdown, and many more.
 
 Get more info: [http://incident57.com/codekit](http://incident57.com/codekit)
 
@@ -88,7 +88,7 @@ Get more info: [http://incident57.com/codekit](http://incident57.com/codekit)
 
 #### [LiveReload](http://livereload.com)
 
-> CSS edits and image changes apply live. CoffeeScript, SASS, LESS and others just work.
+> CSS edits and image changes apply live. CoffeeScript, SASS, Less and others just work.
 
 Get more info: [http://livereload.com](http://livereload.com)
 

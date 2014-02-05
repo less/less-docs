@@ -25,7 +25,7 @@ module.exports = function(grunt) {
       ]
     },
 
-    // Pull down a JSON list of repos from the LESS org, using
+    // Pull down a JSON list of repos from the Less org, using
     // GitHub's API (to be passed as context into the templates)
     repos: {
       namespaced: {
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // Compile LESS to CSS
+    // Compile Less to CSS
     less: {
       options: {
         paths: ['styles/bootstrap', 'styles/components']
