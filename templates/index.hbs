@@ -2,7 +2,6 @@
 title: Getting started
 slug: index
 lead: "An overview of Less, how to download and use, examples and more."
-sidenav: nav-getting-started
 ---
 
 <!-- Getting started
@@ -26,10 +25,10 @@ sidenav: nav-getting-started
 
 
   <h3 id="browser-downloads">Browser downloads</h3>
-  <p><a class="btn btn-lg btn-primary" href="{{ site.download.latest }}" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" role="button">Download Less.js v{{less.version}}</a></p>
+  <p><a class="btn btn-lg btn-primary" href="{{ less.rawmaster }}/less-{{ less.version }}.min.js" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" role="button">Download Less.js v{{less.version}}</a></p>
   <div class="docs-dl-options">
     <h4>
-      <a href="{{ site.download.source }}" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);">Download source code</a>
+      <a href="{{ less.sourcearchive }}{{ less.version }}.zip" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);">Download source code</a>
     </h4>
     <p>Get the latest Less.js source code by downloading it directly from GitHub.</p>
     <h4>
@@ -46,10 +45,10 @@ bower install less
 {{/markdown}}
   </div>
   <h3 id="download-cdn">Less CDN</h3>
-  <p>TODO <a href="{{ site.cdn.cloudflare }}">CDN</a>.</p>
+  <p><a href="{{ site.cdn.cloudflare }}{{ less.version }}/less.min.js">CDN</a>.</p>
 {{#markdown}}
 ```html
-<script src="{{ site.cdn.cloudflare }}"></script>
+<script src="{{ site.cdn.cloudflare }}{{ less.version }}/less.min.js"></script>
 ```
 {{/markdown}}
 </div><!-- /usage -->

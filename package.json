@@ -1,6 +1,6 @@
 {
   "name": "less-docs",
-  "description": "Official website and documentation for LESS / Less.js",
+  "description": "Official website and documentation for Less / Less.js",
   "version": "0.1.2",
   "homepage": "https://github.com/less/less-docs",
   "contributors": [
@@ -33,10 +33,9 @@
   "main": "Gruntfile.js",
   "devDependencies": {
     "assemble": "~0.4.34",
-    "assemble-contrib-anchors": "~0.1.1",
     "assemble-contrib-permalinks": "~0.2.0",
-    "assemble-contrib-toc": "~0.1.2",
     "assemble-less": "~0.7.0",
+    "cheerio": "~0.12.3",
     "cwd": "~0.1.1",
     "github": "~0.1.12",
     "grunt": "~0.4.2",
@@ -48,7 +47,7 @@
     "grunt-prettify": "~0.3.4",
     "grunt-repos": "~0.1.2",
     "grunt-sync-pkg": "~0.1.2",
-    "handlebars-helper-compose": "~0.2.7",
+    "handlebars-helper-compose": "~0.2.9",
     "handlebars-helper-datetime": "~0.1.0",
     "handlebars-helper-eachitems": "~0.1.2",
     "handlebars-helper-feed": "~0.1.0",
@@ -56,7 +55,8 @@
     "handlebars-helper-partial": "~0.1.1",
     "handlebars-helper-rel": "~0.1.0",
     "handlebars-helper-slugify": "~0.2.0",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "yfm": "~0.1.0"
   },
   "keywords": [
     "handlebars-helper-compose",
@@ -64,6 +64,7 @@
     "handlebars-helper-eachitems",
     "handlebars-helper-feed",
     "handlebars-helper-md",
+    "handlebars-helper-nav",
     "handlebars-helper-partial",
     "handlebars-helper-rel",
     "handlebars-helper-slugify",

@@ -2,6 +2,9 @@
 # Language translations: Alphabetical Order
 # =============================================
 
+- language: Belarusian
+  url: http://www.designcontest.com/show/lesscss-be
+
 - language: Chinese
   url: http://lesscss.net
 
@@ -16,6 +19,9 @@
 
 - language: Indonesian
   url: http://bertzzie.com/post/7/dokumentasi-less-bahasa-indonesia
+  
+- language: Iranian
+  url: http://less-css.ir
 
 - language: Japanese
   url: http://less-ja.studiomohawk.com/
@@ -28,12 +34,9 @@
 
 - language: Russian
   url: http://lesscss.ru
+  
+- language: Spanish
+  url: http://amatellanes.github.io/lesscss.org/
 
 - language: Ukrainian
   url: http://komaval.github.com/lesscss.org/
-
-- language: Belarusian
-  url: Out of date) <http://www.designcontest.com/show/lesscss-be
-
-- language: Iranian
-  url: http://less-css.ir

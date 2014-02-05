@@ -11,73 +11,60 @@ date:             <%= new Date() %>
 # Data
 data:             data
 
+# Styles
+styles:           styles
+
+# Content
+content:          content
+
 # Templates
 templates:        templates
 pages:            <%= site.templates %>
 includes:         <%= site.templates %>/includes
 layouts:          <%= site.templates %>/layouts
+markedtemplates:   <%= site.templates %>/marked
 layoutext:        .hbs
 layout:           default
 
-# Styles
-styles:           styles
-components:       <%= site.styles %>/components
-
-
-# =============================================
-# EXTENSIONS
-# =============================================
-
+# Extensions
 helpers:          <%= site.templates %>/helpers
 plugins:
-  # - assemble-contrib-permalinks
-  # - assemble-contrib-anchors
-  # - assemble-contrib-toc
+  - assemble-contrib-permalinks
+  - templates/plugins/toc.js
+  - templates/plugins/holder-404-avoid.js
 
-
-# =============================================
-# PROJECT METADATA
-# =============================================
+# Less.js metadata
+current_version:   <%= less.version %>
 
 # Site metadata
 brand:             lesscss.org
 title:             Less.js
-lead:              LESS « The Dynamic Stylesheet Language
+lead:              Less « The Dynamic Stylesheet Language
 description: >
-  LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions.
-  LESS runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
+  Less extends CSS with dynamic behavior such as variables, mixins, operations and functions.
+  Less runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
 
 # URLs
 homepage:          http://lesscss.org
 repo:              <%= pkg.repository.url %>
 issues:            <%= pkg.bugs.url %>?&state=open
-
-# Download links
 download:
   source:          <%= pkg.homepages %>/archive/master.zip
   latest:          https://raw.github.com/less/less.js/master/dist/less-<%= less.version %>.min.js
 
+cdn:
+  cloudflare:      //cdnjs.cloudflare.com/ajax/libs/less.js/
 
-# =============================================
 # SEO/SEM
-# =============================================
-
 analytics:
   alexa:           lpTeh1awA400OE
-  google:
-    id:             UA-XXXXXXXX-YY
-    domain:         lesscss.org
-    siteid:
-    tags:           FOO-012345 # Google Tags (see: https://www.google.com/tagmanager/)
+  google:          false
+  google_site_id:  false
 
-
-# =============================================
-# SOCIAL / SHARING
-# =============================================
 
 # Comments
 disqus:
-  enabled:        false
+  enabled:        true
   shortname:      <%= pkg.name %>
 
 # Social

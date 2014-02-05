@@ -2,12 +2,12 @@
 title: Server-side usage
 ---
 
-> Less can be used on the command line via npm, downloaded as a script file for the browser or used in a wide variety of third party tools. See the [Usage](usage.html) section for more
+> Less can be used on the command line via npm, downloaded as a script file for the browser or used in a wide variety of third party tools. See the [Usage]({{rel 'usage'}}) section for more
 detailed information.
 
 ## Installation
 
-The easiest way to install LESS on the server, is via npm, the [node.js](http://nodejs.org/) package manager, as so:
+The easiest way to install Less on the server, is via npm, the [node.js](http://nodejs.org/) package manager, as so:
 
 ```bash
 $ npm install -g less
@@ -90,17 +90,15 @@ Less also integrates with the popular build framework grunt, using the [grunt-co
 
 ## Third party tools
 
-See the [Usage](usage.html) section for details of other tools.
+See the [Usage]({{rel 'usage'}}) section for details of other tools.
 
 # Client-side usage
 
 > Using less.js in the browser is great for development, but it's not recommended for production
 
-Client-side is the easiest way to get started and good for developing with LESS, but in production, when performance and reliability is important, _we recommend pre-compiling using node.js or one of the many third party tools available_.
+Client-side is the easiest way to get started and good for developing with Less, but in production, when performance and reliability is important, _we recommend pre-compiling using node.js or one of the many third party tools available_.
 
-## Getting started
-
-Link your `.less` stylesheets with the `rel` attribute set to "`stylesheet/less`":
+To start off, link your `.less` stylesheets with the `rel` attribute set to "`stylesheet/less`":
 
 ```html
 <link rel="stylesheet/less" type="text/css" href="styles.less" />

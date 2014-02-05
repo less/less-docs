@@ -25,7 +25,7 @@ module.exports = function(grunt) {
       ]
     },
 
-    // Pull down a JSON list of repos from the LESS org, using
+    // Pull down a JSON list of repos from the Less org, using
     // GitHub's API (to be passed as context into the templates)
     repos: {
       namespaced: {
@@ -56,15 +56,16 @@ module.exports = function(grunt) {
         compose: {cwd: 'content'},
         marked: {
           process: true,
+          heading: '<%= site.markedtemplates %>/heading.tmpl',
           // highlight.js options
-          prefix: 'language-'
+          prefix: 'lang-'
         },
 
         // Templates
         partials: '<%= site.includes %>/*.hbs',
         layoutdir: '<%= site.layouts %>',
         layoutext: '<%= site.layoutext %>',
-        layout: '<%= site.layout %>',
+        layout: '<%= site.layout %>'
       },
       site: {
         options: {
@@ -106,7 +107,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // Compile LESS to CSS
+    // Compile Less to CSS
     less: {
       options: {
         paths: ['styles/bootstrap', 'styles/components']
@@ -126,7 +127,7 @@ module.exports = function(grunt) {
     },
 
     clean: {
-      example: ['<%= site.dest %>/*.html']
+      example: ['<%= site.dest %>/*']
     },
 
     watch: {
@@ -136,9 +137,11 @@ module.exports = function(grunt) {
           'Gruntfile.js',
           '<%= site.helpers %>',
           '<%= site.styles %>/**/*.less',
-          '<%= site.templates %>/**/*.hbs'
+          '<%= site.templates %>/**/*.hbs',
+          '<%= site.content %>/**/*.md',
+          '<%= site.content %>/_config.yml'
         ],
-        tasks: ['clean', 'assemble', 'less:site']
+        tasks: ['clean', 'copy', 'less:site', 'assemble']
       }
     }
   });
@@ -156,8 +159,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sync-pkg');
 
   grunt.registerTask('update', ['repos', 'default']);
-  grunt.registerTask('design', ['clean', 'less:site', 'assemble:site', 'connect', 'watch']);
+  grunt.registerTask('design', ['clean', 'copy', 'less:site', 'assemble:site', 'connect', 'watch']);
 
   // Default tasks to be run.
-  grunt.registerTask('default', ['clean', 'copy', 'jshint', 'less:site', 'assemble:site']);
+  grunt.registerTask('default', ['jshint', 'clean', 'copy', 'less:site', 'assemble:site']);
 };

@@ -1,6 +1,11 @@
 {
+  "repo": "https://github.com/less/less.js.git",
+  "issues": "https://github.com/less/less.js/issues",
+  "master": "https://github.com/less/less.js/blob/master/",
+  "rawmaster": "https://raw.github.com/less/less.js/master/dist",
+  "sourcearchive": "https://github.com/less/less.js/archive/v",
   "name": "less",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "Leaner CSS",
   "homepage": "http://lesscss.org",
   "author": {
@@ -84,8 +89,5 @@
     "stylesheet",
     "variables in css",
     "css less"
-  ],
-  "repo": "https://github.com/less/less.js.git",
-  "issues": "https://github.com/less/less.js/issues",
-  "master": "https://github.com/less/less.js/blob/master/"
+  ]
 }

@@ -2,7 +2,7 @@
 
 ## CSS Comments
 
-CSS-style comments are preserved by LESS:
+CSS-style comments are preserved by Less:
 
 ```less
 .class {
@@ -11,9 +11,9 @@ CSS-style comments are preserved by LESS:
 }
 ```
 
-## LESS Comments
+## Less Comments
 
-Single-line comments are also valid in LESS, but they are ‘silent’, they don’t show up in the compiled CSS output:
+Single-line comments are also valid in Less, but they are ‘silent’, they don’t show up in the compiled CSS output:
 
 ```less
 .class {

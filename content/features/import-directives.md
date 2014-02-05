@@ -14,9 +14,9 @@ Example:
 ## File extensions
 `@import` statements may be treated differently by Less depending on the file extension:
 
-* If the file has a `.css` extension it will be treated as CSS and the `@import` statement left as-is (see the [inline option](#inline) below).
-* If it has _any other extension_ it will be treated as LESS and imported.
-* If it does not have an extension, `.less` will be appended and it will be included as a imported LESS file.
+* If the file has a `.css` extension it will be treated as CSS and the `@import` statement left as-is (see the [inline option](#import-options-inline) below).
+* If it has _any other extension_ it will be treated as Less and imported.
+* If it does not have an extension, `.less` will be appended and it will be included as a imported Less file.
 
 Examples:
 
@@ -30,7 +30,7 @@ Examples:
 The following options can be used to override this behavior.
 
 # Import Options
-> LESS offers several extensions to the CSS `@import` CSS at-rule to provide more flexibility over what you can do with external files.
+> Less offers several extensions to the CSS `@import` CSS at-rule to provide more flexibility over what you can do with external files.
 
 Syntax: `@import (keyword) "filename";`
 
@@ -51,12 +51,12 @@ Released [v1.5.0]({{ site.codebasemaster }}CHANGELOG.md)
 
 Example: `@import (reference) "foo.less";`
 
-`reference` is one of the most powerful features in the LESS language. Imagine that `reference` marks every directive and selector with a _reference flag_ in the imported file, imports as normal, but when the CSS is generated, "reference" selectors (as well as any media queries containing only reference selectors) are not output. `reference` styles will not show up in your generated CSS unless the reference styles are used as [mixins][] or [extended][].
+`reference` is one of the most powerful features in the Less language. Imagine that `reference` marks every directive and selector with a _reference flag_ in the imported file, imports as normal, but when the CSS is generated, "reference" selectors (as well as any media queries containing only reference selectors) are not output. `reference` styles will not show up in your generated CSS unless the reference styles are used as (mixins)[#mixins-feature] or (extended)[#extend-feature].
 
 Additionally, **`reference`** produces different results depending on which method was used (mixin or extend):
 
-* **[extend](#extend)**: When a selector is extended, only the new selector is marked as _not referenced_, and it is pulled in at the position of the reference `@import` statement.
-* **[mixins](#mixins)**: When a `reference` style is used as an [[implicit mixin|Mixins]], its rules are are mixed-in, marked "not reference", and appear in the referenced place as normal.
+* **[extend](#extend-feature)**: When a selector is extended, only the new selector is marked as _not referenced_, and it is pulled in at the position of the reference `@import` statement.
+* **[mixins](#mixins-feature)**: When a `reference` style is used as an [[implicit mixin|Mixins]], its rules are are mixed-in, marked "not reference", and appear in the referenced place as normal.
 
 
 ### reference example
@@ -82,7 +82,7 @@ So you can use this to include the file in the output so that all CSS will be in
 
 
 ## less
-> Use `@import (less)` to treat imported files as LESS, regardless of file extension.
+> Use `@import (less)` to treat imported files as Less, regardless of file extension.
 
 Released [v1.4.0]({{ site.codebasemaster }}CHANGELOG.md)
 

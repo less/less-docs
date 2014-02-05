@@ -7,38 +7,38 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="{{rel 'index.html'}}" class="navbar-brand" alt="Less"></a>
+      <a href="{{rel '/#'}}" class="navbar-brand" alt="Less"></a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
         <li{{#is slug 'features'}} class="active"{{/is}}>
-          <a href="{{rel 'features.html'}}">Language Features</a>
+          <a href="{{rel 'features'}}">Language Features</a>
         </li>
         {{#is links.plugins true}}
         <li{{#is slug 'plugins'}} class="active"{{/is}}>
-          <a href="{{rel 'plugins.html'}}">Plugins</a>
+          <a href="{{rel 'plugins'}}">Plugins</a>
         </li>
         {{/is}}
         <li{{#is slug 'functions'}} class="active"{{/is}}>
-          <a href="{{rel 'functions.html'}}">Function Reference</a>
+          <a href="{{rel 'functions'}}">Function Reference</a>
         </li>
         <li{{#is slug 'usage'}} class="active"{{/is}}>
-          <a href="{{rel 'usage.html'}}">Usage</a>
+          <a href="{{rel 'usage'}}">Usage</a>
         </li>
         {{#is links.cheatsheet true}}
         <li{{#is slug 'cheatsheet'}} class="active"{{/is}}>
-          <a href="{{rel 'cheatsheet.html'}}">Cheatsheet</a>
+          <a href="{{rel 'cheatsheet'}}">Cheatsheet</a>
         </li>
         {{/is}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#is links.blog true}}
         <li{{#is slug 'blog'}} class="active"{{/is}}>
-          <a href="{{rel 'blog.html'}}">Blog</a>
+          <a href="{{rel 'blog'}}">Blog</a>
         </li>
         {{/is}}
         <li{{#is slug 'about'}} class="active"{{/is}}>
-          <a href="{{rel 'about.html'}}">About</a>
+          <a href="{{rel 'about'}}">About</a>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub <b class="caret"></b></a>

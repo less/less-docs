@@ -4,28 +4,85 @@ title: Command Line Usage
 
 > Compile `.less` files to `.css` using the command line
 
-<span class="warning">Heads up! If the command line isn't your thing, learn more about [GUI compilers for LESS](#).</span>
+<span class="warning">Heads up! If the command line isn't your thing, learn more about [GUI compilers for Less](#).</span>
 
-## lessc
+### Installing lessc
 
-> Server-Side and Command Line Usage
+Install with [npm]()
+
+```bash
+npm i less --save-dev
+```
+
+This will install the latest official version of lessc in your project folder, also adding it to the `devDependencies` in your project's `package.json`.
+
+Note that a [tilde version range][] will be automatically specified in `package.json`. This is good, as new patch releases of the latest version will be installable by npm.
+
+
+#### Installing a specific version of lessc
+
+If you need a specific version of lessc, run `npm install less@VERSION --save-dev` where `VERSION` is the version you need, and npm will install that version of lessc in your project folder, adding it to your `package.json` devDependencies.
+
+
+#### Installing a published development version of lessc
+
+Periodically, as new functionality is being developed, lessc builds will be published to npm. These builds will _not_ be published as a `@latest` official release, and will typically have a build number or alpha/beta/release candidate designation.
+
+Like installing a specific version of lessc, run `npm install lessc@VERSION --save-dev` where `VERSION` is the version you need, and npm will install that version of lessc in your project folder, adding it to your `package.json` devDependencies.
+
+Note that regardless of the version you specify, a [tilde version range][] will be specified in `package.json`. **This is very bad**, as new, possibly incompatible, patch releases of the specified development version may be installed by npm, breaking your build.
+
+_In this case it is **very important** that you manually edit your `package.json` and remove the `~` (tilde) from the version number. This will lock in the exact development version that you have specified._
+
+
+#### Installing an unpublished development version of lessc
+
+If you want to install a bleeding-edge, unpublished version of lessc, follow the instructions for specifying a [git URL as a dependency][] and be sure to specify an actual commit SHA (not a branch name) as the `commit-ish`. This will guarantee that your project always uses that exact version of lessc.
+
+The specified git URL may be that of the official lessc repo or a fork.
+
+
+[tilde version range]: https://npmjs.org/doc/json.html#Tilde-Version-Ranges
+[git URL as a dependency]: https://npmjs.org/doc/json.html#Git-URLs-as-Dependencies
+
+### Server-Side and Command Line Usage
 
 The binary included in this repository, `bin/lessc` works with [Node.js](http://nodejs.org/) on *nix, OSX and Windows.
 
 **Usage**: `lessc [option option=parameter ...] <source> [destination]`
 
-### Options
+### Command line usage
 
-{{! Can we get rid of this block and just use the well-formatted definitions/sections below? }}
-
+```bash
+lessc [option option=parameter ...] <source> [destination]
 ```
-usage: lessc [option option=parameter ...] <source> [destination]
 
 If source is set to `-' (dash or hyphen-minus), input is read from stdin.
 
-options:
-  -h, --help               Print help (this message) and exit.
-  --include-path=PATHS     Set include paths. Separated by `:'. Use `;' on Windows.
+#### Examples
+
+```bash
+# compile bootstrap.less to bootstrap.css
+$ lessc bootstrap.less bootstrap.css
+
+# compile bootstrap.less to bootstrap.css and minify (compress) the result
+$ lessc -x bootstrap.less bootstrap.css
+```
+
+#### --help, -h
+
+Prints above help message and exits.
+
+#### Include paths
+
+lessc --include-path=PATH1;PATH2
+
+Set include paths. Separated by `:'. Use `;' on Windows.
+
+{ paths: ['PATH1', 'PATH2']  }
+
+
+```bash
   -M, --depends            Output a makefile import dependency list to stdout
   --no-color               Disable colorized output.
   --no-ie-compat           Disable IE compatibility checks.
@@ -71,115 +128,3 @@ options:
                            format, and 'all' which will do both.
   --verbose                Be verbose.
 ```
-
-### Examples
-
-```bash
-# compile bootstrap.less to bootstrap.css
-$ lessc bootstrap.less bootstrap.css
-
-# compile bootstrap.less to bootstrap.css and minify (compress) the result
-$ lessc -x bootstrap.less bootstrap.css
-```
-
-
-## Client-side Usage
-
-Set options in a global `less` object **before** loading the less.js script:
-
-``` html
-<!-- set options before less.js script -->
-<script>
-  less = {
-    env: "development",
-    logLevel: 2,
-    async: false,
-    fileAsync: false,
-    poll: 1000,
-    functions: {},
-    dumpLineNumbers: "comments",
-    relativeUrls: false,
-    rootpath: ":/a.com/"
-  };
-</script>
-<script src="less.js"></script>
-```
-
-### env
-Type: `String`
-
-Default: `development`
-
-Environment to run may be either `development` or `production`. If the document's URL starts with `file://` or `localhost` it will automatically be set to `development`.
-
-### logLevel
-Type: `Number`
-
-Default: 2
-
-The amount of logging in the javascript console.
-
-```bash
-2 - Information and errors
-1 - Errors
-0 - Nothing
-```
-
-### async
-Type: `Boolean`
-
-Default: `false`
-
-Load imports asynchronously.
-
-### fileAsync
-Type: `Boolean`
-
-Default: `false`
-
-Load imports asynchronously when in a page under a file protocol.
-
-### poll
-Type: `Integer`
-
-Default: `1000`
-
-The amount of time (in milliseconds) between polls while in watch mode.
-
-### functions
-Type: `object`
-
-
-User functions, keyed by name.
-
-### dumpLineNumbers
-Type: `String`
-
-Options: `comments`|`mediaQuery`|`all`
-
-Default: `comments`
-
-**TODO**: need more explanation here.
-
-### relativeUrls
-Type: `Boolean`
-
-Default: `false`
-
-Optionally adjust URLs to be relative. When false, URLs are already relative to the entry less file.
-
-### rootpath
-Type: `String`
-
-Default: `false`
-
-A path to add on to the start of every URL resource.
-
-### errorReporting
-Type: `String`
-
-Options: `html`|`console`|`function`
-
-Default: `html`
-
-Set the method of error reporting when compilation fails.

@@ -1,4 +1,4 @@
-Write some LESS:
+Write some Less:
 
 ```less
 @base: #f938ab;

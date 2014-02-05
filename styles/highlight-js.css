@@ -1,0 +1,101 @@
+/*
+    Based on the github style
+*/
+
+pre code {
+    display: block; padding: 0.5em;
+    color: #333;
+    background: #f8f8ff
+}
+
+.lang-comment,
+.lang-template_comment {
+    color: #998;
+    font-style: italic
+}
+
+.lang-keyword,
+.lang-css .lang-rule .lang-keyword,
+.lang-javascript .lang-title,
+.lang-subst,
+.lang-request,
+.lang-status {
+    color: #333;
+    font-weight: bold
+}
+
+.lang-number,
+.lang-hexcolor {
+    color: #099;
+}
+
+.lang-string,
+.tag .value {
+    color: #d14
+}
+
+.lang-title,
+.lang-id {
+    color: #900;
+    font-weight: bold
+}
+
+.lang-javascript .lang-title {
+    font-weight: normal
+}
+
+.lang-class .lang-title {
+    color: #458;
+    font-weight: bold
+}
+
+.lang-tag,
+.lang-tag .lang-title,
+.lang-rules .lang-property {
+    color: #000080;
+    font-weight: normal
+}
+
+.lang-attribute,
+.lang-variable {
+    color: #008080
+}
+
+.lang-regexp {
+    color: #009926
+}
+
+.lang-class {
+    color: #458;
+    font-weight: bold
+}
+
+.lang-symbol,
+.lang-prompt {
+    color: #990073
+}
+
+.lang-built_in {
+    color: #0086b3
+}
+
+.lang-preprocessor,
+.lang-pi,
+.lang-doctype,
+.lang-shebang,
+.lang-cdata {
+    color: #999;
+    font-weight: bold
+}
+
+.lang-deletion {
+    background: #fdd
+}
+
+.lang-addition {
+    background: #dfd
+}
+
+.lang-chunk {
+    color: #aaa
+}

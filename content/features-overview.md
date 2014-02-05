@@ -2,7 +2,7 @@
 title: Features Overview
 ---
 
-> As an extension to CSS, LESS is not only backwards compatible with CSS, but the extra features it adds use existing CSS syntax. This makes learning LESS a breeze, and if in doubt, lets you fall back to vanilla CSS.
+> As an extension to CSS, Less is not only backwards compatible with CSS, but the extra features it adds use existing CSS syntax. This makes learning Less a breeze, and if in doubt, lets you fall back to vanilla CSS.
 
 
 ### Variables
@@ -58,13 +58,13 @@ The properties of the `.bordered` class will now appear in both `#menu a` and `.
 
 **Learn more**
 
-* [More about mixins](features/#mixins)
-* [Parametric Mixins](features/#parametric-mixins)
+* [More about mixins](#mixins-feature)
+* [Parametric Mixins](#mixins-parametric-feature)
 
 
 ### Nested rules
 
-LESS gives you the ability to use nesting instead of, or in combination with cascading. Let's say we have the following CSS:
+Less gives you the ability to use nesting instead of, or in combination with cascading. Let's say we have the following CSS:
 
 ```css
 #header {
@@ -78,7 +78,7 @@ LESS gives you the ability to use nesting instead of, or in combination with cas
 }
 ```
 
-In LESS, we can also write it this way:
+In Less, we can also write it this way:
 
 ```less
 #header {
@@ -126,17 +126,17 @@ background-color: @base-color + #111;
 height: 100% / 2 + @filler;
 ```
 
-The output is pretty much what you expect—LESS understands the difference between colors and units. If a unit is used in an operation, like in:
+The output is pretty much what you expect—Less understands the difference between colors and units. If a unit is used in an operation, like in:
 
 ```less
 @var: 1px + 5;
 ```
 
-LESS will use that unit for the final output—`6px` in this case.
+Less will use that unit for the final output—`6px` in this case.
 
 ### Functions
 
-LESS provides a variety of functions which transform colors, manipulate strings and do maths. They are documented fully in the function reference.
+Less provides a variety of functions which transform colors, manipulate strings and do maths. They are documented fully in the function reference.
 
 Using them is pretty straightforward. The following example uses percentage to convert 0.5 to 50%, increases the saturation of a base color by 5% and then sets the background color to one that is lightened by 25% and spun by 8 degrees:
 
@@ -154,8 +154,9 @@ Using them is pretty straightforward. The following example uses percentage to c
 
 ### Namespaces & Accessors
 
-(Not to be confused with [CSS `@namespace`](http://www.w3.org/TR/css3-namespace/)).
-Sometimes, you may want to group your variables or mixins, for organizational purposes, or just to offer some encapsulation. You can do this pretty intuitively in LESS, say you want to bundle some mixins and variables under `#bundle`, for later reuse or distributing:
+(Not to be confused with [CSS `@namespace`](http://www.w3.org/TR/css3-namespace/) or [namespace selectors](http://www.w3.org/TR/css3-selectors/#typenmsp)).
+
+Sometimes, you may want to group your variables or mixins, for organizational purposes, or just to offer some encapsulation. You can do this pretty intuitively in Less, say you want to bundle some mixins and variables under `#bundle`, for later reuse or distributing:
 
 ```less
 #bundle {
@@ -184,7 +185,7 @@ Now if we want to mixin the `.button` class in our `#header a`, we can do:
 
 ### Scope
 
-Scope in LESS is very similar to that of programming languages. Variables and mixins are first looked for locally, and if they aren't found, the compiler will look in the parent scope, and so on.
+Scope in Less is very similar to that of programming languages. Variables and mixins are first looked for locally, and if they aren't found, the compiler will look in the parent scope, and so on.
 
 Note that the order of declaration **does** matter.
 
