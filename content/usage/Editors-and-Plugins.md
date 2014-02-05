@@ -2,7 +2,7 @@
 title: Editors and plugins
 ---
 
-Also see: [GUIs for LESS.js](usage/#guis-for-less)
+Also see: [GUIs for Less.js](usage/#guis-for-less)
 
 ## Editors and IDEs
 
@@ -18,9 +18,9 @@ Also see: [GUIs for LESS.js](usage/#guis-for-less)
 
 ### [Sublime Text 2 & 3](http://sublimetext.com/)
 
-* [LESS-sublime][LESS-sublime]
-* [Sublime-LESS-to-CSS][Sublime-LESS-to-CSS]
-* [LESS-build-sublime][LESS-build-sublime]
+* [Less-sublime][Less-sublime]
+* [Sublime-Less-to-CSS][Sublime-Less-to-CSS]
+* [Less-build-sublime][Less-build-sublime]
 * [SublimeOnSaveBuild][SublimeOnSaveBuild]
 
 ### [Eclipse](http://www.eclipse.org/)
@@ -29,14 +29,14 @@ Also see: [GUIs for LESS.js](usage/#guis-for-less)
 
 ### [Visual Studio](http://www.visualstudio.com/)
 
-* [CSS Is Less][CSSisLESS] (Visual Studio)
+* [CSS Is Less][CSSisLess] (Visual Studio)
 * [Web Essentials 2012][webessentials12] (Visual Studio 2012)
 * [Web Essentials 2013][webessentials13] (Visual Studio 2013)
 * [Web Tools 2013][mswebtools] (Visual Studio)
 
 ### [Dreamweaver](http://www.adobe.com/products/dreamweaver.html)
 
-* [DMXzone LESS CSS Compiler][dmx]
+* [DMXzone Less CSS Compiler][dmx]
 
 ### [Notepad++ 6.x][Npp]
 
@@ -46,18 +46,18 @@ Also see: [GUIs for LESS.js](usage/#guis-for-less)
 
 <!-- invisible links -->
 
-[SublimeOnSaveBuild]: https://github.com/alexnj/SublimeOnSaveBuild "Sublime Text Package for LESS.js"
-[LESS-sublime]: https://github.com/danro/LESS-sublime "Sublime Text Package for LESS.js"
-[LESS-build-sublime]: https://github.com/berfarah/LESS-build-sublime "Sublime Text Package for LESS.js"
-[Sublime-LESS-to-CSS]: https://github.com/timdouglas/sublime-less2css "Sublime Text Package for LESS.js"
+[SublimeOnSaveBuild]: https://github.com/alexnj/SublimeOnSaveBuild "Sublime Text Package for Less.js"
+[Less-sublime]: https://github.com/danro/Less-sublime "Sublime Text Package for Less.js"
+[Less-build-sublime]: https://github.com/berfarah/Less-build-sublime "Sublime Text Package for Less.js"
+[Sublime-Less-to-CSS]: https://github.com/timdouglas/sublime-less2css "Sublime Text Package for Less.js"
 [webessentials12]: http://tinyurl.com/WebEssentials2012
 [webessentials13]: http://vswebessentials.com/
-[CSSisLESS]: http://visualstudiogallery.msdn.microsoft.com/dd5635b0-3c70-484f-abcb-cbdcabaa9923
+[CSSisLess]: http://visualstudiogallery.msdn.microsoft.com/dd5635b0-3c70-484f-abcb-cbdcabaa9923
 [web-workbench]: http://visualstudiogallery.msdn.microsoft.com/2b96d16a-c986-4501-8f97-8008f9db141a
 [dmx]: http://www.dmxzone.com/go/21514/dmxzone-less-css-compiler-features-unveiled/
 [Npp]: http://notepad-plus-plus.org/
 [Npp-Less-Salitrero]: http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_Files#L
-[Npp-Less-azrafe7]: https://github.com/azrafe7/LESS-for-Notepad-plusplus
+[Npp-Less-azrafe7]: https://github.com/azrafe7/Less-for-Notepad-plusplus
 [Npp-How-to]: http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_Files#How_to_install_user_defined_language_files "how to install User Defined Language files"
 [brackets]: http://brackets.io/
 [brackets-ext]: https://github.com/adobe/brackets/wiki/Brackets-Extensions

@@ -28,7 +28,7 @@ Note: if the parameter is not a string, output is not defined. The current imple
 
 > CSS escaping, replaced with `~"value"` syntax.
 
-It expects string as a parameter and return its content as is, but without quotes. It can be used to output CSS value which is either not valid CSS syntax, or uses proprietary syntax which LESS doesn't recognize.
+It expects string as a parameter and return its content as is, but without quotes. It can be used to output CSS value which is either not valid CSS syntax, or uses proprietary syntax which Less doesn't recognize.
 
 Parameters: `string` - a string to escape.
 

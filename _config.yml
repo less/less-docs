@@ -39,10 +39,10 @@ current_version:   <%= less.version %>
 # Site metadata
 brand:             lesscss.org
 title:             Less.js
-lead:              LESS « The Dynamic Stylesheet Language
+lead:              Less « The Dynamic Stylesheet Language
 description: >
-  LESS extends CSS with dynamic behavior such as variables, mixins, operations and functions.
-  LESS runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
+  Less extends CSS with dynamic behavior such as variables, mixins, operations and functions.
+  Less runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
 
 # URLs
 homepage:          http://lesscss.org

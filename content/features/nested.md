@@ -1,4 +1,4 @@
-> LESS allows you to use nesting as well as normal cascading CSS.
+> Less allows you to use nesting as well as normal cascading CSS.
 
 For example, you can produce the following CSS:
 
@@ -17,7 +17,7 @@ For example, you can produce the following CSS:
 }
 ```
 
-With the following LESS:
+With the following Less:
 
 ```less
 #header {

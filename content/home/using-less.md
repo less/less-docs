@@ -7,7 +7,7 @@ detailed information.
 
 ## Installation
 
-The easiest way to install LESS on the server, is via npm, the [node.js](http://nodejs.org/) package manager, as so:
+The easiest way to install Less on the server, is via npm, the [node.js](http://nodejs.org/) package manager, as so:
 
 ```bash
 $ npm install -g less
@@ -96,7 +96,7 @@ See the [Usage]({{rel 'usage'}}) section for details of other tools.
 
 > Using less.js in the browser is great for development, but it's not recommended for production
 
-Client-side is the easiest way to get started and good for developing with LESS, but in production, when performance and reliability is important, _we recommend pre-compiling using node.js or one of the many third party tools available_.
+Client-side is the easiest way to get started and good for developing with Less, but in production, when performance and reliability is important, _we recommend pre-compiling using node.js or one of the many third party tools available_.
 
 To start off, link your `.less` stylesheets with the `rel` attribute set to "`stylesheet/less`":
 
