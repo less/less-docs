@@ -1,6 +1,6 @@
 > Creating loops
 
-In LESS a mixin can call itself. Such recursive mixins, when combined with [Guard Expressions](#) and [Pattern Matching](#), can be used to create various iterative/loop structures.
+In LESS a mixin can call itself. Such recursive mixins, when combined with [Guard Expressions](#mixin-guards-feature) and [Pattern Matching](#mixins-parametric-feature-pattern-matching), can be used to create various iterative/loop structures.
 
 Example:
 
