@@ -14,7 +14,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     // Project metadata
-    pkg : grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON('package.json'),
     site: grunt.file.readYAML('_config.yml'),
 
     jshint: {
@@ -69,9 +69,9 @@ module.exports = function(grunt) {
       site: {
         options: {
           partials: ['content/**/*.md'],
-          permalinks: {preset: 'pretty'}
+          // permalinks: {preset: 'pretty'}
         },
-        src: '<%= site.pages %>/*.hbs',
+        src: '<%= site.pages %>/functions.hbs',
         dest: '<%= site.dest %>/'
       },
       feed: {

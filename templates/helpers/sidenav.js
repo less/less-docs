@@ -8,7 +8,8 @@
 // Node.js
 var path = require('path');
 var _ = require('lodash');
-var yfm = require('yfm');
+var matter = require('gray-matter');
+
 
 // Export helpers
 module.exports.register = function (Handlebars, options, params) {
@@ -30,7 +31,7 @@ module.exports.register = function (Handlebars, options, params) {
 
       // Process context, using YAML front-matter,
       // grunt config and Assemble options.data
-      var pageObj = yfm(filepath) || {};
+      var pageObj = matter.read(filepath) || {};
       var metadata = pageObj.context || {};
 
       context = _.extend(this, opts.data[page.sidenav], metadata, context);

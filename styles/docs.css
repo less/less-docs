@@ -214,30 +214,6 @@ body {
 
 
 
-/*
- * Docs sections
- *
- * Content blocks for each component or feature.
- */
-
-/* Space things out */
-.docs-section + .docs-section {
-  padding-top: 10px;
-}
-
-/* Janky fix for preventing navbar from overlapping */
-h1[id] {
-  padding-top: 80px;
-  margin-top: -45px;
-}
-h2[id], h3[id] {
-  padding-top: 80px;
-  margin-top: -60px;
-}
-
-
-
-
 
 
 /*

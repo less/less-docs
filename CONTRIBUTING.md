@@ -1,8 +1,8 @@
-## Contributing to the Wiki
+## Contributing to the Documentation
 
 **Formatting Standards**
 
-For consistency across all examples in the wiki and to ensure that our code examples are readable, we ask that you please follow these guidelines when contributing to the wiki:
+For consistency across all examples in the docs and to ensure that our code examples are readable, please follow these guidelines when contributing:
 
 * Four spaces for indentation, and always use proper indentation
 * Multiple-line formatting (one property and value per line)
