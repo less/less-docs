@@ -13,7 +13,7 @@ To enable Watch mode, option `env` must be set to `development`. Then AFTER the 
 Alternatively you can temporary enable Watch mode by appending `#!watch` to the URL.
 
 ### Modify variables
-Enables modification of Less variables in run-time. When called with new values, the Less file is recompiled without reloading. Simple basic usage:
+Enables run-time modification of Less variables. When called with new values, the Less file is recompiled without reloading. Simple basic usage:
 
 ```js
 less.modifyVars({

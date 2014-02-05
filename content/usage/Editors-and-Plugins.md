@@ -57,7 +57,7 @@ Also see: [GUIs for Less.js](usage/#guis-for-less)
 [dmx]: http://www.dmxzone.com/go/21514/dmxzone-less-css-compiler-features-unveiled/
 [Npp]: http://notepad-plus-plus.org/
 [Npp-Less-Salitrero]: http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_Files#L
-[Npp-Less-azrafe7]: https://github.com/azrafe7/Less-for-Notepad-plusplus
+[Npp-Less-azrafe7]: https://github.com/azrafe7/LESS-for-Notepad-plusplus
 [Npp-How-to]: http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_Files#How_to_install_user_defined_language_files "how to install User Defined Language files"
 [brackets]: http://brackets.io/
 [brackets-ext]: https://github.com/adobe/brackets/wiki/Brackets-Extensions
