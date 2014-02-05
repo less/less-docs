@@ -22,7 +22,7 @@ templates:        templates
 pages:            <%= site.templates %>
 includes:         <%= site.templates %>/includes
 layouts:          <%= site.templates %>/layouts
-markedtemplates:   <%= site.templates %>/marked
+markedtemplates:  <%= site.templates %>/marked
 layoutext:        .hbs
 layout:           default
 

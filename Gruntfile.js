@@ -72,7 +72,7 @@ module.exports = function(grunt) {
           partials: ['content/**/*.md'],
           // permalinks: {preset: 'pretty'}
         },
-        src: '<%= site.pages %>/functions.hbs',
+        src: '<%= site.pages %>/*.hbs',
         dest: '<%= site.dest %>/'
       },
       feed: {
