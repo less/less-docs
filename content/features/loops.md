@@ -32,7 +32,7 @@ A generic example of using a recursive loop to generate CSS grid classes:
 ```less
 .generate-columns(4);
 
-.generate-columns(@n, @i: 1) when (@i <= @n) {
+.generate-columns(@n, @i: 1) when (@i =< @n) {
   .column-@{i} {
     width: (@i * 100% / @n);
   }
