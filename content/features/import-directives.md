@@ -51,12 +51,12 @@ Released [v1.5.0]({{ site.codebasemaster }}CHANGELOG.md)
 
 Example: `@import (reference) "foo.less";`
 
-`reference` is one of the most powerful features in the Less language. Imagine that `reference` marks every directive and selector with a _reference flag_ in the imported file, imports as normal, but when the CSS is generated, "reference" selectors (as well as any media queries containing only reference selectors) are not output. `reference` styles will not show up in your generated CSS unless the reference styles are used as (mixins)[#mixins-feature] or (extended)[#extend-feature].
+`reference` is one of the most powerful features in the Less language. Imagine that `reference` marks every directive and selector with a _reference flag_ in the imported file, imports as normal, but when the CSS is generated, "reference" selectors (as well as any media queries containing only reference selectors) are not output. `reference` styles will not show up in your generated CSS unless the reference styles are used as [mixins](#mixins-feature) or [extended](#extend-feature).
 
 Additionally, **`reference`** produces different results depending on which method was used (mixin or extend):
 
 * **[extend](#extend-feature)**: When a selector is extended, only the new selector is marked as _not referenced_, and it is pulled in at the position of the reference `@import` statement.
-* **[mixins](#mixins-feature)**: When a `reference` style is used as an [[implicit mixin|Mixins]], its rules are are mixed-in, marked "not reference", and appear in the referenced place as normal.
+* **[mixins](#mixins-feature)**: When a `reference` style is used as an [implicit mixin](#mixins-feature), its rules are are mixed-in, marked "not reference", and appear in the referenced place as normal.
 
 
 ### reference example
