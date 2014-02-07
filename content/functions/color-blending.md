@@ -1,6 +1,6 @@
 > These operations are _similar_ (though not necessarily identical) to the blend modes found in image editors like Photoshop, Fireworks or GIMP, so you can use them to make your CSS colors match your images.
 
-## multiply
+### multiply
 
 > Multiply two colors. Corresponding RGB channels from each of the two colors are multiplied together then divided by 255. The result is a darker color.
 
@@ -85,7 +85,7 @@ multiply(#ff6600, #0000ff);
 ![Color 3](holder.js/100x40/#000000:#ffffff/text:000000)
 
 
-## screen
+### screen
 
 > Do the opposite of `multiply`. The result is a brighter color.
 
@@ -171,7 +171,7 @@ screen(#ff6600, #0000ff);
 ![Color 3](holder.js/100x40/#ff66ff:#000000/text:ff66ff)
 
 
-## overlay
+### overlay
 
 > Combines the effects of both `multiply` and `screen`. Conditionally make light channels lighter and dark channels darker. **Note**: The results of the conditions are determined by the first color parameter.
 
@@ -257,7 +257,7 @@ overlay(#ff6600, #0000ff);
 ![Color 3](holder.js/100x40/#ff0000:#ffffff/text:ff0000)
 
 
-## softlight
+### softlight
 
 > Similar to `overlay` but avoids pure black resulting in pure black, and pure white resulting in pure white.
 
@@ -343,7 +343,7 @@ softlight(#ff6600, #0000ff);
 ![Color 3](holder.js/100x40/#ff2900:#ffffff/text:ff2900)
 
 
-## hardlight
+### hardlight
 
 > The same as `overlay` but with the color roles reversed.
 
@@ -429,7 +429,7 @@ hardlight(#ff6600, #0000ff);
 ![Color 3](holder.js/100x40/#0000ff:#ffffff/text:0000ff)
 
 
-## difference
+### difference
 
 > Subtracts the second color from the first color on a channel-by-channel basis. Negative values are inverted. Subtracting black results in no change; subtracting white results in color inversion.
 
@@ -515,7 +515,7 @@ difference(#ff6600, #0000ff);
 ![Color 3](holder.js/100x40/#ff66ff:#000000/text:ff66ff)
 
 
-## exclusion
+### exclusion
 
 > A similar effect to `difference` with lower contrast.
 
@@ -601,7 +601,7 @@ exclusion(#ff6600, #0000ff);
 ![Color 3](holder.js/100x40/#ff66ff:#000000/text:ff66ff)
 
 
-## average
+### average
 
 > Compute the average of two colors on a per-channel (RGB) basis.
 
@@ -686,7 +686,7 @@ average(#ff6600, #0000ff);
 ![Color 2](holder.js/100x40/#0000ff:#ffffff/text:0000ff)
 ![Color 3](holder.js/100x40/#803380:#ffffff/text:803380)
 
-## negation
+### negation
 
 > Do the opposite effect to `difference`.
 
