@@ -46,6 +46,10 @@ module.exports = function(params, callback) {
             return $(e).attr("id");
         });
     
+    if (linkMap[shortname].checks) {
+        linkMap[shortname].checks.map(function (check) { check(); });
+    }
+    
     function isLinkException(href, $e) {
         if (href === "#" && $e.attr("class") === "dropdown-toggle") {
             return true;
@@ -58,6 +62,14 @@ module.exports = function(params, callback) {
     }
     
     links.map(function(i, e) {
+
+        function checkInternalCrossRefLink() {
+            if (!findLink(linkid, linkMap[linkpage].anchors)) {
+                failures.push("Could not find internal cross link '" + href + "' as part of link '" + $.html(e) + "'");
+            }
+        }
+
+
         var href = $(e).attr("href");
         if (href.match(/^#/)) {
             if (!isLinkException(href, $(e))) {
@@ -98,9 +110,16 @@ module.exports = function(params, callback) {
                 failures.push("Could not find internal page '" + href + "' as part of link '" + $.html(e));
             }
             
-            if (linkMap[linkpage]) {
-            } else {
-                //linkMap[linkpage] = {};
+            if (linkid) {
+                if (!linkMap[linkpage]) {
+                    linkMap[linkpage] = {};
+                }
+                if (linkMap[linkpage].anchors) {
+                    checkInternalCrossRefLink();
+                } else {
+                    linkMap[linkpage].checks = linkMap[linkpage].checks || [];
+                    linkMap[linkpage].checks.push(checkInternalCrossRefLink);
+                }
             }
         }
     });
