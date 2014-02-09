@@ -5,7 +5,7 @@
   "rawmaster": "https://raw.github.com/less/less.js/master/dist",
   "sourcearchive": "https://github.com/less/less.js/archive/v",
   "name": "less",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "Leaner CSS",
   "homepage": "http://lesscss.org",
   "author": {
@@ -36,7 +36,7 @@
     "test": "./test"
   },
   "jam": {
-    "main": "./dist/less-1.5.0.js"
+    "main": "./dist/less-1.6.3.js"
   },
   "engines": {
     "node": ">=0.4.2"

@@ -193,7 +193,7 @@ rgba(75, 25, 0, 0.75)
 
 > Remove all saturation from a color; the same as calling `desaturate(@color, 100%)`.
 
-Because the saturation is not affected by hue, the resulting color mapping may be somewhat dull or muddy; [`luma`](#color-functions-luma) may provide a better result as it extracts perceptual rather than linear brightness, for example `greyscale('#0000ff')` will return the same value as `greyscale('#00ff00')`, though they appear quite different in brightness to the human eye.
+Because the saturation is not affected by hue, the resulting color mapping may be somewhat dull or muddy; [`luma`](#color-channel-luma) may provide a better result as it extracts perceptual rather than linear brightness, for example `greyscale('#0000ff')` will return the same value as `greyscale('#00ff00')`, though they appear quite different in brightness to the human eye.
 
 Parameters: `color`: A color object.
 
@@ -224,7 +224,7 @@ This time the grey's lightness looks about the same as the green, though its val
 
 > Choose which of two colors provides the greatest contrast with another.
 
-This is useful for ensuring that a color is readable against a background, which is also useful for accessibility compliance. This function works the same way as the [contrast function in Compass for SASS](http://compass-style.org/reference/compass/utilities/color/contrast/). In accordance with [WCAG 2.0](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef), colors are compared using their [luma](#color-functions-luma) value, not their lightness.
+This is useful for ensuring that a color is readable against a background, which is also useful for accessibility compliance. This function works the same way as the [contrast function in Compass for SASS](http://compass-style.org/reference/compass/utilities/color/contrast/). In accordance with [WCAG 2.0](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef), colors are compared using their [luma](#color-channel-luma) value, not their lightness.
 
 The light and dark parameters can be supplied in either order - the function will calculate their luma values and assign light and dark automatically, which means you can't use this function to select the *least* contrasting color by reversing the order.
 

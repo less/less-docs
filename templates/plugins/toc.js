@@ -40,7 +40,8 @@ module.exports = function(params, callback) {
         var text  = $e.text().trim();
         var link  = $e.attr("id");
         var node = { text: text, link: link, $e: $e };
-        var depth = Math.min(2, parseInt(e.name.replace(/h/gi, ''), 10));
+        var header = parseInt(e.name.replace(/h/gi, ''), 10);
+        var depth = header <= 1 ? 1 : 2;
         var location = findLocation(toc, depth);
         location.push( node );
     });
