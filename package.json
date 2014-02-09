@@ -55,7 +55,8 @@
     "handlebars-helper-partial": "~0.1.1",
     "handlebars-helper-rel": "~0.1.0",
     "handlebars-helper-slugify": "~0.2.0",
-    "lodash": "~2.4.1"
+    "lodash": "~2.4.1",
+    "request": "~2.33.0"
   },
   "keywords": [
     "handlebars-helper-compose",

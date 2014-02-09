@@ -2,7 +2,7 @@
 
 The `merge` feature allows for aggregating values from multiple properties into a comma separated list under a single property. `merge` is useful for properties such as background and transform.
 
-Released [v1.5.0]({{ site.codebasemaster }}CHANGELOG.md)
+Released [v1.5.0]({{ less.master }}CHANGELOG.md)
 
 Example:
 

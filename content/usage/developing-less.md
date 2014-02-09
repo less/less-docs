@@ -2,7 +2,7 @@
 title: Contributing
 ---
 
-Thanks for thinking about contributing. Please read the [contributing instructions]({{ site.coderepo }}/blob/master/CONTRIBUTING.md) carefully to avoid wasted work.
+Thanks for thinking about contributing. Please read the [contributing instructions]({{ less.master }}CONTRIBUTING.md) carefully to avoid wasted work.
 
 ## Install these tools
 

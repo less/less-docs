@@ -4,7 +4,7 @@ title: Command Line Usage
 
 > Compile `.less` files to `.css` using the command line
 
-<span class="warning">Heads up! If the command line isn't your thing, learn more about [GUI compilers for Less](#).</span>
+<span class="warning">Heads up! If the command line isn't your thing, learn more about [GUIs for Less](#guis-for-less).</span>
 
 ### Installing lessc
 

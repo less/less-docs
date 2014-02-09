@@ -47,7 +47,7 @@ The following import directives have been implemented:
 ## reference
 > Use `@import (reference)` to import external files, but without adding the imported styles to the compiled output unless referenced.
 
-Released [v1.5.0]({{ site.codebasemaster }}CHANGELOG.md)
+Released [v1.5.0]({{ less.master }}CHANGELOG.md)
 
 Example: `@import (reference) "foo.less";`
 
@@ -72,7 +72,7 @@ And you will pull in only `.navbar` related styles from Bootstrap.
 ## inline
 > Use `@import (inline)` to include external files, but not process them.
 
-Released [v1.5.0]({{ site.codebasemaster }}CHANGELOG.md)
+Released [v1.5.0]({{ less.master }}CHANGELOG.md)
 
 Example: `@import (inline) "not-less-compatible.css";`
 
@@ -84,7 +84,7 @@ So you can use this to include the file in the output so that all CSS will be in
 ## less
 > Use `@import (less)` to treat imported files as Less, regardless of file extension.
 
-Released [v1.4.0]({{ site.codebasemaster }}CHANGELOG.md)
+Released [v1.4.0]({{ less.master }}CHANGELOG.md)
 
 Example:
 
@@ -96,7 +96,7 @@ Example:
 ## css
 > Use `@import (css)` to treat imported files as regular CSS, regardless of file extension. This means the import statement will be left as it is.
 
-Released [v1.4.0]({{ site.codebasemaster }}CHANGELOG.md)
+Released [v1.4.0]({{ less.master }}CHANGELOG.md)
 
 Example:
 
@@ -113,7 +113,7 @@ outputs
 ## once
 > The default behavior of `@import` statements. It means the file is imported only once and subsequent import statements for that file will be ignored.
 
-Released [v1.4.0]({{ site.codebasemaster }}CHANGELOG.md)
+Released [v1.4.0]({{ less.master }}CHANGELOG.md)
 
 This is the default behavior of `@import` statements.
 
@@ -128,7 +128,7 @@ Example:
 ## multiple
 > Use `@import (multiple)` to allow importing of multiple files with the same name. This is the opposite behavior to once.
 
-Released [v1.4.0]({{ site.codebasemaster }}CHANGELOG.md)
+Released [v1.4.0]({{ less.master }}CHANGELOG.md)
 
 Example:
 

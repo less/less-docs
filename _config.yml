@@ -32,6 +32,7 @@ plugins:
   - assemble-contrib-permalinks
   - templates/plugins/toc.js
   - templates/plugins/holder-404-avoid.js
+#  - templates/plugins/link-checker.js
 
 # Less.js metadata
 current_version:   <%= less.version %>

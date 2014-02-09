@@ -2,7 +2,7 @@
 title: Editors and plugins
 ---
 
-Also see: [GUIs for Less.js](usage/#guis-for-less)
+Also see: [GUIs for Less.js](#guis-for-less)
 
 ## Editors and IDEs
 
