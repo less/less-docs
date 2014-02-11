@@ -47,7 +47,7 @@
     "grunt-prettify": "~0.3.4",
     "grunt-repos": "~0.1.2",
     "grunt-sync-pkg": "~0.1.2",
-    "handlebars-helper-compose": "~0.2.9",
+    "handlebars-helper-compose": "~0.2.11",
     "handlebars-helper-datetime": "~0.1.0",
     "handlebars-helper-eachitems": "~0.1.2",
     "handlebars-helper-feed": "~0.1.0",
