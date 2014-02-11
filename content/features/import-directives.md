@@ -76,7 +76,7 @@ Released [v1.5.0]({{ less.master }}CHANGELOG.md)
 
 Example: `@import (inline) "not-less-compatible.css";`
 
-You will use this when a CSS file may not be less compatible; this is because although less supports most known standards CSS, it does not support comments in some places and does not support all known CSS hacks without modifying the CSS.
+You will use this when a CSS file may be less compatible; this is because although less supports most known standards CSS, it does not support comments in some places and does not support all known CSS hacks without modifying the CSS.
 
 So you can use this to include the file in the output so that all CSS will be in one file.
 
