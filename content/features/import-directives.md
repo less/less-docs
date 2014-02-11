@@ -36,10 +36,10 @@ Syntax: `@import (keyword) "filename";`
 
 The following import directives have been implemented:
 
-* `reference`: use a less file but do not output it
+* `reference`: use a Less file but do not output it
 * `inline`: include the source file in the output but do not process it
-* `less`: treat the file as a less file, no matter what the file extension
-* `css`: treat the file as a css file, no matter what the file extension
+* `less`: treat the file as a Less file, no matter what the file extension
+* `css`: treat the file as a CSS file, no matter what the file extension
 * `once`: only include the file once (this is default behavior)
 * `multiple`: include the file multiple times
 
@@ -76,7 +76,7 @@ Released [v1.5.0]({{ less.master }}CHANGELOG.md)
 
 Example: `@import (inline) "not-less-compatible.css";`
 
-You will use this when a CSS file may not be less compatible; this is because although less supports most known standards CSS, it does not support comments in some places and does not support all known CSS hacks without modifying the CSS.
+You will use this when a CSS file may not be Less compatible; this is because although Less supports most known standards CSS, it does not support comments in some places and does not support all known CSS hacks without modifying the CSS.
 
 So you can use this to include the file in the output so that all CSS will be in one file.
 
