@@ -187,8 +187,6 @@ Now if we want to mixin the `.button` class in our `#header a`, we can do:
 
 Scope in Less is very similar to that of programming languages. Variables and mixins are first looked for locally, and if they aren't found, the compiler will look in the parent scope, and so on.
 
-Note that the order of declaration **does** matter.
-
 ```less
 @var: red;
 
@@ -199,6 +197,23 @@ Note that the order of declaration **does** matter.
   }
 }
 ```
+
+Note that the order of declarations does not matter so the following Less code is identical to the previous example:
+
+```less
+@var: red;
+
+#page {
+  #header {
+    color: @var; // white
+  }
+  @var: white;
+}
+```
+
+**See also**
+
+* [Lazy Loading](#variables-feature-lazy-loading)
 
 
 ### Comments
