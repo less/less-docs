@@ -11,121 +11,14 @@ lead: "How to use less server-side, client-side and with third parties."
   <p class="lead">Using less in node, browser and third party. For general installation instructions and an overview, please read the <a href="{{rel '/#using-less'}}">Using Less</a> section on our front page.</p>
 </div>
 
-{{#compose src="usage/using-with-command-line.md"}}
-  <!-- {{@title}} -->
+{{#each usage.published}}
+  <!-- {{title}} -->
   <div class="docs-section">
     <div class="page-header">
-      <h1 id="{{@basename}}">{{{@title}}}</h1>
+      <h1 id="{{@key}}">{{title}}</h1>
     </div>
-    {{{@content}}}
-  </div>
-{{/compose}}
-
-
-{{#compose src="usage/using-less-in-the-browser.md"}}
-  <!-- {{@title}} -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="{{@basename}}">{{{@title}}}</h1>
+    <div class="section-content">
+      {{md @key}}
     </div>
-    {{{@content}}}
   </div>
-{{/compose}}
-
-
-{{#compose src="usage/browser-support.md"}}
-  <!-- {{@title}} -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="{{@basename}}">{{{@title}}}</h1>
-    </div>
-    {{{@content}}}
-  </div>
-{{/compose}}
-
-
-{{#compose src="usage/online-less-compilers.md"}}
-  <!-- {{@title}} -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="{{@basename}}">{{{@title}}}</h1>
-    </div>
-    {{{@content}}}
-  </div>
-{{/compose}}
-
-
-{{#compose src="usage/guis-for-less.md"}}
-  <!-- {{@title}} -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="{{@basename}}">{{{@title}}}</h1>
-    </div>
-    {{{@content}}}
-  </div>
-{{/compose}}
-
-
-{{#compose src="usage/editors-and-plugins.md"}}
-  <!-- {{@title}} -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="{{@basename}}">{{{@title}}}</h1>
-    </div>
-    {{{@content}}}
-  </div>
-{{/compose}}
-
-
-{{#compose src="usage/third-party-compilers.md"}}
-  <!-- {{@title}} -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="{{@basename}}">{{{@title}}}</h1>
-    </div>
-    {{{@content}}}
-  </div>
-{{/compose}}
-
-
-{{#compose src="usage/frameworks-using-less.md"}}
-  <!-- {{@title}} -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="{{@basename}}">{{{@title}}}</h1>
-    </div>
-    {{{@content}}}
-  </div>
-{{/compose}}
-
-{{#compose src="usage/sourcemaps-*.md"}}
-  <!-- {{@title}} -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="{{@basename}}">{{{@title}}}</h1>
-    </div>
-    {{{@content}}}
-  </div>
-{{/compose}}
-
-
-{{#compose src="usage/less-plugins.md"}}
-  <!-- {{@title}} -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="{{@basename}}">{{{@title}}}</h1>
-    </div>
-    {{{@content}}}
-  </div>
-{{/compose}}
-
-
-{{#compose src="usage/developing-less.md"}}
-  <!-- {{@title}} -->
-  <div class="docs-section">
-    <div class="page-header">
-      <h1 id="{{@basename}}">{{{@title}}}</h1>
-    </div>
-    {{{@content}}}
-  </div>
-{{/compose}}
+{{/each}}

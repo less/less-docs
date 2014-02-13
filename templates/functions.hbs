@@ -12,80 +12,16 @@ lead: Function reference
     <h1 id="functions-overview">Functions</h1>
   </div>
   <p class="lead">Built-in functions supported by Less.</p>
-  {{#unpublished}}
-  Once this section is filled in, also add the side navigation link.
-  <h2 id="functions-how-to-use">How to use</h2>
-  <p>Lorem ipsum.</p>
-  {{/unpublished}}
 </div>
 
-{{!-- String --}}
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="string-functions">String Functions</h1>
+{{#each functions.published}}
+  <!-- {{title}} -->
+  <div class="docs-section">
+    <div class="page-header">
+      <h1 id="{{@key}}">{{title}}</h1>
+    </div>
+    <div class="section-content">
+      {{md @key}}
+    </div>
   </div>
-  {{md 'string'}}
-</div>
-
-{{!-- Misc --}}
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="misc-functions">Misc Functions</h1>
-  </div>
-  {{md 'misc'}}
-  {{md 'default-function'}}
-</div>
-
-{{!-- List --}}
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="list-functions">List Functions</h1>
-  </div>
-  {{md 'list'}}
-</div>
-
-{{!-- Math --}}
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="math-functions">Math Functions</h1>
-  </div>
-  {{md 'math'}}
-</div>
-
-{{!-- Type --}}
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="type-functions">Type Functions</h1>
-  </div>
-  {{md 'type'}}
-</div>
-
-
-{{!-- Color --}}
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="color-definition">Color Definition Functions</h1>
-    {{md 'color-definition'}}
-  </div>
-</div>
-
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="color-channel">Color Channel Functions</h1>
-    {{md 'color-channel'}}
-  </div>
-</div>
-
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="color-operations">Color Operation Functions</h1>
-    {{md 'color-operations'}}
-  </div>
-</div>
-
-<div class="docs-section">
-  <div class="page-header">
-    <h1 id="color-blending">Color Blending Functions</h1>
-    {{md 'color-blending'}}
-  </div>
-</div>
+{{/each}}

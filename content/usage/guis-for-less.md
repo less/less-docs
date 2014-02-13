@@ -4,7 +4,7 @@ title: GUIs for Less.js
 
 <span class="warning">**Tip**: try out the different Less tools available for your platform to see which one meets your needs.</span>
 
-_This page focuses on GUI compilers. For command line usage and tools see [Command Line Usage](#using-with-command-line)._
+_This page focuses on GUI compilers. For command line usage and tools see [Command Line Usage](#command-line-usage)._
 
 ## Cross platform
 

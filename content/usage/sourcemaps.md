@@ -1,5 +1,5 @@
 ---
-title: Creating Sourcemaps
+title: Sourcemaps
 published: false
 ---
 {{!}}

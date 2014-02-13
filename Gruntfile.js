@@ -134,12 +134,13 @@ module.exports = function(grunt) {
       options: {livereload: true},
       site: {
         files: [
-          'Gruntfile.js',
           '<%= site.helpers %>',
           '<%= site.styles %>/**/*.less',
           '<%= site.templates %>/**/*.hbs',
           '<%= site.content %>/**/*.md',
-          '<%= site.content %>/_config.yml'
+          '<%= site.content %>/_config.yml',
+          '<%= site.data %>/*.yml',
+          '<%= site.data %>/*.json'
         ],
         tasks: ['clean', 'copy', 'less:site', 'assemble']
       }
