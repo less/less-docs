@@ -6,9 +6,19 @@ title: Command Line Usage
 
 <span class="warning">Heads up! If the command line isn't your thing, learn more about [GUIs for Less](#guis-for-less).</span>
 
-### Installing lessc
+### Installing lessc for use globally
 
-Install with [npm]()
+Install with [npm](https://www.npmjs.org/)
+
+```bash
+npm install less -g
+```
+
+and then you will have the `lessc` command available globally. For a specific version (or tag) you can add `@VERSION` after our package name, e.g. `npm install less@1.6.2 -g`.
+
+### Installing for node development
+
+Alternatively if you don't use the compiler globally, you may be after
 
 ```bash
 npm i less --save-dev
@@ -18,22 +28,11 @@ This will install the latest official version of lessc in your project folder, a
 
 Note that a [tilde version range][] will be automatically specified in `package.json`. This is good, as new patch releases of the latest version will be installable by npm.
 
+#### Beta releases of lessc
 
-#### Installing a specific version of lessc
+Periodically, as new functionality is being developed, lessc builds will be published to npm, tagged as. These builds will _not_ be published as a `@latest` official release, and will typically have a build number or alpha/beta/release candidate designation.
 
-If you need a specific version of lessc, run `npm install less@VERSION --save-dev` where `VERSION` is the version you need, and npm will install that version of lessc in your project folder, adding it to your `package.json` devDependencies.
-
-
-#### Installing a published development version of lessc
-
-Periodically, as new functionality is being developed, lessc builds will be published to npm. These builds will _not_ be published as a `@latest` official release, and will typically have a build number or alpha/beta/release candidate designation.
-
-Like installing a specific version of lessc, run `npm install lessc@VERSION --save-dev` where `VERSION` is the version you need, and npm will install that version of lessc in your project folder, adding it to your `package.json` devDependencies.
-
-Note that regardless of the version you specify, a [tilde version range][] will be specified in `package.json`. **This is very bad**, as new, possibly incompatible, patch releases of the specified development version may be installed by npm, breaking your build.
-
-_In this case it is **very important** that you manually edit your `package.json` and remove the `~` (tilde) from the version number. This will lock in the exact development version that you have specified._
-
+Since patch releases are non-breaking we will publish patch releases immediately and alpha/beta/candidate versions will be published as minor or major version upgrades (we endevour since 1.4.0 to follow [semantic versioning](http://semver.org/)).
 
 #### Installing an unpublished development version of lessc
 
@@ -42,7 +41,7 @@ If you want to install a bleeding-edge, unpublished version of lessc, follow the
 The specified git URL may be that of the official lessc repo or a fork.
 
 
-[tilde version range]: https://npmjs.org/doc/json.html#Tilde-Version-Ranges
+[tilde version range]: https://www.npmjs.org/doc/misc/semver.html#Ranges
 [git URL as a dependency]: https://npmjs.org/doc/json.html#Git-URLs-as-Dependencies
 
 ### Server-Side and Command Line Usage
@@ -69,27 +68,104 @@ $ lessc bootstrap.less bootstrap.css
 $ lessc -x bootstrap.less bootstrap.css
 ```
 
-#### --help, -h
-
-Prints above help message and exits.
-
-#### Include paths
-
-lessc --include-path=PATH1;PATH2
-
-Set include paths. Separated by `:'. Use `;' on Windows.
-
-{ paths: ['PATH1', 'PATH2']  }
-
+### Help
 
 ```bash
-  -M, --depends            Output a makefile import dependency list to stdout
-  --no-color               Disable colorized output.
-  --no-ie-compat           Disable IE compatibility checks.
-  --no-js                  Disable JavaScript in less files
-  -l, --lint               Syntax check only (lint).
-  -s, --silent             Suppress output of error messages.
-  --strict-imports         Force evaluation of imports.
+lessc --help
+lessc --h
+```
+
+Prints a help message with available options and exits.
+
+### Include paths
+
+```bash
+lessc --include-path=PATH1;PATH2
+```
+
+Sets available include paths. Separated by ':' or ';' on Windows.
+
+Use this to configure a list of paths which less will use to find imports in. You might use this for instance to specify a path to a library which you want to be referenced simply and relatively in the less files.
+
+In node, set a paths option
+```js
+{ paths: ['PATH1', 'PATH2']  }
+```
+
+### Makefile
+
+```bash
+lessc -M
+lessc --depends
+```
+
+### No Color
+
+```bash
+lessc --no-color
+```
+
+### No IE Compatability
+
+```bash
+lessc --no-ie-compat
+```
+
+Currently only used for the data-uri function to ensure that images aren't created that are too large for the browser to handle.
+
+### Disable JavaScript
+
+```bash
+lessc --no-js
+```
+
+### Lint
+
+```bash
+lessc --lint
+lessc --l
+```
+
+Runs the less parser and just reports errors without any output.
+
+### Silent
+
+```bash
+lessc -s
+lessc --silent
+```
+
+### Strict Imports
+
+```bash
+lessc --strict-imports
+```
+
+### Allow imports from insecure https hosts
+
+```bash
+lessc --insecure
+```
+
+### Version
+
+```
+lessc -v
+lessc --version
+```
+
+### Compress
+
+```
+lessc -x
+lessc --compress
+```
+
+Compress using less built-in compression. This does an okay job but does not utilise all the tricks of dedicated css compression. Please feel free to improve our compressed output with a pull request.
+
+###
+
+```
   --insecure               Allow imports from insecure https hosts.
   -v, --version            Print version number and exit.
   -x, --compress           Compress output by removing some whitespaces.
