@@ -149,14 +149,14 @@ lessc --insecure
 
 ### Version
 
-```
+```bash
 lessc -v
 lessc --version
 ```
 
 ### Compress
 
-```
+```bash
 lessc -x
 lessc --compress
 ```
@@ -165,7 +165,7 @@ Compress using less built-in compression. This does an okay job but does not uti
 
 ### Clean CSS
 
-```
+```bash
 lessc --clean-css
 ```
 
@@ -175,7 +175,7 @@ Note - it does not yet support sourcemaps, for that you can only use our own com
 
 ### Clean CSS Options
 
-```
+```bash
 lessc --clean-css --clean-option=--selectors-merge-mode:ie8 --clean-option=--advanced
 ```
 
@@ -183,7 +183,7 @@ Use this to pass options to clean css. The default options are the safest, so ar
 
 ### Source Map Output Filename
 
-```
+```bash
 lessc --source-map
 lessc --source-map=file.map
 ```
@@ -192,7 +192,7 @@ Tells less to generate a sourcemap. If you have the sourcemap option without a f
 
 ### Source Map Rootpath
 
-```
+```bash
 lessc --source-map-rootpath=dev-files/
 ```
 
@@ -200,7 +200,7 @@ Specifies a rootpath that should be prepended to each of the less file paths ins
 
 Use this option if for instance you have a css file generated in the root on your web server but have your source less/css/map files in a different folder. So for the option above you might have
 
-```
+```bash
 output.css
 dev-files/output.map
 dev-files/main.less
@@ -208,7 +208,7 @@ dev-files/main.less
 
 ### Source Map Basepath
 
-```
+```bash
 lessc --source-map-basepath=less-files/
 ```
 
@@ -216,7 +216,7 @@ This is the opposite of the rootpath option, it specifies a path which should be
 
 ### Source Map Less Inline
 
-```
+```bash
 lessc --source-map-less-inline
 ```
 
@@ -226,7 +226,7 @@ This can be used in conjunction with the map inline option so that you do not ne
 
 ### Source Map Map Inline
 
-```
+```bash
 lessc --source-map-map-inline
 ```
 
@@ -234,7 +234,7 @@ This option specifies that the map file should be inline in the output CSS. This
 
 ### Source Map URL
 
-```
+```bash
 lessc --source-map-url=../my-map.json
 ```
 
@@ -242,7 +242,7 @@ Allows you to override the URL in the css that points at the map file. This is f
 
 ### Rootpath
 
-```
+```bash
 lessc -rp=resources/
 lessc --rootpath=resources/
 ```
@@ -253,7 +253,7 @@ For instance, if all the images the css use are in a folder called resources, yo
 
 ### Relative URLs
 
-```
+```bash
 lessc -ru
 lessc --relative-urls
 ```
@@ -289,7 +289,7 @@ You may also want to consider using the data-uri function instead of this option
 
 ### Strict Math
 
-```
+```bash
 lessc -sm=on
 lessc --strict-math=on
 ```
@@ -328,7 +328,7 @@ We originally planned to default this to true in the future, but it has been a c
 
 ### Strict Units
 
-```
+```bash
 lessc -su=on
 lessc --strict-units=on
 ```
@@ -349,7 +349,7 @@ With strict units on, we assume this is a bug in the calculation and throw an er
 
 ### Global Variable
 
-```
+```bash
 lessc --global-var='my-background:red'
 ```
 
@@ -357,23 +357,26 @@ This option defines a variable that can be referenced by the file. Effectively t
 
 ### Modify Variable
 
-```
+```bash
 lessc --modify-var='my-background:red'
 ```
 
 As opposed to the global variable option, this puts the declaration at the end of your base file, meaning it will override anything defined in your Less file.
 
+### URL Arguments
+
+```bash
+lessc --url-args="cache726357"
 ```
--------------------------- Deprecated ----------------
-  -O0, -O1, -O2            Set the parser's optimization level. The lower
-                           the number, the less nodes it will create in the
-                           tree. This could matter for debugging, or if you
-                           want to access the individual nodes in the tree.
-  --line-numbers=TYPE      Outputs filename and line numbers.
-                           TYPE can be either 'comments', which will output
-                           the debug info within comments, 'mediaquery'
-                           that will output the information within a fake
-                           media query which is compatible with the SASS
-                           format, and 'all' which will do both.
-  --verbose                Be verbose.
+
+This option allows you to specify a argument to go on to every URL. This may be used for cache-busting for instance.
+
+### Line Numbers
+
+```bash
+lessc --line-numbers=comments
+lessc --line-numbers=mediaquery
+lessc --line-numbers=all
 ```
+
+Generates inline source-mapping. This was the only option before browsers started supporting sourcemaps. We are consider deprecating, so please get in touch if you want this option to stick around.
