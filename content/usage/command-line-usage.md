@@ -163,34 +163,207 @@ lessc --compress
 
 Compress using less built-in compression. This does an okay job but does not utilise all the tricks of dedicated css compression. Please feel free to improve our compressed output with a pull request.
 
-###
+### Clean CSS
 
 ```
-  --insecure               Allow imports from insecure https hosts.
-  -v, --version            Print version number and exit.
-  -x, --compress           Compress output by removing some whitespaces.
-  --clean-css              Compress output using clean-css
-  --clean-option=opt:val   Pass an option to clean css, using CLI arguments from
-                           https://github.com/GoalSmashers/clean-css e.g.
-                           --clean-option=--selectors-merge-mode:ie8
-                           and to switch on advanced use --clean-option=--advanced
-  --source-map[=FILENAME]  Outputs a v3 sourcemap to the filename (or output filename.map)
-  --source-map-rootpath=X  adds this path onto the sourcemap filename and less file paths
-  --source-map-basepath=X  Sets sourcemap base path, defaults to current working directory.
-  --source-map-less-inline puts the less files into the map instead of referencing them
-  --source-map-map-inline  puts the map (and any less files) into the output css file
-  --source-map-url=URL     the complete url and filename put in the less file
-  -rp, --rootpath=URL      Set rootpath for url rewriting in relative imports and urls.
-                           Works with or without the relative-urls option.
-  -ru, --relative-urls     re-write relative urls to the base less file.
-  -sm=on|off               Turn on or off strict math, where in strict mode, math
-  --strict-math=on|off     requires brackets. This option may default to on and then
-                           be removed in the future.
-  -su=on|off               Allow mixed units, e.g. 1px+1em or 1px*1px which have units
-  --strict-units=on|off    that cannot be represented.
-  --global-var='VAR=VALUE' Defines a variable that can be referenced by the file.
-  --modify-var='VAR=VALUE' Modifies a variable already declared in the file.
+lessc --clean-css
+```
 
+Clean CSS is our minifer of choice if you want to get the most minified you can. This option switches it on.
+
+Note - it does not yet support sourcemaps, for that you can only use our own compression.
+
+### Clean CSS Options
+
+```
+lessc --clean-css --clean-option=--selectors-merge-mode:ie8 --clean-option=--advanced
+```
+
+Use this to pass options to clean css. The default options are the safest, so are IE8 compatible.
+
+### Source Map Output Filename
+
+```
+lessc --source-map
+lessc --source-map=file.map
+```
+
+Tells less to generate a sourcemap. If you have the sourcemap option without a filename it will use the source less file name but with the extension map.
+
+### Source Map Rootpath
+
+```
+lessc --source-map-rootpath=dev-files/
+```
+
+Specifies a rootpath that should be prepended to each of the less file paths inside the sourcemap and also to the path to the map file specified in your output css.
+
+Use this option if for instance you have a css file generated in the root on your web server but have your source less/css/map files in a different folder. So for the option above you might have
+
+```
+output.css
+dev-files/output.map
+dev-files/main.less
+```
+
+### Source Map Basepath
+
+```
+lessc --source-map-basepath=less-files/
+```
+
+This is the opposite of the rootpath option, it specifies a path which should be removed from the output paths. For instance if you are compiling a file in the less-files directory but the source files will be available on your web server in the root or current directory, you can specify this to remove the additional `less-files` part of the path
+
+### Source Map Less Inline
+
+```
+lessc --source-map-less-inline
+```
+
+This option specifies that we should include all of the css files in to the sourcemap. This means that you only need your map file to get to your original source.
+
+This can be used in conjunction with the map inline option so that you do not need to have any additional external files at all.
+
+### Source Map Map Inline
+
+```
+lessc --source-map-map-inline
+```
+
+This option specifies that the map file should be inline in the output CSS. This is not recommended for production, but for development it allows the compiler to produce a single output file which in browsers that support it, use the compiled css but show you the non-compiled less source.
+
+### Source Map URL
+
+```
+lessc --source-map-url=../my-map.json
+```
+
+Allows you to override the URL in the css that points at the map file. This is for cases when the rootpath and basepath options are not producing exactly what you need.
+
+### Rootpath
+
+```
+lessc -rp=resources/
+lessc --rootpath=resources/
+```
+
+Allows you to add a path to every generated import and url in your css. This does not effect less import statements that are processed, just ones that are left in the output css.
+
+For instance, if all the images the css use are in a folder called resources, you can use this option to add this on to the URL's and then have the name of that folder configurable.
+
+### Relative URLs
+
+```
+lessc -ru
+lessc --relative-urls
+```
+
+By default URLs are kept as-is, so if you import a file in a sub-directory that references an image, exactly the same URL will be output in the css. This option allows you to re-write URL's in imported files so that the URL is always relative to the base imported file. E.g.
+
+```less
+# main.less
+@import "files/backgrounds.less";
+# files/backgrounds.less
+.icon-1 {
+  background-image: url('images/lamp-post.png');
+}
+```
+
+this will output the following normally
+
+```css
+.icon-1 {
+  background-image: url('images/lamp-post.png');
+}
+```
+
+but with this option on it will instead output
+
+```css
+.icon-1 {
+  background-image: url('files/images/lamp-post.png');
+}
+```
+
+You may also want to consider using the data-uri function instead of this option, which will embed images into the css.
+
+### Strict Math
+
+```
+lessc -sm=on
+lessc --strict-math=on
+```
+
+Defaults to Off. 
+
+Without this option on Less will try and process all maths in your css e.g.
+
+```less
+.class {
+  height: calc(100% - 10px);
+}
+```
+
+will be processed currently.
+
+With strict math on, only maths that is inside un-necessary parenthesis will be processed. For instance.
+
+```less
+.class {
+  width: calc(100% - (10px  - 5px));
+  height: (100px / 4px);
+  font-size: 1 / 4;
+}
+```
+
+```css
+.class {
+  width: calc(100% - 5px);
+  height: 25px;
+  font-size: 1 / 4;
+}
+```
+
+We originally planned to default this to true in the future, but it has been a contraversial option and we are considering whether we have solved the problem in the right way, or whether less should just have exceptions for instances where `/` is valid or calc is used.
+
+### Strict Units
+
+```
+lessc -su=on
+lessc --strict-units=on
+```
+
+Defaults to off.
+
+Without this option, less attempts to guess at the output unit when it does maths. For instance
+
+```less
+.class {
+  property: 1px * 2px;
+}
+```
+
+In this case, things are clearly not right - a length multiplied by a length gives an area, but css does not support specifying areas. So we assume that the user meant for one of the values to be a value, not a unit of length and we output `2px`.
+
+With strict units on, we assume this is a bug in the calculation and throw an error.
+
+### Global Variable
+
+```
+lessc --global-var='my-background:red'
+```
+
+This option defines a variable that can be referenced by the file. Effectively the declaration is put at the top of your base Less file, meaning it can be used but it also can be overridden if this variable is defined in the file.
+
+### Modify Variable
+
+```
+lessc --modify-var='my-background:red'
+```
+
+As opposed to the global variable option, this puts the declaration at the end of your base file, meaning it will override anything defined in your Less file.
+
+```
 -------------------------- Deprecated ----------------
   -O0, -O1, -O2            Set the parser's optimization level. The lower
                            the number, the less nodes it will create in the
