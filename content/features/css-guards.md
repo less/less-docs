@@ -1,5 +1,7 @@
 > "if"'s around selectors
 
+Released [v1.5.0]({{ less.master }}CHANGELOG.md)
+
 Guards can also be applied to css selectors, which is syntactic sugar for declaring the mixin and then calling it immediately.
 
 For instance, before 1.5.0 you would have had to do this.
