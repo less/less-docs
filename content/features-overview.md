@@ -198,7 +198,7 @@ Scope in Less is very similar to that of programming languages. Variables and mi
 }
 ```
 
-Note that the order of declarations does not matter so the following Less code is identical to the previous example:
+Variables and mixins do not have to be declared before being used so the following Less code is identical to the previous example:
 
 ```less
 @var: red;
