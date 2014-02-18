@@ -26,7 +26,7 @@ which results in:
 }
 ```
 
-Notice that hen you call the mixin, the parenthesis are optional.
+Notice that when you call the mixin, the parenthesis are optional.
 
 ```less
 .a();   //these lines do the same thing
