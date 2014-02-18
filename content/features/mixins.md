@@ -13,8 +13,20 @@ You can mix-in class selectors and id selectors, e.g.
   #b();
 }
 ```
+which results in:
+```css
+.a, #b {
+  color: red;
+}
+.mixin-class {
+  color: red;
+}
+.mixin-id {
+  color: red;
+}
+```
 
-When you call the mixin, the parenthesis are optional.
+Notice that hen you call the mixin, the parenthesis are optional.
 
 ```less
 .a();   //these lines do the same thing
