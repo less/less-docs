@@ -35,7 +35,7 @@ Notice that when you call the mixin, the parenthesis are optional.
 
 ## Not outputting the mixin
 
-If you want to create a mixin but you do not want that mixin to be output, you can put parenthesis around it.
+If you want to create a mixin but you do not want that mixin to be output, you can put parenthesis after it.
 
 ```less
 .my-mixin {
