@@ -14,6 +14,11 @@
       "name": "format",
       "example": "%(@string, values...);",
       "description": "formats a string"
+    },
+    {
+      "name": "replace",
+      "example": "replace(@string, @pattern, @replacement[, @flags]);",
+      "description": "string replace"
     }
   ],
   "misc-functions": [
