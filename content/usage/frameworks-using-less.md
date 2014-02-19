@@ -12,3 +12,4 @@ title: Frameworks that use Less.js
 * [Ruby Less](https://github.com/cowboyd/less.rb)
 * [Less In Rails Asset Pipeline](https://github.com/metaskills/less-rails)
 * [Graphite, for ASP.NET platform](http://graphite.estate.nl/)
+* [JBST](https://github.com/bassjobsen/jamedo-bootstrap-start-theme), WordPress theme with built-in LESS compiler
