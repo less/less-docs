@@ -457,7 +457,7 @@ Example:
 ```less
 .alert-info,
 .widget {
-  // declarations
+  /* declarations */
 }
 
 .alert:extend(.alert-info, .widget) {}
@@ -465,10 +465,10 @@ Example:
 Outputs
 
 ```css
-.alert,
+.alert-info,
 .widget,
 .alert,
-.alert-info {
+.alert {
   /* declarations */
 }
 ```
