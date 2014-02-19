@@ -17,7 +17,7 @@ escape('a=1')
 
 Output:
 
-```
+```css
 a%3D1
 ```
 
@@ -36,7 +36,7 @@ Returns: `string` - the escaped string, without quotes.
 
 Example:
 
-```css
+```less
 filter: e("ms:alwaysHasItsOwnSyntax.For.Stuff()");
 ```
 
@@ -51,7 +51,7 @@ Note: The function accepts also `~""` escaped values and numbers as parameters. 
 
 ### % format
 
-> The function `%("format", arguments ...)` formats a string.
+> The function `%(string, arguments ...)` formats a string.
 
 The first argument is string with placeholders. All placeholders start with percentage symbol `%` followed by letter `s`,`S`,`d`,`D`,`a`, or `A`. Remaining arguments contain expressions to replace placeholders. If you need to print the percentage symbol, escape it by another percentage `%%`.
 
@@ -79,9 +79,42 @@ format-s-upper: %('repetitions: %S file: %S', 1 + 2, "directory/file.less");
 ```
 Output:
 
-```less
+```css
 format-a-d: "repetitions: 3 file: "directory/file.less"";
 format-a-d-upper: "repetitions: 3 file: %22directory%2Ffile.less%22";
 format-s: "repetitions: 3 file: directory/file.less";
 format-s-upper: "repetitions: 3 file: directory%2Ffile.less";
+```
+
+
+### replace
+
+> Replaces a text within a string.
+
+Released [v1.7.0]({{ less.master }}CHANGELOG.md)
+
+Parameters:
+
+* `string`: The string to search and replace in.
+* `pattern`: A string or regular expression pattern to search for.
+* `replacement`: The string to replace the matched pattern with.
+* `flags`: (Optional) regular expression flags.
+
+Returns: a string with the replaced values.
+
+Example:
+
+```less
+replace("Hello, Mars?", "Mars\?", "Earth!");
+replace("One + one = 4", "one", "2", "gi");
+replace('This is a string.', "(string)\.$", "new $1.");
+replace(~"bar-1", '1', '2');
+```
+Result:
+
+```css
+"Hello, Earth!";
+"2 + 2 = 4";
+'This is a new string.';
+bar-2;
 ```
