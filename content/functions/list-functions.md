@@ -38,10 +38,13 @@ Example:
 ```less
 @list: apple, pear, coconut, orange;
 value: extract(@list, 3);
+extract(@list, 1): extract(@list, 4);
+
 ```
 
 Output:
 
 ```
 value: coconut;
+apple: orange;
 ```
