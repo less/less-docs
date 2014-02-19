@@ -30,3 +30,6 @@ title: Online Less Compilers
 
 ### [CSSDeck Labs](http://cssdeck.com/labs)
 > CSSDeck Labs is a place where you can quickly create some experiments (or testcases) that involves HTML, CSS, JS code.
+
+### [JS Bin](http://jsbin.com)
+> JS Bin is a webapp specifically designed to help JavaScript and CSS folk test snippets of code.
