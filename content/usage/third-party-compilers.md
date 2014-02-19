@@ -51,3 +51,13 @@ lessc input.less [output.css] [-compress]
 ```bash
 dotless.Compiler.exe [-switches] <inputfile> [outputfile]
 ```
+
+PHP
+---
+
+**less.php**
+[less.php](https://github.com/oyejorge/less.php) a less.js ported to PHP.
+
+**lessphp**
+[lessphp](http://leafo.net/lessphp/) is a compiler for LESS written in PHP.
+
