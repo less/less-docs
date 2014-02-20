@@ -34,7 +34,7 @@ All documentation content can be found in the `./content` directory. Please read
 * Always add a space between the `#` and the heading
 * Wrap inline code with a **single backtick**,
 * wrap blocks of code with **three backticks** (code fences).
-* With code blocks, _always use the correct language_ after the first code fence. Although GitHub does not highlight Less, our documentation is more likely to show up in GitHub's and Google's search results when the correct language is used. Examples: please use `` ```less `` for Less, and `` ```css `` for CSS.
+* With code blocks, _always use the correct language_ after the first code fence. Although GitHub does not highlight Less, our documentation is more likely to show up in GitHub's and Google's search results when the correct language is used. Examples: please use <code>\`\`\`less</code> for Less, and <code>\`\`\`css</code> for CSS.
 
 #### Less standards
 
