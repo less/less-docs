@@ -1,6 +1,6 @@
 ### hue
 
-> Extracts the hue channel of a color object.
+> Extracts the hue channel of a color object in the HSL color space.
 
 Parameters: `color` - a color object.
 
@@ -13,7 +13,7 @@ Output: `90`
 
 ### saturation
 
-> Extracts the saturation channel of a color object.
+> Extracts the saturation channel of a color object in the HSL color space.
 
 Parameters: `color` - a color object.
 
@@ -26,7 +26,7 @@ Output: `100%`
 
 ### lightness
 
-> Extracts the lightness channel of a color object.
+> Extracts the lightness channel of a color object in the HSL color space.
 
 Parameters: `color` - a color object.
 

@@ -2,7 +2,7 @@ Color operations generally take parameters in the same units as the values they 
 
 ### saturate
 
-> Increase the saturation of a color by an absolute amount.
+> Increase the saturation of a color in the HSL color space by an absolute amount.
 
 Parameters:
 
@@ -19,7 +19,7 @@ Output: `#80ff00 // hsl(90, 100%, 50%)`
 
 ### desaturate
 
-> Decrease the saturation of a color by an absolute amount.
+> Decrease the saturation of a color in the HSL color space by an absolute amount.
 
 Parameters:
 
@@ -36,7 +36,7 @@ Output: `#80cc33 // hsl(90, 60%, 50%)`
 
 ### lighten
 
-> Increase the lightness of a color by an absolute amount.
+> Increase the lightness of a color in the HSL color space by an absolute amount.
 
 Parameters:
 
@@ -53,7 +53,7 @@ Output: `#b3f075 // hsl(90, 80%, 70%)`
 
 ### darken
 
-> Decrease the lightness of a color by an absolute amount.
+> Decrease the lightness of a color in the HSL color space by an absolute amount.
 
 Parameters:
 
@@ -191,7 +191,7 @@ rgba(75, 25, 0, 0.75)
 
 ### greyscale
 
-> Remove all saturation from a color; the same as calling `desaturate(@color, 100%)`.
+> Remove all saturation from a color in the HSL color space; the same as calling `desaturate(@color, 100%)`.
 
 Because the saturation is not affected by hue, the resulting color mapping may be somewhat dull or muddy; [`luma`](#color-channel-luma) may provide a better result as it extracts perceptual rather than linear brightness, for example `greyscale('#0000ff')` will return the same value as `greyscale('#00ff00')`, though they appear quite different in brightness to the human eye.
 
