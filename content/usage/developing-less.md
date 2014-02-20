@@ -1,5 +1,5 @@
 ---
-title: Contributing
+title: Developing Less
 ---
 
 Thanks for thinking about contributing. Please read the [contributing instructions]({{ less.master }}CONTRIBUTING.md) carefully to avoid wasted work.
@@ -23,7 +23,13 @@ To debug the browser tests, run `grunt browsertest-server` then go to http://loc
 
 Optional: To get the current version of the less compiler do `npm -g install less` - npm is the node package manager and "-g" installs it to be available globally.
 
-You should now be able to do `lessc file.less` and if there is an appropriate file.less then it will be compiled and output to the stdout. You can then compare it to running locallay (node bin/lessc).
+You should now be able to do `lessc file.less` and if there is an appropriate file.less then it will be compiled and output to the stdout. You can then compare it to running localy (`node bin/lessc file.less`).
+
+Other grunt commands
+
+* `grunt benchmark` - run our benchmark tests to get some numbers on performance
+* `grunt stable` to create a new release
+* `grunt readme` to generate a new readme.md in the root directory (after each release)
 
 ## Guide
 
