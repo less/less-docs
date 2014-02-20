@@ -14,7 +14,7 @@ _This page focuses on GUI compilers. For command line usage and tools see [Comma
 
 If you work a lot with Less files, you should definitely try it out. Crunch is built on the Adobe AIR platform. Get more info: [http://crunchapp.net/](http://crunchapp.net/).
 
-![Crunch screenshot](http://crunchapp.net/img/Crunch.png)
+![Crunch screenshot](http://crunchapp.net/wp-content/themes/crunch/img/screenshot2.png)
 
 
 ### [Mixture](http://mixture.io/)
