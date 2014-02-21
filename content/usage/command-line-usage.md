@@ -350,7 +350,7 @@ With strict units on, we assume this is a bug in the calculation and throw an er
 ### Global Variable
 
 ```bash
-lessc --global-var='my-background:red'
+lessc --global-var="my-background=red"
 ```
 
 This option defines a variable that can be referenced by the file. Effectively the declaration is put at the top of your base Less file, meaning it can be used but it also can be overridden if this variable is defined in the file.
@@ -358,7 +358,7 @@ This option defines a variable that can be referenced by the file. Effectively t
 ### Modify Variable
 
 ```bash
-lessc --modify-var='my-background:red'
+lessc --modify-var="my-background=red"
 ```
 
 As opposed to the global variable option, this puts the declaration at the end of your base file, meaning it will override anything defined in your Less file.
