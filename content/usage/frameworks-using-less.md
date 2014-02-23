@@ -2,8 +2,8 @@
 title: Frameworks that use Less.js
 ---
 
-* [Bootstrap, from Twitter](http://twitter.github.com/bootstrap/)
-* [Pre](https://github.com/yuanyan/pre)
+* [Bootstrap](http://getbootstrap.com/)
+* [Pre](http://madscript.com/pre/)
 * [Flaw{Less} CSS Framework](http://github.com/DominikGuzei/flawless.css)
 * [Centage!](http://centage.peruste.net)
 * [More Less](https://github.com/pailoro/Moreless)
@@ -12,4 +12,4 @@ title: Frameworks that use Less.js
 * [Ruby Less](https://github.com/cowboyd/less.rb)
 * [Less In Rails Asset Pipeline](https://github.com/metaskills/less-rails)
 * [Graphite, for ASP.NET platform](http://graphite.estate.nl/)
-* [JBST](https://github.com/bassjobsen/jamedo-bootstrap-start-theme), WordPress theme with built-in LESS compiler
+* [JBST](https://github.com/bassjobsen/jamedo-bootstrap-start-theme), WordPress theme with built-in Less compiler
