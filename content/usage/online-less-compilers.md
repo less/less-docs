@@ -22,7 +22,7 @@ title: Online Less Compilers
 
 ## Online Web IDEs/Playgrounds with Less support
 
-### [jsFiddle]( http://jsfiddle.net)
+### [Fiddle Salad](http://fiddlesalad.com/)
 > Online Web Editor
 
 ### [CodePen](http://codepen.io)
