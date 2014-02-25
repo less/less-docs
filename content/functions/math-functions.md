@@ -270,7 +270,7 @@ Output:
 
 ### pi
 
-> Returns π (pi);
+> Returns &pi; (pi);
 
 Parameters: `none`
 
