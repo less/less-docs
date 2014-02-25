@@ -137,7 +137,7 @@ Output:
 
 > Calculates arcsine (inverse of sine) function.
 
-Returns number in radians e.g. a number between `-&pi;/2` and `&pi;/2`.
+Returns number in radians e.g. a number between `-π/2` and `π/2`.
 
 Parameters: `number` - floating point number from `[-1, 1]` interval.
 
@@ -191,7 +191,7 @@ Output:
 
 > Calculates arccosine (inverse of cosine) function.
 
-Returns number in radians e.g. a number between 0 and &pi;.
+Returns number in radians e.g. a number between 0 and π.
 
 Parameters: `number` - a floating point number from [-1, 1] interval.
 
@@ -245,7 +245,7 @@ Output:
 
 > Calculates arctangent (inverse of tangent) function.
 
-Returns number in radians e.g. a number between `-&pi;/2` and `&pi;/2`.
+Returns number in radians e.g. a number between `-π/2` and `π/2`.
 
 Parameters: `number` - a floating point number.
 
