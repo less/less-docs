@@ -157,7 +157,7 @@ For example, when using Modernizr, you might want to specify different rules bas
 }
 ```
 
-The selector `.no-borderradius &` will prepend its parent `.header .menu` to form the`.no-borderradius .header .menu` selector:
+The selector `.no-borderradius &` will prepend `.no-borderradius` to its parent `.header .menu` to form the`.no-borderradius .header .menu` on output:
 
 ```css
 .header .menu {
