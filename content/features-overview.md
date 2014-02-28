@@ -149,7 +149,7 @@ Using them is pretty straightforward. The following example uses percentage to c
 @width: 0.5;
 
 .class {
-  width: percentage(0.5); // returns `50%`
+  width: percentage(@width); // returns `50%`
   color: saturate(@base, 5%);
   background-color: spin(lighten(@base, 25%), 8);
 }
