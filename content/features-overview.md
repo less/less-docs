@@ -112,6 +112,10 @@ You can also bundle pseudo-selectors with your mixins using this method. Here's 
 }
 ```
 
+**See also**
+
+* [Parent Selectors](#parent-selectors-feature)
+
 ### Operations
 
 Any number, color or variable can be operated on. Here are a couple of examples:
