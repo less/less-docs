@@ -45,6 +45,10 @@ Set options in a global `less` object **before** loading the less.js script:
     functions: {},
     dumpLineNumbers: "comments",
     relativeUrls: false,
+    globalVars: {
+      var1: '"string value"',
+      var2: 'regular value'
+    },
     rootpath: ":/a.com/"
   };
 </script>
@@ -146,6 +150,13 @@ Type: `Boolean`
 Default: `false`
 
 Optionally adjust URLs to be relative. When false, URLs are already relative to the entry less file.
+
+#### globalVars
+Type: `Object`
+
+Default: `undefined`
+
+List of global variables to be injected into the code. Keys of the object are variables names, values are variables values. Variables of "string" type must explicity include quites.
 
 #### rootpath
 Type: `String`
