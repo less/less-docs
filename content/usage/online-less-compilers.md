@@ -34,6 +34,6 @@ title: Online Less Compilers
 ### [JS Bin](http://jsbin.com)
 > JS Bin is a webapp specifically designed to help JavaScript and CSS folk test snippets of code.
 
-### [jsFiddle](http://jsfiddle.net/SmD8W/)
+### [jsFiddle](http://jsfiddle.net/T2Xe9/)
 > Online Web Editor
 
