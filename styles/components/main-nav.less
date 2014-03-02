@@ -7,9 +7,8 @@
 .docs-nav {
   text-shadow: 0 -1px 0 rgba(0,0,0,.15);
   background-color: @navbar-inverse-bg;
-  border-color: @navbar-inverse-border;
-  box-shadow: 0 1px 0 rgba(255,255,255,.1);
-
+  border-color: rgba(0,0,0,.2);
+  box-shadow: 0 1px 0 rgba(255,255,255,.07);
 
   .navbar-collapse {
     border-color: @navbar-inverse-border;
@@ -30,21 +29,24 @@
 
   .navbar-nav > li > a {
     color: @navbar-inverse-link-color;
+    &:hover {
+      color: #fff;
+    }
   }
-  .navbar-nav > li > a:hover {
-    color: #fff;
+
+  .navbar-nav > .active > a {
+    &, &:hover {
+      color: #fff;
+      background-color: rgba(0,0,0,.2);
+    }
   }
-  .navbar-nav > .active > a,
-  .navbar-nav > .active > a:hover {
-    color: #fff;
-    background-color: @navbar-inverse-border;
-  }
+
   .navbar-toggle {
     border-color: @navbar-inverse-bg;
-  }
-  .navbar-toggle:hover {
-    background-color: @navbar-inverse-border;
-    border-color: @navbar-inverse-border;
+    &:hover {
+      background-color: @navbar-inverse-border;
+      border-color: @navbar-inverse-border;
+    }
   }
 }
 
