@@ -128,13 +128,7 @@ module.exports = function(grunt) {
             return dest;
           }}
         ]
-      },
-      // root: {
-      //   files: [
-      //     {expand: true, flatten: true, cwd: '<%= site.assets %>', src: ['_.gitignore'], dest: '<%= site.dest %>/.gitignore'},
-      //     {expand: true, flatten: true, cwd: '<%= site.assets %>', src: ['_CNAME'], dest: '<%= site.dest %>/CNAME'}
-      //   ]
-      // }
+      }
     },
 
     clean: {
