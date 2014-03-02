@@ -41,7 +41,7 @@ module.exports = function(grunt) {
       options: {
         flatten: true,
         production: false,
-        assets: '<%= site.assets %>',
+        assets: '<%= site.dest %>/public',
 
         // Metadata
         pkg: '<%= pkg %>',
@@ -113,17 +113,28 @@ module.exports = function(grunt) {
         paths: ['styles/bootstrap', 'styles/components']
       },
       site: {
-        src: ['styles/site.less'],
-        dest: '<%= assemble.options.assets %>/css/site.css'
+        src: ['styles/index.less'],
+        dest: '<%= assemble.options.assets %>/css/index.css'
       }
     },
 
     // Copy source assets to _gh_pages
     copy: {
       assets: {
-        src: ['assets/**'],
-        dest: '<%= site.dest %>/'
-      }
+        files: [
+          {expand: true, cwd: '<%= site.assets %>/public', src: ['**'], dest: '<%= site.dest %>/public/'},
+          {expand: true, cwd: '<%= site.assets %>/root', src: ['*'], dest: '<%= site.dest %>/', rename: function(dest, src) {
+            dest = dest + src.replace(/^_/, '');
+            return dest;
+          }}
+        ]
+      },
+      // root: {
+      //   files: [
+      //     {expand: true, flatten: true, cwd: '<%= site.assets %>', src: ['_.gitignore'], dest: '<%= site.dest %>/.gitignore'},
+      //     {expand: true, flatten: true, cwd: '<%= site.assets %>', src: ['_CNAME'], dest: '<%= site.dest %>/CNAME'}
+      //   ]
+      // }
     },
 
     clean: {

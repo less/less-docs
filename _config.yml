@@ -2,14 +2,16 @@
 # BUILD CONFIG
 # =============================================
 
-root:             _gh_pages
+# Dest config
+root:             _less.github.io
 dest:             <%= site.root %>
-assets:           <%= site.dest %>/assets
-date:             <%= new Date() %>
 
+# Source config
+assets:           assets
 
 # Data
 data:             data
+date:             <%= new Date() %>
 
 # Styles
 styles:           styles
