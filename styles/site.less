@@ -29,7 +29,6 @@
 @import "main-nav.less";
 @import "team.less";
 
-@grid-quantum: 10px;
 
 body {
   //padding-top: 0;
@@ -69,13 +68,14 @@ pre {
 /**
  * Add some padding an margins to tables
  */
- 
+
+@table-grid-padding: 10px;
+
 table {
-  margin-bottom: (2 * @grid-quantum);
+  margin-bottom: (2 * @table-grid-padding);
 }
 
 td {
-  @q: @grid-quantum;
-  padding: 0 @q (@q / 2) 0;
+  padding: 0 @table-grid-padding (@table-grid-padding / 2) 0;
 }
 
