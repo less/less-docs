@@ -29,6 +29,7 @@
 @import "main-nav.less";
 @import "team.less";
 
+@grid-quantum: 10px;
 
 body {
   //padding-top: 0;
@@ -50,8 +51,6 @@ h2[id], h3[id] {
 }
 
 
-
-
 /**
  * Neutralize background color to allow our
  * syntax highlighter theme to do the work.
@@ -66,3 +65,17 @@ pre {
   border-radius: 0;
   .box-shadow(-5px 0 0 #e2e2e2);
 }
+
+/**
+ * Add some padding an margins to tables
+ */
+ 
+table {
+  margin-bottom: (2 * @grid-quantum);
+}
+
+td {
+  @q: @grid-quantum;
+  padding: 0 @q (@q / 2) 0;
+}
+
