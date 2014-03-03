@@ -1,3 +1,5 @@
+[![devDependency Status](https://david-dm.org/less/less-docs/dev-status.png)](https://david-dm.org/less/less-docs#info=devDependencies)
+
 # lesscss.org
 
 > Official website and documentation for Less/Less.js
