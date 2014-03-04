@@ -53,5 +53,5 @@ body { padding-top: 80px; font-size: 12px }
 
 * 如果你想请求新功能，建议改进或是反馈错误，请[提交问题]({{ site.codeissues }})。
 * 如果你能附加一个清晰的描述用例，这样你的功能要求会更容易得到关注。
-* 如果你想提交pull请求，首先请阅读[这里]({{ site.codebasemaster }}CONTRIBUTING).md。
+* 如果你想提交pull请求，首先请阅读[这里]({{ site.codebasemaster }}CONTRIBUTING.md)。
 
