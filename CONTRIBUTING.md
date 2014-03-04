@@ -1,40 +1,40 @@
-## Contributing to the Documentation
+##贡献文档
 
-**Formatting Standards**
+**标准格式**
 
-For consistency across all examples in the docs and to ensure that our code examples are readable, please follow these guidelines when contributing:
+为了在文档中所有的例子的一致性和确保我们例子中代码的可读性，在创建文件的时候，请按照以下指引：
 
-* Four spaces for indentation, and always use proper indentation
-* Multiple-line formatting (one property and value per line)
-* Double quotes only, never single quotes
-* Always put a space after a property's colon (.e.g, `display: block;` and not `display:block;`)
-* End all lines with a semi-colon
-* For multiple, comma-separated selectors, place each selector on its own line
-* Attribute selectors, like `input[type="text"]` should always wrap the attribute's value in double quotes. This is important to do in your own code as well for consistency and safety (see this [blog post on unquoted attribute values](http://mathiasbynens.be/notes/unquoted-attribute-values) that can lead to XSS attacks)
-* When using HTML in your examples, use tags and elements appropriate for an HTML5 doctype (e.g., self-closing tags with _no trailing slash_)
-* All page files should have globally unique names regardless of where they are located in the repository
+* 四个空格的缩进并合理的使用缩进
+* 多行格式（每行一个属性和一个属性值）
+* 只能使用双引号，不能使用单引号
+* 总是在属性的冒号后面空一格（例如：“display: block;”，不能“display:block;”）
+* 所有行都要以分号结束
+* 对于多个以逗号分隔的选择器，每个选择器都要单独一行
+* 属性选择器，例如“input[type="text"]”,应该总是用双引号包着属性值。这样做对你代码的一致性和安全性是非常重要的（阅读[blog post on unquoted attribute values](http://mathiasbynens.be/notes/unquoted-attribute-values)就会明白，这会导致XSS攻击）
+* 在你的例子中用HTML时，要使用符合HTML5 Doctype的标签和元素（例如：自结束标签用 _on 尾随 slash_ ）
+* 所有的页面文件应具有全局唯一的名称，不管这些文件在哪个库中
 
-## Tools
+##工具
 
-### Assemble
+###组合
 
-* Visit [Assemble's documentation](http://assemble.io/docs/) site to learn more about customization and configuration.
+* 访问[Assemble's documentation](http://assemble.io/docs/)学习更多关于定制和配置的知识。
 * Markdown: [Markdown Cheatsheet](http://assemble.io/docs/Cheatsheet-Markdown.html)
 
-## Coding Style
+##代码风格
 
-Examples:
+例子：
 
-**Good**
+**符合标准**
 
 ```css
 body {
-  padding-top: 80px;
-  font-size: 12px;
+	padding-top: 80px;
+	font-size: 12px;
 }
 ```
 
-**Bad**
+**不符合标准**
 
 ```css
 body {
@@ -43,14 +43,15 @@ font-size: 12px;
 }
 ```
 
-**Bad**
+**不符合标准**
 
 ```css
 body { padding-top: 80px; font-size: 12px }
 ```
 
-### Feature Requests, Bugs and Pull Requests
+### 功能请求，Bugs 和 Pull 请求
 
-* If you would like to request a feature, suggest an improvement, or report a bug, please [submit an Issue]({{ site.codeissues }}).
-* Feature requests are more likely to get attention if you include a clearly-described use case.
-* If you wish to submit a pull request, please [read this first]({{ site.codebasemaster }}CONTRIBUTING).md.
+* 如果你想请求新功能，建议改进或是反馈错误，请[提交问题]({{ site.codeissues }})。
+* 如果你能附加一个清晰的描述用例，这样你的功能要求会更容易得到关注。
+* 如果你想提交pull请求，首先请阅读[这里]({{ site.codebasemaster }}CONTRIBUTING.md)。
+
