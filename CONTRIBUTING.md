@@ -11,7 +11,7 @@
 * 所有行都要以分号结束
 * 对于多个以逗号分隔的选择器，每个选择器都要单独一行
 * 属性选择器，例如“input[type="text"]”,应该总是用双引号包着属性值。这样做对你代码的一致性和安全性是非常重要的（阅读[blog post on unquoted attribute values](http://mathiasbynens.be/notes/unquoted-attribute-values)就会明白，这会导致XSS攻击）
-* 在你的例子中用HTML时，要使用符合HTML5 Doctype的标签和元素（例如：自结束标签用_on尾随slash_）
+* 在你的例子中用HTML时，要使用符合HTML5 Doctype的标签和元素（例如：自结束标签用 _on 尾随 slash_ ）
 * 所有的页面文件应具有全局唯一的名称，不管这些文件在哪个库中
 
 ##工具
