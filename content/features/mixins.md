@@ -140,10 +140,10 @@ Example:
   color: @color;
 }
 .unimportant {
-  .foo(1);
+  .foo();
 }
 .important {
-  .foo(2) !important;
+  .foo() !important;
 }
 ```
 
