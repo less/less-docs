@@ -28,6 +28,10 @@ published:
     title: Mixins as Functions
     content: content/features/mixins-as-functions.md
 
+  detached-rulesets:
+    title: Passing Rulesets to Mixins
+    content: content/features/detached-rulesets.md
+
   import-directives:
     title: Import Directives
     content: content/features/import-directives.md
