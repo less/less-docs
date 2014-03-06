@@ -55,16 +55,16 @@ Set options in a global `less` object **before** loading the less.js script:
 <script src="less.js"></script>
 ```
 
-### Client side options
+## Client side options
 
-#### async
+### async
 Type: `Boolean`
 
 Default: `false`
 
 Whether to request the import files with the async option or not. See fileAsync.
 
-#### dumpLineNumbers
+### dumpLineNumbers
 Type: `String`
 Options: ``|`comments`|`mediaQuery`|`all`
 Default: ``
@@ -75,11 +75,11 @@ The comments option is used for outputting user understandable content, whilst m
 
 In the future we hope this option to be superseded by sourcemaps.
 
-#### env
+### env
 Type: `String`
 Default: depends on page URL
 
-Environment to run may be either `development` or `production`. 
+Environment to run may be either `development` or `production`.
 
 In production, your css is cached in local storage and information messages are not output to the console.
 
@@ -90,7 +90,7 @@ e.g.
 less = { env: 'production' };
 ```
 
-#### errorReporting
+### errorReporting
 Type: `String`
 
 Options: `html`|`console`|`function`
@@ -99,14 +99,14 @@ Default: `html`
 
 Set the method of error reporting when compilation fails.
 
-#### fileAsync
+### fileAsync
 Type: `Boolean`
 
 Default: `false`
 
 Whether to request the import asyncronously when in a page under a file protocol.
 
-#### functions
+### functions
 Type: `object`
 
 User functions, keyed by name.
@@ -124,7 +124,7 @@ and it can be used like a native Less function e.g.
 }
 ```
 
-#### logLevel
+### logLevel
 Type: `Number`
 
 Default: 2
@@ -137,28 +137,45 @@ The amount of logging in the javascript console. Note: If you are in the environ
 0 - Nothing
 ```
 
-#### poll
+### poll
 Type: `Integer`
 
 Default: `1000`
 
 The amount of time (in milliseconds) between polls while in watch mode.
 
-#### relativeUrls
+### relativeUrls
 Type: `Boolean`
 
 Default: `false`
 
 Optionally adjust URLs to be relative. When false, URLs are already relative to the entry less file.
 
-#### globalVars
+### globalVars
 Type: `Object`
 
 Default: `undefined`
 
-List of global variables to be injected into the code. Keys of the object are variables names, values are variables values. Variables of "string" type must explicity include quites.
+Programmatic version of [Global Variable](#command-line-usage-global-variable).
 
-#### rootpath
+List of global variables to be injected into the code. Keys of the object are variables names, values are variables values. Variables of "string" type must explicitly include quotes if needed.
+
+E.g.
+
+```js
+less.globalVars = { myvar: "#ddffee", mystr: "\"quoted\"" };
+```
+
+### modifyVars
+Type: `Object`
+
+Default: `undefined`
+
+Programmatic version of [Modify Variable](#command-line-usage-modify-variable).
+
+Same format as [globalVars](#using-less-in-the-browser-globalvars).
+
+### rootpath
 Type: `String`
 
 Default: `false`
