@@ -5,8 +5,10 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 ## UI/Theme Frameworks and Components
 | | |
 |-|-|
+| [1pxdeep](http://rriepe.github.io/1pxdeep/) | Brings designing by relative visual weight, or designing with color schemes, to Bootstrap |
 | [Bootflat](http://www.flathemes.com/) | Open source Flat UI KIT based on Bootstrap |
 | [Bootstrap](http://getbootstrap.com/) | Front-end framework for developing responsive, mobile first projects on the web |
+| [Bootstrap a11y theme](https://github.com/bassjobsen/bootstrap-a11y-theme) | Makes web accessibility easier for Bootstrap developers |
 | [Bootswatch](http://bootswatch.com/) | Collection of free themes for Bootstrap |
 | [Cardinal](http://cardinalcss.com/) | Small "mobile first" CSS framework for front-end developers who build responsive web applications |
 | [CSSHórus](http://csshor.us/) | Library for development of responsive and mobile websites |
@@ -27,6 +29,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 |-|-|
 | [Fluidable](http://fluidable.com/) | |
 | [Golden Grid System](http://goldengridsystem.com/) | |
+| [LESS Zen Grid](https://github.com/bassjobsen/LESS-Zen-Grid) | |
 | [Order.less](https://github.com/chromice/order.less) | |
 | [responsibly](https://github.com/BuschFunker/responsibly) | |
 | [Responsive Boilerplate](http://responsiveboilerplate.com/) | |
