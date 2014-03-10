@@ -63,14 +63,9 @@ You can even take advantage of media query bubbling, for instance
 which will output
 
 ```css
-@my-ruleset: {
-    .my-selector {
-      @media tv {
-        background-color: black;
-      }
-    }
-  };
-@media (orientation:portrait) {
-    @my-ruleset();
+@media (orientation: portrait) and tv {
+  .my-selector {
+    background-color: black;
+  }
 }
 ```
