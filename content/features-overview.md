@@ -116,6 +116,44 @@ You can also bundle pseudo-selectors with your mixins using this method. Here's 
 
 * [Parent Selectors](#parent-selectors-feature)
 
+### Media query bubbling and nested media queries 
+
+Media queries can be nested in the same way as selectors. Selector are copied into the body of the media query:
+
+```less
+.screencolor{
+  @media screen {
+    color: green;
+    @media (min-width:768px) {
+    color: red;
+    }
+    }
+  @media tv {
+    color: black;
+  }
+}
+
+```
+outputs:
+
+```css
+@media screen {
+  .screencolor {
+    color: green;
+  }
+}
+@media screen and (min-width: 768px) {
+  .screencolor {
+    color: red;
+  }
+}
+@media tv {
+  .screencolor {
+    color: black;
+  }
+}
+```
+
 ### Operations
 
 Any number, color or variable can be operated on. Here are a couple of examples:
