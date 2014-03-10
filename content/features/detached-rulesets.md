@@ -45,7 +45,7 @@ A ruleset can be now assigned to a variable or passed in to a mixin and can cont
   };
 ```
 
-You can even take advantage of media query bubbling, for instance
+You can even take advantage of [media query bubbling](#media-query-bubbling-and-nested-media-queries), for instance
 
 ```less
 @my-ruleset: {
@@ -63,14 +63,9 @@ You can even take advantage of media query bubbling, for instance
 which will output
 
 ```css
-@my-ruleset: {
-    .my-selector {
-      @media tv {
-        background-color: black;
-      }
-    }
-  };
-@media (orientation:portrait) {
-    @my-ruleset();
+@media (orientation: portrait) and tv {
+  .my-selector {
+    background-color: black;
+  }
 }
 ```
