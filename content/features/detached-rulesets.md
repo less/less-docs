@@ -11,10 +11,10 @@ You may want to define a mixin that will abstract out either wrapping a piece of
 }
 
 header {
-  color: blue;
+  background-color: blue;
 
   .desktop-and-old-ie({
-    background: red;
+    background-color: red;
   });
 }
 ```
@@ -23,15 +23,15 @@ Here the `desktop-and-old-ie` mixin defines the media query and root class so th
 
 ```css
 header {
-  background: blue;
+  background-color: blue;
 }
 @media screen and (min-width: 1200) {
   header {
-    background: red;
+    background-color: red;
   }
 }
 html.lt-ie9 header {
-  background: red;
+  background-color: red;
 }
 ```
 
