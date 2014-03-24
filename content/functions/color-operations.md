@@ -99,7 +99,7 @@ Returns: `color`
 
 Example: `fadeout(hsla(90, 90%, 50%, 0.5), 10%)`
 
-Output: `rgba(128, 242, 13, 0.4) // hsla(90, 90%, 50%, 0.6)`
+Output: `rgba(128, 242, 13, 0.4) // hsla(90, 90%, 50%, 0.4)`
 
 
 ### fade
