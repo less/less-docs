@@ -44,6 +44,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [CssEffects](http://adodson.com/css-effects/) | Collection of CSS style effects |
 | [Cssowl](http://cssowl.owl-stars.com/) | Mixin library |
 | [cube.less](https://github.com/sparanoid/cube.less) | Animated 3D cube using only CSS |
+| [est](https://github.com/ecomfe/est/) | Mixin library |
 | [Hexagon](http://db0company.github.io/css-hexagon/) | Generate CSS hexagons with custom size and color |
 | [LESS Elements](http://lesselements.com/) | Set of mixins |
 | [LESS Hat](http://lesshat.com/) | Mixins library |
