@@ -15,6 +15,7 @@ Also see: [GUIs for Less.js](#guis-for-less)
 * [Brackets][brackets] (built-in syntax highlighting, [several extensions][brackets-ext] for compilation)
 * [CodeLobster][codelobster] (built-in [syntax highlighting][codelobster-sh])
 * [KineticWing IDE][kineticwing] (built-in [support][kineticwing-less])
+* [nodeMirror](https://www.npmjs.org/package/node-mirror) (built-in syntax highlighting, save less files parallel as css, online test tool)
 
 ### [Sublime Text 2 & 3](http://sublimetext.com/)
 
