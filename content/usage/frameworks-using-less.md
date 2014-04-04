@@ -52,6 +52,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [media-query-to-type](https://github.com/himedlooff/media-query-to-type) | Media Queries to Media Types with Less |
 | [More-Colors.less](http://jasonrobb.github.io/More-Colors.less/) | Variables for easier color manipulation while you design in the browser |
 | [More.less](https://github.com/weinitz/More.less) | Mixins, animations, shapes and more |
+| [more-or-less](https://github.com/pixelass/more-or-less) | for-loops and other functions + css3 mixins |
 | [Oban](http://oban.io/) | Collection of mixins |
 | [Preboot](http://getpreboot.com/) | Collection of variables and mixins. The precursor to Bootstrap |
 | [Shape.LESS](https://github.com/fahad19/shape.less) | Collection of mixins for various shapes |
