@@ -135,15 +135,5 @@ Options are defined by setting them on a global `less` object **before** the `<s
 </script>
 <script src="less.js"></script>
 ```
-### Enviornments
-Development writes to the console. It will display errors.
 
-``` html
-  <script>less = {env: "development"}; </script>
-```
-Production does not display errors. Enter this to keep the compile
-time and other information of Less from showing up in the console.
-
-``` html
-  <script>less = {env: "production"}; </script>
-```
+Learn more about [Browser Options](usage/#using-less-in-the-browser-client-side-options)
