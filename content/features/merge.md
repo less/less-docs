@@ -1,6 +1,10 @@
 > Combine properties
 
-The `merge` feature allows for aggregating values from multiple properties into a comma separated list under a single property. `merge` is useful for properties such as background and transform.
+The `merge` feature allows for aggregating values from multiple properties into a comma or space separated list under a single property. `merge` is useful for properties such as background and transform.
+
+## Comma
+
+> Append property value with comma
 
 Released [v1.5.0]({{ less.master }}CHANGELOG.md)
 
@@ -23,6 +27,29 @@ Outputs
 }
 ```
 
-To avoid any unintentional joins, `merge` requires an explicit `+` flag on each join pending declaration.
+## Space
 
-_Note: although convention on the transform property is to have space separated, comma separation is supported which is why there is no option on this feature for whether to generate space or comma separated._
+> Append property value with space
+
+Released [v1.7.0]({{ less.master }}CHANGELOG.md)
+
+Example:
+
+```less
+.mixin() {
+  transform+_: scale(2);
+}
+.myclass {
+  .mixin();
+  transform+_: rotate(15deg);
+}
+```
+Outputs
+
+```css
+.myclass {
+  transform: scale(2) rotate(15deg);
+}
+```
+
+To avoid any unintentional joins, `merge` requires an explicit `+` or `+_` flag on each join pending declaration.
