@@ -134,6 +134,22 @@ Output: `0.5`
 
 Uses **SMPTE C / Rec. 709** coefficients, as recommended in [WCAG 2.0](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef). This calculation is also used in the contrast function.
 
+Before v1.7 the luma was calculated without gamma correction, use the luminance function to calculate these "old" values
+
+Parameters: `color` - a color object.
+
+Returns: `percentage` 0-100%
+
+Example: `luma(rgb(100, 200, 30))`
+
+Output: `44%`
+
+
+### luminance() 
+
+> Calculates the value of the luma without gamma correction used before v1.7 for backward compatibility.
+
+
 Parameters: `color` - a color object.
 
 Returns: `percentage` 0-100%
