@@ -26,7 +26,8 @@ Also see: [GUIs for Less.js](#guis-for-less)
 
 ### [Eclipse](http://www.eclipse.org/)
 
-* [Plugin](http://www.normalesup.org/~simonet/soft/ow/eclipse-less.en.html) by Vincent Simonet
+* [Eclipse Less Plugin](http://www.normalesup.org/~simonet/soft/ow/eclipse-less.en.html) by Vincent Simonet
+* [Transpiler Plugin](https://github.com/gossi/eclipse-transpiler-plugin) by Thomas Gossmann
 
 ### [Visual Studio](http://www.visualstudio.com/)
 
