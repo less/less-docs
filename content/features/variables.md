@@ -181,9 +181,9 @@ For instance:
 
 ```less
 @var: 0;
-.class1 {
+.class {
   @var: 1;
-  .class {
+  .brass {
     @var: 2;
     three: @var;
     @var: 3;
@@ -194,11 +194,11 @@ For instance:
 Compiles to:
 
 ```css
-.class1 .class {
-  three: 3;
-}
 .class {
   one: 1;
+}
+.class .brass {
+  three: 3;
 }
 ```
 
