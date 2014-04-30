@@ -58,7 +58,7 @@ output:
 
 ### Multiple `&`
 
-`&` may appear more then once within a selector. This makes it possible to repeatedly refer to a parent selector without repeating its name.
+`&` may appear more than once within a selector. This makes it possible to repeatedly refer to a parent selector without repeating its name.
 
 ```less
 .link {
