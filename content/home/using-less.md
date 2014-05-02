@@ -86,7 +86,10 @@ parser.parse('.class { width: (1 + 1) }', function (e, tree) {
 
 ## Grunt
 
-Less also integrates with the popular build framework grunt, using the [grunt-contrib-less](https://github.com/gruntjs/grunt-contrib-less) plugin.
+Less integrates with the popular build framework grunt, using the [grunt-contrib-less](https://github.com/gruntjs/grunt-contrib-less) plugin.
+
+### Gulp
+Less also integrates with the Gulp front-end build tool, using the [gulp-less](https://github.com/plus3network/gulp-less) plugin. Please note that this plugin only generates inline sourcemaps (with `sourceMap: true`) - specifying a `sourceMapFilename` option will do nothing.
 
 ## Third party tools
 
