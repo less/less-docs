@@ -3,6 +3,8 @@ title: Ports
 ---
 
 ## Java
+* [Lesscss](https://github.com/houbie/lesscss) (Runs less.js using Rhino, Nasshorn or node.js engine; 1.7.0 compliant)
+* [Lesscss gradle plugin](https://github.com/houbie/lesscss-gradle-plugin) (Gradle plugin based on Lesscss)
 * [Less Engine](https://github.com/Asual/lesscss-engine) (Runs less.js in the Rhino JVM-based JavaScript interpreter)
 * [Less CSS Compiler for Java](https://github.com/marceloverdijk/lesscss-java) (Runs less.js in the Rhino JVM-based JavaScript interpreter)
 * [Less4j](https://github.com/SomMeri/less4j) (Native Java implementation.)
