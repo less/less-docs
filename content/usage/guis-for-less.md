@@ -84,7 +84,7 @@ Get more info: [http://incident57.com/less](http://incident57.com/less)
 
 Get more info: [http://incident57.com/codekit](http://incident57.com/codekit)
 
-![CodeKit screenshot](http://incident57.com/codekit/images/hero-window.png)
+![CodeKit screenshot](http://incident57.com/codekit/images/screenshot-images.jpg)
 
 #### [LiveReload](http://livereload.com)
 
