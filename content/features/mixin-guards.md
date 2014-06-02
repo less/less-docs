@@ -55,12 +55,6 @@ Any value other than the keyword `true` is falsy:
 }
 ```
 
-Guards can be separated with a comma `,`, if any of the guards evaluates to true, it's considered as a match:
-
-```less
-.mixin (@a) when (@a > 10), (@a < -10) { ... }
-```
-
 Note that you can also compare arguments with each other, or with non-arguments:
 
 ```less
@@ -71,6 +65,28 @@ Note that you can also compare arguments with each other, or with non-arguments:
 
 .max (@a; @b) when (@a > @b) { width: @a }
 .max (@a; @b) when (@a < @b) { width: @b }
+```
+
+### Guard logical operators
+
+You can use logical operators with guards. The syntax is based on CSS media queries.
+
+Use the `and` keyword to combine guards:
+
+```less
+.mixin (@a) when (isnumber(@a)) and (@a > 0) { ... }
+```
+
+You can emulate the *or* operator by separating guards with a comma `,`. If any of the guards evaluate to true, it's considered a match:
+
+```less
+.mixin (@a) when (@a > 10), (@a < -10) { ... }
+```
+
+Use the `not` keyword to negate conditions:
+
+```less
+.mixin (@b) when not (@b > 0) { ... }
 ```
 
 ### Type checking functions
@@ -104,16 +120,4 @@ _(**FIXME**)_ Additionally, the `default` function may be used to make a mixin m
 ```less
 .mixin (@a) when (@a > 0) { ...  }
 .mixin (@a) when (default()) { ... } // matches only if first mixin does not, i.e. when @a <= 0
-```
-
-Last but not least, you may use the `and` keyword to provide additional conditions inside a guard:
-
-```less
-.mixin (@a) when (isnumber(@a)) and (@a > 0) { ... }
-```
-
-And finally, the **`not`** keyword to negate conditions:
-
-```less
-.mixin (@b) when not (@b > 0) { ... }
 ```
