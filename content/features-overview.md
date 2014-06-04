@@ -272,7 +272,7 @@ style comment! */
 @var: white;
 ```
 
-Inline comments will not carry over to the compiled .css file and won't be imported using the @import directive.
+Inline comments will not carry over to the compiled .css file.
 
 ### Importing
 
