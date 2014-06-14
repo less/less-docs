@@ -10,8 +10,19 @@ slug: features
     <div class="page-header">
       <h1 id="{{@key}}-feature">{{title}}</h1>
     </div>
+
+    {{#each (expand files)}}
     <div class="section-content">
-      {{md @key}}
+      <!-- {{basename .}} -->
+      {{success '>> Inlining:' (basename .)}} {{! log a success message! }}
+
+{{#markdown}}
+{{inline .}}
+{{/markdown}}
+
+      <br>
     </div>
+    {{/each}}
+
   </div>
 {{/each}}

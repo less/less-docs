@@ -22,35 +22,28 @@ lead: "An overview of Less, how to download and use, examples and more."
     <h1 id="using-less">Using Less</h1>
   </div>
   {{md 'using-less'}}
+</div>
 
 
-  <h3 id="browser-downloads">Browser downloads</h3>
-  <p><a class="btn btn-lg btn-primary" href="{{ less.rawmaster }}/less-{{ less.version }}.min.js" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download compiled']);" role="button">Download Less.js v{{less.version}}</a></p>
-  <div class="docs-dl-options">
-    <h4>
-      <a href="{{ less.sourcearchive }}{{ less.version }}.zip" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'Download source']);">Download source code</a>
-    </h4>
-    <p>Get the latest Less.js source code by downloading it directly from GitHub.</p>
-    <h4>
-      <a href="{{ less.repo }}" onclick="_gaq.push(['_trackEvent', 'Getting started', 'Download', 'GitHub project']);">Clone or fork via GitHub</a>
-    </h4>
-    <h4>
-      Install with <a href="http://bower.io">Bower</a>
-    </h4>
-    <p>Install the Less.js project and JavaScript using <a href="http://bower.io">Bower</a>.</p>
-{{#markdown}}
-```bash
-bower install less
-```
-{{/markdown}}
+
+
+{{!-- Downloads
+================================================== --}}
+<div class="docs-section">
+  <div class="page-header">
+    <h1 id="download-options">Get Less.js</h1>
   </div>
-  <h3 id="download-cdn">Less CDN</h3>
-  <p><a href="{{ site.cdn.cloudflare }}{{ less.version }}/less.min.js">CDN</a>.</p>
-{{#markdown}}
-```html
-<script src="{{ site.cdn.cloudflare }}{{ less.version }}/less.min.js"></script>
-```
-{{/markdown}}
+
+  <h2 id="browser-downloads">Browser downloads</h2>
+  <a class="btn btn-default" href="{{ less.rawmaster }}/less-{{ less.version }}.min.js">Download Less.js v{{less.version}}</a>
+
+  <div class="docs-dl-options">
+    {{md 'download-options'}}
+  </div>
+
+  <div class="cdn-options">
+    {{md 'cdn-options'}}
+  </div>
 </div>
 
 
@@ -93,5 +86,5 @@ bower install less
       </ul>
     </div>
   </div>
-  <p>The full Less.js license is located <a href="{{ less.master }}LICENSE">in the project repository</a> for more information.</p>
+  <p>The full Less.js license is located <a href="{{ less.master }}/LICENSE">in the project repository</a> for more information.</p>
 </div>

@@ -272,8 +272,6 @@ style comment! */
 @var: white;
 ```
 
-Inline comments will not carry over to the compiled .css file.
-
 ### Importing
 
 Importing works pretty much as expected. You can import a `.less` file, and all the variables in it will be available. The extension is optionally specified for `.less` files.

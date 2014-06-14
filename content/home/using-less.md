@@ -2,7 +2,7 @@
 title: Server-side usage
 ---
 
-> Less can be used on the command line via npm, downloaded as a script file for the browser or used in a wide variety of third party tools. See the [Usage]({{rel 'usage'}}) section for more
+> Less can be used on the command line via npm, downloaded as a script file for the browser or used in a wide variety of third party tools. See the [Usage]({{resolve 'usage'}}) section for more
 detailed information.
 
 ## Installation
@@ -84,16 +84,9 @@ parser.parse('.class { width: (1 + 1) }', function (e, tree) {
 });
 ```
 
-## Grunt
-
-Less integrates with the popular build framework grunt, using the [grunt-contrib-less](https://github.com/gruntjs/grunt-contrib-less) plugin.
-
-### Gulp
-Less also integrates with the Gulp front-end build tool, using the [gulp-less](https://github.com/plus3network/gulp-less) plugin. Please note that this plugin only generates inline sourcemaps (with `sourceMap: true`) - specifying a `sourceMapFilename` option will do nothing.
-
 ## Third party tools
 
-See the [Usage]({{rel 'usage'}}) section for details of other tools.
+See the [Usage]({{resolve 'usage'}}) section for details of other tools.
 
 # Client-side usage
 

@@ -3,29 +3,16 @@
   <head>
     {{> head }}
   </head>
-  <body>
+  <body{{#slug}} class="{{.}}"{{/slug}}>
     {{!-- Docs master nav --}}
     {{> nav-main }}
-
-    {{!-- Header --}}
-    <div class="docs-header" id="content">
-      <div class="container">
-        <h1>{{ title }}</h1>
-        <p>{{ lead }}</p>
-        {{!> ads }}
-      </div>
-    </div>
-
-    {{!-- Callout for the old docs link --}}
-    {{> banner }}
 
     {{!-- Content --}}
     <div class="container docs-container">
       <div class="row">
         <div class="col-md-3">
           <div class="sidebar hidden-print" role="complementary">
-            <div id="toc">
-            </div>
+            {{> sidenav }}
           </div>
         </div>
         <div class="col-md-9" role="main">

@@ -8,8 +8,9 @@ lead: "How to use less server-side, client-side and with third parties."
 =================================== -->
 <div class="docs-section">
   <h1 id="using-less-environments">Using Less</h1>
-  <p class="lead">Using less in node, browser and third party. For general installation instructions and an overview, please read the <a href="{{rel '/#using-less'}}">Using Less</a> section on our front page.</p>
+  <p class="lead">Using less in node, browser and third party. For general installation instructions and an overview, please read the <a href="{{resolve 'index'}}/#using-less">Using Less</a> section on our front page.</p>
 </div>
+
 
 {{#each usage.published}}
   <!-- {{title}} -->
@@ -17,8 +18,19 @@ lead: "How to use less server-side, client-side and with third parties."
     <div class="page-header">
       <h1 id="{{@key}}">{{title}}</h1>
     </div>
+
+    {{#each (expand files)}}
     <div class="section-content">
-      {{md @key}}
+      <!-- {{basename .}} -->
+      {{success '>> Inlining:' (basename .)}} {{! log a success message! }}
+
+      {{#markdown}}
+        {{inline .}}
+      {{/markdown}}
+
+      <br>
     </div>
+    {{/each}}
+
   </div>
 {{/each}}
