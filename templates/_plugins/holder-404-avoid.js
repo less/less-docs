@@ -1,7 +1,3 @@
-var options = {
-    stage: 'render:post:page'
-};
-
 var cheerio = require('cheerio');
 
 module.exports = function(params, callback) {
@@ -12,7 +8,7 @@ module.exports = function(params, callback) {
 
     // get all the anchor tags from inside the headers
     var images = $('img[src]');
-    
+
     images.each(function(i, e) {
         var $e = $(e);
         var src = $e.attr("src");
@@ -26,4 +22,6 @@ module.exports = function(params, callback) {
     callback();
 };
 
-module.exports.options = options;
+module.exports.options = {
+  stage: 'render:post:page'
+};

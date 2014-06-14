@@ -12,7 +12,7 @@ module.exports = function(params, callback) {
 
     var page = params.page.dest.replace(params.page.dirname, "").substr(1),
         shortname = page.replace(/\/?index.html$/, "");
-    
+
     // load current page content
     var $ = cheerio.load(params.content);
 
@@ -23,7 +23,7 @@ module.exports = function(params, callback) {
         externalLinks = [],
         externalLinksChecked = 0,
         syncFinished = false;
-    
+
     function finish() {
         if (syncFinished && externalLinks.length === externalLinksChecked) {
             if (failures.length > 0) {
@@ -37,19 +37,19 @@ module.exports = function(params, callback) {
             callback();
         }
     }
-    
+
     if (!linkMap[shortname]) {
         linkMap[shortname] = {};
     }
-    
+
     linkMap[shortname].anchors = anchors.map(function(i, e) {
             return $(e).attr("id");
         });
-    
+
     if (linkMap[shortname].checks) {
         linkMap[shortname].checks.map(function (check) { check(); });
     }
-    
+
     function isLinkException(href, $e) {
         if (href === "#" && $e.attr("class") === "dropdown-toggle") {
             return true;
@@ -60,7 +60,7 @@ module.exports = function(params, callback) {
         }
         return false;
     }
-    
+
     links.map(function(i, e) {
 
         function checkInternalCrossRefLink() {
@@ -93,23 +93,23 @@ module.exports = function(params, callback) {
                 linkpage = split[0],
                 linkid = split[1],
                 currentDirectory = "";
-            
+
             if (page.indexOf("/") > 0) {
                 currentDirectory = page.substr(0, page.indexOf("/"));
             }
-            
+
             if (linkpage.indexOf("../") === 0) {
                 linkpage = linkpage.substr(3);
             } else {
                 linkpage = currentDirectory + "/" + linkpage;
             }
 
-            linkpage = linkpage.replace(/(^\/)|(\/$)/g,""); 
-            
+            linkpage = linkpage.replace(/(^\/)|(\/$)/g,"");
+
             if (linkpage !== "usage" && linkpage !== "features" && linkpage !== "" && linkpage !== "functions" && linkpage !== "about") {
                 failures.push("Could not find internal page '" + href + "' as part of link '" + $.html(e));
             }
-            
+
             if (linkid) {
                 if (!linkMap[linkpage]) {
                     linkMap[linkpage] = {};
@@ -123,7 +123,7 @@ module.exports = function(params, callback) {
             }
         }
     });
-    
+
     syncFinished = true;
     finish();
 };
@@ -132,9 +132,9 @@ var que = [],
     activeRequests = 0;
 
 function checkLink(link, callback) {
-    
+
     if (link.indexOf("//") === 0) { link = "http:" + link; }
-    
+
     if (activeRequests >= 9) {
         que.push(doRequest);
     } else {
@@ -144,8 +144,8 @@ function checkLink(link, callback) {
     function doRequest() {
         activeRequests++;
         request.get({uri: link, strictSSL: false }, function (error, res, body) {
-            if (error) { 
-                callback(false, error); 
+            if (error) {
+                callback(false, error);
             } else {
                 callback(res.statusCode === 200, res.statusCode);
             }
