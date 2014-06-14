@@ -1,43 +1,50 @@
 # =============================================
 # PUBLISHED
 # =============================================
+# This file is only needed to ensure that the
+# sections build in a specific order.
+
+
+# The base path for features docs. Makes this easier
+# to update without having to change each path.
+base: content/usage
 
 published:
   command-line-usage:
     title: Command Line Usage
-    content: usage/command-line-usage.md
+    files: <%= usage.base %>/command-line-usage.md
 
   using-less-in-the-browser:
     title: Using Less in the Browser
-    content: usage/using-less-in-the-browser.md
+    files: <%= usage.base %>/using-less-in-the-browser.md
 
   browser-support:
     title: Browser Support
-    content: usage/browser-support.md
+    files: <%= usage.base %>/browser-support.md
 
   online-less-compilers:
     title: Online Less Compilers
-    content: usage/online-less-compilers.md
+    files: <%= usage.base %>/online-less-compilers.md
 
   guis-for-less:
     title: GUIs for Less
-    content: usage/guis-for-less.md
+    files: <%= usage.base %>/guis-for-less.md
 
   editors-and-plugins:
     title: Editors and Plugins
-    content: usage/editors-and-plugins.md
+    files: <%= usage.base %>/editors-and-plugins.md
 
   third-party-compilers:
     title: Third Party Compilers
-    content: usage/third-party-compilers.md
+    files: <%= usage.base %>/third-party-compilers.md
 
   frameworks-using-less:
     title: Frameworks Using Less
-    content: usage/frameworks-using-less.md
+    files: <%= usage.base %>/frameworks-using-less.md
 
   developing-less:
     title: Developing Less
-    content: usage/developing-less.md
+    files: <%= usage.base %>/developing-less.md
 
 
 # =============================================
@@ -46,11 +53,11 @@ published:
 
 unpublished:
   sourcemaps:
-    published: false
+    published:                false
     title: Sourcemaps
-    content: usage/sourcemaps.md
+    files: <%= usage.base %>/sourcemaps.md
 
   plugins:
-    published: false
+    published:                false
     title: Plugins
-    content: usage/plugins.md
+    files: <%= usage.base %>/plugins.md

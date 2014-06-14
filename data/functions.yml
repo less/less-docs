@@ -1,43 +1,50 @@
 # =============================================
 # PUBLISHED
 # =============================================
+# This file is only needed to ensure that the
+# sections build in a specific order.
+
+
+# The base path for features docs. Makes this easier
+# to update without having to change each path.
+base: content/functions
 
 published:
   misc-functions:
     title: Misc Functions
-    content: functions/misc.md
+    files: <%= functions.base %>/misc-functions.md
 
   string-functions:
     title: String Functions
-    content: usage/string.md
+    files: <%= functions.base %>/string-functions.md
 
   list-functions:
     title: List Functions
-    content: usage/list.md
+    files: <%= functions.base %>/list-functions.md
 
   math-functions:
     title: Math Functions
-    content: usage/math.md
+    files: <%= functions.base %>/math-functions.md
 
   type-functions:
     title: Type Functions
-    content: usage/type.md
+    files: <%= functions.base %>/type-functions.md
 
   color-definition:
     title: Color Definition Functions
-    content: usage/color-definition.md
+    files: <%= functions.base %>/color-definition.md
 
   color-channel:
     title: Color Channel Functions
-    content: usage/color-channel.md
+    files: <%= functions.base %>/color-channel.md
 
   color-operations:
     title: Color Operation Functions
-    content: usage/color-operations.md
+    files: <%= functions.base %>/color-operations.md
 
   color-blending:
     title: Color Blending Functions
-    content: usage/color-blending.md
+    files: <%= functions.base %>/color-blending.md
 
 
 # =============================================

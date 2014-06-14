@@ -1,60 +1,68 @@
 # =============================================
 # PUBLISHED
 # =============================================
+# This file is only needed to ensure that the
+# sections build in a specific order.
 
+
+# The base path for features docs. Makes this easier
+# to update without having to change each path.
+base: content/features
+
+# Published documenation
 published:
   features-overview:
     title: Overview
-    lead: Simple overview of the basic features
-    content: content/features-overview.md
+    lead:  Simple overview of the basic features
+    files: content/features-overview.md
 
   variables:
     title: Variables
-    content: content/features/variables.md
+    files: <%= features.base %>/variables.md
 
   extend:
     title: Extend
-    content: content/features/extend.md
+    files: <%= features.base %>/extend.md
 
   mixins:
     title: Mixins
-    content: content/features/mixins.md
+    files: <%= features.base %>/mixins.md
 
   mixins-parametric:
     title: Parametric Mixins
-    content: content/features/mixins-parametric.md
+    files: <%= features.base %>/mixins-parametric.md
 
   mixins-as-functions:
     title: Mixins as Functions
-    content: content/features/mixins-as-functions.md
+    files: <%= features.base %>/mixins-as-functions.md
 
   detached-rulesets:
     title: Passing Rulesets to Mixins
-    content: content/features/detached-rulesets.md
+    files: <%= features.base %>/detached-rulesets.md
 
   import-directives:
     title: Import Directives
-    content: content/features/import-directives.md
+    files: <%= features.base %>/import-directives.md
 
   mixin-guards:
     title: Mixin Guards
-    content: content/features/mixin-guards.md
+    files: <%= features.base %>/mixin-guards.md
 
   css-guards:
     title: CSS Guards
-    content: content/features/css-guards.md
+    files: <%= features.base %>/css-guards.md
 
   loops:
     title: Loops
-    content: content/features/loops.md
+    files: <%= features.base %>/loops.md
 
   merge:
     title: Merge
-    content: content/features/merge.md
+    files: <%= features.base %>/merge.md
 
   parent-selectors:
     title: Parent Selectors
-    content: content/features/parent-selectors.md
+    files: <%= features.base %>/parent-selectors.md
 
 
 # =============================================
@@ -65,9 +73,9 @@ unpublished:
   scope:
     published: false
     title: Scope
-    content: content/features/scope.md
+    files: <%= features.base %>/scope.md
 
   strict-math:
     published: false
     title: Strict Math
-    content: content/features/strict-math.md
+    files: <%= features.base %>/strict-math.md
