@@ -69,20 +69,20 @@ module.exports = function(grunt) {
           prefix: 'lang-'
         }
       },
-      // feed: {
-      //   options: {
-      //     ext: '.xml',
-      //     layout: 'none'
-      //   },
-      //   src: '<%= site.snippets %>/feed.xml',
-      //   dest: '<%= site.dest %>/'
-      // },
       site: {
         options: {
           permalinks: {preset: 'pretty'},
           partials: ['content/**/*.md'],
         },
         src: '<%= site.pages %>/*.hbs',
+        dest: '<%= site.dest %>/'
+      },
+      feed: {
+        options: {
+          ext: '.xml',
+          layout: 'none'
+        },
+        src: '<%= site.snippets %>/feed.xml',
         dest: '<%= site.dest %>/'
       }
     },
