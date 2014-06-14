@@ -15,6 +15,7 @@ module.exports = function(grunt) {
     // Project metadata
     pkg: grunt.file.readJSON('package.json'),
     site: grunt.file.readYAML('.assemblerc.yml'),
+    _less: grunt.file.readJSON('data/less.json'),
 
     jshint: {
       options: {
@@ -42,8 +43,9 @@ module.exports = function(grunt) {
         assets: '<%= site.dest %>/public',
 
         // Metadata
-        pkg: '<%= pkg %>',
-        site: '<%= site %>',
+        pkg: '<%= pkg %>',     // extend the context with `pkg`
+        site: '<%= site %>',   // extend the context with `site`
+        less: '<%= _less %>',  // extend the context with `less`
         data: ['<%= site.data %>/*.{json,yml}', 'content/**/*.json'],
 
         // Templates
@@ -72,16 +74,13 @@ module.exports = function(grunt) {
       site: {
         options: {
           permalinks: {preset: 'pretty'},
-          partials: ['content/**/*.md'],
+          partials: ['content/**/*.md']
         },
         src: '<%= site.pages %>/*.hbs',
         dest: '<%= site.dest %>/'
       },
       feed: {
-        options: {
-          ext: '.xml',
-          layout: 'none'
-        },
+        options: {ext: '.xml', layout: 'none'},
         src: '<%= site.snippets %>/feed.xml',
         dest: '<%= site.dest %>/'
       }
@@ -156,16 +155,25 @@ module.exports = function(grunt) {
 
     watch: {
       options: {livereload: true },
-      site: {
-        files: [
-          // '<%= site.helpers %>/*.js',
-          // '<%= site.plugins %>/*.js',
-          '<%= site.styles %>/**/*.less',
-          '<%= site.templates %>/**/*.hbs',
-          '<%= site.content %>/**/*.md',
-          '<%= site.data %>/*.{json,yml}'
-        ],
-        tasks: ['clean', 'copy', 'less:site', 'assemble:site']
+      styles: {
+        files: ['<%= site.styles %>/**/*.less'],
+        tasks: ['less:site']
+      },
+      content: {
+        files: ['<%= site.content %>/**/*.md'],
+        tasks: ['assemble:site']
+      },
+      templates: {
+        files: ['<%= site.templates %>/**/*.hbs'],
+        tasks: ['assemble:site']
+      },
+      data: {
+        files: ['<%= site.data %>/*.{json,yml}'],
+        tasks: ['assemble:site']
+      },
+      assets: {
+        files: ['<%= site.assets %>/**/*.*'],
+        tasks: ['clean', 'copy']
       }
     }
   });

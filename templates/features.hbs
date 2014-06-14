@@ -13,8 +13,11 @@ slug: features
 
     {{#each (expand files)}}
     <div class="section-content">
+      {{> popover-source-link . }}
+
       <!-- {{basename .}} -->
       {{success '>> Inlining:' (basename .)}} {{! log a success message! }}
+
 
 {{#markdown}}
 {{inline .}}

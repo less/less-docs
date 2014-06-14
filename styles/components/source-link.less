@@ -7,33 +7,43 @@
 
 @source-link-width: 100px;
 
-h1, h2, h3 {
-  .source-link {
-    &:extend(.anchor all);
 
-    // override anchor positioning
-    top: -5px;
-    right: -10px;
-    left: auto;
-    width: @source-link-width;
+/**
+ * ## .source-link
+ *
+ * This link
+ */
 
-    color: @gray-lighter;
-    font-size: @font-size-large;
-    text-align: right;
+.section-content .source-link {
+  top: -5px;
+  width: @source-link-width;
+  padding: 15px;
 
-    &.active, &:hover {
-      color: @link-color;
-      text-decoration: none;
-    }
+  color: @gray-light;
+  font-size: @font-size-large;
+  text-align: right;
+
+  &.active, &:hover {
+    color: @link-color;
+    text-decoration: none;
+  }
+
+  &.right {
+    float: right;
   }
 }
 
 
-// Special popover styles
-// ---------------------------------------------
+/**
+ * ## .popover-source
+ *
+ * Special popover styles
+ */
 
+// increase specificity to override .popover styles
 .popover-source {
-  max-width: 60%; // prevent inner text from wrapping in source links
+  // prevent inner text from wrapping in source links
+  max-width: auto;
 
   // Specific styling for new-window icon in popovers
   .glyphicon-new-window {
@@ -41,14 +51,15 @@ h1, h2, h3 {
     padding-left: 6px;
   }
 
+  &, .glyphicon-new-window {
+    &, &:hover {
+      color: @link-color; // medium gray-blue
+    }
+  }
+
   &.left {
     margin-top: 2px; // tweak margin to align vertically
     margin-left: 60px;
-  }
-  &, .glyphicon-new-window {
-    &, &:hover {
-      color: #849396; // medium gray-blue
-    }
   }
 }
 

@@ -25,6 +25,12 @@ var helperError = function(name, msg) {
 };
 
 
+/**
+ * These need to be sorted out at some point
+ */
+
+
+
 // Initialize custom language settings for highlight.js
 hljs.registerLanguage('less', require('./lib/less.js'));
 hljs.registerLanguage('handlebars', require('./lib/handlebars.js'));
@@ -59,6 +65,8 @@ module.exports.register = function (Handlebars, options, params) {
   options = options || {};
   var opts = _.extend(options, options.data || {});
 
+
+  // expand glob patterns into an array of file paths.
   Handlebars.registerHelper('expand', function (patterns) {
 
     // Throw an error if invalid patterns are passed
@@ -78,14 +86,9 @@ module.exports.register = function (Handlebars, options, params) {
   });
 
 
+  // generic `marked` helper. can be used in other helpers
   Handlebars.registerHelper('marked', function(str) {
     return marked(str);
-  });
-
-
-  Handlebars.registerHelper('include', function (name, context) {
-    var result = include(name, _.extend(this, context)) || '';
-    return new Handlebars.SafeString(result);
   });
 
 
@@ -100,9 +103,20 @@ module.exports.register = function (Handlebars, options, params) {
     return new Handlebars.SafeString(marked(result));
   });
 
-  Handlebars.registerHelper('basename', function (filepath) {
-    return path.basename(filepath);
+
+  Handlebars.registerHelper('include', function (name, context) {
+    var result = include(name, _.extend(this, context)) || '';
+    return new Handlebars.SafeString(result);
   });
+
+
+  var extend = function () {
+    var args = [].slice.call(arguments);
+    _.merge.apply(_, [this].concat(args));
+    return this;
+  };
+
+  Handlebars.registerHelper("extend", extend);
 
 
   /**
@@ -120,36 +134,5 @@ module.exports.register = function (Handlebars, options, params) {
     var metadata = _.extend(context.data.root, page.context);
     var template = Handlebars.compile(page.content);
     return new Handlebars.SafeString(template(metadata));
-  });
-
-
-  /**
-   * Write a file to disk.
-   *
-   * @param   {String}  filepath Filepath of the destination file
-   * @param   {String}  content  Content to write to the file.
-   * @return  {String}
-   */
-
-  Handlebars.registerHelper('write', function (filepath, content) {
-    return file.writeFileSync(filepath, content);
-  });
-
-
-
-  /**
-   * Write the give context to a JSON file.
-   * @param   {String}  dest     Destination directory
-   * @param   {String}  name     Destination file name
-   * @param   {Object}  context  Context object
-   * @return  {Object}           JSON File with context
-   *
-   * @example
-   *   {{writeJSON 'tmp/page/' basename this.page}}
-   *
-   */
-
-  Handlebars.registerHelper('writeJSON', function (dest, name, context) {
-    return file.writeJSONSync(path.join(dest, name) + '.json', context);
   });
 };

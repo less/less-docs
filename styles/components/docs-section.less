@@ -11,6 +11,49 @@
   margin-bottom: 0;
 }
 
+
+/**
+ * Add a width to docs-headings inside section-content,
+ * so we easily get the .anchor when hovering over headings.
+ *
+ * **Example**:
+ *
+ * ```html
+ * <div class="docs-section">
+ *   <div class="section-content">
+ *     <h3 class="docs-heading"></h3>
+ *   </div>
+ * </div>
+ * ```
+ */
+
+.section-content .docs-heading {
+  max-width: 60%;
+}
+
+
+
+/**
+ * Remove the width on major headings, so we don't cause them to wrap.
+ * This class is probably unnecessary, but we'll do it for insurance.
+ *
+ * **Example**:
+ *
+ * ```html
+ * <div class="docs-section">
+ *   <div class="page-heading">
+ *     <h3 class="docs-heading"></h3>
+ *   </div>
+ * </div>
+ * ```
+ */
+
+.page-heading .docs-heading {
+  max-width: auto;
+}
+
+
+
 h1[id] {
   margin-top: 0;
   padding-top: 20px;
@@ -29,11 +72,18 @@ h1[id] {
 
   // Override normal paragraph styles inside blockquotes
   // this needs to be extra specific
-  blockquote > p {
-    font-size: 14px;
-    font-family: @font-family-sans-serif;
-    line-height: 1.5;
-    padding: 10px;
+  blockquote {
+    position: relative;
+    margin: 0 1rem 1rem;
+    font-style: italic;
+    color: #7a7a7a;
+    > p {
+      font-size: @font-size-large;
+      font-family: @font-family-sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      padding: 10px;
+    }
   }
 
   // Adjust headings inside .docs-sections
@@ -52,5 +102,9 @@ h1[id] {
   padding-top: 40px;
 }
 
-
+// individual section of content, usually represented
+// by h2, h3 etc.
+.section-content {
+  position: relative; // we need to set position relative for popovers
+}
 

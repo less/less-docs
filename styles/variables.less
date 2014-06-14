@@ -42,11 +42,11 @@
 @link-color:            #43759E; // @brand-primary;
 @link-hover-color:      darken(@link-color, 15%);
 
-// Web Fonts
-@font-open-sans-condensed:'Open Sans Condensed';
 
 // Typography
 // -------------------------
+@body-font:               1rem/1.5 "PT Sans", sans-serif;
+
 @font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -66,16 +66,24 @@
 @line-height-base:        1.428571429; // 20/14
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
-@headings-font-family:    @font-open-sans-condensed, @font-family-sans-serif;
+@headings-font-family:    'PT Sands', @font-family-sans-serif, @font-family-sans-serif;
 @headings-font-weight:    700;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 
 
+
+// Fonts
+// -------------------------
+
+@font-path:               "../font";
+
+
+
 // Iconography
 // -------------------------
 
-@icon-font-path:          "../fonts/";
+@icon-font-path:          @font-path;
 @icon-font-name:          "glyphicons-halflings-regular";
 
 

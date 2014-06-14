@@ -21,12 +21,15 @@ lead: "How to use less server-side, client-side and with third parties."
 
     {{#each (expand files)}}
     <div class="section-content">
+      {{> popover-source-link . }}
+
       <!-- {{basename .}} -->
       {{success '>> Inlining:' (basename .)}} {{! log a success message! }}
 
-      {{#markdown}}
-        {{inline .}}
-      {{/markdown}}
+
+{{#markdown}}
+{{inline .}}
+{{/markdown}}
 
       <br>
     </div>

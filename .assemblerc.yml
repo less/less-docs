@@ -68,17 +68,6 @@ plugins:
   - <%= site.templates %>/_plugins/holder-404-avoid.js
 
 
-
-# =============================================
-# WEBFONTS
-# =============================================
-
-webfonts:
-  - 'Open+Sans+Condensed:300,700:latin' # Headings
-  - 'Open+Sans:400,300,600,700:latin'   # Body text
-  - 'Lora:400,700,400italic,700italic'  # Blog
-
-
 # =============================================
 # SITE METADATA
 # =============================================
@@ -86,6 +75,8 @@ webfonts:
 
 # Less.js metadata
 current_version:   <%= less.version %>
+origin:            <%= less.master %>
+branch:            master
 
 # Site metadata
 brand:             lesscss.org
@@ -97,10 +88,10 @@ description: >
 
 # URLs
 homepage:          http://lesscss.org
-repo:              <%= pkg.repository.url %>
+repo:              <%= pkg.homepage %>
 issues:            <%= pkg.bugs.url %>?&state=open
 download:
-  source:          <%= pkg.homepages %>/archive/master.zip
+  source:          <%= pkg.homepage %>/archive/master.zip
   latest:          https://raw.github.com/less/less.js/master/dist/less-<%= less.version %>.min.js
 
 cdn:

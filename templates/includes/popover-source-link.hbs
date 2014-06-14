@@ -1,0 +1,8 @@
+{{!-- the trigger link --}}
+<a class="glyphicon glyphicon-pencil source-link right" href="{{{@root.site.repo}}}/blob/{{{@root.site.branch}}}/{{{.}}}" data-content="{{{slugify (filename .)}}}" target="_blank"></a>
+
+
+{{!-- the popover link. this is dynamically inserted into the popover template by ./assets/public/js/application.js --}}
+<a id="{{{slugify (filename .)}}}" href="{{{@root.site.repo}}}/blob/{{{@root.site.branch}}}/{{{.}}}" target="_blank">Edit the {{{filetype .}}} for {{{rename (basename .)}}}
+  <span class="glyphicon glyphicon-new-window"></span>
+</a>

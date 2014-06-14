@@ -14,6 +14,8 @@ lead: Function reference
   <p class="lead">Built-in functions supported by Less.</p>
 </div>
 
+
+
 {{#each functions.published}}
   <!-- {{title}} -->
   <div class="docs-section">
@@ -23,14 +25,16 @@ lead: Function reference
 
     {{#each (expand files)}}
     <div class="section-content">
-      {{> source-link .}}
+      {{> popover-source-link . }}
 
-      <!-- {{basename .}} -->
-      {{success '>> Inlining:' (basename .)}} {{! log a success message! }}
+      <!-- {{filename .}} -->
+      {{success '>> Inlining:' (filename .)}} {{! log a success message! }}
 
-      {{#markdown}}
-        {{inline .}}
-      {{/markdown}}
+
+{{#markdown}}
+{{inline .}}
+{{/markdown}}
+
       <br>
     </div>
     {{/each}}

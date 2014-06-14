@@ -2,14 +2,19 @@
 // Content
 // --------------------------------------------------
 
+
+// This is the main content of the docs, usually the center column.
 .docs-content {
   position: relative;
-  overflow: visible;
+  overflow: hidden; // hide the overhang on code/pre blocks
 
   background: #fff;
   background-color: #fff;
   padding: 1px @content-gutter 80px @content-gutter; // add 1px top padding to prevent collapsing
   margin: 0 -15px;
+
+  border: none;
+  border-radius: 0 0 4px 4px;
 
   // remove padding from fluid containers when
   // inside content blocks.
@@ -18,9 +23,8 @@
   }
 }
 
-// Add a box-shadow on "book styled" pages
 .docs-content {
-  box-shadow: 0 3px 7px rgba(0,0,0,.2);
+  .box-shadow(0 2px 4px rgba(0,0,0,.2));
 }
 
 .docs-section + .docs-section {

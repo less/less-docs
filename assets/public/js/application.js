@@ -36,7 +36,44 @@
 
     $('.docs-container [href=#]').click(function (e) {
       e.preventDefault()
-    })
+    });
+
+
+    $('.source-link').each(function () {
+      var id = $(this).data('content');
+      var content = $('<span>').append($('#' + id)).html();
+      $(this).attr('data-content', content);
+
+      // Keep popovers open when hovered
+      $(this).popover({
+        trigger: 'manual',
+        container: 'body',
+        placement: 'left',
+        template: '<div class="popover popover-source"> <div class="arrow"></div> <div class="popover-inner"> <h3 class="popover-title"></h3> <div class="popover-content"> <p></p> </div> </div> </div>',
+        html: true,
+        delay: {show: 50, hide: 750}
+      }).on('mouseenter', function () {
+        var self = this;
+        $(this).popover('show');
+        $(this).addClass('active');
+        $(this).addClass('popover-source');
+
+        $('.popover').on('mouseleave', function () {
+          $(self).popover('hide');
+          $(self).removeClass('active');
+        });
+
+      }).on('mouseleave', function () {
+        var self = this;
+        setTimeout(function () {
+          if (!$('.popover:hover').length) {
+            $(self).popover('hide');
+            $(self).removeClass('active');
+          }
+        }, 100);
+      });
+    });
+
 
     // back to top
     setTimeout(function () {

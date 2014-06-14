@@ -20,7 +20,7 @@ module.exports = function navigationPlugin(params, callback) {
   var navOpts = assemble.options.navigation || {};
 
   // get all the anchor tags from inside the headers
-  var headings = $('h1[id],h2[id]');
+  var headings = $('h1[id],h2[id],h3[id]');
   var navigation = [];
   var duplicateChecker = {};
   var dupesFound = false;
