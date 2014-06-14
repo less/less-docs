@@ -1,4 +1,4 @@
-# Set default behaviour, in case users don't have core.autocrlf set.
+# Enforce Unix newlines, in case users don't have core.autocrlf set.
 *.* text=lf
 *.* text eol=lf
 *.* eol=lf
