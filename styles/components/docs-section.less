@@ -1,0 +1,56 @@
+//
+// Docs sections
+// --------------------------------------------------
+
+
+// Space things out
+.docs-section {
+  margin-bottom: 60px;
+}
+.docs-section:last-child {
+  margin-bottom: 0;
+}
+
+h1[id] {
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+// Make headings stand out more, give some space
+.docs-section {
+  p {
+    font-size: @font-size-large - 2;
+    font-family: @font-family-serif;
+    -webkit-font-smoothing: antialiased;
+
+    line-height: 1.4;
+    margin: 20px 0;
+  }
+
+  // Override normal paragraph styles inside blockquotes
+  // this needs to be extra specific
+  blockquote > p {
+    font-size: 14px;
+    font-family: @font-family-sans-serif;
+    line-height: 1.5;
+    padding: 10px;
+  }
+
+  // Adjust headings inside .docs-sections
+  h1, h2, h3 {
+    letter-spacing: 1px;
+  }
+  h2 {
+    font-size: 24px;
+    color: @link-color;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+.docs-section + .docs-section {
+  padding-top: 40px;
+}
+
+
+

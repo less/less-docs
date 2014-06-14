@@ -1,0 +1,11 @@
+// Add some padding and margin to tables
+@table-grid-padding: 10px;
+
+table {
+  margin-bottom: (2 * @table-grid-padding);
+}
+
+td {
+  padding: 0 @table-grid-padding (@table-grid-padding / 2) 0;
+}
+

@@ -1,0 +1,28 @@
+//
+// Content
+// --------------------------------------------------
+
+.docs-content {
+  position: relative;
+  overflow: visible;
+
+  background: #fff;
+  background-color: #fff;
+  padding: 1px @content-gutter 80px @content-gutter; // add 1px top padding to prevent collapsing
+  margin: 0 -15px;
+
+  // remove padding from fluid containers when
+  // inside content blocks.
+  .container-fluid {
+    padding: 0;
+  }
+}
+
+// Add a box-shadow on "book styled" pages
+.docs-content {
+  box-shadow: 0 3px 7px rgba(0,0,0,.2);
+}
+
+.docs-section + .docs-section {
+  padding-top: 40px;
+}

@@ -9,11 +9,14 @@
 // Grays
 // -------------------------
 
+@gray-darkest:           lighten(#000, 7.5%);  // #111
 @gray-darker:            lighten(#000, 13.5%); // #222
 @gray-dark:              lighten(#000, 20%);   // #333
 @gray:                   lighten(#000, 33.5%); // #555
 @gray-light:             lighten(#000, 60%);   // #999
 @gray-lighter:           lighten(#000, 93.5%); // #eee
+@gray-lightest:          lighten(#000, 97%);   // #f7f7f7
+
 
 // Brand colors
 // -------------------------
@@ -27,15 +30,20 @@
 // Scaffolding
 // -------------------------
 
-@body-bg:               #fff;
+@content-gutter:        60px;
+@body-bg:               #f7f7f7;
 @body-padding:          @navbar-height;
 @text-color:            @gray-dark;
+
 
 // Links
 // -------------------------
 
-@link-color:            @brand-primary;
+@link-color:            #43759E; // @brand-primary;
 @link-hover-color:      darken(@link-color, 15%);
+
+// Web Fonts
+@font-open-sans-condensed:'Open Sans Condensed';
 
 // Typography
 // -------------------------
@@ -58,8 +66,8 @@
 @line-height-base:        1.428571429; // 20/14
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
-@headings-font-family:    @font-family-base;
-@headings-font-weight:    500;
+@headings-font-family:    @font-open-sans-condensed, @font-family-sans-serif;
+@headings-font-weight:    700;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 

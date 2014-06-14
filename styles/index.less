@@ -5,77 +5,48 @@
 
 // Theme variables
 @import "variables.less";
+@import "mixins.less";
 
 
-// Bootstrap components
-// --------------------------------
-
+// Vendor
 @import "bootstrap.less";
 @import (less) "docs.css";
-@import (inline) "highlight-js.css";
+
 
 
 // Docs Components
 // --------------------------------
 
+// Typography & Code
+@import (inline) "highlight-js.css";
 @import "typography.less";
+@import "code-overrides.less";
+
+// Layout and structure
+@import "scaffolding.less";
 @import "ad.less";
-/*@import "anchors.less";*/
 @import "banner.less";
-@import "button.less";
 @import "callout.less";
 @import "header.less";
+@import "footer.less";
+@import "team.less";
+@import "tables.less";
+@import "docs-content.less";
+@import "docs-section.less";
+
+// Navigation
 @import "sidebar.less";
 @import "main-nav.less";
-@import "team.less";
+
+// Buttons
+@import "button.less";
+
+// Links
+@import "anchors.less";
+@import "source-link.less";
 
 
-body {
-  //padding-top: 0;
-  padding-top: @body-padding;
-}
 
-.docs-section + .docs-section {
-  padding-top: 40px;
-}
-
-// Prevent navbar from overlapping
-h1[id] {
-  padding-top: 80px;
-  margin-top: -45px;
-}
-h2[id], h3[id] {
-  padding-top: 80px;
-  margin-top: -60px;
-}
-
-
-/**
- * Neutralize background color to allow our
- * syntax highlighter theme to do the work.
- */
-pre code {
-  background: transparent;
-}
-pre {
-  background-color: #f8f8f8;
-  margin: 20px 0 20px 5px;
-  border: 1px solid #eee;
-  border-radius: 0;
-  .box-shadow(-5px 0 0 #e2e2e2);
-}
-
-/**
- * Add some padding an margins to tables
- */
-
-@table-grid-padding: 10px;
-
-table {
-  margin-bottom: (2 * @table-grid-padding);
-}
-
-td {
-  padding: 0 @table-grid-padding (@table-grid-padding / 2) 0;
-}
-
+// Utility classes
+@import "utilities.less";
+@import "responsive-utilities.less";

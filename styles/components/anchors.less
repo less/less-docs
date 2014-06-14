@@ -4,33 +4,83 @@
 // Anchors show upon hovering over a heading
 
 
+// PLEASE DON'T CHANGE ANCHOR SIZES without
+// Completely understanding what they're doing.
+//
+// The anchors are used (beyond being anchors)
+// to ensure that headings do no overlap with
+// the top navbar.
+//
+// If you feel a need to change heading spacing,
+// this is mostl likely not the best place
+// to do it.
+
+
+
+@anchor-width:              200px;
+@anchor-distance:           80px;
+@anchor-distance-small:     40px;
+
+
+
 // Base class
+// ----------------------------------------------
+// Our "anchors" are really just icons that sit
+// in the left margin, and are only visible when
+// hovering over headings or the icons themselves.
+
 .anchor {
-  position: absolute;
-  top: auto;
-  bottom: 0;
-  left: 0;
-  display: block;
-  font-size: 18px;
-  color: @gray-dark;
-  padding: 10px;
-  line-height: 1.25;
-  margin: 0 0 -5px -33px;
-  cursor: pointer;
-}
+  &, &:empty{
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
 
-.anchor .glyphicon {
-  display: none;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  position: relative;
-  &:hover .anchor {
-    text-decoration: none;
-
-    .glyphicon {
-      color: @link-color;
-      display: inline-block;
-    }
+    color: transparent;
+    font-size: 18px;
+    padding: 10px 10px 10px 25px;
+    width: @anchor-width;
   }
+}
+
+// Adjust the vertical positioning
+// of anchors next to larger headings.
+h2 .anchor {
+  margin-bottom: -9px;
+}
+
+
+// Headings
+// ----------------------------------------------
+
+h1, h2, h3 {
+  position: relative;
+  padding-left: @content-gutter;
+  margin-left: -(@content-gutter);
+
+  .anchor:hover {
+    color: @gray-darkest;
+    visibility: visible;
+    text-decoration: none;
+  }
+}
+
+
+// Offset
+// ----------------------------------------------
+// anchor targets are invisble and sit the specified
+// distance above headings and anchors. This is what
+// ensures that our headings won't overlap the navar.
+// If you done require clickable anchors, you can
+// achieve this with fewer classes and less HTML
+
+.anchor-target {
+  position: absolute;
+  margin-top: -(@anchor-distance);
+  padding-top: @anchor-distance;
+}
+
+.anchor-target-small {
+  margin-top: -(@anchor-distance-small);
+  padding-top: @anchor-distance-small;
 }
