@@ -1,0 +1,155 @@
+# =============================================
+# ASSEMBLE CONFIG
+# =============================================
+
+# Dest config
+root:             _less.github.io
+dest:             <%= site.root %>
+
+# =============================================
+# SOURCE CONFIG
+# =============================================
+
+# Metadata
+data:             data
+utils:            <%= site.data %>/_utils
+mixins:           <%= site.data %>/_utils
+date:             <%= new Date() %>
+
+# Assets > fonts, icons, images etc.
+assets:           assets
+images:           <%= site.assets %>/images
+fonts:            <%= site.assets %>/fonts
+
+# Styles
+styles:           styles
+
+# Scripts
+scripts:          scripts
+
+# Content
+content:          content
+
+
+# =============================================
+# TEMPLATES
+# =============================================
+
+# Base directory for templates
+templates:        templates
+
+# Pages
+pages:            <%= site.templates %>
+
+# Partials
+includes:         <%= site.templates %>/includes
+snippets:         <%= site.templates %>/snippets
+
+# Layouts
+layouts:          <%= site.templates %>/layouts
+layoutext:        .hbs
+layout:           content
+
+
+
+# =============================================
+# EXTENSIONS
+# =============================================
+
+helpers:          <%= site.templates %>/_helpers
+plugins:
+  # npm
+  # - assemble-contrib-drafts
+  # - assemble-contrib-navigation
+  - assemble-contrib-permalinks
+
+  # local
+  - <%= site.templates %>/_plugins/navigation.js
+  - <%= site.templates %>/_plugins/holder-404-avoid.js
+
+
+
+# =============================================
+# WEBFONTS
+# =============================================
+
+webfonts:
+  - 'Open+Sans+Condensed:300,700:latin' # Headings
+  - 'Open+Sans:400,300,600,700:latin'   # Body text
+  - 'Lora:400,700,400italic,700italic'  # Blog
+
+
+# =============================================
+# SITE METADATA
+# =============================================
+
+
+# Less.js metadata
+current_version:   <%= less.version %>
+
+# Site metadata
+brand:             lesscss.org
+title:             Less.js
+lead:              Less « The Dynamic Stylesheet Language
+description: >
+  Less extends CSS with dynamic behavior such as variables, mixins, operations and functions.
+  Less runs on both the server-side (with Node.js and Rhino) or client-side (modern browsers only).
+
+# URLs
+homepage:          http://lesscss.org
+repo:              <%= pkg.repository.url %>
+issues:            <%= pkg.bugs.url %>?&state=open
+download:
+  source:          <%= pkg.homepages %>/archive/master.zip
+  latest:          https://raw.github.com/less/less.js/master/dist/less-<%= less.version %>.min.js
+
+cdn:
+  cloudflare:      //cdnjs.cloudflare.com/ajax/libs/less.js/
+
+
+# =============================================
+# SEO/SEM
+# =============================================
+
+# Most of these are not enabled. You will need
+# to setup accounts with the services you want
+# to use and add the templates.
+
+analytics:
+  alexa:           lpTeh1awA400OE
+  google:          false
+  google_site_id:  false
+
+
+
+# =============================================
+# SOCIAL / SHARING
+# =============================================
+
+# Like SEO/SEM, Most of these are not enabled.
+# You will need to setup accounts with the
+# services you want to use and add the templates.
+
+# Comments
+disqus:
+  enabled:        true
+  shortname:      <%= pkg.name %>
+
+# Social
+social:
+  twitter:
+    via:          false
+    username:     false
+  facebook:       false
+  linkedin:       false
+  gplus:          false
+  hn:             false
+  google:         false
+
+# Sharing
+sharing:
+  twitter:        false
+  facebook:       false
+  gplus:          false
+  hn:             false
+  google:         false
