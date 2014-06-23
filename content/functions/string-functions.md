@@ -91,7 +91,7 @@ format-s-upper: "repetitions: 3 file: directory%2Ffile.less";
 
 > Replaces a text within a string.
 
-Released [v1.7.0]({{ less.master }}CHANGELOG.md)
+Released [v1.7.3]({{ less.master }}CHANGELOG.md)
 
 Parameters:
 
