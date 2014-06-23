@@ -1,6 +1,6 @@
 > Allow wrapping of a css block, defined in a mixin
 
-Released [v1.7.0]({{ less.master }}CHANGELOG.md)
+Released [v1.7.3]({{ less.master }}CHANGELOG.md)
 
 You may want to define a mixin that will abstract out either wrapping a piece of code in a media query or a non supported browser class name. You can now pass rulesets to mixins so that the mixin can wrap the content. E.g.
 

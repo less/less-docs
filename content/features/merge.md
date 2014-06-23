@@ -31,7 +31,7 @@ Outputs
 
 > Append property value with space
 
-Released [v1.7.0]({{ less.master }}CHANGELOG.md)
+Released [v1.7.3]({{ less.master }}CHANGELOG.md)
 
 Example:
 
