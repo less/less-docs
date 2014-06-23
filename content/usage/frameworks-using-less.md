@@ -56,5 +56,6 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [more-or-less](https://github.com/pixelass/more-or-less) | for-loops and other functions + css3 mixins |
 | [Oban](http://oban.io/) | Collection of mixins |
 | [Preboot](http://getpreboot.com/) | Collection of variables and mixins. The precursor to Bootstrap |
+| [prelude-mixins](https://github.com/amazingSurge/prelude-mixins) | Collection of mixins |
 | [Shape.LESS](https://github.com/fahad19/shape.less) | Collection of mixins for various shapes |
 | [tRRtoolbelt.less](https://github.com/therebelrobot/tRRtoolbelt.less) | Mixins and functions for common actions |
