@@ -8,94 +8,94 @@ pre code {
     background: #f8f8ff
 }
 
-.lang-comment,
-.lang-template_comment {
+.hljs-comment,
+.hljs-template_comment {
     color: #998;
     font-style: italic
 }
 
-.lang-keyword,
-.lang-css .lang-rule .lang-keyword,
-.lang-javascript .lang-title,
-.lang-subst,
-.lang-request,
-.lang-status {
+.hljs-keyword,
+.hljs-css .hljs-rule .hljs-keyword,
+.hljs-javascript .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
     color: #333;
     font-weight: bold
 }
 
-.lang-number,
-.lang-hexcolor {
+.hljs-number,
+.hljs-hexcolor {
     color: #099;
 }
 
-.lang-string,
+.hljs-string,
 .tag .value {
     color: #d14
 }
 
-.lang-title,
-.lang-id {
+.hljs-title,
+.hljs-id {
     color: #900;
     font-weight: bold
 }
 
-.lang-javascript .lang-title {
+.hljs-javascript .hljs-title {
     font-weight: normal
 }
 
-.lang-class .lang-title {
+.hljs-class .hljs-title {
     color: #458;
     font-weight: bold
 }
 
-.lang-tag,
-.lang-tag .lang-title,
-.lang-rules .lang-property {
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property {
     color: #000080;
     font-weight: normal
 }
 
-.lang-attribute,
-.lang-variable {
+.hljs-attribute,
+.hljs-variable {
     color: #008080
 }
 
-.lang-regexp {
+.hljs-regexp {
     color: #009926
 }
 
-.lang-class {
+.hljs-class {
     color: #458;
     font-weight: bold
 }
 
-.lang-symbol,
-.lang-prompt {
+.hljs-symbol,
+.hljs-prompt {
     color: #990073
 }
 
-.lang-built_in {
+.hljs-built_in {
     color: #0086b3
 }
 
-.lang-preprocessor,
-.lang-pi,
-.lang-doctype,
-.lang-shebang,
-.lang-cdata {
+.hljs-preprocessor,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
     color: #999;
     font-weight: bold
 }
 
-.lang-deletion {
+.hljs-deletion {
     background: #fdd
 }
 
-.lang-addition {
+.hljs-addition {
     background: #dfd
 }
 
-.lang-chunk {
+.hljs-chunk {
     color: #aaa
 }
