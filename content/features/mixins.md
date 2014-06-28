@@ -26,7 +26,7 @@ which results in:
 }
 ```
 
-Notice that when you call the mixin, the parenthesis are optional.
+Notice that when you call the mixin, the parentheses are optional.
 
 ```less
 .a();   //these lines do the same thing
@@ -35,7 +35,7 @@ Notice that when you call the mixin, the parenthesis are optional.
 
 ## Not outputting the mixin
 
-If you want to create a mixin but you do not want that mixin to be output, you can put parenthesis after it.
+If you want to create a mixin but you do not want that mixin to be output, you can put parentheses after it.
 
 ```less
 .my-mixin {
@@ -63,7 +63,7 @@ outputs
 
 ## Selectors in mixins
 
-Mixins can contain more than just properties, they can contain selectors to.
+Mixins can contain more than just properties, they can contain selectors too.
 
 For example:
 
