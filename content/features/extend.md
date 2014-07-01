@@ -210,7 +210,7 @@ Nth expression form does matter. Nth-expressions `1n+3` and `n+3` are equivalent
 :nth-child(1n+3) {
   color: blue;
 }
-.child:extend(n+3) {}
+.child:extend(:nth-child(n+3)) {}
 ```
 Outputs
 
