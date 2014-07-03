@@ -92,6 +92,40 @@ which will output
 }
 ```
 
+Detached ruleset call unlocks (returns) all its mixins into caller the same way as mixin calls do. However, it does NOT return variables.
+
+Returned mixin:
+````less
+// detached ruleset with a mixin
+@detached-ruleset: { 
+    .mixin() {
+        color:blue;
+    }
+};
+// call detached ruleset
+.caller {
+    @detached-ruleset(); 
+    .mixin();
+}
+````
+
+Results in:
+````css
+.caller {
+  color: blue;
+}
+````
+
+Private variables:
+````less
+detached-ruleset: { 
+    @color:blue; //this variable is private
+};
+.caller {
+    color: @color; //syntax error
+}
+````
+
 ## Scoping
 Detached ruleset can use all variables and mixins accessible on place where it is *defined* and where it is *called*. Otherwise said, both definition and caller scopes are available to it. If both scopes contains the same variable or mixin, declaration scope value takes precedence. 
 
