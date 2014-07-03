@@ -49,7 +49,7 @@ div {
 }
 ```
 
-Variable defined directly in callers scope can not be overriden. However, variable defined in callers parent scope is not protected and be overriden.
+Variable defined directly in callers scope can not be overriden. However, variable defined in callers parent scope is not protected and will be overriden:
 ````less
 .mixin() {
   @size: in-mixin; 
