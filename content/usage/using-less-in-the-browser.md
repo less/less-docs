@@ -66,8 +66,8 @@ Whether to request the import files with the async option or not. See fileAsync.
 
 ### dumpLineNumbers
 Type: `String`
-Options: ``|`comments`|`mediaquery`|`all`
-Default: ``
+Options: `''`| `'comments'`|`'mediaquery'`|`'all'`
+Default: `''`
 
 When set this outputs source line information directly into the output css file. This helps you debug where a particular rule came from.
 
