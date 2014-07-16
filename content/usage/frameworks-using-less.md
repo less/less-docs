@@ -21,12 +21,14 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [Kube](http://imperavi.com/kube/) | Minimalistic CSS-framework for developers and designers |
 | [Metro UI CSS](http://metroui.org.ua/) | Set of styles to create a site with an interface similar to Windows 8 |
 | [Pre](http://madscript.com/pre/) | CSS framework |
+| [prelude](https://github.com/amazingSurge/prelude) | Lightweight, responsive and extensible front-end framework |
 | [Schema](http://danmalarkey.github.io/schema/) | Light, responsive, and lean frontend UI framework |
 | [UIkit](http://getuikit.com/) | Lightweight and modular front-end framework for developing web interfaces |
 
 ## Grid Systems
 | | |
 |-|-|
+| [adaptGrid](https://github.com/amazingSurge/adaptGrid) | |
 | [Fluidable](http://fluidable.com/) | |
 | [Golden Grid System](http://goldengridsystem.com/) | |
 | [LESS Zen Grid](https://github.com/bassjobsen/LESS-Zen-Grid) | |
