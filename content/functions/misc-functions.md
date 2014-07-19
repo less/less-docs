@@ -216,3 +216,22 @@ Output: `5px`
 Example: `unit(5em)`
 
 Output: `5`
+
+
+
+### get-unit
+
+> Returns units of a number.
+
+If the argument contains a number with units, the function returns its units. The argument without units results in an empty return value.
+
+Parameters:
+* `number`: a number with or without units.
+
+Example: `get-unit(5px)`
+
+Output: `px`
+
+Example: `get-unit(5)`
+
+Output: ` //nothing` 
