@@ -235,3 +235,51 @@ Output: `px`
 Example: `get-unit(5)`
 
 Output: ` //nothing` 
+
+
+
+### svg-gradient
+
+> Generates multi-stop svg gradients.
+
+Svg-gradient function generates multi-stop svg gradients. It must have at least three parameters. First parameter specifies gradient type and direction and remaining parameters list colors and their positions. The position of first and last specified color are optional, remaining colors must have positions specified.
+
+The direction must be one of `to bottom`, `to right`, `to bottom right`, `to top right`, `ellipse` or `ellipse at center`. The direction can be specified as both escaped value and space separated list of words.
+
+Parameters:
+* `escaped value` or `list of identifiers`: direction
+* `color [percentage]` pair: first color and its relative position (position is optional)
+* `color percent` pair: (optional) second color and its relative position
+* ...
+* `color percent` pair: (optional) n-th color and its relative position
+* `color [percentage]` pair: last color and its relative position (position is optional)
+
+Returns: `url` with base64 encoded svg gradient.
+
+Example:
+````
+div {
+  background-image: svg-gradient(to right, red, green 30%, blue);
+}
+````
+
+results in:
+````
+div {
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmMDAwMCIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjMDA4MDAwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMGZmIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIgLz48L3N2Zz4=')
+}
+````
+
+Generated background image has red color on the left, green at 30% of its width and ends with a blue color. Base64 encoded part contains following svg-gradient:
+````xml
+<?xml version="1.0" ?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 1 1" preserveAspectRatio="none">
+    <linearGradient id="gradient" gradientUnits="userSpaceOnUse" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#ff0000"/>
+        <stop offset="30%" stop-color="#008000"/>
+        <stop offset="100%" stop-color="#0000ff"/>
+    </linearGradient>
+    <rect x="0" y="0" width="1" height="1" fill="url(#gradient)" />
+</svg>
+````
+
