@@ -108,6 +108,8 @@ and again the `>` is optional
 // all do the same thing
 #outer > .inner;
 #outer > .inner();
+#outer .inner;
+#outer .inner();
 #outer.inner;
 #outer.inner();
 ```
