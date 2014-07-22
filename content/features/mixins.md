@@ -102,7 +102,7 @@ If you want to mixin properties inside a more complicated selector, you can stac
 }
 ```
 
-and again the `>` is optional
+and again both `>` and whitespace are optional
 
 ```less
 // all do the same thing
