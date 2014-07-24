@@ -62,3 +62,4 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [prelude-mixins](https://github.com/amazingSurge/prelude-mixins) | Collection of mixins |
 | [Shape.LESS](https://github.com/fahad19/shape.less) | Collection of mixins for various shapes |
 | [tRRtoolbelt.less](https://github.com/therebelrobot/tRRtoolbelt.less) | Mixins and functions for common actions |
+| [LESS-Mix](http://denysdovhan.github.io/LESS-Mix/) | Functional, powerful, convenient mixin libraries |
