@@ -50,16 +50,16 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [Hexagon](http://db0company.github.io/css-hexagon/) | Generate CSS hexagons with custom size and color |
 | [LESS Elements](http://lesselements.com/) | Set of mixins |
 | [LESS Hat](http://lesshat.com/) | Mixins library |
+| [lessley](https://github.com/pixelass/lessley) | A jasmine like testing suite written in pure less |
 | [LESS-bidi](https://github.com/danielkatz/less-bidi) | Set of mixins for creating bi-directional styling |
+| [LESS-Mix](http://denysdovhan.github.io/LESS-Mix/) | Mixins library |
 | [media-query-to-type](https://github.com/himedlooff/media-query-to-type) | Media Queries to Media Types with Less |
 | [More-Colors.less](http://jasonrobb.github.io/More-Colors.less/) | Variables for easier color manipulation while you design in the browser |
 | [more-less](https://github.com/roelvanhintum/More-Less) | Mixin lib supporting LESS 1.7 |
 | [More.less](https://github.com/weinitz/More.less) | Mixins, animations, shapes and more |
 | [more-or-less](https://github.com/pixelass/more-or-less) | for-loops and other functions + css3 mixins |
-| [lessley](https://github.com/pixelass/lessley) | A jasmine like testing suite written in pure less |
 | [Oban](http://oban.io/) | Collection of mixins |
 | [Preboot](http://getpreboot.com/) | Collection of variables and mixins. The precursor to Bootstrap |
 | [prelude-mixins](https://github.com/amazingSurge/prelude-mixins) | Collection of mixins |
 | [Shape.LESS](https://github.com/fahad19/shape.less) | Collection of mixins for various shapes |
 | [tRRtoolbelt.less](https://github.com/therebelrobot/tRRtoolbelt.less) | Mixins and functions for common actions |
-| [LESS-Mix](http://denysdovhan.github.io/LESS-Mix/) | Functional, powerful, convenient mixin libraries |
