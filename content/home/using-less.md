@@ -88,6 +88,20 @@ parser.parse('.class { width: (1 + 1) }', function (e, tree) {
 
 See the [Usage]({{resolve 'usage'}}) section for details of other tools.
 
+# Command-line With Rhino
+> Each less.js release contains also rhino-compatible version.
+
+Command line rhino version requires two files:
+* less-rhino-<version>.js - compiler implementation,
+* lessc-rhino-<version>.js - command line support.
+
+Command to run the compiler:
+````
+java -jar js.jar -f less-rhino-<version>.js lessc-rhino-<version>.js styles.less styles.css
+````
+
+This will compile styles.less file and save the result to styles.css file. The output file parameter is optional. If it is missing, less will output the result to `stdout`.
+
 # Client-side usage
 
 > Using less.js in the browser is great for development, but it's not recommended for production
