@@ -116,7 +116,7 @@ e.g.
 less = { 
     functions: { 
         myfunc: function() { 
-            return new(tree.Dimension)(1);
+            return new(less.tree.Dimension)(1);
         }
     }
 };
