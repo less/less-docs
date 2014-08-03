@@ -113,7 +113,13 @@ User functions, keyed by name.
 
 e.g.
 ```js
-less = { functions: { myfunc: function() { return 1; }} };
+less = { 
+    functions: { 
+        myfunc: function() { 
+            return new(tree.Dimension)(1);
+        }
+    }
+};
 ```
 
 and it can be used like a native Less function e.g.
