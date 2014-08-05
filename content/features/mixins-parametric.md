@@ -1,6 +1,6 @@
 > How to pass arguments to mixins
 
-Mixins can also take arguments, which are variables pass to the block of selectors when it is mixed in.
+Mixins can also take arguments, which are variables passed to the block of selectors when it is mixed in.
 
 For example:
 
