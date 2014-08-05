@@ -56,7 +56,7 @@ Example: `@import (reference) "foo.less";`
 Additionally, **`reference`** produces different results depending on which method was used (mixin or extend):
 
 * **[extend](#extend-feature)**: When a selector is extended, only the new selector is marked as _not referenced_, and it is pulled in at the position of the reference `@import` statement.
-* **[mixins](#mixins-feature)**: When a `reference` style is used as an [implicit mixin](#mixins-feature), its rules are are mixed-in, marked "not reference", and appear in the referenced place as normal.
+* **[mixins](#mixins-feature)**: When a `reference` style is used as an [implicit mixin](#mixins-feature), its rules are mixed-in, marked "not reference", and appear in the referenced place as normal.
 
 
 ### reference example
