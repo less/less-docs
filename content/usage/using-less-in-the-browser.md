@@ -27,7 +27,7 @@ It is possible to output rules in your CSS which allow tools to locate the sourc
 
 Either specify the option `dumpLineNumbers` as above or add `!dumpLineNumbers:mediaquery` to the url.
 
-You can use the "comments" option with [FireLESS](https://addons.mozilla.org/en-us/firefox/addon/fireless/) and the "mediaquery" option with FireBug/Chrome dev tools (it is identical to the SCSS media query debugging format).
+You can use the `comments` option with [FireLESS](https://addons.mozilla.org/en-us/firefox/addon/fireless/) and the `mediaquery` option with FireBug/Chrome dev tools (it is identical to the SCSS media query debugging format).
 
 ## Client-side Usage
 
@@ -69,9 +69,9 @@ Type: `String`
 Options: `''`| `'comments'`|`'mediaquery'`|`'all'`
 Default: `''`
 
-When set this outputs source line information directly into the output css file. This helps you debug where a particular rule came from.
+When set, this adds source line information to the output css file. This helps you debug where a particular rule came from.
 
-The comments option is used for outputting user understandable content, whilst mediaquery is for use with a firefox extension which parses the css and extracts out the information.
+The `comments` option is used for outputting user-understandable content, whilst `mediaquery` is for use with a firefox extension which parses the css and extracts the information.
 
 In the future we hope this option to be superseded by sourcemaps.
 
@@ -83,7 +83,7 @@ Environment to run may be either `development` or `production`.
 
 In production, your css is cached in local storage and information messages are not output to the console.
 
-If the document's URL starts with `file://` or is on local machine or has a non standard port, it will automatically be set to `development`.
+If the document's URL starts with `file://` or is on your local machine or has a non standard port, it will automatically be set to `development`.
 
 e.g.
 ```js
@@ -104,7 +104,7 @@ Type: `Boolean`
 
 Default: `false`
 
-Whether to request the import asyncronously when in a page under a file protocol.
+Whether to request the import asynchronously when in a page with a file protocol.
 
 ### functions
 Type: `object`
@@ -135,7 +135,7 @@ Type: `Number`
 
 Default: 2
 
-The amount of logging in the javascript console. Note: If you are in the environment 'production' you will get no logging.
+The amount of logging in the javascript console. Note: If you are in the `production` environment you will not get any logging.
 
 ```bash
 2 - Information and errors
