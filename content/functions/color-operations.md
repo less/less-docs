@@ -224,7 +224,7 @@ This time the grey's lightness looks about the same as the green, though its val
 
 > Choose which of two colors provides the greatest contrast with another.
 
-This is useful for ensuring that a color is readable against a background, which is also useful for accessibility compliance. This function works the same way as the [contrast function in Compass for SASS](http://compass-style.org/reference/compass/utilities/color/contrast/). In accordance with [WCAG 2.0](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef), colors are compared using their [luma](#color-channel-luma) value, not their lightness.
+This is useful for ensuring that a color is readable against a background, which is also useful for accessibility compliance. This function works the same way as the [contrast function in Compass for SASS](http://compass-style.org/reference/compass/utilities/color/contrast/). In accordance with [WCAG 2.0](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef), colors are compared using their gamma-corrected [luma](#color-channel-luma) value, not their lightness.
 
 The light and dark parameters can be supplied in either order - the function will calculate their luma values and assign light and dark automatically, which means you can't use this function to select the *least* contrasting color by reversing the order.
 
@@ -233,30 +233,34 @@ Parameters:
 * `color`: A color object to compare against.
 * `dark`: optional - A designated dark color (defaults to black).
 * `light`: optional - A designated light color (defaults to white).
-* `threshold`: optional - A percentage 0-100% specifying where the transition from "dark" to "light" is (defaults to 43%, matching SASS). This is used to bias the contrast one way or another, for example to allow you to decide whether a 50% grey background should result in black or white text. You would generally set this lower for 'lighter' palettes, higher for 'darker' ones..
+* `threshold`: optional - A percentage 0-100% specifying where the transition from "dark" to "light" is (defaults to 43%, matching SASS). This is used to bias the contrast one way or another, for example to allow you to decide whether a 50% grey background should result in black or white text. You would generally set this lower for 'lighter' palettes, higher for 'darker' ones.
 
 Returns: `color`
 
 Example:
 
 ```less
-contrast(#aaaaaa)
-contrast(#222222, #101010)
-contrast(#222222, #101010, #dddddd)
-contrast(hsl(90, 100%, 50%), #000000, #ffffff, 40%);
-contrast(hsl(90, 100%, 50%), #000000, #ffffff, 60%);
+p {
+    a: contrast(#aaaaaa);
+    b: contrast(#222222, #101010);
+    c: contrast(#222222, #101010, #dddddd);
+    d: contrast(hsl(90, 100%, 50%), #000000, #ffffff, 30%);
+    e: contrast(hsl(90, 100%, 50%), #000000, #ffffff, 80%);
+}
 ```
 
 Output:
 
 ```
-#000000 // black
-#ffffff // white
-#dddddd
-#000000 // black
-#ffffff // white
+p {
+    a: #000000 // black
+    b: #ffffff // white
+    c: #dddddd
+    d: #000000 // black
+    e: #ffffff // white
+}
 ```
-These examples use the calculated colors for background and foreground; you can see that you never end up with white-on-white, nor black-on-black, though it's possible to use the threshold to permit lower-contrast outcomes, as in the last example:
+These examples use the above calculated colors for background and foreground; you can see that you never end up with white-on-white, nor black-on-black, though it's possible to use the threshold to permit lower-contrast outcomes, as in the last example:
 
 ![Color 1](holder.js/100x40/#aaaaaa:#000000/text:000000)
 ![Color 1](holder.js/100x40/#222222:#ffffff/text:ffffff)
