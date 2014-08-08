@@ -62,7 +62,7 @@ Type: `Boolean`
 
 Default: `false`
 
-Whether to request the import files with the async option or not. See fileAsync.
+Whether to request the import files with the async option or not. See [fileAsync](#using-less-in-the-browser-fileasync).
 
 ### dumpLineNumbers
 Type: `String`
