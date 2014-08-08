@@ -241,7 +241,7 @@ Example:
 
 ```less
 p {
-    a: contrast(#aaaaaa);
+    a: contrast(#bbbbbb);
     b: contrast(#222222, #101010);
     c: contrast(#222222, #101010, #dddddd);
     d: contrast(hsl(90, 100%, 50%), #000000, #ffffff, 30%);
@@ -262,7 +262,7 @@ p {
 ```
 These examples use the above calculated colors for background and foreground; you can see that you never end up with white-on-white, nor black-on-black, though it's possible to use the threshold to permit lower-contrast outcomes, as in the last example:
 
-![Color 1](holder.js/100x40/#aaaaaa:#000000/text:000000)
+![Color 1](holder.js/100x40/#bbbbbb:#000000/text:000000)
 ![Color 1](holder.js/100x40/#222222:#ffffff/text:ffffff)
 ![Color 1](holder.js/100x40/#222222:#dddddd/text:dddddd)
 ![Color 1](holder.js/100x40/#80ff00:#000000/text:000000)
