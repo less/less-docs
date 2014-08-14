@@ -118,7 +118,7 @@ You can also bundle pseudo-selectors with your mixins using this method. Here's 
 
 ### Media query bubbling and nested media queries 
 
-Media queries can be nested in the same way as selectors. Selector are copied into the body of the media query:
+Media queries can be nested in the same way as selectors. Selectors are copied into the body of the media query:
 
 ```less
 .screencolor{
