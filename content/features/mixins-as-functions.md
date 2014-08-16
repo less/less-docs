@@ -1,6 +1,6 @@
 > Return variables from mixins
 
-All variables defined in a mixin are visible and can be used in caller's scope (unless the caller defines its own variable with the same name).
+All variables defined in a mixin are visible and can be used in caller's scope (unless the caller scope already has a variable with same name defined, including previously defined by another mixin call).
 
 Example:
 
