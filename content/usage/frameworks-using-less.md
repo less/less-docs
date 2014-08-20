@@ -43,6 +43,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [3L](http://mateuszkocz.github.io/3l/) | Mixins library |
 | [animate](https://github.com/joshuapekera/animate) | Library of CSS3 keyframe animations |
 | [Clearless](http://clearleft.github.io/clearless/) | Collection of mixins |
+| [Css3LessPlease](http://chrsr.com/css3lessplease/) | Conversion of css3please.com to LESS mixins |
 | [CssEffects](http://adodson.com/css-effects/) | Collection of CSS style effects |
 | [Cssowl](http://cssowl.owl-stars.com/) | Mixin library |
 | [cube.less](https://github.com/sparanoid/cube.less) | Animated 3D cube using only CSS |
