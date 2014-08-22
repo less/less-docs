@@ -218,4 +218,4 @@ For instance:
 @base-color: red;
 ```
 
-This works fine - base-color is overidden and dark-color is a dark red.
+This works fine because of [Lazy Loading](#variables-feature-lazy-loading) - base-color is overidden and dark-color is a dark red.
