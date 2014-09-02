@@ -48,8 +48,6 @@ div {
   padding: 33px;
 }
 ```
-<<<<<<< HEAD
-=======
 
 Variable defined directly in callers scope can not be overriden. However, variable defined in callers parent scope is not protected and will be overriden:
 ````less
