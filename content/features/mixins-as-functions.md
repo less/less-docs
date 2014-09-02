@@ -91,5 +91,3 @@ Results in:
   declaration: 5;
 }
 ````
-
->>>>>>> f945fa6948c69b5a84e402bc8eb8b2ead2735cfa
