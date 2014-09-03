@@ -1,0 +1,64 @@
+/*
+    Code coloring (minimalistic (sort of) scheme)
+    Assuming we only highlight the following languages:
+    less, css, html, js and "generic shell"
+*/
+
+& { // unnamed namespace
+
+// Styles
+
+pre code {
+    display: block;
+    padding: 0.5em;
+    color:   @gray-dark;
+}
+
+.hljs-comment {
+    color:      @gray;
+    font-style: italic;
+}
+
+.-(id,            @blue);
+.-(class,         @violet);
+.-(tag,           @black);
+.-(variable,      @black);
+.-(attribute,     @black);
+.-(keyword,       @black);
+.-(built_in,      @black);
+// .-(pseudo,     @gray-dark);
+.-(value,         @cyan);
+.-(number,        @cyan);
+.-(hexcolor,      @cyan);
+.-(literal,       @cyan);
+.-(string,        @cyan);
+// .-(function,   @red);
+.-(attr_selector, @magenta);
+.-(at_rule,       @orange);
+
+.lang-less {
+    // Less specific coloring:
+    .-(built_in, @green);
+}
+
+.-(@name, @color) {
+    .hljs-@{name} {
+        color: @color
+    }
+}
+
+// Colors
+
+@blue:       #268bd2;
+@cyan:       #2aa198;
+@green:      #859900;
+@orange:     #cb4b16;
+@red:        #dc322f;
+@violet:     lighten(@navbar-inverse-bg, 9%);
+@magenta:    #d33682;
+
+@black:      darken(#586e75, 6%);
+@gray-dark:  #657b83;
+@gray:       #93a1a1;
+
+} // ~ unnamed namespace
