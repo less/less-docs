@@ -220,7 +220,7 @@ This is the opposite of the rootpath option, it specifies a path which should be
 lessc --source-map-less-inline
 ```
 
-This option specifies that we should include all of the css files in to the sourcemap. This means that you only need your map file to get to your original source.
+This option specifies that we should include all of the Less files in to the sourcemap. This means that you only need your map file to get to your original source.
 
 This can be used in conjunction with the map inline option so that you do not need to have any additional external files at all.
 

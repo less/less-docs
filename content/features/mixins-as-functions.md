@@ -1,6 +1,6 @@
-> Return variables from mixins
+> Return variables or mixins from mixins
 
-All variables defined in a mixin are visible and can be used in caller's scope (unless the caller defines its own variable with the same name).
+Variables and mixins defined in a mixin are visible and can be used in caller's scope. There is only one exception, variable is not copied if the caller contains a variable with the same name (that includes variables defined by another mixin call).  Only variables present in callers local scope are protected. Variables inherited from parent scopes are overridden.
 
 Example:
 
@@ -48,3 +48,46 @@ div {
   padding: 33px;
 }
 ```
+
+Variable defined directly in callers scope can not be overriden. However, variable defined in callers parent scope is not protected and will be overriden:
+````less
+.mixin() {
+  @size: in-mixin; 
+  @definedOnlyInMixin: in-mixin;
+}
+
+.class {
+  margin: @size @definedOnlyInMixin;
+  .mixin(); 
+}
+
+@size: globaly-defined-value; // callers parent scope - no protection
+````
+
+Results in:
+````css
+.class {
+  margin: in-mixin in-mixin;
+}
+````
+
+Finally, mixin defined in mixin acts as return value too:
+````less
+.unlock(@value) { // outer mixin
+  .doSomething() { // nested mixin
+    declaration: @value;
+  }
+}
+
+#namespace {
+  .unlock(5); // unlock doSomething mixin
+  .doSomething(); //nested mixin was copied here and is usable 
+}
+````
+
+Results in:
+````css
+#namespace {
+  declaration: 5;
+}
+````
