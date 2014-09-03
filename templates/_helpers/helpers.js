@@ -46,6 +46,10 @@ marked.setOptions({
   smartypants: false,
 
   highlight: function (code, lang) {
+    if (lang === "css") {
+      // substitude CSS highlighter with Less one since the latter is more correct
+      lang = "less";
+    }
     try {
       if (languages[lang]) {
         lang = languages[lang];
