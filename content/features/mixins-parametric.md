@@ -83,7 +83,7 @@ It is legal to define multiple mixins with the same name and number of parameter
 .mixin(@color) {
   color-1: @color;
 }
-.mixin(@color; @padding:2) {
+.mixin(@color; @padding: 2) {
   color-2: @color;
   padding-2: @padding;
 }
