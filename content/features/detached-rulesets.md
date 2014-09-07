@@ -119,10 +119,10 @@ Results in:
 Private variables:
 ````less
 detached-ruleset: { 
-    @color:blue; //this variable is private
+    @color:blue; // this variable is private
 };
 .caller {
-    color: @color; //syntax error
+    color: @color; // syntax error
 }
 ````
 
@@ -165,14 +165,14 @@ Variable and mixins accessible form definition win over those available in calle
 ````less
 @variable: global;
 @detached-ruleset: {
-  //will use global variable, because it is accessible
-  //from detached-ruleset definition
+  // will use global variable, because it is accessible
+  // from detached-ruleset definition
   variable: @variable; 
 };
 
 selector {
   @detached-ruleset();
-  @variable: value; //variable defined in caller - will be ignored
+  @variable: value; // variable defined in caller - will be ignored
 }
 ````
 
