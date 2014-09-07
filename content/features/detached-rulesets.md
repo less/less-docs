@@ -183,7 +183,7 @@ selector {
 }
 ````
 
-#### Referencing WONT Modify Detached Ruleset Scope
+#### Referencing *Won't* Modify Detached Ruleset Scope
 Ruleset does not gain access to new scopes just by being referenced there:
 ````less
 @detached-1: { scope-detached: @one @two; };
@@ -206,7 +206,7 @@ throws an error:
 ERROR 1:32 The variable "@one" was not declared.
 ````
 
-#### Unlocking WILL Modify Detached Ruleset Scope
+#### Unlocking *Will* Modify Detached Ruleset Scope
 Detached ruleset gains access by being unlocked (imported) inside a scope:
 ````less
 #space {
