@@ -18,7 +18,7 @@
 
 
 // allow the container to constrain the width
-@anchor-width:              100%;
+@anchor-width:              @content-gutter; // see less-docs #203
 @anchor-distance:           80px;
 @anchor-distance-small:     40px;
 
@@ -46,10 +46,19 @@
 
 // Adjust the vertical positioning
 // of anchors next to larger headings.
-h2 .anchor {
-  margin-bottom: -9px;
-}
 
+.anchor {
+  .adjust(h2);
+  .adjust(h3);
+  .adjust(h4);
+  
+  .adjust(@tag) {
+    @{tag} & {
+      @tag-font-size: ~'font-size-@{tag}';
+      margin-bottom: ceil(((@@tag-font-size - @font-size-h1) * @headings-line-height / 2));
+    }
+  }
+}
 
 // Headings
 // ----------------------------------------------
