@@ -11,7 +11,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [Bootstrap a11y theme](https://github.com/bassjobsen/bootstrap-a11y-theme) | Makes web accessibility easier for Bootstrap developers |
 | [Bootswatch](http://bootswatch.com/) | Collection of free themes for Bootstrap |
 | [Cardinal](http://cardinalcss.com/) | Small "mobile first" CSS framework for front-end developers who build responsive web applications |
-| [CSSHórus](http://csshor.us/) | Library for development of responsive and mobile websites |
+| [CSSHórus](https://github.com/firminoweb/csshorus) | Library for development of responsive and mobile websites |
 | [Flat UI Free](http://designmodo.com/flat-free/) | Theme and framework for Bootstrap |
 | [frontsize](https://github.com/vitto/frontsize-less) | CSS front end framework |
 | [InContent](http://brunodsgn.github.io/InContent/) | Image content with description created with CSS |
