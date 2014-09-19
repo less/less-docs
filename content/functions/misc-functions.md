@@ -66,6 +66,10 @@ Example: `data-uri('image/jpeg;base64', '../data/image.jpg');`
 
 Output: `url('data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==');`
 
+Example: `data-uri('image/svg+xml;charset=UTF-8', 'image.svg');`
+
+Output: `url("data:image/svg+xml;charset=UTF-8,%3Csvg%3E%3Ccircle%20r%3D%229%22%2F%3E%3C%2Fsvg%3E");`
+
 ### default
 
 > Available only inside guard conditions and returns `true` only if no other mixin matches, `false` otherwise.

@@ -162,8 +162,6 @@ Type: `Object`
 
 Default: `undefined`
 
-Programmatic version of [Global Variable](#command-line-usage-global-variable).
-
 List of global variables to be injected into the code. Keys of the object are variables names, values are variables values. Variables of "string" type must explicitly include quotes if needed.
 
 E.g.
@@ -172,14 +170,16 @@ E.g.
 less.globalVars = { myvar: "#ddffee", mystr: "\"quoted\"" };
 ```
 
+This option defines a variable that can be referenced by the file. Effectively the declaration is put at the top of your base Less file, meaning it can be used but it also can be overridden if this variable is defined in the file.
+
 ### modifyVars
 Type: `Object`
 
 Default: `undefined`
 
-Programmatic version of [Modify Variable](#command-line-usage-modify-variable).
-
 Same format as [globalVars](#using-less-in-the-browser-globalvars).
+
+As opposed to the [globalVars](#using-less-in-the-browser-globalvars) option, this puts the declaration at the end of your base file, meaning it will override anything defined in your Less file.
 
 ### rootpath
 Type: `String`

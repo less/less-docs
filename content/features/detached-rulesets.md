@@ -119,10 +119,10 @@ Results in:
 Private variables:
 ````less
 detached-ruleset: { 
-    @color:blue; //this variable is private
+    @color:blue; // this variable is private
 };
 .caller {
-    color: @color; //syntax error
+    color: @color; // syntax error
 }
 ````
 
@@ -165,14 +165,14 @@ Variable and mixins accessible form definition win over those available in calle
 ````less
 @variable: global;
 @detached-ruleset: {
-  //will use global variable, because it is accessible
-  //from detached-ruleset definition
+  // will use global variable, because it is accessible
+  // from detached-ruleset definition
   variable: @variable; 
 };
 
 selector {
   @detached-ruleset();
-  @variable: value; //variable defined in caller - will be ignored
+  @variable: value; // variable defined in caller - will be ignored
 }
 ````
 
@@ -183,7 +183,7 @@ selector {
 }
 ````
 
-#### Referencing WONT Modify Detached Ruleset Scope
+#### Referencing *Won't* Modify Detached Ruleset Scope
 Ruleset does not gain access to new scopes just by being referenced there:
 ````less
 @detached-1: { scope-detached: @one @two; };
@@ -206,7 +206,7 @@ throws an error:
 ERROR 1:32 The variable "@one" was not declared.
 ````
 
-#### Unlocking WILL Modify Detached Ruleset Scope
+#### Unlocking *Will* Modify Detached Ruleset Scope
 Detached ruleset gains access by being unlocked (imported) inside a scope:
 ````less
 #space {
