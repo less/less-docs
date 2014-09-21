@@ -116,7 +116,7 @@ You can also bundle pseudo-selectors with your mixins using this method. Here's 
 
 * [Parent Selectors](#parent-selectors-feature)
 
-### Media query bubbling and nested media queries 
+### Media query bubbling and nested media queries
 
 Media queries can be nested in the same way as selectors. Selectors are copied into the body of the media query:
 
@@ -194,7 +194,7 @@ Using them is pretty straightforward. The following example uses percentage to c
 ```
 
 
-### Namespaces & Accessors
+### Namespaces and Accessors
 
 (Not to be confused with [CSS `@namespace`](http://www.w3.org/TR/css3-namespace/) or [namespace selectors](http://www.w3.org/TR/css3-selectors/#typenmsp)).
 
