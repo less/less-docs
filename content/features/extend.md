@@ -60,7 +60,7 @@ Example:
 }
 ```
 
-It can contain one more classes to extend, separated by commas.
+It can contain one or more classes to extend, separated by commas.
 
 Example:
 
@@ -578,7 +578,7 @@ Outputs
 
 ### Combining Styles / a more advanced mixin
 
-Another use-case is as an alternative for a mixin - because mixins can only be used with simple selectors, if you have two different blocks on html, but need to apply the same styles to both you can use extends to relate two areas.
+Another use-case is as an alternative for a mixin - because mixins can only be used with simple selectors, if you have two different blocks of html, but need to apply the same styles to both you can use extends to relate two areas.
 
 Example:
 
