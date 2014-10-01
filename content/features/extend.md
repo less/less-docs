@@ -60,7 +60,7 @@ Example:
 }
 ```
 
-It can contain one more classes to extend, separated by commas.
+It can contain one or more classes to extend, separated by commas.
 
 Example:
 
