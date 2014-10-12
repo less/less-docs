@@ -5,9 +5,8 @@ title: Plugins
 Plugins
 ----------
 
-How do I use a plugin ?
-
-Lessc
+How do I use a plugin ? - command line
+--------------------------------------
 
 If you are using lessc, the first thing you need to do is install that plugin. We reccommend the plugin starts "less-plugin" though that isn't required. For the clean css plugin you would install `npm install less-plugin-clean-css`.
 
@@ -22,8 +21,8 @@ Will use the plugin you just installed. You can also be more direct, for example
 lessc --plugin=path_to_plugin=options
 ```
 
-In Code
------------
+Using a plugin in code
+----------------------
 
 In Node, require the plugin and pass it to less in an array as an option plugins. E.g.
 
@@ -41,7 +40,7 @@ In the browser
 
 Plugin authors should provide a javascript file, just include that in the page *before* the less.js script.
 
-For Plugin Authors
+For plugin authors
 --------------------------
 
 Less supports some entry points that allow an author to integrate with less. We may add some more in the future.

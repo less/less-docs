@@ -22,6 +22,10 @@ published:
     title: Browser Support
     files: <%= usage.base %>/browser-support.md
 
+  plugins:
+    title: Plugins
+    files: <%= usage.base %>/plugins.md
+
   online-less-compilers:
     title: Online Less Compilers
     files: <%= usage.base %>/online-less-compilers.md
