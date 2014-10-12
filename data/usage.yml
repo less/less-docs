@@ -26,6 +26,10 @@ published:
     title: Plugins
     files: <%= usage.base %>/plugins.md
 
+  programmatic-usage:
+    title: Programmatic Usage
+    files: <%= usage.base %>/programmatic-usage.md
+
   online-less-compilers:
     title: Online Less Compilers
     files: <%= usage.base %>/online-less-compilers.md
