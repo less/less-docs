@@ -22,3 +22,22 @@ Under the hood, if a callback is given it runs itself again to get a promise and
 Previously we also recommended creating a less.Parser and then calling toCSS on the result. However this had 2 serious drawbacks - it meant that our parser was in fact tied to all of less and 2nd it meant that the toCSS call had to be synchronous.
 
 You can still get the less parse tree, but it requires more steps. You can see how this is done [in the render function](https://github.com/less/less.js/blob/master/lib/less/render.js) but we *do not* support using less in this way and may change this function in a minor release version bump (we will not break it in a patch release).
+
+### Getting access to the log
+
+You can add a log listener with the following code
+
+```
+less.logger.addListener({
+    debug: function(msg) {
+    },
+    info: function(msg) {
+    },
+    warn: function(msg) {
+    },
+    error: function(msg) {
+    }
+});
+```
+
+Note: all functions are optional. An error will not be logged, but instead is passed back to the callback or promise in less.render

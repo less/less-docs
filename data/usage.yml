@@ -10,6 +10,10 @@
 base: content/usage
 
 published:
+  v2-upgrade-guide:
+    title: V2 Upgrade Guide
+    files: <%= usage.base %>/v2-upgrade.md
+
   command-line-usage:
     title: Command Line Usage
     files: <%= usage.base %>/command-line-usage.md
