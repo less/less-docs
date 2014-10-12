@@ -2,9 +2,6 @@
 title: Plugins
 ---
 
-Plugins
-----------
-
 How do I use a plugin ? - command line
 --------------------------------------
 

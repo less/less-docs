@@ -30,9 +30,9 @@ Note that a [tilde version range][] will be automatically specified in `package.
 
 #### Beta releases of lessc
 
-Periodically, as new functionality is being developed, lessc builds will be published to npm, tagged as. These builds will _not_ be published as a `@latest` official release, and will typically have a build number or alpha/beta/release candidate designation.
+Periodically, as new functionality is being developed, lessc builds will be published to npm, tagged as beta. These builds will _not_ be published as a `@latest` official release, and will typically have beta in the version (use `lessc -v` to get current version).
 
-Since patch releases are non-breaking we will publish patch releases immediately and alpha/beta/candidate versions will be published as minor or major version upgrades (we endevour since 1.4.0 to follow [semantic versioning](http://semver.org/)).
+Since patch releases are non-breaking we will publish patch releases immediately and alpha/beta/candidate versions will be published as minor or major version upgrades (we endeavour since 1.4.0 to follow [semantic versioning](http://semver.org/)).
 
 #### Installing an unpublished development version of lessc
 
@@ -68,7 +68,9 @@ $ lessc bootstrap.less bootstrap.css
 $ lessc -x bootstrap.less bootstrap.css
 ```
 
-### Help
+### Options
+
+#### Help
 
 ```bash
 lessc --help
@@ -77,7 +79,7 @@ lessc --h
 
 Prints a help message with available options and exits.
 
-### Include paths
+#### Include paths
 
 ```bash
 lessc --include-path=PATH1;PATH2
@@ -92,20 +94,20 @@ In node, set a paths option
 { paths: ['PATH1', 'PATH2']  }
 ```
 
-### Makefile
+#### Makefile
 
 ```bash
 lessc -M
 lessc --depends
 ```
 
-### No Color
+#### No Color
 
 ```bash
 lessc --no-color
 ```
 
-### No IE Compatability
+#### No IE Compatability
 
 ```bash
 lessc --no-ie-compat
@@ -113,13 +115,13 @@ lessc --no-ie-compat
 
 Currently only used for the data-uri function to ensure that images aren't created that are too large for the browser to handle.
 
-### Disable JavaScript
+#### Disable JavaScript
 
 ```bash
 lessc --no-js
 ```
 
-### Lint
+#### Lint
 
 ```bash
 lessc --lint
@@ -128,33 +130,35 @@ lessc --l
 
 Runs the less parser and just reports errors without any output.
 
-### Silent
+#### Silent
 
 ```bash
 lessc -s
 lessc --silent
 ```
 
-### Strict Imports
+Stops any warnings from being shown.
+
+#### Strict Imports
 
 ```bash
 lessc --strict-imports
 ```
 
-### Allow imports from insecure https hosts
+#### Allow imports from insecure https hosts
 
 ```bash
 lessc --insecure
 ```
 
-### Version
+#### Version
 
 ```bash
 lessc -v
 lessc --version
 ```
 
-### Compress
+#### Compress
 
 ```bash
 lessc -x
@@ -163,25 +167,11 @@ lessc --compress
 
 Compress using less built-in compression. This does an okay job but does not utilise all the tricks of dedicated css compression. Please feel free to improve our compressed output with a pull request.
 
-### Clean CSS
+#### Clean CSS
 
-```bash
-lessc --clean-css
-```
+In v2 of less, Clean CSS is no longer included as a direct dependency. To use clean css with lessc, use the [clean css plugin](https://github.com/less/less-plugin-clean-css).
 
-Clean CSS is our minifer of choice if you want to get the most minified you can. This option switches it on.
-
-Note - it does not yet support sourcemaps, for that you can only use our own compression.
-
-### Clean CSS Options
-
-```bash
-lessc --clean-css --clean-option=--selectors-merge-mode:ie8 --clean-option=--advanced
-```
-
-Use this to pass options to clean css. The default options are the safest, so are IE8 compatible.
-
-### Source Map Output Filename
+#### Source Map Output Filename
 
 ```bash
 lessc --source-map
@@ -190,7 +180,7 @@ lessc --source-map=file.map
 
 Tells less to generate a sourcemap. If you have the sourcemap option without a filename it will use the source less file name but with the extension map.
 
-### Source Map Rootpath
+#### Source Map Rootpath
 
 ```bash
 lessc --source-map-rootpath=dev-files/
@@ -206,7 +196,7 @@ dev-files/output.map
 dev-files/main.less
 ```
 
-### Source Map Basepath
+#### Source Map Basepath
 
 ```bash
 lessc --source-map-basepath=less-files/
@@ -214,7 +204,7 @@ lessc --source-map-basepath=less-files/
 
 This is the opposite of the rootpath option, it specifies a path which should be removed from the output paths. For instance if you are compiling a file in the less-files directory but the source files will be available on your web server in the root or current directory, you can specify this to remove the additional `less-files` part of the path
 
-### Source Map Less Inline
+#### Source Map Less Inline
 
 ```bash
 lessc --source-map-less-inline
@@ -224,7 +214,7 @@ This option specifies that we should include all of the Less files in to the sou
 
 This can be used in conjunction with the map inline option so that you do not need to have any additional external files at all.
 
-### Source Map Map Inline
+#### Source Map Map Inline
 
 ```bash
 lessc --source-map-map-inline
@@ -232,7 +222,7 @@ lessc --source-map-map-inline
 
 This option specifies that the map file should be inline in the output CSS. This is not recommended for production, but for development it allows the compiler to produce a single output file which in browsers that support it, use the compiled css but show you the non-compiled less source.
 
-### Source Map URL
+#### Source Map URL
 
 ```bash
 lessc --source-map-url=../my-map.json
@@ -240,7 +230,7 @@ lessc --source-map-url=../my-map.json
 
 Allows you to override the URL in the css that points at the map file. This is for cases when the rootpath and basepath options are not producing exactly what you need.
 
-### Rootpath
+#### Rootpath
 
 ```bash
 lessc -rp=resources/
@@ -251,7 +241,7 @@ Allows you to add a path to every generated import and url in your css. This doe
 
 For instance, if all the images the css use are in a folder called resources, you can use this option to add this on to the URL's and then have the name of that folder configurable.
 
-### Relative URLs
+#### Relative URLs
 
 ```bash
 lessc -ru
@@ -287,14 +277,14 @@ but with this option on it will instead output
 
 You may also want to consider using the data-uri function instead of this option, which will embed images into the css.
 
-### Strict Math
+#### Strict Math
 
 ```bash
 lessc -sm=on
 lessc --strict-math=on
 ```
 
-Defaults to Off. 
+Defaults to Off.
 
 Without this option on Less will try and process all maths in your css e.g.
 
@@ -326,7 +316,7 @@ With strict math on, only maths that is inside un-necessary parenthesis will be 
 
 We originally planned to default this to true in the future, but it has been a contraversial option and we are considering whether we have solved the problem in the right way, or whether less should just have exceptions for instances where `/` is valid or calc is used.
 
-### Strict Units
+#### Strict Units
 
 ```bash
 lessc -su=on
@@ -347,7 +337,7 @@ In this case, things are clearly not right - a length multiplied by a length giv
 
 With strict units on, we assume this is a bug in the calculation and throw an error.
 
-### Global Variable
+#### Global Variable
 
 ```bash
 lessc --global-var="my-background=red"
@@ -355,7 +345,7 @@ lessc --global-var="my-background=red"
 
 This option defines a variable that can be referenced by the file. Effectively the declaration is put at the top of your base Less file, meaning it can be used but it also can be overridden if this variable is defined in the file.
 
-### Modify Variable
+#### Modify Variable
 
 ```bash
 lessc --modify-var="my-background=red"
@@ -363,7 +353,7 @@ lessc --modify-var="my-background=red"
 
 As opposed to the global variable option, this puts the declaration at the end of your base file, meaning it will override anything defined in your Less file.
 
-### URL Arguments
+#### URL Arguments
 
 ```bash
 lessc --url-args="cache726357"
@@ -371,7 +361,7 @@ lessc --url-args="cache726357"
 
 This option allows you to specify a argument to go on to every URL. This may be used for cache-busting for instance.
 
-### Line Numbers
+#### Line Numbers
 
 ```bash
 lessc --line-numbers=comments
@@ -380,3 +370,17 @@ lessc --line-numbers=all
 ```
 
 Generates inline source-mapping. This was the only option before browsers started supporting sourcemaps. We are consider deprecating, so please get in touch if you want this option to stick around.
+
+#### Plugin
+
+```bash
+lessc --clean-css
+lessc --plugin=clean-css="advanced"
+```
+
+--plugin Loads a plugin. You can also omit the --plugin= if the plugin begins
+less-plugin. E.g. the clean css plugin is called less-plugin-clean-css
+once installed (npm install less-plugin-clean-css), use either with
+--plugin=less-plugin-clean-css or just --clean-css
+specify options afterwards e.g. --plugin=less-plugin-clean-css="advanced"
+or --clean-css="advanced"
