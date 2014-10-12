@@ -37,6 +37,15 @@ In the browser
 
 Plugin authors should provide a javascript file, just include that in the page *before* the less.js script.
 
+List of less plugins
+--------------------
+
+ - [Clean CSS plugin to compress less](https://github.com/less/less-plugin-clean-css)
+ - [Autoprefixer plugin to add backwards compatibility to your css](https://github.com/less/less-plugin-autoprefix)
+ - [Inline urls - converts `url()` to a call to `data-uri()`](https://github.com/less/less-plugin-inline-urls)
+ - [Npm Import - import from a sub npm repository](https://github.com/less/less-plugin-npm-import)
+
+
 For plugin authors
 --------------------------
 
