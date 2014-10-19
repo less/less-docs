@@ -2,10 +2,31 @@
 title: Using Less in the Browser
 ---
 
+We recommend using less in the browser only for development or when you need to dynamically compile less and cannot do it serverside.
+This is because less is a large javascript file and compiling less before the user can see the page means a delay for the user. In addition,
+consider that mobile devices will compile slower. For development consider if using a watcher and live reload (e.g. with grunt or gulp) would
+be better suited.
+
+To use less in the browser, you firstly need to include the less script.
+
+```html
+<!-- Optionally set less = any options and include any less plugin scripts -->
+<script src="less.js"></script>
+```
+
+This will find any less style tags on the page
+
+```html
+<link rel="stylesheet/less" type="text/css" href="styles.less" />
+```
+
+and create style tags with the compiled css synchronously.
+
 ### Watch mode
 To enable Watch mode, option `env` must be set to `development`. Then AFTER the less.js file is included, call `less.watch()`, like this:
 
 ```html
+<script>less = { env: 'development'};</script>
 <script src="less.js"></script>
 <script>less.watch();</script>
 ```
@@ -29,7 +50,7 @@ Either specify the option `dumpLineNumbers` as above or add `!dumpLineNumbers:me
 
 You can use the `comments` option with [FireLESS](https://addons.mozilla.org/en-us/firefox/addon/fireless/) and the `mediaquery` option with FireBug/Chrome dev tools (it is identical to the SCSS media query debugging format).
 
-## Client-side Usage
+### Options
 
 Set options in a global `less` object **before** loading the less.js script:
 
@@ -55,16 +76,14 @@ Set options in a global `less` object **before** loading the less.js script:
 <script src="less.js"></script>
 ```
 
-## Client side options
-
-### async
+#### async
 Type: `Boolean`
 
 Default: `false`
 
 Whether to request the import files with the async option or not. See [fileAsync](#using-less-in-the-browser-fileasync).
 
-### dumpLineNumbers
+#### dumpLineNumbers
 Type: `String`
 Options: `''`| `'comments'`|`'mediaquery'`|`'all'`
 Default: `''`
@@ -75,7 +94,7 @@ The `comments` option is used for outputting user-understandable content, whilst
 
 In the future we hope this option to be superseded by sourcemaps.
 
-### env
+#### env
 Type: `String`
 Default: depends on page URL
 
@@ -90,7 +109,7 @@ e.g.
 less = { env: 'production' };
 ```
 
-### errorReporting
+#### errorReporting
 Type: `String`
 
 Options: `html`|`console`|`function`
@@ -99,23 +118,23 @@ Default: `html`
 
 Set the method of error reporting when compilation fails.
 
-### fileAsync
+#### fileAsync
 Type: `Boolean`
 
 Default: `false`
 
 Whether to request the import asynchronously when in a page with a file protocol.
 
-### functions
+#### functions
 Type: `object`
 
 User functions, keyed by name.
 
 e.g.
 ```js
-less = { 
-    functions: { 
-        myfunc: function() { 
+less = {
+    functions: {
+        myfunc: function() {
             return new(less.tree.Dimension)(1);
         }
     }
@@ -130,7 +149,7 @@ and it can be used like a native Less function e.g.
 }
 ```
 
-### logLevel
+#### logLevel
 Type: `Number`
 
 Default: 2
@@ -143,7 +162,7 @@ The amount of logging in the javascript console. Note: If you are in the `produc
 0 - Nothing
 ```
 
-### poll
+#### poll
 Type: `Integer`
 
 Default: `1000`
@@ -157,7 +176,7 @@ Default: `false`
 
 Optionally adjust URLs to be relative. When false, URLs are already relative to the entry less file.
 
-### globalVars
+#### globalVars
 Type: `Object`
 
 Default: `undefined`
@@ -172,7 +191,7 @@ less.globalVars = { myvar: "#ddffee", mystr: "\"quoted\"" };
 
 This option defines a variable that can be referenced by the file. Effectively the declaration is put at the top of your base Less file, meaning it can be used but it also can be overridden if this variable is defined in the file.
 
-### modifyVars
+#### modifyVars
 Type: `Object`
 
 Default: `undefined`
@@ -181,7 +200,7 @@ Same format as [globalVars](#using-less-in-the-browser-globalvars).
 
 As opposed to the [globalVars](#using-less-in-the-browser-globalvars) option, this puts the declaration at the end of your base file, meaning it will override anything defined in your Less file.
 
-### rootpath
+#### rootpath
 Type: `String`
 
 Default: `false`
