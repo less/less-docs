@@ -31,9 +31,27 @@ Other grunt commands
 * `grunt stable` to create a new release
 * `grunt readme` to generate a new readme.md in the root directory (after each release)
 
+## How to run less in other environments
+
+If you look in the libs folder you will see `less`, `less-node`, `less-browser`. The less folder is pure javascript with no environment
+specifics. if you require `less/libs/less`, you get a function that takes an environment object and an array of file managers. The file
+managers are the same file managers that can also be written as a plugin.
+
+```js
+var createLess = require("less/libs/less"),
+    myLess = createLess(environment, [myFileManager]);
+```
+
+The environment api is specified in [less/libs/less/environment/environment-api.js](https://github.com/less/less.js/blob/master/lib/less/environment/environment-api.js)
+and the file manager api is specified in [less/libs/less/environment/file-manager-api.js](https://github.com/less/less.js/blob/master/lib/less/environment/file-manager-api.js).
+
+For file managers we highly recommend setting the prototype as a new AbstractFileManager - this allows you to override what is needed and allows us
+to implement new functions without breaking existing file managers. For an example of file managers, see the 2 node implementations, the browser implementation or
+the npm import plugin implementation.
+
 ## Guide
 
-If you look at [http://www.gliffy.com/go/publish/4784259](http://www.gliffy.com/go/publish/4784259),  This is an overview diagram of how less works.
+If you look at [http://www.gliffy.com/go/publish/4784259](http://www.gliffy.com/go/publish/4784259),  This is an overview diagram of how less works. Warning! It needs updating with v2 changes.
 
 ## Books
 

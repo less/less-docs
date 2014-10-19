@@ -29,9 +29,9 @@ $ lessc styles.less > styles.css
 
 To output minified CSS, simply pass the `-x` option. If you would like more involved minification,
 the [Clean CSS](https://github.com/GoalSmashers/clean-css) is also available with
-the `--clean-css` option.
+the `--clean-css` [plugin](https://github.com/less/less-plugin-clean-css).
 
-To see all the command line options run lessc without parameters.
+To see all the command line options run lessc without parameters or see [Usage]({{resolve 'usage'}}).
 
 ## Usage in Code
 
@@ -53,36 +53,25 @@ which will output
 }
 ```
 
-you may also manually invoke the parser and compiler:
-
-```js
-var parser = new(less.Parser);
-
-parser.parse('.class { width: (1 + 1) }', function (err, tree) {
-  if (err) {
-    return console.error(err)
-  }
-  console.log(tree.toCSS());
-});
-```
-
 ## Configuration
 
 You may pass some options to the compiler:
 
 ```js
-var parser = new(less.Parser)({
-  paths: ['.', './lib'], // Specify search paths for @import directives
-  filename: 'style.less' // Specify a filename, for better error messages
-});
+var less = require('less');
 
-parser.parse('.class { width: (1 + 1) }', function (e, tree) {
-  tree.toCSS({
-    // Minify CSS output
-    compress: true
-  });
-});
+less.render('.class { width: (1 + 1) }',
+    {
+      paths: ['.', './lib'],  // Specify search paths for @import directives
+      filename: 'style.less', // Specify a filename, for better error messages
+      compress: true          // Minify CSS output
+    },
+    function (e, css) {
+       console.log(css);
+    });
 ```
+
+See [Usage]({{resolve 'usage'}}) for more information.
 
 ## Third party tools
 
