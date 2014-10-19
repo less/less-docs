@@ -188,6 +188,8 @@ lessc --source-map-rootpath=dev-files/
 
 Specifies a rootpath that should be prepended to each of the less file paths inside the sourcemap and also to the path to the map file specified in your output css.
 
+Because the basepath defaults to the directory of the input less file, the rootpath defaults to the path from the sourcemap output file to the base directory of the input less file.
+
 Use this option if for instance you have a css file generated in the root on your web server but have your source less/css/map files in a different folder. So for the option above you might have
 
 ```bash
@@ -202,7 +204,9 @@ dev-files/main.less
 lessc --source-map-basepath=less-files/
 ```
 
-This is the opposite of the rootpath option, it specifies a path which should be removed from the output paths. For instance if you are compiling a file in the less-files directory but the source files will be available on your web server in the root or current directory, you can specify this to remove the additional `less-files` part of the path
+This is the opposite of the rootpath option, it specifies a path which should be removed from the output paths. For instance if you are compiling a file in the less-files directory but the source files will be available on your web server in the root or current directory, you can specify this to remove the additional `less-files` part of the path.
+
+It defaults to the path to the input less file.
 
 #### Source Map Less Inline
 
