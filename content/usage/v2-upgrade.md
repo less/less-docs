@@ -10,7 +10,7 @@ Colours now output as they are written, so `purple` stays as `purple` and is not
 Command line usage
 ------------------
 
-### Clean Css
+### Clean CSS
 
 We have removed the dependency on clean css and moved it to a [plugin](https://github.com/less/less-plugin-clean-css).
 This allows us to 1. update the dependency and integration without a less release 2. Does not tie people who do not use clean css into having it downloaded by npm.
