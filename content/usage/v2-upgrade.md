@@ -2,6 +2,11 @@
 title: V2 Upgrade Guide
 ---
 
+Language Changes
+----------------
+
+Colours now output as they are written, so `purple` stays as `purple` and is not converted to hex, except for when compressed and not used in a string or selector.
+
 Command line usage
 ------------------
 
