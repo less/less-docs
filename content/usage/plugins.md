@@ -44,6 +44,7 @@ List of less plugins
  - [Autoprefixer plugin to add backwards compatibility to your css](https://github.com/less/less-plugin-autoprefix)
  - [Inline urls - converts `url()` to a call to `data-uri()`](https://github.com/less/less-plugin-inline-urls)
  - [Npm Import - import from a sub npm repository](https://github.com/less/less-plugin-npm-import)
+ - [Bower Resolve - import from a Bower package](https://github.com/Mercateo/less-plugin-bower-resolve)
 
 
 For plugin authors
