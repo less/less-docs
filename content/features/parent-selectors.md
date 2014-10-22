@@ -175,9 +175,9 @@ The selector `.no-borderradius &` will prepend `.no-borderradius` to its parent 
 
 ```less
 p, a, ul, li {
-border-top: 2px dotted #366;
+  border-top: 2px dotted #366;
   & + & {
-      border-top: 0;
+    border-top: 0;
   }
 }
 ```
