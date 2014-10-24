@@ -45,6 +45,7 @@ List of less plugins
  - [Inline urls - converts `url()` to a call to `data-uri()`](https://github.com/less/less-plugin-inline-urls)
  - [Npm Import - import from a sub npm repository](https://github.com/less/less-plugin-npm-import)
  - [Bower Resolve - import from a Bower package](https://github.com/Mercateo/less-plugin-bower-resolve)
+ - [Group CSS Media Queries - group CSS media queries](https://github.com/bassjobsen/less-plugin-group-css-media-queries)
 
 
 For plugin authors
