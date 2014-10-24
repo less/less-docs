@@ -44,10 +44,11 @@ All documentation content can be found in the `./content` directory. Please read
 * Multiple-line formatting (one property and value per line)
 * For multiple, comma-separated selectors, place each selector on its own line
 * Double quotes only, never single quotes
-* Always put a space after a property's colon (.e.g, `display: block;` and not `display:block;`)
+* Always put a space after a property's colon (e.g., `display: block;` and not `display:block;`)
 * End _all_ lines with a semi-colon
 * Attribute selectors, like `input[type="text"]` should always wrap the attribute's value in double quotes. This is important to do in your own code as well for consistency and safety (see this [blog post on unquoted attribute values](http://mathiasbynens.be/notes/unquoted-attribute-values) that can lead to XSS attacks)
 * When using HTML in your examples, use tags and elements appropriate for an HTML5 doctype (e.g., self-closing tags with _no trailing slash_)
+* Separate words in variable and mixin names using dash (e.g., `@long-variable-name` or `.my-favourite-mixin`)
 
 Examples:
 
