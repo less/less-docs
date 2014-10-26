@@ -23,11 +23,10 @@
     var $window = $(window)
     var $body   = $(document.body)
 
-    //var navHeight = $('.navbar').outerHeight(true) + 10
-
     $body.scrollspy({
-      target: '.sidebar'
-      //offset: navHeight
+      target: '.sidebar',
+      offset: 20 // required to select the right thing. if this is smaller then you are at the top of one section
+                 // but the next section is highlighted
     });
 
     $window.on('load', function () {
