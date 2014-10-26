@@ -10,7 +10,7 @@ be better suited.
 To use less in the browser, you firstly need to include the less script.
 
 ```html
-<!-- Optionally set less = any options and include any less plugin scripts -->
+<!-- Here: include any less plugin scripts, any required browser shims and optionally set less = any options  -->
 <script src="less.js"></script>
 ```
 
@@ -21,6 +21,43 @@ This will find any less style tags on the page
 ```
 
 and create style tags with the compiled css synchronously.
+
+### Setting options
+
+You can set options either programmatically, by setting them on a less object before the script tag - this then effects all initial link tags and programmatic usage of less.
+
+```html
+<script>
+  less = {
+    env: "development"
+  };
+</script>
+<script src="less.js"></script>
+```
+
+The other way is to specify the options on the script tag, e.g.
+
+```html
+<script>
+  less = {
+    env: "development"
+  };
+</script>
+<script src="less.js" data-env="development"></script>
+```
+
+And you can also do this on link tags to override certain settings (some less settings like verbose are global and can not be overridden).
+
+```html
+<link data-dump-line-numbers="all" data-global-vars='{ myvar: "#ddffee", mystr: "\"quoted\"" }' rel="stylesheet/less" type="text/css" href="less/styles.less">
+```
+
+The important points for attribute options are..
+
+ - importance level: window.less < script tag < link tag
+ - data attributes names are not camelCase (e.g logLevel -> data-log-level)
+ - link tag options are just render time options (e.g verbose, logLevel ... are not supported)
+ - non-string data attributes values should be JSON valid (e.g use double quotes instead of single quotes like in `data-global-vars='{ myvar: "#ddffee", mystr: "\"quoted\"" }'`)
 
 ### Watch mode
 To enable Watch mode, option `env` must be set to `development`. Then AFTER the less.js file is included, call `less.watch()`, like this:

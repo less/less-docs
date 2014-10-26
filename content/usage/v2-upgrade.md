@@ -40,4 +40,6 @@ If you already use `less.render` you should not require any changes.
 Browser usage
 -------------
 
-The browser usage has not changed.
+The browser usage has not changed significantly. Options set on the `less` object are exposed as `less.options` after the less script has run, rather than polluting `less`.
+
+It is now possible to specify options on the script and less tags, which should simplify option setting in the browser. See the browser usage section for more information.

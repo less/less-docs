@@ -9,3 +9,5 @@ Note that PhantomJS does not currently implement `Function.prototype.bind` so yo
 There are reasons to use client-side less in production, such as if you want to allow users to tweak variables which will affect the theme and you want to show it to them in real-time - in this instance a user is not worried about waiting for a style to update before seeing it.
 
 If you need to run less in an older browser, please use an [es-5 shim](https://github.com/kriskowal/es5-shim) which will add the javascript features that less requires.
+
+In addition, if you use options as attributes on the script or link tags, you will require browser support for `JSON.parse` or an appropriate polyfill.

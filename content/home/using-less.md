@@ -135,4 +135,11 @@ Options are defined by setting them on a global `less` object **before** the `<s
 <script src="less.js"></script>
 ```
 
-Learn more about [Browser Options](usage/#using-less-in-the-browser-client-side-options)
+Or for brevity they can be set as attributes on the script and link tags (requires JSON.parse browser support or polyfill).
+
+``` html
+<script src="less.js" data-poll="1000" data-relative-urls="false"></script>
+<link data-dump-line-numbers="all" data-global-vars='{ myvar: "#ddffee", mystr: "\"quoted\"" }' rel="stylesheet/less" type="text/css" href="less/styles.less">
+```
+
+Learn more about [Browser Options](usage/#using-less-in-the-browser-setting-options)
