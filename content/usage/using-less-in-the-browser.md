@@ -243,3 +243,11 @@ Type: `String`
 Default: `false`
 
 A path to add on to the start of every URL resource.
+
+#### useFileCache
+Type: `Boolean`
+
+Default: `true` (previously `false` in before v2)
+
+Whether to use the per session file cache. This caches less files so that you can call modifyVars and it will not retrieve all the less files again.
+If you use the watcher or call refresh with reload set to true, then the cache will be cleared before running.
