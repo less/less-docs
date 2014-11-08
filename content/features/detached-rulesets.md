@@ -2,7 +2,7 @@
 
 Released [v1.7.0]({{ less.master }}CHANGELOG.md)
 
-Detached ruleset is a group of css properties, nested rulestes, media declarations or anything else stored in a variable. You can include it into a ruleset or another structure and all its properties are going to be copied there. You can also use it as a mixin argument and pass it around as any other variable.
+Detached ruleset is a group of css properties, nested rulesets, media declarations or anything else stored in a variable. You can include it into a ruleset or another structure and all its properties are going to be copied there. You can also use it as a mixin argument and pass it around as any other variable.
 
 Simple example:
 ````less
