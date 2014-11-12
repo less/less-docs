@@ -40,8 +40,8 @@ You can invoke the compiler from node, as such:
 ```js
 var less = require('less');
 
-less.render('.class { width: (1 + 1) }', function (e, css) {
-  console.log(css);
+less.render('.class { width: (1 + 1) }', function (e, output) {
+  console.log(output.css);
 });
 ```
 
@@ -66,8 +66,8 @@ less.render('.class { width: (1 + 1) }',
       filename: 'style.less', // Specify a filename, for better error messages
       compress: true          // Minify CSS output
     },
-    function (e, css) {
-       console.log(css);
+    function (e, output) {
+       console.log(output.css);
     });
 ```
 

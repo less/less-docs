@@ -35,7 +35,7 @@ Programmatic Usage
 We have deprecated the use of less.Parser and toCss to generate the css. Instead we require you to use the `less.render` shorthand.
 See [Programmatic Usage](#programmatic-usage) for more information.
 
-If you already use `less.render` you should not require any changes.
+Further, instead of returning a string which is the css, we return an object with a `css` field set to the string and a `map` field set to the sourcemap (if applicable).
 
 Browser usage
 -------------

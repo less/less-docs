@@ -5,15 +5,17 @@ title: Programmatic usage
 The main entry point into less is the less.render function. This takes the following format
 
 ```
-less.render(css, options)
-    .then(function(css) {
+less.render(lessInput, options)
+    .then(function(output) {
+        // output.css = string of css
+        // output.map = string of sourcemap
     },
     function(error) {
     });
 
 // or...
 
-less.render(css, options, function(error, css) {})
+less.render(css, options, function(error, output) {})
 ```
 
 The options argument is optional. If you specify a callback then a promise will not be returned, where as if you do not specify a callback a promise will be given.

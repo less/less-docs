@@ -26,7 +26,7 @@ In Node, require the plugin and pass it to less in an array as an option plugins
 ```
 var myPlugin = require("my-plugin");
 less.render(myCSS, { plugins: [myPlugin] })
-   .then(function(css) {
+   .then(function(output) {
     },
     function(error) {
     });
