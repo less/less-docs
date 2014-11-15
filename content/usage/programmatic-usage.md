@@ -9,6 +9,7 @@ less.render(lessInput, options)
     .then(function(output) {
         // output.css = string of css
         // output.map = string of sourcemap
+        // output.imports = array of string filenames of the imports referenced
     },
     function(error) {
     });
