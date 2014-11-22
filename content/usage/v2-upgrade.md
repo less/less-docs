@@ -37,6 +37,8 @@ See [Programmatic Usage](#programmatic-usage) for more information.
 
 Further, instead of returning a string which is the css, we return an object with a `css` field set to the string and a `map` field set to the sourcemap (if applicable).
 
+The sourcemap options are now to be set on sourceMap instead of directly on options. So instead of `options.sourceMapFullFilename = ` you would set `options.sourceMap = { sourceMapFullFilename: `.
+
 Browser usage
 -------------
 
