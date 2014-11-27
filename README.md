@@ -1,4 +1,4 @@
-[![devDependency Status](https://david-dm.org/less/less-docs/dev-status.png)](https://david-dm.org/less/less-docs#info=devDependencies)
+[![devDependency Status](https://david-dm.org/less/less-docs/dev-status.svg)](https://david-dm.org/less/less-docs#info=devDependencies)
 
 # lesscss.org
 
