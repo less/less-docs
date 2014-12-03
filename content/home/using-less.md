@@ -143,3 +143,39 @@ Or for brevity they can be set as attributes on the script and link tags (requir
 ```
 
 Learn more about [Browser Options](usage/#using-less-in-the-browser-setting-options)
+
+## Changing variables dynamically (at runtime) with jQuery
+
+After running `less.js` already declared variables can be reassigned with `less.modifyVars()` and after that call `less.refreshStyles()` to recompile and apply the code.
+
+``` html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Less</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet/less" type="text/css" href="styles.less" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.1.0/less.min.js"></script>
+</head>	
+<body>
+<button class="color-button">Change background</button>	
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> 
+<script>
+var colors = ['red','blue','yellow','green','black' ];
+$('.color-button').on('click', function () {
+	less.modifyVars({ 'body-bg' : colors[Math.floor(Math.random() * colors.length )] });
+	less.refreshStyles(); 
+});
+</script>
+</body>
+</html>
+```
+With `styles.less` containing the Less code that shown below:
+
+```css
+@body-bg: white;
+body {
+	background-color: @body-bg;
+}
+```
