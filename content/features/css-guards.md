@@ -1,4 +1,4 @@
-> "if"'s around selectors
+> "if"'s around selectors and properties
 
 Released [v1.5.0]({{ less.master }}CHANGELOG.md)
 
@@ -31,6 +31,23 @@ You can also achieve an `if` type statement by combining this with the `&` featu
   }
   a {
     color: blue;
+  }
+}
+```
+
+The `&` feature can be applied on only properties inside a mixin or selector.
+```
+& when (@my-option = true) {
+  border: 1px solid black;
+}
+```
+
+Example of a mixin that sets a border for a certain width.
+```
+.width(@width) {
+  width: @width;
+  & when (@width < 600px) {
+    border: 1px solid black;
   }
 }
 ```
