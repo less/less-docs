@@ -1,4 +1,4 @@
-> Extend is a Less Pseudo-Class which merges the selector it is put on with ones that match what it references.
+> Extend is a Less pseudo-class which merges the selector it is put on with ones that match what it references.
 
 Released [v1.4.0]({{ less.master }}CHANGELOG.md)
 
@@ -38,7 +38,7 @@ nav ul {
 Notice how the `nav ul:extend(.inline)` selector gets output as `nav ul` - the extend gets removed before output and the selector block left as-is. If no properties are put in that block then it gets removed from the output (but the extend still may affect other selectors).
 
 ## Extend syntax
-The extend is either attached to a selector or placed into a ruleset. It looks like a pseudoclass with selector parameter optionally followed by the keyword `all`:
+The extend is either attached to a selector or placed into a ruleset. It looks like a pseudo-class with selector parameter optionally followed by the keyword `all`:
 
 Example:
 
@@ -73,7 +73,7 @@ Example:
 ```
 
 ### Extend attached to selector
-Extend attached to a selector looks like an ordinary pseudoclass with selector as a parameter. A selector can contain multiple extend clauses, but all extends must be at the end of the selector.
+Extend attached to a selector looks like an ordinary pseudo-class with selector as a parameter. A selector can contain multiple extend clauses, but all extends must be at the end of the selector.
 
 * Extend after the selector: `pre:hover:extend(div pre)`.
 * Space between selector and extend is allowed: `pre:hover :extend(div pre)`.
@@ -186,7 +186,7 @@ Outputs
 }
 ```
 
-Order of pseudoclasses does matter. Selectors `link:hover:visited` and `link:visited:hover` match the same set of elements, but extend treats them as different:
+Order of pseudo-classes does matter. Selectors `link:hover:visited` and `link:visited:hover` match the same set of elements, but extend treats them as different:
 
 ```less
 link:hover:visited {
