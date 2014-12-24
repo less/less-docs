@@ -91,7 +91,7 @@ If a ruleset contains multiple selectors, any of them can have the extend keywor
 ```
 
 ### Extend inside ruleset
-Extend can be placed into rulesets body using `&:extend(selector)` syntax. Placing extend into a body is a shortcut for placing it into every single selector of that ruleset.
+Extend can be placed into a ruleset's body using `&:extend(selector)` syntax. Placing extend into a body is a shortcut for placing it into every single selector of that ruleset.
 
 
 Extend inside a body:
