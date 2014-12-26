@@ -46,6 +46,7 @@ List of less plugins
  - [Npm Import - import from a sub npm repository](https://github.com/less/less-plugin-npm-import)
  - [Bower Resolve - import from a Bower package](https://github.com/Mercateo/less-plugin-bower-resolve)
  - [Group CSS Media Queries - group CSS media queries](https://github.com/bassjobsen/less-plugin-group-css-media-queries)
+ - [Compresses the css output from Less using csswring](https://github.com/bassjobsen/less-plugin-csswring)
 
 
 For plugin authors
