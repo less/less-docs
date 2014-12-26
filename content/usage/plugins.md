@@ -47,6 +47,7 @@ List of less plugins
  - [Bower Resolve - import from a Bower package](https://github.com/Mercateo/less-plugin-bower-resolve)
  - [Group CSS Media Queries - group CSS media queries](https://github.com/bassjobsen/less-plugin-group-css-media-queries)
  - [Compresses the css output from Less using csswring](https://github.com/bassjobsen/less-plugin-csswring)
+ - [Generate left-to-right (LTR) or right-to-left (RTL) CSS from Less using css-flip](https://github.com/bassjobsen/less-plugin-css-flip)
 
 
 For plugin authors
