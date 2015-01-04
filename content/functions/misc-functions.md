@@ -10,6 +10,53 @@ Example: `color("#aaa");`
 
 Output: `#aaa`
 
+### image-size
+
+> Gets the image dimensions from a file.
+
+Parameters: `string`: the file to get the dimensions for.
+
+Returns: `dimension`
+
+Example: `image-size("file.png");`
+
+Output: `10px 10px`
+
+Note: this function needs to be implemented by each environment. It is currently only available in the node environment.
+
+Added in: v2.2.0
+
+### image-width
+
+> Gets the image width from a file.
+
+Parameters: `string`: the file to get the dimensions for.
+
+Returns: `dimension`
+
+Example: `image-width("file.png");`
+
+Output: `10px`
+
+Note: this function needs to be implemented by each environment. It is currently only available in the node environment.
+
+Added in: v2.2.0
+
+### image-height
+
+> Gets the image height from a file.
+
+Parameters: `string`: the file to get the dimensions for.
+
+Returns: `dimension`
+
+Example: `image-height("file.png");`
+
+Output: `10px`
+
+Note: this function needs to be implemented by each environment. It is currently only available in the node environment.
+
+Added in: v2.2.0
 
 ### convert
 
