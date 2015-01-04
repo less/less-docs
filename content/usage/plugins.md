@@ -37,6 +37,16 @@ In the browser
 
 Plugin authors should provide a javascript file, just include that in the page *before* the less.js script.
 
+```
+<script src="plugin.js"></script>
+<script>
+less = { 
+    plugins: [plugin]
+};
+</script>  
+<script src="less.min.js"></script>
+```
+
 List of less plugins
 --------------------
 
@@ -49,7 +59,9 @@ List of less plugins
  - [Compresses the css output from Less using csswring](https://github.com/bassjobsen/less-plugin-csswring)
  - [Generate left-to-right (LTR) or right-to-left (RTL) CSS from Less using css-flip](https://github.com/bassjobsen/less-plugin-css-flip)
  - [Postprocess Less using pleeease](https://github.com/bassjobsen/less-plugin-pleeease)
-
+ - [Adds some advanced colour functions that helps in finding more contrasting colors](https://github.com/less/less-plugin-advanced-color-functions/)
+ - [Adds some advanced colour functions that helps in finding more contrasting colors](https://github.com/less/less-plugin-advanced-color-functions/)
+ - [The cubehelix(y,a,b,t) function returns a color between the two colors a and b, using a gamma correction value of 1](https://github.com/bassjobsen/less-plugin-cubehelix). (Based on [Dave Green's `cubehelix' colour scheme](https://www.mrao.cam.ac.uk/~dag/CUBEHELIX/))
 
 For plugin authors
 --------------------------
