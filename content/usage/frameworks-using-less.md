@@ -28,6 +28,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 ## Grid Systems
 | | |
 |-|-|
+| [Flexible Grid System](http://flexible.gs) | |
 | [adaptGrid](https://github.com/amazingSurge/adaptGrid) | |
 | [Fluidable](http://fluidable.com/) | |
 | [Golden Grid System](http://goldengridsystem.com/) | |
