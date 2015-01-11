@@ -59,14 +59,11 @@ Get more info at [http://alphapixels.com/prepros](http://alphapixels.com/prepros
 
 ![Prepros screenshot](http://alphapixels.com/prepros/static/img/prepros.jpg)
 
-#### [WinLess](http://winless.org)
+#### [WinLess](https://github.com/marklagendijk/WinLess)
 
 > WinLess started out as a clone of Less.app, it takes a more feature-complete approach and has several settings. It also supports starting with command line arguments.
 
-Get more info: [http://winless.org](http://winless.org)
-
-![WinLess screenshot](http://winless.org/style/images/WinLess_Screenshot.png)
-
+Get more info: [https://github.com/marklagendijk/WinLess](https://github.com/marklagendijk/WinLess)
 
 ### OSx
 
