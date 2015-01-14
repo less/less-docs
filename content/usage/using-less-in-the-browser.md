@@ -85,7 +85,7 @@ It is possible to output rules in your CSS which allow tools to locate the sourc
 
 Either specify the option `dumpLineNumbers` as above or add `!dumpLineNumbers:mediaquery` to the url.
 
-You can use the `comments` option with [FireLESS](https://addons.mozilla.org/en-us/firefox/addon/fireless/) and the `mediaquery` option with FireBug/Chrome dev tools (it is identical to the SCSS media query debugging format).
+You can use the `mediaquery` option with [FireLESS](https://addons.mozilla.org/en-us/firefox/addon/fireless/) (it is identical to the SCSS media query debugging format). Also see [FireLess and Less v2](http://bassjobsen.weblogs.fm/fireless-less-v2/). The `comment` option can be used to display file information and line numbers in the inline compiled CSS code.
 
 ### Options
 
