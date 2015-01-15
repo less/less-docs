@@ -197,3 +197,31 @@ isunit(1234, em);  // false
 isunit(#ff0, pt);  // false
 isunit("mm", mm);  // false
 ```
+
+
+### isruleset
+
+> Returns `true` if a value is a ruleset, `false` otherwise.
+
+Parameters:
+* `value` - a variable being evaluated.
+
+Returns: `true` if value is a ruleset, `false` otherwise.
+
+Example:
+
+```less
+@rules: {
+    color: red;
+}
+
+isruleset(@rules);   // true
+isruleset(#ff0);     // false
+isruleset(blue);     // false
+isruleset("string"); // false
+isruleset(1234);     // false
+isruleset(56px);     // false
+isruleset(7.8%);     // false
+isruleset(keyword);  // false
+isruleset(url(...)); // false
+```
