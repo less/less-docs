@@ -201,7 +201,7 @@ isunit("mm", mm);  // false
 
 ### isruleset
 
-> Returns `true` if a value is a detached ruleset, `false` otherwise.
+> Returns `true` if a value is a ruleset, `false` otherwise.
 
 Parameters:
 * `value` - a variable being evaluated.
