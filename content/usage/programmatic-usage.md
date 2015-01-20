@@ -33,13 +33,13 @@ less.render(lessInput)
         // output.map = undefined
 }
 //,
-less.render(lessInput,{sourceMap:{}})
+less.render(lessInput, {sourceMap: {}})
     .then(function(output) {
         // output.css = string of css
         // output.map = string of sourcemap
 }
 //or,
-less.render(lessInput,{sourceMap: { sourceMapFileInline: true}})
+less.render(lessInput, {sourceMap: {sourceMapFileInline: true}})
     .then(function(output) {
         // output.css = string of css \n /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJ..= */
         // output.map = undefined
