@@ -42,6 +42,7 @@ The following import directives have been implemented:
 * `css`: treat the file as a CSS file, no matter what the file extension
 * `once`: only include the file once (this is default behavior)
 * `multiple`: include the file multiple times
+* `optional`: continue compiling when file is not found
 
 
 ## reference
@@ -151,3 +152,8 @@ Outputs
   color: green;
 }
 ```
+
+## optional
+> Use `@import (optional)` to allow importing of a file only when it exists. Without the `optional` keyword Less throws a FileError and stops compiling when importing a file that can not be found. 
+
+Released [v2.2.0]({{ less.master }}CHANGELOG.md)
