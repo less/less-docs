@@ -49,7 +49,7 @@ The other way is to specify the options on the script tag, e.g.
 And you can also do this on link tags to override certain settings (some less settings like verbose are global and can not be overridden).
 
 ```html
-<link data-dump-line-numbers="all" data-global-vars='{ myvar: "#ddffee", mystr: "\"quoted\"" }' rel="stylesheet/less" type="text/css" href="less/styles.less">
+<link data-dump-line-numbers="all" data-global-vars='{ "myvar": "#ddffee", "mystr": "\"quoted\"" }' rel="stylesheet/less" type="text/css" href="less/styles.less">
 ```
 
 The important points for attribute options are..
@@ -57,7 +57,7 @@ The important points for attribute options are..
  - importance level: window.less < script tag < link tag
  - data attributes names are not camelCase (e.g logLevel -> data-log-level)
  - link tag options are just render time options (e.g verbose, logLevel ... are not supported)
- - non-string data attributes values should be JSON valid (e.g use double quotes instead of single quotes like in `data-global-vars='{ myvar: "#ddffee", mystr: "\"quoted\"" }'`)
+ - non-string data attributes values should be JSON valid (e.g use double quotes instead of single quotes like in `data-global-vars='{ "myvar": "#ddffee", "mystr": "\"quoted\"" }'`)
 
 ### Watch mode
 To enable Watch mode, option `env` must be set to `development`. Then AFTER the less.js file is included, call `less.watch()`, like this:
