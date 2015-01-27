@@ -156,4 +156,4 @@ Outputs
 ## optional
 > Use `@import (optional)` to allow importing of a file only when it exists. Without the `optional` keyword Less throws a FileError and stops compiling when importing a file that can not be found. 
 
-Released [v2.2.0]({{ less.master }}CHANGELOG.md)
+Released [v2.3.0]({{ less.master }}CHANGELOG.md)
