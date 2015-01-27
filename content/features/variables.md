@@ -89,10 +89,7 @@ Version: 1.4.0
 
 Syntax: `@import "@{themes}/tidal-wave.less";`
 
-Note that currently, only variables which have been declared in the root or current scope will be considered and that only the current file and calling files will be considered when looking for a variable.
-This means that this usage is typically limited to when you inject a variable into the compile process or define a variable at the beginning of your root file.
-
-When you are importing a css file and not using the inline option (e.g. the import statement will be kept intact) then the above does not apply.
+Note that before v2.0.0, only variables which have been declared in the root or current scope were considered and that only the current file and calling files were considered when looking for a variable.
 
 Example:
 
