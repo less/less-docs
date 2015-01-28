@@ -27,14 +27,17 @@
     }
   }
 
-  .navbar-nav > li > a {
+  .navbar-nav > li > a, 
+  .navbar-nav > li > span {
     color: @navbar-inverse-link-color;
     &:hover {
       color: #fff;
     }
   }
-
-  .navbar-nav > .active > a {
+  .navbar-nav > li > span:extend(.navbar-nav > li > a, .nav > li > a){}
+  
+  .navbar-nav > .active > a,
+  .navbar-nav > .active > span {
     &, &:hover {
       color: #fff;
       background-color: rgba(0,0,0,.2);
@@ -48,6 +51,7 @@
       border-color: @navbar-inverse-border;
     }
   }
+  
 }
 
 
