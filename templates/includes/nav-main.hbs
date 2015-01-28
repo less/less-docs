@@ -13,9 +13,15 @@
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <li{{#is slug 'features'}} class="active"{{/is}}>
+        {{#is slug 'features'}}
+        <li class="active">
+          <span>Language Features</span>
+        </li>
+        {{else}}
+        <li>
           <a href="{{rel 'features'}}/">Language Features</a>
         </li>
+        {{/is}}
         {{#is links.plugins true}}
         <li{{#is slug 'plugins'}} class="active"{{/is}}>
           <a href="{{rel 'plugins'}}/">Plugins</a>
