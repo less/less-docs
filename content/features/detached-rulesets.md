@@ -2,7 +2,7 @@
 
 Released [v1.7.0]({{ less.master }}CHANGELOG.md)
 
-Detached ruleset is a group of css properties, nested rulesets, media declarations or anything else stored in a variable. You can include it into a ruleset or another structure and all its properties are going to be copied there. You can also use it as a mixin argument and pass it around as any other variable.
+A detached ruleset is a group of css properties, nested rulesets, media declarations or anything else stored in a variable. You can include it into a ruleset or another structure and all its properties are going to be copied there. You can also use it as a mixin argument and pass it around as any other variable.
 
 Simple example:
 ````less
@@ -22,9 +22,9 @@ compiles into:
 }
 ````
 
-Parentheses after detached ruleset call are mandatory. The `@detached-ruleset;` call would NOT work.
+Parentheses after a detached ruleset call are mandatory. The call `@detached-ruleset;` would NOT work.
 
-It is usefull when you want to define a mixin that abstracts out either wrapping a piece of code in a media query or a non supported browser class name. The rulesets can be passed to mixin so that the mixin can wrap the content. E.g.
+It is useful when you want to define a mixin that abstracts out either wrapping a piece of code in a media query or a non-supported browser class name. The rulesets can be passed to mixin so that the mixin can wrap the content, e.g.
 
 ```less
 .desktop-and-old-ie(@rules) {
@@ -41,7 +41,7 @@ header {
 }
 ```
 
-Here the `desktop-and-old-ie` mixin defines the media query and root class so that you can use a mixin to wrap a piece of code. This will output..
+Here the `desktop-and-old-ie` mixin defines the media query and root class so that you can use a mixin to wrap a piece of code. This will output
 
 ```css
 header {
@@ -92,7 +92,7 @@ which will output
 }
 ```
 
-Detached ruleset call unlocks (returns) all its mixins into caller the same way as mixin calls do. However, it does NOT return variables.
+A detached ruleset call unlocks (returns) all its mixins into caller the same way as mixin calls do. However, it does NOT return variables.
 
 Returned mixin:
 ````less
@@ -127,14 +127,15 @@ detached-ruleset: {
 ````
 
 ## Scoping
-Detached ruleset can use all variables and mixins accessible on place where it is *defined* and where it is *called*. Otherwise said, both definition and caller scopes are available to it. If both scopes contains the same variable or mixin, declaration scope value takes precedence. 
+A detached ruleset can use all variables and mixins accessible where it is *defined* and where it is *called*. Otherwise said, both definition and caller scopes are available to it. If both scopes contains the same variable or mixin, declaration scope value takes precedence. 
 
-*Declaration scope* is the one where detached ruleset body is defined. Copying  detached ruleset from one variable into another can not modify its scope. Ruleset does not gain access to new scopes just by being referenced there.
+*Declaration scope* is the one where detached ruleset body is defined. Copying a detached ruleset from one variable into another cannot modify its scope. The ruleset does not gain access to new scopes just by being referenced there.
 
-Lastly, detached ruleset can gain access to scope by being unlocked (imported) into it.
+Lastly, a detached ruleset can gain access to scope by being unlocked (imported) into it.
 
 #### Definition and Caller Scope Visibility
-Detached mixin sees callers variables and mixins:
+A detached mixin sees the caller's variables and mixins:
+
 ````less
 @detached-ruleset: {
   caller-variable: @callerVariable; // variable is undefined here
@@ -161,7 +162,7 @@ selector {
 }
 ````
 
-Variable and mixins accessible form definition win over those available in caller:
+Variable and mixins accessible form definition win over those available in the caller:
 ````less
 @variable: global;
 @detached-ruleset: {
@@ -184,7 +185,7 @@ selector {
 ````
 
 #### Referencing *Won't* Modify Detached Ruleset Scope
-Ruleset does not gain access to new scopes just by being referenced there:
+A ruleset does not gain access to new scopes just by being referenced there:
 ````less
 @detached-1: { scope-detached: @one @two; };
 .one {
@@ -207,7 +208,7 @@ ERROR 1:32 The variable "@one" was not declared.
 ````
 
 #### Unlocking *Will* Modify Detached Ruleset Scope
-Detached ruleset gains access by being unlocked (imported) inside a scope:
+A detached ruleset gains access by being unlocked (imported) inside a scope:
 ````less
 #space {
   .importer1() {
