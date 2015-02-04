@@ -62,6 +62,14 @@ List of less plugins
  - [Adds some advanced colour functions that helps in finding more contrasting colors](https://github.com/less/less-plugin-advanced-color-functions/)
  - [The cubehelix(y,a,b,t) function returns a color between the two colors a and b, using a gamma correction value of 1](https://github.com/bassjobsen/less-plugin-cubehelix). (Based on [Dave Green's `cubehelix' colour scheme](https://www.mrao.cam.ac.uk/~dag/CUBEHELIX/))
  - [CSScomb plugin for less.js](https://github.com/bassjobsen/less-plugin-csscomb/)
+ 
+Preprocess plugins which preload library's Less code:
+
+ - [Bootstrap for less.js](https://github.com/bassjobsen/less-plugin-bootstrap/)
+ - [Lesshat for less.js](https://github.com/bassjobsen/less-plugin-lesshat/)
+ - [Flexbox grid from flexboxgrid.com for less.js](https://github.com/bassjobsen/less-plugin-flexboxgrid) 
+ - [Flexible Grid System (flexible.gs) for less.js ](https://github.com/bassjobsen/less-plugin-flexiblegs)
+ - [Cardinal CSS for less.js](https://github.com/bassjobsen/less-plugin-cardinal)
 
 For plugin authors
 --------------------------
