@@ -45,7 +45,7 @@
 
 // Typography
 // -------------------------
-@body-font:               1rem/1.5 "PT Sans", sans-serif;
+@body-font:               @font-size-base; //1rem/1.5 "PT Sans", sans-serif;
 
 @font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
@@ -76,7 +76,7 @@
 // Fonts
 // -------------------------
 
-@font-path:               "../font";
+@font-path:               "../font/";
 
 
 
@@ -270,7 +270,6 @@
 // -------------------------
 
 // Basics of a navbar
-@navbar-height:                    60px;
 @navbar-margin-bottom:             @line-height-computed;
 @navbar-border-radius:             @border-radius-base;
 @navbar-padding-horizontal:        floor(@grid-gutter-width / 2);
