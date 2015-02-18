@@ -44,6 +44,9 @@ The following import directives have been implemented:
 * `multiple`: include the file multiple times
 * `optional`: continue compiling when file is not found
 
+> More than one keyword per `@import` is allowed, you will have to use commas to seperate the keywords:
+
+Example: `@import (optional, reference) "foo.less";`
 
 ## reference
 > Use `@import (reference)` to import external files, but without adding the imported styles to the compiled output unless referenced.
