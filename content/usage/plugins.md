@@ -70,6 +70,7 @@ Preprocess plugins which preload library's Less code:
  - [Flexbox grid from flexboxgrid.com for less.js](https://github.com/bassjobsen/less-plugin-flexboxgrid) 
  - [Flexible Grid System (flexible.gs) for less.js ](https://github.com/bassjobsen/less-plugin-flexiblegs)
  - [Cardinal CSS for less.js](https://github.com/bassjobsen/less-plugin-cardinal)
+ - [Ionic for less.js](https://github.com/bassjobsen/less-plugin-ionic)
 
 For plugin authors
 --------------------------
