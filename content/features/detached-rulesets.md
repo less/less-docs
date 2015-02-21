@@ -134,7 +134,7 @@ A detached ruleset can use all variables and mixins accessible where it is *defi
 Lastly, a detached ruleset can gain access to scope by being unlocked (imported) into it.
 
 #### Definition and Caller Scope Visibility
-A detached mixin sees the caller's variables and mixins:
+A detached ruleset sees the caller's variables and mixins:
 
 ````less
 @detached-ruleset: {
