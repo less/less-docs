@@ -24,6 +24,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [prelude](https://github.com/amazingSurge/prelude) | Lightweight, responsive and extensible front-end framework |
 | [Schema](http://danmalarkey.github.io/schema/) | Light, responsive, and lean frontend UI framework |
 | [UIkit](http://getuikit.com/) | Lightweight and modular front-end framework for developing web interfaces |
+| [ngBoilerplate](http://bit.ly/ngBoilerplate) | An opinionated kickstarter for AngularJS projects |
 
 ## Grid Systems
 | | |
