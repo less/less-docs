@@ -124,7 +124,7 @@ Media queries can be nested in the same way as selectors. Selectors are copied i
 .screencolor {
   @media screen {
     color: green;
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
       color: red;
     }
   }
