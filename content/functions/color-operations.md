@@ -8,7 +8,7 @@ Parameters:
 
 * `color`: A color object.
 * `amount`: A percentage 0-100%.
-* `method`: Optional, set to relative for relative percentages.
+* `method`: Optional, set to `relative` for the adjustment to be relative to the current value.
 
 Returns: `color`
 
@@ -26,7 +26,7 @@ Parameters:
 
 * `color`: A color object.
 * `amount`: A percentage 0-100%.
-* `method`: Optional, set to relative for relative percentages.
+* `method`: Optional, set to `relative` for the adjustment to be relative to the current value.
 
 Returns: `color`
 
@@ -44,7 +44,7 @@ Parameters:
 
 * `color`: A color object.
 * `amount`: A percentage 0-100%.
-* `method`: Optional, set to relative for relative percentages.
+* `method`: Optional, set to `relative` for the adjustment to be relative to the current value.
 
 Returns: `color`
 
@@ -62,7 +62,7 @@ Parameters:
 
 * `color`: A color object.
 * `amount`: A percentage 0-100%.
-* `method`: Optional, set to relative for relative percentages.
+* `method`: Optional, set to `relative` for the adjustment to be relative to the current value.
 
 Returns: `color`
 
@@ -82,7 +82,7 @@ Parameters:
 
 * `color`: A color object.
 * `amount`: A percentage 0-100%.
-* `method`: Optional, set to relative for relative percentages.
+* `method`: Optional, set to `relative` for the adjustment to be relative to the current value.
 
 Returns: `color`
 
@@ -99,7 +99,7 @@ Parameters:
 
 * `color`: A color object.
 * `amount`: A percentage 0-100%.
-* `method`: Optional, set to relative for relative percentages.
+* `method`: Optional, set to `relative` for the adjustment to be relative to the current value.
 
 Returns: `color`
 
