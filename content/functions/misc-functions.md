@@ -258,7 +258,7 @@ Parameters:
 * `dimension`: A number, with or without a dimension.
 * `unit`: (Optional) the unit to change to, or if omitted it will remove the unit.
 
-See [convert](#misc-functions-convert) for changing the unit without conversion.
+See [convert](#misc-functions-convert) for changing the unit with conversion.
 
 Example: `unit(5, px)`
 
