@@ -50,31 +50,31 @@ less = {
 List of less plugins
 --------------------
 
- Feature Plugins (postprocess)
- - [Clean CSS plugin to compress less](https://github.com/less/less-plugin-clean-css)
+Postprocessor/Feature Plugins:
  - [Autoprefixer plugin to add backwards compatibility to your css](https://github.com/less/less-plugin-autoprefix)
- - [Inline urls - converts `url()` to a call to `data-uri()`](https://github.com/less/less-plugin-inline-urls)
- - [Group CSS Media Queries - group CSS media queries](https://github.com/bassjobsen/less-plugin-group-css-media-queries)
+ - [CSScomb plugin for less.js](https://github.com/bassjobsen/less-plugin-csscomb/)
+ - [Clean CSS plugin to compress less](https://github.com/less/less-plugin-clean-css)
  - [Compresses the css output from Less using csswring](https://github.com/bassjobsen/less-plugin-csswring)
  - [Generate left-to-right (LTR) or right-to-left (RTL) CSS from Less using css-flip](https://github.com/bassjobsen/less-plugin-css-flip)
- - [Reverses Less code from ltr to rtl](https://github.com/less/less-plugin-rtl)
+ - [Group CSS Media Queries - group CSS media queries](https://github.com/bassjobsen/less-plugin-group-css-media-queries)
+ - [Inline urls - converts `url()` to a call to `data-uri()`](https://github.com/less/less-plugin-inline-urls)
  - [Postprocess Less using pleeease](https://github.com/bassjobsen/less-plugin-pleeease)
- - [CSScomb plugin for less.js](https://github.com/bassjobsen/less-plugin-csscomb/)
+ - [Reverses Less code from ltr to rtl](https://github.com/less/less-plugin-rtl)
  
-Framework/Library Wrappers (preprocess):
- - [Npm Import - import from a sub npm repository](https://github.com/less/less-plugin-npm-import)
- - [Bower Resolve - import from a Bower package](https://github.com/Mercateo/less-plugin-bower-resolve)
+Framework/Library Wrappers and Preprocessors:
  - [Bootstrap for less.js](https://github.com/bassjobsen/less-plugin-bootstrap/)
- - [Lesshat for less.js](https://github.com/bassjobsen/less-plugin-lesshat/)
+ - [Bower Resolve - import from a Bower package](https://github.com/Mercateo/less-plugin-bower-resolve)
+ - [Cardinal CSS for less.js](https://github.com/bassjobsen/less-plugin-cardinal)
  - [Flexbox grid from flexboxgrid.com for less.js](https://github.com/bassjobsen/less-plugin-flexboxgrid) 
  - [Flexible Grid System (flexible.gs) for less.js ](https://github.com/bassjobsen/less-plugin-flexiblegs)
- - [Cardinal CSS for less.js](https://github.com/bassjobsen/less-plugin-cardinal)
  - [Ionic for less.js](https://github.com/bassjobsen/less-plugin-ionic)
+ - [Lesshat for less.js](https://github.com/bassjobsen/less-plugin-lesshat/)
+ - [Npm Import - import from a sub npm repository](https://github.com/less/less-plugin-npm-import)
  - [Skeleton for less.js](https://github.com/bassjobsen/less-plugin-skeleton)
 
-Plugins which adds functions:
- - [Adds some advanced colour functions that helps in finding more contrasting colors](https://github.com/less/less-plugin-advanced-color-functions/)
- - [The cubehelix(y,a,b,t) function returns a color between the two colors a and b, using a gamma correction value of 1](https://github.com/bassjobsen/less-plugin-cubehelix). (Based on [Dave Green's `cubehelix' colour scheme](https://www.mrao.cam.ac.uk/~dag/CUBEHELIX/))
+Function Libraries:
+ - [advanced-color-functions. Adds some advanced colour functions that helps in finding more contrasting colors](https://github.com/less/less-plugin-advanced-color-functions/)
+ - [cubehelix. The `cubehelix(y,a,b,t)` function returns a color between the two colors a and b, using a gamma correction value of 1](https://github.com/bassjobsen/less-plugin-cubehelix).
 
 
 For plugin authors
