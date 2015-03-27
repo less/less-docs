@@ -50,7 +50,7 @@ less = {
 List of less plugins
 --------------------
 
-Postprocessor/Feature Plugins:
+### Postprocessor/Feature Plugins:
  - [Autoprefixer plugin to add backwards compatibility to your css](https://github.com/less/less-plugin-autoprefix)
  - [CSScomb plugin for less.js](https://github.com/bassjobsen/less-plugin-csscomb/)
  - [Clean CSS plugin to compress less](https://github.com/less/less-plugin-clean-css)
@@ -61,7 +61,7 @@ Postprocessor/Feature Plugins:
  - [Postprocess Less using pleeease](https://github.com/bassjobsen/less-plugin-pleeease)
  - [Reverses Less code from ltr to rtl](https://github.com/less/less-plugin-rtl)
  
-Framework/Library Wrappers and Preprocessors:
+### Framework/Library Wrappers and Preprocessors:
  - [Bootstrap for less.js](https://github.com/bassjobsen/less-plugin-bootstrap/)
  - [Bower Resolve - import from a Bower package](https://github.com/Mercateo/less-plugin-bower-resolve)
  - [Cardinal CSS for less.js](https://github.com/bassjobsen/less-plugin-cardinal)
@@ -72,7 +72,7 @@ Framework/Library Wrappers and Preprocessors:
  - [Npm Import - import from a sub npm repository](https://github.com/less/less-plugin-npm-import)
  - [Skeleton for less.js](https://github.com/bassjobsen/less-plugin-skeleton)
 
-Function Libraries:
+### Function Libraries:
  - [advanced-color-functions. Adds some advanced colour functions that helps in finding more contrasting colors](https://github.com/less/less-plugin-advanced-color-functions/)
  - [cubehelix. The `cubehelix(y,a,b,t)` function returns a color between the two colors a and b, using a gamma correction value of 1](https://github.com/bassjobsen/less-plugin-cubehelix).
 
