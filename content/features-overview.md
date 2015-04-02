@@ -121,7 +121,7 @@ You can also bundle pseudo-selectors with your mixins using this method. Here's 
 Media queries can be nested in the same way as selectors. Selectors are copied into the body of the media query:
 
 ```less
-.screencolor {
+.screen-color {
   @media screen {
     color: green;
     @media (min-width: 768px) {
@@ -138,17 +138,17 @@ outputs:
 
 ```css
 @media screen {
-  .screencolor {
+  .screen-color {
     color: green;
   }
 }
 @media screen and (min-width: 768px) {
-  .screencolor {
+  .screen-color {
     color: red;
   }
 }
 @media tv {
-  .screencolor {
+  .screen-color {
     color: black;
   }
 }
