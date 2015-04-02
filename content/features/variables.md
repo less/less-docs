@@ -51,10 +51,10 @@ Version: 1.4.0
 
 ```less
 // Variables
-@mySelector: banner;
+@my-selector: banner;
 
 // Usage
-.@{mySelector} {
+.@{my-selector} {
   font-weight: bold;
   line-height: 40px;
   margin: 0 auto;
