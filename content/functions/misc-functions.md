@@ -103,6 +103,10 @@ Parameters:
 * `mimetype`: (Optional) A MIME type string.
 * `url`: The URL of the file to inline.
 
+If there is no mimetype, data-uri function guesses it from filename suffix. Text and svg files are encoded as utf-8 and anything else is encoded as base64. 
+
+If user provided mimetype, the function uses base64 if mimetype argument ends with ;base64. For example, `image/jpeg;base64` is encoded into base64 while `text/html` is encoded into utf-8. 
+
 Example: `data-uri('../data/image.jpg');`
 
 Output: `url('data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==');`

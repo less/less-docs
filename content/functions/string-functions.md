@@ -60,7 +60,7 @@ The function escapes all special characters except `()'~!`. Space is encoded as 
 
 Placeholders:
 * `d`, `D`, `a`, `A` - can be replaced by any kind of argument (color, number, escaped value, expression, ...). If you use them in combination with string, the whole string will be used - including its quotes. However, the quotes are placed into the string as they are, they are not escaped by "/" nor anything similar.
-* `s`, `S` - can be replaced by any kind of argument except color. If you use them in combination with string, only the string value will be used - string quotes are omitted.
+* `s`, `S` - can be replaced by any expression. If you use it with string, only the string value is used - quotes are omitted.
 
 Parameters:
 
