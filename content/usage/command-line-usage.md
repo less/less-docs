@@ -26,7 +26,7 @@ npm i less --save-dev
 
 This will install the latest official version of lessc in your project folder, also adding it to the `devDependencies` in your project's `package.json`.
 
-Note that a [tilde version range][] will be automatically specified in `package.json`. This is good, as new patch releases of the latest version will be installable by npm.
+Note that a [caret version range][] will be automatically specified in `package.json`. This is good, as new minor releases of the latest version will be installable by npm.
 
 #### Beta releases of lessc
 
@@ -41,7 +41,7 @@ If you want to install a bleeding-edge, unpublished version of lessc, follow the
 The specified git URL may be that of the official lessc repo or a fork.
 
 
-[tilde version range]: https://www.npmjs.org/doc/misc/semver.html#Ranges
+[caret version range]: https://www.npmjs.org/doc/misc/semver.html#ranges
 [git URL as a dependency]: https://npmjs.org/doc/json.html#Git-URLs-as-Dependencies
 
 ### Server-Side and Command Line Usage
