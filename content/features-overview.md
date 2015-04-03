@@ -116,10 +116,11 @@ You can also bundle pseudo-selectors with your mixins using this method. Here's 
 
 * [Parent Selectors](#parent-selectors-feature)
 
-### Media query bubbling and nested media queries
+### Nested directives and bubbling
 
-Media queries can be nested in the same way as selectors. Selectors are copied into the body of the media query:
+Directives such as `media` or `keyframe` can be nested in the same way as selectors. Directive is placed on top and relative order against other elements inside the same ruleset remains unchanged. This is called bubbling.
 
+Conditional directives e.g. `@Media`, `@supports` and `@document` have also selectors copied into their bodies:
 ```less
 .screen-color {
   @media screen {
@@ -151,6 +152,31 @@ outputs:
   .screen-color {
     color: black;
   }
+}
+```
+
+Remaining non-conditional directives, for example `font-face` or `keyframes`, are bubbled up too. Their bodies do not change:
+```less
+#a {
+  color: blue;
+  @font-face {
+    src: made-up-url;
+  }
+  padding: 2 2 2 2;
+}
+```
+
+outputs:
+
+```less
+#a {
+  color: blue;
+}
+@font-face {
+  src: made-up-url;
+}
+#a {
+  padding: 2 2 2 2;
 }
 ```
 
