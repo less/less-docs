@@ -75,6 +75,7 @@ List of less plugins
 ### Function Libraries:
  - [advanced-color-functions. Adds some advanced colour functions that helps in finding more contrasting colors](https://github.com/less/less-plugin-advanced-color-functions/)
  - [cubehelix. The `cubehelix(y,a,b,t)` function returns a color between the two colors a and b, using a gamma correction value of 1](https://github.com/bassjobsen/less-plugin-cubehelix).
+ - [less-plugin-lists. Lists/arrays manipulation functions library](https://github.com/seven-phases-max/less-plugin-lists)
 
 
 For plugin authors
