@@ -13,35 +13,78 @@
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <li{{#is slug 'features'}} class="active"{{/is}}>
+        {{#is slug 'features'}}
+        <li class="active">
+          <span>Language Features</span>
+        </li>
+        {{else}}
+        <li>
           <a href="{{rel 'features'}}/">Language Features</a>
         </li>
+        {{/is}}
         {{#is links.plugins true}}
-        <li{{#is slug 'plugins'}} class="active"{{/is}}>
+        {{#is slug 'plugins'}}
+        <li class="active">
+          <span>Plugins</span>
+        </li>
+        {{else}}
+        <li>
           <a href="{{rel 'plugins'}}/">Plugins</a>
         </li>
+        {{/is}}        
         {{/is}}
-        <li{{#is slug 'functions'}} class="active"{{/is}}>
+        {{#is slug 'functions'}}
+        <li class="active">
+          <span>Function Reference</span>
+        </li>
+        {{else}}
+        <li>
           <a href="{{rel 'functions'}}/">Function Reference</a>
         </li>
-        <li{{#is slug 'usage'}} class="active"{{/is}}>
+        {{/is}}        
+       {{#is slug 'usage'}}
+        <li class="active">
+          <span>Usage</span>
+        </li>
+        {{else}}
+        <li>
           <a href="{{rel 'usage'}}/">Usage</a>
         </li>
+        {{/is}}
         {{#is links.cheatsheet true}}
-        <li{{#is slug 'cheatsheet'}} class="active"{{/is}}>
+        {{#is slug 'cheatsheet'}}
+        <li class="active">
+          <span>Cheatsheet</span>
+        </li>
+        {{else}}
+        <li>
           <a href="{{rel 'cheatsheet'}}/">Cheatsheet</a>
         </li>
+        {{/is}}        
         {{/is}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#is links.blog true}}
-        <li{{#is slug 'blog'}} class="active"{{/is}}>
+        {{#is slug 'blog'}}
+        <li class="active">
+          <span>Blog</span>
+        </li>
+        {{else}}
+        <li>
           <a href="{{rel 'blog'}}/">Blog</a>
         </li>
-        {{/is}}
-        <li{{#is slug 'about'}} class="active"{{/is}}>
+        {{/is}}        
+        {{/is}}       
+        {{#is slug 'about'}}
+        <li class="active">
+          <span>About</span>
+        </li>
+        {{else}}
+        <li>
           <a href="{{rel 'about'}}/">About</a>
         </li>
+        {{/is}}   
+        
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">GitHub <b class="caret"></b></a>
           <ul class="dropdown-menu">
