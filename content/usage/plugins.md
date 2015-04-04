@@ -2,10 +2,12 @@
 title: Plugins
 ---
 
-How do I use a plugin ? - command line
+>How do I use a plugin? 
+
+Command Line
 --------------------------------------
 
-If you are using lessc, the first thing you need to do is install that plugin. We reccommend the plugin starts "less-plugin" though that isn't required. For the clean css plugin you would install `npm install less-plugin-clean-css`.
+If you are using lessc, the first thing you need to do is install that plugin. We reccommend the plugin starts "less-plugin" though that isn't required. For the clean-css plugin you would install `npm install less-plugin-clean-css`.
 
 To use the plugin, if you specify a unrecognised option, we attempt to load that, for example
 ```
@@ -107,7 +109,7 @@ The plugin itself has a very simple signature, like this
 ```
 So, the plugin gets the less object, which in v2 has more classes on it (making it easy to extend), a plugin manager which provides some hooks to add visitors, file managers and post processors.
 
-If your plugin supports lessc, there are a few more details and the signature looks like this
+If your plugin supports `lessc`, there are a few more details and the signature looks like this
 
 ```js
 {
@@ -120,11 +122,11 @@ If your plugin supports lessc, there are a few more details and the signature lo
     minVersion: [2, 0, 0] /* optional */
 }
 ```
-The additions are the setOptions function which passes the string the user enters when specifying your plugin and also the printUsage function which you should use to explain your options and how the plugin works.
+The additions are the `setOptions` function which passes the string the user enters when specifying your plugin and also the `printUsage` function which you should use to explain your options and how the plugin works.
 
-Here are some example repos showing the different plugin types
-post-processor: https://github.com/less/less-plugin-clean-css
-visitor: https://github.com/less/less-plugin-inline-urls
-file-manager: https://github.com/less/less-plugin-npm-import
+Here are some example repos showing the different plugin types:
+ - post-processor: https://github.com/less/less-plugin-clean-css
+ - visitor: https://github.com/less/less-plugin-inline-urls
+ - file-manager: https://github.com/less/less-plugin-npm-import
 
 Note: Plugins are different from creating a version of less for a different environment but they do have similarities, for example node provides 2 file managers by default and browser provides one and that is the main step in getting less to run within a specific environment. The plugin allows you to add file managers.
