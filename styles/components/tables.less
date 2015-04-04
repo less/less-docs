@@ -1,11 +1,13 @@
 // Add some padding and margin to tables
-@table-grid-padding: 10px;
 
-table {
-  margin-bottom: (2 * @table-grid-padding);
+.docs-section {
+  @g: 10px;
+
+  table {
+    margin-bottom: (2 * @g);
+  }
+
+  td {
+    padding: 0 @g (@g / 2) 0;
+  }
 }
-
-td {
-  padding: 0 @table-grid-padding (@table-grid-padding / 2) 0;
-}
-

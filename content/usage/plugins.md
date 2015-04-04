@@ -47,35 +47,49 @@ less = {
 <script src="less.min.js"></script>
 ```
 
-List of less plugins
+List of Less plugins
 --------------------
 
-### Postprocessor/Feature Plugins:
- - [Autoprefixer plugin to add backwards compatibility to your css](https://github.com/less/less-plugin-autoprefix)
- - [CSScomb plugin for less.js](https://github.com/bassjobsen/less-plugin-csscomb/)
- - [Clean CSS plugin to compress less](https://github.com/less/less-plugin-clean-css)
- - [Compresses the css output from Less using csswring](https://github.com/bassjobsen/less-plugin-csswring)
- - [Generate left-to-right (LTR) or right-to-left (RTL) CSS from Less using css-flip](https://github.com/bassjobsen/less-plugin-css-flip)
- - [Group CSS Media Queries - group CSS media queries](https://github.com/bassjobsen/less-plugin-group-css-media-queries)
- - [Inline urls - converts `url()` to a call to `data-uri()`](https://github.com/less/less-plugin-inline-urls)
- - [Postprocess Less using pleeease](https://github.com/bassjobsen/less-plugin-pleeease)
- - [Reverses Less code from ltr to rtl](https://github.com/less/less-plugin-rtl)
- 
-### Framework/Library Wrappers and Preprocessors:
- - [Bootstrap for less.js](https://github.com/bassjobsen/less-plugin-bootstrap/)
- - [Bower Resolve - import from a Bower package](https://github.com/Mercateo/less-plugin-bower-resolve)
- - [Cardinal CSS for less.js](https://github.com/bassjobsen/less-plugin-cardinal)
- - [Flexbox grid from flexboxgrid.com for less.js](https://github.com/bassjobsen/less-plugin-flexboxgrid) 
- - [Flexible Grid System (flexible.gs) for less.js ](https://github.com/bassjobsen/less-plugin-flexiblegs)
- - [Ionic for less.js](https://github.com/bassjobsen/less-plugin-ionic)
- - [Lesshat for less.js](https://github.com/bassjobsen/less-plugin-lesshat/)
- - [Npm Import - import from a sub npm repository](https://github.com/less/less-plugin-npm-import)
- - [Skeleton for less.js](https://github.com/bassjobsen/less-plugin-skeleton)
+> Available Less plugins. Find more at the [NPM Registry](https://www.npmjs.com/search?q=%22less-plugin%22)
 
-### Function Libraries:
- - [advanced-color-functions. Adds some advanced colour functions that helps in finding more contrasting colors](https://github.com/less/less-plugin-advanced-color-functions/)
- - [cubehelix. The `cubehelix(y,a,b,t)` function returns a color between the two colors a and b, using a gamma correction value of 1](https://github.com/bassjobsen/less-plugin-cubehelix).
- - [less-plugin-lists. Lists/arrays manipulation functions library](https://github.com/seven-phases-max/less-plugin-lists)
+<!-- TODO: 
+  * titles of the wrapped-up libraries/frameworks should be links 
+    e.g. Bootstrap -> [Bootstrap](http://getbootstrap.com/) etc.
+  * invent something to use instead of those endless `import Bla-bla`, `import Blee-bloo`
+-->
+
+#### Postprocessor/Feature Plugins
+| | |
+|-|-|
+| [Autoprefixer](https://github.com/less/less-plugin-autoprefix) | Add vendor prefixes
+| [CSScomb](https://github.com/bassjobsen/less-plugin-csscomb/) | Beautify/format
+| [clean-css](https://github.com/less/less-plugin-clean-css) | Compress/minify
+| [CSSWring](https://github.com/bassjobsen/less-plugin-csswring) | Compress/minify
+| [css-flip](https://github.com/bassjobsen/less-plugin-css-flip) | Generate left-to-right (LTR) or right-to-left (RTL) CSS
+| [group-css-media-queries](https://github.com/bassjobsen/less-plugin-group-css-media-queries) | Group CSS media queries
+| [inline-urls](https://github.com/less/less-plugin-inline-urls) | Convert `url()` to a call to `data-uri()`
+| [pleeease](https://github.com/bassjobsen/less-plugin-pleeease) | Postprocess using pleeease
+| [less-plugin-rtl](https://github.com/less/less-plugin-rtl) | Reverse from ltr to rtl
+ 
+#### Framework/Library Importers
+| | |
+|-|-|
+| [Bootstrap for less.js](https://github.com/bassjobsen/less-plugin-bootstrap/) | import Bootstrap
+| [Bower Resolve](https://github.com/Mercateo/less-plugin-bower-resolve) | import from a Bower package
+| [Cardinal CSS for less.js](https://github.com/bassjobsen/less-plugin-cardinal) | import Cardinal
+| [Flexbox Grid](https://github.com/bassjobsen/less-plugin-flexboxgrid)  | import [Flexbox Grid](http://flexboxgrid.com/)
+| [Flexible Grid System](https://github.com/bassjobsen/less-plugin-flexiblegs) | import [Flexible Grid System](http://flexible.gs/)
+| [Ionic](https://github.com/bassjobsen/less-plugin-ionic) | import Ionic
+| [Lesshat](https://github.com/bassjobsen/less-plugin-lesshat/) | import Lesshat
+| [Npm Import](https://github.com/less/less-plugin-npm-import) | import from a sub npm repository
+| [Skeleton](https://github.com/bassjobsen/less-plugin-skeleton) | import Skeleton
+
+#### Function Libraries
+| | |
+|-|-|
+| [advanced-color-functions](https://github.com/less/less-plugin-advanced-color-functions/) | Some advanced colour functions that helps in finding more contrasting 
+| [cubehelix](https://github.com/bassjobsen/less-plugin-cubehelix) | `cubehelix(y,a,b,t)` function returns a color between the two colors a and b, using a gamma correction value of 1
+| [lists](https://github.com/seven-phases-max/less-plugin-lists) | Lists/arrays manipulation functions library
 
 
 For plugin authors
@@ -83,7 +97,7 @@ For plugin authors
 
 Less supports some entry points that allow an author to integrate with less. We may add some more in the future.
 
-The plugin itself has a very simple signtaure, like this
+The plugin itself has a very simple signature, like this
 ```
 {
     install: function(less, pluginManager) {

@@ -16,6 +16,10 @@
 // Docs Components
 // --------------------------------
 
+// Note: watch if a "components/" file name is the same as one of "bootstrap/"
+// both are in `paths` thus "tables.less" imports "bootstrap/tables.less" 
+// and `(once)` applies.
+
 // Typography & Code
 @import "highlight-js/solarized.less";
 @import "typography.less";
@@ -29,7 +33,7 @@
 @import "header.less";
 @import "footer.less";
 @import "team.less";
-@import "tables.less";
+@import "components/tables.less";
 @import "docs-content.less";
 // @import "docs-section.less";
 
