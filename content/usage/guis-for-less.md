@@ -69,14 +69,6 @@ Get more info: [http://winless.org](http://winless.org)
 
 ### OSx
 
-#### [LESS.app](http://incident57.com/less)
-
-> LESS.app was the first GUI compiler for Less. LESS.app has a 'Compiler' tab where you can see the compiler results.
-
-Get more info: [http://incident57.com/less](http://incident57.com/less)
-
-![LESS.app screenshot](http://incident57.com/less/images/hero-window.png)
-
 #### [CodeKit](http://incident57.com/codekit)
 
 > CodeKit is the successor to LESS.app, and supports Less among many other preprocessing languages, such as SASS, Jade, Markdown, and many more.
