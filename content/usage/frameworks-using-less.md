@@ -4,7 +4,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 
 ## UI/Theme Frameworks and Components
 | | |
-|-|-|
+|---|---|
 | [1pxdeep](http://rriepe.github.io/1pxdeep/) | Brings designing by relative visual weight, or designing with color schemes, to Bootstrap |
 | [Bootflat](http://www.flathemes.com/) | Open source Flat UI KIT based on Bootstrap |
 | [Bootstrap](http://getbootstrap.com/) | Front-end framework for developing responsive, mobile first projects on the web |
@@ -30,7 +30,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 
 ## Grid Systems
 | | |
-|-|-|
+|---|---|
 | [Flexible Grid System](http://flexible.gs) | |
 | [adaptGrid](https://github.com/amazingSurge/adaptGrid) | |
 | [Fluidable](http://fluidable.com/) | |
@@ -43,7 +43,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 
 ## Mixin Libraries
 | | |
-|-|-|
+|---|---|
 | [3L](http://mateuszkocz.github.io/3l/) | Mixins library |
 | [animate](https://github.com/joshuapekera/animate) | Library of CSS3 keyframe animations |
 | [Clearless](http://clearleft.github.io/clearless/) | Collection of mixins |

@@ -62,7 +62,7 @@ List of Less plugins
 
 #### Postprocessor/Feature Plugins
 | | |
-|-|-|
+|---|---|
 | [Autoprefixer](https://github.com/less/less-plugin-autoprefix) | Add vendor prefixes
 | [CSScomb](https://github.com/bassjobsen/less-plugin-csscomb/) | Beautify/format
 | [clean-css](https://github.com/less/less-plugin-clean-css) | Compress/minify
@@ -75,7 +75,7 @@ List of Less plugins
  
 #### Framework/Library Importers
 | | |
-|-|-|
+|---|---|
 | [Bootstrap for less.js](https://github.com/bassjobsen/less-plugin-bootstrap/) | import Bootstrap
 | [Bower Resolve](https://github.com/Mercateo/less-plugin-bower-resolve) | import from a Bower package
 | [Cardinal CSS for less.js](https://github.com/bassjobsen/less-plugin-cardinal) | import Cardinal
@@ -88,7 +88,7 @@ List of Less plugins
 
 #### Function Libraries
 | | |
-|-|-|
+|---|---|
 | [advanced-color-functions](https://github.com/less/less-plugin-advanced-color-functions/) | Some advanced colour functions that helps in finding more contrasting 
 | [cubehelix](https://github.com/bassjobsen/less-plugin-cubehelix) | `cubehelix(y,a,b,t)` function returns a color between the two colors a and b, using a gamma correction value of 1
 | [lists](https://github.com/seven-phases-max/less-plugin-lists) | Lists/arrays manipulation functions library
