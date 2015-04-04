@@ -44,6 +44,9 @@ The following import directives have been implemented:
 * `multiple`: include the file multiple times
 * `optional`: continue compiling when file is not found
 
+> More than one keyword per `@import` is allowed, you will have to use commas to seperate the keywords:
+
+Example: `@import (optional, reference) "foo.less";`
 
 ## reference
 > Use `@import (reference)` to import external files, but without adding the imported styles to the compiled output unless referenced.
@@ -52,7 +55,7 @@ Released [v1.5.0]({{ less.master }}CHANGELOG.md)
 
 Example: `@import (reference) "foo.less";`
 
-`reference` is one of the most powerful features in the Less language. Imagine that `reference` marks every directive and selector with a _reference flag_ in the imported file, imports as normal, but when the CSS is generated, "reference" selectors (as well as any media queries containing only reference selectors) are not output. `reference` styles will not show up in your generated CSS unless the reference styles are used as [mixins](#mixins-feature) or [extended](#extend-feature).
+Imagine that `reference` marks every directive and selector with a _reference flag_ in the imported file, imports as normal, but when the CSS is generated, "reference" selectors (as well as any media queries containing only reference selectors) are not output. `reference` styles will not show up in your generated CSS unless the reference styles are used as [mixins](#mixins-feature) or [extended](#extend-feature).
 
 Additionally, **`reference`** produces different results depending on which method was used (mixin or extend):
 

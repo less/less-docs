@@ -1,4 +1,4 @@
-Color operations generally take parameters in the same units as the values they are changing, and percentages are handled as absolutes, so increasing a 10% value by 10% results in 20%, not 11%, and values are clamped to their allowed ranges; they do not wrap around. Where return values are shown, we've used formats that make it clear what each function has done, in addition to the hex versions that you will usually be be working with.
+Color operations generally take parameters in the same units as the values they are changing, and percentages are handled as absolutes, so increasing a 10% value by 10% results in 20%. Set the option method parameter to relative for relative percentages. When using relative percentages increasing a 10% value by 10% results in 11%. Values are clamped to their allowed ranges; they do not wrap around. Where return values are shown, we've used formats that make it clear what each function has done, in addition to the hex versions that you will usually be be working with.
 
 ### saturate
 
@@ -8,6 +8,7 @@ Parameters:
 
 * `color`: A color object.
 * `amount`: A percentage 0-100%.
+* `method`: Optional, set to `relative` for the adjustment to be relative to the current value.
 
 Returns: `color`
 
@@ -25,6 +26,7 @@ Parameters:
 
 * `color`: A color object.
 * `amount`: A percentage 0-100%.
+* `method`: Optional, set to `relative` for the adjustment to be relative to the current value.
 
 Returns: `color`
 
@@ -42,6 +44,7 @@ Parameters:
 
 * `color`: A color object.
 * `amount`: A percentage 0-100%.
+* `method`: Optional, set to `relative` for the adjustment to be relative to the current value.
 
 Returns: `color`
 
@@ -59,6 +62,7 @@ Parameters:
 
 * `color`: A color object.
 * `amount`: A percentage 0-100%.
+* `method`: Optional, set to `relative` for the adjustment to be relative to the current value.
 
 Returns: `color`
 
@@ -78,6 +82,7 @@ Parameters:
 
 * `color`: A color object.
 * `amount`: A percentage 0-100%.
+* `method`: Optional, set to `relative` for the adjustment to be relative to the current value.
 
 Returns: `color`
 
@@ -94,6 +99,7 @@ Parameters:
 
 * `color`: A color object.
 * `amount`: A percentage 0-100%.
+* `method`: Optional, set to `relative` for the adjustment to be relative to the current value.
 
 Returns: `color`
 

@@ -52,18 +52,20 @@ Get more info: [http://koala-app.com/](http://koala-app.com/)
 
 ### Windows
 
-#### [Prepros App](http://alphapixels.com/prepros)
->Prepros is a free and open source app that can compile less, sass, stylus, jade, haml and much more with live browser refresh.
+#### [Prepros](https://prepros.io/)
+> Prepros is a tool to compile LESS, Sass, Compass, Stylus, Jade and much more.
 
-Get more info at [http://alphapixels.com/prepros](http://alphapixels.com/prepros)
+Get more info at [https://prepros.io/](https://prepros.io/)
 
-![Prepros screenshot](http://alphapixels.com/prepros/static/img/prepros.jpg)
+![Prepros screenshot](https://prepros.io/img/shot-shadow.png)
 
-#### [WinLess](https://github.com/marklagendijk/WinLess)
+#### [WinLess](http://winless.org)
 
 > WinLess started out as a clone of Less.app, it takes a more feature-complete approach and has several settings. It also supports starting with command line arguments.
 
-Get more info: [https://github.com/marklagendijk/WinLess](https://github.com/marklagendijk/WinLess)
+Get more info: [http://winless.org](http://winless.org)
+
+![WinLess screenshot](http://winless.org/style/images/WinLess_Screenshot.png)
 
 ### OSx
 

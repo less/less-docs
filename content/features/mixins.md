@@ -130,6 +130,30 @@ Example:
 }
 ```
 
+## Guarded Namespaces
+
+If namespace have a guard, mixins defined by it are used only if guard condition returns true. Namespace guard is evaluated exactly the same way as guard on mixin, so next two mixins work the same way:
+
+```less
+#namespace when (@mode=huge) {
+  .mixin() { /* */ }
+}
+
+#namespace {
+  .mixin() when (@mode=huge) { /* */ }
+}
+```
+
+The `default` function is assumed to have the same value for all nested namespaces and mixin. Following mixin is never evaluated, one of its guards is guaranteed to be false:
+
+```less
+#sp_1 when (default()) {
+  #sp_2 when (default()) {
+    .mixin() when not(default()) { /* */ }
+  }
+}
+```
+
 ## The `!important` keyword
 
 Use the `!important` keyword after mixin call to mark all properties inherited by it as `!important`:

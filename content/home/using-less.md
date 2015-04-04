@@ -113,6 +113,7 @@ Next, [download less.js](https://github.com/less/less.js/archive/master.zip) and
 
 * Make sure you include your stylesheets **before** the script.
 * When you link more than one `.less` stylesheet each of them is compiled independently. So any variables, mixins or namespaces you define in a stylesheet are not accessible in any other.
+* Due to the same origin policy of browsers loading external resources requires [enabling CORS](http://enable-cors.org/)
 
 ## Browser Options
 

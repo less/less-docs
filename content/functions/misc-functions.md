@@ -103,6 +103,10 @@ Parameters:
 * `mimetype`: (Optional) A MIME type string.
 * `url`: The URL of the file to inline.
 
+If there is no mimetype, data-uri function guesses it from filename suffix. Text and svg files are encoded as utf-8 and anything else is encoded as base64. 
+
+If user provided mimetype, the function uses base64 if mimetype argument ends with ;base64. For example, `image/jpeg;base64` is encoded into base64 while `text/html` is encoded into utf-8. 
+
 Example: `data-uri('../data/image.jpg');`
 
 Output: `url('data:image/jpeg;base64,bm90IGFjdHVhbGx5IGEganBlZyBmaWxlCg==');`
@@ -258,7 +262,7 @@ Parameters:
 * `dimension`: A number, with or without a dimension.
 * `unit`: (Optional) the unit to change to, or if omitted it will remove the unit.
 
-See [convert](#misc-functions-convert) for changing the unit without conversion.
+See [convert](#misc-functions-convert) for changing the unit with conversion.
 
 Example: `unit(5, px)`
 
@@ -295,9 +299,15 @@ Output: ` //nothing`
 
 Svg-gradient function generates multi-stop svg gradients. It must have at least three parameters. First parameter specifies gradient type and direction and remaining parameters list colors and their positions. The position of first and last specified color are optional, remaining colors must have positions specified.
 
-The direction must be one of `to bottom`, `to right`, `to bottom right`, `to top right`, `ellipse` or `ellipse at center`. The direction can be specified as both escaped value and space separated list of words.
+The direction must be one of `to bottom`, `to right`, `to bottom right`, `to top right`, `ellipse` or `ellipse at center`. The direction can be specified as both escaped value `~'to bottom'` and space separated list of words `to bottom`.
 
-Parameters:
+The direction must be followed by two or more color stops. They can be supplied either inside a list or you can specify each color stops in separate argument. 
+
+Parameters - colors stops in list:
+* `escaped value` or `list of identifiers`: direction
+* `list` - all colors and their positions in list
+
+Parameters - color stops in arguments:
 * `escaped value` or `list of identifiers`: direction
 * `color [percentage]` pair: first color and its relative position (position is optional)
 * `color percent` pair: (optional) second color and its relative position
@@ -305,21 +315,30 @@ Parameters:
 * `color percent` pair: (optional) n-th color and its relative position
 * `color [percentage]` pair: last color and its relative position (position is optional)
 
-Returns: `url` with base64 encoded svg gradient.
+Returns: `url` with "URI-Encoded" svg gradient.
 
-Example:
-````
+Example - colors stops in list:
+```less
+div {
+  @list: red, green 30%, blue;
+  background-image: svg-gradient(to right, @list);
+}
+```
+
+equivalent - color stops in arguments:
+```less
 div {
   background-image: svg-gradient(to right, red, green 30%, blue);
 }
-````
+```
 
-results in:
+both result in:
 ````
 div {
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZGllbnQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmMDAwMCIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjMDA4MDAwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMGZmIi8+PC9saW5lYXJHcmFkaWVudD48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWRpZW50KSIgLz48L3N2Zz4=')
+  background-image: url('data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20version%3D%221.1%22%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%201%201%22%20preserveAspectRatio%3D%22none%22%3E%3ClinearGradient%20id%3D%22gradient%22%20gradientUnits%3D%22userSpaceOnUse%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%220%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23ff0000%22%2F%3E%3Cstop%20offset%3D%2230%25%22%20stop-color%3D%22%23008000%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%230000ff%22%2F%3E%3C%2FlinearGradient%3E%3Crect%20x%3D%220%22%20y%3D%220%22%20width%3D%221%22%20height%3D%221%22%20fill%3D%22url(%23gradient)%22%20%2F%3E%3C%2Fsvg%3E');
 }
 ````
+Note: in versions before 2.2.0 the result is `base64` encoded .
 
 Generated background image has red color on the left, green at 30% of its width and ends with a blue color. Base64 encoded part contains following svg-gradient:
 ````xml
