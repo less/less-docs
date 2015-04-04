@@ -4,7 +4,7 @@ title: Programmatic usage
 
 The main entry point into less is the less.render function. This takes the following format
 
-```
+```js
 less.render(lessInput, options)
     .then(function(output) {
         // output.css = string of css
@@ -26,7 +26,7 @@ If you wanted to render a file, you would first read it into a string (to pass t
 
 The `sourceMap` option is an object which enables you to set sub sourcemap options. Available sub options are: `sourceMapURL`,`sourceMapBasepath`,`sourceMapRootpath`,`outputSourceFiles` and `sourceMapFileInline`. Notice that the `sourceMap` option is not available for the less.js in browser compiler now.
 
-```
+```js
 less.render(lessInput)
     .then(function(output) {
         // output.css = string of css
@@ -54,7 +54,7 @@ You can still get the less parse tree, but it requires more steps. You can see h
 
 You can add a log listener with the following code
 
-```
+```js
 less.logger.addListener({
     debug: function(msg) {
     },

@@ -23,7 +23,7 @@ Using a plugin in code
 
 In Node, require the plugin and pass it to less in an array as an option plugins. E.g.
 
-```
+```js
 var myPlugin = require("my-plugin");
 less.render(myCSS, { plugins: [myPlugin] })
    .then(function(output) {
@@ -37,7 +37,7 @@ In the browser
 
 Plugin authors should provide a javascript file, just include that in the page *before* the less.js script.
 
-```
+```html
 <script src="plugin.js"></script>
 <script>
 less = { 
@@ -95,7 +95,7 @@ So, the plugin gets the less object, which in v2 has more classes on it (making 
 
 If your plugin supports lessc, there are a few more details and the signature looks like this
 
-```
+```js
 {
     install: function(less, pluginManager) {
     },
