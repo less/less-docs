@@ -202,6 +202,23 @@ The output is pretty much what you expect—Less understands the difference betw
 
 Less will use that unit for the final output—`6px` in this case.
 
+### Escaping
+
+Escaping allows you to use any arbitrary string as property or variable value. Anything inside `~"anything"` or `~'anything'` is used as is with no changes except [interpolation](#variables-feature-variable-interpolation). 
+
+```less
+.weird-element {
+  content: ~"^//* some horrible but needed css hack";
+}
+```
+
+resuts in:
+```less
+.weird-element {
+  content: ^//* some horrible but needed css hack;
+}
+```
+
 ### Functions
 
 Less provides a variety of functions which transform colors, manipulate strings and do maths. They are documented fully in the function reference.
