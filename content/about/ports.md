@@ -8,6 +8,7 @@ title: Ports
 * [Less Engine](https://github.com/Asual/lesscss-engine) (Runs less.js in the Rhino JVM-based JavaScript interpreter)
 * [Less CSS Compiler for Java](https://github.com/marceloverdijk/lesscss-java) (Runs less.js in the Rhino JVM-based JavaScript interpreter)
 * [Less4j](https://github.com/SomMeri/less4j) (Native Java implementation.)
+* [JLessC](https://github.com/i-net-software/jlessc) (Less compiler written completely in Java)
 
 ## .Net
 * [Less CSS for .Net](http://www.dotlesscss.org/)
