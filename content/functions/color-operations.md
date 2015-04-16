@@ -257,7 +257,7 @@ p {
 
 Output:
 
-```
+```css
 p {
     a: #000000 // black
     b: #ffffff // white
