@@ -4,7 +4,7 @@
 
 Parameters: `color` - a color object.
 
-Returns: `integer` `0-360`
+Returns: `integer` 0-360
 
 Example: `hue(hsl(90, 100%, 50%))`
 
@@ -17,7 +17,7 @@ Output: `90`
 
 Parameters: `color` - a color object.
 
-Returns: `percentage` `0-100`
+Returns: `percentage` 0-100
 
 Example: `saturation(hsl(90, 100%, 50%))`
 
@@ -30,7 +30,7 @@ Output: `100%`
 
 Parameters: `color` - a color object.
 
-Returns: `percentage` `0-100`
+Returns: `percentage` 0-100
 
 Example: `lightness(hsl(90, 100%, 50%))`
 
@@ -82,7 +82,7 @@ Output: `50%`
 
 Parameters: `color` - a color object.
 
-Returns: `integer` `0-255`
+Returns: `float` 0-255
 
 Example: `red(rgb(10, 20, 30))`
 
@@ -95,7 +95,7 @@ Output: `10`
 
 Parameters: `color` - a color object.
 
-Returns: `integer` 0-255
+Returns: `float` 0-255
 
 Example: `green(rgb(10, 20, 30))`
 
@@ -108,7 +108,7 @@ Output: `20`
 
 Parameters: `color` - a color object.
 
-Returns: `integer` 0-255
+Returns: `float` 0-255
 
 Example: `blue(rgb(10, 20, 30))`
 
@@ -121,7 +121,7 @@ Output: `30`
 
 Parameters: `color` - a color object.
 
-Returns: `float` `0-1`
+Returns: `float` 0-1
 
 Example: `alpha(rgba(10, 20, 30, 0.5))`
 
