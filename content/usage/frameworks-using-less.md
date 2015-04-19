@@ -53,6 +53,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [cube.less](https://github.com/sparanoid/cube.less) | Animated 3D cube using only CSS |
 | [est](https://github.com/ecomfe/est/) | Mixin library |
 | [Hexagon](http://db0company.github.io/css-hexagon/) | Generate CSS hexagons with custom size and color |
+| [homeless](https://github.com/pixelass/homeless) | Mixin library |
 | [LESS Elements](http://lesselements.com/) | Set of mixins |
 | [LESS Hat](http://lesshat.com/) | Mixins library |
 | [lessley](https://github.com/pixelass/lessley) | A jasmine like testing suite written in pure less |
