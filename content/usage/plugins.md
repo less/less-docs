@@ -68,6 +68,7 @@ List of Less plugins
 | [clean-css](https://github.com/less/less-plugin-clean-css) | Compress/minify
 | [CSSWring](https://github.com/bassjobsen/less-plugin-csswring) | Compress/minify
 | [css-flip](https://github.com/bassjobsen/less-plugin-css-flip) | Generate left-to-right (LTR) or right-to-left (RTL) CSS
+| [functions](https://github.com/seven-phases-max/less-plugin-functions) | Write custom Less functions in Less itself
 | [group-css-media-queries](https://github.com/bassjobsen/less-plugin-group-css-media-queries) | Group CSS media queries
 | [inline-urls](https://github.com/less/less-plugin-inline-urls) | Convert `url()` to a call to `data-uri()`
 | [pleeease](https://github.com/bassjobsen/less-plugin-pleeease) | Postprocess using pleeease
