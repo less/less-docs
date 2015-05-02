@@ -137,8 +137,8 @@ Lastly, detached ruleset can gain access to scope by being unlocked (imported) i
 Detached mixin sees callers variables and mixins:
 ````less
 @detached-ruleset: {
-  caller-variable: @callerVariable; // variable is undefined here
-  .callerMixin(); // mixin is undefined here
+  caller-variable: @caller-variable; // variable is undefined here
+  .caller-mixin(); // mixin is undefined here
 };
 
 selector {
@@ -146,8 +146,8 @@ selector {
   @detached-ruleset(); 
 
   // define variable and mixin needed inside the detached ruleset
-  @callerVariable: value;
-  .callerMixin() {
+  @caller-variable: value;
+  .caller-mixin() {
     variable: declaration;
   }
 }
@@ -195,7 +195,7 @@ Ruleset does not gain access to new scopes just by being referenced there:
   }
 }
 
-.usePlace {
+.use-place {
   .one > .two(); 
   @detached-2();
 }
@@ -210,25 +210,25 @@ ERROR 1:32 The variable "@one" was not declared.
 Detached ruleset gains access by being unlocked (imported) inside a scope:
 ````less
 #space {
-  .importer1() {
+  .importer-1() {
     @detached: { scope-detached: @variable; }; // define detached ruleset
   }
 }
 
-.importer2() {
+.importer-2() {
   @variable: value; // unlocked detached ruleset CAN see this variable
-  #space > .importer1(); // unlock/import detached ruleset
+  #space > .importer-1(); // unlock/import detached ruleset
 }
 
-.usePlace {
-  .importer2(); // unlock/import detached ruleset second time
+.use-place {
+  .importer-2(); // unlock/import detached ruleset second time
    @detached();
 }
 ````
 
 compiles into:
 ````css
-.usePlace {
+.use-place {
   scope-detached: value;
 }
 ````
