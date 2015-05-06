@@ -61,7 +61,7 @@ Variable defined directly in callers scope can not be overriden. However, variab
   .mixin(); 
 }
 
-@size: globaly-defined-value; // callers parent scope - no protection
+@size: globaly-defined-value; // calls parent scope - no protection
 ````
 
 Results in:
