@@ -28,6 +28,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [UIkit](http://getuikit.com/) | Lightweight and modular front-end framework for developing web interfaces |
 | [ngBoilerplate](http://bit.ly/ngBoilerplate) | An opinionated kickstarter for AngularJS projects |
 | [less-rail](http://github.com/metaskills/less-rails) | Less.js for Rails |
+| [Wee](https://www.weepower.com) | Lightweight front-end framework for logically building complex, responsive web projects |
 
 ## Grid Systems
 | | |
