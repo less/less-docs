@@ -66,6 +66,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [more-less](https://github.com/roelvanhintum/More-Less) | Mixin lib supporting LESS 1.7 |
 | [More.less](https://github.com/weinitz/More.less) | Mixins, animations, shapes and more |
 | [more-or-less](https://github.com/pixelass/more-or-less) | for-loops and other functions + css3 mixins |
+| [normalize.less](https://github.com/segundofdez/normalize.less) | Modularized famous normalize.css using less |
 | [Oban](http://oban.io/) | Collection of mixins |
 | [Preboot](http://getpreboot.com/) | Collection of variables and mixins. The precursor to Bootstrap |
 | [prelude-mixins](https://github.com/amazingSurge/prelude-mixins) | Collection of mixins |
