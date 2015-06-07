@@ -7,7 +7,7 @@ title: Plugins
 Command Line
 --------------------------------------
 
-If you are using lessc, the first thing you need to do is install that plugin. We reccommend the plugin starts "less-plugin" though that isn't required. For the clean-css plugin you would install `npm install less-plugin-clean-css`.
+If you are using lessc, the first thing you need to do is install that plugin. We recommend the plugin starts "less-plugin" though that isn't required. For the clean-css plugin you would install `npm install less-plugin-clean-css`.
 
 To use the plugin, if you specify a unrecognised option, we attempt to load that, for example
 ```

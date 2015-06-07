@@ -2,7 +2,7 @@ TODO - Things to incorporate maybe and then delete this page
 
 **External Resources**
 * Example Less Projects
-* [StackOverflow: Questions tagged with "Less"][stackoverflow]
+* [Stack Overflow: Questions tagged with "Less"][stackoverflow]
 * [Sitepoint, "A Comprehensive Introduction to Less"][sitepoint-article]
 * [Net Tuts+, "Quick Tip: You Need to Check out Less.js"][nettuts]
 * [Hongkiat.com, "Less CSS Tutorial: Designing a Slick Navigation Bar"][hongkiatNavbar]

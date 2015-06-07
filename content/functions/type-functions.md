@@ -180,7 +180,7 @@ ispercentage(url(...)); // false
 
 Parameters:
 * `value` - a value or variable being evaluated.
-* `unit` - a unit identifier (optionaly quoted) to test for.
+* `unit` - a unit identifier (optionally quoted) to test for.
 
 Returns: `true` if value is a number in specified units, `false` otherwise.
 

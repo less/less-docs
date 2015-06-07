@@ -46,7 +46,7 @@ The specified git URL may be that of the official lessc repo or a fork.
 
 ### Server-Side and Command Line Usage
 
-The binary included in this repository, `bin/lessc` works with [Node.js](http://nodejs.org/) on *nix, OSX and Windows.
+The binary included in this repository, `bin/lessc` works with [Node.js](http://nodejs.org/) on *nix, OS X and Windows.
 
 **Usage**: `lessc [option option=parameter ...] <source> [destination]`
 
@@ -107,7 +107,7 @@ lessc --depends
 lessc --no-color
 ```
 
-#### No IE Compatability
+#### No IE Compatibility
 
 ```bash
 lessc --no-ie-compat
@@ -318,7 +318,7 @@ With strict math on, only maths that is inside un-necessary parenthesis will be 
 }
 ```
 
-We originally planned to default this to true in the future, but it has been a contraversial option and we are considering whether we have solved the problem in the right way, or whether less should just have exceptions for instances where `/` is valid or calc is used.
+We originally planned to default this to true in the future, but it has been a controversial option and we are considering whether we have solved the problem in the right way, or whether less should just have exceptions for instances where `/` is valid or calc is used.
 
 #### Strict Units
 

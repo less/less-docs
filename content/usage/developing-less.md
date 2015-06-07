@@ -23,7 +23,7 @@ To debug the browser tests, run `grunt browsertest-server` then go to http://loc
 
 Optional: To get the current version of the less compiler do `npm -g install less` - npm is the node package manager and "-g" installs it to be available globally.
 
-You should now be able to do `lessc file.less` and if there is an appropriate file.less then it will be compiled and output to the stdout. You can then compare it to running localy (`node bin/lessc file.less`).
+You should now be able to do `lessc file.less` and if there is an appropriate file.less then it will be compiled and output to the stdout. You can then compare it to running locally (`node bin/lessc file.less`).
 
 Other grunt commands
 
