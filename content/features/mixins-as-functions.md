@@ -49,16 +49,17 @@ div {
 }
 ```
 
-Variable defined directly in callers scope can not be overriden. However, variable defined in callers parent scope is not protected and will be overriden:
+Variables defined directly in callers scope cannot be overridden. However, variables defined in callers parent scope is not protected and will be
+overridden:
 ````less
 .mixin() {
-  @size: in-mixin; 
+  @size: in-mixin;
   @definedOnlyInMixin: in-mixin;
 }
 
 .class {
   margin: @size @definedOnlyInMixin;
-  .mixin(); 
+  .mixin();
 }
 
 @size: globaly-defined-value; // callers parent scope - no protection
@@ -81,7 +82,7 @@ Finally, mixin defined in mixin acts as return value too:
 
 #namespace {
   .unlock(5); // unlock doSomething mixin
-  .doSomething(); //nested mixin was copied here and is usable 
+  .doSomething(); //nested mixin was copied here and is usable
 }
 ````
 

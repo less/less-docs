@@ -67,7 +67,7 @@ Get more info: [http://winless.org](http://winless.org)
 
 ![WinLess screenshot](http://winless.org/style/images/WinLess_Screenshot.png)
 
-### OSx
+### OS X
 
 #### [CodeKit](http://incident57.com/codekit)
 
@@ -91,7 +91,7 @@ Get more info: [http://livereload.com](http://livereload.com)
 
 > Plessc is a gui fronted made with PyQT.
 
-Auto compile, log viewer, open the less file with the editor choosen, settings for compile the file.
+Auto compile, log viewer, open the less file with the editor chosen, settings for compile the file.
 Get more info: [https://github.com/Mte90/Plessc](https://github.com/Mte90/Plessc)
 
 ![Plessc screenshot](https://github.com/Mte90/Plessc/raw/master/screenshot.png)

@@ -204,7 +204,7 @@ Less will use that unit for the final output—`6px` in this case.
 
 ### Escaping
 
-Escaping allows you to use any arbitrary string as property or variable value. Anything inside `~"anything"` or `~'anything'` is used as is with no changes except [interpolation](#variables-feature-variable-interpolation). 
+Escaping allows you to use any arbitrary string as property or variable value. Anything inside `~"anything"` or `~'anything'` is used as is with no changes except [interpolation](#variables-feature-variable-interpolation).
 
 ```less
 .weird-element {
@@ -212,7 +212,7 @@ Escaping allows you to use any arbitrary string as property or variable value. A
 }
 ```
 
-resuts in:
+results in:
 ```less
 .weird-element {
   content: ^//* some horrible but needed css hack;
