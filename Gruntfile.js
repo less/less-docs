@@ -116,13 +116,19 @@ module.exports = function(grunt) {
 
     // Compile Less to CSS
     less: {
-      options: {
-        paths: ['styles/bootstrap', 'styles/components']
-      },
       site: {
-        src: ['styles/index.less'],
-        dest: '<%= assemble.options.assets %>/css/index.css'
+      options: {
+      paths: ['styles/components'],
+      plugins: [
+        new (require('less-plugin-bootstrap'))(),
+        new (require('less-plugin-autoprefix'))({browsers: ['Android 2.3','Android >= 4','Chrome >= 20','Firefox >= 24','iOS >= 6','Opera >= 12','Safari >= 6']}),
+        new (require('less-plugin-clean-css'))()
+      ]
+      },	
+      files: {
+      		'<%= site.dest %>/public/css/index.css' : 'styles/index.less' 
       }
+	}
     },
 
     // Copy source assets to _gh_pages
@@ -180,7 +186,7 @@ module.exports = function(grunt) {
 
   // Load npm plugins to provide necessary tasks.
   grunt.loadNpmTasks('assemble');
-  grunt.loadNpmTasks('assemble-less');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
