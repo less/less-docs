@@ -7,7 +7,10 @@ title: Plugins
 Command Line
 --------------------------------------
 
-If you are using lessc, the first thing you need to do is install that plugin. We recommend the plugin starts "less-plugin" though that isn't required. For the clean-css plugin you would install `npm install less-plugin-clean-css`.
+If you are using lessc, the first thing you need to do is install that plugin. We recommend the plugin starts with "less-plugin" though that isn't required. For the clean-css plugin you would install with
+```
+npm install less-plugin-clean-css
+```
 
 To use the plugin, if you specify a unrecognised option, we attempt to load that, for example
 ```
@@ -56,8 +59,8 @@ List of Less plugins
 
 <!-- TODO: 
   * titles of the wrapped-up libraries/frameworks should be links 
-    e.g. Bootstrap -> [Bootstrap](http://getbootstrap.com/) etc.
-  * invent something to use instead of those endless `import Bla-bla`, `import Blee-bloo`
+    e.g. Bootstrap -> [Bootstrap](http://getbootstrap.com) etc.
+  * invent something to use instead of `import Bla-bla`, `import Blee-bloo`
 -->
 
 #### Postprocessor/Feature Plugins
@@ -71,20 +74,20 @@ List of Less plugins
 | [functions](https://github.com/seven-phases-max/less-plugin-functions) | Write custom Less functions in Less itself
 | [group-css-media-queries](https://github.com/bassjobsen/less-plugin-group-css-media-queries) | Group CSS media queries
 | [inline-urls](https://github.com/less/less-plugin-inline-urls) | Convert `url()` to a call to `data-uri()`
+| [npm-import](https://github.com/less/less-plugin-npm-import) | Import from npm packages
 | [pleeease](https://github.com/bassjobsen/less-plugin-pleeease) | Postprocess using pleeease
-| [less-plugin-rtl](https://github.com/less/less-plugin-rtl) | Reverse from ltr to rtl
- 
+| [rtl](https://github.com/less/less-plugin-rtl) | Reverse from ltr to rtl
+
 #### Framework/Library Importers
 | | |
 |---|---|
-| [Bootstrap for less.js](https://github.com/bassjobsen/less-plugin-bootstrap/) | import Bootstrap
+| [Bootstrap](https://github.com/bassjobsen/less-plugin-bootstrap/) | import Bootstrap
 | [Bower Resolve](https://github.com/Mercateo/less-plugin-bower-resolve) | import from a Bower package
 | [Cardinal CSS for less.js](https://github.com/bassjobsen/less-plugin-cardinal) | import Cardinal
 | [Flexbox Grid](https://github.com/bassjobsen/less-plugin-flexboxgrid)  | import [Flexbox Grid](http://flexboxgrid.com/)
 | [Flexible Grid System](https://github.com/bassjobsen/less-plugin-flexiblegs) | import [Flexible Grid System](http://flexible.gs/)
 | [Ionic](https://github.com/bassjobsen/less-plugin-ionic) | import Ionic
 | [Lesshat](https://github.com/bassjobsen/less-plugin-lesshat/) | import Lesshat
-| [Npm Import](https://github.com/less/less-plugin-npm-import) | import from a sub npm repository
 | [Skeleton](https://github.com/bassjobsen/less-plugin-skeleton) | import Skeleton
 
 #### Function Libraries
@@ -101,7 +104,7 @@ For plugin authors
 Less supports some entry points that allow an author to integrate with less. We may add some more in the future.
 
 The plugin itself has a very simple signature, like this
-```
+```js
 {
     install: function(less, pluginManager) {
     },
