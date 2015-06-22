@@ -18,13 +18,13 @@ $ npm install -g less
 Once installed, you can invoke the compiler from the command-line, as such:
 
 ```bash
-$ lessc styles.less
+$ less styles.less
 ```
 
 This will output the compiled CSS to `stdout`, you may then redirect it to a file of your choice:
 
 ```bash
-$ lessc styles.less > styles.css
+$ less styles.less > styles.css
 ```
 
 To output minified CSS, simply pass the `-x` option. If you would like more involved minification,
