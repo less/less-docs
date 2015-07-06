@@ -81,8 +81,8 @@ See the [Usage]({{resolve 'usage'}}) section for details of other tools.
 > Each less.js release contains also rhino-compatible version.
 
 Command line rhino version requires two files:
-* less-rhino-<version>.js - compiler implementation,
-* lessc-rhino-<version>.js - command line support.
+* less-rhino-&lt;version&gt;.js - compiler implementation,
+* lessc-rhino-&lt;version&gt;.js - command line support.
 
 Command to run the compiler:
 ````
