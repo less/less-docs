@@ -1,9 +1,9 @@
-#### [Download source code]({{ less.sourcearchive }}{{ less.version }}.zip)
+#### [Download Source Code]({{ less.sourcearchive }}{{ less.version }}.zip)
 
 Get the latest Less.js source code by downloading it directly from GitHub.
 
 
-#### [Clone or fork via GitHub]({{ less.repo }})
+#### [Clone or Fork via GitHub]({{ less.repo }})
 
 Fork the project and send us a pull request!
 

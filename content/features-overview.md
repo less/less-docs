@@ -62,7 +62,7 @@ The properties of the `.bordered` class will now appear in both `#menu a` and `.
 * [Parametric Mixins](#mixins-parametric-feature)
 
 
-### Nested rules
+### Nested Rules
 
 Less gives you the ability to use nesting instead of, or in combination with cascading. Let's say we have the following CSS:
 
@@ -116,7 +116,7 @@ You can also bundle pseudo-selectors with your mixins using this method. Here's 
 
 * [Parent Selectors](#parent-selectors-feature)
 
-### Nested directives and bubbling
+### Nested Directives and Bubbling
 
 Directives such as `media` or `keyframe` can be nested in the same way as selectors. Directive is placed on top and relative order against other elements inside the same ruleset remains unchanged. This is called bubbling.
 

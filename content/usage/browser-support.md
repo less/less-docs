@@ -1,5 +1,5 @@
 ---
-title: Browser support
+title: Browser Support
 ---
 
 Less only supports running on modern browsers (recent versions of Chrome, Firefox, Safari and IE). While it is possible to use LESS on the client side in production, please be aware that there are performance implications for doing so (although the latest releases of LESS are quite a bit faster). Also, sometimes cosmetic issues can occur if a JavaScript error occurs. This is a trade off of flexibility vs. speed. For the fastest performance possible for a static web site, we recommend compiling LESS on the server side.

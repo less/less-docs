@@ -30,6 +30,23 @@ All documentation content can be found in the `./content` directory. Please read
 ### Coding Style
 > Please help us make the documentation _consistent, readable, and maintainable_ by conforming to these guidelines when contributing:
 
+#### Capitalization
+
+##### In Titles: Do Capitalize
+
+* Nouns (man, bus, book)
+* Adjectives (angry, lovely, small)
+* Verbs (run, eat, sleep)
+* Adverbs (slowly, quickly, quietly)
+* Pronouns (he, she, it)
+* Subordinating conjunctions (as, because, that)
+
+##### In Titles: Do Not Capitalize
+
+* Articles: a, an, the
+* Coordinating Conjunctions: and, but, or, for, nor, etc.
+* Prepositions: on, at, to, from, by, etc.
+
 #### Markdown standards
 
 * Use `#` for titles, not underlines. Underlines are not semantic, aren't as flexible, aren't always highlighted properly in code highlighters

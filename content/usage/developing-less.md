@@ -4,7 +4,7 @@ title: Developing Less
 
 Thanks for thinking about contributing. Please read the [contributing instructions]({{ less.master }}CONTRIBUTING.md) carefully to avoid wasted work.
 
-## Install these tools
+## Install These Tools
 
 * **node** - <http://nodejs.org/>
 * **phantomjs** - <http://phantomjs.org/download.html>
@@ -31,7 +31,7 @@ Other grunt commands
 * `grunt stable` to create a new release
 * `grunt readme` to generate a new readme.md in the root directory (after each release)
 
-## How to run less in other environments
+## How to Run Less in Other Environments
 
 If you look in the libs folder you will see `less`, `less-node`, `less-browser`. The less folder is pure javascript with no environment
 specifics. if you require `less/libs/less`, you get a function that takes an environment object and an array of file managers. The file

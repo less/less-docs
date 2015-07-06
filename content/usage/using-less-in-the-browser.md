@@ -22,7 +22,7 @@ This will find any less style tags on the page
 
 and create style tags with the compiled css synchronously.
 
-### Setting options
+### Setting Options
 
 You can set options either programmatically, by setting them on a less object before the script tag - this then effects all initial link tags and programmatic usage of less.
 
@@ -59,7 +59,7 @@ The important points for attribute options are..
  - link tag options are just render time options (e.g verbose, logLevel ... are not supported)
  - non-string data attributes values should be JSON valid (e.g use double quotes instead of single quotes like in `data-global-vars='{ "myvar": "#ddffee", "mystr": "\"quoted\"" }'`)
 
-### Watch mode
+### Watch Mode
 To enable Watch mode, option `env` must be set to `development`. Then AFTER the less.js file is included, call `less.watch()`, like this:
 
 ```html
@@ -70,7 +70,7 @@ To enable Watch mode, option `env` must be set to `development`. Then AFTER the 
 
 Alternatively, you can enable Watch mode temporarily by appending `#!watch` to the URL.
 
-### Modify variables
+### Modify Variables
 Enables run-time modification of Less variables. When called with new values, the Less file is recompiled without reloading. Simple basic usage:
 
 ```js
@@ -206,7 +206,7 @@ Default: `1000`
 
 The amount of time (in milliseconds) between polls while in watch mode.
 
-### relativeUrls
+#### relativeUrls
 Type: `Boolean`
 
 Default: `false`

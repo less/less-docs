@@ -7,7 +7,7 @@ Language Changes
 
 Colours now output as they are written, so `purple` stays as `purple` and is not converted to its hex representation.
 
-Command line usage
+Command Line Usage
 ------------------
 
 ### Clean CSS
@@ -39,7 +39,7 @@ Further, instead of returning a string which is the css, we return an object wit
 
 The sourcemap options are now to be set on sourceMap instead of directly on options. So instead of `options.sourceMapFullFilename = ` you would set `options.sourceMap = { sourceMapFullFilename: `.
 
-Browser usage
+Browser Usage
 -------------
 
 The browser usage has not changed significantly. Options set on the `less` object are exposed as `less.options` after the less script has run, rather than polluting `less`.

@@ -11,7 +11,7 @@ Example:
 @import "this-is-valid.less";
 ```
 
-## File extensions
+## File Extensions
 `@import` statements may be treated differently by Less depending on the file extension:
 
 * If the file has a `.css` extension it will be treated as CSS and the `@import` statement left as-is (see the [inline option](#import-options-inline) below).

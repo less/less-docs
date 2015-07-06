@@ -1,8 +1,8 @@
 ---
-title: Third-party compilers
+title: Third Party Compilers
 ---
 
-## Node.js compilers
+## Node.js Compilers
 
 * **[grunt-contrib-less](https://github.com/gruntjs/grunt-contrib-less)**
 * **[assemble-less](https://github.com/assemble/assemble-less)**: Full-featured Grunt.js plugin for compiling Less files to CSS, with additional options for maintaining libraries of Less components and themes. For advanced users, this plugin allows you to define and manage Less "packages" or "bundles" using JSON, [Lo-dash](https://github.com/bestiejs/lodash)(underscore) templates (e.g. `<%= bootstrap.less %>`), and [node-glob](https://github.com/isaacs/node-glob) / [minimatch](https://github.com/isaacs/minimatch) (e.g. `'../src/**/*.less"`). _assemble-less_ also has a number of options including minifying CSS
@@ -12,7 +12,7 @@ title: Third-party compilers
 * **[Connect Middleware for Less.js](https://github.com/emberfeather/less.js-middleware)**: Connect Middleware for Less.js compiling
 
 
-## Other technologies
+## Other Technologies
 
 **Wro4j Runner CLI**
 Download the [wro4j-runner.jar](http://wro4j.googlecode.com/files/wro4j-runner-1.4.1-jar-with-dependencies.jar) file and run the following command:

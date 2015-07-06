@@ -83,7 +83,7 @@ body {
 }
 ```
 
-### Import statements
+### Import Statements
 
 Version: 1.4.0
 
@@ -199,7 +199,7 @@ Compiles to:
 }
 ```
 
-## default variables
+## Default Variables
 
 We sometimes get requests for default variables - an ability to set a variable only if it is not already set. This feature is not required because you can easily override a variable by putting the definition afterwards.
 

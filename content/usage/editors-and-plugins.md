@@ -1,5 +1,5 @@
 ---
-title: Editors and plugins
+title: Editors and Plugins
 ---
 
 Also see: [GUIs for Less.js](#guis-for-less)

@@ -141,7 +141,7 @@ results in:
 ```
 
 
-### Changing selector order
+### Changing Selector Order
 
 It can be useful to prepend a selector to the inherited (parent) selectors.  This can be done by putting the `&` after current selector.
 For example, when using Modernizr, you might want to specify different rules based on supported features:
@@ -169,7 +169,7 @@ The selector `.no-borderradius &` will prepend `.no-borderradius` to its parent 
 ```
 
 
-### Combinatorial explosion
+### Combinatorial Explosion
 
 `&` can also be used to generate every possible permutation of selectors in a comma separated list:
 

@@ -23,7 +23,7 @@ Will use the plugin you just installed. You can also be more direct, for example
 lessc --plugin=path_to_plugin=options
 ```
 
-Using a plugin in code
+Using a Plugin in Code
 ----------------------
 
 In Node, require the plugin and pass it to less in an array as an option plugins. E.g.
@@ -37,7 +37,7 @@ less.render(myCSS, { plugins: [myPlugin] })
     });
 ```
 
-In the browser
+In the Browser
 -------------------
 
 Plugin authors should provide a javascript file, just include that in the page *before* the less.js script.
@@ -52,7 +52,7 @@ less = {
 <script src="less.min.js"></script>
 ```
 
-List of Less plugins
+List of Less Plugins
 --------------------
 
 > Available Less plugins. Find more at the [NPM Registry](https://www.npmjs.com/search?q=%22less-plugin%22)
@@ -98,7 +98,7 @@ List of Less plugins
 | [lists](https://github.com/seven-phases-max/less-plugin-lists) | Lists/arrays manipulation functions library
 
 
-For plugin authors
+For Plugin Authors
 --------------------------
 
 Less supports some entry points that allow an author to integrate with less. We may add some more in the future.
