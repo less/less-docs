@@ -67,7 +67,7 @@ pre {
 }
 ```
 
-### Mixins With Multiple Parameters
+### Mixins with Multiple Parameters
 Parameters are either *semicolon* or *comma* separated. It is recommended to use *semicolon*. The symbol comma has double meaning: it can be interpreted either as a mixin parameters separator or css list separator.
 
 Using comma as mixin separator makes it impossible to create comma separated lists as an argument. On the other hand, if the compiler sees at least one semicolon inside mixin call or declaration, it assumes that arguments are separated by semicolons and all commas belong to css lists:
@@ -139,7 +139,7 @@ compiles into:
 }
 ```
 
-### The `@arguments` variable
+### The `@arguments` Variable
 
 `@arguments` has a special meaning inside mixins, it contains all the arguments passed, when the mixin was called. This is useful if you don't want to deal with individual parameters:
 
@@ -164,7 +164,7 @@ Which results in:
 }
 ```
 
-### Advanced arguments and the `@rest` variable
+### Advanced Arguments and the `@rest` Variable
 
 You can use `...` if you want your mixin to take a variable number of arguments. Using this after a variable name will assign those arguments to the variable.
 

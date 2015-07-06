@@ -14,6 +14,23 @@ For consistency across all examples in the docs and to ensure that our code exam
 * When using HTML in your examples, use tags and elements appropriate for an HTML5 doctype (e.g., self-closing tags with _no trailing slash_)
 * All page files should have globally unique names regardless of where they are located in the repository
 
+### Capitalization
+
+#### In Titles: Do Capitalize
+
+* Nouns (man, bus, book)
+* Adjectives (angry, lovely, small)
+* Verbs (run, eat, sleep)
+* Adverbs (slowly, quickly, quietly)
+* Pronouns (he, she, it)
+* Subordinating conjunctions (as, because, that)
+
+#### In Titles: Do Not Capitalize
+
+* Articles: a, an, the
+* Coordinating Conjunctions: and, but, or, for, nor, etc.
+* Prepositions: on, at, to, from, by, etc.
+
 ## Tools
 
 ### Assemble
@@ -53,4 +70,3 @@ body { padding-top: 80px; font-size: 12px }
 
 * If you would like to request a feature, suggest an improvement, or report a bug, please [submit an Issue]({{ site.codeissues }}).
 * Feature requests are more likely to get attention if you include a clearly-described use case.
-* If you wish to submit a pull request, please [read this first]({{ site.codebasemaster }}CONTRIBUTING).md.

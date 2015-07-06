@@ -37,7 +37,7 @@ nav ul {
 
 Notice how the `nav ul:extend(.inline)` selector gets output as `nav ul` - the extend gets removed before output and the selector block left as-is. If no properties are put in that block then it gets removed from the output (but the extend still may affect other selectors).
 
-## Extend syntax
+## Extend Syntax
 The extend is either attached to a selector or placed into a ruleset. It looks like a pseudo-class with selector parameter optionally followed by the keyword `all`:
 
 Example:
@@ -72,7 +72,7 @@ Example:
 .e:extend(.f, .g) {}
 ```
 
-### Extend attached to selector
+### Extend Attached to Selector
 Extend attached to a selector looks like an ordinary pseudo-class with selector as a parameter. A selector can contain multiple extend clauses, but all extends must be at the end of the selector.
 
 * Extend after the selector: `pre:hover:extend(div pre)`.
@@ -90,7 +90,7 @@ If a ruleset contains multiple selectors, any of them can have the extend keywor
 }
 ```
 
-### Extend inside ruleset
+### Extend Inside Ruleset
 Extend can be placed into a ruleset's body using `&:extend(selector)` syntax. Placing extend into a body is a shortcut for placing it into every single selector of that ruleset.
 
 
@@ -110,7 +110,7 @@ pre:hover:extend(div pre),
 .some-class:extend(div pre) {}
 ```
 
-### Extending nested Selectors
+### Extending Nested Selectors
 Extend is able to match nested selectors. Following less:
 
 Example:
@@ -202,7 +202,7 @@ link:hover:visited {
 }
 ```
 
-### nth expression
+### nth Expression
 
 Nth expression form does matter. Nth-expressions `1n+3` and `n+3` are equivalent, but extend will not match them:
 
@@ -576,7 +576,7 @@ Outputs
 }
 ```
 
-### Combining Styles / a more advanced mixin
+### Combining Styles / A More Advanced Mixin
 
 Another use-case is as an alternative for a mixin - because mixins can only be used with simple selectors, if you have two different blocks of html, but need to apply the same styles to both you can use extends to relate two areas.
 

@@ -6,7 +6,7 @@ title: Command Line Usage
 
 <span class="warning">Heads up! If the command line isn't your thing, learn more about [GUIs for Less](#guis-for-less).</span>
 
-### Installing lessc for use globally
+### Installing `lessc` for Use Globally
 
 Install with [npm](https://www.npmjs.org/)
 
@@ -16,7 +16,7 @@ npm install less -g
 
 and then you will have the `lessc` command available globally. For a specific version (or tag) you can add `@VERSION` after our package name, e.g. `npm install less@1.6.2 -g`.
 
-### Installing for node development
+### Installing for Node Development
 
 Alternatively if you don't use the compiler globally, you may be after
 
@@ -50,7 +50,7 @@ The binary included in this repository, `bin/lessc` works with [Node.js](http://
 
 **Usage**: `lessc [option option=parameter ...] <source> [destination]`
 
-### Command line usage
+### Command Line Usage
 
 ```bash
 lessc [option option=parameter ...] <source> [destination]
@@ -79,7 +79,7 @@ lessc --h
 
 Prints a help message with available options and exits.
 
-#### Include paths
+#### Include Paths
 
 ```bash
 lessc --include-path=PATH1;PATH2
@@ -145,7 +145,7 @@ Stops any warnings from being shown.
 lessc --strict-imports
 ```
 
-#### Allow imports from insecure https hosts
+#### Allow Imports from Insecure HTTPS Hosts
 
 ```bash
 lessc --insecure

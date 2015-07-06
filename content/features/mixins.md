@@ -33,7 +33,7 @@ Notice that when you call the mixin, the parentheses are optional.
 .a;
 ```
 
-## Not outputting the mixin
+## Not Outputting the Mixin
 
 If you want to create a mixin but you do not want that mixin to be output, you can put parentheses after it.
 
@@ -61,7 +61,7 @@ outputs
 }
 ```
 
-## Selectors in mixins
+## Selectors in Mixins
 
 Mixins can contain more than just properties, they can contain selectors too.
 

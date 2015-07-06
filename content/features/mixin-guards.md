@@ -38,7 +38,7 @@ Here's what we'll get:
 }
 ```
 
-### Guard comparison operators
+### Guard Comparison Operators
 
 The full list of comparison operators usable in guards are: `>`, `>=`, `=`, `=<`, `<`. Additionally, the keyword `true` is the only truthy value, making these two mixins equivalent:
 
@@ -67,7 +67,7 @@ Note that you can also compare arguments with each other, or with non-arguments:
 .max (@a; @b) when (@a < @b) { width: @b }
 ```
 
-### Guard logical operators
+### Guard Logical Operators
 
 You can use logical operators with guards. The syntax is based on CSS media queries.
 
@@ -89,7 +89,7 @@ Use the `not` keyword to negate conditions:
 .mixin (@b) when not (@b > 0) { ... }
 ```
 
-### Type checking functions
+### Type Checking Functions
 
 Lastly, if you want to match mixins based on value type, you can use the `is` functions:
 
@@ -113,7 +113,7 @@ If you want to check if a value is in a specific unit in addition to being a num
 * `isem`
 * `isunit`
 
-### Conditional mixins
+### Conditional Mixins
 
 _(**FIXME**)_ Additionally, the `default` function may be used to make a mixin match depending on other mixing matches, and you may use it to create "conditional mixins" similar to `else` or `default` statements (of `if` and `case` structures respectively):
 

@@ -1,5 +1,5 @@
 ---
-title: Server-side usage
+title: Server-side Usage
 ---
 
 > Less can be used on the command line via npm, downloaded as a script file for the browser or used in a wide variety of third party tools. See the [Usage]({{resolve 'usage'}}) section for more
@@ -13,7 +13,7 @@ The easiest way to install Less on the server, is via npm, the [node.js](http://
 $ npm install -g less
 ```
 
-## Command-line usage
+## Command-line Usage
 
 Once installed, you can invoke the compiler from the command-line, as such:
 
@@ -73,11 +73,11 @@ less.render('.class { width: (1 + 1) }',
 
 See [Usage]({{resolve 'usage'}}) for more information.
 
-## Third party tools
+## Third Party Tools
 
 See the [Usage]({{resolve 'usage'}}) section for details of other tools.
 
-# Command-line With Rhino
+# Command-line with Rhino
 > Each less.js release contains also rhino-compatible version.
 
 Command line rhino version requires two files:
@@ -91,7 +91,7 @@ java -jar js.jar -f less-rhino-<version>.js lessc-rhino-<version>.js styles.less
 
 This will compile styles.less file and save the result to styles.css file. The output file parameter is optional. If it is missing, less will output the result to `stdout`.
 
-# Client-side usage
+# Client-side Usage
 
 > Using less.js in the browser is great for development, but it's not recommended for production
 
