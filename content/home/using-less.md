@@ -21,17 +21,19 @@ Once installed, you can invoke the compiler from the command-line, as such:
 $ lessc styles.less
 ```
 
-This will output the compiled CSS to `stdout`, you may then redirect it to a file of your choice:
+This will output the compiled CSS to `stdout`. To save the CSS result to a file of your choice use:
 
 ```bash
-$ lessc styles.less > styles.css
+$ lessc styles.less styles.css
 ```
 
-To output minified CSS, simply pass the `-x` option. If you would like more involved minification,
-the [Clean CSS](https://github.com/GoalSmashers/clean-css) is also available with
-the `--clean-css` [plugin](https://github.com/less/less-plugin-clean-css).
+To output minified you can CSS use [`clean-css` plugin](https://github.com/less/less-plugin-clean-css). When the plugin is installed, a minified CSS output is specified with `--clean-css` option: 
 
-To see all the command line options run lessc without parameters or see [Usage]({{resolve 'usage'}}).
+```bash
+$ lessc --clean-css styles.less styles.min.css
+```
+
+To see all the command line options run `lessc` without parameters or see [Usage]({{resolve 'usage'}}).
 
 ## Usage in Code
 
