@@ -74,7 +74,7 @@ $ lessc -x bootstrap.less bootstrap.css
 
 ```bash
 lessc --help
-lessc --h
+lessc -h
 ```
 
 Prints a help message with available options and exits.
@@ -125,7 +125,7 @@ lessc --no-js
 
 ```bash
 lessc --lint
-lessc --l
+lessc -l
 ```
 
 Runs the less parser and just reports errors without any output.
