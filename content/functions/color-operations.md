@@ -224,7 +224,7 @@ with-alpha: rgba(191, 191, 255, 0.75);
 
 ### shade
 
-> Mix color with black in variable proportion. It is the same as calling ``mix(#ffffff, @color, @weight)``
+> Mix color with black in variable proportion. It is the same as calling ``mix(#000000, @color, @weight)``
 
 Parameters:
 
