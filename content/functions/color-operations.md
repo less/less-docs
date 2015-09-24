@@ -195,6 +195,60 @@ rgba(75, 25, 0, 0.75)
 
 ![Color 1](holder.js/100x40/#ff0000:#ffffff/text:ff0000) + ![Color 2](holder.js/100x40/#0000ff:#ffffff/text:0000ff) ➜ ![Color 3](holder.js/100x40/#800080:#ffffff/text:800080)
 
+### tint
+
+> Mix color with white in variable proportion. It is the same as calling ``mix(#ffffff, @color, @weight)``
+
+Parameters:
+
+* `color`: A color object.
+* `weight`: Optional, a percentage balance point between color and white, defaults to 50%.
+
+Returns: `color`
+
+Example:
+
+```less
+no-alpha: tint(#007fff, 50%); 
+with-alpha: tint(rgba(00,0,255,0.5), 50%); 
+```
+
+Output:
+
+```css
+no-alpha: #80bfff;
+with-alpha: rgba(191, 191, 255, 0.75);
+```
+
+![Color 1](holder.js/100x40/#ff00ff:#ffffff/text:ff00ff) ➜ ![Color 2](holder.js/100x40/#ff80ff:#ffffff/text:ff80ff)
+
+### shade
+
+> Mix color with black in variable proportion. It is the same as calling ``mix(#000000, @color, @weight)``
+
+Parameters:
+
+* `color`: A color object.
+* `weight`: Optional, a percentage balance point between color and black, defaults to 50%.
+
+Returns: `color`
+
+Example:
+
+```less
+no-alpha: shade(#007fff, 50%); 
+with-alpha: shade(rgba(00,0,255,0.5), 50%); 
+```
+
+Output:
+
+```css
+no-alpha: #004080;
+with-alpha: rgba(0, 0, 64, 0.75);
+```
+
+![Color 1](holder.js/100x40/#ff00ff:#ffffff/text:ff00ff) ➜ ![Color 2](holder.js/100x40/#800080:#ffffff/text:800080)
+
 ### greyscale
 
 > Remove all saturation from a color in the HSL color space; the same as calling `desaturate(@color, 100%)`.
