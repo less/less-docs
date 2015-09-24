@@ -182,25 +182,38 @@ outputs:
 
 ### Operations
 
-Any number, color or variable can be operated on. Here are a couple of examples:
+Arithmetical operations `+`, `-`, `*`, `/` can operate on any number, color or variable. If it is possible, mathematical operations take units into account and convert numbers before adding, subtracting or comparing them. The result has leftmost explicitly stated unit type. If the conversion is impossible or not meaningful, units are ignored. Example of impossible conversion: px to cm or rad to %.
 
 ```less
+// numbers are converted into the same units
+@conversion-1: 5cm + 10mm; // result is 6cm
+@conversion-2: 2 - 3cm - 5mm; // result is 1.5cm
+
+// conversion is impossible
+@incompatible-units: 2 + 5px - 3cm; // result is 4px
+
+// example with variables
 @base: 5%;
-@filler: @base * 2;
-@other: @base + @filler;
-
-color: #888 / 4;
-background-color: @base-color + #111;
-height: 100% / 2 + @filler;
+@filler: @base * 2; // result is 10%
+@other: @base + @filler; // result is 15%
 ```
 
-The output is pretty much what you expect—Less understands the difference between colors and units. If a unit is used in an operation, like in:
+Multiplication and division do not convert numbers. It would not be meaningful in most cases - a length multiplied by a length gives an area and css does not support specifying areas. Less will operate on numbers as they are and assign explicitly stated unit type to the result.
 
 ```less
-@var: 1px + 5;
+@base: 2cm * 3mm; // result is 6cm
 ```
 
-Less will use that unit for the final output—`6px` in this case.
+Colors are split into their red, green, blue and alpha dimensions. The operation is applied to each color dimension separately. E.g., if the user added two colors, then the green dimension of the result is equal to sum of green dimensions of input colors. If the user multiplied a color by a number, each color dimension will get multiplied.
+
+Note: arithmetic operation on alpha is not defined, because math operation on colors do not have standard agreed upon meaning. Do not rely on current implemention as it [may change](https://github.com/less/less.js/issues/2694) in later versions.
+
+An operation on colors always produces valid color. If some color dimension of the result ends up being bigger than `ff` or smaller than `00`, the dimension is rounded to either `ff` or `00`. If alpha ends up being bigger than `1.0` or smaller than `0.0`, the alpha is rounded to either `1.0` or `0.0`.
+
+```less
+@color: #224488 / 2; //results in #112244
+background-color: #112244 + #111; // result is #223355
+```
 
 ### Escaping
 
