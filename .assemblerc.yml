@@ -88,6 +88,7 @@ description: >
 
 # URLs
 homepage:          http://lesscss.org
+onlineeditor:      <%= homepage %>/less-preview
 repo:              <%= pkg.homepage %>
 issues:            <%= pkg.bugs.url %>?&state=open
 download:
