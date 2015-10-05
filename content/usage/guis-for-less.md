@@ -14,7 +14,7 @@ _This page focuses on GUI compilers. For command line usage and tools see [Comma
 
 Crunch 2 is a cross-platform (Windows, Mac, and Linux) editor with integrated compiling. If you work with large Less projects, you should definitely try it out, as you only need the free version for Less files. Available at: [http://getcrunch.co/](http://getcrunch.co/).
 
-<img title="Crunch screenshot" src="http://getcrunch.co/wp-content/uploads/2015/10/crunch_retina2.jpg" width="600" height="411" />
+![Crunch screenshot](http://getcrunch.co/wp-content/uploads/2015/10/crunch_retina2.jpg)
 
 
 ### [Mixture](http://mixture.io/)
