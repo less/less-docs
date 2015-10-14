@@ -87,7 +87,7 @@ lessc --include-path=PATH1;PATH2
 
 Sets available include paths. Separated by ':' or ';' on Windows.
 
-Use this to configure a list of paths which less will use to find imports in. You might use this for instance to specify a path to a library which you want to be referenced simply and relatively in the less files.
+If the file in an `@import` rule does not exist at that exact location, less will look for it at the location(s) passed to this option. You might use this for instance to specify a path to a library which you want to be referenced simply and relatively in the less files.
 
 In node, set a paths option
 ```js
