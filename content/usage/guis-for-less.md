@@ -47,17 +47,17 @@ Get more info: [http://koala-app.com/](http://koala-app.com/)
 
 ![koala screenshot](http://koala-app.com/img/screenshot.png)
 
-
-## Specific platforms
-
-### Windows
-
 #### [Prepros](https://prepros.io/)
 > Prepros is a tool to compile LESS, Sass, Compass, Stylus, Jade and much more.
 
 Get more info at [https://prepros.io/](https://prepros.io/)
 
 ![Prepros screenshot](https://prepros.io/img/shot-shadow.png)
+
+
+## Specific platforms
+
+### Windows
 
 #### [WinLess](http://winless.org)
 
