@@ -17,17 +17,6 @@ Crunch 2 is a cross-platform (Windows, Mac, and Linux) editor with integrated co
 ![Crunch screenshot](http://getcrunch.co/wp-content/uploads/2015/10/crunch_retina2.jpg)
 
 
-### [Mixture](http://mixture.io/)
-
-> A rapid prototyping and static site generation tool for designers and developers
-
-Mixture brings together a collection of awesome tools and best practices. It's quick, no-fuss, super-powerful and works with your favourite editor.
-
-Get more info: [http://mixture.io/](http://mixture.io)
-
-![mixture screenshot](https://s3.amazonaws.com/mixture-mixed/1/775/assets/img/img1.jpg)
-
-
 ### [SimpLESS](http://wearekiss.com/simpless)
 
 > SimpLESS is a minimalistic Less compiler. Just drag, drop and compile.
