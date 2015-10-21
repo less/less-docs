@@ -75,6 +75,7 @@ List of Less Plugins
 | [glob](https://github.com/just-boris/less-plugin-glob) | Globbing support in Less imports
 | [group-css-media-queries](https://github.com/bassjobsen/less-plugin-group-css-media-queries) | Group CSS media queries
 | [inline-urls](https://github.com/less/less-plugin-inline-urls) | Convert `url()` to a call to `data-uri()`
+| [lesshint](https://github.com/lesshint/lesshint) | Lint your Less
 | [npm-import](https://github.com/less/less-plugin-npm-import) | Import from npm packages
 | [pleeease](https://github.com/bassjobsen/less-plugin-pleeease) | Postprocess using pleeease
 | [rtl](https://github.com/less/less-plugin-rtl) | Reverse from ltr to rtl
