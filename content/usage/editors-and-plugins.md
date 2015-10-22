@@ -30,6 +30,10 @@ Also see: [GUIs for Less.js](#guis-for-less)
 
 * [Eclipse Less Plugin](http://www.normalesup.org/~simonet/soft/ow/eclipse-less.en.html) by Vincent Simonet
 * [Transpiler Plugin](https://github.com/gossi/eclipse-transpiler-plugin) by Thomas Gossmann
+ 
+### [Komodo Edit/IDE](http://komodoide.com/)
+
+ * [Komodo Less Compiler](https://github.com/babobski/Komodo-LESS-Compiler) by Bob de Haas
 
 ### [Visual Studio](http://www.visualstudio.com/)
 
