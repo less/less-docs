@@ -187,7 +187,7 @@ Arithmetical operations `+`, `-`, `*`, `/` can operate on any number, color or v
 ```less
 // numbers are converted into the same units
 @conversion-1: 5cm + 10mm; // result is 6cm
-@conversion-2: 2 - 3cm - 5mm; // result is 1.5cm
+@conversion-2: 2 - 3cm - 5mm; // result is -1.5cm
 
 // conversion is impossible
 @incompatible-units: 2 + 5px - 3cm; // result is 4px
