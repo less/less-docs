@@ -27,6 +27,6 @@ title: Ports
 * [Less.js In Ruby's V8 Engine](https://github.com/cowboyd/less.rb)
 
 ## Go
-* [Less.js In Go](https://github.com/cowboyd/less.rb) (Runs less.js inside embedded Javascript engine)
+* [Less.js In Go](https://github.com/kib357/less-go) (Runs less.js inside embedded Javascript engine)
 
 Know of another port that should be added to this list? Please [let us know](https://github.com/less/less-docs/issues/new).
