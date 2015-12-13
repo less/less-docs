@@ -59,6 +59,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [LESS Elements](http://lesselements.com/) | Set of mixins |
 | [LESS Hat](http://lesshat.com/) | Mixins library |
 | [lessley](https://github.com/pixelass/lessley) | A jasmine like testing suite written in pure less |
+| [Lessmore](https://github.com/belyan/lessmore) | Mixins library. Cross-browser support for the CSS3 features and more |
 | [LESS-bidi](https://github.com/danielkatz/less-bidi) | Set of mixins for creating bi-directional styling |
 | [LESS-Mix](http://denysdovhan.github.io/LESS-Mix/) | Mixins library |
 | [media-query-to-type](https://github.com/himedlooff/media-query-to-type) | Media Queries to Media Types with Less |
