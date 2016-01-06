@@ -1,6 +1,6 @@
 > Return variables or mixins from mixins
 
-Variables and mixins defined in a mixin are visible and can be used in caller's scope. There is only one exception, variable is not copied if the caller contains a variable with the same name (that includes variables defined by another mixin call).  Only variables present in callers local scope are protected. Variables inherited from parent scopes are overridden.
+Variables and mixins defined in a mixin are visible and can be used in caller's scope. There is only one exception, a variable is not copied if the caller contains a variable with the same name (that includes variables defined by another mixin call).  Only variables present in callers local scope are protected. Variables inherited from parent scopes are overridden.
 
 Example:
 
