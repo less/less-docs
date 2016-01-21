@@ -29,8 +29,8 @@ title: Online Less Compilers
 ### [ILess](http://demo-iless.rhcloud.com/)
 > Live demo of  [ILess](https://github.com/mishal/iless) PHP compiler
 
-### [beautifytools.com/less-compiler.php](http://beautifytools.com/less-compiler.php)
-> LESS Compiler makes formatted css styles from less source. Beautify or minify compiled css if necessary. Enter full url in @import statements if your less source has those.
+### [BeautifyTools Less Compiler](http://beautifytools.com/less-compiler.php)
+> Online Less compiler with optional formatting and minification at [BeautifyTools](http://beautifytools.com)
 
 ## Online Web IDEs/Playgrounds with Less support
 
