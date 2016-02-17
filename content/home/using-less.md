@@ -79,7 +79,7 @@ See [Usage]({{resolve 'usage'}}) for more information.
 
 See the [Usage]({{resolve 'usage'}}) section for details of other tools.
 
-# Command-line with Rhino
+<!-- # Command-line with Rhino
 > Each less.js release contains also rhino-compatible version.
 
 Command line rhino version requires two files:
@@ -91,7 +91,7 @@ Command to run the compiler:
 java -jar js.jar -f less-rhino-<version>.js lessc-rhino-<version>.js styles.less styles.css
 ````
 
-This will compile styles.less file and save the result to styles.css file. The output file parameter is optional. If it is missing, less will output the result to `stdout`.
+This will compile styles.less file and save the result to styles.css file. The output file parameter is optional. If it is missing, less will output the result to `stdout`.-->
 
 # Client-side Usage
 
