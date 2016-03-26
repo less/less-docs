@@ -93,7 +93,7 @@ repo:              <%= pkg.homepage %>
 issues:            <%= pkg.bugs.url %>?&state=open
 download:
   source:          <%= pkg.homepage %>/archive/master.zip
-  latest:          https://raw.github.com/less/less.js/master/dist/less-<%= less.version %>.min.js
+  latest:          https://raw.github.com/less/less.js/master/dist/less.js
 
 cdn:
   cloudflare:      //cdnjs.cloudflare.com/ajax/libs/less.js/

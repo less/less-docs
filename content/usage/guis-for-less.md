@@ -12,7 +12,8 @@ _This page focuses on GUI compilers. For command line usage and tools see [Comma
 
 > The editor and compiler for awesome people.
 
-Crunch 2 is a cross-platform (Windows, Mac, and Linux) editor with integrated compiling. If you work with large Less projects, you should definitely try it out, as you only need the free version for Less files. Available at: [http://getcrunch.co/](http://getcrunch.co/).
+Crunch 2 is a cross-platform (Windows, Mac, and Linux) editor with integrated compiling. If you work with large Less projects, you should definitely try it out, as you only need the free version for Less files. Available at: [https://getcrunch.co/](http://getcrunch.co/).
+
 
 ![Crunch screenshot](http://getcrunch.co/wp-content/uploads/2015/10/crunch_retina2.jpg)
 

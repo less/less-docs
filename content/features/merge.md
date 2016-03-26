@@ -6,7 +6,7 @@ The `merge` feature allows for aggregating values from multiple properties into 
 
 > Append property value with comma
 
-Released [v1.5.0]({{ less.master }}CHANGELOG.md)
+Released [v1.5.0]({{ less.master.url }}CHANGELOG.md)
 
 Example:
 
@@ -31,7 +31,7 @@ Outputs
 
 > Append property value with space
 
-Released [v1.7.0]({{ less.master }}CHANGELOG.md)
+Released [v1.7.0]({{ less.master.url }}CHANGELOG.md)
 
 Example:
 

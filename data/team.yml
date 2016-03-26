@@ -9,15 +9,9 @@ members:
     follow:       "http://ghbtns.com/github-btn.html?user=cloudhead&type=follow"
     gravatar:     "http://www.gravatar.com/avatar/a8a0061962c41735ca87789720da46c8"
 
-  - name:         Jon Schlinkert
-    username:     jonschlinkert
-    contribution: "Language Design, Documentation, Community"
-    follow:       "http://ghbtns.com/github-btn.html?user=jonschlinkert&type=follow"
-    gravatar:     "http://www.gravatar.com/avatar/1bba28be5506009e85fb9dde1dd66535"
-
   - name:         Luke Page
     username:     lukeapage
-    contribution: "Development, Language Design, Documentation, Releasing"
+    contribution: "Releasing, Development, Language Design, Documentation"
     follow:       "http://ghbtns.com/github-btn.html?user=lukeapage&type=follow"
     gravatar:     "http://www.gravatar.com/avatar/a80ab1a8297225d70baffc52adf6aefd"
 
@@ -35,7 +29,7 @@ members:
 
   - name:         Matthew Dean
     username:     matthew-dean
-    contribution: "Language Design, Community"
+    contribution: "Project Management, Releasing, Development, Language Design, Community"
     follow:       "http://ghbtns.com/github-btn.html?user=matthew-dean&type=follow"
     gravatar:     "http://www.gravatar.com/avatar/09caa4a26a5e57031146b5e06b4d7a8c"
 

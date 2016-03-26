@@ -6,7 +6,7 @@ Also see: [GUIs for Less.js](#guis-for-less)
 
 ## Editors and IDEs
 
-* [Crunch!](http://crunchapp.net/) (built-in support)
+* [Crunch 2!](https://getcrunch.co/) (built-in compiling, debugging, and searching across @imports)
 * [Mindscape Web Workbench][web-workbench] (built-in support)
 * [NetBeans][netbeans] (built-in [syntax highlighting][netbeans-sh])
 * [TextMate](https://github.com/appden/less.tmbundle)

@@ -1,6 +1,6 @@
 > Allow wrapping of a css block, defined in a mixin
 
-Released [v1.7.0]({{ less.master }}CHANGELOG.md)
+Released [v1.7.0]({{ less.master.url }}CHANGELOG.md)
 
 A detached ruleset is a group of css properties, nested rulesets, media declarations or anything else stored in a variable. You can include it into a ruleset or another structure and all its properties are going to be copied there. You can also use it as a mixin argument and pass it around as any other variable.
 

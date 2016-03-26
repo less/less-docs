@@ -3,7 +3,7 @@
 Get the latest Less.js source code by downloading it directly from GitHub.
 
 
-#### [Clone or Fork via GitHub]({{ less.repo }})
+#### [Clone or Fork via GitHub]({{ less.repository.url }})
 
 Fork the project and send us a pull request!
 

@@ -17,6 +17,13 @@ module.exports = function(grunt) {
     site: grunt.file.readYAML('.assemblerc.yml'),
     _less: grunt.file.readJSON('data/less.json'),
 
+    download: {
+      package: {
+        src: 'https://raw.githubusercontent.com/less/less.js/master/package.json',
+        dest: 'data/less.json'
+      }
+    },
+
     jshint: {
       options: {
         jshintrc: '.jshintrc'
@@ -189,10 +196,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-prettify');
   grunt.loadNpmTasks('grunt-repos');
   grunt.loadNpmTasks('grunt-sync-pkg');
+  grunt.loadNpmTasks('grunt-http-download');
 
   grunt.registerTask('update', ['repos', 'default']);
   grunt.registerTask('design', [
     'clean',
+    'download',
     'copy',
     'less:site',
     'assemble:site',
@@ -204,6 +213,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', [
     'jshint',
     'clean',
+    'download',
     'copy',
     'less:site',
     'assemble:site'
