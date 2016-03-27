@@ -62,6 +62,7 @@ Additionally, **`reference`** produces different results depending on which meth
 * **[extend](#extend-feature)**: When a selector is extended, only the new selector is marked as _not referenced_, and it is pulled in at the position of the reference `@import` statement.
 * **[mixins](#mixins-feature)**: When a `reference` style is used as an [implicit mixin](#mixins-feature), its rules are mixed-in, marked "not reference", and appear in the referenced place as normal.
 
+It is important to notice that only Less files can be used a reference. If you want to use a pure CSS file, include the **`less`** directive as well.
 
 ### reference example
 This allows you to pull in only specific, targeted styles from a library such as [Bootstrap](https://github.com/twbs/bootstrap) by doing something like this:
