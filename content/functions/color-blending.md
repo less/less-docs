@@ -394,7 +394,7 @@ hardlight(#ff6600, #cccccc);
 
 ![Color 1](holder.js/100x40/#ff6600:#ffffff/text:ff6600)
 ![Color 2](holder.js/100x40/#cccccc:#000000/text:cccccc)
-![Color 3](holder.js/100x40/#ff2900:#ffffff/text:ff2900)
+![Color 3](holder.js/100x40/#ffc299:#ffffff/text:ffc299)
 
 ```less
 hardlight(#ff6600, #ffffff);
