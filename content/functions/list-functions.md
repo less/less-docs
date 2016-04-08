@@ -27,7 +27,7 @@ n: 4;
 
 Parameters:
 `list` - a comma or space separated list of values.
-`index` - an integer that specifies a position of a list element to return.
+`index` - a positive integer that specifies a position of a list element to return.
 Returns: a value at the specified position in a list.
 
 Example: `extract(8px dotted red, 2);`
