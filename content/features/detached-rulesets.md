@@ -28,8 +28,8 @@ It is useful when you want to define a mixin that abstracts out either wrapping 
 
 ```less
 .desktop-and-old-ie(@rules) {
-  @media screen and (min-width: 1200) { @rules(); }
-  html.lt-ie9 &                       { @rules(); }
+  @media screen and (min-width: 1200px) { @rules(); }
+  html.lt-ie9 &                         { @rules(); }
 }
 
 header {
@@ -47,7 +47,7 @@ Here the `desktop-and-old-ie` mixin defines the media query and root class so th
 header {
   background-color: blue;
 }
-@media screen and (min-width: 1200) {
+@media screen and (min-width: 1200px) {
   header {
     background-color: red;
   }
@@ -118,7 +118,7 @@ Results in:
 
 Private variables:
 ````less
-detached-ruleset: { 
+@detached-ruleset: { 
     @color:blue; // this variable is private
 };
 .caller {
