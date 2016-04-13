@@ -122,6 +122,7 @@ Private variables:
     @color:blue; // this variable is private
 };
 .caller {
+    @detached-ruleset();
     color: @color; // syntax error
 }
 ````
