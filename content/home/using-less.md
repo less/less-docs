@@ -27,7 +27,7 @@ This will output the compiled CSS to `stdout`. To save the CSS result to a file 
 $ lessc styles.less styles.css
 ```
 
-To output minified you can CSS use [`clean-css` plugin](https://github.com/less/less-plugin-clean-css). When the plugin is installed, a minified CSS output is specified with `--clean-css` option: 
+To output minified CSS you can use the [`clean-css` plugin](https://github.com/less/less-plugin-clean-css). When the plugin is installed, a minified CSS output is specified with `--clean-css` option: 
 
 ```bash
 $ lessc --clean-css styles.less styles.min.css
