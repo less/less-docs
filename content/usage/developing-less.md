@@ -57,3 +57,7 @@ If you look at [http://www.gliffy.com/go/publish/4784259](http://www.gliffy.com/
 
 * [Less Web Development Essentials](http://www.packtpub.com/less-web-development-essentials/book), by Bass Jobsen, Foreword by Alexis Sellier
 * [Less Web Development Cookbook](https://www.packtpub.com/web-development/less-web-development-cookbook), by Bass Jobsen and Amin Meyghani, Foreword by Luke Page
+
+## Videos
+
+* [Learning LESS](https://www.packtpub.com/web-development/learning-less-video), by Anthony Killeen
