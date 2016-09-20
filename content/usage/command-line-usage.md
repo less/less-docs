@@ -304,7 +304,7 @@ With strict math on, only maths that is inside un-necessary parenthesis will be 
 
 ```less
 .class {
-  width: calc(100% - (10px  - 5px));
+  width: calc(100% - ((10px  - 5px)));
   height: (100px / 4px);
   font-size: 1 / 4;
 }
