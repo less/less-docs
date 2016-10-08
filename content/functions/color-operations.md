@@ -110,7 +110,7 @@ Output: `rgba(128, 242, 13, 0.4) // hsla(90, 90%, 50%, 0.4)`
 
 ### fade
 
-> Set the absolute transparency of a color. Can be applied to colors whether they already have an opacity value or not.
+> Set the absolute opacity of a color. Can be applied to colors whether they already have an opacity value or not.
 
 Parameters:
 
