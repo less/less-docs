@@ -18,6 +18,7 @@ Also see: [GUIs for Less.js](#guis-for-less)
 * [KineticWing IDE][kineticwing] (built-in [support][kineticwing-less])
 * [nodeMirror](https://www.npmjs.org/package/node-mirror) (built-in support, built-in HTML/CSS/Less preview)
 * [HTML-Kit Tools](http://www.htmlkit.com/tools/) (built-in support)
+* [Dreamweaver CC](http://www.adobe.com/products/dreamweaver) (built-in support)
 
 ### [Sublime Text 2 & 3](http://sublimetext.com/)
 
