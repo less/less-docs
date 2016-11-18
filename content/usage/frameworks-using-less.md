@@ -6,6 +6,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | | |
 |---|---|
 | [1pxdeep](http://rriepe.github.io/1pxdeep/) | Brings designing by relative visual weight, or designing with color schemes, to Bootstrap |
+| [Ant Design](http://github.com/ant-design/ant-design/) | An enterprise-class UI design language and React-based implementation. |
 | [Bootflat](http://www.flathemes.com/) | Open source Flat UI KIT based on Bootstrap |
 | [BootPress](https://www.bootpress.org/) | A PHP Framework with a built in Blog and Flat File CMS |
 | [Bootstrap](http://getbootstrap.com/) | Front-end framework for developing responsive, mobile first projects on the web |
