@@ -19,6 +19,7 @@ Output: `#5a8120`
 ### rgba
 
 > Creates a transparent color object from decimal red, green, blue and alpha (RGBA) values.
+
 Parameters:
 
 * `red`: An integer 0-255 or percentage 0-100%.
@@ -51,6 +52,7 @@ Output: `#805a1794`
 ### hsl
 
 > Creates an opaque color object from hue, saturation and lightness (HSL) values.
+
 Parameters:
 
 * `hue`: An integer 0-360 representing degrees.
