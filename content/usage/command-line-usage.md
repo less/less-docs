@@ -208,13 +208,13 @@ This is the opposite of the rootpath option, it specifies a path which should be
 
 It defaults to the path to the input less file.
 
-#### Source Map Less Inline
+#### Source Map LESS Inline
 
 ```bash
 lessc --source-map-less-inline
 ```
 
-This option specifies that we should include all of the Less files in to the sourcemap. This means that you only need your map file to get to your original source.
+This option specifies that we should include all of the LESS files in to the sourcemap. This means that you only need your map file to get to your original source.
 
 This can be used in conjunction with the map inline option so that you do not need to have any additional external files at all.
 
@@ -290,7 +290,7 @@ lessc --strict-math=on
 
 Defaults to Off.
 
-Without this option on Less will try and process all maths in your css e.g.
+Without this option on LESS will try and process all maths in your css e.g.
 
 ```less
 .class {
@@ -347,7 +347,7 @@ With strict units on, we assume this is a bug in the calculation and throw an er
 lessc --global-var="my-background=red"
 ```
 
-This option defines a variable that can be referenced by the file. Effectively the declaration is put at the top of your base Less file, meaning it can be used but it also can be overridden if this variable is defined in the file.
+This option defines a variable that can be referenced by the file. Effectively the declaration is put at the top of your base LESS file, meaning it can be used but it also can be overridden if this variable is defined in the file.
 
 #### Modify Variable
 
@@ -355,7 +355,7 @@ This option defines a variable that can be referenced by the file. Effectively t
 lessc --modify-var="my-background=red"
 ```
 
-As opposed to the global variable option, this puts the declaration at the end of your base file, meaning it will override anything defined in your Less file.
+As opposed to the global variable option, this puts the declaration at the end of your base file, meaning it will override anything defined in your LESS file.
 
 #### URL Arguments
 

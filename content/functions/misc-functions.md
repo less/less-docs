@@ -188,7 +188,7 @@ div {
   .m(1); // OK
 }
 ```
-However Less will throw a error if it detects a *potential* conflict between multiple mixin definitions using `default()`:
+However LESS will throw a error if it detects a *potential* conflict between multiple mixin definitions using `default()`:
 
 ```less
 div {
@@ -234,7 +234,7 @@ Result:
 }
 ```
 
-The `default` function is available as a Less built-in function _only inside guard expressions_. If used outside of a mixin guard condition it is interpreted as a regular CSS value:
+The `default` function is available as a LESS built-in function _only inside guard expressions_. If used outside of a mixin guard condition it is interpreted as a regular CSS value:
 
 Example:
 

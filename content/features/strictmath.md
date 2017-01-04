@@ -4,7 +4,7 @@ published: false
 
 # strictMath
 
-> Make your Less more CSS compatible.
+> Make your LESS more CSS compatible.
 
 ## Example
 

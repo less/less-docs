@@ -12,11 +12,11 @@ Example:
 ```
 
 ## File Extensions
-`@import` statements may be treated differently by Less depending on the file extension:
+`@import` statements may be treated differently by LESS depending on the file extension:
 
 * If the file has a `.css` extension it will be treated as CSS and the `@import` statement left as-is (see the [inline option](#import-options-inline) below).
-* If it has _any other extension_ it will be treated as Less and imported.
-* If it does not have an extension, `.less` will be appended and it will be included as a imported Less file.
+* If it has _any other extension_ it will be treated as LESS and imported.
+* If it does not have an extension, `.less` will be appended and it will be included as a imported LESS file.
 
 Examples:
 
@@ -30,15 +30,15 @@ Examples:
 The following options can be used to override this behavior.
 
 # Import Options
-> Less offers several extensions to the CSS `@import` CSS at-rule to provide more flexibility over what you can do with external files.
+> LESS offers several extensions to the CSS `@import` CSS at-rule to provide more flexibility over what you can do with external files.
 
 Syntax: `@import (keyword) "filename";`
 
 The following import directives have been implemented:
 
-* `reference`: use a Less file but do not output it
+* `reference`: use a LESS file but do not output it
 * `inline`: include the source file in the output but do not process it
-* `less`: treat the file as a Less file, no matter what the file extension
+* `less`: treat the file as a LESS file, no matter what the file extension
 * `css`: treat the file as a CSS file, no matter what the file extension
 * `once`: only include the file once (this is default behavior)
 * `multiple`: include the file multiple times
@@ -80,7 +80,7 @@ Released [v1.5.0]({{ less.master.url }}CHANGELOG.md)
 
 Example: `@import (inline) "not-less-compatible.css";`
 
-You will use this when a CSS file may not be Less compatible; this is because although Less supports most known standards CSS, it does not support comments in some places and does not support all known CSS hacks without modifying the CSS.
+You will use this when a CSS file may not be LESS compatible; this is because although LESS supports most known standards CSS, it does not support comments in some places and does not support all known CSS hacks without modifying the CSS.
 
 So you can use this to include the file in the output so that all CSS will be in one file.
 
@@ -157,6 +157,6 @@ Outputs
 ```
 
 ## optional
-> Use `@import (optional)` to allow importing of a file only when it exists. Without the `optional` keyword Less throws a FileError and stops compiling when importing a file that can not be found. 
+> Use `@import (optional)` to allow importing of a file only when it exists. Without the `optional` keyword LESS throws a FileError and stops compiling when importing a file that can not be found. 
 
 Released [v2.3.0]({{ less.master.url }}CHANGELOG.md)

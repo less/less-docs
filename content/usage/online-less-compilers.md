@@ -1,18 +1,18 @@
 ---
-title: Online Less Compilers
+title: Online LESS Compilers
 ---
 
 ### [less2css.org](http://less2css.org/)
-> Online Integrated Development Environment (IDE) that is hosted in a browser allowing users to edit and compile Less to CSS in real-time.
+> Online Integrated Development Environment (IDE) that is hosted in a browser allowing users to edit and compile LESS to CSS in real-time.
 
 ### [winless.org/online-less-compiler](http://winless.org/online-less-compiler)
-> This Online Less Compiler can help you to learn Less. You can go through the examples below or try your own Less code.
+> This Online LESS Compiler can help you to learn Less. You can go through the examples below or try your own LESS code.
 
 ### [lesstester.com](http://lesstester.com/)
-> Online compiler for Less CSS.
+> Online compiler for LESS CSS.
 
 ### [dopefly.com/less-converter](http://www.dopefly.com/less-converter/less-converter.html)
-> A simple Less CSS file converter using the Less JS project.
+> A simple LESS CSS file converter using the LESS JS project.
 
 ### [lessphp.gpeasy.com/demo](http://lessphp.gpeasy.com/demo)
 > [less.php](http://lessphp.gpeasy.com/) live demo.
@@ -24,15 +24,15 @@ title: Online Less Compilers
 > A real time preprocesser compiler. 
 
 ### [estFiddle](http://ecomfe.github.io/est/fiddle/)
-> Online Less compiler providing live demo for Less and [est](http://ecomfe.github.io/est/). Allowing users to switch among all versions of Less after `1.4.0` with optional est/Autoprefixer functionalities.
+> Online LESS compiler providing live demo for LESS and [est](http://ecomfe.github.io/est/). Allowing users to switch among all versions of LESS after `1.4.0` with optional est/Autoprefixer functionalities.
 
 ### [ILess](http://demo-iless.rhcloud.com/)
 > Live demo of  [ILess](https://github.com/mishal/iless) PHP compiler
 
-### [BeautifyTools Less Compiler](http://beautifytools.com/less-compiler.php)
-> Online Less compiler with optional formatting and minification at [BeautifyTools](http://beautifytools.com)
+### [BeautifyTools LESS Compiler](http://beautifytools.com/less-compiler.php)
+> Online LESS compiler with optional formatting and minification at [BeautifyTools](http://beautifytools.com)
 
-## Online Web IDEs/Playgrounds with Less support
+## Online Web IDEs/Playgrounds with LESS support
 
 ### [CSSDeck Labs](http://cssdeck.com/labs)
 > CSSDeck Labs is a place where you can quickly create some experiments (or testcases) that involves HTML, CSS, JS code.

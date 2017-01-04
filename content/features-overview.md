@@ -2,7 +2,11 @@
 title: Features Overview
 ---
 
-> As an extension to CSS, Less is not only backwards compatible with CSS, but the extra features it adds use existing CSS syntax. This makes learning Less a breeze, and if in doubt, lets you fall back to vanilla CSS.
+> LESS (which stands for Leaner Style Sheets) is a backwards-compatible language extension for CSS. The Less.js JavaScript library converts your LESS styles to CSS styles, and runs in Node.js or the browser.
+
+Because LESS looks just like CSS, learning it is a breeze. LESS only makes a few additions to the CSS language, which is one of the reasons it's the most popular CSS pre-processing language in the world.
+
+What does LESS add? Here's a quick overview.
 
 
 ### Variables
@@ -25,8 +29,6 @@ Outputs:
   color: #6c94be;
 }
 ```
-
-Note that variables are actually "constants" in that they can only be defined once.
 
 
 ### Mixins
@@ -64,7 +66,7 @@ The properties of the `.bordered` class will now appear in both `#menu a` and `.
 
 ### Nested Rules
 
-Less gives you the ability to use nesting instead of, or in combination with cascading. Let's say we have the following CSS:
+LESS gives you the ability to use nesting instead of, or in combination with cascading. Let's say we have the following CSS:
 
 ```css
 #header {
@@ -198,7 +200,7 @@ Arithmetical operations `+`, `-`, `*`, `/` can operate on any number, color or v
 @other: @base + @filler; // result is 15%
 ```
 
-Multiplication and division do not convert numbers. It would not be meaningful in most cases - a length multiplied by a length gives an area and css does not support specifying areas. Less will operate on numbers as they are and assign explicitly stated unit type to the result.
+Multiplication and division do not convert numbers. It would not be meaningful in most cases - a length multiplied by a length gives an area and css does not support specifying areas. LESS will operate on numbers as they are and assign explicitly stated unit type to the result.
 
 ```less
 @base: 2cm * 3mm; // result is 6cm
@@ -234,7 +236,7 @@ results in:
 
 ### Functions
 
-Less provides a variety of functions which transform colors, manipulate strings and do maths. They are documented fully in the function reference.
+LESS provides a variety of functions which transform colors, manipulate strings and do maths. They are documented fully in the function reference.
 
 Using them is pretty straightforward. The following example uses percentage to convert 0.5 to 50%, increases the saturation of a base color by 5% and then sets the background color to one that is lightened by 25% and spun by 8 degrees:
 
@@ -284,7 +286,7 @@ Note that variables declared within a namespace will be scoped to that namespace
 
 ### Scope
 
-Scope in Less is very similar to that of programming languages. Variables and mixins are first looked for locally, and if they aren't found, the compiler will look in the parent scope, and so on.
+Scope in LESS is very similar to that of programming languages. Variables and mixins are first looked for locally, and if they aren't found, the compiler will look in the parent scope, and so on.
 
 ```less
 @var: red;
@@ -297,7 +299,7 @@ Scope in Less is very similar to that of programming languages. Variables and mi
 }
 ```
 
-Variables and mixins do not have to be declared before being used so the following Less code is identical to the previous example:
+Variables and mixins do not have to be declared before being used so the following LESS code is identical to the previous example:
 
 ```less
 @var: red;

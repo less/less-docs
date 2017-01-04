@@ -1,4 +1,4 @@
-> Extend is a Less pseudo-class which merges the selector it is put on with ones that match what it references.
+> Extend is a LESS pseudo-class which merges the selector it is put on with ones that match what it references.
 
 Released [v1.4.0]({{ less.master.url }}CHANGELOG.md)
 
@@ -264,7 +264,7 @@ Outputs
 
 ## Extend "all"
 
-When you specify the all keyword last in an extend argument it tells Less to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making a new selector.
+When you specify the all keyword last in an extend argument it tells LESS to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making a new selector.
 
 Example:
 

@@ -4,11 +4,11 @@
     {{> head }}
   </head>
   <body{{#slug}} class="{{.}}"{{/slug}}>
-    {{!-- Docs master nav --}}
-    {{> nav-main }}
 
-    {{> docs-header }}
-
+    {{#is slug 'index'}}
+      {{> docs-header }}
+    {{/is}}
+    
     {{!-- Content --}}
     <div class="container docs-container">
       <div class="row">
@@ -18,6 +18,8 @@
           </div>
         </div>
         <div class="col-md-9" role="main">
+          {{!-- Docs master nav --}}
+          {{> nav-main }}
           {{> body }}
         </div>
       </div>

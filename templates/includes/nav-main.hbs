@@ -7,12 +7,19 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="{{rel '.'}}/#" class="navbar-brand" alt="Less">
-        <img src="{{assets}}/img/logo.png">
-      </a>
     </div>
     <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
+        {{#is slug 'index'}}
+        <li class="active">
+          <span>Home</span>
+        </li>
+        {{else}}
+        <li>
+          <a href="{{rel '.'}}/#">Home</a>
+        </li>
+        {{/is}}
+
         {{#is slug 'features'}}
         <li class="active">
           <span>Language Features</span>
@@ -22,6 +29,7 @@
           <a href="{{rel 'features'}}/">Language Features</a>
         </li>
         {{/is}}
+
         {{#is links.plugins true}}
         {{#is slug 'plugins'}}
         <li class="active">

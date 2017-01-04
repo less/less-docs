@@ -11,7 +11,7 @@ CSS-style comments are preserved by Less:
 }
 ```
 
-## Less Comments
+## LESS Comments
 
 Single-line comments are also valid in Less, but they are ‘silent’, they don’t show up in the compiled CSS output:
 

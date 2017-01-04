@@ -143,7 +143,7 @@ content: "I am fnord.";
 
 > Variables are lazy loaded and do not have to be declared before being used.
 
-Valid Less snippet:
+Valid LESS snippet:
 
 ```less
 .lazy-eval {
@@ -153,7 +153,7 @@ Valid Less snippet:
 @var: @a;
 @a: 9%;
 ```
-this is valid Less too:
+this is valid LESS too:
 
 ```less
 .lazy-eval-scope {

@@ -1,4 +1,4 @@
-> Less allows you to use nesting as well as normal cascading CSS.
+> LESS allows you to use nesting as well as normal cascading CSS.
 
 ...
 

@@ -31,15 +31,15 @@ Other grunt commands
 * `grunt stable` to create a new release
 * `grunt readme` to generate a new readme.md in the root directory (after each release)
 
-## How to Run Less in Other Environments
+## How to Run LESS in Other Environments
 
 If you look in the libs folder you will see `less`, `less-node`, `less-browser`. The less folder is pure javascript with no environment
 specifics. if you require `less/libs/less`, you get a function that takes an environment object and an array of file managers. The file
 managers are the same file managers that can also be written as a plugin.
 
 ```js
-var createLess = require("less/libs/less"),
-    myLess = createLess(environment, [myFileManager]);
+var createLESS = require("less/libs/less"),
+    myLESS = createLess(environment, [myFileManager]);
 ```
 
 The environment api is specified in [less/libs/less/environment/environment-api.js](https://github.com/less/less.js/blob/master/lib/less/environment/environment-api.js)
@@ -55,8 +55,8 @@ If you look at [http://www.gliffy.com/go/publish/4784259](http://www.gliffy.com/
 
 ## Books
 
-* [Less Web Development Essentials](http://www.packtpub.com/less-web-development-essentials/book), by Bass Jobsen, Foreword by Alexis Sellier
-* [Less Web Development Cookbook](https://www.packtpub.com/web-development/less-web-development-cookbook), by Bass Jobsen and Amin Meyghani, Foreword by Luke Page
+* [LESS Web Development Essentials](http://www.packtpub.com/less-web-development-essentials/book), by Bass Jobsen, Foreword by Alexis Sellier
+* [LESS Web Development Cookbook](https://www.packtpub.com/web-development/less-web-development-cookbook), by Bass Jobsen and Amin Meyghani, Foreword by Luke Page
 
 ## Videos
 

@@ -45,10 +45,10 @@
 
 // Typography
 // -------------------------
-@body-font:               1rem/1.5 "PT Sans", sans-serif;
+@body-font:               1rem/1.5 "Oxygen", sans-serif;
 
-@font-family-sans-serif:  "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-sans-serif:  "Oxygen", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       "Noto Serif", "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
@@ -58,7 +58,7 @@
 
 @font-size-h1:            floor(@font-size-base * 2.75); // ~38px
 @font-size-h2:            floor(@font-size-base * 2.25); // ~31px
-@font-size-h3:            ceil(@font-size-base * 1.7); // ~24px
+@font-size-h3:            ceil(@font-size-base * 1.85); // ~24px
 @font-size-h4:            ceil(@font-size-base * 1.25); // ~18px
 @font-size-h5:            @font-size-base;
 @font-size-h6:            ceil(@font-size-base * 0.85); // ~12px
@@ -66,10 +66,10 @@
 @line-height-base:        1.428571429; // 20/14
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
-@headings-font-family:    @font-family-sans-serif, @font-family-sans-serif;
+@headings-font-family:    @font-family-sans-serif;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
-@headings-color:          inherit;
+@headings-color:          hsl(217, 52%, 24%);
 
 
 
@@ -610,8 +610,8 @@
 
 // Code
 // ------------------------
-@code-color:                  #c7254e;
-@code-bg:                     #f9f2f4;
+@code-color:                  @brand-primary;
+@code-bg:                     #f5f5f5;
 
 @pre-bg:                      #f5f5f5;
 @pre-color:                   @gray-dark;

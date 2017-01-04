@@ -62,11 +62,10 @@ h1[id] {
 // Make headings stand out more, give some space
 .docs-section {
   p {
-    font-size: @font-size-large - 2;
+    font-size: @font-size-large - 3;
     font-family: @font-family-serif;
-    -webkit-font-smoothing: antialiased;
 
-    line-height: 1.4;
+    line-height: 1.5;
     margin: 20px 0;
   }
 
@@ -74,30 +73,22 @@ h1[id] {
   // this needs to be extra specific
   blockquote {
     position: relative;
-    margin: 0 1rem 1rem;
-    font-style: italic;
-    color: #7a7a7a;
+    font-style: normal;
+    font-weight: 500;
+    color: inherit;
+    margin: 0;
+    border-left-style: none;
+    padding: 0;
     > p {
-      font-size: 14px;
-      font-family: @font-family-sans-serif;
       line-height: 1.5;
-      margin: 0;
-      padding: 10px;
+      color: inherit;
+      padding: 0px;
+      &:first-child {
+        font-size: 18px;
+      }
     }
   }
-
-  // Adjust headings inside .docs-sections
-  h1, h2, h3 {
-    letter-spacing: 1px;
-  }
-  h2 {
-    font-size: 24px;
-    color: @link-color;
-  }
-  h3 {
-    font-size: 20px;
-  }
-
+  
   td {
     @g: 10px;
     padding: 0 @g (@g / 2) 0;
@@ -107,9 +98,7 @@ h1[id] {
     max-width: 100%;
   }
 }
-.docs-section + .docs-section {
-  padding-top: 40px;
-}
+
 
 // individual section of content, usually represented
 // by h2, h3 etc.

@@ -19,26 +19,28 @@ pre code {
     font-style: italic;
 }
 
-.-(id,            @violet);
+.-(id,            @orange);
 .-(class,         @blue-dark);
-.-(variable,      @blue);
+.-(variable,      @violet);
 .-(tag,           @blue-dark);
 .-(keyword,       @blue-dark);
 .-(built_in,      @blue-dark);
-.-(pseudo,        @gray-dark);
+.-(pseudo,        @violet);
 .-(value,         @cyan);
 .-(number,        @cyan);
 .-(hexcolor,      @cyan);
 .-(literal,       @cyan);
-.-(attribute,     @green);
+.-(attribute,     @blue);
 // .-(function,   @green);
 .-(attr_selector, @orange);
-.-(at_rule,       @lime);
-.-(string,        @red);
+.-(attr,          @orange);
+.-(name,          @blue);
+.-(at_rule,       @red);
+.-(string,        @lime);
 
 .lang-less {
     // Less specific coloring:
-    .-(keyword,  @gray-dark);
+    .-(keyword,  @blue-dark);
     .-(built_in, @brown);
 }
 
@@ -50,12 +52,12 @@ pre code {
 
 // Colors
 
-@primary-dark-blue: @navbar-inverse-bg;
+@primary-dark-blue: saturate(@navbar-inverse-bg, 70%);
 @h: hue(@primary-dark-blue);
 @s: saturation(@primary-dark-blue);
-@l: lightness(@primary-dark-blue);
+@l: lightness(@primary-dark-blue) - 2;
 
-@blue-dark: hsl(@h -   0, @s +  0, @l +  0);
+@blue-dark: hsl(@h -   0, @s + 25, @l +  5);
 @blue:      hsl(@h -  15, @s + 15, @l + 15);
 @cyan:      hsl(@h -  37, @s + 10, @l + 10);
 @green:     hsl(@h -  60, @s +  5, @l +  5);

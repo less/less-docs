@@ -75,7 +75,7 @@
 
 
     // back to top
-    setTimeout(function () {
+    // setTimeout(function () {
       var $sideBar = $('.sidebar')
 
       $sideBar.affix({
@@ -85,18 +85,18 @@
             var sideBarMargin  = parseInt($sideBar.children(0).css('margin-top'), 10)
             var navOuterHeight = $('.docs-nav').height()
 
-            return (this.top = offsetTop - navOuterHeight - sideBarMargin)
-          },
-          bottom: function () {
-            return (this.bottom = $('.footer').outerHeight(true))
+            return (this.top = offsetTop - navOuterHeight - sideBarMargin + 15)
           }
+          // bottom: function () {
+          //   return (this.bottom = $('.footer').outerHeight(true))
+          // }
         }
       })
-    }, 100);
+    // }, 100);
 
-    setTimeout(function () {
+    // setTimeout(function () {
       $('.top').affix()
-    }, 100);
+    // }, 100);
 
   })
 

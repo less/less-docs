@@ -1,5 +1,5 @@
 ---
-title: Using Less in the Browser
+title: Using LESS in the Browser
 ---
 
 We recommend using less in the browser only for development or when you need to dynamically compile less and cannot do it serverside.
@@ -71,7 +71,7 @@ To enable Watch mode, option `env` must be set to `development`. Then AFTER the 
 Alternatively, you can enable Watch mode temporarily by appending `#!watch` to the URL.
 
 ### Modify Variables
-Enables run-time modification of Less variables. When called with new values, the Less file is recompiled without reloading. Simple basic usage:
+Enables run-time modification of LESS variables. When called with new values, the LESS file is recompiled without reloading. Simple basic usage:
 
 ```js
 less.modifyVars({
@@ -85,7 +85,7 @@ It is possible to output rules in your CSS which allow tools to locate the sourc
 
 Either specify the option `dumpLineNumbers` as above or add `!dumpLineNumbers:mediaquery` to the url.
 
-You can use the `mediaquery` option with [FireLESS](https://addons.mozilla.org/en-us/firefox/addon/fireless/) (it is identical to the SCSS media query debugging format). Also see [FireLess and Less v2](http://bassjobsen.weblogs.fm/fireless-less-v2/). The `comment` option can be used to display file information and line numbers in the inline compiled CSS code.
+You can use the `mediaquery` option with [FireLESS](https://addons.mozilla.org/en-us/firefox/addon/fireless/) (it is identical to the SCSS media query debugging format). Also see [FireLESS and LESS v2](http://bassjobsen.weblogs.fm/fireless-less-v2/). The `comment` option can be used to display file information and line numbers in the inline compiled CSS code.
 
 ### Options
 
@@ -178,7 +178,7 @@ less = {
 };
 ```
 
-and it can be used like a native Less function e.g.
+and it can be used like a native LESS function e.g.
 
 ```less
 .my-class {
@@ -226,7 +226,7 @@ E.g.
 less.globalVars = { myvar: "#ddffee", mystr: "\"quoted\"" };
 ```
 
-This option defines a variable that can be referenced by the file. Effectively the declaration is put at the top of your base Less file, meaning it can be used but it also can be overridden if this variable is defined in the file.
+This option defines a variable that can be referenced by the file. Effectively the declaration is put at the top of your base LESS file, meaning it can be used but it also can be overridden if this variable is defined in the file.
 
 #### modifyVars
 Type: `Object`
@@ -235,7 +235,7 @@ Default: `undefined`
 
 Same format as [globalVars](#using-less-in-the-browser-globalvars).
 
-As opposed to the [globalVars](#using-less-in-the-browser-globalvars) option, this puts the declaration at the end of your base file, meaning it will override anything defined in your Less file.
+As opposed to the [globalVars](#using-less-in-the-browser-globalvars) option, this puts the declaration at the end of your base file, meaning it will override anything defined in your LESS file.
 
 #### rootpath
 Type: `String`
