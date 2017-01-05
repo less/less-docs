@@ -2,7 +2,7 @@
 
 Released [v1.5.0]({{ less.master.url }}CHANGELOG.md)
 
-Guards can also be applied to css selectors, which is syntactic sugar for declaring the mixin and then calling it immediately.
+Like Mixin Guards, guards can also be applied to css selectors, which is syntactic sugar for declaring the mixin and then calling it immediately.
 
 For instance, before 1.5.0 you would have had to do this:
 

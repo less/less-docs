@@ -12,21 +12,21 @@
       <ul class="nav navbar-nav">
         {{#is slug 'index'}}
         <li class="active">
-          <span>Home</span>
+          <span>Overview</span>
         </li>
         {{else}}
         <li>
-          <a href="{{rel '.'}}/#">Home</a>
+          <a href="{{rel '.'}}/#">Overview</a>
         </li>
         {{/is}}
 
         {{#is slug 'features'}}
         <li class="active">
-          <span>Language Features</span>
+          <span>In-Depth Guide</span>
         </li>
         {{else}}
         <li>
-          <a href="{{rel 'features'}}/">Language Features</a>
+          <a href="{{rel 'features'}}/">In-Depth Guide</a>
         </li>
         {{/is}}
 
@@ -41,27 +41,38 @@
         </li>
         {{/is}}        
         {{/is}}
+
         {{#is slug 'functions'}}
         <li class="active">
-          <span>Function Reference</span>
+          <span>Functions</span>
         </li>
         {{else}}
         <li>
-          <a href="{{rel 'functions'}}/">Function Reference</a>
-        </li>
-        {{/is}}        
-       {{#is slug 'usage'}}
-        <li class="active">
-          <span>Usage</span>
-        </li>
-        {{else}}
-        <li>
-          <a href="{{rel 'usage'}}/">Usage</a>
+          <a href="{{rel 'functions'}}/">Functions</a>
         </li>
         {{/is}}
-        <li>
-          <a href="{{site.onlineeditor}}">Try it</a>
+
+        {{#is slug 'usage'}}
+        <li class="active">
+          <span>Using Less.js</span>
         </li>
+        {{else}}
+        <li>
+          <a href="{{rel 'usage'}}/">Using Less.js</a>
+        </li>
+        {{/is}}
+
+        {{#is slug 'tools'}}
+        <li class="active">
+          <span>Tools</span>
+        </li>
+        {{else}}
+        <li>
+          <a href="{{rel 'tools'}}/">Tools</a>
+        </li>
+        {{/is}}
+
+       
         {{#is links.cheatsheet true}}
         {{#is slug 'cheatsheet'}}
         <li class="active">

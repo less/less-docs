@@ -123,27 +123,36 @@ Compiles to:
 }
 ```
 
-## Variable Names
+## Variable Variables
 
-It is also possible to define variables with a variable name:
+In Less, you can define a variable's name using another variable.
 
 ```less
-@fnord:  "I am fnord.";
-@var:    "fnord";
-content: @@var;
+@primary:  green;
+@secondary: blue;
+
+.section {
+  @color: primary;
+  
+  .element {
+    color: @@color;
+  }
+}
 ```
 
 Which compiles to:
 
-```
-content: "I am fnord.";
+```less
+.section .element {
+  color: green;
+}
 ```
 
 ## Lazy Loading
 
-> Variables are lazy loaded and do not have to be declared before being used.
+> Variables do not have to be declared before being used.
 
-Valid LESS snippet:
+Valid Less snippet:
 
 ```less
 .lazy-eval {
@@ -153,7 +162,7 @@ Valid LESS snippet:
 @var: @a;
 @a: 9%;
 ```
-this is valid LESS too:
+this is valid Less too:
 
 ```less
 .lazy-eval-scope {
@@ -215,4 +224,4 @@ For instance:
 @base-color: red;
 ```
 
-This works fine because of [Lazy Loading](#variables-feature-lazy-loading) - base-color is overridden and dark-color is a dark red.
+This works fine because of [Lazy Loading](#variables-feature-lazy-loading) - `@base-color` is overridden and `@dark-color` is a dark red.

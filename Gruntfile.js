@@ -75,10 +75,7 @@ module.exports = function(grunt) {
           heading: '<%= site.snippets %>/heading.tmpl',
 
           // highlight.js options
-          //prefix: 'lang-'
-          highlight: function (code) {
-            return require('highlight.js').highlightAuto(code).value;
-          }
+          prefix: 'lang-'
           
         }
       },

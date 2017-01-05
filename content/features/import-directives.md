@@ -12,11 +12,11 @@ Example:
 ```
 
 ## File Extensions
-`@import` statements may be treated differently by LESS depending on the file extension:
+`@import` statements may be treated differently by Less depending on the file extension:
 
 * If the file has a `.css` extension it will be treated as CSS and the `@import` statement left as-is (see the [inline option](#import-options-inline) below).
-* If it has _any other extension_ it will be treated as LESS and imported.
-* If it does not have an extension, `.less` will be appended and it will be included as a imported LESS file.
+* If it has _any other extension_ it will be treated as Less and imported.
+* If it does not have an extension, `.less` will be appended and it will be included as a imported Less file.
 
 Examples:
 
@@ -29,16 +29,16 @@ Examples:
 
 The following options can be used to override this behavior.
 
-# Import Options
-> LESS offers several extensions to the CSS `@import` CSS at-rule to provide more flexibility over what you can do with external files.
+## Import Options
+> Less offers several extensions to the CSS `@import` CSS at-rule to provide more flexibility over what you can do with external files.
 
 Syntax: `@import (keyword) "filename";`
 
 The following import directives have been implemented:
 
-* `reference`: use a LESS file but do not output it
+* `reference`: use a Less file but do not output it
 * `inline`: include the source file in the output but do not process it
-* `less`: treat the file as a LESS file, no matter what the file extension
+* `less`: treat the file as a Less file, no matter what the file extension
 * `css`: treat the file as a CSS file, no matter what the file extension
 * `once`: only include the file once (this is default behavior)
 * `multiple`: include the file multiple times
@@ -48,7 +48,7 @@ The following import directives have been implemented:
 
 Example: `@import (optional, reference) "foo.less";`
 
-## reference
+### reference
 > Use `@import (reference)` to import external files, but without adding the imported styles to the compiled output unless referenced.
 
 Released [v1.5.0]({{ less.master.url }}CHANGELOG.md)
@@ -63,7 +63,7 @@ Additionally, **`reference`** produces different results depending on which meth
 * **[mixins](#mixins-feature)**: When a `reference` style is used as an [implicit mixin](#mixins-feature), its rules are mixed-in, marked "not reference", and appear in the referenced place as normal.
 
 
-### reference example
+#### reference example
 This allows you to pull in only specific, targeted styles from a library such as [Bootstrap](https://github.com/twbs/bootstrap) by doing something like this:
 
 ```less
@@ -73,19 +73,19 @@ This allows you to pull in only specific, targeted styles from a library such as
 And you will pull in only `.navbar` related styles from Bootstrap.
 
 
-## inline
+### inline
 > Use `@import (inline)` to include external files, but not process them.
 
 Released [v1.5.0]({{ less.master.url }}CHANGELOG.md)
 
 Example: `@import (inline) "not-less-compatible.css";`
 
-You will use this when a CSS file may not be LESS compatible; this is because although LESS supports most known standards CSS, it does not support comments in some places and does not support all known CSS hacks without modifying the CSS.
+You will use this when a CSS file may not be Less compatible; this is because although Less supports most known standards CSS, it does not support comments in some places and does not support all known CSS hacks without modifying the CSS.
 
 So you can use this to include the file in the output so that all CSS will be in one file.
 
 
-## less
+### less
 > Use `@import (less)` to treat imported files as Less, regardless of file extension.
 
 Released [v1.4.0]({{ less.master.url }}CHANGELOG.md)
@@ -96,8 +96,7 @@ Example:
 @import (less) "foo.css";
 ```
 
-
-## css
+### css
 > Use `@import (css)` to treat imported files as regular CSS, regardless of file extension. This means the import statement will be left as it is.
 
 Released [v1.4.0]({{ less.master.url }}CHANGELOG.md)
@@ -113,8 +112,7 @@ outputs
 @import "foo.less";
 ```
 
-
-## once
+### once
 > The default behavior of `@import` statements. It means the file is imported only once and subsequent import statements for that file will be ignored.
 
 Released [v1.4.0]({{ less.master.url }}CHANGELOG.md)
@@ -129,7 +127,7 @@ Example:
 ```
 
 
-## multiple
+### multiple
 > Use `@import (multiple)` to allow importing of multiple files with the same name. This is the opposite behavior to once.
 
 Released [v1.4.0]({{ less.master.url }}CHANGELOG.md)
@@ -156,7 +154,7 @@ Outputs
 }
 ```
 
-## optional
-> Use `@import (optional)` to allow importing of a file only when it exists. Without the `optional` keyword LESS throws a FileError and stops compiling when importing a file that can not be found. 
+### optional
+> Use `@import (optional)` to allow importing of a file only when it exists. Without the `optional` keyword Less throws a FileError and stops compiling when importing a file that can not be found. 
 
 Released [v2.3.0]({{ less.master.url }}CHANGELOG.md)

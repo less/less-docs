@@ -1,4 +1,4 @@
-> Extend is a LESS pseudo-class which merges the selector it is put on with ones that match what it references.
+> Extend is a Less pseudo-class which merges the selector it is put on with ones that match what it references.
 
 Released [v1.4.0]({{ less.master.url }}CHANGELOG.md)
 
@@ -264,7 +264,7 @@ Outputs
 
 ## Extend "all"
 
-When you specify the all keyword last in an extend argument it tells LESS to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making a new selector.
+When you specify the all keyword last in an extend argument it tells Less to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making a new selector.
 
 Example:
 
@@ -301,9 +301,9 @@ _You can think of this mode of operation as essentially doing a non-destructive 
 
 
 ### Selector Interpolation with Extend
-> Extend is NOT able to match selectors with variables. If selector contains variable, extend will ignore it.
+> Extend is **not** able to match selectors with variables. If selector contains variable, extend will ignore it.
 
-There is a pending feature request for this but it is not an easy change.  However, extend can be attached to interpolated selector.
+However, extend can be attached to interpolated selector.
 
 Selector with variable will not be matched:
 
@@ -353,7 +353,7 @@ previous less compiles into:
 
 ## Scoping / Extend Inside @media
 
-Extend written inside a media declaration should match only selectors inside the same media declaration:
+Currently, an `:extend` inside a `@media` declaration will only match selectors inside the same media declaration:
 
 ```less
 @media print {
@@ -391,7 +391,7 @@ compiles into:
 }
 ```
 
-Extend written inside a media declaration does not match selectors inside nested declaration:
+Note: extending does not match selectors inside a nested `@media` declaration:
 
 ```less
 @media screen {
@@ -404,7 +404,7 @@ Extend written inside a media declaration does not match selectors inside nested
 }
 ```
 
-compiles into:
+This compiles into:
 
 ```css
 @media screen and (min-width: 1023px) {

@@ -1,5 +1,5 @@
 ---
-title: Language Features
+title: Features In-Depth
 lead: Features of the Less language
 slug: features
 ---
@@ -8,23 +8,46 @@ slug: features
   <!-- {{title}} -->
   <div class="docs-section">
     <div class="page-header">
-      <h1 id="{{@key}}-feature">{{title}}</h1>
+      <h1 id="{{@key}}-feature">{{{title}}}</h1>
     </div>
 
     {{#each (expand files)}}
-    <div class="section-content">
-      {{> popover-source-link . }}
+      
+      <div class="section-content">
+        {{> popover-source-link . }}
 
-      <!-- {{basename .}} -->
-      {{success '>> Inlining:' (basename .)}} {{! log a success message! }}
+        <!-- {{basename .}} -->
+        {{success '>> Inlining:' (basename .)}} {{! log a success message! }}
 
 
-{{#markdown}}
-{{inline .}}
-{{/markdown}}
+        {{#markdown}}
+        {{inline .}}
+        {{/markdown}}
 
-      <br>
-    </div>
+        <br>
+      </div>
+    {{/each}}
+
+    {{#each subs}}
+
+      <!-- {{title}} -->
+      <h2 id="{{@key}}-feature">{{{title}}}</h2>
+      
+      {{#each (expand files)}}
+        <div class="section-content">
+          {{> popover-source-link . }}
+
+          <!-- {{basename .}} -->
+          {{success '>> Inlining:' (basename .)}} {{! log a success message! }}
+
+
+          {{#markdown}}
+          {{inline .}}
+          {{/markdown}}
+
+          <br>
+        </div>
+      {{/each}}
     {{/each}}
 
   </div>

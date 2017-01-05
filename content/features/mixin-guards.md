@@ -1,8 +1,6 @@
-> Conditional mixins
-
 Guards are useful when you want to match on _expressions_, as opposed to simple values or arity. If you are familiar with functional programming, you have probably encountered them already.
 
-In trying to stay as close as possible to the declarative nature of CSS, LESS has opted to implement conditional execution via **guarded mixins** instead of `if`/`else` statements, in the vein of `@media` query feature specifications.
+In trying to stay as close as possible to the declarative nature of CSS, Less has opted to implement conditional execution via **guarded mixins** instead of `if`/`else` statements, in the vein of `@media` query feature specifications.
 
 Let's start with an example:
 
@@ -112,12 +110,3 @@ If you want to check if a value is in a specific unit in addition to being a num
 * `ispercentage`
 * `isem`
 * `isunit`
-
-### Conditional Mixins
-
-_(**FIXME**)_ Additionally, the `default` function may be used to make a mixin match depending on other mixing matches, and you may use it to create "conditional mixins" similar to `else` or `default` statements (of `if` and `case` structures respectively):
-
-```less
-.mixin (@a) when (@a > 0) { ...  }
-.mixin (@a) when (default()) { ... } // matches only if first mixin does not, i.e. when @a <= 0
-```

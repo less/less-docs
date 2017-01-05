@@ -16,12 +16,8 @@ published:
     files: <%= usage.base %>/command-line-usage.md
 
   using-less-in-the-browser:
-    title: Using Less in the Browser
+    title: Browser Usage
     files: <%= usage.base %>/using-less-in-the-browser.md
-
-  browser-support:
-    title: Browser Support
-    files: <%= usage.base %>/browser-support.md
 
   plugins:
     title: Plugins
@@ -30,26 +26,6 @@ published:
   programmatic-usage:
     title: Programmatic Usage
     files: <%= usage.base %>/programmatic-usage.md
-
-  online-less-compilers:
-    title: Online Less Compilers
-    files: <%= usage.base %>/online-less-compilers.md
-
-  guis-for-less:
-    title: GUIs for Less
-    files: <%= usage.base %>/guis-for-less.md
-
-  editors-and-plugins:
-    title: Editors and Plugins
-    files: <%= usage.base %>/editors-and-plugins.md
-
-  third-party-compilers:
-    title: Third Party Compilers
-    files: <%= usage.base %>/third-party-compilers.md
-
-  frameworks-using-less:
-    title: Frameworks Using Less
-    files: <%= usage.base %>/frameworks-using-less.md
 
   developing-less:
     title: Developing Less
@@ -61,6 +37,14 @@ published:
 # =============================================
 
 unpublished:
+  using-less:
+    title: Using Less.js
+    files: <%= usage.base %>/using-less.md
+
+  browser-support:
+    title: Browser Support
+    files: <%= usage.base %>/browser-support.md
+
   v2-upgrade-guide:
     title: V2 Upgrade Guide
     files: <%= usage.base %>/v2-upgrade.md

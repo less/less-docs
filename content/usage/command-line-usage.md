@@ -6,7 +6,7 @@ title: Command Line Usage
 
 <span class="warning">Heads up! If the command line isn't your thing, learn more about [GUIs for Less](#guis-for-less).</span>
 
-### Installing `lessc` for Use Globally
+## Installing
 
 Install with [npm](https://www.npmjs.org/)
 
@@ -14,11 +14,11 @@ Install with [npm](https://www.npmjs.org/)
 npm install less -g
 ```
 
-and then you will have the `lessc` command available globally. For a specific version (or tag) you can add `@VERSION` after our package name, e.g. `npm install less@1.6.2 -g`.
+The `-g` option installs the `lessc` command available globally. For a specific version (or tag) you can add `@VERSION` after our package name, e.g. `npm install less@2.7.1 -g`.
 
 ### Installing for Node Development
 
-Alternatively if you don't use the compiler globally, you may be after
+Alternatively, if you don't want to use the compiler globally, you may be after
 
 ```bash
 npm i less --save-dev
@@ -26,25 +26,14 @@ npm i less --save-dev
 
 This will install the latest official version of lessc in your project folder, also adding it to the `devDependencies` in your project's `package.json`.
 
-Note that a [caret version range][] will be automatically specified in `package.json`. This is good, as new minor releases of the latest version will be installable by npm.
-
-#### Beta releases of lessc
+### Beta releases of lessc
 
 Periodically, as new functionality is being developed, lessc builds will be published to npm, tagged as beta. These builds will _not_ be published as a `@latest` official release, and will typically have beta in the version (use `lessc -v` to get current version).
 
 Since patch releases are non-breaking we will publish patch releases immediately and alpha/beta/candidate versions will be published as minor or major version upgrades (we endeavour since 1.4.0 to follow [semantic versioning](http://semver.org/)).
 
-#### Installing an unpublished development version of lessc
 
-If you want to install a bleeding-edge, unpublished version of lessc, follow the instructions for specifying a [git URL as a dependency][] and be sure to specify an actual commit SHA (not a branch name) as the `commit-ish`. This will guarantee that your project always uses that exact version of lessc.
-
-The specified git URL may be that of the official lessc repo or a fork.
-
-
-[caret version range]: https://www.npmjs.org/doc/misc/semver.html#ranges
-[git URL as a dependency]: https://npmjs.org/doc/json.html#Git-URLs-as-Dependencies
-
-### Server-Side and Command Line Usage
+## Server-Side and Command Line Usage
 
 The binary included in this repository, `bin/lessc` works with [Node.js](http://nodejs.org/) on *nix, OS X and Windows.
 
@@ -60,15 +49,13 @@ If source is set to `-' (dash or hyphen-minus), input is read from stdin.
 
 #### Examples
 
-```bash
-# compile bootstrap.less to bootstrap.css
-$ lessc bootstrap.less bootstrap.css
+Compile bootstrap.less to bootstrap.css
 
-# compile bootstrap.less to bootstrap.css and minify (compress) the result
-$ lessc -x bootstrap.less bootstrap.css
+```bash 
+lessc bootstrap.less bootstrap.css
 ```
 
-### Options
+### Options for `lessc`
 
 #### Help
 
@@ -101,25 +88,29 @@ lessc -M
 lessc --depends
 ```
 
+Outputs a makefile import dependency list to stdout.
+
 #### No Color
 
 ```bash
 lessc --no-color
 ```
 
-#### No IE Compatibility
+#### IE8 Compatibility (Deprecated)
 
 ```bash
-lessc --no-ie-compat
+lessc --ie-compat
 ```
 
-Currently only used for the data-uri function to ensure that images aren't created that are too large for the browser to handle.
+False by default starting in v3.0.0. Currently only used for the data-uri function to ensure that images aren't created that are too large for the browser to handle.
 
-#### Disable JavaScript
+#### Enable Inline JavaScript
 
 ```bash
-lessc --no-js
+lessc --js
 ```
+
+False by default starting in v3.0.0. Enables evaluation of JavaScript inline in `.less` files.
 
 #### Lint
 
@@ -208,13 +199,13 @@ This is the opposite of the rootpath option, it specifies a path which should be
 
 It defaults to the path to the input less file.
 
-#### Source Map LESS Inline
+#### Source Map Less Inline
 
 ```bash
 lessc --source-map-less-inline
 ```
 
-This option specifies that we should include all of the LESS files in to the sourcemap. This means that you only need your map file to get to your original source.
+This option specifies that we should include all of the Less files in to the sourcemap. This means that you only need your map file to get to your original source.
 
 This can be used in conjunction with the map inline option so that you do not need to have any additional external files at all.
 
@@ -290,7 +281,7 @@ lessc --strict-math=on
 
 Defaults to Off.
 
-Without this option on LESS will try and process all maths in your css e.g.
+Without this option on Less will try and process all maths in your css e.g.
 
 ```less
 .class {
@@ -347,7 +338,7 @@ With strict units on, we assume this is a bug in the calculation and throw an er
 lessc --global-var="my-background=red"
 ```
 
-This option defines a variable that can be referenced by the file. Effectively the declaration is put at the top of your base LESS file, meaning it can be used but it also can be overridden if this variable is defined in the file.
+This option defines a variable that can be referenced by the file. Effectively the declaration is put at the top of your base Less file, meaning it can be used but it also can be overridden if this variable is defined in the file.
 
 #### Modify Variable
 
@@ -355,7 +346,7 @@ This option defines a variable that can be referenced by the file. Effectively t
 lessc --modify-var="my-background=red"
 ```
 
-As opposed to the global variable option, this puts the declaration at the end of your base file, meaning it will override anything defined in your LESS file.
+As opposed to the global variable option, this puts the declaration at the end of your base file, meaning it will override anything defined in your Less file.
 
 #### URL Arguments
 

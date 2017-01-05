@@ -13,12 +13,24 @@
 /* Page headers */
 .docs-header {
   padding: 30px 15px 50px; /* side padding builds on .container 15px, so 30px */
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
   text-shadow: 0 1px 0 rgba(0,0,0,.15);
 }
 .docs-header h1 {
   color: #fff;
+}
+.docs-header {
+  h3, p {
+    color: @navbar-inverse-link-color;
+  }
+  h3 {
+    margin-bottom: 3em;
+  }
+  code {
+    background: hsl(208, 56%, 10%);
+    padding: 2px 4px;
+  }
 }
 .docs-header p {
   font-weight: 300;
@@ -30,7 +42,7 @@
 
 @media (min-width: 768px) {
   .docs-header {
-    font-size: 21px;
+    font-size: 16px;
     text-align: left;
     display: flex;
     min-height: 100vh;
@@ -39,12 +51,5 @@
   .docs-header h1 {
     font-size: 60px;
     line-height: 1;
-  }
-}
-
-@media (min-width: 992px) {
-  .docs-header h1,
-  .docs-header p {
-    margin-right: 380px;
   }
 }

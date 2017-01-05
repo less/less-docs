@@ -2,14 +2,19 @@
 title: Features Overview
 ---
 
-> LESS (which stands for Leaner Style Sheets) is a backwards-compatible language extension for CSS. The Less.js JavaScript library converts your LESS styles to CSS styles, and runs in Node.js or the browser.
+> LESS (which stands for Leaner Style Sheets) is a backwards-compatible language extension for CSS. This is the official documentation for LESS, the language, and Less.js, the JavaScript tool that converts your Less styles to CSS styles.
 
-Because LESS looks just like CSS, learning it is a breeze. LESS only makes a few additions to the CSS language, which is one of the reasons it's the most popular CSS pre-processing language in the world.
+Because Less looks just like CSS, learning it is a breeze. Less only makes a few convenient additions to the CSS language, which is one of the reasons it can be learned so quickly.
 
-What does LESS add? Here's a quick overview.
+* _For detailed documentation on Less language features, see [Features](/features/)_
+* _For a list of Less Built-in functions, see [Functions](/functions/)_
+* _For detailed usage instructions, see [Using Less.js](/usage/)_
+* _For third-party tools for Less, see [Tools](/tools/)_
+
+What does Less add to CSS? Here's a quick overview of features.
 
 
-### Variables
+# Variables
 
 These are pretty self-explanatory:
 
@@ -30,8 +35,10 @@ Outputs:
 }
 ```
 
+**[Learn More About Variables](/features/#variables-feature)** 
 
-### Mixins
+
+# Mixins
 
 Mixins are a way of including ("mixing in") a bunch of properties from one rule-set into another rule-set. So say we have the following class:
 
@@ -58,15 +65,12 @@ And we want to use these properties inside other rule-sets. Well, we just have t
 
 The properties of the `.bordered` class will now appear in both `#menu a` and `.post a`. (Note that you can also use `#ids` as mixins.)
 
-**Learn more**
-
-* [More about mixins](#mixins-feature)
-* [Parametric Mixins](#mixins-parametric-feature)
+**[Learn More About Mixins](/features/#mixins-feature)** 
 
 
-### Nested Rules
+# Nesting
 
-LESS gives you the ability to use nesting instead of, or in combination with cascading. Let's say we have the following CSS:
+Less gives you the ability to use nesting instead of, or in combination with cascading. Let's say we have the following CSS:
 
 ```css
 #header {
@@ -114,25 +118,24 @@ You can also bundle pseudo-selectors with your mixins using this method. Here's 
 }
 ```
 
-**See also**
+**[Learn More About Parent Selectors](/features/#parent-selectors-feature)** 
 
-* [Parent Selectors](#parent-selectors-feature)
 
-### Nested Directives and Bubbling
+## Nested Directives and Bubbling
 
-Directives such as `media` or `keyframe` can be nested in the same way as selectors. Directive is placed on top and relative order against other elements inside the same ruleset remains unchanged. This is called bubbling.
+Directives such as `@media` or `@supports` can be nested in the same way as selectors. The directive is placed on top and relative order against other elements inside the same ruleset remains unchanged. This is called bubbling.
 
-Conditional directives e.g. `@Media`, `@supports` and `@document` have also selectors copied into their bodies:
 ```less
-.screen-color {
-  @media screen {
-    color: green;
-    @media (min-width: 768px) {
-      color: red;
+.component {
+  width: 300px;
+  @media (min-width: 768px) {
+    width: 600px;
+    @media  (min-resolution: 192dpi) {
+      background-image: url(/img/retina2x.png);
     }
   }
-  @media tv {
-    color: black;
+  @media (min-width: 1280px) {
+    width: 800px;
   }
 }
 
@@ -140,49 +143,28 @@ Conditional directives e.g. `@Media`, `@supports` and `@document` have also sele
 outputs:
 
 ```css
-@media screen {
-  .screen-color {
-    color: green;
+.component {
+  width: 300px;
+}
+@media (min-width: 768px) {
+  .component {
+    width: 600px;
   }
 }
-@media screen and (min-width: 768px) {
-  .screen-color {
-    color: red;
+@media (min-width: 768px) and (min-resolution: 192dpi) {
+  .component {
+    background-image: url(/img/retina2x.png);
   }
 }
-@media tv {
-  .screen-color {
-    color: black;
+@media (min-width: 1280px) {
+  .component {
+    width: 800px;
   }
 }
 ```
 
-Remaining non-conditional directives, for example `font-face` or `keyframes`, are bubbled up too. Their bodies do not change:
-```less
-#a {
-  color: blue;
-  @font-face {
-    src: made-up-url;
-  }
-  padding: 2 2 2 2;
-}
-```
 
-outputs:
-
-```less
-#a {
-  color: blue;
-}
-@font-face {
-  src: made-up-url;
-}
-#a {
-  padding: 2 2 2 2;
-}
-```
-
-### Operations
+# Operations
 
 Arithmetical operations `+`, `-`, `*`, `/` can operate on any number, color or variable. If it is possible, mathematical operations take units into account and convert numbers before adding, subtracting or comparing them. The result has leftmost explicitly stated unit type. If the conversion is impossible or not meaningful, units are ignored. Example of impossible conversion: px to cm or rad to %.
 
@@ -200,43 +182,47 @@ Arithmetical operations `+`, `-`, `*`, `/` can operate on any number, color or v
 @other: @base + @filler; // result is 15%
 ```
 
-Multiplication and division do not convert numbers. It would not be meaningful in most cases - a length multiplied by a length gives an area and css does not support specifying areas. LESS will operate on numbers as they are and assign explicitly stated unit type to the result.
+Multiplication and division do not convert numbers. It would not be meaningful in most cases - a length multiplied by a length gives an area and css does not support specifying areas. Less will operate on numbers as they are and assign explicitly stated unit type to the result.
 
 ```less
 @base: 2cm * 3mm; // result is 6cm
 ```
 
-Colors are split into their red, green, blue and alpha dimensions. The operation is applied to each color dimension separately. E.g., if the user added two colors, then the green dimension of the result is equal to sum of green dimensions of input colors. If the user multiplied a color by a number, each color dimension will get multiplied.
-
-Note: arithmetic operation on alpha is not defined, because math operation on colors do not have standard agreed upon meaning. Do not rely on current implemention as it [may change](https://github.com/less/less.js/issues/2694) in later versions.
-
-An operation on colors always produces valid color. If some color dimension of the result ends up being bigger than `ff` or smaller than `00`, the dimension is rounded to either `ff` or `00`. If alpha ends up being bigger than `1.0` or smaller than `0.0`, the alpha is rounded to either `1.0` or `0.0`.
+You can also do arithemtic on colors:
 
 ```less
 @color: #224488 / 2; //results in #112244
 background-color: #112244 + #111; // result is #223355
 ```
 
-### Escaping
+However, you may find Less's [Color Functions](/functions/#color-operations) more useful.
 
-Escaping allows you to use any arbitrary string as property or variable value. Anything inside `~"anything"` or `~'anything'` is used as is with no changes except [interpolation](#variables-feature-variable-interpolation).
+
+# Escaping
+
+Escaping allows you to use any arbitrary string as property or variable value. Anything inside `~"anything"` or `~'anything'` is used as is with no changes except [interpolation](/features/#variables-feature-variable-interpolation).
 
 ```less
-.weird-element {
-  content: ~"^//* some horrible but needed css hack";
+@min768: ~"(min-width: 768px)";
+.element {
+  @media @min768 {
+    font-size: 1.2rem;
+  }
 }
 ```
 
 results in:
 ```less
-.weird-element {
-  content: ^//* some horrible but needed css hack;
+@media (min-width: 768px) {
+  .element {
+    font-size: 1.2rem;
+  }
 }
 ```
 
-### Functions
+# Functions
 
-LESS provides a variety of functions which transform colors, manipulate strings and do maths. They are documented fully in the function reference.
+Less provides a variety of functions which transform colors, manipulate strings and do maths. They are documented fully in the [function reference](/functions/).
 
 Using them is pretty straightforward. The following example uses percentage to convert 0.5 to 50%, increases the saturation of a base color by 5% and then sets the background color to one that is lightened by 25% and spun by 8 degrees:
 
@@ -251,15 +237,17 @@ Using them is pretty straightforward. The following example uses percentage to c
 }
 ```
 
+**[See: Function Reference](/functions/)** 
 
-### Namespaces and Accessors
+
+# Namespaces and Accessors
 
 (Not to be confused with [CSS `@namespace`](http://www.w3.org/TR/css3-namespace/) or [namespace selectors](http://www.w3.org/TR/css3-selectors/#typenmsp)).
 
-Sometimes, you may want to group your mixins, for organizational purposes, or just to offer some encapsulation. You can do this pretty intuitively in Less, say you want to bundle some mixins and variables under `#bundle`, for later reuse or distributing:
+Sometimes, you may want to group your mixins, for organizational purposes, or just to offer some encapsulation. You can do this pretty intuitively in Less.Say you want to bundle some mixins and variables under `#bundle`, for later reuse or distributing:
 
 ```less
-#bundle {
+#bundle() {
   .button {
     display: block;
     border: 1px solid black;
@@ -278,15 +266,16 @@ Now if we want to mixin the `.button` class in our `#header a`, we can do:
 ```less
 #header a {
   color: orange;
-  #bundle > .button;
+  #bundle > .button;  // can also be written as #bundle.button
 }
 ```
+Note: append `()` to your namespace if you don't want it to appear in your CSS output i.e. `#bundle .tab`.
 
-Note that variables declared within a namespace will be scoped to that namespace only and will not be available outside of the scope via the same syntax that you would use to reference a mixin (`#Namespace > .mixin-name`). So, for example, you can't do the following: (`#Namespace > @this-will-not-work`).
+Also note that variables declared within a namespace will be scoped to that namespace only and will not be available outside of the scope via the same syntax that you would use to reference a mixin (`#Namespace > .mixin-name`). So, for example, you can't do the following: `#Namespace > @this-will-not-work`.
 
-### Scope
+# Scope
 
-Scope in LESS is very similar to that of programming languages. Variables and mixins are first looked for locally, and if they aren't found, the compiler will look in the parent scope, and so on.
+Scope in Less is very similar to that of programming languages. Variables and mixins are first looked for locally, and if they aren't found, the compiler will look in the parent scope, and so on.
 
 ```less
 @var: red;
@@ -299,7 +288,7 @@ Scope in LESS is very similar to that of programming languages. Variables and mi
 }
 ```
 
-Variables and mixins do not have to be declared before being used so the following LESS code is identical to the previous example:
+Mixin and variable definitions do not have to be placed before a line where they are referenced. So the following Less code is identical to the previous example:
 
 ```less
 @var: red;
@@ -312,25 +301,23 @@ Variables and mixins do not have to be declared before being used so the followi
 }
 ```
 
-**See also**
-
-* [Lazy Loading](#variables-feature-lazy-loading)
+**[See also: Lazy Loading](/features/#variables-feature-lazy-loading)**
 
 
-### Comments
+# Comments
 
 Both block-style and inline comments may be used:
 
 ```less
-/* One hell of a block
-style comment! */
+/* One heck of a block
+ * style comment! */
 @var: red;
 
 // Get in line!
 @var: white;
 ```
 
-### Importing
+# Importing
 
 Importing works pretty much as expected. You can import a `.less` file, and all the variables in it will be available. The extension is optionally specified for `.less` files.
 
@@ -338,3 +325,5 @@ Importing works pretty much as expected. You can import a `.less` file, and all 
 @import "library"; // library.less
 @import "typo.css";
 ```
+
+**[Learn More About Imports](/features/#import-directives-feature)** 

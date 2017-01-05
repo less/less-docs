@@ -1,4 +1,4 @@
-> Allow wrapping of a css block, defined in a mixin
+> Assign a ruleset to a variable
 
 Released [v1.7.0]({{ less.master.url }}CHANGELOG.md)
 
@@ -92,7 +92,7 @@ which will output
 }
 ```
 
-A detached ruleset call unlocks (returns) all its mixins into caller the same way as mixin calls do. However, it does NOT return variables.
+A detached ruleset call unlocks (returns) all its mixins into caller the same way as mixin calls do. However, it does **not** return variables.
 
 Returned mixin:
 ````less

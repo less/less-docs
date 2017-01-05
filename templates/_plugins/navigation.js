@@ -44,7 +44,7 @@ module.exports = function navigationPlugin(params, callback) {
 
     headings.map(function (i, e) {
         var $e = $(e);
-        var text = $e.text().trim();
+        var text = $e.html().trim();
         var link = $e.attr('id');
         var level = parseInt(e.name.replace(/h/gi, ''), 10);
         var node = {
@@ -124,10 +124,10 @@ module.exports = function navigationPlugin(params, callback) {
         // Adjust heading
         $(this).removeAttr('id').addClass('docs-heading');
 
-        if ($(this).prev().children().hasClass('source-link')) {
-            var sourceLink = $(this).prev().children('.source-link');
-            $(this).append(sourceLink);
-        }
+        // if ($(this).prev().children().hasClass('source-link')) {
+        //     var sourceLink = $(this).prev().children('.source-link');
+        //     $(this).append(sourceLink);
+        // }
     });
 
     params.content = $.html();

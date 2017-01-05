@@ -52,10 +52,10 @@ less = {
 <script src="less.min.js"></script>
 ```
 
-List of LESS Plugins
+List of Less Plugins
 --------------------
 
-> Available LESS plugins. Find more at the [NPM Registry](https://www.npmjs.com/search?q=%22less-plugin%22)
+> Available Less plugins. Find more at the [NPM Registry](https://www.npmjs.com/search?q=%22less-plugin%22)
 
 <!-- TODO: 
   * titles of the wrapped-up libraries/frameworks should be links 
@@ -71,8 +71,8 @@ List of LESS Plugins
 | [clean-css](https://github.com/less/less-plugin-clean-css) | Compress/minify
 | [CSSWring](https://github.com/bassjobsen/less-plugin-csswring) | Compress/minify
 | [css-flip](https://github.com/bassjobsen/less-plugin-css-flip) | Generate left-to-right (LTR) or right-to-left (RTL) CSS
-| [functions](https://github.com/seven-phases-max/less-plugin-functions) | Write custom LESS functions in LESS itself
-| [glob](https://github.com/just-boris/less-plugin-glob) | Globbing support in LESS imports
+| [functions](https://github.com/seven-phases-max/less-plugin-functions) | Write custom Less functions in Less itself
+| [glob](https://github.com/just-boris/less-plugin-glob) | Globbing support in Less imports
 | [group-css-media-queries](https://github.com/bassjobsen/less-plugin-group-css-media-queries) | Group CSS media queries
 | [inline-urls](https://github.com/less/less-plugin-inline-urls) | Convert `url()` to a call to `data-uri()`
 | [lesshint](https://github.com/lesshint/lesshint) | Lint your Less
@@ -103,7 +103,7 @@ List of LESS Plugins
 For Plugin Authors
 --------------------------
 
-LESS supports some entry points that allow an author to integrate with less. We may add some more in the future.
+Less supports some entry points that allow an author to integrate with less. We may add some more in the future.
 
 The plugin itself has a very simple signature, like this
 ```js

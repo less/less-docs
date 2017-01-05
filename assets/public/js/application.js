@@ -25,7 +25,7 @@
 
     $body.scrollspy({
       target: '.sidebar',
-      offset: 20 // required to select the right thing. if this is smaller then you are at the top of one section
+      offset: 40 // required to select the right thing. if this is smaller then you are at the top of one section
                  // but the next section is highlighted
     });
 

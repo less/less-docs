@@ -77,7 +77,7 @@ Using comma as mixin separator makes it impossible to create comma separated lis
 * use dummy semicolon to create mixin call with one argument containing comma separated css list: `.name(1, 2, 3;)`,
 * comma separated default value: `.name(@param1: red, blue;)`.
 
-It is legal to define multiple mixins with the same name and number of parameters. LESS will use properties of all that can apply. If you used the mixin with one parameter e.g. `.mixin(green);`, then properties of all mixins with exactly one mandatory parameter will be used:
+It is legal to define multiple mixins with the same name and number of parameters. Less will use properties of all that can apply. If you used the mixin with one parameter e.g. `.mixin(green);`, then properties of all mixins with exactly one mandatory parameter will be used:
 
 ```less
 .mixin(@color) {

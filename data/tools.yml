@@ -1,0 +1,31 @@
+# =============================================
+# PUBLISHED
+# =============================================
+# This file is only needed to ensure that the
+# sections build in a specific order.
+
+
+# The base path for features docs. Makes this easier
+# to update without having to change each path.
+base: content/tools
+
+published:
+  online-less-compilers:
+    title: Online Less Compilers
+    files: <%= tools.base %>/online-less-compilers.md
+
+  guis-for-less:
+    title: GUIs for Less
+    files: <%= tools.base %>/guis-for-less.md
+
+  editors-and-plugins:
+    title: Editors and Plugins
+    files: <%= tools.base %>/editors-and-plugins.md
+
+  third-party-compilers:
+    title: Third Party Compilers
+    files: <%= tools.base %>/third-party-compilers.md
+
+  frameworks-using-less:
+    title: Frameworks Using Less
+    files: <%= tools.base %>/frameworks-using-less.md

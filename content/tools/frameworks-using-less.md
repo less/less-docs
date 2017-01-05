@@ -38,7 +38,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [adaptGrid](https://github.com/amazingSurge/adaptGrid) | |
 | [Fluidable](http://fluidable.com/) | |
 | [Golden Grid System](http://goldengridsystem.com/) | |
-| [LESS Zen Grid](https://github.com/bassjobsen/LESS-Zen-Grid) | |
+| [Less Zen Grid](https://github.com/bassjobsen/LESS-Zen-Grid) | |
 | [Order.less](https://github.com/chromice/order.less) | |
 | [responsibly](https://github.com/BuschFunker/responsibly) | |
 | [Responsive Boilerplate](http://responsiveboilerplate.com/) | |
@@ -50,22 +50,22 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [3L](http://mateuszkocz.github.io/3l/) | Mixins library |
 | [animate](https://github.com/joshuapekera/animate) | Library of CSS3 keyframe animations |
 | [Clearless](http://clearleft.github.io/clearless/) | Collection of mixins |
-| [Css3LessPlease](http://chrsr.com/css3lessplease/) | Conversion of css3please.com to LESS mixins |
+| [Css3LessPlease](http://chrsr.com/css3lessplease/) | Conversion of css3please.com to Less mixins |
 | [CssEffects](http://adodson.com/css-effects/) | Collection of CSS style effects |
 | [Cssowl](http://cssowl.owl-stars.com/) | Mixin library |
 | [cube.less](https://github.com/sparanoid/cube.less) | Animated 3D cube using only CSS |
 | [est](https://github.com/ecomfe/est/) | Mixin library |
 | [Hexagon](http://db0company.github.io/css-hexagon/) | Generate CSS hexagons with custom size and color |
 | [homeless](https://github.com/pixelass/homeless) | Mixin library |
-| [LESS Elements](http://lesselements.com/) | Set of mixins |
-| [LESS Hat](http://lesshat.com/) | Mixins library |
+| [Less Elements](http://lesselements.com/) | Set of mixins |
+| [Less Hat](http://lesshat.com/) | Mixins library |
 | [lessley](https://github.com/pixelass/lessley) | A jasmine like testing suite written in pure less |
 | [Lessmore](https://github.com/belyan/lessmore) | Mixins library. Cross-browser support for the CSS3 features and more |
 | [LESS-bidi](https://github.com/danielkatz/less-bidi) | Set of mixins for creating bi-directional styling |
 | [LESS-Mix](http://denysdovhan.github.io/LESS-Mix/) | Mixins library |
-| [media-query-to-type](https://github.com/himedlooff/media-query-to-type) | Media Queries to Media Types with LESS |
+| [media-query-to-type](https://github.com/himedlooff/media-query-to-type) | Media Queries to Media Types with Less |
 | [More-Colors.less](http://jasonrobb.github.io/More-Colors.less/) | Variables for easier color manipulation while you design in the browser |
-| [more-less](https://github.com/roelvanhintum/More-Less) | Mixin lib supporting LESS 1.7 |
+| [more-less](https://github.com/roelvanhintum/More-Less) | Mixin lib supporting Less 1.7 |
 | [More.less](https://github.com/weinitz/More.less) | Mixins, animations, shapes and more |
 | [more-or-less](https://github.com/pixelass/more-or-less) | for-loops and other functions + css3 mixins |
 | [normalize.less](https://github.com/segundofdez/normalize.less) | Modularized famous normalize.css using less |

@@ -16,7 +16,7 @@ Also see: [GUIs for Less.js](#guis-for-less)
 * [Brackets][brackets] (built-in syntax highlighting, [several extensions][brackets-ext] for compilation)
 * [CodeLobster][codelobster] (built-in [syntax highlighting][codelobster-sh])
 * [KineticWing IDE][kineticwing] (built-in [support][kineticwing-less])
-* [nodeMirror](https://www.npmjs.org/package/node-mirror) (built-in support, built-in HTML/CSS/LESS preview)
+* [nodeMirror](https://www.npmjs.org/package/node-mirror) (built-in support, built-in HTML/CSS/Less preview)
 * [HTML-Kit Tools](http://www.htmlkit.com/tools/) (built-in support)
 * [Dreamweaver CC](http://www.adobe.com/products/dreamweaver) (built-in support)
 
@@ -29,12 +29,12 @@ Also see: [GUIs for Less.js](#guis-for-less)
 
 ### [Eclipse](http://www.eclipse.org/)
 
-* [Eclipse LESS Plugin](http://www.normalesup.org/~simonet/soft/ow/eclipse-less.en.html) by Vincent Simonet
+* [Eclipse Less Plugin](http://www.normalesup.org/~simonet/soft/ow/eclipse-less.en.html) by Vincent Simonet
 * [Transpiler Plugin](https://github.com/gossi/eclipse-transpiler-plugin) by Thomas Gossmann
  
 ### [Komodo Edit/IDE](http://komodoide.com/)
 
- * [Komodo LESS Compiler](https://github.com/babobski/Komodo-LESS-Compiler) by Bob de Haas
+ * [Komodo Less Compiler](https://github.com/babobski/Komodo-LESS-Compiler) by Bob de Haas
 
 ### [Visual Studio](http://www.visualstudio.com/)
 
@@ -45,7 +45,7 @@ Also see: [GUIs for Less.js](#guis-for-less)
 
 ### [Dreamweaver](http://www.adobe.com/products/dreamweaver.html)
 
-* [DMXzone LESS CSS Compiler][dmx]
+* [DMXzone Less CSS Compiler][dmx]
 
 ### [Notepad++ 6.x][Npp]
 

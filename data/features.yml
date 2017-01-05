@@ -14,55 +14,59 @@ published:
   features-overview:
     title: Overview
     lead:  Simple overview of the basic features
-    files: content/features-overview.md
+    files: <%= features.base %>/overview.md
 
   variables:
     title: Variables
     files: <%= features.base %>/variables.md
 
+  parent-selectors:
+    title: Parent Selectors
+    files: <%= features.base %>/parent-selectors.md
+
   extend:
     title: Extend
     files: <%= features.base %>/extend.md
-
-  mixins:
-    title: Mixins
-    files: <%= features.base %>/mixins.md
-
-  mixins-parametric:
-    title: Parametric Mixins
-    files: <%= features.base %>/mixins-parametric.md
-
-  mixins-as-functions:
-    title: Mixins as Functions
-    files: <%= features.base %>/mixins-as-functions.md
-
-  detached-rulesets:
-    title: Passing Rulesets to Mixins
-    files: <%= features.base %>/detached-rulesets.md
-
-  import-directives:
-    title: Import Directives
-    files: <%= features.base %>/import-directives.md
-
-  mixin-guards:
-    title: Mixin Guards
-    files: <%= features.base %>/mixin-guards.md
-
-  css-guards:
-    title: CSS Guards
-    files: <%= features.base %>/css-guards.md
-
-  loops:
-    title: Loops
-    files: <%= features.base %>/loops.md
 
   merge:
     title: Merge
     files: <%= features.base %>/merge.md
 
-  parent-selectors:
-    title: Parent Selectors
-    files: <%= features.base %>/parent-selectors.md
+  mixins:
+    title: Mixins
+    files: <%= features.base %>/mixins.md
+    subs:
+      mixins-parametric:
+        title: Parametric Mixins
+        files: <%= features.base %>/mixins-parametric.md
+
+      mixins-as-functions:
+        title: Return values from mixins
+        files: <%= features.base %>/mixins-as-functions.md
+
+      loops:
+        title: Recursive mixins
+        files: <%= features.base %>/mixin-loops.md
+
+      mixin-guards:
+        title: Mixin Guards
+        files: <%= features.base %>/mixin-guards.md
+
+  css-guards:
+    title: CSS Guards
+    files: <%= features.base %>/css-guards.md
+
+  detached-rulesets:
+    title: Detached Rulesets
+    files: <%= features.base %>/detached-rulesets.md
+
+  import-directives:
+    title: "@import Directives"
+    files: <%= features.base %>/import-directives.md
+
+  plugin-directives:
+    title: "@plugin Directives <small>(NEW!)</small>"
+    files: <%= features.base %>/plugin-directives.md
 
 
 # =============================================
