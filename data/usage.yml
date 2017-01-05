@@ -20,7 +20,7 @@ published:
     files: <%= usage.base %>/using-less-in-the-browser.md
 
   plugins:
-    title: Plugins
+    title: Global Plugins
     files: <%= usage.base %>/plugins.md
 
   programmatic-usage:
