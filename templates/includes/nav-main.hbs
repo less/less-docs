@@ -20,6 +20,26 @@
         </li>
         {{/is}}
 
+        {{#is slug 'usage'}}
+        <li class="active">
+          <span>Using Less.js</span>
+        </li>
+        {{else}}
+        <li>
+          <a href="{{rel 'usage'}}/">Using Less.js</a>
+        </li>
+        {{/is}}
+
+        {{#is slug 'functions'}}
+        <li class="active">
+          <span>Functions</span>
+        </li>
+        {{else}}
+        <li>
+          <a href="{{rel 'functions'}}/">Functions</a>
+        </li>
+        {{/is}}
+
         {{#is slug 'features'}}
         <li class="active">
           <span>In-Depth Guide</span>
@@ -40,26 +60,6 @@
           <a href="{{rel 'plugins'}}/">Plugins</a>
         </li>
         {{/is}}        
-        {{/is}}
-
-        {{#is slug 'functions'}}
-        <li class="active">
-          <span>Functions</span>
-        </li>
-        {{else}}
-        <li>
-          <a href="{{rel 'functions'}}/">Functions</a>
-        </li>
-        {{/is}}
-
-        {{#is slug 'usage'}}
-        <li class="active">
-          <span>Using Less.js</span>
-        </li>
-        {{else}}
-        <li>
-          <a href="{{rel 'usage'}}/">Using Less.js</a>
-        </li>
         {{/is}}
 
         {{#is slug 'tools'}}
