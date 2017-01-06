@@ -63,6 +63,11 @@ List of Less Plugins
   * invent something to use instead of `import Bla-bla`, `import Blee-bloo`
 -->
 
+#### Preprocessors
+| | |
+|---|---|
+| [sass2less](https://github.com/mediafreakch/less-plugin-sass2less) | Convert SASS to LESS or import SASS files into your .less files and re-use varialbes, mixins and more 
+
 #### Postprocessor/Feature Plugins
 | | |
 |---|---|
