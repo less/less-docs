@@ -78,16 +78,17 @@ h1, h2, h3 {
 
 // Offset
 // ----------------------------------------------
-// anchor targets are invisble and sit the specified
+// anchor targets are invisible and set the specified
 // distance above headings and anchors. This is what
-// ensures that our headings won't overlap the navar.
-// If you done require clickable anchors, you can
+// ensures that our headings won't overlap the navbar.
+// If you require clickable anchors, you can
 // achieve this with fewer classes and less HTML
 
 .anchor-target {
   position: absolute;
   margin-top: -(@anchor-distance);
   padding-top: @anchor-distance;
+  width: 2px;
 }
 
 .anchor-target-small {

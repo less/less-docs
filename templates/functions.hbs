@@ -8,7 +8,7 @@ lead: Function reference
 ================================================== --}}
 
 <div class="docs-section">
-  <div class="page-header">
+  <div class="">
     <h1 id="functions-overview">Functions</h1>
   </div>
   <p class="lead">Built-in functions supported by Less.</p>
@@ -19,9 +19,8 @@ lead: Function reference
 {{#each functions.published}}
   <!-- {{title}} -->
   <div class="docs-section">
-    <div class="page-header">
-      <h1 id="{{@key}}">{{title}}</h1>
-    </div>
+    
+    <h1 id="{{@key}}">{{title}}</h1>
 
     {{#each (expand files)}}
     <div class="section-content">

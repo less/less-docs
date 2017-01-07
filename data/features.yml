@@ -61,12 +61,12 @@ published:
     files: <%= features.base %>/detached-rulesets.md
 
   import-directives:
-    title: "@import Directives"
-    files: <%= features.base %>/import-directives.md
+    title: "@import At-Rules"
+    files: <%= features.base %>/imports.md
 
   plugin-directives:
-    title: "@plugin Directives <small>(NEW!)</small>"
-    files: <%= features.base %>/plugin-directives.md
+    title: "@plugin At-Rules <small>(NEW!)</small>"
+    files: <%= features.base %>/plugins.md
 
 
 # =============================================

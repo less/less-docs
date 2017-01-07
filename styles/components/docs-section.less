@@ -3,6 +3,9 @@
 // --------------------------------------------------
 
 
+.docs-container {
+  margin-top: -50px;
+}
 // Space things out
 .docs-section {
   margin-bottom: 40px;
@@ -57,11 +60,14 @@
 
 h1[id] {
   margin-top: 0;
-  padding-top: 20px;
 }
 
 // Make headings stand out more, give some space
 .docs-section {
+  h1:first-child {
+    margin-top: 40px;
+  }
+
   font-family: @font-family-sans-serif;
   p {
     font-size: @font-size-large - 3;
@@ -92,6 +98,8 @@ h1[id] {
   td {
     @g: 10px;
     padding: 0 @g (@g / 2) 0;
+    vertical-align: top;
+    min-width: 150px;
   }
   
   img {

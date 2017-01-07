@@ -53,6 +53,14 @@ Or for brevity they can be set as attributes on the script and link tags:
 <script src="less.js" data-poll="1000" data-relative-urls="false"></script>
 <link data-dump-line-numbers="all" data-global-vars='{ "myvar": "#ddffee", "mystr": "\"quoted\"" }' rel="stylesheet/less" type="text/css" href="less/styles.less">
 ```
+<!-- 
+  Which attributes go on which tag?? And aren't they in the wrong order?
+  Should this just be <script src="less.js" data-less="{ [options] }" /> ? 
+  Seems like that would be way easier.
+
+  Declaring globals like "less = { }" is seen as bad practice in modern web development.
+  Wonder if it's time to re-think this soon.
+-->
 
 ### Tips
 
@@ -113,7 +121,7 @@ Set options in a global `less` object **before** loading the less.js script:
     dumpLineNumbers: "comments",
     relativeUrls: false,
     globalVars: {
-      var1: '"string value"',
+      var1: '"quoted value"',
       var2: 'regular value'
     },
     rootpath: ":/a.com/"

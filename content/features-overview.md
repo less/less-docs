@@ -121,9 +121,9 @@ You can also bundle pseudo-selectors with your mixins using this method. Here's 
 **[Learn More About Parent Selectors](/features/#parent-selectors-feature)** 
 
 
-## Nested Directives and Bubbling
+## Nested At-Rules and Bubbling
 
-Directives such as `@media` or `@supports` can be nested in the same way as selectors. The directive is placed on top and relative order against other elements inside the same ruleset remains unchanged. This is called bubbling.
+At-rules such as `@media` or `@supports` can be nested in the same way as selectors. The at-rule is placed on top and relative order against other elements inside the same ruleset remains unchanged. This is called bubbling.
 
 ```less
 .component {
@@ -326,4 +326,4 @@ Importing works pretty much as expected. You can import a `.less` file, and all 
 @import "typo.css";
 ```
 
-**[Learn More About Imports](/features/#import-directives-feature)** 
+**[Learn More About Imports](/features/#imports-feature)** 

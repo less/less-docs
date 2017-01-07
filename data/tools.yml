@@ -23,7 +23,7 @@ published:
     files: <%= tools.base %>/guis-for-less.md
 
   editors-and-plugins:
-    title: Editors and Plugins
+    title: Editors and Editor Plugins
     files: <%= tools.base %>/editors-and-plugins.md
 
   third-party-compilers:
