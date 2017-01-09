@@ -170,14 +170,9 @@ functions.add('retrieve', function(val) {
 }
 ```
 
-## Registering a plugin globally 
-(TODO: rewrite with UMD spec)
+## The Less.js Plugin Object
 
-Plugins can optionally register themselves in the global scope (even if called within a block scope) by exporting an object with a specific signature. All properties of this object are optional, and will only be called if present. It can be returned with a `registerPlugin({...})` call, or you can use the CommonJS `module.exports = {...}` pattern.
-
-_Note: while you can use `module.exports`, other Node.js functionality like `require()` is not provided by Less.js. It's recommended that plugin authors create single-file modules (or single-file builds) of plugins for cross-platform functionality._
-
-The exported object can have any (or none) of these properties.
+A Less.js plugin should export an object that has one or more of these properties.
 ```js
 {
     /* Called immediately after the plugin is 
@@ -195,14 +190,14 @@ The exported object can have any (or none) of these properties.
     /* Passes an arbitrary string to your plugin 
      * e.g. @plugin (args) "file";
      * This string is not parsed for you, 
-     * so it can contain anything */
+     * so it can contain (almost) anything */
     setOptions: function(argumentString) { },
 
     /* Set a minimum Less compatibility string
      * You can also use an array, as in [3, 0] */
     minVersion: ['3.0'],
 
-    /* Used for lessc plugins only, to explain 
+    /* Used for lessc only, to explain 
      * options in a Terminal */
     printUsage: function() { },
 
