@@ -148,25 +148,30 @@ _Note: while you can use `module.exports`, other Node.js functionality like `req
 The exported object can have any (or none) of these properties.
 ```js
 {
-    /* Called immediately after the plugin is first imported, only once. */
+    /* Called immediately after the plugin is 
+     * first imported, only once. */
     install: function(less, pluginManager) { },
 
     /* Called for each instance of your @plugin. */
     use: function(context) { },
 
-    /* Called for each instance of your @plugin, when rules are being evaluated.
+    /* Called for each instance of your @plugin, 
+     * when rules are being evaluated.
      * It's just later in the evaluation lifecycle */
     eval: function(context) { },
 
-    /* Passes an arbitrary string to your plugin e.g. @plugin (args) "file";
-     * This string is not parsed for you, so it can contain anything */
+    /* Passes an arbitrary string to your plugin 
+     * e.g. @plugin (args) "file";
+     * This string is not parsed for you, 
+     * so it can contain anything */
     setOptions: function(argumentString) { },
 
     /* Set a minimum Less compatibility string
      * You can also use an array, as in [3, 0] */
     minVersion: ['3.0'],
 
-    /* Used for lessc plugins only, to explain options in a Terminal */
+    /* Used for lessc plugins only, to explain 
+     * options in a Terminal */
     printUsage: function() { },
 
 }

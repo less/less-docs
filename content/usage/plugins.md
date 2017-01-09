@@ -4,7 +4,7 @@ title: Pre-Loaded Plugins
 
 > Loading plugins before parsing begins in Less.js
 
-While the easiest way to use a plugin is using the [`@plugin` at-rule](/features/#plugins-feature), you can pre-load a global Less.js plugin via the command line or by specifying it in the [Less options](TODO: unified options section).
+While the easiest way to use a plugin is using the [`@plugin` at-rule](../features/#plugin-atrules-feature), you can pre-load a global Less.js plugin via the command line or by specifying it in the [Less options](#less-options).
 
 ## Node.js
 

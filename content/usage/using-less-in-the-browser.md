@@ -62,6 +62,14 @@ Or for brevity they can be set as attributes on the script and link tags:
   Wonder if it's time to re-think this soon.
 -->
 
+
+### Browser Support
+
+Less.js supports all modern browsers (recent versions of Chrome, Firefox, Safari, IE11+, and Edge). While it is possible to use Less on the client side in production, please be aware that there are performance implications for doing so (although the latest releases of Less are quite a bit faster). Also, sometimes cosmetic issues can occur if a JavaScript error occurs. This is a trade off of flexibility vs. speed. For the fastest performance possible for a static web site, we recommend compiling Less on the server side.
+
+There are reasons to use client-side less in production, such as if you want to allow users to tweak variables which will affect the theme and you want to show it to them in real-time - in this instance a user is not worried about waiting for a style to update before seeing it.
+
+
 ### Tips
 
 * Make sure you include your stylesheets **before** the script.
@@ -130,6 +138,10 @@ Set options in a global `less` object **before** loading the less.js script:
 <script src="less.js"></script>
 ```
 
+## Options specific to Less.js in the browser
+
+_For all other options, see [Less Options](#less-options)._
+
 #### async
 Type: `Boolean`
 
@@ -137,16 +149,6 @@ Default: `false`
 
 Whether to request the import files with the async option or not. See [fileAsync](#using-less-in-the-browser-fileasync).
 
-#### dumpLineNumbers
-Type: `String`
-Options: `''`| `'comments'`|`'mediaquery'`|`'all'`
-Default: `''`
-
-When set, this adds source line information to the output css file. This helps you debug where a particular rule came from.
-
-The `comments` option is used for outputting user-understandable content, whilst `mediaquery` is for use with a firefox extension which parses the css and extracts the information.
-
-In the future we hope this option to be superseded by sourcemaps.
 
 #### env
 Type: `String`
@@ -179,24 +181,22 @@ Default: `false`
 
 Whether to request the import asynchronously when in a page with a file protocol.
 
-#### functions
+#### functions (Deprecated - use @plugin)
 Type: `object`
 
 User functions, keyed by name.
 
-e.g.
 ```js
 less = {
     functions: {
         myfunc: function() {
-            return new(less.tree.Dimension)(1);
+            return less.Dimension(1);
         }
     }
 };
 ```
 
 and it can be used like a native Less function e.g.
-
 ```less
 .my-class {
   border-width: unit(myfunc(), px);
@@ -230,36 +230,6 @@ Default: `false`
 
 Optionally adjust URLs to be relative. When false, URLs are already relative to the entry less file.
 
-#### globalVars
-Type: `Object`
-
-Default: `undefined`
-
-List of global variables to be injected into the code. Keys of the object are variables names, values are variables values. Variables of "string" type must explicitly include quotes if needed.
-
-E.g.
-
-```js
-less.globalVars = { myvar: "#ddffee", mystr: "\"quoted\"" };
-```
-
-This option defines a variable that can be referenced by the file. Effectively the declaration is put at the top of your base Less file, meaning it can be used but it also can be overridden if this variable is defined in the file.
-
-#### modifyVars
-Type: `Object`
-
-Default: `undefined`
-
-Same format as [globalVars](#using-less-in-the-browser-globalvars).
-
-As opposed to the [globalVars](#using-less-in-the-browser-globalvars) option, this puts the declaration at the end of your base file, meaning it will override anything defined in your Less file.
-
-#### rootpath
-Type: `String`
-
-Default: `false`
-
-A path to add on to the start of every URL resource.
 
 #### useFileCache
 Type: `Boolean`
@@ -269,9 +239,4 @@ Default: `true` (previously `false` in before v2)
 Whether to use the per session file cache. This caches less files so that you can call modifyVars and it will not retrieve all the less files again.
 If you use the watcher or call refresh with reload set to true, then the cache will be cleared before running.
 
-### Browser Support
-
-Less.js supports all modern browsers (recent versions of Chrome, Firefox, Safari, IE11+, and Edge). While it is possible to use Less on the client side in production, please be aware that there are performance implications for doing so (although the latest releases of Less are quite a bit faster). Also, sometimes cosmetic issues can occur if a JavaScript error occurs. This is a trade off of flexibility vs. speed. For the fastest performance possible for a static web site, we recommend compiling Less on the server side.
-
-There are reasons to use client-side less in production, such as if you want to allow users to tweak variables which will affect the theme and you want to show it to them in real-time - in this instance a user is not worried about waiting for a style to update before seeing it.
 

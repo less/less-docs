@@ -19,16 +19,24 @@ published:
     title: Browser Usage
     files: <%= usage.base %>/using-less-in-the-browser.md
 
+  less-options:
+    title: Less.js Options
+    files: <%= usage.base %>/less-options.md
+
   plugins:
-    title: Global Plugins
+    title: Pre-Loaded Plugins
     files: <%= usage.base %>/plugins.md
 
   programmatic-usage:
     title: Programmatic Usage
     files: <%= usage.base %>/programmatic-usage.md
 
+  api:
+    title: API
+    files: <%= usage.base %>/api.md
+
   developing-less:
-    title: Developing Less
+    title: Contributing to Less.js
     files: <%= usage.base %>/developing-less.md
 
 

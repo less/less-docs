@@ -72,9 +72,9 @@ less.render('.class { width: (1 + 1) }',
     });
 ```
 
-See [Usage](TODO) for more information.
+See [Usage](#less-options) for more information.
 
 ## Third Party Tools
 
-See the [Usage](TODO) section for details of other tools.
+See the [Tools](../tools/) section for details of other tools.
 
