@@ -8,15 +8,42 @@ Using a `@plugin` at-rule is similar to using an `@import` for your `.less` file
 ```less
 @plugin "my-plugin";  // automatically appends .js if no extension
 ```
+Less.js Plugins are (modifed) UMD (universal module definition)-format JavaScript files. The basic guts of a plugin looks like:
+```js
+(function (root, registerPlugin) { 
+    if (typeof define === 'function' && define.amd) { 
+        define([], registerPlugin);
+    } else if (typeof module === 'object' && module.exports) { 
+        module.exports = registerPlugin();
+    } else { 
+        if (!root.less) { root.less = {}; } 
+        if (!root.less.plugins) { root.less.plugins = []; }
+        root.less.plugins.push(registerPlugin());
+    } 
+}(this, function () {
+    // Less.js Plugin object
+    return {
+        install: function(less, pluginManager, functions) {
+            // functions.add('')
+        }
+    };
+}));
+```
+Most of that is boilerplate UMD. The only part you need to modify is the returned plugin object.
 
-What can you do with a plugin? A lot, but let's start with the basics. Let's say you write this:
+_Note: Less.js Plugins should have this signature to be compatible with Less 3.x features moving forward, but Less 3.x is backwards-compatible with existing Less 2.x plugins._
+
+What can you do with a plugin? A lot, but let's start with the basics. We'll focus first on what you might put inside the `install` function. Let's say you write this:
 
 ```js
 // my-plugin.js
-
-functions.add('pi', function() {
-    return Math.PI;
-});
+// ...boilerplate UMD
+install: function(less, pluginManager, functions) {
+    functions.add('pi', function() {
+        return Math.PI;
+    });
+}
+// etc
 ```
 Congratulations! You've written a Less plugin! 
 
@@ -61,14 +88,18 @@ Functions added by a `@plugin` at-rule adheres to Less scoping rules. This is gr
 For instance, say you have 2 plugins from two third-party libraries that both have a function named "foo".
 ```js
 // lib1.js
-functions.add('foo', function() {
-    return "foo";
-});
+// ...
+    functions.add('foo', function() {
+        return "foo";
+    });
+// ...
 
 // lib2.js
-functions.add('foo', function() {
-    return "bar";
-});
+// ...
+    functions.add('foo', function() {
+        return "bar";
+    });
+// ...
 ```
 That's ok! You can choose which library's function creates which output.
 ```less
@@ -139,7 +170,8 @@ functions.add('retrieve', function(val) {
 }
 ```
 
-## Registering a plugin globally
+## Registering a plugin globally 
+(TODO: rewrite with UMD spec)
 
 Plugins can optionally register themselves in the global scope (even if called within a block scope) by exporting an object with a specific signature. All properties of this object are optional, and will only be called if present. It can be returned with a `registerPlugin({...})` call, or you can use the CommonJS `module.exports = {...}` pattern.
 
