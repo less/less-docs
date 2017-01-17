@@ -5,8 +5,8 @@
 - language: Belarusian
   url: http://www.designcontest.com/show/lesscss-be
 
-- language: Chinese
-  url: http://lesscss.net
+- language: 中文 (Chinese)
+  url: http://lesscss.cn
 
 - language: Danish
   url: http://lesscss.dk
@@ -40,6 +40,3 @@
 
 - language: Vietnamese
   url: http://less.eten.vn/
-
-- language: 中文 (Chinese)
-  url: http://less.bootcss.com
