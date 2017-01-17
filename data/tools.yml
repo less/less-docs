@@ -14,17 +14,21 @@ published:
     title: Frameworks Using Less
     files: <%= tools.base %>/frameworks-using-less.md
 
-  online-less-compilers:
-    title: Online Less Compilers
-    files: <%= tools.base %>/online-less-compilers.md
+  editors-and-plugins:
+    title: Editors and Editor Plugins
+    files: <%= tools.base %>/editors-and-plugins.md
+
+  plugins:
+    title: Less.js Plugins
+    files: <%= tools.base %>/plugins.md
 
   guis-for-less:
     title: GUIs for Less
     files: <%= tools.base %>/guis-for-less.md
 
-  editors-and-plugins:
-    title: Editors and Editor Plugins
-    files: <%= tools.base %>/editors-and-plugins.md
+  online-less-compilers:
+    title: Online Less Compilers
+    files: <%= tools.base %>/online-less-compilers.md
 
   third-party-compilers:
     title: Third Party Compilers

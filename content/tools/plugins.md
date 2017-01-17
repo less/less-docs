@@ -8,7 +8,7 @@ title: Less Plugins
 |---|---|
 | [sass2less](https://github.com/mediafreakch/less-plugin-sass2less) | Convert SASS to LESS or import SASS files into your .less files and re-use varialbes, mixins and more 
 
-#### Postprocessor/Feature Plugins
+#### Postprocessor / Feature Plugins
 | | |
 |---|---|
 | [Autoprefixer](https://github.com/less/less-plugin-autoprefix) | Add vendor prefixes
