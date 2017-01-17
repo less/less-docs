@@ -6,10 +6,10 @@ title: Features Overview
 
 Because Less looks just like CSS, learning it is a breeze. Less only makes a few convenient additions to the CSS language, which is one of the reasons it can be learned so quickly.
 
-* _For detailed documentation on Less language features, see [Features](/features/)_
-* _For a list of Less Built-in functions, see [Functions](/functions/)_
-* _For detailed usage instructions, see [Using Less.js](/usage/)_
-* _For third-party tools for Less, see [Tools](/tools/)_
+* _For detailed documentation on Less language features, see [Features](../features/)_
+* _For a list of Less Built-in functions, see [Functions](../functions/)_
+* _For detailed usage instructions, see [Using Less.js](../usage/)_
+* _For third-party tools for Less, see [Tools](../tools/)_
 
 What does Less add to CSS? Here's a quick overview of features.
 
@@ -35,7 +35,7 @@ Outputs:
 }
 ```
 
-**[Learn More About Variables](/features/#variables-feature)** 
+**[Learn More About Variables](../features/#variables-feature)** 
 
 
 # Mixins
@@ -65,7 +65,7 @@ And we want to use these properties inside other rule-sets. Well, we just have t
 
 The properties of the `.bordered` class will now appear in both `#menu a` and `.post a`. (Note that you can also use `#ids` as mixins.)
 
-**[Learn More About Mixins](/features/#mixins-feature)** 
+**[Learn More About Mixins](../features/#mixins-feature)** 
 
 
 # Nesting
@@ -118,7 +118,7 @@ You can also bundle pseudo-selectors with your mixins using this method. Here's 
 }
 ```
 
-**[Learn More About Parent Selectors](/features/#parent-selectors-feature)** 
+**[Learn More About Parent Selectors](../features/#parent-selectors-feature)** 
 
 
 ## Nested At-Rules and Bubbling
@@ -195,12 +195,12 @@ You can also do arithemtic on colors:
 background-color: #112244 + #111; // result is #223355
 ```
 
-However, you may find Less's [Color Functions](/functions/#color-operations) more useful.
+However, you may find Less's [Color Functions](../functions/#color-operations) more useful.
 
 
 # Escaping
 
-Escaping allows you to use any arbitrary string as property or variable value. Anything inside `~"anything"` or `~'anything'` is used as is with no changes except [interpolation](/features/#variables-feature-variable-interpolation).
+Escaping allows you to use any arbitrary string as property or variable value. Anything inside `~"anything"` or `~'anything'` is used as is with no changes except [interpolation](../features/#variables-feature-variable-interpolation).
 
 ```less
 @min768: ~"(min-width: 768px)";
@@ -222,7 +222,7 @@ results in:
 
 # Functions
 
-Less provides a variety of functions which transform colors, manipulate strings and do maths. They are documented fully in the [function reference](/functions/).
+Less provides a variety of functions which transform colors, manipulate strings and do maths. They are documented fully in the [function reference](../functions/).
 
 Using them is pretty straightforward. The following example uses percentage to convert 0.5 to 50%, increases the saturation of a base color by 5% and then sets the background color to one that is lightened by 25% and spun by 8 degrees:
 
@@ -237,7 +237,7 @@ Using them is pretty straightforward. The following example uses percentage to c
 }
 ```
 
-**[See: Function Reference](/functions/)** 
+**[See: Function Reference](../functions/)** 
 
 
 # Namespaces and Accessors
@@ -301,7 +301,7 @@ Mixin and variable definitions do not have to be placed before a line where they
 }
 ```
 
-**[See also: Lazy Loading](/features/#variables-feature-lazy-loading)**
+**[See also: Lazy Loading](../features/#variables-feature-lazy-loading)**
 
 
 # Comments
@@ -326,4 +326,4 @@ Importing works pretty much as expected. You can import a `.less` file, and all 
 @import "typo.css";
 ```
 
-**[Learn More About Imports](/features/#imports-feature)** 
+**[Learn More About Imports](../features/#imports-feature)** 

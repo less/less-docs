@@ -214,4 +214,4 @@ Here are some example repos showing the different plugin types. <!-- TODO: updat
 
 While a `@plugin` call works well for most scenarios, there are times when you might want to load a plugin before parsing starts.
 
-See: [Pre-Loaded Plugins](/usage/#plugins) in the "Using Less.js" section for how to do that.
+See: [Pre-Loaded Plugins](../usage/#plugins) in the "Using Less.js" section for how to do that.
