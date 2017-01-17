@@ -180,7 +180,7 @@ module.exports = function(grunt) {
       },
       assets: {
         files: ['<%= site.assets %>/**/*.*'],
-        tasks: ['clean', 'copy']
+        tasks: ['copy']
       }
     }
   });
@@ -200,7 +200,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('update', ['repos', 'default']);
   grunt.registerTask('design', [
-    'clean',
+    // 'clean',
     'download',
     'copy',
     'less:site',
@@ -212,7 +212,7 @@ module.exports = function(grunt) {
   // Default tasks to be run.
   grunt.registerTask('default', [
     'jshint',
-    'clean',
+    // 'clean',
     'download',
     'copy',
     'less:site',
