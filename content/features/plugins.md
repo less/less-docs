@@ -10,15 +10,13 @@ Using a `@plugin` at-rule is similar to using an `@import` for your `.less` file
 ```
 Less.js Plugins are (modifed) UMD (universal module definition)-format JavaScript files. The basic guts of a plugin looks like:
 ```js
-(function (root, registerPlugin) { 
+(function (root, factory) { 
     if (typeof define === 'function' && define.amd) { 
-        define([], registerPlugin);
+        define([], factory);
     } else if (typeof module === 'object' && module.exports) { 
-        module.exports = registerPlugin();
+        module.exports = factory();
     } else { 
-        if (!root.less) { root.less = {}; } 
-        if (!root.less.plugins) { root.less.plugins = []; }
-        root.less.plugins.push(registerPlugin());
+        (root.LESS_PLUGINS = root.LESS_PLUGINS || []).push(factory());
     } 
 }(this, function () {
     // Less.js Plugin object
