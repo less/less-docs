@@ -103,7 +103,10 @@ compiles into:
 .some .selector div {
   color-1: #008000;
   color-2: #008000;
+  color-3: #008000;
   padding-2: 2;
+  padding-3: 2;
+  margin: 2 2 2 2;
 }
 ```
 
