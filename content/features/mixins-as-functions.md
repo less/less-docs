@@ -62,7 +62,7 @@ overridden:
   .mixin();
 }
 
-@size: globaly-defined-value; // callers parent scope - no protection
+@size: globaly-defined-value; // calls parent scope - no protection
 ````
 
 Results in:
