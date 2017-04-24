@@ -526,7 +526,7 @@ Example - with mixin:
 
 ```less
 .my-inline-block() {
-    display: inline-block;
+  display: inline-block;
   font-size: 0;
 }
 .thing1 {

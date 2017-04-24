@@ -7,20 +7,14 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 |---|---|
 | [1pxdeep](http://rriepe.github.io/1pxdeep/) | Brings designing by relative visual weight, or designing with color schemes, to Bootstrap |
 | [Ant Design](http://github.com/ant-design/ant-design/) | An enterprise-class UI design language and React-based implementation. |
+| [Balloon.css](https://kazzkiq.github.io/balloon.css/) | Simple tooltips made of pure CSS |
 | [Bootflat](http://www.flathemes.com/) | Open source Flat UI KIT based on Bootstrap |
 | [BootPress](https://www.bootpress.org/) | A PHP Framework with a built in Blog and Flat File CMS |
 | [Bootstrap](http://getbootstrap.com/) | Front-end framework for developing responsive, mobile first projects on the web |
-| [Bootstrap a11y theme](https://github.com/bassjobsen/bootstrap-a11y-theme) | Makes web accessibility easier for Bootstrap developers |
 | [Bootswatch](http://bootswatch.com/) | Collection of free themes for Bootstrap |
 | [Cardinal](http://cardinalcss.com/) | Small "mobile first" CSS framework for front-end developers who build responsive web applications |
-| [CSSHórus](https://github.com/firminoweb/csshorus) | Library for development of responsive and mobile websites |
 | [Flat UI Free](http://designmodo.com/flat-free/) | Theme and framework for Bootstrap |
-| [frontsize](https://github.com/vitto/frontsize-less) | CSS front end framework |
-| [InContent](http://brunodsgn.github.io/InContent/) | Image content with description created with CSS |
 | [Ink](http://ink.sapo.pt/) | set of tools for quick development of web interfaces |
-| [JBST](http://jbst.eu/) | Theme framework that can be used as a standalone website builder or to create WordPress themes |
-| [KNACSS](http://www.knacss.com/) | Minimalist, responsive and extensible style sheet to kick-start your HTML / CSS projects |
-| [Kube](http://imperavi.com/kube/) | Minimalistic CSS-framework for developers and designers |
 | [Metro UI CSS](http://metroui.org.ua/) | Set of styles to create a site with an interface similar to Windows 8 |
 | [Pre](http://madscript.com/pre/) | CSS framework |
 | [prelude](https://github.com/amazingSurge/prelude) | Lightweight, responsive and extensible front-end framework |
@@ -28,7 +22,6 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [Semantic UI](http://www.semantic-ui.com/) | UI component framework based around useful principles from natural language
 | [UIkit](http://getuikit.com/) | Lightweight and modular front-end framework for developing web interfaces |
 | [ngBoilerplate](http://bit.ly/ngBoilerplate) | An opinionated kickstarter for AngularJS projects |
-| [less-rail](http://github.com/metaskills/less-rails) | Less.js for Rails |
 | [Wee](https://www.weepower.com) | Lightweight front-end framework for logically building complex, responsive web projects |
 
 ## Grid Systems
