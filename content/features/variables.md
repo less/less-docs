@@ -139,9 +139,11 @@ Which compiles to:
 content: "I am fnord.";
 ```
 
-## Lazy Loading
+<span class="anchor-target" id="variables-feature-lazy-loading"></span>
+<!-- ^ please keep old anchor to not break zillion outer links -->
+## Lazy Evaluation
 
-> Variables are lazy loaded and do not have to be declared before being used.
+> Variables are lazy evaluated and do not have to be declared before being used.
 
 Valid Less snippet:
 
@@ -172,7 +174,7 @@ both compile into:
 }
 ```
 
-When defining a variable twice, the last definition of the variable is used, searching from the current scope upwards. This is similar to css itself where the last property inside a definition is used to determine the value.
+When defining a variable twice, the last definition of the variable is used, searching from the current scope upwards. This is similar to CSS itself where the last property inside a definition is used to determine the value.
 
 For instance:
 
