@@ -3,16 +3,7 @@
   "description": "Official website and documentation for Less / Less.js",
   "version": "0.2.1",
   "homepage": "https://github.com/less/less-docs",
-  "contributors": [
-    {
-      "name": "Luke Page",
-      "url": "https://github.com/lukeapage"
-    },
-    {
-      "name": "Jon Schlinkert",
-      "url": "https://github.com/jonschlinkert"
-    }
-  ],
+  "author": "Less Core Team (http://lesscss.org/about/#team)",
   "repository": {
     "type": "git",
     "url": "https://github.com/less/less-docs.git"
@@ -20,16 +11,7 @@
   "bugs": {
     "url": "https://github.com/less/less-docs/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/less/less-docs/blob/master/LICENSE-MIT"
-    },
-    {
-      "type": "Creative Commons",
-      "url": "https://github.com/less/less-docs/blob/master/LICENSE-CC"
-    }
-  ],
+  "license": "(MIT OR CC-BY-3.0)",
   "main": "Gruntfile.js",
   "devDependencies": {
     "assemble": "^0.4.42",
