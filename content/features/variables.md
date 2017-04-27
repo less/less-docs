@@ -4,7 +4,7 @@ title: Variables
 
 > Control commonly used values in a single location.
 
-## Overview
+### Overview
 
 It's not uncommon to see the same value repeated dozens _if not hundreds of times_ across your stylesheets:
 
@@ -40,12 +40,12 @@ a:hover {
 }
 ```
 
-## Variable Interpolation
+### Variable Interpolation
 
 The examples above focused on using variables to control _values in CSS rules_, but they can also be used in other places as well, such as selector names, property names, URLs and `@import` statements.
 
 
-### Selectors
+#### Selectors
 
 Version: 1.4.0
 
@@ -83,7 +83,7 @@ body {
 }
 ```
 
-### Import Statements
+#### Import Statements
 
 Version: 1.4.0
 
@@ -101,7 +101,7 @@ Example:
 @import "@{themes}/tidal-wave.less";
 ```
 
-### Properties
+#### Properties
 
 Version: 1.6.0
 
@@ -123,7 +123,7 @@ Compiles to:
 }
 ```
 
-## Variable Names
+### Variable Names
 
 It is also possible to define variables with a variable name:
 
@@ -141,7 +141,7 @@ content: "I am fnord.";
 
 <span class="anchor-target" id="variables-feature-lazy-loading"></span>
 <!-- ^ please keep old anchor to not break zillion outer links -->
-## Lazy Evaluation
+### Lazy Evaluation
 
 > Variables are lazy evaluated and do not have to be declared before being used.
 
@@ -201,7 +201,7 @@ Compiles to:
 }
 ```
 
-## Default Variables
+### Default Variables
 
 We sometimes get requests for default variables - an ability to set a variable only if it is not already set. This feature is not required because you can easily override a variable by putting the definition afterwards.
 

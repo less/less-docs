@@ -2,7 +2,7 @@
 
 The `merge` feature allows for aggregating values from multiple properties into a comma or space separated list under a single property. `merge` is useful for properties such as background and transform.
 
-## Comma
+### Comma
 
 > Append property value with comma
 
@@ -27,7 +27,7 @@ Outputs
 }
 ```
 
-## Space
+### Space
 
 > Append property value with space
 
