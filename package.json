@@ -41,7 +41,7 @@
     "handlebars-helper-datetime": "^0.1.0",
     "handlebars-helper-feed": "^0.1.1",
     "handlebars-helper-slugify": "^0.2.0",
-    "highlight.js": "^8.2.0",
+    "highlight.js": "^9.1.1",
     "lodash": "^2.4.1",
     "marked": "^0.3.2",
     "marked-extras": "^0.2.4",
