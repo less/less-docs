@@ -148,7 +148,9 @@ Which compiles to:
 }
 ```
 
-## Lazy Loading
+<span class="anchor-target" id="variables-feature-lazy-loading"></span>
+<!-- ^ please keep old anchor to not break zillion outer links -->
+## Lazy Evaluation
 
 > Variables do not have to be declared before being used.
 

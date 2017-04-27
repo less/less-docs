@@ -1,5 +1,5 @@
 /*
-    Code coloring (minimalistic (sort of) scheme)
+    Minimalistic code coloring scheme
     Assuming we only highlight the following languages:
     less, css, html, js and "generic shell"
 */
@@ -30,7 +30,7 @@ pre code {
 .-(number,        @cyan);
 .-(hexcolor,      @cyan);
 .-(literal,       @cyan);
-.-(attribute,     @blue);
+.-(attribute,     @blue); // <- incl. css property
 // .-(function,   @green);
 .-(attr_selector, @orange);
 .-(attr,          @orange);
@@ -40,8 +40,8 @@ pre code {
 
 .lang-less {
     // Less specific coloring:
-    .-(keyword,  @blue-dark);
-    .-(built_in, @brown);
+    .-(keyword,  @blue-dark); // <- all :extend &
+    .-(built_in, @brown);     // <- inline js
 }
 
 .-(@name, @color) {
