@@ -64,8 +64,8 @@ If source is set to `-' (dash or hyphen-minus), input is read from stdin.
 # compile bootstrap.less to bootstrap.css
 $ lessc bootstrap.less bootstrap.css
 
-# compile bootstrap.less to bootstrap.css and minify (compress) the result
-$ lessc -x bootstrap.less bootstrap.css
+# compile bootstrap.less to bootstrap.css with strict math expressions
+$ lessc -sm=on bootstrap.less bootstrap.css
 ```
 
 ### Options
@@ -160,15 +160,19 @@ lessc --version
 
 #### Compress
 
+*Deprecated*. Use [compression plugins](#plugins-postprocessor-feature-plugins) instead.
+
 ```bash
 lessc -x
 lessc --compress
 ```
 
-Compress using less built-in compression. This does an okay job but does not utilise all the tricks of dedicated css compression. Please feel free to improve our compressed output with a pull request.
+Compress using built-in compression.
 
 #### Clean CSS
-
+```bash
+less --clean-css
+```
 In v2 of less, Clean CSS is no longer included as a direct dependency. To use clean css with lessc, use the [clean css plugin](https://github.com/less/less-plugin-clean-css).
 
 #### Source Map Output Filename
@@ -367,13 +371,15 @@ This option allows you to specify a argument to go on to every URL. This may be 
 
 #### Line Numbers
 
+*Deprecated*.
+
 ```bash
 lessc --line-numbers=comments
 lessc --line-numbers=mediaquery
 lessc --line-numbers=all
 ```
 
-Generates inline source-mapping. This was the only option before browsers started supporting sourcemaps. We are consider deprecating, so please get in touch if you want this option to stick around.
+Generates inline source-mapping. This was the only option before browsers started supporting sourcemaps.
 
 #### Plugin
 
