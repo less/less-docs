@@ -28,6 +28,9 @@
 
 - language: Portuguese
   url: http://giovanneafonso.github.io/lesscss.org/
+  
+- language: Russian
+  url: http://less-lang.info
 
 - language: Spanish
   url: http://amatellanes.github.io/lesscss.org/
