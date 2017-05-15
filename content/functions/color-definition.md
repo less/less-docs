@@ -82,7 +82,7 @@ Parameters:
 
 Returns: `color`
 
-Example: `hsl(90, 100%, 50%, 0.5)`
+Example: `hsla(90, 100%, 50%, 0.5)`
 
 Output: `rgba(128, 255, 0, 0.5)`
 
