@@ -173,7 +173,7 @@ Compress using built-in compression.
 ```bash
 less --clean-css
 ```
-In v2 of less, Clean CSS is no longer included as a direct dependency. To use clean css with lessc, use the [clean css plugin](https://github.com/less/less-plugin-clean-css).
+In v2 of less, Clean CSS is no longer included as a direct dependency. To use `clean-css` with `lessc`, use the [`clean-css` plugin](https://github.com/less/less-plugin-clean-css).
 
 #### Source Map Output Filename
 
@@ -182,7 +182,7 @@ lessc --source-map
 lessc --source-map=file.map
 ```
 
-Tells less to generate a sourcemap. If you have the sourcemap option without a filename it will use the source less file name but with the extension map.
+Tells Less to generate a sourcemap. If you have the sourcemap option without a filename it will use the source Less file name but with the extension map.
 
 #### Source Map Rootpath
 
@@ -245,7 +245,7 @@ lessc -rp=resources/
 lessc --rootpath=resources/
 ```
 
-Allows you to add a path to every generated import and url in your css. This does not affect less import statements that are processed, just ones that are left in the output css.
+Allows you to add a path to every generated import and url in your css. This does not affect Less import statements that are processed, just ones that are left in the output css.
 
 For instance, if all the images the css use are in a folder called resources, you can use this option to add this on to the URL's and then have the name of that folder configurable.
 

@@ -8,7 +8,7 @@ title: Third Party Compilers
 * **[assemble-less](https://github.com/assemble/assemble-less)**: Full-featured Grunt.js plugin for compiling Less files to CSS, with additional options for maintaining libraries of Less components and themes. For advanced users, this plugin allows you to define and manage Less "packages" or "bundles" using JSON, [Lo-dash](https://github.com/bestiejs/lodash)(underscore) templates (e.g. `<%= bootstrap.less %>`), and [node-glob](https://github.com/isaacs/node-glob) / [minimatch](https://github.com/isaacs/minimatch) (e.g. `'../src/**/*.less"`). _assemble-less_ also has a number of options including minifying CSS
 * **[gulp-less](https://github.com/plus3network/gulp-less)**: Please note that this plugin discards `source-map` options, opting to instead using the [gulp-sourcemaps](https://github.com/floridoo/gulp-sourcemaps) library.
 * **[autoless](https://github.com/jgonera/autoless)**: A Less files watcher, with dependency tracking (changes to imported files cause other files to be updated too) and growl notifications.
-* **[Connect Middleware for Less.js](https://github.com/emberfeather/less.js-middleware)**: Connect Middleware for Less.js compiling
+* **[Connect Middleware for Less](https://github.com/emberfeather/less.js-middleware)**: Connect Middleware for Less compiling
 
 
 ## Other Technologies

@@ -26,7 +26,7 @@ lessc --plugin=path_to_plugin=options
 Using a Plugin in Code
 ----------------------
 
-In Node, require the plugin and pass it to less in an array as an option plugins. E.g.
+In Node, require the plugin and pass it to `less` in an array as an option plugins. E.g.
 
 ```js
 var myPlugin = require("my-plugin");
@@ -110,7 +110,7 @@ List of Less Plugins
 For Plugin Authors
 --------------------------
 
-Less supports some entry points that allow an author to integrate with less. We may add some more in the future.
+Less supports some entry points that allow an author to integrate with it. We may add some more in the future.
 
 The plugin itself has a very simple signature, like this
 ```js
@@ -120,7 +120,7 @@ The plugin itself has a very simple signature, like this
     minVersion: [2, 0, 0] /* optional */
 }
 ```
-So, the plugin gets the less object, which in v2 has more classes on it (making it easy to extend), a plugin manager which provides some hooks to add visitors, file managers and post processors.
+So, the plugin gets the `less` object, which in v2 has more classes on it (making it easy to extend), a plugin manager which provides some hooks to add visitors, file managers and post processors.
 
 If your plugin supports `lessc`, there are a few more details and the signature looks like this
 

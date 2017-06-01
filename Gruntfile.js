@@ -1,7 +1,7 @@
 /*
  * lesscss.org <https://github.com/less/less-docs>
  *
- * Copyright (c) 2014, Alexis Sellier, LESS Core Team, contributors.
+ * Copyright (c) 2017, Alexis Sellier, Less Core Team, contributors.
  * Licensed under the MIT license.
  */
 

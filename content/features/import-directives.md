@@ -1,6 +1,6 @@
 > Import styles from other style sheets
 
-In standard CSS, `@import` at-rules must precede all other types of rules. But Less.js doesn't care where you put `@import` statements.
+In standard CSS, `@import` at-rules must precede all other types of rules. But Less doesn't care where you put `@import` statements.
 
 Example:
 
@@ -23,7 +23,7 @@ Examples:
 ```less
 @import "foo";      // foo.less is imported
 @import "foo.less"; // foo.less is imported
-@import "foo.php";  // foo.php imported as a less file
+@import "foo.php";  // foo.php imported as a Less file
 @import "foo.css";  // statement left in place, as-is
 ```
 

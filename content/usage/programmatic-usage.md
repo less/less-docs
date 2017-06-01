@@ -2,7 +2,7 @@
 title: Programmatic usage
 ---
 
-The main entry point into less is the less.render function. This takes the following format
+The main entry point into `less` is the `less.render` function. This takes the following format
 
 ```js
 less.render(lessInput, options)

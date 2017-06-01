@@ -127,7 +127,7 @@ node data/utils/pkg && grunt
 ```
 
 ## License
-Copyright (c) 2016, Alexis Sellier, LESS Core Team, Contributors
+Copyright (c) 2017, Alexis Sellier, Less Core Team, Contributors
 Documentation released under [Creative Commons](./LICENSE-CC).
 Documentation source code released under the [MIT License](./LICENSE-MIT).
-Less.js source code is released under the [Apache 2 License](https://github.com/less/less.js/blob/master/LICENSE).
+Less source code is released under the [Apache 2 License](https://github.com/less/less.js/blob/master/LICENSE).

@@ -38,7 +38,7 @@ Get more info: [http://koala-app.com/](http://koala-app.com/)
 ![koala screenshot](http://koala-app.com/img/screenshot.png)
 
 #### [Prepros](https://prepros.io/)
-> Prepros is a tool to compile LESS, Sass, Compass, Stylus, Jade and much more.
+> Prepros is a tool to compile Less, Sass, Compass, Stylus, Jade and much more.
 
 Get more info at [https://prepros.io/](https://prepros.io/)
 

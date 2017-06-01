@@ -52,7 +52,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [homeless](https://github.com/pixelass/homeless) | Mixin library |
 | [LESS Elements](http://lesselements.com/) | Set of mixins |
 | [LESS Hat](http://lesshat.com/) | Mixins library |
-| [lessley](https://github.com/pixelass/lessley) | A jasmine like testing suite written in pure less |
+| [lessley](https://github.com/pixelass/lessley) | A jasmine like testing suite written in pure Less |
 | [Lessmore](https://github.com/belyan/lessmore) | Mixins library. Cross-browser support for the CSS3 features and more |
 | [LESS-bidi](https://github.com/danielkatz/less-bidi) | Set of mixins for creating bi-directional styling |
 | [LESS-Mix](http://denysdovhan.github.io/LESS-Mix/) | Mixins library |
@@ -61,7 +61,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [more-less](https://github.com/roelvanhintum/More-Less) | Mixin lib supporting Less 1.7 |
 | [More.less](https://github.com/weinitz/More.less) | Mixins, animations, shapes and more |
 | [more-or-less](https://github.com/pixelass/more-or-less) | for-loops and other functions + css3 mixins |
-| [normalize.less](https://github.com/segundofdez/normalize.less) | Modularized famous normalize.css using less |
+| [normalize.less](https://github.com/segundofdez/normalize.less) | Modularized famous normalize.css using Less |
 | [Oban](http://oban.io/) | Collection of mixins |
 | [Preboot](http://getpreboot.com/) | Collection of variables and mixins. The precursor to Bootstrap |
 | [prelude-mixins](https://github.com/amazingSurge/prelude-mixins) | Collection of mixins |

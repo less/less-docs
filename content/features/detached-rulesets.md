@@ -57,7 +57,7 @@ html.lt-ie9 header {
 }
 ```
 
-A ruleset can be now assigned to a variable or passed in to a mixin and can contain the full set of less features, e.g.
+A ruleset can be now assigned to a variable or passed in to a mixin and can contain the full set of Less features, e.g.
 
 ```less
 @my-ruleset: {

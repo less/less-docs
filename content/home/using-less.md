@@ -79,7 +79,7 @@ See [Usage]({{resolve 'usage'}}) for more information.
 See the [Usage]({{resolve 'usage'}}) section for details of other tools.
 
 <!-- # Command-line with Rhino
-> Each less.js release contains also rhino-compatible version.
+> Each Less release contains also rhino-compatible version.
 
 Command line rhino version requires two files:
 * less-rhino-&lt;version&gt;.js - compiler implementation,

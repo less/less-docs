@@ -1,6 +1,6 @@
 # lesscss.org
 
-> Official website and documentation for LESS/Less.js
+> Official website and documentation for Less/Less.js
 
 
 ### [Visit the website](http://lesscss.org)

@@ -2,19 +2,19 @@
 title: Using Less in the Browser
 ---
 
-We recommend using less in the browser only for development or when you need to dynamically compile less and cannot do it serverside.
-This is because less is a large javascript file and compiling less before the user can see the page means a delay for the user. In addition,
+We recommend using Less in the browser only for development or when you need to dynamically compile Less code and cannot do it serverside.
+This is because less.js is a large javascript file and compiling Less before the user can see the page means a delay for the user. In addition,
 consider that mobile devices will compile slower. For development consider if using a watcher and live reload (e.g. with grunt or gulp) would
 be better suited.
 
-To use less in the browser, you firstly need to include the less script.
+To use Less in the browser, you firstly need to include the less.js script.
 
 ```html
-<!-- Here: include any less plugin scripts, any required browser shims and optionally set less = any options  -->
+<!-- Here: include any Less plugin scripts, any required browser shims and optionally set less = any options  -->
 <script src="less.js"></script>
 ```
 
-This will find any less style tags on the page
+This will find any Less style tags on the page
 
 ```html
 <link rel="stylesheet/less" type="text/css" href="styles.less" />
@@ -24,7 +24,7 @@ and create style tags with the compiled css synchronously.
 
 ### Setting Options
 
-You can set options either programmatically, by setting them on a less object before the script tag - this then effects all initial link tags and programmatic usage of less.
+You can set options either programmatically, by setting them on a `less` object before the script tag - this then effects all initial link tags and programmatic usage of Less.
 
 ```html
 <script>

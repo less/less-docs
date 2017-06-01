@@ -325,7 +325,7 @@ and extend with variable in target selector matches nothing:
 @variable: .bucket;
 ```
 
-Both of the previous examples compile into:
+Both of the above examples compile into:
 
 ```less
 .bucket {
@@ -343,7 +343,7 @@ However, `:extend` attached to an interpolated selector works:
 @variable: .selector;
 ```
 
-previous less compiles into:
+compiles to:
 
 ```less
 .bucket, .selector {
@@ -520,7 +520,7 @@ or have simplified html and use extend in your less. e.g.
 
 #### Reducing CSS Size
 
-Mixins copy all of the properties into a selector, which can lead to unnecessary duplication. Therefore you can use extends instead of mixins to move the selector up to the properties you wish to use, which leads to less css being generated.
+Mixins copy all of the properties into a selector, which can lead to unnecessary duplication. Therefore you can use extends instead of mixins to move the selector up to the properties you wish to use, which leads to less CSS being generated.
 
 Example - with mixin:
 

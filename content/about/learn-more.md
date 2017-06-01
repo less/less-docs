@@ -10,4 +10,4 @@ title: Learn More
 
 ### Videos
 
-* [Learning LESS](https://www.packtpub.com/web-development/learning-less-video), by Anthony Killeen
+* [Learning Less](https://www.packtpub.com/web-development/learning-less-video), by Anthony Killeen
