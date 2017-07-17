@@ -53,6 +53,10 @@ lessc input.less [output.css] [-compress]
 dotless.Compiler.exe [-switches] <inputfile> [outputfile]
 ```
 
+**Live preview of Less with browser extension**
+
+* [Live editor for CSS and LESS - Magic CSS](https://github.com/webextensions/live-css-editor)
+
 **Also see:** 
 
 * [Ports of Less](/about/#ports)
