@@ -53,6 +53,10 @@ Also see: [GUIs for Less](#guis-for-less)
 * [Less.js Syntax Highlighting][Npp-Less-azrafe7] User Defined Language by azrafe7
 * [How to Install][Npp-How-to]
 
+### Browser extensions
+
+* [Live editor for CSS and LESS - Magic CSS](https://github.com/webextensions/live-css-editor)
+
 <!-- invisible links -->
 
 [SublimeOnSaveBuild]: https://github.com/alexnj/SublimeOnSaveBuild "Sublime Text Package for Less.js"
