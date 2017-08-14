@@ -1,6 +1,6 @@
-> Combine properties
+> Combine mixin properties
 
-The `merge` feature allows for aggregating values from multiple properties into a comma or space separated list under a single property. `merge` is useful for properties such as background and transform.
+`merge` by adding a '+' sign at the end of a mixin's shared property's name. The '+' must be in both properties. A '+_ ' will separete properties with a space rather than a comma. `merge` is useful for properties such as background and transform.
 
 ### Comma
 
