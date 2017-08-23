@@ -5,7 +5,6 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 ## UI/Theme Frameworks and Components
 | | |
 |---|---|
-| [1pxdeep](http://rriepe.github.io/1pxdeep/) | Brings designing by relative visual weight, or designing with color schemes, to Bootstrap |
 | [Ant Design](http://github.com/ant-design/ant-design/) | An enterprise-class UI design language and React-based implementation. |
 | [Balloon.css](https://kazzkiq.github.io/balloon.css/) | Simple tooltips made of pure CSS |
 | [Bootflat](http://www.flathemes.com/) | Open source Flat UI KIT based on Bootstrap |
@@ -19,7 +18,8 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [Pre](http://madscript.com/pre/) | CSS framework |
 | [prelude](https://github.com/amazingSurge/prelude) | Lightweight, responsive and extensible front-end framework |
 | [Schema](http://danmalarkey.github.io/schema/) | Light, responsive, and lean frontend UI framework |
-| [Semantic UI](http://www.semantic-ui.com/) | UI component framework based around useful principles from natural language
+| [Semantic UI](http://www.semantic-ui.com/) | UI component framework based around useful principles from natural language |
+| [Strapless](http://www.strapless.io/) | CSS boilerplate/framework for HTML elements, mixins library for patterns and color |
 | [UIkit](http://getuikit.com/) | Lightweight and modular front-end framework for developing web interfaces |
 | [ngBoilerplate](http://bit.ly/ngBoilerplate) | An opinionated kickstarter for AngularJS projects |
 | [Wee](https://www.weepower.com) | Lightweight front-end framework for logically building complex, responsive web projects |
