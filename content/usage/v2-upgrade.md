@@ -12,11 +12,11 @@ Command Line Usage
 
 ### Clean CSS
 
-We have removed the dependency on clean css and moved it to a [plugin](https://github.com/less/less-plugin-clean-css).
+We have removed the dependency on `clean-css` and moved it to a [plugin](https://github.com/less/less-plugin-clean-css).
 This allows us to:
 
-1. update the dependency and integration without a less release
-2. not tie people who do not use clean css into having it downloaded by npm.
+1. update the dependency and integration without a Less release
+2. not tie people who do not use `clean-css` into having it downloaded by npm.
 
 The usage is similar, just install the plugin (`npm install -g less-plugin-clean-css`) then tell less to use it by using the
 `--clean-css` argument.
@@ -47,4 +47,4 @@ Browser Usage
 
 The browser usage has not changed significantly. Options set on the `less` object are exposed as `less.options` after the less script has run, rather than polluting `less`.
 
-It is now possible to specify options on the script and less tags, which should simplify option setting in the browser. See the browser usage section for more information.
+It is now possible to specify options on the script and Less tags, which should simplify option setting in the browser. See the browser usage section for more information.

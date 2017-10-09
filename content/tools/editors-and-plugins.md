@@ -2,7 +2,7 @@
 title: Editors and Plugins
 ---
 
-Also see: [GUIs for Less.js](#guis-for-less)
+Also see: [GUIs for Less](#guis-for-less)
 
 ## Editors and IDEs
 
@@ -52,6 +52,10 @@ Also see: [GUIs for Less.js](#guis-for-less)
 * [Less.js Syntax Highlighting][Npp-Less-Salitrero] User Defined Language by Raúl Salitrero
 * [Less.js Syntax Highlighting][Npp-Less-azrafe7] User Defined Language by azrafe7
 * [How to Install][Npp-How-to]
+
+### Browser extensions
+
+* [Live editor for CSS and LESS - Magic CSS](https://github.com/webextensions/live-css-editor)
 
 <!-- invisible links -->
 

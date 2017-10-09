@@ -30,19 +30,20 @@ All documentation content can be found in the `./content` directory. Please read
 ### Coding Style
 > Please help us make the documentation _consistent, readable, and maintainable_ by conforming to these guidelines when contributing:
 
+#### Less, LESS or Less.js?
+
+The name of the project is **Less**. Anywhere in the docs, **Less** means both the language and its official, reference implementation.
+The **less.js** form is normally to be used only to specify either of:
+* the browser script file name
+* the particular GitHub [repository](https://github.com/less/less.js) (where most of the development takes place)
+
+##### Examples:
+- *"Less language", "Less library", "Less API", "Less plugin", "Using Less" etc.*
+- *"Fork [less/less.js](https://github.com/less/less.js) repository"* (synonyms: *"Less Repository", "Main Repository"* etc.)
+- *"Make sure to include your stylesheets before the [less.js](https://github.com/less/less.js/blob/v2.7.2/dist) script"*
+
+
 #### Capitalization
-
-##### Capitalizing "Less"
-
-When referring to Less, know your context. **LESS** (**Le**aner **S**tyle **S**heets) is the stylesheet language based on CSS. **Less** or **Less.js** is the library / compiling tool.
-
-_Example 1: "I've released a Less plugin." (It's a plugin for the JS compiler.)_
-
-_Example 2: "The stylesheet is converted from LESS to CSS."_
-
-We generally talk about **Less** features or working with **Less** as the "generic" capitalization, and that's what we use in the documentation in most cases. However, use **LESS** in a case of grammatical ambiguity, such as in title-case headlines.
-
-_Example Headline: "You Can Learn LESS In Under An Hour!"_
 
 ##### In Titles: Do Capitalize
 
@@ -126,7 +127,7 @@ node data/utils/pkg && grunt
 ```
 
 ## License
-Copyright (c) 2016, Alexis Sellier, LESS Core Team, Contributors
+Copyright (c) 2017, Alexis Sellier, Less Core Team, Contributors
 Documentation released under [Creative Commons](./LICENSE-CC).
 Documentation source code released under the [MIT License](./LICENSE-MIT).
-Less.js source code is released under the [Apache 2 License](https://github.com/less/less.js/blob/master/LICENSE).
+Less source code is released under the [Apache 2 License](https://github.com/less/less.js/blob/master/LICENSE).

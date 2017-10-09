@@ -37,7 +37,7 @@ nav ul {
 
 Notice how the `nav ul:extend(.inline)` selector gets output as `nav ul` - the extend gets removed before output and the selector block left as-is. If no properties are put in that block then it gets removed from the output (but the extend still may affect other selectors).
 
-## Extend Syntax
+### Extend Syntax
 The extend is either attached to a selector or placed into a ruleset. It looks like a pseudo-class with selector parameter optionally followed by the keyword `all`:
 
 Example:
@@ -262,7 +262,7 @@ Outputs
 }
 ```
 
-## Extend "all"
+### Extend "all"
 
 When you specify the all keyword last in an extend argument it tells Less to match that selector as part of another selector. The selector will be copied and the matched part of the selector only will then be replaced with the extend, making a new selector.
 
@@ -325,7 +325,7 @@ and extend with variable in target selector matches nothing:
 @variable: .bucket;
 ```
 
-Both of the previous examples compile into:
+Both of the above examples compile into:
 
 ```less
 .bucket {
@@ -343,7 +343,7 @@ However, `:extend` attached to an interpolated selector works:
 @variable: .selector;
 ```
 
-previous less compiles into:
+compiles to:
 
 ```less
 .bucket, .selector {
@@ -351,7 +351,7 @@ previous less compiles into:
 }
 ```
 
-## Scoping / Extend Inside @media
+### Scoping / Extend Inside @media
 
 Currently, an `:extend` inside a `@media` declaration will only match selectors inside the same media declaration:
 
@@ -473,9 +473,9 @@ Outputs
 }
 ```
 
-## Use Cases for Extend
+### Use Cases for Extend
 
-### Classic Use Case
+#### Classic Use Case
 
 The classic use case is to avoid adding a base class. For example, if you have
 
@@ -518,9 +518,9 @@ or have simplified html and use extend in your less. e.g.
 }
 ```
 
-### Reducing CSS Size
+#### Reducing CSS Size
 
-Mixins copy all of the properties into a selector, which can lead to unnecessary duplication. Therefore you can use extends instead of mixins to move the selector up to the properties you wish to use, which leads to less css being generated.
+Mixins copy all of the properties into a selector, which can lead to unnecessary duplication. Therefore you can use extends instead of mixins to move the selector up to the properties you wish to use, which leads to less CSS being generated.
 
 Example - with mixin:
 
@@ -576,7 +576,7 @@ Outputs
 }
 ```
 
-### Combining Styles / A More Advanced Mixin
+#### Combining Styles / A More Advanced Mixin
 
 Another use-case is as an alternative for a mixin - because mixins can only be used with simple selectors, if you have two different blocks of html, but need to apply the same styles to both you can use extends to relate two areas.
 

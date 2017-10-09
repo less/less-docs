@@ -92,6 +92,8 @@ Outputs a makefile import dependency list to stdout.
 
 #### No Color
 
+*Deprecated*.
+
 ```bash
 lessc --no-color
 ```

@@ -17,13 +17,13 @@ make sure the paths are setup. If you start your favourite command line and type
 
 ## Usage
 
-If you go to the root of the less repository you should be able to do `grunt test` - this should run all the tests. For the browser specific only, run `grunt browsertest` If you want to try out the current version of less against a file, from here do `node bin/lessc path/to/file.less`
+If you go to the root of the Less repository you should be able to do `grunt test` - this should run all the tests. For the browser specific only, run `grunt browsertest` If you want to try out the current version of less against a file, from here do `node bin/lessc path/to/file.less`
 
 To debug the browser tests, run `grunt browsertest-server` then go to http://localhost:8088/tmp/browser/ to see the test runner pages.
 
-Optional: To get the current version of the less compiler do `npm -g install less` - npm is the node package manager and "-g" installs it to be available globally.
+Optional: To get the current version of the Less compiler do `npm -g install less` - npm is the node package manager and "-g" installs it to be available globally.
 
-You should now be able to do `lessc file.less` and if there is an appropriate file.less then it will be compiled and output to the stdout. You can then compare it to running locally (`node bin/lessc file.less`).
+You should now be able to do `lessc file.less` and if there is an appropriate `file.less` then it will be compiled and output to the stdout. You can then compare it to running locally (`node bin/lessc file.less`).
 
 Other grunt commands
 
@@ -33,7 +33,7 @@ Other grunt commands
 
 ## How to Run Less in Other Environments
 
-If you look in the libs folder you will see `less`, `less-node`, `less-browser`. The less folder is pure javascript with no environment
+If you look in the libs folder you will see `less`, `less-node`, `less-browser`. The `less` folder is pure javascript with no environment
 specifics. if you require `less/libs/less`, you get a function that takes an environment object and an array of file managers. The file
 managers are the same file managers that can also be written as a plugin.
 

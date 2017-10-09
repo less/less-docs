@@ -40,13 +40,11 @@ lessc --plugin=myplugin=advanced
 Loading a Plugin via Less.js
 ----------------------
 
-In Node, pass it to less in an array on the options object e.g.
-
-_TODO: Just passing the string name of the plugin to the render function doesn't actually work yet in 3.0 alpha._
+In Node, require the plugin and pass it to `less` in an array as an option plugins. E.g.
 
 ```js
-var 
-less.render(myCSS, { plugins: ["less-plugin-myplugin"] })
+var LessPlugin = require('less-plugin-myplugin');
+less.render(myCSS, { plugins: [LessPlugin] })
   .then(
     function(output) { },
     function(error) { }

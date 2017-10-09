@@ -6,8 +6,8 @@ Less only supports running on modern browsers (recent versions of Chrome, Firefo
 
 Note that PhantomJS does not currently implement `Function.prototype.bind` so you will require a es-5 shim for this function to run under PhantomJS (We use PhantomJS for tests and we append an es5-shim to make it work).
 
-There are reasons to use client-side less in production, such as if you want to allow users to tweak variables which will affect the theme and you want to show it to them in real-time - in this instance a user is not worried about waiting for a style to update before seeing it.
+There are reasons to use client-side script in production, such as if you want to allow users to tweak variables which will affect the theme and you want to show it to them in real-time - in this instance a user is not worried about waiting for a style to update before seeing it.
 
-If you need to run less in an older browser, please use an [es-5 shim](https://github.com/kriskowal/es5-shim) which will add the javascript features that less requires.
+If you need to run less.js in an older browser, please use an [es-5 shim](https://github.com/kriskowal/es5-shim) which will add the javascript features that less.js requires.
 
 In addition, if you use options as attributes on the script or link tags, you will require browser support for `JSON.parse` or an appropriate polyfill.

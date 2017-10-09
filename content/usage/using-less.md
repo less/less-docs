@@ -6,7 +6,7 @@ title: Server-side Usage
 
 ## Installation
 
-The easiest way to install Less.js on the server, is via npm, the [node.js](http://nodejs.org/) package manager, as so:
+The easiest way to install Less on the server, is via npm, the [node.js](http://nodejs.org/) package manager, as so:
 
 ```bash
 $ npm install -g less
