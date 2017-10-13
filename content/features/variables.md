@@ -148,7 +148,7 @@ content: "I am fnord.";
 Valid Less snippet:
 
 ```less
-.lazy-eval {
+.lazy-eval-scope {
   width: @var;
 }
 
