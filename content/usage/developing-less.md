@@ -13,13 +13,14 @@ make sure the paths are setup. If you start your favourite command line and type
 
 * clone your less.js repository locally
 * navigate to your local less.js repository and run `npm install` this installs less' npm dependencies.
-* If you haven't used grunt before, run `npm install grunt-cli -g` - this allows you to use the "grunt" command anywhere
 
 ## Usage
 
-If you go to the root of the Less repository you should be able to do `grunt test` - this should run all the tests. For the browser specific only, run `grunt browsertest` If you want to try out the current version of less against a file, from here do `node bin/lessc path/to/file.less`
+[Grunt](https://gruntjs.com/) is used in order to run development commands such as tests, builds, and benchmarks. You can run them either with `grunt [command_name]` if you have `grunt-cli` installed globally or with `npm run grunt -- [command_name]`.
 
-To debug the browser tests, run `grunt browsertest-server` then go to http://localhost:8088/tmp/browser/ to see the test runner pages.
+If you go to the root of the Less repository you should be able to do `npm test` (a handy alias for `npm run grunt -- test`) - this should run all the tests. For the browser specific only, run `npm run grunt -- browsertest` If you want to try out the current version of less against a file, from here do `node bin/lessc path/to/file.less`
+
+To debug the browser tests, run `npm run grunt -- browsertest-server` then go to http://localhost:8088/tmp/browser/ to see the test runner pages.
 
 Optional: To get the current version of the Less compiler do `npm -g install less` - npm is the node package manager and "-g" installs it to be available globally.
 
@@ -27,9 +28,9 @@ You should now be able to do `lessc file.less` and if there is an appropriate `f
 
 Other grunt commands
 
-* `grunt benchmark` - run our benchmark tests to get some numbers on performance
-* `grunt stable` to create a new release
-* `grunt readme` to generate a new readme.md in the root directory (after each release)
+* `npm run grunt -- benchmark` - run our benchmark tests to get some numbers on performance
+* `npm run grunt -- stable` to create a new release
+* `npm run grunt -- readme` to generate a new readme.md in the root directory (after each release)
 
 ## How to Run Less in Other Environments
 
