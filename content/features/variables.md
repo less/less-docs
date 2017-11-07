@@ -167,7 +167,7 @@ Valid Less snippet:
 this is valid Less too:
 
 ```less
-.lazy-eval-scope {
+.lazy-eval {
   width: @var;
   @a: 9%;
 }
@@ -178,7 +178,7 @@ this is valid Less too:
 both compile into:
 
 ```css
-.lazy-eval-scope {
+.lazy-eval {
   width: 9%;
 }
 ```
