@@ -8,34 +8,32 @@ Using a `@plugin` at-rule is similar to using an `@import` for your `.less` file
 ```less
 @plugin "my-plugin";  // automatically appends .js if no extension
 ```
-Less.js Plugins are (modifed) UMD (universal module definition)-format JavaScript files. The basic guts of a plugin looks like:
+Since Less plugins are evaluated within the Less scope, the plugin definition can be quite simple.
 ```js
-(function (root, factory) { 
-    if (typeof define === 'function' && define.amd) { 
-        define([], factory);
-    } else if (typeof module === 'object' && module.exports) { 
-        module.exports = factory();
-    } else { 
-        (root.LESS_PLUGINS = root.LESS_PLUGINS || []).push(factory());
-    } 
-}(this, function () {
-    // Less.js Plugin object
-    return {
-        install: function(less, pluginManager, functions) {
-            // functions.add('')
-        }
-    };
-}));
+registerPlugin({
+    install: function(less, pluginManager, functions) {
+        functions.add('pi', function() {
+            return Math.PI;
+        });
+    }
+})
 ```
-Most of that is boilerplate UMD. The only part you need to modify is the returned plugin object.
-
-_Note: Less.js Plugins should have this signature to be compatible with Less 3.x features moving forward, but Less 3.x is backwards-compatible with existing Less 2.x plugins._
+or you can use `module.exports` (shimmed to work in browser as well as Node.js).
+```js
+module.exports = {
+    install: function(less, pluginManager, functions) {
+        functions.add('pi', function() {
+            return Math.PI;
+        });
+    }
+};
+```
+Note that other Node.js CommonJS conventions, like `require()` are not available in the browser. Keep this in mind when writing cross-platform plugins.
 
 What can you do with a plugin? A lot, but let's start with the basics. We'll focus first on what you might put inside the `install` function. Let's say you write this:
 
 ```js
 // my-plugin.js
-// ...boilerplate UMD
 install: function(less, pluginManager, functions) {
     functions.add('pi', function() {
         return Math.PI;
@@ -175,7 +173,7 @@ A Less.js plugin should export an object that has one or more of these propertie
 {
     /* Called immediately after the plugin is 
      * first imported, only once. */
-    install: function(less, pluginManager) { },
+    install: function(less, pluginManager, functions) { },
 
     /* Called for each instance of your @plugin. */
     use: function(context) { },
