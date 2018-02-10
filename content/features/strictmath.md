@@ -4,12 +4,12 @@ published: false
 
 # strictMath
 
-> Make your Less more CSS compatible.
+> Only evaluate math when explicitly placed in parentheses
 
 ## Example
 
 ```less
 (1 + 1) // => 2
-1 + 1   // => 1+1
+1 + 1   // => 1 + 1
 ```
 

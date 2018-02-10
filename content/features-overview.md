@@ -197,6 +197,18 @@ background-color: #112244 + #111; // result is #223355
 
 However, you may find Less's [Color Functions](../functions/#color-operations) more useful.
 
+## calc() exception
+
+_Released [v3.0.0]({{ less.master.url }}CHANGELOG.md)_
+
+For CSS compatibility, `calc()` does not evaluate math expressions, but will evaluate variables
+and math in nested functions.
+
+```less
+@var: 50vh/2;
+width: calc(50% + (@var - 20px));  // result is calc(50% + (25vh - 20px))
+```
+
 
 # Escaping
 

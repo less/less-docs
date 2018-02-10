@@ -10,7 +10,7 @@ While the easiest way to use a plugin is using the [`@plugin` at-rule](../featur
 
 Pre-loading plugins is necessary if you want to add a Less.js Pre-processor. That is, a plugin that gets called and passed the raw Less source before parsing even starts. An example of this would be a [Sass-To-Less Pre-processor plugin](../tools/#plugins).
 
-Note: pre-loading is not necessary for _pre-evaluation_ plugins (after Less source is parsed, but before it is evaluated). See: [API](#api).
+Note: pre-loading is not necessary for _pre-evaluation_ plugins (after Less source is parsed, but before it is evaluated).
 
 ## Node.js
 
