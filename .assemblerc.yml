@@ -3,7 +3,7 @@
 # =============================================
 
 # Dest config
-root:             _less.github.io/3.x
+root:             _less.github.io
 dest:             <%= site.root %>
 
 # =============================================
