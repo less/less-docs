@@ -210,9 +210,9 @@ Compiles to:
 }
 ```
 
-### Properties as Variables
+### Properties as Variables **(NEW!)**
 
-_v2.5.0_
+_v3.0.0_
 
 You can easily treat properties like variables using the `$prop` syntax. Sometimes this can
 make your code a little lighter.
