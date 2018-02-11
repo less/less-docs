@@ -47,7 +47,7 @@ The examples above focused on using variables to control _values in CSS rules_, 
 
 #### Selectors
 
-Version: 1.4.0
+_v1.4.0_
 
 ```less
 // Variables
@@ -70,7 +70,7 @@ Compiles to:
 }
 ```
 
-### URLs
+#### URLs
 
 ```less
 // Variables
@@ -85,7 +85,7 @@ body {
 
 #### Import Statements
 
-Version: 1.4.0
+_v1.4.0_
 
 Syntax: `@import "@{themes}/tidal-wave.less";`
 
@@ -103,7 +103,7 @@ Example:
 
 #### Properties
 
-Version: 1.6.0
+_v1.6.0_
 
 ```less
 @property: color;
@@ -207,6 +207,53 @@ Compiles to:
 }
 .class .brass {
   three: 3;
+}
+```
+
+### Properties as Variables
+
+_v2.5.0_
+
+You can easily treat properties like variables using the `$prop` syntax. Sometimes this can
+make your code a little lighter.
+
+```less
+.widget {
+  color: #efefef;
+  background-color: $color;
+}
+```
+
+Compiles to:
+
+```css
+.widget {
+  color: #efefef;
+  background-color: #efefef;
+}
+```
+
+Note that, like variables, Less will choose the last property within the current/parent scope
+as being the "final" value.
+
+```less
+.block {
+  color: red; 
+  .inner {
+    background-color: $color; 
+  }
+  color: blue;  
+} 
+```
+
+Compiles to:
+```css
+.block {
+  color: red; 
+  color: blue;  
+} 
+.block .inner {
+  background-color: blue; 
 }
 ```
 
