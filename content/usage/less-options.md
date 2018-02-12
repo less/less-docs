@@ -65,34 +65,34 @@ You may also want to consider using the data-uri function instead of this option
 
 Defaults to off/false.
 
-Without this option on, Less will try and process all math in your css e.g.
+Without this option on, Less will try and process all math in your css, e.g. in:
 
 ```less
 .class {
-  height: calc(100% - 10px);
+  grid-column: 3 / 6;
 }
 ```
-will be processed currently.
+`3 / 6` will result in `2`.
 
 With strict math on, only math that is inside un-necessary parenthesis will be processed. For instance.
 
 ```less
 .class {
-  width: calc(100% - ((10px  - 5px)));
-  height: (100px / 4px);
-  font-size: 1 / 4;
+  grid-column: 3 / 6;
+  width: 40px + 2px;
+  height: (40px + 2px);
 }
 ```
 
 ```css
 .class {
-  width: calc(100% - 5px);
-  height: 25px;
-  font-size: 1 / 4;
+  grid-column: 3 / 6;
+  width: 40px + 2px;
+  height: 42px;
 }
 ```
 
-We originally planned to default this to true in the future, but it has been a controversial option and we are considering whether we have solved the problem in the right way, or whether less should just have exceptions for instances where `/` is valid or calc is used.
+We originally planned to default this to true in the future, but it has been a controversial option and we are considering whether we have solved the problem in the right way, or whether less should just have exceptions for instances where `/` is valid or not.
 
 #### Strict Units
 
