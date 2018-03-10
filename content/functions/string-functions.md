@@ -26,7 +26,7 @@ Note: if the parameter is not a string, output is not defined. The current imple
 
 ### e
 
-> CSS escaping, replaced with `~"value"` syntax.
+> CSS escaping, returns a string without qoutes after variable interpolation.
 
 It expects string as a parameter and return its content as is, but without quotes. It can be used to output CSS value which is either not valid CSS syntax, or uses proprietary syntax which Less doesn't recognize.
 
@@ -44,6 +44,19 @@ Output:
 
 ```css
 filter: ms:alwaysHasItsOwnSyntax.For.Stuff();
+```
+
+This function is similair to the `~""` syntax except from that the function can accept an other built-in function as an argument. The e() enables you to do for instance the following which can't be done with the `~""` syntax:
+
+```less
+property: e(%("ms:alwaysHasItsOwnSyntax.For.Stuff(%d)",argb(red)));
+
+```
+
+which will output:
+
+```css
+property: ms:alwaysHasItsOwnSyntax.For.Stuff(#ffff0000);
 ```
 
 Note: The function accepts also `~""` escaped values and numbers as parameters. Anything else returns an error.
