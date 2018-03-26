@@ -15,6 +15,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [Flat UI Free](http://designmodo.com/flat-free/) | Theme and framework for Bootstrap |
 | [Ink](http://ink.sapo.pt/) | set of tools for quick development of web interfaces |
 | [Metro UI CSS](http://metroui.org.ua/) | Set of styles to create a site with an interface similar to Windows 8 |
+| [Petal](http://http://shakrmedia.github.io/petal/) | A modern, light CSS UI framework developed at Shakr |
 | [Pre](http://madscript.com/pre/) | CSS framework |
 | [prelude](https://github.com/amazingSurge/prelude) | Lightweight, responsive and extensible front-end framework |
 | [Schema](http://danmalarkey.github.io/schema/) | Light, responsive, and lean frontend UI framework |
@@ -67,3 +68,4 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [prelude-mixins](https://github.com/amazingSurge/prelude-mixins) | Collection of mixins |
 | [Shape.LESS](https://github.com/fahad19/shape.less) | Collection of mixins for various shapes |
 | [tRRtoolbelt.less](https://github.com/therebelrobot/tRRtoolbelt.less) | Mixins and functions for common actions |
+| [Tuesday.less](http://shakrmedia.github.io/tuesday/) | CSS Animation mixins library |
