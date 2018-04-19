@@ -256,7 +256,7 @@ Using them is pretty straightforward. The following example uses percentage to c
 
 (Not to be confused with [CSS `@namespace`](http://www.w3.org/TR/css3-namespace/) or [namespace selectors](http://www.w3.org/TR/css3-selectors/#typenmsp)).
 
-Sometimes, you may want to group your mixins, for organizational purposes, or just to offer some encapsulation. You can do this pretty intuitively in Less.Say you want to bundle some mixins and variables under `#bundle`, for later reuse or distributing:
+Sometimes, you may want to group your mixins, for organizational purposes, or just to offer some encapsulation. You can do this pretty intuitively in Less. Say you want to bundle some mixins and variables under `#bundle`, for later reuse or distributing:
 
 ```less
 #bundle() {
