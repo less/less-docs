@@ -9,7 +9,7 @@ title: Less.js Options
 |---|---|
 | `lessc --include-path=PATH1;PATH2` | `{ paths: ['PATH1', 'PATH2'] }` |
 
-If the file in an `@import` rule does not exist at that exact location, less will look for it at the location(s) passed to this option. You might use this for instance to specify a path to a library which you want to be referenced simply and relatively in the less files.
+If the file in an `@import` rule does not exist at that exact location, Less will look for it at the location(s) passed to this option. You might use this for instance to specify a path to a library which you want to be referenced simply and relatively in the Less files.
 
 #### Rootpath
 
@@ -18,7 +18,7 @@ If the file in an `@import` rule does not exist at that exact location, less wil
 | `lessc -rp=resources/`<br>`lessc --rootpath=resources/` | `{ rootpath: 'resources/' }` |
 
 
-Allows you to add a path to every generated import and url in your css. This does not affect less import statements that are processed, just ones that are left in the output css.
+Allows you to add a path to every generated import and url in your css. This does not affect Less import statements that are processed, just ones that are left in the output css.
 
 For instance, if all the images the css use are in a folder called resources, you can use this option to add this on to the URL's and then have the name of that folder configurable.
 
@@ -92,7 +92,7 @@ With strict math on, only math that is inside un-necessary parenthesis will be p
 }
 ```
 
-We originally planned to default this to true in the future, but it has been a controversial option and we are considering whether we have solved the problem in the right way, or whether less should just have exceptions for instances where `/` is valid or not.
+We originally planned to default this to true in the future, but it has been a controversial option and we are considering whether we have solved the problem in the right way, or whether Less should just have exceptions for instances where `/` is valid or not.
 
 #### Strict Units
 
@@ -102,7 +102,7 @@ We originally planned to default this to true in the future, but it has been a c
 
 Defaults to off/false.
 
-Without this option, less attempts to guess at the output unit when it does maths. For instance
+Without this option, Less attempts to guess at the output unit when it does maths. For instance
 
 ```less
 .class {
