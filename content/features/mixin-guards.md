@@ -5,13 +5,13 @@ In trying to stay as close as possible to the declarative nature of CSS, Less ha
 Let's start with an example:
 
 ```less
-.mixin (@a) when (lightness(@a) >= 50%) {
+.mixin(@a) when (lightness(@a) >= 50%) {
   background-color: black;
 }
-.mixin (@a) when (lightness(@a) < 50%) {
+.mixin(@a) when (lightness(@a) < 50%) {
   background-color: white;
 }
-.mixin (@a) {
+.mixin(@a) {
   color: @a;
 }
 ```
@@ -41,8 +41,8 @@ Here's what we'll get:
 The full list of comparison operators usable in guards are: `>`, `>=`, `=`, `=<`, `<`. Additionally, the keyword `true` is the only truthy value, making these two mixins equivalent:
 
 ```less
-.truth (@a) when (@a) { ... }
-.truth (@a) when (@a = true) { ... }
+.truth(@a) when (@a) { ... }
+.truth(@a) when (@a = true) { ... }
 ```
 
 Any value other than the keyword `true` is falsy:
@@ -58,11 +58,11 @@ Note that you can also compare arguments with each other, or with non-arguments:
 ```less
 @media: mobile;
 
-.mixin (@a) when (@media = mobile) { ... }
-.mixin (@a) when (@media = desktop) { ... }
+.mixin(@a) when (@media = mobile) { ... }
+.mixin(@a) when (@media = desktop) { ... }
 
-.max (@a; @b) when (@a > @b) { width: @a }
-.max (@a; @b) when (@a < @b) { width: @b }
+.max(@a; @b) when (@a > @b) { width: @a }
+.max(@a; @b) when (@a < @b) { width: @b }
 ```
 
 ### Guard Logical Operators
@@ -72,19 +72,19 @@ You can use logical operators with guards. The syntax is based on CSS media quer
 Use the `and` keyword to combine guards:
 
 ```less
-.mixin (@a) when (isnumber(@a)) and (@a > 0) { ... }
+.mixin(@a) when (isnumber(@a)) and (@a > 0) { ... }
 ```
 
 You can emulate the *or* operator by separating guards with a comma `,`. If any of the guards evaluate to true, it's considered a match:
 
 ```less
-.mixin (@a) when (@a > 10), (@a < -10) { ... }
+.mixin(@a) when (@a > 10), (@a < -10) { ... }
 ```
 
 Use the `not` keyword to negate conditions:
 
 ```less
-.mixin (@b) when not (@b > 0) { ... }
+.mixin(@b) when not (@b > 0) { ... }
 ```
 
 ### Type Checking Functions
@@ -92,8 +92,8 @@ Use the `not` keyword to negate conditions:
 Lastly, if you want to match mixins based on value type, you can use the `is` functions:
 
 ```less
-.mixin (@a; @b: 0) when (isnumber(@b)) { ... }
-.mixin (@a; @b: black) when (iscolor(@b)) { ... }
+.mixin(@a; @b: 0) when (isnumber(@b)) { ... }
+.mixin(@a; @b: black) when (iscolor(@b)) { ... }
 ```
 
 Here are the basic type checking functions:
