@@ -126,7 +126,7 @@ False by default starting in v3.0.0. Currently only used for the data-uri functi
 
 | | |
 |---|---|
-| `lessc --js` | `{ inlineJavaScript: true }` |
+| `lessc --js` | `{ javascriptEnabled: true }` |
 
 False by default starting in v3.0.0. Enables evaluation of JavaScript inline in `.less` files. This created a security problem for some developers who didn't expect user input for style sheets to have executable code.
 
