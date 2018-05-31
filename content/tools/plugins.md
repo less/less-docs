@@ -1,7 +1,7 @@
 ---
 title: Less Plugins
 ---
-> Available Less plugins. Find more at [GitHib](https://github.com/search?q=topic%3Aless-plugin&type=Repositories) and [NPM Registry](https://www.npmjs.com/search?q=%22less-plugin%22)
+> Available Less plugins. Find more at [GitHub](https://github.com/search?q=topic%3Aless-plugin&type=Repositories) and [NPM Registry](https://www.npmjs.com/search?q=%22less-plugin%22)
 
 #### Postprocessor/Feature Plugins
 | | |
