@@ -210,6 +210,17 @@ Compiles to:
 }
 ```
 
+Essentially, each scope has a "final" value, similar to properties in the browser, like this example using custom properties:
+```css
+.header {
+  --color: white;
+  color: var(--color);  // the color is black
+  --color: black;
+}
+```
+This means that, unlike other CSS pre-processing languages, Less variables behave very much like CSS's.
+
+
 ### Properties as Variables **(NEW!)**
 
 _v3.0.0_

@@ -52,6 +52,10 @@ published:
         title: Mixin Guards
         files: <%= features.base %>/mixin-guards.md
 
+      mixin-aliasing:
+        title: Aliasing Mixins
+        files: <%= features.base %>/mixins-aliasing.md
+
   css-guards:
     title: CSS Guards
     files: <%= features.base %>/css-guards.md
@@ -65,8 +69,12 @@ published:
     files: <%= features.base %>/imports.md
 
   plugin-atrules:
-    title: "@plugin At-Rules <small>(NEW!)</small>"
+    title: "@plugin At-Rules"
     files: <%= features.base %>/plugins.md
+
+  maps:
+    title: "Maps <small>(NEW!)</small>"
+    files: <%= features.base %>/maps.md
 
 
 # =============================================

@@ -36,7 +36,7 @@ Notice that when you call the mixin, the parentheses are optional.
 
 ## Not Outputting the Mixin
 
-If you want to create a mixin but you do not want that mixin to be output, you can put parentheses after it.
+If you want to create a mixin but you do not want that mixin to be in your CSS output, put parentheses after the mixin definition.
 
 ```less
 .my-mixin {
@@ -92,18 +92,18 @@ button:hover {
 If you want to mixin properties inside a more complicated selector, you can stack up multiple id's or classes.
 
 ```less
-#outer {
+#outer() {
   .inner {
     color: red;
   }
 }
 
 .c {
-  #outer > .inner;
+  #outer > .inner();
 }
 ```
 
-and again both `>` and whitespace are optional
+Both `>` and whitespace are optional, as are parentheses
 
 ```less
 // all do the same thing
@@ -127,7 +127,7 @@ Example:
 }
 // which can be used like this
 .class {
-  #my-library > .my-mixin();
+  #my-library.my-mixin();
 }
 ```
 
@@ -136,12 +136,12 @@ Example:
 If namespace have a guard, mixins defined by it are used only if guard condition returns true. Namespace guard is evaluated exactly the same way as guard on mixin, so next two mixins work the same way:
 
 ```less
-#namespace when (@mode=huge) {
+#namespace when (@mode = huge) {
   .mixin() { /* */ }
 }
 
 #namespace {
-  .mixin() when (@mode=huge) { /* */ }
+  .mixin() when (@mode = huge) { /* */ }
 }
 ```
 
