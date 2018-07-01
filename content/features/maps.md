@@ -1,4 +1,4 @@
-Released [v3.5.0-beta.3]({{ less.master.url }}CHANGELOG.md)
+Released [v3.5.0-beta.4]({{ less.master.url }}CHANGELOG.md)
 
 > Use rulesets and mixins as de facto maps of values
 
