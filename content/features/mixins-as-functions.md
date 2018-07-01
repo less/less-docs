@@ -26,18 +26,19 @@ Results in:
 }
 ```
 
-Thus variables defined in a mixin can act as its return values. This allows us to create a mixin that can be used almost like a function.
+### Mixin return values
+
+Starting in Less 3.5, you can use property/variable accessors to get a "return value" from a mixin. Essentially using it like a function.
 
 Example:
 
 ```less
 .average(@x, @y) {
-  @average: ((@x + @y) / 2);
+  @result: ((@x + @y) / 2);
 }
 
 div {
-  .average(16px, 50px); // "call" the mixin
-  padding: @average;    // use its "return" value
+  padding: .average(16px, 50px)[@result];  // call a mixin and look up its "@return" value
 }
 ```
 
@@ -49,8 +50,7 @@ div {
 }
 ```
 
-Variables defined directly in callers scope cannot be overridden. However, variables defined in callers parent scope is not protected and will be
-overridden:
+Variables defined directly in callers scope cannot be overridden. However, variables defined in callers parent scope is not protected and will be overridden:
 ````less
 .mixin() {
   @size: in-mixin;

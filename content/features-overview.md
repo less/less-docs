@@ -19,11 +19,12 @@ What does Less add to CSS? Here's a quick overview of features.
 These are pretty self-explanatory:
 
 ```less
-@nice-blue: #5B83AD;
-@light-blue: @nice-blue + #111;
+@width: 10px;
+@height: @width + 10px;
 
 #header {
-  color: @light-blue;
+  width: @width;
+  height: @height;
 }
 ```
 
@@ -31,7 +32,8 @@ Outputs:
 
 ```css
 #header {
-  color: #6c94be;
+  width: 10px;
+  height: 20px;
 }
 ```
 
@@ -54,12 +56,12 @@ And we want to use these properties inside other rule-sets. Well, we just have t
 ```less
 #menu a {
   color: #111;
-  .bordered;
+  .bordered();
 }
 
 .post a {
   color: red;
-  .bordered;
+  .bordered();
 }
 ```
 
@@ -231,6 +233,17 @@ results in:
   }
 }
 ```
+Note, as of Less 3.5, you can simply write:
+```less
+@min768: (min-width: 768px);
+.element {
+  @media @min768 {
+    font-size: 1.2rem;
+  }
+}
+```
+In 3.5+, many cases previously requiring "quote-escaping" are not needed.
+
 
 # Functions
 
@@ -278,16 +291,38 @@ Now if we want to mixin the `.button` class in our `#header a`, we can do:
 ```less
 #header a {
   color: orange;
-  #bundle > .button;  // can also be written as #bundle.button
+  #bundle.button();  // can also be written as #bundle > .button
 }
 ```
-Note: append `()` to your namespace if you don't want it to appear in your CSS output i.e. `#bundle .tab`.
+Note: append `()` to your namespace (e.g. `#bundle()`) if you don't want it to appear in your CSS output i.e. `#bundle .tab`.
 
-Also note that variables declared within a namespace will be scoped to that namespace only and will not be available outside of the scope via the same syntax that you would use to reference a mixin (`#Namespace > .mixin-name`). So, for example, you can't do the following: `#Namespace > @this-will-not-work`.
+# Maps
+
+As of Less 3.5, you can also use mixins and rulesets as maps of values.
+```less
+#colors() {
+  primary: blue;
+  secondary: green;
+}
+
+.button {
+  color: #colors[primary];
+  border: 1px solid #colors[secondary];
+}
+```
+This outputs, as expected:
+```css
+.button {
+  color: blue;
+  border: 1px solid green;
+}
+```
+
+**[See also: Maps](../features/#maps-feature)**
 
 # Scope
 
-Scope in Less is very similar to that of programming languages. Variables and mixins are first looked for locally, and if they aren't found, the compiler will look in the parent scope, and so on.
+Scope in Less is very similar to that of CSS. Variables and mixins are first looked for locally, and if they aren't found, it's inherited from the "parent" scope.
 
 ```less
 @var: red;
@@ -300,7 +335,7 @@ Scope in Less is very similar to that of programming languages. Variables and mi
 }
 ```
 
-Mixin and variable definitions do not have to be placed before a line where they are referenced. So the following Less code is identical to the previous example:
+Like CSS custom properties, mixin and variable definitions do not have to be placed before a line where they are referenced. So the following Less code is identical to the previous example:
 
 ```less
 @var: red;
