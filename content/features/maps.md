@@ -1,6 +1,6 @@
 Released [v3.5.0-beta.4]({{ less.master.url }}CHANGELOG.md)
 
-> Use rulesets and mixins as de facto maps of values
+> Use rulesets and mixins as maps of values
 
 By combining namespacing with the lookup `[]` syntax, you can turn your rulesets / mixins into maps.
 
@@ -87,3 +87,26 @@ Note, if a lookup value produces another ruleset, you can append a second `[]` l
 In this way, rulesets and variable calls can emulate a type of "namespacing", similar to mixins.
 
 As far as whether to use mixins or rulesets assigned to variables as maps, it's up to you. You may want to replace entire maps by re-declaring a variable assigned to a rulset. Or you may want to "merge" individual key/value pairs, in which case mixins as maps might be more appropriate.
+
+### Using variable variables in lookups
+
+One important thing to notice is that the value in `[@lookup]` is the key (variable) name `@lookup`, and is not evaluated as a variable. If you want the key name itself to be variable, you can use the `@@variable` syntax.
+
+E.g.
+```less
+.foods() {
+  @dessert: ice cream;
+}
+
+@key-to-lookup: dessert;
+
+.lunch {
+  treat: .foods[@@key-to-lookup];
+}
+```
+This would output:
+```css
+.lunch {
+  treat: ice cream;
+}
+```
