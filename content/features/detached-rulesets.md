@@ -7,7 +7,7 @@ A detached ruleset is a group of css properties, nested rulesets, media declarat
 Simple example:
 ````less
 // declare detached ruleset
-@detached-ruleset: { background: red; };
+@detached-ruleset: { background: red; }; // semi-colon is optional in 3.5.0+
 
 // use detached ruleset
 .top {

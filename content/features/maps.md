@@ -9,7 +9,7 @@ By combining namespacing with the lookup `[]` syntax, you can turn your rulesets
   mobile: 320px;
   tablet: 768px;
   desktop: 1024px;
-};
+}
 
 .navbar {
   display: block;
@@ -67,3 +67,23 @@ You can also make this easier by [aliasing mixins](#mixins-feature-mixin-aliasin
   border-color: @colors[secondary];
 }
 ```
+
+Note, if a lookup value produces another ruleset, you can append a second `[]` lookup, as in:
+
+```less
+@config: {
+  @options: {
+    library-on: true
+  }
+}
+
+& when (@config[@options][library-on] = true) {
+  .produce-ruleset {
+    prop: val;
+  }
+}
+```
+
+In this way, rulesets and variable calls can emulate a type of "namespacing", similar to mixins.
+
+As far as whether to use mixins or rulesets assigned to variables as maps, it's up to you. You may want to replace entire maps by re-declaring a variable assigned to a rulset. Or you may want to "merge" individual key/value pairs, in which case mixins as maps might be more appropriate.
