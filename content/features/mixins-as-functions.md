@@ -1,6 +1,32 @@
 > Return variables or mixins from mixins
 
-Variables and mixins defined in a mixin are visible and can be used in caller's scope. There is only one exception, a variable is not copied if the caller contains a variable with the same name (that includes variables defined by another mixin call).  Only variables present in callers local scope are protected. Variables inherited from parent scopes are overridden.
+Starting in Less 3.5, you can use property/variable accessors to get a "return value" from a mixin, essentially using it like a function.
+
+Example:
+
+```less
+.average(@x, @y) {
+  @result: ((@x + @y) / 2);
+}
+
+div {
+  padding: .average(16px, 50px)[@result];  // call a mixin and look up its "@return" value
+}
+```
+
+Results in:
+
+```css
+div {
+  padding: 33px;
+}
+```
+
+#### Variables in caller scope
+
+***DEPRECATED - Use Property / Value Accessors***
+
+Variables and mixins defined in a mixin are visible and can be used in caller's scope. There is only one exception: a variable is not copied if the caller contains a variable with the same name (that includes variables defined by another mixin call).  Only variables present in callers local scope are protected. Variables inherited from parent scopes are overridden.
 
 Example:
 
@@ -23,30 +49,6 @@ Results in:
 .caller {
   width:  100%;
   height: 200px;
-}
-```
-
-### Mixin return values
-
-Starting in Less 3.5, you can use property/variable accessors to get a "return value" from a mixin. Essentially using it like a function.
-
-Example:
-
-```less
-.average(@x, @y) {
-  @result: ((@x + @y) / 2);
-}
-
-div {
-  padding: .average(16px, 50px)[@result];  // call a mixin and look up its "@return" value
-}
-```
-
-Results in:
-
-```css
-div {
-  padding: 33px;
 }
 ```
 

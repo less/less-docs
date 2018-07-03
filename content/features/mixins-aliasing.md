@@ -31,7 +31,7 @@ This would output:
 }
 ```
 
-### Variable calls
+#### Variable calls
 
 Entire mixin calls can be aliased and called as variable calls. As in:
 

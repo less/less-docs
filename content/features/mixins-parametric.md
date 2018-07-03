@@ -37,7 +37,7 @@ We can invoke it like this now:
 
 ```less
 #header {
-  .border-radius;
+  .border-radius();
 }
 ```
 
@@ -53,7 +53,7 @@ You can also use parametric mixins which don't take parameters. This is useful i
   word-wrap: break-word;
 }
 
-pre { .wrap }
+pre { .wrap() }
 ```
 
 Which would output:
@@ -67,7 +67,7 @@ pre {
 }
 ```
 
-### Mixins with Multiple Parameters
+#### Mixins with Multiple Parameters
 Parameters are either *semicolon* or *comma* separated. It is recommended to use *semicolon*. The symbol comma has double meaning: it can be interpreted either as a mixin parameters separator or css list separator.
 
 Using comma as mixin separator makes it impossible to create comma separated lists as an argument. On the other hand, if the compiler sees at least one semicolon inside mixin call or declaration, it assumes that arguments are separated by semicolons and all commas belong to css lists:
@@ -107,7 +107,7 @@ compiles into:
 }
 ```
 
-### Named Parameters
+#### Named Parameters
 
 A mixin reference can supply parameters values by their names instead of just positions. Any parameter can be referenced by its name and they do not have to be in any special order:
 
@@ -139,7 +139,7 @@ compiles into:
 }
 ```
 
-### The `@arguments` Variable
+#### The `@arguments` Variable
 
 `@arguments` has a special meaning inside mixins, it contains all the arguments passed, when the mixin was called. This is useful if you don't want to deal with individual parameters:
 
@@ -164,7 +164,7 @@ Which results in:
 }
 ```
 
-### Advanced Arguments and the `@rest` Variable
+#### Advanced Arguments and the `@rest` Variable
 
 You can use `...` if you want your mixin to take a variable number of arguments. Using this after a variable name will assign those arguments to the variable.
 

@@ -278,7 +278,7 @@ Sometimes, you may want to group your mixins, for organizational purposes, or ju
     border: 1px solid black;
     background-color: grey;
     &:hover {
-      background-color: white
+      background-color: white;
     }
   }
   .tab { ... }

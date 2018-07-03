@@ -26,12 +26,11 @@ which results in:
 }
 ```
 
-Notice that when you call the mixin, the parentheses are optional.
+Currently and historically, the parentheses in a mixin call are optional, but optional parentheses are deprecated and will be required in a future release.
 
 ```less
-// these two statements do the same thing:
 .a(); 
-.a;
+.a;  // currently works, but deprecated; don't use
 ```
 
 ## Not Outputting the Mixin
@@ -46,8 +45,8 @@ If you want to create a mixin but you do not want that mixin to be in your CSS o
   background: white;
 }
 .class {
-  .my-mixin;
-  .my-other-mixin;
+  .my-mixin();
+  .my-other-mixin();
 }
 ```
 outputs
@@ -103,19 +102,16 @@ If you want to mixin properties inside a more complicated selector, you can stac
 }
 ```
 
-Both `>` and whitespace are optional, as are parentheses
+Both `>` and whitespace are optional
 
 ```less
 // all do the same thing
-#outer > .inner;
 #outer > .inner();
-#outer .inner;
 #outer .inner();
-#outer.inner;
 #outer.inner();
 ```
 
-One use of this is known as namespacing. You can put your mixins under a id selector and this makes sure it won't conflict with another library.
+Namespacing your mixins like reduces conflict with other library mixins or user mixins, but it can also be a way to "organize" groups of mixins.
 
 Example:
 
@@ -133,7 +129,7 @@ Example:
 
 ## Guarded Namespaces
 
-If namespace have a guard, mixins defined by it are used only if guard condition returns true. Namespace guard is evaluated exactly the same way as guard on mixin, so next two mixins work the same way:
+If a namespace has a guard, mixins defined by it are used only if the guard condition returns true. A namespace guard is evaluated exactly the same way as a guard on mixin, so the following two mixins work the same way:
 
 ```less
 #namespace when (@mode = huge) {
