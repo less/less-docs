@@ -41,11 +41,11 @@ published:
         files: <%= features.base %>/mixins-parametric.md
 
       mixins-as-functions:
-        title: Return values from mixins
+        title: Using Mixins as Functions
         files: <%= features.base %>/mixins-as-functions.md
 
       loops:
-        title: Recursive mixins
+        title: Recursive Mixins
         files: <%= features.base %>/mixin-loops.md
 
       mixin-guards:
