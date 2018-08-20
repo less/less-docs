@@ -48,7 +48,7 @@ title: Less Plugins
 | [Bootstrap](https://github.com/bassjobsen/less-plugin-bootstrap/) | Bootstrap
 | [Cardinal](https://github.com/bassjobsen/less-plugin-cardinal) | Cardinal
 | [Flexbox Grid](https://github.com/bassjobsen/less-plugin-flexboxgrid)  | [Flexbox Grid](http://flexboxgrid.com/)
-| [Flexible Grid System](https://github.com/bassjobsen/less-plugin-flexiblegs) | [Flexible Grid System](http://flexible.gs/)
+| [Flexible Grid System](https://github.com/bassjobsen/less-plugin-flexiblegs) | [Flexible Grid System](https://dnomak.com/flexiblegs/)
 | [Ionic](https://github.com/bassjobsen/less-plugin-ionic) | Ionic
 | [Lesshat](https://github.com/bassjobsen/less-plugin-lesshat/) | Lesshat
 | [Skeleton](https://github.com/bassjobsen/less-plugin-skeleton) | Skeleton
