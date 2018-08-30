@@ -384,7 +384,7 @@ div {
 }
 ```
 
-Notes: A boolean expression supported as the `conditional` parameter are the same as of [Guard Statements](features/#mixins-feature-mixin-guards-feature).
+Notes: A boolean expression supported as the `conditional` parameter are the same as of [Guard Statements](/features/#mixins-feature-mixin-guards-feature).
 Note however that any boolean expression for the `condition` parameter require an extra set of parens:
 ```less
 if((2 > 1), blue, green); // OK
