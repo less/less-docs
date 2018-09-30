@@ -22,40 +22,69 @@ Allows you to add a path to every generated import and url in your css. This doe
 
 For instance, if all the images the css use are in a folder called resources, you can use this option to add this on to the URL's and then have the name of that folder configurable.
 
-#### Relative URLs
+#### Rewrite URLs
+
+| | |
+|---|---|
+| `lessc -ru=off`<br>`lessc --rewrite-urls=off` | `{ rewriteUrls: 'off' }` |
+| `lessc -ru=all`<br>`lessc --rewrite-urls=all` | `{ rewriteUrls: 'all' }` |
+| `lessc -ru=local`<br>`lessc --rewrite-urls=local` | `{ rewriteUrls: 'local' }` |
+
+By default URLs are kept as-is (`off`), so if you import a file in a sub-directory that references an image, exactly the same URL will be output in the css. This option allows you to rewrite URLs in imported files so that the URL is always relative to the base file that has been passed to Less. E.g.
+
+```css
+/* main.less */
+@import "global/fonts.less";
+```
+
+```css
+/* global/fonts.less */
+@font-face {
+  font-family: 'MyFont';
+  src: url('myfont/myfont.woff2') format('woff2');
+}
+```
+
+With nothing set or with `rewriteUrls:  'off'`, compiling `main.less` will output:
+
+```css
+/* main.less */
+/* global/fonts.less */
+@font-face {
+  font-family: 'MyFont';
+  src: url('myfont/myfont.woff2') format('woff2');
+}
+```
+
+With `rewriteUrls: 'all'`, it will output:
+
+```css
+/* main.less */
+/* global/fonts.less */
+@font-face {
+  font-family: 'MyFont';
+  src: url('./global/myfont/myfont.woff2') format('woff2');
+}
+```
+
+With `rewriteUrls: 'local'`, it will only rewrite URLs that are explicitly relative (those starting with a `.`):
+
+```css
+url('./myfont/myfont.woff2') /* becomes */ url('./global/myfont/myfont.woff2')
+url('myfont/myfont.woff2') /* stays */ url('myfont/myfont.woff2')
+```
+
+This can be useful in case you're combining Less with [CSS Modules](https://github.com/css-modules/css-modules) which use similar resolving semantics like Node.js.
+
+You may also want to consider using the data-uri function instead of this option, which will embed images into the css.
+
+#### Relative URLs (deprecated)
 
 | | |
 |---|---|
 | `lessc -ru`<br>`lessc --relative-urls` | `{ relativeUrls: true }` |
 
-By default URLs are kept as-is, so if you import a file in a sub-directory that references an image, exactly the same URL will be output in the css. This option allows you to re-write URL's in imported files so that the URL is always relative to the base imported file. E.g.
-
-```less
-# main.less
-@import "files/backgrounds.less";
-# files/backgrounds.less
-.icon-1 {
-  background-image: url('images/lamp-post.png');
-}
-```
-
-this will output the following normally
-
-```css
-.icon-1 {
-  background-image: url('images/lamp-post.png');
-}
-```
-
-but with `relativeUrls: true`, it will instead output
-
-```css
-.icon-1 {
-  background-image: url('files/images/lamp-post.png');
-}
-```
-
-You may also want to consider using the data-uri function instead of this option, which will embed images into the css.
+Has been replaced by `rewriteUrls: "all"`.
 
 #### Strict Math
 
