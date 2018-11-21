@@ -22,7 +22,7 @@ Allows you to add a path to every generated import and url in your css. This doe
 
 For instance, if all the images the css use are in a folder called resources, you can use this option to add this on to the URL's and then have the name of that folder configurable.
 
-#### Rewrite URLs
+### Rewrite URLs
 
 | | |
 |---|---|
