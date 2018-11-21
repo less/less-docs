@@ -10,9 +10,10 @@
 base: content/functions
 
 published:
-  misc-functions:
-    title: Misc Functions
-    files: <%= functions.base %>/misc-functions.md
+
+  logical-functions:
+    title: Logical Functions
+    files: <%= functions.base %>/logical-functions.md
 
   string-functions:
     title: String Functions
@@ -29,6 +30,10 @@ published:
   type-functions:
     title: Type Functions
     files: <%= functions.base %>/type-functions.md
+
+  misc-functions:
+    title: Misc Functions
+    files: <%= functions.base %>/misc-functions.md
 
   color-definition:
     title: Color Definition Functions

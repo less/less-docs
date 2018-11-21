@@ -3,7 +3,7 @@ title: Less.js Options
 ---
 ## Cross-Platform Options
 
-#### Include Paths
+### Include Paths
 
 | | |
 |---|---|
@@ -11,7 +11,7 @@ title: Less.js Options
 
 If the file in an `@import` rule does not exist at that exact location, Less will look for it at the location(s) passed to this option. You might use this for instance to specify a path to a library which you want to be referenced simply and relatively in the Less files.
 
-#### Rootpath
+### Rootpath
 
 | | |
 |---|---|
@@ -78,52 +78,119 @@ This can be useful in case you're combining Less with [CSS Modules](https://gith
 
 You may also want to consider using the data-uri function instead of this option, which will embed images into the css.
 
+### Math
+
+_Released v3.7.0_
+
+| | |
+|---|---|
+| `lessc -m=[option]`<br>`lessc --math=[option]` | `{ math: '[option]' }` |
+
+Less has re-built math options to offer an in-between feature between the previous `strictMath` setting, which required parentheses all the time, and the default, which performed math in all situations.
+
+In order to cause fewer conflicts with CSS, which now liberally uses the `/` symbol between values, there is now a math mode that _only_ requires parentheses for division. "Strict math" has also been tweaked to operate more intuitively, although the legacy behavior is supported.
+
+The for options available for `math` are:
+
+- `always`  (current default) - Less eagerly does math
+- `parens-division` **(future default)** - No division is performed outside of parens using `/` operator (but can be "forced" outside of parens with `./` operator)
+- `parens` | `strict` - A more intuitive form of legacy `strictMath: true`
+- `strict-legacy` (deprecated) - As named, operates exactly like current `strictMath: true`, with the exception that `width: -(1);` (single dimension values in parens) will now output `width: -1;` vs previous behavior of `width: -(1)`
+
+**always**
+Example:
+```less
+.math {
+  a: 1 + 1;
+  b: 2px / 2;
+  c: 2px ./ 2;
+  d: (2px / 2);
+}
+```
+Outputs:
+```css
+.math {
+  a: 2;
+  b: 1px;
+  c: 1px;
+  d: 1px;
+}
+```
+
+**parens-division**
+
+Example:
+```less
+.math {
+  a: 1 + 1;
+  b: 2px / 2;
+  c: 2px ./ 2;
+  d: (2px / 2);
+}
+```
+Outputs:
+```css
+.math {
+  a: 2;
+  b: 2px / 2;
+  c: 1px;
+  d: 1px;
+}
+```
+
+**strict**
+```less
+.math {
+  a: 1 + 1;
+  b: 2px / 2;
+  c: (2px / 2) + (3px / 1);
+}
+```
+Output:
+```css
+.math {
+  a: 1 + 1;
+  b: 2px / 2;
+  c: 1px + 3px;
+}
+```
+
+**strict-legacy**
+
+In legacy `strictMath` mode, mixed expressions outside of parentheses means entire parentheses won't evaluate. (Probably not what you want.)
+
+```less
+.math {
+  a: 1 + 1;
+  b: 2px / 2;
+  c: (2px / 2) + (3px / 1);
+}
+```
+Output:
+```css
+.math {
+  a: 1 + 1;
+  b: 2px / 2;
+  c: (2px / 2) + (3px / 1);
+}
+```
+
+#### Strict Math (Deprecated)
+
+_This has been replaced by the [`math`](#less-options-math) option._
+
+
+
 #### Relative URLs (deprecated)
 
 | | |
 |---|---|
 | `lessc -ru`<br>`lessc --relative-urls` | `{ relativeUrls: true }` |
 
-Has been replaced by `rewriteUrls: "all"`.
+_Has been replaced by `rewriteUrls: "all"`_
 
-#### Strict Math
 
-| | |
-|---|---|
-| `lessc -sm=on`<br>`lessc --strict-math=on` | `{ strictMath: true }` |
-
-Defaults to off/false.
-
-Without this option on, Less will try and process all math in your css, e.g. in:
-
-```less
-.class {
-  grid-column: 3 / 6;
-}
-```
-`3 / 6` will result in `2`.
-
-With strict math on, only math that is inside un-necessary parenthesis will be processed. For instance.
-
-```less
-.class {
-  grid-column: 3 / 6;
-  width: 40px + 2px;
-  height: (40px + 2px);
-}
-```
-
-```css
-.class {
-  grid-column: 3 / 6;
-  width: 40px + 2px;
-  height: 42px;
-}
-```
-
-We originally planned to default this to true in the future, but it has been a controversial option and we are considering whether we have solved the problem in the right way, or whether Less should just have exceptions for instances where `/` is valid or not.
-
-#### Strict Units
+### Strict Units
 
 | | |
 |---|---|
@@ -207,13 +274,13 @@ See: [Pre-Loaded Plugins](#plugins)
 Runs the less parser and just reports errors without any output.
 
 
-#### Compress
+#### Compress (Deprecated)
 
 | | |
 |---|---|
 | `lessc --compress -x` | `{ compress: true }` |
 
-Compress using less built-in compression. This does an okay job but does not utilise all the tricks of dedicated css compression. Please feel free to improve our compressed output with a pull request.
+Compress using less built-in compression. This does an okay job but does not utilise all the tricks of dedicated css compression. In general, we recommend looking at third-party tools that clean and compress CSS after your Less has been transformed to CSS.
 
 
 #### Allow Imports from Insecure HTTPS Hosts
@@ -223,7 +290,7 @@ Compress using less built-in compression. This does an okay job but does not uti
 | `lessc --insecure` | `{ insecure: true }` |
 
 
-### Source Map Options
+## Source Map Options
 
 Most of these options are not applicable to using Less.js in the browser, as you should generate a source map with your pre-compiled Less files.
 

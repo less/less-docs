@@ -22,7 +22,7 @@ compiles into:
 }
 ````
 
-Parentheses after a detached ruleset call are mandatory. The call `@detached-ruleset;` would NOT work.
+Parentheses after a detached ruleset call are mandatory (except when followed by a [lookup value](#detached-rulesets-feature-property-variable-accessors)). The call `@detached-ruleset;` would not work.
 
 It is useful when you want to define a mixin that abstracts out either wrapping a piece of code in a media query or a non-supported browser class name. The rulesets can be passed to mixin so that the mixin can wrap the content, e.g.
 
@@ -99,7 +99,7 @@ Returned mixin:
 // detached ruleset with a mixin
 @detached-ruleset: { 
     .mixin() {
-        color:blue;
+        color: blue;
     }
 };
 // call detached ruleset
@@ -133,6 +133,8 @@ A detached ruleset can use all variables and mixins accessible where it is *defi
 
 Lastly, a detached ruleset can gain access to scope by being unlocked (imported) into it.
 
+_Note: unlocking variables into scope via a called mixin is deprecated. Use [property / variable accessors](#detached-rulesets-feature-property-variable-accessors)._
+
 #### Definition and Caller Scope Visibility
 A detached ruleset sees the caller's variables and mixins:
 
@@ -162,7 +164,7 @@ selector {
 }
 ````
 
-Variable and mixins accessible form definition win over those available in the caller:
+Variable and mixins accessible from definition win over those available in the caller:
 ````less
 @variable: global;
 @detached-ruleset: {
@@ -233,3 +235,73 @@ compiles into:
   scope-detached: value;
 }
 ````
+
+
+## Property / variable accessors
+#### (Lookup values)
+
+_Released [v3.5.0]({{ less.master.url }}CHANGELOG.md)_
+
+Starting in Less 3.5, you can use property/variable accessors (also called "lookups") to select a value from variable (detached) rulesets.
+
+```less
+@config: {
+  option1: true;
+  option2: false;
+}
+
+.mixin() when (@config[option1] = true) {
+  selected: value;
+}
+
+.box {
+  .mixin();
+}
+```
+Outputs:
+```css
+.box {
+  selected: value;
+}
+```
+
+If what is returned from a lookup is another detached ruleset, you can use a second lookup to get that value.
+
+```less
+@config: {
+  @colors: {
+    primary: blue;
+  }
+}
+
+.box {
+  color: @config[@colors][primary];
+}
+```
+
+#### Variable variables in lookups
+
+The lookup value that is returned can itself be variable. As in, you can write:
+
+```less
+@config: {
+  @dark: {
+    primary: darkblue;
+  }
+  @light: {
+    primary: lightblue;
+  }
+}
+
+.box {
+  @lookup: dark;
+  color: @config[@@lookup][primary];
+}
+```
+This will output:
+
+```less
+.box {
+  color: darkblue;
+}
+```

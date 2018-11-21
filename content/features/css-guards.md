@@ -34,3 +34,15 @@ You can also achieve an `if` type statement by combining this with the `&` featu
   }
 }
 ```
+Note that you can also achieve a similar pattern by using the actual `if()` function and a variable call. As in:
+```less
+@dr: if(@my-option = true, {
+  button {
+    color: white;
+  }
+  a {
+    color: blue;
+  }
+});
+@dr();
+```

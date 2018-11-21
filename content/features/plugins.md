@@ -61,7 +61,7 @@ However, you would need to return a proper Less node if you wanted to, say, mult
 Meaning, this is more correct:
 ```js
 functions.add('pi', function() {
-    return less.dimension(Math.PI);
+    return new tree.Dimension(Math.PI);
 });
 ```
 _Note: A dimension is a number with or without a unit, like "10px", which would be `less.Dimension(10, "px")`. For a list of units, see the [Less API](TODO)._
@@ -156,7 +156,7 @@ store(@var);
 Later you could do something like:
 ```js
 functions.add('retrieve', function(val) {
-    return less.value(collection);
+    return new tree.Value(collection);
 });
 ```
 ```less

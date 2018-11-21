@@ -1,4 +1,4 @@
-Released [v3.5.0-beta.4]({{ less.master.url }}CHANGELOG.md)
+Released [v3.5.0]({{ less.master.url }}CHANGELOG.md)
 
 > Assigning mixin calls to a variable
 
