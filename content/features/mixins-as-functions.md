@@ -14,7 +14,7 @@ Example:
 }
 
 div {
-  // call a mixin and look up its "@return" value
+  // call a mixin and look up its "@result" value
   padding: .average(16px, 50px)[@result];
 }
 ```

@@ -68,7 +68,7 @@ Example:
 .e:extend(.f) {}
 .e:extend(.g) {}
 
-// the above an the below do the same thing
+// the above and the below do the same thing
 .e:extend(.f, .g) {}
 ```
 
