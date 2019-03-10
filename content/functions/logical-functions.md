@@ -17,7 +17,7 @@ Updated: v3.6.0
 
 div {
     margin: if((2 > 1), 0, 3px);
-    color:  if((iscolor(@some)), darken(@some, 10%), black);
+    color:  if((iscolor(@some)), @some, black);
 }
 ```
 Result:
@@ -28,7 +28,7 @@ div {
 }
 ```
 
-Notes: A boolean expression supported as the `conditional` parameter are the same as of [Guard Statements](features/#mixins-feature-mixin-guards-feature).
+Notes: A boolean expression supported as the `conditional` parameter are the same as of [Guard Statements](/features/#mixins-feature-mixin-guards-feature).
 ```less
 if(not (true), foo, bar);
 if((true) and (2 > 1), foo, bar);
