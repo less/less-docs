@@ -69,4 +69,4 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [Shape.LESS](https://github.com/fahad19/shape.less) | Collection of mixins for various shapes |
 | [tRRtoolbelt.less](https://github.com/therebelrobot/tRRtoolbelt.less) | Mixins and functions for common actions |
 | [Tuesday.less](http://shakrmedia.github.io/tuesday/) | CSS Animation mixins library |
-| [LESS Style Library](https://less.rickbergmann.com/) | A collection of variables and LESS namespaced mixins |
+| [Less Style Library](https://less.rickbergmann.com/) | A collection of variables and LESS namespaced mixins |
