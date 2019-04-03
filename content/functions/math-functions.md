@@ -30,7 +30,7 @@ Output: `2`
 
 Parameters: `number` - a floating point number.
 
-Returns: `string`
+Returns: `number`
 
 Example: `percentage(0.5)`
 
