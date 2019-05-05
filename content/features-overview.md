@@ -190,7 +190,7 @@ Multiplication and division do not convert numbers. It would not be meaningful i
 @base: 2cm * 3mm; // result is 6cm
 ```
 
-You can also do arithemtic on colors:
+You can also do arithmetic on colors:
 
 ```less
 @color: #224488 / 2; //results in #112244
