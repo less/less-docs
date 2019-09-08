@@ -249,7 +249,7 @@ In 3.5+, many cases previously requiring "quote-escaping" are not needed.
 
 Less provides a variety of functions which transform colors, manipulate strings and do maths. They are documented fully in the [function reference](../functions/).
 
-Using them is pretty straightforward. The following example uses percentage to convert 0.5 to 50%, increases the saturation of a base color by 5% and then sets the background color to one that is lightened by 25% and spun by 8 degrees:
+Using them is pretty straightforward. The following example uses percentage to convert 0.5 to 50%, increases the saturation of a base color by 5% and then sets the background color to one that is lightened by 25% and spin by 8 degrees:
 
 ```less
 @base: #f04615;
