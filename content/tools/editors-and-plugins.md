@@ -69,7 +69,7 @@ Also see: [GUIs for Less](#guis-for-less)
 [web-workbench]: http://visualstudiogallery.msdn.microsoft.com/2b96d16a-c986-4501-8f97-8008f9db141a
 [dmx]: http://www.dmxzone.com/go/21514/dmxzone-less-css-compiler-features-unveiled/
 [Npp]: http://notepad-plus-plus.org/
-[Npp-Less-Salitrero]: http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_Files#L
+[Npp-Less-Salitrero]: https://github.com/notepad-plus-plus/notepad-plus-plus
 [Npp-Less-azrafe7]: https://github.com/azrafe7/LESS-for-Notepad-plusplus
 [Npp-How-to]: http://sourceforge.net/apps/mediawiki/notepad-plus/?title=User_Defined_Language_Files#How_to_install_user_defined_language_files "how to install User Defined Language files"
 [brackets]: http://brackets.io/
