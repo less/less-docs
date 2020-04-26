@@ -18,6 +18,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [Petal](http://http://shakrmedia.github.io/petal/) | A modern, light CSS UI framework developed at Shakr |
 | [Pre](http://madscript.com/pre/) | CSS framework |
 | [prelude](https://github.com/amazingSurge/prelude) | Lightweight, responsive and extensible front-end framework |
+| [React Suite](https://rsuitejs.com/en/) | 🧱 A suite of React components |
 | [Schema](http://danmalarkey.github.io/schema/) | Light, responsive, and lean frontend UI framework |
 | [Semantic UI](http://www.semantic-ui.com/) | UI component framework based around useful principles from natural language |
 | [Strapless](http://www.strapless.io/) | CSS boilerplate/framework for HTML elements, mixins library for patterns and color |
