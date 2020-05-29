@@ -26,14 +26,15 @@ which results in:
 }
 ```
 
-Currently and historically, the parentheses in a mixin call are optional, but optional parentheses are deprecated and will be required in a future release.
+Historically, the parentheses in a mixin call are optional, but optional parentheses are deprecated and will be required in a future release.
 
 ```less
 .a(); 
-.a;  // currently works, but deprecated; don't use
+.a;    // currently works, but deprecated; don't use
+.a (); // white-space before parentheses is also deprecated
 ```
 
-## Not Outputting the Mixin
+## Mixins With Parentheses
 
 If you want to create a mixin but you do not want that mixin to be in your CSS output, put parentheses after the mixin definition.
 
@@ -98,20 +99,19 @@ If you want to mixin properties inside a more complicated selector, you can stac
 }
 
 .c {
-  #outer > .inner();
+  #outer.inner();
 }
 ```
 
-Both `>` and whitespace are optional
+Note: legacy Less syntax allows `>` and whitespace between namespaces and mixins. This syntax is deprecated and may be removed. Currently, these do the same thing.
 
 ```less
-// all do the same thing
-#outer > .inner();
-#outer .inner();
-#outer.inner();
+#outer > .inner(); // deprecated
+#outer .inner();   // deprecated
+#outer.inner();    // preferred
 ```
 
-Namespacing your mixins like reduces conflict with other library mixins or user mixins, but it can also be a way to "organize" groups of mixins.
+Namespacing your mixins can reduce conflict with other library mixins or user mixins, but it can also be a way to "organize" groups of mixins.
 
 Example:
 
@@ -158,7 +158,7 @@ Use the `!important` keyword after mixin call to mark all properties inherited b
 Example:
 
 ```less
-.foo (@bg: #f5f5f5, @color: #900) {
+.foo (@bg: #f5f5f5; @color: #900) {
   background: @bg;
   color: @color;
 }
