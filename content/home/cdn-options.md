@@ -1,5 +1,5 @@
-### [Less CDN]({{ site.cdn.cloudflare }}{{ less.version }}/less.min.js)
+### [Less CDN]({{ site.cdn.cloudflare }})
 
 ```html
-<script src="{{ site.cdn.cloudflare }}{{ less.version }}/less.min.js"></script>
+<script src="{{ site.cdn.cloudflare }}"></script>
 ```
