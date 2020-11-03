@@ -37,7 +37,7 @@ if((false) or (isstring("boo!")), foo, bar);
 Note: before Less 3.6, the condition required a set of parentheses.
 ```less
 if(2 > 1, blue, green);   // Causes an error in 3.0-3.5.3
-if((2 > 1), blue, green); // Ok 3.0+
+if((2 > 1), blue, green); // Ok 3.6+
 ```
 
 ### boolean
