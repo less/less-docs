@@ -37,12 +37,12 @@ Entire mixin calls can be aliased and called as variable calls. As in:
 
 ```less
 #library() {
-  .rules() {
+  .colors() {
     background: green;
   }
 }
 .box {
-  @alias: #library.rules();
+  @alias: #library.colors();
   @alias();
 }
 ```
@@ -57,7 +57,7 @@ Note, unlike mixins used in root, mixin calls assigned to variables and _called 
 
 ```less
 #library() {
-  .rules() {
+  .colors() {
     background: green;
   }
 }

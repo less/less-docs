@@ -18,15 +18,6 @@ Crunch 2 is a cross-platform (Windows, Mac, and Linux) editor with integrated co
 ![Crunch screenshot](http://getcrunch.co/wp-content/uploads/2015/10/crunch_retina2.jpg)
 
 
-### [SimpLESS](http://wearekiss.com/simpless)
-
-> SimpLess is a minimalistic Less compiler. Just drag, drop and compile.
-
-One of the unique features of SimpLess is that it supports 'prefixing' your CSS by using [http://prefixr.com.](http://prefixr.com). SimpLess is built on the Titanium platform. Get more info: [http://wearekiss.com/simpless](http://wearekiss.com/simpless)
-
-![SimpLess screenshot](http://wearekiss.com/lib/img/simpless/app-windows.png?1)
-
-
 ### [Koala](http://koala-app.com/)
 
 > Koala is a cross-platform GUI application for compiling less, sass and coffeescript.
