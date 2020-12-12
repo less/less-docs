@@ -14,8 +14,8 @@ module.exports = function(grunt) {
 
     // Project metadata
     pkg: grunt.file.readJSON('package.json'),
-    site: grunt.file.readYAML('.assemblerc.yml'),
     _less: grunt.file.readJSON('data/less.json'),
+    site: grunt.file.readYAML('.assemblerc.yml'),
 
     download: {
       package: {
