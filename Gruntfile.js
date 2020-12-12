@@ -14,12 +14,12 @@ module.exports = function(grunt) {
 
     // Project metadata
     pkg: grunt.file.readJSON('package.json'),
-    site: grunt.file.readYAML('.assemblerc.yml'),
     _less: grunt.file.readJSON('data/less.json'),
+    site: grunt.file.readYAML('.assemblerc.yml'),
 
     download: {
       package: {
-        src: 'https://raw.githubusercontent.com/less/less.js/master/package.json',
+        src: 'https://raw.githubusercontent.com/less/less.js/master/packages/less/package.json',
         dest: 'data/less.json'
       }
     },

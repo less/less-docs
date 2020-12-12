@@ -225,3 +225,19 @@ isruleset(7.8%);     // false
 isruleset(keyword);  // false
 isruleset(url(...)); // false
 ```
+
+### isdefined
+
+_Released [v4.0.0]({{ less.master.url }}CHANGELOG.md)_
+
+> Returns `true` if a variable is defined, `false` otherwise.
+
+Parameters: `variable` - a variable being evaluated.
+
+Example:
+
+```less
+@foo: 1;
+isdefined(@foo);     // true
+isdefined(@bar);     // false
+```

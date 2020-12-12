@@ -78,6 +78,7 @@
     // setTimeout(function () {
       var $sideBar = $('.sidebar')
 
+      /** @todo - replace this with position: sticky */
       $sideBar.affix({
         offset: {
           top: function () {
@@ -86,10 +87,10 @@
             var navOuterHeight = $('.docs-nav').height()
 
             return (this.top = offsetTop - navOuterHeight - sideBarMargin + 15)
+          },
+          bottom: function () {
+            return (this.bottom = $('.footer').outerHeight(true))
           }
-          // bottom: function () {
-          //   return (this.bottom = $('.footer').outerHeight(true))
-          // }
         }
       })
     // }, 100);
