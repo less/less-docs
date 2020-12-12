@@ -88,7 +88,7 @@ button:hover {
 
 ## Namespaces
 
-If you want to mixin properties inside a more complicated selector, you can stack up multiple id's or classes.
+If you want to mixin properties inside a more complicated selector, you can stack up multiple ids or classes.
 
 ```less
 #outer() {
@@ -111,7 +111,7 @@ Both `>` and whitespace are optional
 #outer.inner();
 ```
 
-Namespacing your mixins like reduces conflict with other library mixins or user mixins, but it can also be a way to "organize" groups of mixins.
+Namespacing your mixins like this reduces conflicts with other library mixins or user mixins, but can also be a way to "organize" groups of mixins.
 
 Example:
 
@@ -129,7 +129,7 @@ Example:
 
 ## Guarded Namespaces
 
-If a namespace has a guard, mixins defined by it are used only if the guard condition returns true. A namespace guard is evaluated exactly the same way as a guard on mixin, so the following two mixins work the same way:
+If a namespace has a guard, mixins defined by it are used only if the guard condition returns true. A namespace guard is evaluated exactly the same as a guard on a mixin, so the following two mixins work the same way:
 
 ```less
 #namespace when (@mode = huge) {
@@ -141,7 +141,7 @@ If a namespace has a guard, mixins defined by it are used only if the guard cond
 }
 ```
 
-The `default` function is assumed to have the same value for all nested namespaces and mixin. Following mixin is never evaluated, one of its guards is guaranteed to be false:
+The `default` function is assumed to have the same value for all nested namespaces and mixin. The following mixin is never evaluated; one of its guards is guaranteed to be false:
 
 ```less
 #sp_1 when (default()) {
