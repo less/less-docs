@@ -67,15 +67,18 @@ pre {
 }
 ```
 
-#### Mixins with Multiple Parameters
-Parameters are either *semicolon* or *comma* separated. It is recommended to use *semicolon*. The symbol comma has double meaning: it can be interpreted either as a mixin parameters separator or css list separator.
+#### Parameter separators
+Parameters are currently either *semicolon* or *comma* separated.
 
-Using comma as mixin separator makes it impossible to create comma separated lists as an argument. On the other hand, if the compiler sees at least one semicolon inside mixin call or declaration, it assumes that arguments are separated by semicolons and all commas belong to css lists:
+Originally, parameters were only separated by commas, but the semi-colon was later added to support passing comma-separated list values to single arguments.
 
 * two arguments and each contains comma separated list: `.name(1, 2, 3; something, else)`,
 * three arguments and each contains one number: `.name(1, 2, 3)`,
 * use dummy semicolon to create mixin call with one argument containing comma separated css list: `.name(1, 2, 3;)`,
 * comma separated default value: `.name(@param1: red, blue;)`.
+* As of Less 4.0, you can wrap a list value using a paren escape [`~()`], e.g. `.name(@param1: ~(red, blue))`. This is similar to the quote escape syntax: `~"quote"`
+
+#### Overloading mixins
 
 It is legal to define multiple mixins with the same name and number of parameters. Less will use properties of all that can apply. If you used the mixin with one parameter e.g. `.mixin(green);`, then properties of all mixins with exactly one mandatory parameter will be used:
 
@@ -83,11 +86,11 @@ It is legal to define multiple mixins with the same name and number of parameter
 .mixin(@color) {
   color-1: @color;
 }
-.mixin(@color; @padding: 2) {
+.mixin(@color, @padding: 2) {
   color-2: @color;
   padding-2: @padding;
 }
-.mixin(@color; @padding; @margin: 2) {
+.mixin(@color, @padding, @margin: 2) {
   color-3: @color;
   padding-3: @padding;
   margin: @margin @margin @margin @margin;
@@ -144,13 +147,13 @@ compiles into:
 `@arguments` has a special meaning inside mixins, it contains all the arguments passed, when the mixin was called. This is useful if you don't want to deal with individual parameters:
 
 ```less
-.box-shadow(@x: 0; @y: 0; @blur: 1px; @color: #000) {
+.box-shadow(@x: 0, @y: 0, @blur: 1px, @color: #000) {
   -webkit-box-shadow: @arguments;
      -moz-box-shadow: @arguments;
           box-shadow: @arguments;
 }
 .big-block {
-  .box-shadow(2px; 5px);
+  .box-shadow(2px, 5px);
 }
 ```
 
@@ -172,14 +175,14 @@ You can use `...` if you want your mixin to take a variable number of arguments.
 .mixin(...) {        // matches 0-N arguments
 .mixin() {           // matches exactly 0 arguments
 .mixin(@a: 1) {      // matches 0-1 arguments
-.mixin(@a: 1; ...) { // matches 0-N arguments
-.mixin(@a; ...) {    // matches 1-N arguments
+.mixin(@a: 1, ...) { // matches 0-N arguments
+.mixin(@a, ...) {    // matches 1-N arguments
 ```
 
 Furthermore:
 
 ```less
-.mixin(@a; @rest...) {
+.mixin(@a, @rest...) {
    // @rest is bound to arguments after @a
    // @arguments is bound to all arguments
 }
@@ -190,23 +193,23 @@ Furthermore:
 Sometimes, you may want to change the behavior of a mixin, based on the parameters you pass to it. Let's start with something basic:
 
 ```less
-.mixin(@s; @color) { ... }
+.mixin(@s, @color) { ... }
 
 .class {
-  .mixin(@switch; #888);
+  .mixin(@switch, #888);
 }
 ```
 
 Now let's say we want `.mixin` to behave differently, based on the value of `@switch`, we could define `.mixin` as such:
 
 ```less
-.mixin(dark; @color) {
+.mixin(dark, @color) {
   color: darken(@color, 10%);
 }
-.mixin(light; @color) {
+.mixin(light, @color) {
   color: lighten(@color, 10%);
 }
-.mixin(@_; @color) {
+.mixin(@_, @color) {
   display: block;
 }
 ```
@@ -217,7 +220,7 @@ Now, if we run:
 @switch: light;
 
 .class {
-  .mixin(@switch; #888);
+  .mixin(@switch, #888);
 }
 ```
 
@@ -248,8 +251,8 @@ We can also match on arity, here's an example:
 .mixin(@a) {
   color: @a;
 }
-.mixin(@a; @b) {
-  color: fade(@a; @b);
+.mixin(@a, @b) {
+  color: fade(@a, @b);
 }
 ```
 

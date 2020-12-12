@@ -19,7 +19,7 @@ module.exports = function(grunt) {
 
     download: {
       package: {
-        src: 'https://raw.githubusercontent.com/less/less.js/master/package.json',
+        src: 'https://raw.githubusercontent.com/less/less.js/master/packages/less/package.json',
         dest: 'data/less.json'
       }
     },
