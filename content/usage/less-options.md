@@ -88,14 +88,14 @@ _Released v3.7.0_
 
 Less has re-built math options to offer an in-between feature between the previous `strictMath` setting, which required parentheses all the time, and the default, which performed math in all situations.
 
-In order to cause fewer conflicts with CSS, which now liberally uses the `/` symbol between values, there is now a math mode that _only_ requires parentheses for division. "Strict math" has also been tweaked to operate more intuitively, although the legacy behavior is supported.
+In order to cause fewer conflicts with CSS, which now liberally uses the `/` symbol between values, there is now a math mode that _only_ requires parentheses for division. (This is now the default in Less 4.) "Strict math" has also been tweaked to operate more intuitively, although the legacy behavior is supported.
 
 The for options available for `math` are:
 
-- `always`  (current default) - Less eagerly does math
-- `parens-division` **(future default)** - No division is performed outside of parens using `/` operator (but can be "forced" outside of parens with `./` operator)
-- `parens` | `strict` - A more intuitive form of legacy `strictMath: true`
-- `strict-legacy` (deprecated) - As named, operates exactly like current `strictMath: true`, with the exception that `width: -(1);` (single dimension values in parens) will now output `width: -1;` vs previous behavior of `width: -(1)`
+- `always`  (3.x default) - Less eagerly does math
+- `parens-division` **(4.0 default)** - No division is performed outside of parens using `/` operator (but can be "forced" outside of parens with `./` operator - `./` is deprecated)
+- `parens` | `strict` - Parens required for all math expressions.
+- `strict-legacy` (removed in 4.0) - In some cases, math will not be evaluated if any part of the expression cannot be evaluated.
 
 **always**
 Example:
