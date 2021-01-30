@@ -90,7 +90,7 @@ Less has re-built math options to offer an in-between feature between the previo
 
 In order to cause fewer conflicts with CSS, which now liberally uses the `/` symbol between values, there is now a math mode that _only_ requires parentheses for division. (This is now the default in Less 4.) "Strict math" has also been tweaked to operate more intuitively, although the legacy behavior is supported.
 
-The for options available for `math` are:
+The four options available for `math` are:
 
 - `always`  (3.x default) - Less eagerly does math
 - `parens-division` **(4.0 default)** - No division is performed outside of parens using `/` operator (but can be "forced" outside of parens with `./` operator - `./` is deprecated)
