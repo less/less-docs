@@ -18,7 +18,9 @@ Output: `#5a8120`
 
 ### rgba
 
-> Creates a transparent color object from decimal red, green, blue and alpha (RGBA) values.
+#### Color Channels as Arguments
+
+> Creates a transparent color object from red, green, blue and alpha (RGBA) values.
 
 Parameters:
 
@@ -32,6 +34,32 @@ Returns: `color`
 Example: `rgba(90, 129, 32, 0.5)`
 
 Output: `rgba(90, 129, 32, 0.5)`
+
+#### Transparent Color as Argument
+
+> Converts a transparent color object in RGBA hexadecimal notation (`#RRGGBBAA`) to RGBA notation (`rgba()`).
+
+This is useful for older browsers that [cannot understand RGBA hexadecimal notation](https://caniuse.com/mdn-css_types_color_alpha_hexadecimal_notation), such as Internet Explorer.
+
+Parameters: `color`: color object
+
+Example: `rgba(#00000029)`
+
+Output: `rgba(0, 0, 0, 0.16078431)`
+
+#### Opaque Color as Argument
+
+> Converts an opaque color object in other notations (e.g. `hsl()`, `green`) to RGB hexadecimal notation (`#RRGGBB`).
+
+Parameters: `color`: color object
+
+Example: `rgba(hsl(90, 100%, 50%))`
+
+Output: `#80ff00`
+
+Example: `rgba(red)`
+
+Output: `#ff0000`
 
 
 ### argb
