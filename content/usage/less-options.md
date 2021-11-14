@@ -92,7 +92,7 @@ In order to cause fewer conflicts with CSS, which now liberally uses the `/` sym
 
 The four options available for `math` are:
 
-- `always`  (3.x default) - Less eagerly does math
+- `always`  (3.x default) - Less does math eagerly
 - `parens-division` **(4.0 default)** - No division is performed outside of parens using `/` operator (but can be "forced" outside of parens with `./` operator - `./` is deprecated)
 - `parens` | `strict` - Parens required for all math expressions.
 - `strict-legacy` (removed in 4.0) - In some cases, math will not be evaluated if any part of the expression cannot be evaluated.
