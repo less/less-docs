@@ -83,4 +83,4 @@ Also see: [GUIs for Less](#guis-for-less)
 [mswebtools]: http://www.asp.net/downloads
 [kineticwing]: http://kineticwing.com/download
 [kineticwing-less]: http://kineticwing.com//assets/img/screenshots/LessEditor.png
-[jbhelp]: (https://www.jetbrains.com/help/webstorm/transpiling-sass-less-and-scss-to-css.html
+[jbhelp]: https://www.jetbrains.com/help/webstorm/transpiling-sass-less-and-scss-to-css.html
