@@ -204,7 +204,7 @@ From 4.0, No division is performed outside of parens using `/` operator.
 @color: #222 / 2; // results in `#222 / 2`, not #111
 background-color: (#FFFFFF / 16); //results is #101010
 ```
-You can change [Math](../usage/#less-options) setting, if you want to make it always work, but not recommended.
+You can change [Math](../usage/#less-options-math) setting, if you want to make it always work, but not recommended.
 
 ## calc() exception
 
