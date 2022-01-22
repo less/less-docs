@@ -12,7 +12,7 @@ Also see: [GUIs for Less](#guis-for-less)
 * [TextMate](https://github.com/appden/less.tmbundle)
 * [Vim](https://github.com/groenewege/vim-less)
 * [Emacs](https://github.com/purcell/less-css-mode)
-* [jetBrains WebStorm][webstorm] and [PhpStorm][phpstorm] (built-in support)
+* [JetBrains WebStorm][webstorm], [PhpStorm][phpstorm] and other JetBrains IDEs ([built-in support][jbhelp])
 * [Brackets][brackets] (built-in syntax highlighting, [several extensions][brackets-ext] for compilation)
 * [CodeLobster][codelobster] (built-in [syntax highlighting][codelobster-sh])
 * [KineticWing IDE][kineticwing] (built-in [support][kineticwing-less])
@@ -83,3 +83,4 @@ Also see: [GUIs for Less](#guis-for-less)
 [mswebtools]: http://www.asp.net/downloads
 [kineticwing]: http://kineticwing.com/download
 [kineticwing-less]: http://kineticwing.com//assets/img/screenshots/LessEditor.png
+[jbhelp]: https://www.jetbrains.com/help/webstorm/transpiling-sass-less-and-scss-to-css.html
