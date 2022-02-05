@@ -43,7 +43,7 @@
     "handlebars-helper-slugify": "^0.2.0",
     "highlight.js": "^10.7.3",
     "lodash": "^4.17.21",
-    "marked": "^0.3.19",
+    "marked": "^4.0.10",
     "marked-extras": "^0.2.4",
     "relative": "^0.1.6",
     "remote-origin-url": "^0.2.1",
