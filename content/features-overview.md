@@ -193,11 +193,18 @@ Multiplication and division do not convert numbers. It would not be meaningful i
 You can also do arithmetic on colors:
 
 ```less
-@color: #224488 / 2; //results in #112244
+@color: (#224488 / 2); // result is #112244
 background-color: #112244 + #111; // result is #223355
 ```
-
 However, you may find Less's [Color Functions](../functions/#color-operations) more useful.
+
+From 4.0, No division is performed outside of parens using `/` operator.
+
+```less
+@color: #222 / 2; // results in `#222 / 2`, not #111
+background-color: (#FFFFFF / 16); //results is #101010
+```
+You can change [Math](../usage/#less-options-math) setting, if you want to make it always work, but not recommended.
 
 ## calc() exception
 
