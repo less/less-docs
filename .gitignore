@@ -1,6 +1,7 @@
 # live site
 _gh_pages
 _less.github.io
+dest
 
 # node.js
 node_modules
