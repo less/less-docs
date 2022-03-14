@@ -2,16 +2,4 @@
 
 > Official website and documentation for Less/Less.js
 
-
-### [Visit the website](http://lesscss.org)
-
-### [Visit Less.js](https://github.com/less/less.js)
-
-
-Please go to the [main branch](https://github.com/less/less-docs) for source files.
-
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com).
-
-## Release History
-_(Nothing yet)_
+This is github pages project for [lesscss.org](https://lesscss.org), please don't create pull request for this repo, if you want modify less documentation, [less/less-docs](https://github.com/less/less-docs) is for you, github actions will auto deploy docs build assets to github pages when your pr be merged.

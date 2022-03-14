@@ -2,8 +2,6 @@
 
 [![CI Status](https://github.com/less/less-docs/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/less/less-docs/actions/workflows/test.yml?query=branch%3Amaster)
 [![npm version](https://img.shields.io/npm/v/less)](https://www.npmjs.com/package/less)
-[![npm downloads](https://img.shields.io/npm/dm/less.svg?sanitize=true)](https://www.npmjs.com/package/less)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Twitter Follow Author](https://img.shields.io/twitter/follow/lesstocss)](https://twitter.com/lesstocss)
 
 Official website and documentation for Less/Less.js
