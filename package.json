@@ -19,6 +19,7 @@
     "assemble-less": "^0.7.0",
     "chalk": "^0.5.1",
     "cheerio": "^0.17.0",
+    "coffeescript": "^2.6.1",
     "cwd": "^0.3.7",
     "fs-utils": "^0.4.3",
     "git-branch": "^0.1.2",
