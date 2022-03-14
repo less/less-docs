@@ -1,6 +1,0 @@
-language: node_js
-node_js:
-  - "14"
-before_script:
-  - npm install -g grunt-cli
-  - npm install grunt

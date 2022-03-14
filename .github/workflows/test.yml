@@ -1,0 +1,18 @@
+name: Docs Build Test
+
+on: ["push", "pull_request"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+      - uses: actions/setup-node@v2
+      - name: npm install
+        run: npm install -g grunt-cli
+      - name: build docs
+        run: node data/_utils/pkg && grunt
