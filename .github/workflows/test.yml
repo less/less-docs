@@ -14,7 +14,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install
+      - name: grunt-cli
         run: npm install -g grunt-cli
+      - name: grunt
+        run: npm install grunt
       - name: build docs
         run: node data/_utils/pkg && grunt
