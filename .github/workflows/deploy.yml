@@ -34,4 +34,4 @@ jobs:
           target_branch: master
           build_dir: dest
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.LESS_DOCS_DEPLOY_TOKEN }}
