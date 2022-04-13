@@ -1,6 +1,7 @@
 # lesscss.org
 
 [![CI Status](https://github.com/less/less-docs/actions/workflows/test.yml/badge.svg?branch=master)](https://github.com/less/less-docs/actions/workflows/test.yml?query=branch%3Amaster)
+[![GH Status](https://github.com/less/less-docs/actions/workflows/deploy.yml/badge.svg?branch=master)](https://github.com/less/less-docs/actions/workflows/deploy.yml?query=branch%3Amaster)
 [![npm version](https://img.shields.io/npm/v/less)](https://www.npmjs.com/package/less)
 [![Twitter Follow Author](https://img.shields.io/twitter/follow/lesstocss)](https://twitter.com/lesstocss)
 
