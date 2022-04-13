@@ -72,6 +72,15 @@
         </li>
         {{/is}}
 
+        {{#is slug 'about'}}
+        <li class="active">
+          <span>About</span>
+        </li>
+        {{else}}
+        <li>
+          <a href="{{rel 'about'}}/">About</a>
+        </li>
+        {{/is}}
        
         {{#is links.cheatsheet true}}
         {{#is slug 'cheatsheet'}}
