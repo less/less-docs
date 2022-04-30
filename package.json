@@ -13,9 +13,6 @@
   },
   "license": "(MIT OR CC-BY-3.0)",
   "main": "Gruntfile.js",
-  "scripts": {
-    "build": "grunt"
-  },
   "devDependencies": {
     "assemble": "^0.4.42",
     "assemble-contrib-permalinks": "^0.3.6",

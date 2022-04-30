@@ -17,4 +17,4 @@ jobs:
       - name: install dependencies
         run: npm install
       - name: build docs
-        run: npm run build
+        run: node data/_utils/pkg && grunt

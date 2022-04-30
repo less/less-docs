@@ -25,7 +25,7 @@ jobs:
       - name: install dependencies
         run: npm install
       - name: build docs
-        run: npm run build
+        run: node data/_utils/pkg && grunt
       - name: Deploy to GitHub Pages
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
