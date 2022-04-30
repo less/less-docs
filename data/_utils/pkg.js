@@ -24,7 +24,7 @@ var getPackageFile = function (dest, callback) {
   github.repos.getContent({
     user: 'less',
     repo: 'less.js',
-    path: 'package.json'
+    path: 'packages/less/package.json'
   },
 
   function (err, resp, cb) {
@@ -32,7 +32,7 @@ var getPackageFile = function (dest, callback) {
       console.log('error: ' + err);
       callback(err, null);
     } else {
-      var b = new Buffer(resp.content, 'base64');
+      var b = Buffer.from(resp.content, 'base64');
       var pkg = {
         name: resp.name,
         text: b.toString()
