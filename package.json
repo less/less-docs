@@ -28,7 +28,7 @@
     "github": "^0.2.4",
     "github-repo-url": "^0.2.1",
     "gray-matter": "^0.5.0",
-    "grunt": "^1.4.1",
+    "grunt": "^1.5.3",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-connect": "^0.8.0",
     "grunt-contrib-copy": "^0.5.0",
