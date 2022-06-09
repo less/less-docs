@@ -710,3 +710,24 @@ body {
   margin-top: 15px;
   margin-bottom: 5px;
 }
+
+/** custom css config for algolia docsearch **/
+.DocSearch-Container {
+  z-index: 1050 !important;
+}
+
+#docsearch-wrapper {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > #docsearch-wrapper {
+    height: 60px;
+  }
+}
+
+:root {
+  --docsearch-primary-color: #1d365d;
+}
