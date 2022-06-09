@@ -96,7 +96,7 @@ download:
   latest:          https://raw.github.com/less/less.js/master/dist/less.js
 
 cdn:
-  cloudflare:      https://cdn.jsdelivr.net/npm/less@4
+  cloudflare:      https://fastly.jsdelivr.net/npm/less@4
 
 
 # =============================================
