@@ -18,6 +18,15 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/holder/2.2.0/holder.min.js"></script>
 <script src="{{ assets }}/js/application.js"></script>
 
+<!-- Global site tag (gtag.js) - Google Analytics 4 (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0LBC5XBD1L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0LBC5XBD1L');
+</script>
 
 {{#if site.analytics.google_site_id}}
 <!-- Analytics
