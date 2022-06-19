@@ -36,7 +36,7 @@ Historically, the parentheses in a mixin call are optional, but optional parenth
 
 ## Mixins With Parentheses
 
-If you want to create a mixin but you do not want that mixin to be in your CSS output, put parentheses after the mixin definition.
+If you want to create a mixin but you do not want that mixin to be in your CSS output, do not put parentheses after the mixin definition.
 
 ```less
 .my-mixin {
