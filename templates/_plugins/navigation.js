@@ -115,15 +115,15 @@ module.exports = function navigationPlugin(params, callback) {
         var $e = $(e);
         var id = $e.attr('id');
 
-        // // Anchor template
+        // Anchor template
         var anchor = template(anchorTemplate, {
             id: id
         });
         $(this).prepend(anchor);
 
         // Adjust heading
-        $(this).removeAttr('id').addClass('docs-heading');
-        // $(this).addClass('docs-heading');
+        // $(this).removeAttr('id').addClass('docs-heading');
+        $(this).addClass('docs-heading');
 
         // if ($(this).prev().children().hasClass('source-link')) {
         //     var sourceLink = $(this).prev().children('.source-link');
