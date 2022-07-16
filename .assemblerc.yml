@@ -88,7 +88,7 @@ description: >
 
 # URLs
 homepage:          http://lesscss.org
-onlineeditor:      http://lesscss.org/less-preview
+playground:      http://lesscss.org/less-preview
 repo:              <%= pkg.homepage %>
 issues:            <%= pkg.bugs.url %>?&state=open
 download:
@@ -96,7 +96,7 @@ download:
   latest:          https://raw.github.com/less/less.js/master/dist/less.js
 
 cdn:
-  cloudflare:      https://cdn.jsdelivr.net/npm/less@4
+  cloudflare:      https://cdn.jsdelivr.net/npm/less
 
 
 # =============================================
