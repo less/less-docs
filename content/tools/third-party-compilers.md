@@ -6,7 +6,7 @@ title: Third Party Compilers
 
 * **[grunt-contrib-less](https://github.com/gruntjs/grunt-contrib-less)**
 * **[gulp-less](https://github.com/plus3network/gulp-less)**: Please note that this plugin discards `source-map` options, opting to instead using the [gulp-sourcemaps](https://github.com/floridoo/gulp-sourcemaps) library.
-* **[`svelte-preprocess`](https://github.com/sveltejs/svelte-preprocess/blob/main/docs/preprocessing.md#less) (converts Less to CSS before passing it to the Svelte compiler)
+* **[svelte-preprocess](https://github.com/sveltejs/svelte-preprocess/blob/main/docs/preprocessing.md#less)**: (converts Less to CSS before passing it to the Svelte compiler)
 * **[Connect Middleware for Less](https://github.com/emberfeather/less.js-middleware)**: Connect Middleware for Less compiling
 
 
