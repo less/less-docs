@@ -14,7 +14,7 @@ Example:
 ## File Extensions
 `@import` statements may be treated differently by Less depending on the file extension:
 
-* If the file has a `.css` extension it will be treated as CSS and the `@import` statement left as-is (see the [inline option](#import-options-inline) below).
+* If the file has a `.css` extension it will be treated as CSS and the `@import` statement left as-is (see the [inline option](#import-atrules-feature-inline) below).
 * If it has _any other extension_ it will be treated as Less and imported.
 * If it does not have an extension, `.less` will be appended and it will be included as a imported Less file.
 
