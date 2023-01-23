@@ -13,6 +13,7 @@ notes: Entreaty for contributors. Please filter out all purely advertising and n
 | [Bootswatch](http://bootswatch.com/) | Collection of free themes for Bootstrap |
 | [Cardinal](http://cardinalcss.com/) | Small "mobile first" CSS framework for front-end developers who build responsive web applications |
 | [Flat UI Free](http://designmodo.com/flat-free/) | Theme and framework for Bootstrap |
+| [Fomantic-UI](https://fomantic-ui.com/) | The official community fork of Semantic-UI |
 | [Ink](http://ink.sapo.pt/) | set of tools for quick development of web interfaces |
 | [Metro UI CSS](http://metroui.org.ua/) | Set of styles to create a site with an interface similar to Windows 8 |
 | [Petal](http://http://shakrmedia.github.io/petal/) | A modern, light CSS UI framework developed at Shakr |
