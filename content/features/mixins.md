@@ -158,7 +158,7 @@ Use the `!important` keyword after mixin call to mark all properties inherited b
 Example:
 
 ```less
-.foo (@bg: #f5f5f5; @color: #900) {
+.foo (@bg: #f5f5f5, @color: #900) {
   background: @bg;
   color: @color;
 }

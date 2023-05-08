@@ -72,11 +72,17 @@ Parameters are currently either *semicolon* or *comma* separated.
 
 Originally, parameters were only separated by commas, but the semi-colon was later added to support passing comma-separated list values to single arguments.
 
-* two arguments and each contains comma separated list: `.name(1, 2, 3; something, else)`,
-* three arguments and each contains one number: `.name(1, 2, 3)`,
-* use dummy semicolon to create mixin call with one argument containing comma separated css list: `.name(1, 2, 3;)`,
-* comma separated default value: `.name(@param1: red, blue;)`.
-* As of Less 4.0, you can wrap a list value using a paren escape [`~()`], e.g. `.name(@param1: ~(red, blue))`. This is similar to the quote escape syntax: `~"quote"`
+Note: As of Less 4.0, you can wrap a list value using a paren escape [`~()`], e.g. `.name(@param1: ~(red, blue))`. This is similar to the quote escape syntax: `~"quote"`. This may make semi-colon separators un-necessary in your code-base.
+
+Examples:
+
+* two arguments and each contains comma separated list: `.name(1, 2, 3; something, else)`
+* three arguments and each contains one number: `.name(1, 2, 3)`
+* use a dummy semicolon to create a mixin call with one argument containing a comma-separated css list: `.name(1, 2, 3;)`. _Note: if the trailing semi-colon seems strange, you may prefer: `.name(~(1, 2, 3))`_
+* Ways to write a comma separated default value:
+  - `@param-values: red, blue; .name(@param1: @param-values)`.
+  - `.name(@param1: red, blue;)`
+  - `.name(@param1: ~(red, blue))`
 
 #### Overloading mixins
 
