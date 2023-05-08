@@ -171,7 +171,7 @@ The selector `.no-borderradius &` will prepend `.no-borderradius` to its parent 
 
 ### Combinatorial Explosion
 
-`&` can also be used to generate every possible permutation of selectors in a comma separated list:
+`&` can also be used to generate every possible combination of selectors in a comma-separated list:
 
 ```less
 p, a, ul, li {
@@ -182,7 +182,7 @@ p, a, ul, li {
 }
 ```
 
-This expands to all possible (16) combinations of the specified elements:
+This expands to all possible combinations of the specified elements:
 
 ```css
 p,
