@@ -87,11 +87,6 @@ published:
 # =============================================
 
 unpublished:
-  scope:
-    published: false
-    title: Scope
-    files: <%= features.base %>/scope.md
-
   strict-math:
     published: false
     title: Strict Math
