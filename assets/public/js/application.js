@@ -88,9 +88,9 @@
 
             return (this.top = offsetTop - navOuterHeight - sideBarMargin + 15)
           },
-          bottom: function () {
-            return (this.bottom = $('.footer').outerHeight(true))
-          }
+          // bottom: function () {
+          //   return (this.bottom = $('.footer').outerHeight(true))
+          // }
         }
       })
     // }, 100);
