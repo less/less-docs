@@ -1,20 +1,39 @@
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="{{default description site.description}}">
-<meta name="author" content="The Core Less Team">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="{{default description site.description}}" />
+<meta name="author" content="The Core Less Team" />
 
 <title>
-  {{default title (titleize basename)}} | {{site.title}}
+  {{default title (titleize basename)}}
+  |
+  {{site.title}}
 </title>
+<!-- Include Font Awesome CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
 
-<link href="https://fonts.googleapis.com/css?family=Noto+Serif|Oxygen" rel="stylesheet">
+<!-- Include Toastr CSS and JS -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+/>
+
+<link
+  href="https://fonts.googleapis.com/css?family=Noto+Serif|Oxygen"
+  rel="stylesheet"
+/>
 
 <!-- Algolia DocSearch styles -->
-<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@docsearch/css@3"/>
+<link
+  rel="stylesheet"
+  href="https://fastly.jsdelivr.net/npm/@docsearch/css@3"
+/>
 
 <!-- Main styles -->
-<link href="{{ assets }}/css/index.css" rel="stylesheet">
+<link href="{{assets}}/css/index.css" rel="stylesheet" />
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -23,4 +42,4 @@
 <![endif]-->
 
 <!-- Favicons -->
-<link rel="shortcut icon" href="{{ assets }}/ico/favicon.ico">
+<link rel="shortcut icon" href="{{assets}}/ico/favicon.ico" />
