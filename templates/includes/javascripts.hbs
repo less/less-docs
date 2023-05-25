@@ -11,8 +11,29 @@
     debug: false // Set debug to true if you want to inspect the modal
   });
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+
+<!-- Include the JavaScript code to copy the code snippet -->
+<script>
+    function copyCode() {
+      var codeElement = document.getElementById("codeSnippet");
+      var textarea = document.createElement("textarea");
+      textarea.value = codeElement.innerText;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      toastr.success("Command copied to clipboard!", "Success", {
+        closeButton: true,
+        progressBar: true,
+        positionClass: "toast-bottom-left",
+        timeOut: 4000,
+      });    }
+</script>
 
 {{#live}}<script src="http://platform.twitter.com/widgets.js"></script>{{/live}}
 <script src="//cdnjs.cloudflare.com/ajax/libs/holder/2.2.0/holder.min.js"></script>
