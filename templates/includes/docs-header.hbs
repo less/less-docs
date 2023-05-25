@@ -7,7 +7,7 @@
 
       <p>Use with Node.js:</p>
   
-  <code id="codeSnippet">npm install -g less <i class="fas fa-copy" style="color:#428bca;cursor:pointer" onclick="copyCode()"></i></code><br/>
+      <code id="codeSnippet">npm install -g less <i class="fas fa-copy" style="color:#428bca;cursor:pointer" onclick="copyCode()" title="Copy Command to Clip Board"></i></code><br/>
       <code>&gt; lessc styles.less styles.css</code>
       <br><br>
       <p>Or the browser:</p>
@@ -19,40 +19,5 @@
     </div>
   </div>
 </div>
-
-  <!-- Include the JavaScript code to copy the code snippet -->
-  <script>
-    function copyCode() {
-      // Get the code snippet element
-      var codeElement = document.getElementById("codeSnippet");
-
-      // Create a textarea element and set its value to the code snippet
-      var textarea = document.createElement("textarea");
-      textarea.value = codeElement.innerText;
-
-      // Append the textarea element to the document
-      document.body.appendChild(textarea);
-
-      // Select the content of the textarea
-      textarea.select();
-
-      // Copy the selected text to the clipboard
-      document.execCommand("copy");
-
-      // Remove the textarea element from the document
-      document.body.removeChild(textarea);
-
-      // Provide some visual feedback to the user
-// Show a beautiful message using Toastr
-      toastr.success("Command copied to clipboard!", "Success", {
-        closeButton: true,
-        progressBar: true,
-        positionClass: "toast-bottom-left",
-        timeOut: 4000,
-      });    }
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
 {{!-- Callout for the old docs link --}}
 {{> banner }}
