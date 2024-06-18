@@ -1,6 +1,6 @@
 name: Deploy Docs
 
-env: {NODE_VERSION: 14}
+env: {NODE_VERSION: 20}
 
 on:
   push:
@@ -19,8 +19,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with: {node-version: '${{ env.NODE_VERSION }}'}
       - name: install dependencies
         run: npm install
@@ -28,7 +28,7 @@ jobs:
         run: node data/_utils/pkg && grunt
       - name: Deploy to GitHub Pages
         if: success()
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: crazy-max/ghaction-github-pages@v4
         with:
           repo: less/less.github.io
           target_branch: master
