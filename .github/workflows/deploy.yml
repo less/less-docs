@@ -1,6 +1,6 @@
 name: Deploy Docs
 
-env: {NODE_VERSION: 20}
+env: {NODE_VERSION: 14}
 
 on:
   push:
