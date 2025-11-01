@@ -114,7 +114,7 @@ If you need to keep the server running and interactively debug tests, use `conne
 
 ## How to Run Less in Other Environments
 
-If you look in the libs folder you will see `less`, `less-node`, `less-browser`. The `less` folder is pure javascript with no environment specifics. if you require `less/libs/less`, you get a function that takes an environment object and an array of file managers. The file managers are the same file managers that can also be written as a plugin.
+If you look in the libs folder you will see `less`, `less-node`, `less-browser`. The `less` folder is pure javascript with no environment specifics. If you require `less/libs/less`, you get a function that takes an environment object and an array of file managers. The file managers are the same file managers that can also be written as a plugin.
 
 ```js
 var createLess = require("less/libs/less"),
