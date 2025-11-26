@@ -72,7 +72,7 @@ Parameters are currently either *semicolon* or *comma* separated.
 
 Originally, parameters were only separated by commas, but the semi-colon was later added to support passing comma-separated list values to single arguments.
 
-Note: As of Less 4.0, you can wrap a list value using a paren escape [`~()`], e.g. `.name(@param1: ~(red, blue))`. This is similar to the quote escape syntax: `~"quote"`. This may make semi-colon separators un-necessary in your code-base.
+Note: As of Less 4.0, you can escape a list value by using a tilde with parentheses ~(), e.g. .name(@param1: ~(red, blue)).
 
 Examples:
 
