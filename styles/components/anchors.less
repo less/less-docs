@@ -75,23 +75,8 @@ h1, h2, h3 {
   }
 }
 
-
-// Offset
-// ----------------------------------------------
-// anchor targets are invisible and set the specified
-// distance above headings and anchors. This is what
-// ensures that our headings won't overlap the navbar.
-// If you require clickable anchors, you can
-// achieve this with fewer classes and less HTML
-
-.anchor-target {
-  position: absolute;
-  margin-top: -(@anchor-distance);
-  padding-top: @anchor-distance;
-  width: 2px;
-}
-
-.anchor-target-small {
-  margin-top: -(@anchor-distance-small);
-  padding-top: @anchor-distance-small;
+// anchor targets are invisible anchors for compatibility with
+// previous headings and URLs that have been moved or renamed.
+h1, h2, h3, .anchor-target {
+  scroll-margin-top: @anchor-distance;
 }
