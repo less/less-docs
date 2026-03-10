@@ -6,50 +6,122 @@ Thanks for thinking about contributing! Please read the [contributing instructio
 
 ## Install These Tools
 
-* **node** - <http://nodejs.org/>
-* **phantomjs** - <http://phantomjs.org/download.html>
+To develop Less.js locally, you’ll need **Node.js** and **pnpm**.
 
-make sure the paths are setup. If you start your favourite command line and type `node -v` you should see the node compiler. If you run `phantomjs -v` you should see the phantomjs version number.
+### 1. Install Node.js
+Download and install the latest LTS release from [nodejs.org](https://nodejs.org/en/download).  
 
-* clone your less.js repository locally
-* navigate to your local less.js repository and run `npm install` this installs less' npm dependencies.
+Verify that Node.js is on your path:
+```bash
+node -v
+# Example: v20.10.0
+```
+
+### 2. Install pnpm
+Less.js uses [pnpm](https://pnpm.io/) for dependency management.  
+
+If `pnpm` isn’t installed yet, add it globally:
+```bash
+npm install -g pnpm
+```
+
+Verify:
+```bash
+pnpm -v
+# Example: 9.6.0
+```
+
+> **Note:** pnpm requires Node.js. Installing Node also provides npm, but Less.js uses pnpm for its workspace efficiency and deterministic installs.
+
+### 3. Clone and Install Dependencies
+Clone your local copy of the repository and install dependencies:
+```bash
+git clone https://github.com/less/less.js.git
+cd less.js
+pnpm install
+```
+
+> The first `pnpm install` may take longer as pnpm builds its global content-addressable store.
+
+### 4. Verify Setup
+If you start your command line and type:
+```bash
+node -v
+pnpm -v
+```
+you should see both version numbers.  
+If you see “command not found,” check your PATH or reinstall the tools.
+
+> **Tip:** If you encounter errors like `Command not found: grunt`, run tasks through  
+> `pnpm run grunt -- <task>` or install the CLI globally:
+> ```bash
+> pnpm add -g grunt-cli
+> ```
 
 ## Usage
 
-[Grunt](https://gruntjs.com/) is used in order to run development commands such as tests, builds, and benchmarks. You can run them either with `grunt [command_name]` if you have `grunt-cli` installed globally or with `npm run grunt -- [command_name]`.
+Grunt is used for builds, tests, benchmarks, and helper tasks. Run tasks with:
+```bash
+pnpm run grunt -- <task>
+```
+(or `grunt <task>` if `grunt-cli` is installed globally).
 
-If you go to the root of the Less repository you should be able to do `npm test` (a handy alias for `npm run grunt -- test`) - this should run all the tests. For the browser specific only, run `npm run grunt -- browsertest` If you want to try out the current version of less against a file, from here do `node bin/lessc path/to/file.less`
+A common shortcut:
+```bash
+pnpm test
+```
+is an alias for `pnpm run grunt -- test`.
 
-To debug the browser tests, run `npm run grunt -- browsertest-server` then go to http://localhost:8088/tmp/browser/ to see the test runner pages.
+### Useful Tasks and What They Do
 
-Optional: To get the current version of the Less compiler do `npm -g install less` - npm is the node package manager and "-g" installs it to be available globally.
+- `pnpm run grunt -- test`  
+  Runs the full test suite (lint, node/browser builds, shell option tests, plugin tests, starts the server, and runs browser tests).
+- `pnpm run grunt -- dist`  
+  Builds distributables (runs `shell:build`).
+- `pnpm run grunt -- browsertest`  
+  Builds the browser bundle, starts a local server, and runs the browser test runner (uses Sauce Labs locally or Phantom depending on env).
+- `pnpm run grunt -- browsertest-server`  
+  Builds browser bundle + generates browser test pages and starts a keepalive server so you can open test runner pages manually.  
+  Open the test pages at: [http://localhost:8081/tmp/browser/](http://localhost:8081/tmp/browser/)
+- `pnpm run grunt -- benchmark`  
+  Runs performance benchmarks.
+- `pnpm run grunt -- shell-options`  
+  Runs the shell options matrix tests (includes deprecated options).
+- `pnpm run grunt -- shell-plugin`  
+  Runs plugin-related shell tests.
+- `pnpm run grunt -- quicktest`  
+  Quickly builds CommonJS and runs Node tests.
 
-You should now be able to do `lessc file.less` and if there is an appropriate `file.less` then it will be compiled and output to the stdout. You can then compare it to running locally (`node bin/lessc file.less`).
+## Debugging Browser Tests Locally
 
-Other grunt commands
+1. Build the browser bundle and generate test pages:
+   ```bash
+   pnpm run grunt -- browsertest-lessjs
+   pnpm run grunt -- shell:generatebrowser
+   ```
+   or simply:
+   ```bash
+   pnpm run grunt -- browsertest-server
+   ```
+   which builds, generates pages, and starts a keepalive server.
 
-* `npm run grunt -- benchmark` - run our benchmark tests to get some numbers on performance
-* `npm run grunt -- stable` to create a new release
-* `npm run grunt -- readme` to generate a new readme.md in the root directory (after each release)
+2. Open the runner pages in your browser:
+   ```
+   http://localhost:8081/tmp/browser/
+   ```
+
+If you need to keep the server running and interactively debug tests, use `connect::keepalive` via the `browsertest-server` task.
 
 ## How to Run Less in Other Environments
 
-If you look in the libs folder you will see `less`, `less-node`, `less-browser`. The `less` folder is pure javascript with no environment
-specifics. if you require `less/libs/less`, you get a function that takes an environment object and an array of file managers. The file
-managers are the same file managers that can also be written as a plugin.
+If you look in the libs folder you will see `less`, `less-node`, `less-browser`. The `less` folder is pure javascript with no environment specifics. If you require `less/libs/less`, you get a function that takes an environment object and an array of file managers. The file managers are the same file managers that can also be written as a plugin.
 
 ```js
 var createLess = require("less/libs/less"),
     myLess = createLess(environment, [myFileManager]);
 ```
 
-The environment api is specified in [less/libs/less/environment/environment-api.js](https://github.com/less/less.js/blob/master/lib/less/environment/environment-api.js)
-and the file manager api is specified in [less/libs/less/environment/file-manager-api.js](https://github.com/less/less.js/blob/master/lib/less/environment/file-manager-api.js).
+The environment api is specified in [packages/less/src/less/environment/environment-api.ts](https://github.com/less/less.js/blob/master/packages/less/src/less/environment/environment-api.ts)
+and the file manager api is specified in [packages/less/src/less/environment/file-manager-api.ts](https://github.com/less/less.js/blob/master/packages/less/src/less/environment/file-manager-api.ts).
 
-For file managers we highly recommend setting the prototype as a new AbstractFileManager - this allows you to override what is needed and allows us
-to implement new functions without breaking existing file managers. For an example of file managers, see the 2 node implementations, the browser implementation or
-the npm import plugin implementation.
-
-## Guide
-
-If you look at [http://www.gliffy.com/go/publish/4784259](http://www.gliffy.com/go/publish/4784259),  This is an overview diagram of how less works. Warning! It needs updating with v2 changes.
+For file managers we highly recommend setting the prototype as a new AbstractFileManager - this allows you to override what is needed and allows us to implement new functions without breaking existing file managers. For an example of file managers, see the 2 node implementations, the browser implementation or the npm import plugin implementation.
